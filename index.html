@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="google-site-verification" content="l6ZuoKnWQSEezpQ3liP8-QwvV045Q2LQLML-ryisN0o" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Honest AI tool reviews and ratings for your needs. Honest reviews, comparisons, and recommendations for AI writing, coding, automation, and productivity tools.">
+<title>AI Tool Grade — Find the Right AI Tool for You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#fafaf8;
+  --bg2:#f3f2ee;
+  --bg3:#eceae3;
+  --text:#1a1a18;
+  --text2:#4a4a45;
+  --text3:#8a8a82;
+  --accent:#e85d26;
+  --accent2:#f07d4a;
+  --accent-dim:rgba(232,93,38,0.08);
+  --border:#e2e0d8;
+  --white:#ffffff;
+  --display:'Playfair Display',serif;
+  --sans:'DM Sans',sans-serif;
+  --mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none;transition:background 0.15s}
+.nav-cta:hover{background:var(--accent2);color:white}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:4px}
+.nav-dropdown>a::after{content:"▾";font-size:10px}
+.dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:-16px;background:white;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:200}
+.dropdown-menu a{display:block;padding:8px 12px;font-size:14px;color:var(--text2);text-decoration:none;border-radius:6px;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--bg2);color:var(--accent)}
+.nav-dropdown:hover .dropdown-menu{display:block}
+.nav-dropdown .dropdown-menu::before{content:"";position:absolute;top:-8px;left:0;right:0;height:8px}
+
+/* HERO */
+.hero{padding:100px 40px 80px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:100px;padding:6px 14px;font-size:12px;font-weight:500;color:var(--accent);margin-bottom:24px;font-family:var(--mono)}
+.hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent)}
+h1{font-family:var(--display);font-size:56px;font-weight:800;line-height:1.1;color:var(--text);margin-bottom:20px}
+h1 em{font-style:italic;color:var(--accent)}
+.hero-sub{font-size:18px;color:var(--text2);line-height:1.6;margin-bottom:36px;font-weight:300}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{background:var(--accent);color:white;padding:14px 28px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;transition:all 0.15s;display:inline-block}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-1px)}
+.btn-secondary{background:transparent;color:var(--text);padding:14px 28px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;border:1.5px solid var(--border);transition:all 0.15s;display:inline-block}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+.hero-stats{display:flex;gap:32px;margin-top:48px;padding-top:32px;border-top:1px solid var(--border)}
+.hero-stat-num{font-family:var(--display);font-size:28px;font-weight:700;color:var(--text)}
+.hero-stat-label{font-size:13px;color:var(--text3);margin-top:2px}
+
+.hero-visual{position:relative}
+.hero-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.hero-card-header{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.hero-card-icon{width:40px;height:40px;border-radius:10px;background:var(--accent-dim);display:flex;align-items:center;justify-content:center;font-size:18px}
+.hero-card-title{font-weight:600;font-size:15px}
+.hero-card-sub{font-size:12px;color:var(--text3)}
+.score-bar{margin:12px 0}
+.score-label{display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin-bottom:5px}
+.score-track{height:6px;background:var(--bg2);border-radius:100px;overflow:hidden}
+.score-fill{height:100%;border-radius:100px;background:var(--accent);transition:width 1s ease}
+.mini-cards{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.mini-card{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 14px;display:flex;align-items:center;justify-content:space-between}
+.mini-card-left{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:500}
+.mini-card-emoji{font-size:16px}
+.mini-badge{font-family:var(--mono);font-size:10px;font-weight:500;padding:3px 8px;border-radius:100px}
+.badge-green{background:#e8f5e9;color:#2e7d32}
+.badge-amber{background:#fff8e1;color:#f57f17}
+.badge-blue{background:#e3f2fd;color:#1565c0}
+
+/* CATEGORIES */
+.section{padding:80px 40px;max-width:1100px;margin:0 auto}
+.section-header{margin-bottom:48px}
+.section-label{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.12em;color:var(--accent);text-transform:uppercase;margin-bottom:10px}
+.section-title{font-family:var(--display);font-size:40px;font-weight:700;color:var(--text);line-height:1.2}
+.section-sub{font-size:17px;color:var(--text2);margin-top:12px;font-weight:300;max-width:500px}
+
+.categories-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.cat-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;text-decoration:none;color:var(--text);transition:all 0.2s;cursor:pointer}
+.cat-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 24px rgba(232,93,38,0.1)}
+.cat-icon{font-size:28px;margin-bottom:14px}
+.cat-name{font-weight:600;font-size:15px;margin-bottom:4px}
+.cat-count{font-size:13px;color:var(--text3)}
+
+/* FEATURED REVIEWS */
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.review-card{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all 0.2s;text-decoration:none;color:var(--text);display:block}
+.review-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.08);border-color:var(--accent)}
+.review-card-top{padding:24px 24px 0;display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.review-tool-info{display:flex;align-items:center;gap:12px}
+.review-tool-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;background:var(--bg2)}
+.review-tool-name{font-weight:600;font-size:16px}
+.review-tool-cat{font-size:12px;color:var(--text3);margin-top:2px}
+.review-score{font-family:var(--display);font-size:32px;font-weight:700;color:var(--accent);line-height:1}
+.review-score-label{font-size:11px;color:var(--text3);text-align:right;margin-top:2px}
+.review-card-body{padding:20px 24px}
+.review-excerpt{font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:16px}
+.review-tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:11px;font-weight:500;padding:3px 10px;border-radius:100px;background:var(--bg2);color:var(--text2)}
+.review-card-footer{padding:16px 24px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.review-footer-left{font-size:12px;color:var(--text3)}
+.review-read-more{font-size:13px;font-weight:500;color:var(--accent)}
+
+/* COMPARISON TABLE */
+.comparison-wrap{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.comparison-table{width:100%;border-collapse:collapse}
+.comparison-table th{background:var(--bg2);padding:14px 20px;text-align:left;font-size:12px;font-weight:500;color:var(--text3);letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono)}
+.comparison-table td{padding:16px 20px;border-top:1px solid var(--border);font-size:14px;vertical-align:middle}
+.comparison-table tr:hover td{background:var(--bg)}
+.tool-name-cell{display:flex;align-items:center;gap:10px}
+.tool-emoji{font-size:18px}
+.tool-name{font-weight:600;font-size:14px}
+.tool-sub{font-size:12px;color:var(--text3)}
+.price-cell{font-family:var(--mono);font-weight:500;font-size:13px}
+.free-badge{background:#e8f5e9;color:#2e7d32;font-size:11px;font-weight:500;padding:2px 8px;border-radius:100px;font-family:var(--mono)}
+.rating-cell{display:flex;align-items:center;gap:6px}
+.rating-stars{color:var(--accent);font-size:14px;letter-spacing:-1px}
+.rating-num{font-size:13px;color:var(--text2);font-family:var(--mono)}
+.check{color:#2e7d32;font-size:16px}
+.cross{color:#c62828;font-size:16px}
+.view-link{color:var(--accent);font-size:13px;font-weight:500;text-decoration:none}
+.view-link:hover{text-decoration:underline}
+
+/* NEWSLETTER */
+.newsletter{background:var(--text);color:white;padding:80px 40px;text-align:center}
+.newsletter-inner{max-width:520px;margin:0 auto}
+.newsletter h2{font-family:var(--display);font-size:36px;font-weight:700;margin-bottom:12px}
+.newsletter p{color:rgba(255,255,255,0.6);font-size:16px;margin-bottom:32px;font-weight:300}
+.newsletter-form{display:flex;gap:10px;max-width:400px;margin:0 auto}
+.newsletter-input{flex:1;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:white;padding:12px 16px;border-radius:8px;font-size:14px;font-family:var(--sans)}
+.newsletter-input::placeholder{color:rgba(255,255,255,0.4)}
+.newsletter-input:focus{outline:none;border-color:var(--accent)}
+.newsletter-btn{background:var(--accent);color:white;border:none;padding:12px 20px;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer;transition:background 0.15s;font-family:var(--sans);white-space:nowrap}
+.newsletter-btn:hover{background:var(--accent2)}
+
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}
+.footer-brand span{color:var(--accent)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--accent)}
+
+/* STRIPE BG */
+.stripe-section{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero-tag,.hero h1,.hero-sub,.hero-actions,.hero-stats{animation:fadeUp 0.6s ease both}
+.hero h1{animation-delay:0.1s}
+.hero-sub{animation-delay:0.2s}
+.hero-actions{animation-delay:0.3s}
+.hero-stats{animation-delay:0.4s}
+
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr;padding:60px 20px 40px}
+  .hero-visual{display:none}
+  h1{font-size:38px}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  nav{padding:0 20px}
+  .section{padding:60px 20px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">AI Tool<span>Grade</span></a>
+    <div class="nav-links">
+      <div class="nav-dropdown"><a href="index.html#categories">Categories</a><div class="dropdown-menu"><a href="category/writing.html">✍️ AI Writing</a><a href="category/coding.html">💻 AI Coding</a><a href="category/image.html">🎨 AI Image</a><a href="category/automation.html">⚡ Automation</a><a href="category/video.html">🎬 AI Video</a><a href="category/productivity.html">🧠 Productivity</a></div></div>
+      <div class="nav-dropdown"><a href="reviews.html">Reviews</a><div class="dropdown-menu"><a href="review/jasper.html">Jasper AI</a><a href="review/copyai.html">Copy.ai</a><a href="review/cursor.html">Cursor</a><a href="review/chatgpt.html">ChatGPT</a><a href="review/writesonic.html">Writesonic</a><a href="review/github-copilot.html">GitHub Copilot</a><a href="review/windsurf.html">Windsurf</a><a href="review/bolt.html">Bolt.new</a></div></div>
+      <a href="compare.html">Compare</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#newsletter" class="nav-cta">Get Updates</a>
+    </div>
+  </div>
+</nav>
+
+<section style="background:var(--bg)">
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-tag">Updated April 2026</div>
+      <h1>Find the <em>right</em> AI tool for the job</h1>
+      <p class="hero-sub">Honest reviews and comparisons of the best AI tools for writing, coding, automation, and productivity. No hype — just what actually works.</p>
+      <div class="hero-actions">
+        <a href="index.html#reviews" class="btn-primary">Browse Reviews</a>
+        <a href="compare.html" class="btn-secondary">Compare Tools</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">50+</div>
+          <div class="hero-stat-label">Tools reviewed</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">12</div>
+          <div class="hero-stat-label">Categories covered</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">100%</div>
+          <div class="hero-stat-label">Independent</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <div class="hero-card-icon">✍️</div>
+          <div>
+            <div class="hero-card-title">AI Writing Tools</div>
+            <div class="hero-card-sub">Comparison — April 2026</div>
+          </div>
+        </div>
+        <div class="score-bar">
+          <div class="score-label"><span>Jasper AI</span><span>9.2/10</span></div>
+          <div class="score-track"><div class="score-fill" style="width:92%"></div></div>
+        </div>
+        <div class="score-bar">
+          <div class="score-label"><span>Copy.ai</span><span>8.7/10</span></div>
+          <div class="score-track"><div class="score-fill" style="width:87%"></div></div>
+        </div>
+        <div class="score-bar">
+          <div class="score-label"><span>Writesonic</span><span>8.1/10</span></div>
+          <div class="score-track"><div class="score-fill" style="width:81%"></div></div>
+        </div>
+        <div class="mini-cards">
+          <div class="mini-card">
+            <div class="mini-card-left"><span class="mini-card-emoji">🏆</span>Best Overall</div>
+            <span class="mini-badge badge-green">Jasper AI</span>
+          </div>
+          <div class="mini-card">
+            <div class="mini-card-left"><span class="mini-card-emoji">💰</span>Best Value</div>
+            <span class="mini-badge badge-blue">Copy.ai</span>
+          </div>
+          <div class="mini-card">
+            <div class="mini-card-left"><span class="mini-card-emoji">🆓</span>Best Free</div>
+            <span class="mini-badge badge-amber">ChatGPT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stripe-section">
+  <div class="section" id="categories">
+    <div class="section-header">
+      <div class="section-label">Browse by category</div>
+      <div class="section-title">What are you trying to do?</div>
+      <div class="section-sub">Choose a category to see the best AI tools for your specific use case.</div>
+    </div>
+    <div class="categories-grid">
+      <a href="category/writing.html" class="cat-card">
+        <div class="cat-icon">✍️</div>
+        <div class="cat-name">AI Writing</div>
+        <div class="cat-count">14 tools reviewed</div>
+      </a>
+      <a href="category/coding.html" class="cat-card">
+        <div class="cat-icon">💻</div>
+        <div class="cat-name">AI Coding</div>
+        <div class="cat-count">9 tools reviewed</div>
+      </a>
+      <a href="category/image.html" class="cat-card">
+        <div class="cat-icon">🎨</div>
+        <div class="cat-name">AI Image</div>
+        <div class="cat-count">11 tools reviewed</div>
+      </a>
+      <a href="category/automation.html" class="cat-card">
+        <div class="cat-icon">⚡</div>
+        <div class="cat-name">Automation</div>
+        <div class="cat-count">8 tools reviewed</div>
+      </a>
+      <a href="category/video.html" class="cat-card">
+        <div class="cat-icon">🎬</div>
+        <div class="cat-name">AI Video</div>
+        <div class="cat-count">7 tools reviewed</div>
+      </a>
+      <a href="category/productivity.html" class="cat-card">
+        <div class="cat-icon">🧠</div>
+        <div class="cat-name">Productivity</div>
+        <div class="cat-count">10 tools reviewed</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="reviews">
+  <div class="section-header">
+    <div class="section-label">Latest reviews</div>
+    <div class="section-title">Recently tested &amp; rated</div>
+    <div class="section-sub">Every tool is tested hands-on before we publish a review.</div>
+  </div>
+  <div class="reviews-grid">
+    <a href="review/jasper.html" class="review-card">
+      <div class="review-card-top">
+        <div class="review-tool-info">
+          <div class="review-tool-icon">✍️</div>
+          <div>
+            <div class="review-tool-name">Jasper AI</div>
+            <div class="review-tool-cat">AI Writing</div>
+          </div>
+        </div>
+        <div>
+          <div class="review-score">9.2</div>
+          <div class="review-score-label">out of 10</div>
+        </div>
+      </div>
+      <div class="review-card-body">
+        <p class="review-excerpt">The gold standard for long-form AI content. Jasper excels at maintaining brand voice and producing publish-ready content with minimal editing required.</p>
+        <div class="review-tags">
+          <span class="tag">Long-form</span>
+          <span class="tag">Brand voice</span>
+          <span class="tag">SEO</span>
+        </div>
+      </div>
+      <div class="review-card-footer">
+        <span class="review-footer-left">From $39/mo</span>
+        <span class="review-read-more">Read review →</span>
+      </div>
+    </a>
+    <a href="review/copyai.html" class="review-card">
+      <div class="review-card-top">
+        <div class="review-tool-info">
+          <div class="review-tool-icon">📝</div>
+          <div>
+            <div class="review-tool-name">Copy.ai</div>
+            <div class="review-tool-cat">AI Writing</div>
+          </div>
+        </div>
+        <div>
+          <div class="review-score">8.7</div>
+          <div class="review-score-label">out of 10</div>
+        </div>
+      </div>
+      <div class="review-card-body">
+        <p class="review-excerpt">Best value for small teams and solo creators. The free plan is genuinely useful, and the workflow templates save hours every week.</p>
+        <div class="review-tags">
+          <span class="tag">Free plan</span>
+          <span class="tag">Templates</span>
+          <span class="tag">Social</span>
+        </div>
+      </div>
+      <div class="review-card-footer">
+        <span class="review-footer-left">Free — $49/mo</span>
+        <span class="review-read-more">Read review →</span>
+      </div>
+    </a>
+    <a href="review/cursor.html" class="review-card">
+      <div class="review-card-top">
+        <div class="review-tool-info">
+          <div class="review-tool-icon">💻</div>
+          <div>
+            <div class="review-tool-name">Cursor</div>
+            <div class="review-tool-cat">AI Coding</div>
+          </div>
+        </div>
+        <div>
+          <div class="review-score">9.5</div>
+          <div class="review-score-label">out of 10</div>
+        </div>
+      </div>
+      <div class="review-card-body">
+        <p class="review-excerpt">The AI code editor that's replaced VS Code for thousands of developers. Autocomplete, chat, and full codebase understanding in one tool.</p>
+        <div class="review-tags">
+          <span class="tag">Code editor</span>
+          <span class="tag">Autocomplete</span>
+          <span class="tag">Chat</span>
+        </div>
+      </div>
+      <div class="review-card-footer">
+        <span class="review-footer-left">Free — $40/mo</span>
+        <span class="review-read-more">Read review →</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="stripe-section">
+  <div class="section" id="compare">
+    <div class="section-header">
+      <div class="section-label">Head to head</div>
+      <div class="section-title">Quick comparison</div>
+      <div class="section-sub">Top AI writing tools compared side by side.</div>
+    </div>
+    <div class="comparison-wrap">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Best for</th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th>Free plan</th>
+            <th>API access</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="tool-name-cell"><span class="tool-emoji">✍️</span><div><div class="tool-name">Jasper AI</div><div class="tool-sub">jasper.ai</div></div></div></td>
+            <td style="font-size:13px;color:var(--text2)">Long-form content</td>
+            <td><span class="price-cell">$39/mo</span></td>
+            <td><div class="rating-cell"><span class="rating-stars">★★★★★</span><span class="rating-num">9.2</span></div></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="check">✓</span></td>
+            <td><a href="review/jasper.html" class="view-link">Review →</a></td>
+          </tr>
+          <tr>
+            <td><div class="tool-name-cell"><span class="tool-emoji">📝</span><div><div class="tool-name">Copy.ai</div><div class="tool-sub">copy.ai</div></div></div></td>
+            <td style="font-size:13px;color:var(--text2)">Short-form &amp; social</td>
+            <td><span class="free-badge">FREE</span></td>
+            <td><div class="rating-cell"><span class="rating-stars">★★★★☆</span><span class="rating-num">8.7</span></div></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><a href="review/copyai.html" class="view-link">Review →</a></td>
+          </tr>
+          <tr>
+            <td><div class="tool-name-cell"><span class="tool-emoji">⚡</span><div><div class="tool-name">Writesonic</div><div class="tool-sub">writesonic.com</div></div></div></td>
+            <td style="font-size:13px;color:var(--text2)">SEO content</td>
+            <td><span class="price-cell">$16/mo</span></td>
+            <td><div class="rating-cell"><span class="rating-stars">★★★★☆</span><span class="rating-num">8.1</span></div></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><a href="review/writesonic.html" class="view-link">Review →</a></td>
+          </tr>
+          <tr>
+            <td><div class="tool-name-cell"><span class="tool-emoji">🤖</span><div><div class="tool-name">ChatGPT</div><div class="tool-sub">chat.openai.com</div></div></div></td>
+            <td style="font-size:13px;color:var(--text2)">General purpose</td>
+            <td><span class="free-badge">FREE</span></td>
+            <td><div class="rating-cell"><span class="rating-stars">★★★★☆</span><span class="rating-num">8.4</span></div></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><a href="review/chatgpt.html" class="view-link">Review →</a></td>
+          </tr>
+          <tr>
+            <td><div class="tool-name-cell"><span class="tool-emoji">💻</span><div><div class="tool-name">Cursor</div><div class="tool-sub">cursor.sh</div></div></div></td>
+            <td style="font-size:13px;color:var(--text2)">AI coding</td>
+            <td><span class="free-badge">FREE</span></td>
+            <td><div class="rating-cell"><span class="rating-stars">★★★★★</span><span class="rating-num">9.5</span></div></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><a href="review/cursor.html" class="view-link">Review →</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="newsletter" id="newsletter">
+  <div class="newsletter-inner">
+    <h2>Stay ahead of AI</h2>
+    <p>Get weekly reviews of new AI tools delivered to your inbox. No spam, unsubscribe anytime.</p>
+    <div class="newsletter-form">
+      <input type="email" class="newsletter-input" placeholder="your@email.com">
+      <button class="newsletter-btn">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">AI Tool<span>Grade</span></div>
+      <p class="footer-desc">Independent reviews and comparisons of AI tools. We test everything so you don't have to.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Reviews</div>
+      <div class="footer-links">
+        <a href="index.html#">AI Writing</a>
+        <a href="index.html#">AI Coding</a>
+        <a href="index.html#">AI Image</a>
+        <a href="index.html#">Automation</a>
+        <a href="index.html#">Productivity</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="how-we-review.html">How we review</a>
+        <a href="contact.html">Contact</a>
+        <a href="advertise.html">Advertise</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Legal</div>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 AIToolGrade. All rights reserved.</span>
+    <span>Some links are affiliate links. <a href="index.html#">Learn more</a></span>
+  </div>
+</footer>
+
+
+
+</body></html>

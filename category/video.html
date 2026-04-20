@@ -40,6 +40,7 @@ h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;ma
 .coming-soon span{font-size:40px;display:block;margin-bottom:16px}
 .coming-soon h2{font-family:var(--display);font-size:24px;font-weight:700;color:var(--text);margin-bottom:8px}
 footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px}.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}.footer-brand span{color:var(--accent)}.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}.footer-links{display:flex;flex-direction:column;gap:10px}.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color 0.15s}.footer-links a:hover{color:var(--accent)}.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text3)}.footer-bottom a{color:var(--text3);text-decoration:none}.footer-bottom a:hover{color:var(--accent)}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}.tool-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:24px;text-decoration:none;color:inherit;transition:box-shadow 0.15s,transform 0.15s;display:block}.tool-card:hover{box-shadow:0 8px 24px rgba(0,0,0,0.08);transform:translateY(-2px)}.tool-card-top{display:flex;align-items:center;gap:12px;margin-bottom:16px}.tool-icon{width:44px;height:44px;border-radius:10px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:22px;border:1px solid var(--border)}.tool-card-name{font-size:16px;font-weight:600}.tool-card-url{font-size:12px;color:var(--text3);font-family:var(--mono)}.tool-card-desc{font-size:14px;color:var(--text2);margin-bottom:16px}.tool-card-meta{display:flex;align-items:center;justify-content:space-between}.tool-score{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--accent)}.free-badge{background:#e8f5e9;color:#2e7d32;font-size:11px;font-weight:600;padding:3px 8px;border-radius:100px;font-family:var(--mono)}
 @media(max-width:768px){.page-wrap{padding:40px 20px}nav{padding:0 20px}h1{font-size:30px}}
 </style>
 </head>
@@ -71,10 +72,17 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
     <h1>Best AI Video Tools 2026</h1>
     <p class="page-sub">AI video generation is evolving fast. We're testing Runway, Sora, Synthesia, and more — full reviews coming soon.</p>
   </div>
-  <div class="coming-soon">
-    <span>🎬</span>
-    <h2>Reviews Coming Soon</h2>
-    Browse our reviewed AI video tools below.
+  <div class="tools-grid">
+    <a href="../review/runway.html" class="tool-card">
+      <div class="tool-card-top"><div class="tool-icon">🎬</div><div><div class="tool-card-name">Runway</div><div class="tool-card-url">runwayml.com</div></div></div>
+      <div class="tool-card-desc">The gold standard for AI video generation. Gen-4.5 produces cinematic quality with unmatched character consistency.</div>
+      <div class="tool-card-meta"><span class="tool-score">★ 8.9 / 10</span><span class="free-badge">FREE</span></div>
+    </a>
+    <a href="../review/synthesia.html" class="tool-card">
+      <div class="tool-card-top"><div class="tool-icon">🎭</div><div><div class="tool-card-name">Synthesia</div><div class="tool-card-url">synthesia.io</div></div></div>
+      <div class="tool-card-desc">The best AI avatar video platform for business. Create multilingual training videos with 230+ avatars — no camera needed.</div>
+      <div class="tool-card-meta"><span class="tool-score">★ 8.3 / 10</span><span class="free-badge">FREE</span></div>
+    </a>
   </div>
 </div>
 

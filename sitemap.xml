@@ -37,4 +37,8 @@
   <url><loc>https://aitoolgrade.com/privacy-policy.html</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
   <url><loc>https://aitoolgrade.com/terms-of-use.html</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
   <url><loc>https://aitoolgrade.com/cookie-policy.html</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://aitoolgrade.com/review/perplexity.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aitoolgrade.com/review/grammarly.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aitoolgrade.com/blog/chatgpt-vs-claude-vs-perplexity.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aitoolgrade.com/blog/best-ai-tools-for-seo-2026.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

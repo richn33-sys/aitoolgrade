@@ -110,6 +110,8 @@ Google Fonts link (include in every page head):
 ## Writing Style
 All content (reviews, blog posts, any copy) must be humanized — not AI-sounding. Vary sentence lengths, use natural phrasing, improve transitions, make it feel organic and authentic. No fluff, no generic AI sentence structures. Short punchy sentences mixed with longer ones. Write like a knowledgeable person, not a content generator.
 
+As a final step in any writing task, humanize the text so it does not feel AI-generated. Vary sentence length, add natural phrasing, improve transitions, and make it feel organic and authentic — without adding fluff or changing the message.
+
 ## Key UI Patterns
 - **Scores:** displayed as `★ 9.4 / 10` using `var(--mono)` font, `var(--accent)` color
 - **Free badge:** `<span class="free-badge">FREE</span>` — green pill badge

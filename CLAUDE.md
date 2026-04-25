@@ -107,6 +107,9 @@ Google Fonts link (include in every page head):
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 ```
 
+## Site Positioning
+The site is positioned as a research-based resource, NOT a hands-on testing site. Never claim personal hands-on testing, 30-day trials, or first-person use. Instead frame everything as: verified pricing, documented features, primary source research, community sentiment analysis, and structured scoring. The methodology page at how-we-review.html explains this fully — all content must be consistent with it.
+
 ## Writing Style
 All content (reviews, blog posts, any copy) must be humanized — not AI-sounding. Vary sentence lengths, use natural phrasing, improve transitions, make it feel organic and authentic. No fluff, no generic AI sentence structures. Short punchy sentences mixed with longer ones. Write like a knowledgeable person, not a content generator.
 

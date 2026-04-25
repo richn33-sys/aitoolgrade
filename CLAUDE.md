@@ -110,6 +110,20 @@ Google Fonts link (include in every page head):
 ## Site Positioning
 The site is positioned as a research-based resource, NOT a hands-on testing site. Never claim personal hands-on testing, 30-day trials, or first-person use. Instead frame everything as: verified pricing, documented features, primary source research, community sentiment analysis, and structured scoring. The methodology page at how-we-review.html explains this fully — all content must be consistent with it.
 
+## Tone Rules — Prohibited Language
+Never use the following hyperbolic or promotional language anywhere on the site:
+- "game changer" / "game-changer"
+- "must-try" / "must try"
+- "no-brainer"
+- "fundamentally changes"
+- "genuinely transformative" / "genuinely exceptional" / "genuinely impressive"
+- "changes everything"
+- "revolutionary"
+- "unmatched" (unless a specific, verifiable claim)
+- "outstanding" as a verdict label
+
+Use instead: measured, specific, comparative language grounded in documented capabilities. Strong evaluative claims are fine — promotional phrasing is not. The goal is authoritative, not enthusiastic.
+
 ## Writing Style
 All content (reviews, blog posts, any copy) must be humanized — not AI-sounding. Vary sentence lengths, use natural phrasing, improve transitions, make it feel organic and authentic. No fluff, no generic AI sentence structures. Short punchy sentences mixed with longer ones. Write like a knowledgeable person, not a content generator.
 

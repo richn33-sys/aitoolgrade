@@ -227,3 +227,30 @@ def update_nav(content, new_nav):
 - Affiliate links once traffic starts coming in
 - Email newsletter backend (signup form exists on homepage)
 - Display ad slots
+
+## Long-Term SEO Strategy
+
+### Google Ranking Systems That Matter Most for This Site
+1. **Helpful Content System** — every content decision should ask: does this genuinely help someone decide whether to use this tool? Not just rank for a keyword.
+2. **Reviews System** — rewards insightful analysis, original research, and evidence of expertise. Screenshots, specific observations, and methodology transparency directly feed this system.
+3. **Link Analysis / PageRank** — quality inbound links from relevant sources are required to break through on competitive queries. Content quality alone is not enough.
+
+### Near-Term Priorities (Content and Credibility)
+- Add screenshots to Tier 1 review pages: Cursor, Grammarly, Jasper, Perplexity
+- Add a methodology callout box at the top of each review page linking to how-we-review.html
+- Keep adding reviews and blog posts to build topical depth
+
+### Medium-Term Priorities (Authority Building)
+- Contributor bylines from people with existing web presence = author entity signals
+- Outreach for mentions and links from AI tools communities, newsletters, and roundups
+- Guest posts or contributions on other sites under Rich's name pointing back to AIToolGrade
+- Rich's 15 years of SEO experience = relationships to leverage for link building
+
+### Longer-Term Priorities (Topical Authority)
+- Build topic clusters: each category needs a pillar page, multiple reviews, and supporting blog content all interlinked
+- Deep blog posts (2,000+ words) on comparison and best-of topics earn the most backlinks
+- Quality links over quantity — one link from a respected AI newsletter beats ten from directories
+- Brand signals matter: direct traffic, branded searches, and return visits all feed ranking confidence
+
+### Content Quality Standard
+Every piece of content should be good enough that a reader would share it or link to it naturally. That is what creates the content quality gap that earns links over time.

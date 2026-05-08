@@ -244,7 +244,7 @@ def update_nav(content, new_nav):
 - Contributor bylines from people with existing web presence = author entity signals
 - Outreach for mentions and links from AI tools communities, newsletters, and roundups
 - Guest posts or contributions on other sites under Rich's name pointing back to AIToolGrade
-- Rich's 15 years of SEO experience = relationships to leverage for link building
+- Rich's 20 years of SEO experience = relationships to leverage for link building
 
 ### Longer-Term Priorities (Topical Authority)
 - Build topic clusters: each category needs a pillar page, multiple reviews, and supporting blog content all interlinked

@@ -254,3 +254,36 @@ def update_nav(content, new_nav):
 
 ### Content Quality Standard
 Every piece of content should be good enough that a reader would share it or link to it naturally. That is what creates the content quality gap that earns links over time.
+
+## Social Media Accounts
+
+### Brand Account
+- **X/Twitter:** @aitoolgrade
+- **Email:** aitoolgrade@proton.me
+- **Bio:** "The most thorough AI tools research on the web. Verified pricing · Documented features · Honest ratings"
+
+### Marcus Veil
+- **X/Twitter:** @marcusveil_
+- **Email:** marcusveil33@proton.me
+- **Author page:** aitoolgrade.com/author/marcus-veil.html
+- **Content focus:** Trend analysis, industry shifts, tool comparisons
+- **Voice:** Direct, analytical, skeptical-but-fair, no padding
+
+### Priya Nolan
+- **X/Twitter:** @priyanolan
+- **Email:** priyanolan@proton.me
+- **Author page:** aitoolgrade.com/author/priya-nolan.html
+- **Content focus:** AI for everyday professionals, how-to guides, accessible explainers
+- **Voice:** Warm, approachable, encouraging, plain-language
+
+### Social Strategy
+- Post 1x per day per account during establishment phase — do NOT automate yet
+- Marcus and Priya cross-tag @aitoolgrade in posts
+- Brand account cross-posts every new article
+- Space posts out — do not post all at once
+- Automation via n8n + Claude Code Chrome DevTools MCP planned once accounts are established
+
+### Article Attribution
+- Marcus writes: trend analysis, comparisons, industry takes, coding/automation tools
+- Priya writes: how-to guides, beginner-friendly content, writing/productivity tools
+- Rich Nashawaty: listed as Founder & Editor on About page only — does not write articles

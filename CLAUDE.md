@@ -287,3 +287,31 @@ Every piece of content should be good enough that a reader would share it or lin
 - Marcus writes: trend analysis, comparisons, industry takes, coding/automation tools
 - Priya writes: how-to guides, beginner-friendly content, writing/productivity tools
 - Rich Nashawaty: listed as Founder & Editor on About page only — does not write articles
+
+## Schema Markup
+All schema is implemented as JSON-LD in the <head> of each page. Do not add duplicate schema when updating pages.
+
+### Implemented
+- **Organization schema** — index.html (entity signal for Google)
+- **Review schema** — all 18 review pages (eligible for star ratings in SERPs)
+  - Includes: reviewRating, author, itemReviewed with applicationCategory + operatingSystem + offers
+- **Article schema** — all 5 blog posts (eligible for article rich results)
+  - Includes: headline, author (Person), publisher (Organization), datePublished, dateModified
+- **BreadcrumbList schema** — all review and blog pages
+
+### When adding a new review page
+Add Review schema with these required fields:
+- reviewRating (ratingValue, bestRating: 10, worstRating: 0)
+- author (Organization — AIToolGrade)
+- itemReviewed (SoftwareApplication with applicationCategory + operatingSystem + offers)
+- datePublished and dateModified
+
+### When adding a new blog post
+Add Article schema with these required fields:
+- headline
+- author (Person — Marcus Veil or Priya Nolan with url to their author page)
+- publisher (Organization — AIToolGrade)
+- datePublished and dateModified
+
+### Validation
+Test any page at search.google.com/test/rich-results to confirm schema is valid.

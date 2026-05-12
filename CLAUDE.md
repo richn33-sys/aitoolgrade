@@ -315,3 +315,47 @@ Add Article schema with these required fields:
 
 ### Validation
 Test any page at search.google.com/test/rich-results to confirm schema is valid.
+
+## New Review Page Template Prompt
+Use this prompt in Claude Code to build and deploy a new review page end-to-end.
+Replace [TOOL NAME], [CATEGORY], [AUTHOR], and [SCORE] with the correct values.
+
+Categories: AI Writing / AI Coding / AI Image / Automation / AI Video / Productivity
+Authors: Marcus Veil (trend/technical tools) / Priya Nolan (writing/productivity tools)
+
+PROMPT TEMPLATE (copy from here):
+
+/goal [TOOL NAME] review page fully built and deployed on AIToolGrade.com
+
+CONTEXT
+- Project: AIToolGrade.com - read CLAUDE.md before starting
+- Stack: vanilla HTML/CSS, no frameworks, all styles inline
+- Working dir: ~/Desktop/ClaudeWork/aitoolgrade/
+- Constraints: research-framing only, no hands-on testing claims, follow all prohibited language rules in CLAUDE.md
+
+SUCCESS CRITERIA (ALL MUST BE TRUE)
+1. review/[tool-name].html built - full content, score [SCORE]/10, pros/cons, pricing table, verdict box, Review schema, BreadcrumbList schema, [AUTHOR] byline linking to author page
+2. Nav Reviews dropdown updated on ALL pages (root + review/ + category/ + blog/ + author/)
+3. Card added to reviews.html and category/[CATEGORY].html
+4. Row added to compare.html
+5. Homepage [CATEGORY] count incremented by 1
+6. sitemap.xml updated with new URL
+7. Grep check run for prohibited language - zero results before deploying
+8. All files git pushed and SSH deployed
+9. Confirm live URL is accessible before stopping
+
+OPERATING RULES
+1. Read CLAUDE.md first - follow all conventions exactly
+2. Output full task list before writing any code
+3. Self-verify each step before moving to the next
+4. Use existing review pages as templates for HTML structure and styling
+5. Research tool from primary sources - official docs, pricing page, community feedback
+6. Do not make hands-on testing claims - research-based framing only
+7. Do not deploy until grep check passes
+8. Confirm SSH deploy is live before stopping
+
+DEPLOY COMMAND
+SSH: ssh -p 65002 u877849432@145.79.4.163
+Deploy: cd ~/domains/aitoolgrade.com/public_html && git fetch origin && git reset --hard origin/main
+
+Begin by outputting your plan. Then execute end-to-end without checking in until done or genuinely blocked.

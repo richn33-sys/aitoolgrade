@@ -359,3 +359,47 @@ SSH: ssh -p 65002 u877849432@145.79.4.163
 Deploy: cd ~/domains/aitoolgrade.com/public_html && git fetch origin && git reset --hard origin/main
 
 Begin by outputting your plan. Then execute end-to-end without checking in until done or genuinely blocked.
+
+
+## Missing File Structure Details
+
+### Additional Pages (root level)
+- how-we-review.html - methodology page explaining research process
+- contribute.html - contributor recruitment page
+- contact.html, advertise.html - standard pages
+- affiliate-disclosure.html, privacy-policy.html, terms-of-use.html, cookie-policy.html
+
+### Author Folder
+- author/marcus-veil.html - Marcus Veil bio page
+- author/priya-nolan.html - Priya Nolan bio page
+- author/marcusveil.jpg - Marcus profile photo
+- author/marcusbanner.jpeg - Marcus X banner
+- author/priyanolan.jpeg - Priya profile photo
+- author/priyabanner.jpg - Priya X banner
+
+### Image Folder
+- img/reviews/ - pricing screenshots for review pages
+- Files: cursor-pricing.jpg, grammarly-pricing.jpg, jasper-pricing.jpg, perplexity-interface.jpg, perplexity-pricing.jpg
+
+### Review Page HTML Structure
+Every review page must include:
+1. head with meta, fonts, inline styles, Review schema, BreadcrumbList schema
+2. Nav with full dropdown (all 19 reviews, 6 categories)
+3. Review hero: breadcrumb, tool icon, name, category, score, verdict banner
+4. Byline: Researched by [Author link] - AIToolGrade Editorial Team - Last verified [Month Year]
+5. review-body div: related post callout, What is X, Who is it for, Key features, Pricing table, Score breakdown, Pros/cons, Verdict box
+6. Footer 4-column grid
+
+### Nav href patterns by file depth
+- Root files: href="review/jasper.html"
+- review/ and category/ files: href="../review/jasper.html"
+- blog/ files: href="../../review/jasper.html"
+- author/ files: href="../review/jasper.html"
+
+### Schema required on every review page
+1. Review schema - includes itemReviewed SoftwareApplication with applicationCategory + operatingSystem + offers
+2. BreadcrumbList schema - Home > Reviews > Tool Name
+
+### Schema required on every blog post
+1. Article schema - author Person, publisher Organization, datePublished, dateModified
+2. BreadcrumbList schema - Home > Blog > Post Title

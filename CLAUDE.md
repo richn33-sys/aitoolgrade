@@ -403,3 +403,35 @@ Every review page must include:
 ### Schema required on every blog post
 1. Article schema - author Person, publisher Organization, datePublished, dateModified
 2. BreadcrumbList schema - Home > Blog > Post Title
+
+
+## Social Posting Workflow
+
+When a new review or blog post is published, ask Claude to write posts for all three accounts.
+Prompt: "Write X posts for [article name]"
+
+### Post Types Per Article
+1. Main posts x3 (one per account)
+2. Engagement posts x3 (cross-account replies/quotes 1-2 days later)
+3. Follow-up post for @aitoolgrade (links to related content)
+
+### 4-Day Posting Cadence
+- Day 1: @aitoolgrade main post + @marcusveil_ main post
+- Day 2: @priyanolan main post
+- Day 3: Marcus engagement post + Priya engagement post
+- Day 4: @aitoolgrade follow-up linking to related content
+
+### Voice Guidelines Per Account
+- @aitoolgrade: Authoritative, factual, links to article, no personality
+- @marcusveil_: Analytical, direct, skeptical-but-fair, adds technical context
+- @priyanolan: Warm, accessible, relatable angle, everyday professional perspective
+
+### Engagement Post Rules
+- Marcus quotes or replies to Priya adding technical depth
+- Priya quotes or replies to Marcus making it more accessible
+- Keep them feeling natural — not scripted
+- Space them out — do not post all at once
+
+### No Automation
+X posting is manual. Write posts in Claude.ai, copy and paste to each account.
+Do not attempt to automate X posting via n8n or Claude Code.

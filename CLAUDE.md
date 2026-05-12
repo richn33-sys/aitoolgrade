@@ -325,7 +325,7 @@ Authors: Marcus Veil (trend/technical tools) / Priya Nolan (writing/productivity
 
 PROMPT TEMPLATE (copy from here):
 
-/goal [TOOL NAME] review page fully built and deployed on AIToolGrade.com
+[TOOL NAME] review page fully built and deployed on AIToolGrade.com
 
 CONTEXT
 - Project: AIToolGrade.com - read CLAUDE.md before starting

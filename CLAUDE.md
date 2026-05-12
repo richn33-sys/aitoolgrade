@@ -435,3 +435,61 @@ Prompt: "Write X posts for [article name]"
 ### No Automation
 X posting is manual. Write posts in Claude.ai, copy and paste to each account.
 Do not attempt to automate X posting via n8n or Claude Code.
+
+PROMPT TEMPLATE (copy from here):
+
+[TOOL NAME] review page fully built, deployed, and social posts generated for AIToolGrade.com
+
+CONTEXT
+- Project: AIToolGrade.com - read CLAUDE.md before starting
+- Stack: vanilla HTML/CSS, no frameworks, all styles inline
+- Working dir: ~/Desktop/ClaudeWork/aitoolgrade/
+- Constraints: research-framing only, no hands-on testing claims, follow all prohibited language rules in CLAUDE.md
+- Author: [AUTHOR] (Marcus Veil for technical/coding/automation tools, Priya Nolan for writing/productivity tools)
+- Category: [CATEGORY]
+
+SUCCESS CRITERIA (ALL MUST BE TRUE)
+1. review/[tool-name].html built - full content, score/10, pros/cons, pricing table, verdict box, Review schema, BreadcrumbList schema, [AUTHOR] byline linking to author page
+2. Nav Reviews dropdown updated on ALL pages (root + review/ + category/ + blog/ + author/)
+3. Card added to reviews.html and category/[CATEGORY].html
+4. Row added to compare.html
+5. Homepage [CATEGORY] count incremented by 1
+6. sitemap.xml updated with new URL
+7. Grep check run for prohibited language - zero results before deploying
+8. All files git pushed and SSH deployed
+9. Confirm live URL is accessible before stopping
+10. Social posts file created at ~/Desktop/ClaudeWork/aitoolgrade/social-posts/[tool-name]-posts.md
+11. Email summary sent to richn33@gmail.com with live URL and social posts
+
+SOCIAL POSTS TO GENERATE (save to file)
+Following the voice guidelines in CLAUDE.md, generate:
+- @aitoolgrade main post (authoritative, factual, links to review)
+- @marcusveil_ main post (analytical, direct, technical angle)
+- @priyanolan main post (warm, accessible, everyday professional angle)
+- Marcus engagement post (quotes or replies to Priya with technical depth)
+- Priya engagement post (quotes or replies to Marcus making it accessible)
+- @aitoolgrade follow-up post (links to related content on site)
+
+POSTING CADENCE (include in social posts file)
+- Day 1: @aitoolgrade main + @marcusveil_ main
+- Day 2: @priyanolan main
+- Day 3: Marcus engagement + Priya engagement
+- Day 4: @aitoolgrade follow-up
+
+OPERATING RULES
+1. Read CLAUDE.md first - follow all conventions exactly
+2. Output full task list before writing any code
+3. Self-verify each step before moving to the next
+4. Use existing review pages as templates for HTML structure and styling
+5. Research tool from primary sources - official docs, pricing page, community feedback
+6. Do not make hands-on testing claims - research-based framing only
+7. Do not deploy until grep check passes
+8. Confirm SSH deploy is live before stopping
+9. Create social-posts/ folder if it does not exist
+10. Send completion email via Gmail MCP to richn33@gmail.com with live URL and path to social posts file
+
+DEPLOY COMMAND
+SSH: ssh -p 65002 u877849432@145.79.4.163
+Deploy: cd ~/domains/aitoolgrade.com/public_html && git fetch origin && git reset --hard origin/main
+
+Begin by outputting your plan. Then execute end-to-end without checking in until done or genuinely blocked.

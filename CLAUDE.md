@@ -531,8 +531,27 @@ Medium-term: contributor bylines, outreach for links from AI newsletters
 Longer-term: topic clusters, deep comparison posts (2000+ words)
 
 ## Research Agent
-Weekly research brief runs every Monday at 8am via launchd.
+
+A weekly automated research agent that runs every Monday at 8am via launchd on Rich's Mac.
+Emails a structured brief to richn33@gmail.com every Monday morning.
+
+Purpose: Tells Rich what to work on for AIToolGrade that week — new tools to review, 
+pricing updates needed, blog post opportunities, and what competitors are covering.
+
+What the brief covers:
+1. New tools worth reviewing - 3-5 tools not yet on site with estimated scores
+2. Pricing changes - flags if any of the 19 reviewed tools have updated pricing
+3. Trending search queries - high-opportunity keywords to target with new content
+4. Competitor activity - topics G2/TechRadar/PCMag are covering that we are not
+5. Community sentiment - Reddit discussions about tools getting significant attention
+
+How to act on it:
+- New tool recommendation → run the Claude Code review template to build and deploy
+- Pricing change flagged → update the relevant review page pricing section
+- Trending query → write a new blog post targeting that keyword
+- Competitor topic → add to content backlog
+
 Location: ~/Desktop/ClaudeWork/aitoolgrade_research/
 CLAUDE.md: ~/Desktop/ClaudeWork/aitoolgrade_research/CLAUDE.md
-Emails brief to richn33@gmail.com with new tool recommendations, pricing changes, trending queries.
 Manual trigger: python3 ~/Desktop/ClaudeWork/aitoolgrade_research/research_agent.py
+Schedule: Every Monday 8am via ~/Library/LaunchAgents/com.aitoolgrade.research.plist

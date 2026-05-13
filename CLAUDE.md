@@ -32,7 +32,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ├── favicon.svg / .png   ← favicon on all pages
 ├── robots.txt
 ├── sitemap.xml          ← submitted to Google Search Console
-├── review/              ← 16 individual tool review pages
+├── review/              ← 19 individual tool review pages
 │   ├── jasper.html          (AI Writing, 9.2)
 │   ├── copyai.html          (AI Writing, 8.4)
 │   ├── writesonic.html      (AI Writing, 8.1)
@@ -48,7 +48,10 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── adobe-firefly.html   (AI Image, 8.4)
 │   ├── leonardo-ai.html     (AI Image, 8.7)
 │   ├── runway.html          (AI Video, 8.9)
-│   └── synthesia.html       (AI Video, 8.3)
+│   ├── synthesia.html       (AI Video, 8.3)
+│   ├── grammarly.html       (AI Writing, 8.5)
+│   ├── perplexity.html      (Productivity, 8.8)
+│   └── replit.html          (AI Coding, 8.3)
 ├── category/            ← 6 category listing pages
 │   ├── writing.html
 │   ├── coding.html
@@ -64,12 +67,12 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ```
 
 ## Category Review Counts (homepage displays these — keep in sync)
-- AI Writing: 3
-- AI Coding: 4
+- AI Writing: 4
+- AI Coding: 5
 - AI Image: 3
 - Automation: 2
 - AI Video: 2
-- Productivity: 2
+- Productivity: 3
 
 When adding a new review, update the count in `index.html` using this script pattern:
 ```bash
@@ -156,6 +159,9 @@ Categories ▾         Reviews ▾            Compare    Blog    Get Updates
                        Runway
                        Synthesia
                        Notion AI
+                       Perplexity AI
+                       Grammarly
+                       Replit
 ```
 
 ### Nav href patterns by file location

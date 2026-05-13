@@ -499,3 +499,40 @@ SSH: ssh -p 65002 u877849432@145.79.4.163
 Deploy: cd ~/domains/aitoolgrade.com/public_html && git fetch origin && git reset --hard origin/main
 
 Begin by outputting your plan. Then execute end-to-end without checking in until done or genuinely blocked.
+
+## Schema Markup
+All schema is JSON-LD in the head of each page. Do not add duplicate schema.
+
+Required on every review page:
+1. Review schema - reviewRating + author + itemReviewed (SoftwareApplication with applicationCategory + operatingSystem + offers)
+2. BreadcrumbList schema - Home > Reviews > Tool Name
+
+Required on every blog post:
+1. Article schema - headline + author Person + publisher Organization + datePublished + dateModified
+2. BreadcrumbList schema - Home > Blog > Post Title
+
+Organization schema on index.html only.
+Validate at: search.google.com/test/rich-results
+
+## Factual Accuracy Rules
+- Never claim a specific number of tools evaluated unless documented
+- Do not claim personal hands-on testing of any tool
+- Rich Nashawaty bio: 20 years in SEO, search strategy, content, digital growth
+- Do not add biographical details beyond what is established
+
+## Long-Term SEO Strategy
+Key Google ranking systems:
+1. Helpful Content System - every piece must genuinely help someone decide whether to use a tool
+2. Reviews System - screenshots, specific observations, methodology transparency
+3. Link Analysis - quality inbound links from relevant sources required for competitive queries
+
+Near-term: screenshots on remaining reviews, methodology callout box, keep adding content
+Medium-term: contributor bylines, outreach for links from AI newsletters
+Longer-term: topic clusters, deep comparison posts (2000+ words)
+
+## Research Agent
+Weekly research brief runs every Monday at 8am via launchd.
+Location: ~/Desktop/ClaudeWork/aitoolgrade_research/
+CLAUDE.md: ~/Desktop/ClaudeWork/aitoolgrade_research/CLAUDE.md
+Emails brief to richn33@gmail.com with new tool recommendations, pricing changes, trending queries.
+Manual trigger: python3 ~/Desktop/ClaudeWork/aitoolgrade_research/research_agent.py

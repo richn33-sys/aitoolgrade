@@ -294,6 +294,54 @@ Every piece of content should be good enough that a reader would share it or lin
 - Priya writes: how-to guides, beginner-friendly content, writing/productivity tools
 - Rich Nashawaty: listed as Founder & Editor on About page only — does not write articles
 
+## X/Twitter Content Strategy
+
+### Accounts
+- @AIToolGrade — brand account, 3-4x per week
+- @marcusveil_ — Marcus persona, 2-3x per week
+- @priyanolan — Priya persona, 2-3x per week
+
+### Post Types by Account
+
+**@AIToolGrade** (brand voice — authoritative, data-driven)
+- Score highlights — share a score with the specific reasoning behind it
+- Community sentiment — what Reddit/G2 users actually say about a tool
+- Pricing alerts — changes, comparisons, value callouts
+- Stat callouts — surprising numbers from reviews
+- Month wrap — end of month roundup
+
+**@marcusveil_** (analytical, direct, skeptical)
+- Industry takes — competitive dynamics, company behavior, market shifts
+- Head-to-head comparisons — clear winner with specific reasoning
+- Pricing alerts — value analysis for developers and power users
+
+**@priyanolan** (warm, accessible, encouraging)
+- How-to posts — practical starting points and tool stacks
+- Myth busts — challenge fear and misinformation around AI tools
+- Beginner guides — entry-point recommendations with free tiers first
+- Personal takes — first-person voice, counterintuitive results
+
+### Content Rules
+- Every post must link back to a specific review or aitoolgrade.com
+- No prohibited language (game changer, revolutionary, unmatched, etc.)
+- Posts are single tweets under 280 characters — not threads
+- 1-2 hashtags max: #AITools #Productivity (use sparingly)
+- Rest days: Day 6, 13, 20, 27 of each 30-day cycle
+
+### 30-Day Calendar
+A full 30-day content calendar exists at:
+~/Desktop/ClaudeWork/aitoolgrade/x-calendar-30day.md
+
+After Day 30, rotate back to Day 1 — posts are evergreen.
+Update stats and community sentiment pulls using the Monday research brief.
+
+### Generating New Posts
+When new content is published, generate posts for all three accounts:
+1. @AIToolGrade: score + one specific insight + link
+2. @marcusveil_ (if tech/coding/automation tool): analytical angle + link
+3. @priyanolan (if writing/productivity tool): practical angle + link
+Both personas post on every review — just from different angles.
+
 ## Schema Markup
 All schema is implemented as JSON-LD in the <head> of each page. Do not add duplicate schema when updating pages.
 
@@ -529,6 +577,38 @@ Key Google ranking systems:
 Near-term: screenshots on remaining reviews, methodology callout box, keep adding content
 Medium-term: contributor bylines, outreach for links from AI newsletters
 Longer-term: topic clusters, deep comparison posts (2000+ words)
+
+## Google AI Optimization (Updated May 2026)
+Source: https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
+
+Traditional SEO still governs AI Overviews and AI Mode — no separate AEO/GEO strategy needed.
+Google's generative AI features pull from the same core ranking systems as regular Search.
+
+### What matters most
+- **Non-commodity content**: This is the priority. Generic listicles ("7 Best AI Writing Tools")
+  are commodity content — content that could be produced by a generative AI model. AIToolGrade must
+  go deeper: specific observations, documented evidence, unique scoring rationale.
+- **Unique POV and methodology transparency**: Key differentiators vs G2, TechRadar, PCMag.
+  Research-based framing is fine but must add genuine insight beyond what competitors offer.
+  Our scoring methodology and community sentiment analysis are the differentiators — lean into them.
+- **Structured, human-readable content**: Headings, clear sections, well-organized prose.
+  Already doing this — maintain it.
+- **Images and screenshots**: Create additional AI surface area beyond web links. Already have
+  pricing screenshots — expand this across more reviews.
+
+### What to ignore (Google confirmed these don't matter for AI search)
+- llms.txt files — not needed
+- "Chunking" content into small pieces — not needed
+- Rewriting content specifically for AI phrasing — not needed
+- Seeking inauthentic mentions — actively penalized
+- Structured data is NOT required for AI features (still worth keeping for rich results)
+
+### Tension point to watch
+AIToolGrade's research-based positioning conflicts with Google's preference for first-hand reviews
+with unique personal experience. Mitigation: lean harder on methodology transparency, community
+sentiment, and scoring specificity to differentiate from pure AI-generated summaries. Consider
+adding a "What users are saying" section to reviews sourced from Reddit/community to add a layer
+of real-world perspective.
 
 ## Research Agent
 

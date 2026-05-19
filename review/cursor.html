@@ -89,6 +89,10 @@ h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;ma
 .sidebar-cta:hover{background:var(--accent2)}
 .sidebar-disclosure{font-size:11px;color:var(--text3);margin-top:10px;text-align:center}
 footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px}.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}.footer-brand span{color:var(--accent)}.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}.footer-links{display:flex;flex-direction:column;gap:10px}.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color 0.15s}.footer-links a:hover{color:var(--accent)}.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text3)}.footer-bottom a{color:var(--text3);text-decoration:none}.footer-bottom a:hover{color:var(--accent)}
+.pricing-table{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:24px 0}
+.pricing-row{display:grid;grid-template-columns:1fr 1fr 2fr;padding:14px 20px;border-bottom:1px solid var(--border);font-size:14px}
+.pricing-row:last-child{border-bottom:none}
+.pricing-row.header{background:var(--bg2);font-weight:600;font-size:13px;font-family:var(--mono);color:var(--text3)}
 @media(max-width:768px){
   .review-layout{grid-template-columns:1fr;padding:40px 20px}
   .pros-cons{grid-template-columns:1fr}
@@ -125,7 +129,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
     }
   },
   "datePublished": "2026-04-01",
-  "dateModified": "2026-05-01"
+  "dateModified": "2026-05-19"
 }
 </script>
 <script type="application/ld+json">
@@ -226,8 +230,18 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
   <img src="../img/reviews/cursor-pricing.jpg" alt="Cursor pricing plans — Hobby, Pro, Pro+, Ultra and Teams" style="width:100%;display:block">
   <div style="padding:12px 16px;background:var(--bg2);font-size:12px;color:var(--text3);font-family:'DM Mono',monospace;border-top:1px solid var(--border)">Cursor pricing as of May 2026 — Hobby (free), Pro ($20/mo), Pro+ ($60/mo), Ultra ($200/mo), Teams ($40/user/mo)</div>
 </div>
-      <p>Cursor offers a free Hobby plan with 2,000 completions and 50 slow premium requests per month — enough to evaluate it seriously. The Pro plan at $20/month unlocks unlimited completions and 500 fast premium requests, which is what most active developers will need.</p>
-      <p>For teams, the Business plan at $40/user/month adds centralized billing, admin controls, and privacy mode. Given the productivity gains, it's one of the easiest tool purchases to justify to a manager.</p>
+      <div class="pricing-table">
+        <div class="pricing-row header"><div>Plan</div><div>Price</div><div>What you get</div></div>
+        <div class="pricing-row"><div>Hobby</div><div>Free</div><div>2,000 completions/mo, 50 slow premium requests — good for evaluation</div></div>
+        <div class="pricing-row"><div>Pro</div><div>$20/mo ($16/mo annual)</div><div>Unlimited completions, credit-based frontier model access, auto mode unlimited</div></div>
+        <div class="pricing-row"><div>Pro+</div><div>$60/mo ($48/mo annual)</div><div>Higher credit allocation for heavy frontier model use</div></div>
+        <div class="pricing-row"><div>Ultra</div><div>$200/mo</div><div>Maximum credits, priority access — for power users and agencies</div></div>
+        <div class="pricing-row"><div>Teams</div><div>$40/user/mo ($32 annual)</div><div>Centralized billing, admin controls, privacy mode, team usage dashboard</div></div>
+      </div>
+      <div style="background: var(--accent-dim); border: 1px solid rgba(232,93,38,0.15); border-radius: 10px; padding: 16px 20px; margin-top: 16px;">
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 6px;">What Changed</div>
+        <p style="font-family: var(--sans); font-size: 0.9rem; color: var(--text); line-height: 1.65; margin: 0;">In June 2025, Cursor shifted from a fixed 500-request model to a credit-based system — effectively cutting monthly requests from roughly 500 to ~225 at the $20 price point. The CEO issued a public apology. Auto mode is now unlimited; credits are only consumed when manually selecting frontier models like Claude Opus or GPT-4o. Pro+ ($60/mo) and Ultra ($200/mo) tiers were added to serve heavier users. Teams pricing was also revised.</p>
+      </div>
 
       <h2>Who Should Use Cursor?</h2>
       <p>Cursor is worth evaluating for any developer spending more than a few hours per week writing code. Whether you're a solo indie developer or part of a larger team, the productivity gains from codebase-aware AI are well-documented and consistent across user reports.</p>
@@ -307,9 +321,11 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         </div>
       </div>
       <div class="sidebar-title" style="margin-top:16px">Pricing</div>
-      <div class="sidebar-price-row"><span class="sidebar-price-label">Hobby</span><span class="sidebar-price-val">$0/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Hobby</span><span class="sidebar-price-val">Free</span></div>
       <div class="sidebar-price-row"><span class="sidebar-price-label">Pro</span><span class="sidebar-price-val">$20/mo</span></div>
-      <div class="sidebar-price-row"><span class="sidebar-price-label">Business</span><span class="sidebar-price-val">$40/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Pro+</span><span class="sidebar-price-val">$60/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Ultra</span><span class="sidebar-price-val">$200/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Teams</span><span class="sidebar-price-val">$40/user/mo</span></div>
       <div class="sidebar-price-row"><span class="sidebar-price-label">Free plan</span><span class="sidebar-price-val">✓ Yes</span></div>
       <a href="https://www.cursor.com/" class="sidebar-cta">Try Cursor Free →</a>
       <div class="sidebar-disclosure">Affiliate link</div>

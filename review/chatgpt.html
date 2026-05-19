@@ -89,6 +89,10 @@ h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;ma
 .sidebar-cta:hover{background:var(--accent2)}
 .sidebar-disclosure{font-size:11px;color:var(--text3);margin-top:10px;text-align:center}
 footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px}.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}.footer-brand span{color:var(--accent)}.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}.footer-links{display:flex;flex-direction:column;gap:10px}.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color 0.15s}.footer-links a:hover{color:var(--accent)}.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text3)}.footer-bottom a{color:var(--text3);text-decoration:none}.footer-bottom a:hover{color:var(--accent)}
+.pricing-table{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:24px 0}
+.pricing-row{display:grid;grid-template-columns:1fr 1fr 2fr;padding:14px 20px;border-bottom:1px solid var(--border);font-size:14px}
+.pricing-row:last-child{border-bottom:none}
+.pricing-row.header{background:var(--bg2);font-weight:600;font-size:13px;font-family:var(--mono);color:var(--text3)}
 @media(max-width:768px){
   .review-layout{grid-template-columns:1fr;padding:40px 20px}
   .pros-cons{grid-template-columns:1fr}
@@ -125,7 +129,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
     }
   },
   "datePublished": "2026-04-01",
-  "dateModified": "2026-05-01"
+  "dateModified": "2026-05-19"
 }
 </script>
 <script type="application/ld+json">
@@ -230,8 +234,20 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       </div>
 
       <h2>Pricing</h2>
-      <p>ChatGPT's free tier gives access to GPT-4o with some usage limits — it's genuinely useful and a great starting point. ChatGPT Plus at $20/month removes limits, adds faster responses, priority access during peak times, and unlocks advanced features like deeper data analysis and more image generations.</p>
-      <p>For teams, ChatGPT Team at $25/user/month adds a shared workspace, admin controls, and higher usage caps. Enterprise pricing is custom and includes expanded security and compliance features.</p>
+      <div class="pricing-table">
+        <div class="pricing-row header"><div>Plan</div><div>Price</div><div>What you get</div></div>
+        <div class="pricing-row"><div>Free</div><div>$0/mo</div><div>GPT-4o access, usage limits, ads in US since February 2026</div></div>
+        <div class="pricing-row"><div>Go</div><div>$8/mo</div><div>Reduced ads, higher limits — launched January 2026</div></div>
+        <div class="pricing-row"><div>Plus</div><div>$20/mo</div><div>No ads, expanded limits, DALL·E, advanced data analysis</div></div>
+        <div class="pricing-row"><div>Pro $100</div><div>$100/mo</div><div>5x Plus limits — launched April 9, 2026</div></div>
+        <div class="pricing-row"><div>Pro $200</div><div>$200/mo</div><div>Highest limits, all models, priority access</div></div>
+        <div class="pricing-row"><div>Business</div><div>$20/user/mo annual · $25/mo monthly</div><div>Team workspace, admin controls — reduced April 2, 2026</div></div>
+        <div class="pricing-row"><div>Enterprise</div><div>Custom</div><div>Expanded security, compliance, SSO, dedicated infrastructure</div></div>
+      </div>
+      <div style="background: var(--accent-dim); border: 1px solid rgba(232,93,38,0.15); border-radius: 10px; padding: 16px 20px; margin-top: 16px;">
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 6px;">What Changed</div>
+        <p style="font-family: var(--sans); font-size: 0.9rem; color: var(--text); line-height: 1.65; margin: 0;">GPT-5.5 launched April 23, 2026. Ads were added to Free and Go tiers in the US in February 2026 — the first time OpenAI has used advertising in its consumer product. A Go plan at $8/month launched January 2026 for users who want fewer limits without the full Plus price. A Pro $100 tier launched April 9, 2026 with 5x Plus limits. Business plan pricing was reduced on April 2, 2026. Codex usage is doubled on Pro through May 31, 2026.</p>
+      </div>
 
       <h2>Who Should Use ChatGPT?</h2>
       <p>ChatGPT is the right starting point for almost everyone new to AI tools. The free tier delivers real capability, the interface is intuitive, and the breadth of tasks it handles — writing, coding, research, analysis — covers more ground than any single-purpose tool. If you're only going to use one AI tool, this is it.</p>
@@ -300,8 +316,11 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       </div>
       <div class="sidebar-title" style="margin-top:16px">Pricing</div>
       <div class="sidebar-price-row"><span class="sidebar-price-label">Free</span><span class="sidebar-price-val">$0/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Go</span><span class="sidebar-price-val">$8/mo</span></div>
       <div class="sidebar-price-row"><span class="sidebar-price-label">Plus</span><span class="sidebar-price-val">$20/mo</span></div>
-      <div class="sidebar-price-row"><span class="sidebar-price-label">Team</span><span class="sidebar-price-val">$25/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Pro $100</span><span class="sidebar-price-val">$100/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Pro $200</span><span class="sidebar-price-val">$200/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Business</span><span class="sidebar-price-val">$20/user/mo</span></div>
       <div class="sidebar-price-row"><span class="sidebar-price-label">Free plan</span><span class="sidebar-price-val">✓ Yes</span></div>
       <a href="https://www.chatgpt.com/" class="sidebar-cta">Try ChatGPT Free →</a>
       <div class="sidebar-disclosure">Affiliate link</div>

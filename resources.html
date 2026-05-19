@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The hosting, SEO, security, and business tools the AIToolGrade team relies on — independent recommendations beyond our AI tool reviews.">
+<title>Tools We Use &amp; Recommend | AIToolGrade</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#fafaf8;
+  --bg2:#f3f2ee;
+  --bg3:#eceae3;
+  --text:#1a1a18;
+  --text2:#4a4a45;
+  --text3:#8a8a82;
+  --accent:#e85d26;
+  --accent2:#f07d4a;
+  --accent-dim:rgba(232,93,38,0.08);
+  --border:#e2e0d8;
+  --white:#ffffff;
+  --display:'Playfair Display',serif;
+  --sans:'DM Sans',sans-serif;
+  --mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none;transition:background 0.15s}
+.nav-cta:hover{background:var(--accent2);color:white}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:4px}
+.nav-dropdown>a::after{content:"▾";font-size:10px}
+.dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:-16px;background:white;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:200;max-height:80vh;overflow-y:auto}
+.dropdown-menu a{display:block;padding:8px 12px;font-size:14px;color:var(--text2);text-decoration:none;border-radius:6px;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--bg2);color:var(--accent)}
+.nav-dropdown:hover .dropdown-menu{display:block}
+.nav-dropdown .dropdown-menu::before{content:"";position:absolute;top:-8px;left:0;right:0;height:8px}
+
+/* PAGE HERO */
+.page-hero{background:var(--bg2);border-bottom:1px solid var(--border);padding:68px 40px 60px}
+.page-hero-inner{max-width:900px;margin:0 auto}
+.section-label{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.12em;color:var(--accent);text-transform:uppercase;margin-bottom:12px}
+h1{font-family:var(--display);font-size:48px;font-weight:800;line-height:1.15;color:var(--text);margin-bottom:18px}
+.hero-sub{font-size:18px;color:var(--text2);line-height:1.65;font-weight:300;max-width:620px}
+
+/* PAGE LAYOUT */
+.page-wrap{max-width:900px;margin:0 auto;padding:52px 40px 72px}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:44px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+.intro-text{font-size:16px;color:var(--text2);line-height:1.8;margin-bottom:60px;max-width:740px;border-left:3px solid var(--border);padding-left:20px}
+
+/* CATEGORY SECTIONS */
+.resource-section{margin-bottom:52px}
+.cat-label{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.12em;color:var(--accent);text-transform:uppercase;margin-bottom:14px}
+
+/* TOOL CARD */
+.tool-card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px}
+.tool-header{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:14px;flex-wrap:wrap}
+.tool-name{font-family:var(--display);font-size:24px;font-weight:700;color:var(--text);line-height:1.2}
+.tool-price{font-family:var(--mono);font-size:13px;color:var(--accent);margin-top:6px}
+.tool-desc{font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:16px}
+.tool-why{font-size:14px;color:var(--text2);background:var(--bg3);border-radius:8px;padding:12px 16px;margin-bottom:20px;line-height:1.6}
+.tool-why strong{color:var(--text);font-weight:600}
+.tool-cta-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.tool-cta{display:inline-block;background:var(--accent);color:white;padding:10px 22px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none;transition:background 0.15s;white-space:nowrap}
+.tool-cta:hover{background:var(--accent2);color:white}
+.affiliate-badge{font-family:var(--mono);font-size:11px;color:var(--text3)}
+
+/* DISCLOSURE */
+.disclosure-box{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:22px 26px;margin-top:60px;font-size:13px;color:var(--text3);line-height:1.75}
+.disclosure-box strong{color:var(--text2);font-weight:600}
+
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}
+.footer-brand span{color:var(--accent)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--accent)}
+
+@media(max-width:768px){
+  nav{padding:0 20px}
+  .page-hero{padding:48px 20px 40px}
+  h1{font-size:34px}
+  .hero-sub{font-size:16px}
+  .page-wrap{padding:40px 20px 56px}
+  .tool-header{flex-direction:column;gap:4px}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolgrade.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Resources", "item": "https://aitoolgrade.com/resources.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Tools We Use & Recommend",
+  "description": "The hosting, SEO, security, and business tools the AIToolGrade team relies on — independent recommendations beyond our AI tool reviews.",
+  "author": {
+    "@type": "Organization",
+    "name": "AIToolGrade",
+    "url": "https://aitoolgrade.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIToolGrade",
+    "url": "https://aitoolgrade.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://aitoolgrade.com/favicon.png"
+    }
+  },
+  "datePublished": "2026-05-19",
+  "dateModified": "2026-05-19",
+  "url": "https://aitoolgrade.com/resources.html"
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">AI Tool<span>Grade</span></a>
+    <div class="nav-links">
+      <div class="nav-dropdown"><a href="index.html#categories">Categories</a><div class="dropdown-menu"><a href="category/writing.html">✍️ AI Writing</a><a href="category/coding.html">💻 AI Coding</a><a href="category/image.html">🎨 AI Image</a><a href="category/automation.html">⚡ Automation</a><a href="category/video.html">🎬 AI Video</a><a href="category/productivity.html">🧠 Productivity</a></div></div>
+      <div class="nav-dropdown"><a href="reviews.html">Reviews</a><div class="dropdown-menu"><a href="review/jasper.html">Jasper AI</a><a href="review/copyai.html">Copy.ai</a><a href="review/cursor.html">Cursor</a><a href="review/chatgpt.html">ChatGPT</a><a href="review/writesonic.html">Writesonic</a><a href="review/github-copilot.html">GitHub Copilot</a><a href="review/windsurf.html">Windsurf</a><a href="review/bolt.html">Bolt.new</a><a href="review/zapier.html">Zapier</a><a href="review/n8n.html">n8n</a><a href="review/midjourney.html">Midjourney</a><a href="review/adobe-firefly.html">Adobe Firefly</a><a href="review/leonardo-ai.html">Leonardo AI</a><a href="review/runway.html">Runway</a><a href="review/synthesia.html">Synthesia</a><a href="review/notion-ai.html">Notion AI</a><a href="review/perplexity.html">Perplexity AI</a><a href="review/grammarly.html">Grammarly</a><a href="review/replit.html">Replit</a></div></div>
+      <a href="compare.html">Compare</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="index.html#newsletter" class="nav-cta">Get Updates</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="section-label">Beyond AI Tools</div>
+    <h1>Tools We Use &amp; Recommend</h1>
+    <p class="hero-sub">The hosting, SEO, and business tools our team relies on day to day — independently selected, not sponsored.</p>
+  </div>
+</section>
+
+<div class="page-wrap">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>›</span>Resources</div>
+
+  <p class="intro-text">AIToolGrade focuses on AI tools, but building and running a content site requires a broader stack. These are the tools we actually use for hosting, research, security, and business operations. We earn a small commission if you sign up through our links, at no extra cost to you.</p>
+
+  <!-- Hosting & Infrastructure -->
+  <div class="resource-section">
+    <div class="cat-label">Hosting &amp; Infrastructure</div>
+    <div class="tool-card">
+      <div class="tool-header">
+        <div>
+          <div class="tool-name">Hostinger</div>
+          <div class="tool-price">From $2.99/month</div>
+        </div>
+      </div>
+      <p class="tool-desc">The hosting provider we use for AIToolGrade.com. Reliable shared hosting with straightforward deployment, SSH access, and competitive pricing for content sites.</p>
+      <div class="tool-why"><strong>Why we use it:</strong> Affordable, dependable, good support. Handles everything a static HTML site needs.</div>
+      <div class="tool-cta-row">
+        <a href="#" class="tool-cta" target="_blank" rel="noopener">View Hostinger Plans →</a>
+        <span class="affiliate-badge">Affiliate link</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO & Research -->
+  <div class="resource-section">
+    <div class="cat-label">SEO &amp; Research</div>
+    <div class="tool-card">
+      <div class="tool-header">
+        <div>
+          <div class="tool-name">Semrush</div>
+          <div class="tool-price">From $139.95/month (free trial available)</div>
+        </div>
+      </div>
+      <p class="tool-desc">The SEO platform used by professional content teams for keyword research, competitor analysis, and site auditing. Industry standard for anyone serious about organic search.</p>
+      <div class="tool-why"><strong>Why we use it:</strong> Keyword research, tracking rankings, understanding what competitors are ranking for.</div>
+      <div class="tool-cta-row">
+        <a href="#" class="tool-cta" target="_blank" rel="noopener">Try Semrush Free →</a>
+        <span class="affiliate-badge">Affiliate link</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy & Security -->
+  <div class="resource-section">
+    <div class="cat-label">Privacy &amp; Security</div>
+    <div class="tool-card">
+      <div class="tool-header">
+        <div>
+          <div class="tool-name">NordVPN</div>
+          <div class="tool-price">From $3.99/month</div>
+        </div>
+      </div>
+      <p class="tool-desc">A reliable VPN for secure browsing, research, and protecting traffic on public networks. Used by the team for day-to-day privacy.</p>
+      <div class="tool-cta-row">
+        <a href="#" class="tool-cta" target="_blank" rel="noopener">Try NordVPN →</a>
+        <span class="affiliate-badge">Affiliate link</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ecommerce -->
+  <div class="resource-section">
+    <div class="cat-label">Ecommerce</div>
+    <div class="tool-card">
+      <div class="tool-header">
+        <div>
+          <div class="tool-name">Shopify</div>
+          <div class="tool-price">From $29/month (3-day free trial)</div>
+        </div>
+      </div>
+      <p class="tool-desc">The leading ecommerce platform for building online stores. If your work involves selling products online, Shopify is the most complete solution available.</p>
+      <div class="tool-cta-row">
+        <a href="#" class="tool-cta" target="_blank" rel="noopener">Start Shopify Free Trial →</a>
+        <span class="affiliate-badge">Affiliate link</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CRM & Marketing -->
+  <div class="resource-section">
+    <div class="cat-label">CRM &amp; Marketing</div>
+    <div class="tool-card">
+      <div class="tool-header">
+        <div>
+          <div class="tool-name">HubSpot</div>
+          <div class="tool-price">Free tier available; paid from $20/month</div>
+        </div>
+      </div>
+      <p class="tool-desc">An all-in-one CRM and marketing platform used by growth teams. Free tier is genuinely useful; paid plans scale well for agencies and mid-size companies.</p>
+      <div class="tool-cta-row">
+        <a href="#" class="tool-cta" target="_blank" rel="noopener">Try HubSpot Free →</a>
+        <span class="affiliate-badge">Affiliate link</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclosure-box">
+    <strong>Affiliate disclosure:</strong> AIToolGrade participates in affiliate programs for the tools listed on this page. We may earn a commission if you sign up through our links, at no extra cost to you. Tools are selected based on genuine use and relevance to our audience — not commission rates.
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">AI Tool<span>Grade</span></div>
+      <p class="footer-desc">Independent reviews and comparisons of AI tools. Researched, fact-checked, and independently rated.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Reviews</div>
+      <div class="footer-links">
+        <a href="category/writing.html">AI Writing</a>
+        <a href="category/coding.html">AI Coding</a>
+        <a href="category/image.html">AI Image</a>
+        <a href="category/automation.html">Automation</a>
+        <a href="category/productivity.html">Productivity</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="how-we-review.html">How we review</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+        <a href="contribute.html">Write for us</a>
+        <a href="advertise.html">Advertise</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Legal</div>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 AIToolGrade. All rights reserved.</span>
+    <span>Some links are affiliate links. <a href="affiliate-disclosure.html">Learn more</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -115,7 +115,17 @@ Create UTM parameters per page type:
 
 ## Log
 
+## Resources Page (Adjacent Affiliates)
+
+- [x] **resources.html** — Built and deployed
+  - Hostinger, Semrush, NordVPN, Shopify, HubSpot affiliate placeholders
+  - All CTAs href="#" — update once affiliate approvals come in
+  - Page: aitoolgrade.com/resources.html
+
+---
+
 | Date | Action |
 |---|---|
 | 2026-05-16 | Tracker created |
 | 2026-05-16 | Updated tracker — Jasper, Writesonic, Copy.ai confirmed dead/paused. Marketplaces (PartnerStack, Impact) added as primary discovery method. |
+| 2026-05-19 | Built resources.html — adjacent affiliate placeholders for Hostinger, Semrush, NordVPN, Shopify, HubSpot. Footer Resources link added to all 45 pages. |

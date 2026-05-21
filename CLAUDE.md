@@ -32,7 +32,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ├── favicon.svg / .png   ← favicon on all pages
 ├── robots.txt
 ├── sitemap.xml          ← submitted to Google Search Console
-├── review/              ← 19 individual tool review pages
+├── review/              ← 20 individual tool review pages
 │   ├── jasper.html          (AI Writing, 9.2)
 │   ├── copyai.html          (AI Writing, 8.4)
 │   ├── writesonic.html      (AI Writing, 8.1)
@@ -51,7 +51,8 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── synthesia.html       (AI Video, 8.3)
 │   ├── grammarly.html       (AI Writing, 8.5)
 │   ├── perplexity.html      (Productivity, 8.8)
-│   └── replit.html          (AI Coding, 8.3)
+│   ├── replit.html          (AI Coding, 8.3)
+│   └── claude-cowork.html   (Productivity, 8.2)
 ├── category/            ← 6 category listing pages
 │   ├── writing.html
 │   ├── coding.html
@@ -63,7 +64,11 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
     ├── index.html
     ├── cursor-vs-windsurf-vs-github-copilot.html
     ├── best-free-ai-tools-2026.html
-    └── how-to-automate-business-with-n8n.html
+    ├── best-ai-tools-for-seo-2026.html
+    ├── chatgpt-vs-claude-vs-perplexity.html
+    ├── how-to-automate-business-with-n8n.html
+    ├── cursor-pricing-2026.html
+    └── notion-ai-pricing-2026.html
 ```
 
 ## Category Review Counts (homepage displays these — keep in sync)
@@ -72,7 +77,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 - AI Image: 3
 - Automation: 2
 - AI Video: 2
-- Productivity: 3
+- Productivity: 4
 
 When adding a new review, update the count in `index.html` using this script pattern:
 ```bash
@@ -162,6 +167,7 @@ Categories ▾         Reviews ▾            Compare    Blog    Get Updates
                        Perplexity AI
                        Grammarly
                        Replit
+                       Claude Cowork
 ```
 
 ### Nav href patterns by file location
@@ -568,6 +574,19 @@ Validate at: search.google.com/test/rich-results
 - Rich Nashawaty bio: 20 years in SEO, search strategy, content, digital growth
 - Do not add biographical details beyond what is established
 
+## Pricing Last Verified
+
+All pricing verified May 2026. Update this table when pricing changes are confirmed.
+
+| Tool | Last Verified | Notes |
+|---|---|---|
+| ChatGPT | May 2026 | 7-tier structure — Free, Go $8, Plus $20, Pro $100, Pro $200, Business $20-25, Enterprise |
+| Cursor | May 2026 | Credit-based since June 2025 — ~225 usable requests at Pro when selecting frontier models manually |
+| Grammarly | May 2026 | Premium renamed to Pro, Business replaced by Enterprise |
+| Perplexity | May 2026 | Max $200 tier added, Comet browser now free |
+| Jasper | May 2026 | Boss Mode discontinued, Starter gone, Creator $49/Pro $69 |
+| Notion AI | May 2026 | $10 add-on gone since May 2025, full AI requires Business $20/user/month |
+
 ## Long-Term SEO Strategy
 Key Google ranking systems:
 1. Helpful Content System - every piece must genuinely help someone decide whether to use a tool
@@ -577,6 +596,13 @@ Key Google ranking systems:
 Near-term: screenshots on remaining reviews, methodology callout box, keep adding content
 Medium-term: contributor bylines, outreach for links from AI newsletters
 Longer-term: topic clusters, deep comparison posts (2000+ words)
+
+Content published to date: 20 reviews, 6 blog posts, 1 comparison page, 1 resources page
+Next content priorities (from May 2026 research brief):
+- Best AI Agents for Non-Developers 2026 (blog)
+- Descript review
+- ChatGPT Go vs Plus (blog)
+- Microsoft Agent 365 review
 
 ## Google AI Optimization (Updated May 2026)
 Source: https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
@@ -610,6 +636,43 @@ sentiment, and scoring specificity to differentiate from pure AI-generated summa
 adding a "What users are saying" section to reviews sourced from Reddit/community to add a layer
 of real-world perspective.
 
+## Affiliate Programs
+
+Tracker file: ~/Desktop/ClaudeWork/aitoolgrade/affiliate-tracker.md
+Last updated: May 2026
+
+Networks:
+- Impact.com — applied May 19, 2026, pending approval. Search for Adobe, Grammarly, Semrush once approved.
+- PartnerStack — rejected May 2026 (early-stage traffic). Reapply in 90 days.
+
+Confirmed active programs:
+- Adobe Firefly — Impact marketplace
+- Grammarly — Impact marketplace
+- Semrush — Impact marketplace ($200 + 30% recurring)
+- Synthesia — synthesia.io/affiliates direct
+- Notion — not accepting new affiliates (check quarterly)
+
+Confirmed dead/paused:
+- Jasper, Writesonic, Copy.ai — programs pulled
+- Cursor, GitHub Copilot, Midjourney, ChatGPT — no programs exist
+
+Adjacent programs (resources.html):
+- Hostinger, NordVPN, Shopify, HubSpot — placeholders live, awaiting affiliate URLs
+- resources.html live at aitoolgrade.com/resources.html
+
+Affiliate link Claude Code prompt: ready to run when URLs approved — located in session notes May 19 2026.
+
+## Blog Posts Published
+
+| Post | Author | Date | Target Keyword |
+|---|---|---|---|
+| Cursor vs Windsurf vs GitHub Copilot | Marcus Veil | April 2026 | cursor vs windsurf |
+| Best Free AI Tools 2026 | Priya Nolan | April 2026 | best free ai tools 2026 |
+| Best AI Tools for SEO 2026 | Marcus Veil | April 2026 | best ai tools seo |
+| ChatGPT vs Claude vs Perplexity | Priya Nolan | April 2026 | chatgpt vs claude vs perplexity |
+| Cursor Pricing Explained | Marcus Veil | May 2026 | cursor pricing 2026 |
+| Notion AI Pricing 2026 | Priya Nolan | May 2026 | notion ai pricing 2026 |
+
 ## Research Agent
 
 A weekly automated research agent that runs every Monday at 8am via launchd on Rich's Mac.
@@ -635,3 +698,37 @@ Location: ~/Desktop/ClaudeWork/aitoolgrade_research/
 CLAUDE.md: ~/Desktop/ClaudeWork/aitoolgrade_research/CLAUDE.md
 Manual trigger: python3 ~/Desktop/ClaudeWork/aitoolgrade_research/research_agent.py
 Schedule: Every Monday 8am via ~/Library/LaunchAgents/com.aitoolgrade.research.plist
+
+## Site Maintenance
+
+### What Users Are Saying sections
+Added to all 20 reviews (May 2026). Sources: Reddit + G2/Trustpilot per tool.
+Update community sentiment quotes when research agent briefs surface significant new feedback.
+
+### Nav
+Standardized across all 49 pages May 2026.
+Dropdown hover fix applied May 2026 — uses .nav-dropdown::after pseudo-element bridge.
+When adding new reviews: add to nav dropdown in ALL pages, adjust relative paths per folder depth.
+
+### Pricing updates
+Run pricing check on all tools monthly — use research agent brief as trigger.
+Always update: pricing table, What Changed callout box, byline "Last verified [Month Year]", schema dateModified.
+
+### Conflict of interest disclosure
+Claude Cowork review includes editorial disclosure — AIToolGrade uses Claude for content production.
+Apply similar disclosure to any future Anthropic product reviews.
+
+## Sitemap
+
+File: sitemap.xml (root level)
+Last updated: May 20, 2026
+
+Rules:
+- Reviews: changefreq="monthly", priority=0.8
+- Blog posts: changefreq="weekly", priority=0.7
+- Static pages (about, how-we-review, etc.): changefreq="yearly", priority=0.5
+- Update lastmod date every time a page is added or significantly updated
+- Run sitemap audit whenever new reviews or blog posts are added
+- Submit updated sitemap to Google Search Console after significant additions
+
+Current page count: 49 URLs (as of May 20, 2026)

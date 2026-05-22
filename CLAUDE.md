@@ -49,6 +49,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── leonardo-ai.html     (AI Image, 8.7)
 │   ├── runway.html          (AI Video, 8.9)
 │   ├── synthesia.html       (AI Video, 8.3)
+│   ├── descript.html        (AI Video, 8.5)
 │   ├── grammarly.html       (AI Writing, 8.5)
 │   ├── perplexity.html      (Productivity, 8.8)
 │   ├── replit.html          (AI Coding, 8.3)
@@ -76,7 +77,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 - AI Coding: 5
 - AI Image: 3
 - Automation: 2
-- AI Video: 2
+- AI Video: 3
 - Productivity: 4
 
 When adding a new review, update the count in `index.html` using this script pattern:
@@ -599,10 +600,8 @@ Longer-term: topic clusters, deep comparison posts (2000+ words)
 
 Content published to date: 20 reviews, 6 blog posts, 1 comparison page, 1 resources page
 Next content priorities (from May 2026 research brief):
-- Best AI Agents for Non-Developers 2026 (blog)
-- Descript review
-- ChatGPT Go vs Plus (blog)
-- Microsoft Agent 365 review
+- ChatGPT Go vs Plus blog post (Friday)
+- Microsoft Agent 365 review (Friday)
 
 ## Google AI Optimization (Updated May 2026)
 Source: https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
@@ -672,6 +671,9 @@ Affiliate link Claude Code prompt: ready to run when URLs approved — located i
 | ChatGPT vs Claude vs Perplexity | Priya Nolan | April 2026 | chatgpt vs claude vs perplexity |
 | Cursor Pricing Explained | Marcus Veil | May 2026 | cursor pricing 2026 |
 | Notion AI Pricing 2026 | Priya Nolan | May 2026 | notion ai pricing 2026 |
+| Best AI Agents for Non-Developers 2026 | Priya Nolan | May 2026 | best ai agents 2026 |
+| Descript Review | Priya Nolan | May 2026 | descript review 2026 |
+| ChatGPT Go vs Plus 2026 | Priya Nolan | May 2026 | chatgpt go vs plus |
 
 ## Research Agent
 
@@ -721,7 +723,7 @@ Apply similar disclosure to any future Anthropic product reviews.
 ## Sitemap
 
 File: sitemap.xml (root level)
-Last updated: May 20, 2026
+Last updated: May 21, 2026
 
 Rules:
 - Reviews: changefreq="monthly", priority=0.8
@@ -731,4 +733,26 @@ Rules:
 - Run sitemap audit whenever new reviews or blog posts are added
 - Submit updated sitemap to Google Search Console after significant additions
 
-Current page count: 49 URLs (as of May 20, 2026)
+Current page count: 52 URLs (as of May 21, 2026)
+
+## Technical Fixes Applied (May 2026)
+
+### Duplicate indexing fix
+- index.html canonical points to https://aitoolgrade.com/
+- .htaccess 301 redirect: /index.html → /
+- Sitemap uses https://aitoolgrade.com/ not /index.html
+
+### Canonical tags
+- All 52 pages audited and canonical tags verified/added May 2026
+- Format: <link rel="canonical" href="https://aitoolgrade.com/[path]" />
+- blog/index.html canonical: https://aitoolgrade.com/blog/
+
+### Internal links
+- 267 index.html href instances replaced with clean root URLs May 2026
+- All homepage links now use / not index.html
+- blog/index.html links now use /blog/
+
+### Nav dropdown hover fix
+- Bridge pseudo-element moved to .nav-dropdown::after (May 2026)
+- Previous fix (.dropdown-menu::before) failed because pointer-events:none on hidden dropdown killed the bridge
+- Current fix is always interactive regardless of dropdown state

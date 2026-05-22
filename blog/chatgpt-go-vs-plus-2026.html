@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="canonical" href="https://aitoolgrade.com/blog/chatgpt-go-vs-plus-2026.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ChatGPT Go launched globally in January 2026 at $8/month. It's not a cheaper Plus — it's a different product. Here's exactly what you get and who should pick which plan.">
+<title>ChatGPT Go vs Plus: Is the $8 Plan Worth It or a $12 Trap? | AIToolGrade</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fafaf8;--bg2:#f3f2ee;--text:#1a1a18;--text2:#4a4a45;--text3:#8a8a82;--accent:#e85d26;--accent2:#f07d4a;--accent-dim:rgba(232,93,38,0.08);--border:#e2e0d8;--white:#ffffff;--display:'Playfair Display',serif;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:4px}
+.nav-dropdown>a::after{content:"▾";font-size:10px}
+.dropdown-menu{visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.15s ease,visibility 0s linear 0.5s;position:absolute;top:calc(100% + 8px);left:-16px;background:white;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:200;max-height:80vh;overflow-y:auto}
+.dropdown-menu a{display:block;padding:8px 12px;font-size:14px;color:var(--text2);text-decoration:none;border-radius:6px;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--bg2);color:var(--accent)}
+.nav-dropdown:hover .dropdown-menu{visibility:visible;opacity:1;pointer-events:auto;transition:opacity 0.15s ease,visibility 0s}
+.nav-dropdown .dropdown-menu::before{content:"";position:absolute;top:-20px;left:0;right:0;height:20px}
+.nav-dropdown::after{content:"";position:absolute;height:20px;width:calc(100% + 16px);bottom:-20px;left:-16px}
+.post-wrap{max-width:780px;margin:0 auto;padding:60px 40px}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:24px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+.post-tag{display:inline-block;background:var(--accent-dim);color:var(--accent);font-size:12px;font-weight:600;padding:4px 10px;border-radius:100px;font-family:var(--mono);margin-bottom:16px}
+h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;margin-bottom:20px}
+.post-meta{font-size:13px;color:var(--text3);margin-bottom:40px;display:flex;gap:20px}
+.post-body h2{font-family:var(--display);font-size:28px;font-weight:700;margin:40px 0 16px}
+.post-body h3{font-size:18px;font-weight:600;margin:28px 0 12px}
+.post-body p{color:var(--text2);margin-bottom:16px;font-size:16px}
+.post-body ul{color:var(--text2);padding-left:20px;margin-bottom:16px}
+.post-body ul li{margin-bottom:8px}
+.comparison-table{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:32px 0}
+.comparison-table th{background:var(--bg2);font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);padding:14px 16px;text-align:left;border-bottom:1px solid var(--border)}
+.comparison-table td{padding:14px 16px;border-bottom:1px solid var(--border);font-size:14px;color:var(--text2)}
+.comparison-table tr:last-child td{border-bottom:none}
+.winner{background:var(--accent-dim);font-weight:600;color:var(--accent)}
+.verdict-box{background:var(--bg2);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:32px 0}
+.verdict-box h4{font-size:14px;font-weight:600;color:var(--accent);margin-bottom:8px;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.06em}
+.verdict-box p{color:var(--text2);font-size:14px;margin:0}
+.cta-box{background:var(--text);color:white;border-radius:14px;padding:28px;margin:40px 0;text-align:center}
+.cta-box h3{font-family:var(--display);font-size:22px;font-weight:700;margin-bottom:8px}
+.cta-box p{color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:20px}
+.cta-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta-btn{display:inline-block;background:var(--accent);color:white;padding:10px 20px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px;margin-top:80px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}
+.footer-brand span{color:var(--accent)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:12px;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--accent)}
+@media(max-width:768px){.post-wrap{padding:40px 20px}nav{padding:0 20px}h1{font-size:28px}.footer-inner{grid-template-columns:1fr 1fr}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ChatGPT Go vs Plus: Is the $8 Plan Worth It or a $12 Trap?",
+  "author": {
+    "@type": "Person",
+    "name": "Priya Nolan",
+    "url": "https://aitoolgrade.com/author/priya-nolan.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIToolGrade",
+    "url": "https://aitoolgrade.com"
+  },
+  "datePublished": "2026-05-22",
+  "dateModified": "2026-05-22"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolgrade.com"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aitoolgrade.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "ChatGPT Go vs Plus 2026", "item": "https://aitoolgrade.com/blog/chatgpt-go-vs-plus-2026.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">AI Tool<span>Grade</span></a>
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <a href="/#categories">Categories</a>
+        <div class="dropdown-menu">
+          <a href="../category/writing.html">AI Writing</a>
+          <a href="../category/coding.html">AI Coding</a>
+          <a href="../category/image.html">AI Image</a>
+          <a href="../category/automation.html">Automation</a>
+          <a href="../category/video.html">AI Video</a>
+          <a href="../category/productivity.html">Productivity</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="../reviews.html">Reviews</a>
+        <div class="dropdown-menu">
+          <a href="../review/jasper.html">Jasper AI</a>
+          <a href="../review/copyai.html">Copy.ai</a>
+          <a href="../review/cursor.html">Cursor</a>
+          <a href="../review/chatgpt.html">ChatGPT</a>
+          <a href="../review/writesonic.html">Writesonic</a>
+          <a href="../review/github-copilot.html">GitHub Copilot</a>
+          <a href="../review/windsurf.html">Windsurf</a>
+          <a href="../review/bolt.html">Bolt.new</a>
+          <a href="../review/zapier.html">Zapier</a>
+          <a href="../review/n8n.html">n8n</a>
+          <a href="../review/midjourney.html">Midjourney</a>
+          <a href="../review/adobe-firefly.html">Adobe Firefly</a>
+          <a href="../review/leonardo-ai.html">Leonardo AI</a>
+          <a href="../review/runway.html">Runway</a>
+          <a href="../review/synthesia.html">Synthesia</a>
+          <a href="../review/descript.html">Descript</a>
+          <a href="../review/notion-ai.html">Notion AI</a>
+          <a href="../review/perplexity.html">Perplexity AI</a>
+          <a href="../review/grammarly.html">Grammarly</a>
+          <a href="../review/replit.html">Replit</a>
+          <a href="../review/claude-cowork.html">Claude Cowork</a>
+        </div>
+      </div>
+      <a href="../compare.html">Compare</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#newsletter" class="nav-cta">Get Updates</a>
+    </div>
+  </div>
+</nav>
+
+<div class="post-wrap">
+  <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span>ChatGPT Go vs Plus 2026</div>
+  <span class="post-tag">Comparison</span>
+  <h1>ChatGPT Go vs Plus: Is the $8 Plan Worth It or a $12 Trap?</h1>
+  <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:32px;font-family:'DM Mono',monospace;">By <a href="../author/priya-nolan.html" style="color:var(--accent)">Priya Nolan</a>, AI Tools Writer &middot; AIToolGrade &middot; Last verified May 2026</p>
+  <div class="post-meta"><span>📅 May 2026</span><span>⏱ 9 min read</span></div>
+
+  <div class="post-body">
+
+    <p>OpenAI had two consumer plans in 2023. Free and Plus. Simple. In 2026 there are four plans, ads on two of them, and a pricing page that requires a comparison table to decode. The most confusing addition is Go — $8/month, launched globally in January 2026. Here's what it actually is and who it's actually for.</p>
+
+    <div class="verdict-box">
+      <h4>Bottom line up front</h4>
+      <p>ChatGPT Go is not a cheaper Plus. It's a volume upgrade to the Free plan — more messages, more uploads, a slightly newer model, but none of the headline features that make Plus useful for professional work. If you're upgrading from Free because you genuinely need more capability, skip Go and go straight to Plus. Go only makes sense if your one bottleneck is hitting message limits and your budget can't stretch to $20.</p>
+    </div>
+
+    <div class="toc" style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin:32px 0">
+      <p style="font-size:12px;font-family:'DM Mono',monospace;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px">In This Article</p>
+      <ol style="padding-left:20px;display:flex;flex-direction:column;gap:8px">
+        <li style="font-size:15px;color:var(--text2)"><a href="#what-is-go" style="color:var(--text2)">What is ChatGPT Go?</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#plus-extras" style="color:var(--text2)">What Plus gets you that Go doesn't</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#comparison" style="color:var(--text2)">Free vs Go vs Plus — full comparison</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#who-picks-go" style="color:var(--text2)">Who should pick Go</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#who-picks-plus" style="color:var(--text2)">Who should pick Plus</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#honest-take" style="color:var(--text2)">The honest take on Go in 2026</a></li>
+      </ol>
+    </div>
+
+    <h2 id="what-is-go">What Is ChatGPT Go?</h2>
+
+    <p>ChatGPT Go is OpenAI's lower-priced consumer tier. It first launched in India in August 2025 and rolled out globally in January 2026 at $8/month. It sits between Free and Plus — same product surface, different ceiling.</p>
+
+    <p>Here's what Go actually includes:</p>
+
+    <ul>
+      <li><strong>Model:</strong> GPT-5.2 Instant — one generation behind Plus, which runs on GPT-5.5</li>
+      <li><strong>Limits:</strong> roughly 10x the Free tier across messages, image generations, file uploads, and memory</li>
+      <li><strong>Included features:</strong> basic image generation through DALL-E, basic data analysis on uploaded files</li>
+      <li><strong>Not included:</strong> Advanced Voice Mode, Deep Research, ChatGPT Agent, Canvas, Custom GPT creation, Sora video generation</li>
+    </ul>
+
+    <p>The most important thing to know about Go: in February 2026, OpenAI began testing ads on the Free and Go tiers in the US. Plus remains ad-free. If you're paying $8 for Go in the US, you're paying for capacity — not for an ad-free experience.</p>
+
+    <h2 id="plus-extras">What Plus Gets You That Go Doesn't</h2>
+
+    <p>The gap between Go and Plus isn't measured in messages — it's measured in features. At $20/month, Plus unlocks the parts of <a href="../review/chatgpt.html" style="color:var(--accent)">ChatGPT</a> that most professional users would consider the actual product.</p>
+
+    <ul>
+      <li><strong>GPT-5.5:</strong> the current frontier model, noticeably more capable than Go's GPT-5.2 Instant on reasoning, code, and nuanced writing</li>
+      <li><strong>Advanced Voice Mode:</strong> natural, low-latency voice conversations — not the basic voice access Go offers</li>
+      <li><strong>Deep Research:</strong> autonomous multi-website research synthesis that pulls and reconciles sources for longer briefs</li>
+      <li><strong>ChatGPT Agent mode:</strong> the agentic workflow tooling that takes multi-step actions on your behalf</li>
+      <li><strong>Canvas:</strong> a side-by-side document workspace for collaborative writing and code editing</li>
+      <li><strong>Custom GPT creation:</strong> build and share your own configured assistants</li>
+      <li><strong>Sora video generation:</strong> still bundled with Plus, though the standalone Sora web and app are shutting down on April 26, 2026</li>
+      <li><strong>Higher message ceiling:</strong> 160 messages per 3-hour window — comfortably above what most professional users hit in a day</li>
+      <li><strong>No ads:</strong> Plus is currently the lowest-cost ad-free ChatGPT tier</li>
+    </ul>
+
+    <p>Read that list again with Go in mind. The Plus-exclusive column is where most of ChatGPT's product surface actually lives. Go gives you access to the chat box; Plus gives you the rest of the app.</p>
+
+    <h2 id="comparison">Free vs Go vs Plus — Full Comparison</h2>
+
+    <p>Side by side, the picture is clearer. Notice that the price difference between Go and Plus is $12 — the same as the gap between Free and Go is $8. But the capability jump from Go to Plus is much larger than the jump from Free to Go.</p>
+
+    <table class="comparison-table">
+      <thead><tr><th>Feature</th><th>Free</th><th>Go ($8)</th><th>Plus ($20)</th></tr></thead>
+      <tbody>
+        <tr><td>Model</td><td>GPT-5 (limited)</td><td>GPT-5.2 Instant</td><td class="winner">GPT-5.5</td></tr>
+        <tr><td>Message limit</td><td>Low</td><td>~10x Free</td><td class="winner">160 / 3 hrs</td></tr>
+        <tr><td>Image generation</td><td>Limited</td><td>Basic DALL-E</td><td class="winner">Full DALL-E</td></tr>
+        <tr><td>Deep Research</td><td>✗</td><td>✗</td><td class="winner">✓</td></tr>
+        <tr><td>Voice Mode</td><td>Basic</td><td>Basic</td><td class="winner">Advanced</td></tr>
+        <tr><td>Agent mode</td><td>✗</td><td>✗</td><td class="winner">✓</td></tr>
+        <tr><td>Canvas</td><td>✗</td><td>✗</td><td class="winner">✓</td></tr>
+        <tr><td>Custom GPTs</td><td>✗</td><td>✗</td><td class="winner">✓</td></tr>
+        <tr><td>Ads</td><td>US testing</td><td>US testing</td><td class="winner">No ads</td></tr>
+        <tr><td>Price</td><td>$0</td><td>$8/month</td><td>$20/month</td></tr>
+      </tbody>
+    </table>
+
+    <p>Once you map it out, the structure of the tiers becomes obvious. Go is "more Free." Plus is "the real product." That framing matters because most people considering Go are thinking of it as a discount on Plus — and it isn't.</p>
+
+    <h2 id="who-picks-go">Who Should Pick Go</h2>
+
+    <p>Go is a real product, not a trick. It's just narrower than the marketing suggests. There's a specific user it fits well.</p>
+
+    <ul>
+      <li>You hit Free tier message limits regularly but only use ChatGPT for basic chat and Q&A</li>
+      <li>Budget is a genuine constraint — the difference between $8 and $20 actually matters to you</li>
+      <li>You don't need Deep Research, Agent mode, Canvas, or Advanced Voice Mode</li>
+      <li>You're a casual user, a student, or an occasional creator who wants more headroom without the premium features</li>
+    </ul>
+
+    <p>If you recognize yourself there, Go does what you need at a price that makes sense. The slightly newer model and the higher limits are worth the $8 over Free, and you're not paying for capabilities you'd never use.</p>
+
+    <h2 id="who-picks-plus">Who Should Pick Plus</h2>
+
+    <p>Plus is the right call for anyone using ChatGPT for daily professional work — and that's a larger group than most people assume.</p>
+
+    <ul>
+      <li>You use ChatGPT for professional work — writing, research, analysis, or coding</li>
+      <li>You need Deep Research or Agent mode for multi-step tasks that go beyond a single prompt</li>
+      <li>You want the most capable model — the GPT-5.5 vs GPT-5.2 Instant gap shows up on harder tasks</li>
+      <li>You find ads disruptive to your workflow and want a paid tier that stays clean</li>
+      <li>You're upgrading from Free and the jump in capability matters more than the jump in price</li>
+    </ul>
+
+    <p>The Free-to-Go jump is modest. The Free-to-Plus jump is significant. If you're already deciding to pay, the $12 more for Plus buys you a different category of tool, not just a higher limit.</p>
+
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin:32px 0">
+      <div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:8px">Quick decision rule</div>
+      <table style="width:100%;border-collapse:collapse">
+        <tr style="border-bottom:1px solid var(--border)">
+          <td style="padding:10px 0;font-size:14px;color:var(--text3);font-family:var(--mono);width:40%">If you only need more messages</td>
+          <td style="padding:10px 0;font-size:14px;color:var(--text2)">Go at $8/month is the right tier</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border)">
+          <td style="padding:10px 0;font-size:14px;color:var(--text3);font-family:var(--mono)">If you need any premium feature</td>
+          <td style="padding:10px 0;font-size:14px;color:var(--text2)">Plus at $20/month — Go won't include it</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 0;font-size:14px;color:var(--text3);font-family:var(--mono)">If ads bother you</td>
+          <td style="padding:10px 0;font-size:14px;color:var(--text2)">Plus is the cheapest ad-free tier in 2026</td>
+        </tr>
+      </table>
+    </div>
+
+    <h2 id="honest-take">The Honest Take on Go in 2026</h2>
+
+    <p>Go is not a cheaper Plus. It's a volume upgrade to Free. The intelligence and feature gap between Free and Go is modest. The gap between Go and Plus is large. If you're upgrading from Free because you need more capability, go straight to Plus — not Go. Go is the right choice only if your specific need is more messages at a lower price and you don't care about the premium features.</p>
+
+    <p>The ads are the thing to watch. OpenAI testing ads on a paid tier in February 2026 is a meaningful signal about where Go is headed. Plus is currently the only consumer tier that's fully ad-free, and that may become a more important distinction over time if the ad testing expands. If you're choosing between Go and Plus today, weight that accordingly — you're not just paying for messages and features, you're paying for the absence of an ad layer in the interface.</p>
+
+    <p>One last note for anyone deciding between ChatGPT and the rest of the field: the cheapest serious AI assistant isn't always ChatGPT. <a href="../review/perplexity.html" style="color:var(--accent)">Perplexity</a> has a free tier that handles a lot of what Deep Research does, and <a href="../review/notion-ai.html" style="color:var(--accent)">Notion AI</a> can be the better pick if you already live in Notion. Worth a look before committing $20/month — or even $8 — to a single ecosystem.</p>
+
+    <div class="cta-box">
+      <h3>Read the full reviews</h3>
+      <p>Detailed breakdowns of ChatGPT, Perplexity, and Notion AI — pricing, features, and community sentiment.</p>
+      <div class="cta-links">
+        <a href="../review/chatgpt.html" class="cta-btn">ChatGPT Review →</a>
+        <a href="../review/perplexity.html" class="cta-btn">Perplexity Review →</a>
+        <a href="../review/notion-ai.html" class="cta-btn">Notion AI Review →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="related-posts" style="max-width:780px;margin:0 auto 48px;padding:32px;background:var(--bg2);border-radius:14px;border:1px solid var(--border)">
+  <p style="font-size:12px;font-family:DM Mono,monospace;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px">Related Reading</p>
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <a href="chatgpt-vs-claude-vs-perplexity.html" style="font-size:15px;font-weight:600;color:var(--text);border-bottom:1px solid var(--border);padding-bottom:12px;text-decoration:none">ChatGPT vs Claude vs Perplexity: Which AI Tool Should You Actually Use? →</a>
+    <a href="notion-ai-pricing-2026.html" style="font-size:15px;font-weight:600;color:var(--text);text-decoration:none">Notion AI Pricing 2026: The $10 Add-On Is Gone — Here's What It Actually Costs Now →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">AI Tool<span>Grade</span></div><p class="footer-desc">Independent reviews and comparisons of AI tools. Researched, fact-checked, and independently rated.</p></div>
+    <div><div class="footer-col-title">Reviews</div><div class="footer-links"><a href="../category/writing.html">AI Writing</a><a href="../category/coding.html">AI Coding</a><a href="../category/image.html">AI Image</a><a href="../category/automation.html">Automation</a><a href="../category/productivity.html">Productivity</a></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="../about.html">About</a><a href="../how-we-review.html">How we review</a><a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
+    <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+</footer>
+</body></html>

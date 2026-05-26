@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="canonical" href="https://aitoolgrade.com/review/lovable.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Lovable turns a prompt into a full-stack React + Supabase app and deploys it in minutes. The catch: an opaque credit system and bug loops. Our honest breakdown of the category leader.">
+<title>Lovable Review 2026 — Full-Stack App Builder, Credits &amp; the Bug Loop Problem | AIToolGrade</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fafaf8;--bg2:#f3f2ee;--bg3:#eceae3;--text:#1a1a18;--text2:#4a4a45;--text3:#8a8a82;--accent:#e85d26;--accent2:#f07d4a;--accent-dim:rgba(232,93,38,0.08);--border:#e2e0d8;--white:#ffffff;--display:'Playfair Display',serif;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:4px}
+.nav-dropdown>a::after{content:"▾";font-size:10px}
+.dropdown-menu{visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.15s ease,visibility 0s linear 0.5s;position:absolute;top:calc(100% + 8px);left:-16px;background:white;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:200;max-height:80vh;overflow-y:auto}
+.dropdown-menu a{display:block;padding:8px 12px;font-size:14px;color:var(--text2);text-decoration:none;border-radius:6px;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--bg2);color:var(--accent)}
+.nav-dropdown:hover .dropdown-menu{visibility:visible;opacity:1;pointer-events:auto;transition:opacity 0.15s ease,visibility 0s}
+.nav-dropdown .dropdown-menu::before{content:"";position:absolute;top:-20px;left:0;right:0;height:20px}
+.nav-dropdown::after{content:"";position:absolute;height:20px;width:calc(100% + 16px);bottom:-20px;left:-16px}
+.review-layout{max-width:1100px;margin:0 auto;padding:60px 40px;display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:start}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:24px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+.review-header{margin-bottom:40px}
+.review-tool-row{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.review-tool-logo{width:56px;height:56px;border-radius:14px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:28px;border:1px solid var(--border)}
+.review-tool-title{font-size:15px;font-weight:600;margin-bottom:2px}
+.review-tool-url{font-size:13px;color:var(--text3);font-family:var(--mono)}
+h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;margin-bottom:16px}
+.review-meta-row{display:flex;align-items:center;gap:20px;font-size:13px;color:var(--text3);margin-bottom:24px}
+.verdict-banner{background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:20px 24px;margin-bottom:40px;display:flex;align-items:center;gap:16px}
+.verdict-score{font-family:var(--display);font-size:48px;font-weight:800;color:var(--accent);line-height:1}
+.verdict-text h3{font-size:15px;font-weight:600;margin-bottom:4px}
+.verdict-text p{font-size:13px;color:var(--text2)}
+.review-body h2{font-family:var(--display);font-size:28px;font-weight:700;margin:40px 0 16px}
+.review-body h3{font-family:var(--display);font-size:20px;font-weight:700;margin:28px 0 12px}
+.review-body p{color:var(--text2);margin-bottom:16px}
+.review-body ul{color:var(--text2);margin:0 0 16px 20px}
+.review-body li{margin-bottom:8px}
+.callout-box{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:28px 0}
+.callout-box h4{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:10px}
+.callout-box p{font-size:14px;margin-bottom:0;color:var(--text2)}
+.pricing-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.pricing-table th,.pricing-table td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--border)}
+.pricing-table th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3);font-weight:500}
+.pricing-table td:first-child{font-weight:600;color:var(--text)}
+.pricing-table .price{font-family:var(--mono);color:var(--accent)}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
+.pros-box,.cons-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px}
+.pros-box{border-top:3px solid #2e7d32}
+.cons-box{border-top:3px solid #c62828}
+.pros-box h4{color:#2e7d32;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.cons-box h4{color:#c62828;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.pro-item,.con-item{font-size:14px;color:var(--text2);margin-bottom:8px;display:flex;gap:8px;align-items:flex-start}
+.pro-item::before{content:'✓';color:#2e7d32;font-weight:600;flex-shrink:0}
+.con-item::before{content:'✗';color:#c62828;font-weight:600;flex-shrink:0}
+.score-breakdown{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;margin:32px 0}
+.score-breakdown h4{font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:20px}
+.score-row{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.score-row:last-child{margin-bottom:0}
+.score-name{font-size:14px;color:var(--text2);width:170px;flex-shrink:0}
+.score-bar-track{flex:1;height:8px;background:var(--bg2);border-radius:100px;overflow:hidden}
+.score-bar-fill{height:100%;border-radius:100px;background:var(--accent)}
+.score-val{font-family:var(--mono);font-size:13px;font-weight:500;width:30px;text-align:right}
+.related-callout{background:var(--accent-dim);border:1px solid rgba(232,93,38,0.15);border-radius:10px;padding:14px 18px;margin-bottom:28px;font-size:14px}
+.related-callout a{color:var(--accent);font-weight:500;text-decoration:none}
+.related-callout a:hover{text-decoration:underline}
+.affiliate-box{background:var(--text);color:white;border-radius:14px;padding:28px;margin:40px 0;text-align:center}
+.affiliate-box h3{font-family:var(--display);font-size:24px;font-weight:700;margin-bottom:8px}
+.affiliate-box p{color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:20px}
+.affiliate-btn{display:inline-block;background:var(--accent);color:white;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;transition:background 0.15s}
+.affiliate-btn:hover{background:var(--accent2)}
+.affiliate-note{font-size:11px;color:rgba(255,255,255,0.4);margin-top:12px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px;position:sticky;top:84px}
+.sidebar-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:16px}
+.sidebar-score{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.sidebar-score-num{font-family:var(--display);font-size:52px;font-weight:800;color:var(--accent);line-height:1}
+.sidebar-score-label{font-size:13px;color:var(--text3)}
+.sidebar-price-row{display:flex;justify-content:space-between;font-size:14px;padding:10px 0;border-bottom:1px solid var(--border)}
+.sidebar-price-row:last-of-type{border-bottom:none}
+.sidebar-price-label{color:var(--text2)}
+.sidebar-price-val{font-family:var(--mono);font-weight:500}
+.sidebar-cta{display:block;background:var(--accent);color:white;text-align:center;padding:14px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;margin-top:20px;transition:background 0.15s}
+.sidebar-cta:hover{background:var(--accent2)}
+.sidebar-disclosure{font-size:11px;color:var(--text3);margin-top:10px;text-align:center}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}
+.footer-brand span{color:var(--accent)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--accent)}
+@media(max-width:768px){.review-layout{grid-template-columns:1fr;padding:40px 20px}.pros-cons{grid-template-columns:1fr}h1{font-size:30px}nav{padding:0 20px}.footer-inner{grid-template-columns:1fr 1fr}.score-name{width:120px}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "name": "Lovable Review 2026",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "8.1",
+    "bestRating": "10",
+    "worstRating": "0"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Marcus Veil",
+    "url": "https://aitoolgrade.com/author/marcus-veil.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIToolGrade",
+    "url": "https://aitoolgrade.com"
+  },
+  "itemReviewed": {
+    "@type": "SoftwareApplication",
+    "name": "Lovable",
+    "applicationCategory": "AI Coding Tool",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "url": "https://lovable.dev"
+    }
+  },
+  "datePublished": "2026-05-26",
+  "dateModified": "2026-05-26"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolgrade.com"},
+    {"@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://aitoolgrade.com/reviews.html"},
+    {"@type": "ListItem", "position": 3, "name": "AI Coding", "item": "https://aitoolgrade.com/category/coding.html"},
+    {"@type": "ListItem", "position": 4, "name": "Lovable", "item": "https://aitoolgrade.com/review/lovable.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">AI Tool<span>Grade</span></a>
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <a href="/#categories">Categories</a>
+        <div class="dropdown-menu">
+          <a href="../category/writing.html">AI Writing</a>
+          <a href="../category/coding.html">AI Coding</a>
+          <a href="../category/image.html">AI Image</a>
+          <a href="../category/automation.html">Automation</a>
+          <a href="../category/video.html">AI Video</a>
+          <a href="../category/productivity.html">Productivity</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="../reviews.html">Reviews</a>
+        <div class="dropdown-menu">
+          <a href="../review/jasper.html">Jasper AI</a>
+          <a href="../review/copyai.html">Copy.ai</a>
+          <a href="../review/cursor.html">Cursor</a>
+          <a href="../review/chatgpt.html">ChatGPT</a>
+          <a href="../review/writesonic.html">Writesonic</a>
+          <a href="../review/github-copilot.html">GitHub Copilot</a>
+          <a href="../review/windsurf.html">Windsurf</a>
+          <a href="../review/bolt.html">Bolt.new</a>
+          <a href="../review/lovable.html">Lovable</a>
+          <a href="../review/zapier.html">Zapier</a>
+          <a href="../review/n8n.html">n8n</a>
+          <a href="../review/microsoft-agent-365.html">Microsoft Agent 365</a>
+          <a href="../review/midjourney.html">Midjourney</a>
+          <a href="../review/adobe-firefly.html">Adobe Firefly</a>
+          <a href="../review/leonardo-ai.html">Leonardo AI</a>
+          <a href="../review/runway.html">Runway</a>
+          <a href="../review/synthesia.html">Synthesia</a>
+          <a href="../review/descript.html">Descript</a>
+          <a href="../review/notion-ai.html">Notion AI</a>
+          <a href="../review/perplexity.html">Perplexity AI</a>
+          <a href="../review/grammarly.html">Grammarly</a>
+          <a href="../review/replit.html">Replit</a>
+          <a href="../review/claude-cowork.html">Claude Cowork</a>
+        </div>
+      </div>
+      <a href="../compare.html">Compare</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#newsletter" class="nav-cta">Get Updates</a>
+    </div>
+  </div>
+</nav>
+
+<div class="review-layout">
+  <div class="review-main">
+    <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="../reviews.html">Reviews</a><span>›</span><a href="../category/coding.html">AI Coding</a><span>›</span>Lovable Review</div>
+    <div class="review-header">
+      <div class="review-tool-row">
+        <div class="review-tool-logo">💗</div>
+        <div>
+          <div class="review-tool-title">Lovable</div>
+          <div class="review-tool-url">lovable.dev</div>
+        </div>
+      </div>
+      <h1>Lovable Review 2026 — The Full-Stack App Builder, and the Credit Problem Nobody Mentions Upfront</h1>
+      <div class="review-meta-row">
+        <span>📅 Published May 2026</span>
+        <span>⏱ 10 min read</span>
+        <span>🔎 Research-based</span>
+      </div>
+    </div>
+    <div class="verdict-banner">
+      <div class="verdict-score">8.1</div>
+      <div class="verdict-text">
+        <h3>Editor's Verdict: Very Good</h3>
+        <p>The clearest community consensus in AI coding. Lovable wins on speed and design for prototypes and MVPs — and loses on predictable cost and production readiness.</p>
+      </div>
+    </div>
+    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified May 2026</p>
+<div class="review-body">
+
+      <div class="related-callout">Comparing app builders? See how it stacks up against <a href="../review/bolt.html">Bolt.new</a>, <a href="../review/replit.html">Replit</a>, and <a href="../review/cursor.html">Cursor</a>.</div>
+
+      <h2>What is Lovable?</h2>
+      <p>Lovable is an AI app builder that generates a complete web application — frontend, backend, database, authentication, and deployment — from natural-language prompts. You describe what you want, it writes a React and Tailwind CSS frontend wired to a Supabase backend, and it ships the result to a live URL. No local setup, no terminal, no boilerplate.</p>
+      <p>The company is based in Stockholm and was founded in November 2023 by Anton Osika, a former CERN engineer and YC founder, alongside Fabian Hedin. It launched as the open-source CLI project GPT Engineer — which picked up 51,000 GitHub stars — before rebuilding into the hosted product and rebranding to Lovable in December 2024. The reinvention worked. By early 2026 the platform reports 8 million users and $206M in annual recurring revenue, with a $330M Series B in December 2025 valuing it at $6.6 billion. That makes it the fastest-growing AI app builder on record and the name most often cited when people talk about "vibe coding" — the subreddit r/vibecoding now has 89,000 members, and Lovable is its default reference point.</p>
+      <p>This review is based on Lovable's documented features, verified pricing, and a read of community sentiment across Reddit, Product Hunt, and G2 — not hands-on testing. The goal is to tell you whether it fits your workflow before you spend your first credit.</p>
+
+      <div class="callout-box">
+        <h4>What changed</h4>
+        <p>Rebranded from GPT Engineer to Lovable in December 2024 with a full product rebuild. Raised a $330M Series B at a $6.6B valuation in December 2025 and crossed 8 million users in early 2026. The pricing model moved to credits — the free tier dropped from effectively unlimited use to 5 credits per day.</p>
+      </div>
+
+      <h2>Pros and Cons</h2>
+      <div class="pros-cons">
+        <div class="pros-box">
+          <h4>What stands out</h4>
+          <div class="pro-item">Fastest path from idea to working prototype in the category</div>
+          <div class="pro-item">Genuine full-stack output — Supabase backend works out of the box</div>
+          <div class="pro-item">GitHub two-way sync means no lock-in; export and continue elsewhere</div>
+          <div class="pro-item">Free tier is functional enough to validate the tool</div>
+          <div class="pro-item">Plan Mode reduces off-rails generation on bigger builds</div>
+        </div>
+        <div class="cons-box">
+          <h4>Where it falls short</h4>
+          <div class="con-item">Credit cost of an action isn't shown before you trigger it</div>
+          <div class="con-item">Bug loops — it says it fixed something, it didn't, you pay to retry</div>
+          <div class="con-item">Hits a complexity ceiling on custom logic and edge cases</div>
+          <div class="con-item">100 Pro credits can run out fast; top-ups add up</div>
+          <div class="con-item">Not production-ready without a developer audit</div>
+        </div>
+      </div>
+
+      <h2>Key Features</h2>
+      <p>Lovable's pitch is that one prompt produces a real, deployable app rather than a static mockup. The pieces that make that work:</p>
+      <ul>
+        <li><strong>Full-stack generation</strong> — a React + Tailwind frontend connected to a Supabase backend with authentication, database, and file storage, generated together from a single description.</li>
+        <li><strong>Plan Mode</strong> — before writing code, Lovable drafts a structured plan of what it intends to build. On complex projects this is the difference between a coherent app and a pile of mismatched components.</li>
+        <li><strong>Visual editor</strong> — click a UI element and edit it directly instead of prompting for every tweak. This is where the design-first reputation comes from.</li>
+        <li><strong>GitHub integration</strong> — two-way sync. You can export the codebase and keep building in Cursor, VS Code, or any IDE. That escape hatch matters more than it sounds.</li>
+        <li><strong>One-click deploy</strong> — a live URL with SSL out of the box; custom domains on paid plans.</li>
+        <li><strong>Supabase native</strong> — auth, Postgres database, storage, and row-level security configured for you rather than bolted on.</li>
+        <li><strong>Stripe integration</strong> — payment processing built in, which is what makes "ship a real SaaS MVP" a credible claim.</li>
+        <li><strong>Credit-based AI</strong> — every prompt consumes credits scaled to task complexity. This is also the source of the platform's biggest friction, covered below.</li>
+      </ul>
+
+      <h2>The Credit System — Read This Before You Subscribe</h2>
+      <p>This is the single most important thing to understand about Lovable, and it's the number one frustration in the community. Lovable runs on credits. Each prompt you send consumes some number of them based on how complex the task is. Simple edits cost roughly half a credit; a complex feature might cost one to two. So far, reasonable.</p>
+      <p>The problem is that <strong>the cost of an action is not disclosed before you trigger it.</strong> You don't see "this will cost 3 credits" and get a chance to decline. You send the prompt, the work happens, and the credits are gone. On a free or Pro budget where credits are scarce, that turns every instruction into a small gamble. One independent review put it bluntly: a complex AI instruction can consume anywhere from 10 to 50 credits, and many users report that 100 credits is not enough for a complex project in a single month.</p>
+      <p>This matters because it makes budgeting genuinely hard. A 100-credit Pro allowance can last a few days or a full month depending entirely on what you build and how often the AI has to redo work. If you're a non-technical founder validating one idea, you'll probably be fine. If you're iterating daily on something with real complexity, plan to buy top-ups or step up to a higher tier.</p>
+
+      <div class="callout-box">
+        <h4>The bug loop problem</h4>
+        <p>The second-most-cited frustration compounds the first. Lovable tells you it fixed a bug. It didn't. So you prompt it again to fix the fix — spending more credits — and sometimes it introduces a new problem in the process. Community members describe it as "a slot machine with credits." On simple apps this is rare. On complex business logic it's common, and it's where the opaque pricing hurts most: the harder your problem, the more the AI struggles, and the faster your credits burn fixing the same thing twice.</p>
+      </div>
+
+      <h2>The Complexity Ceiling</h2>
+      <p>Lovable's quality is not uniform across project types, and being honest about where the line sits is the most useful thing a review can do. For simple-to-moderate apps — landing pages, CRUD dashboards, internal tools, standard SaaS scaffolding with auth and payments — it's excellent, and fast. The further you push into custom business logic, bespoke APIs, intricate state management, and genuine edge cases, the more you'll need a developer to step in and finish the job.</p>
+      <p>That isn't a knock unique to Lovable — every tool in this category hits a similar wall. But it sets expectations correctly: Lovable is a prototyping and MVP engine, not a replacement for a development team on a production system. The community consensus on r/vibecoding is consistent here — it's the strongest choice for UI-first, design-forward prototypes, and it's not where you finish a complex product.</p>
+
+      <h2>Pricing</h2>
+      <p>Pricing was verified April 25, 2026. Lovable runs a credit model across four tiers, with paid top-ups available when you run dry.</p>
+      <table class="pricing-table">
+        <thead><tr><th>Plan</th><th>Price</th><th>What you get</th></tr></thead>
+        <tbody>
+          <tr><td>Free</td><td class="price">$0</td><td>5 credits/day (30/month max), public projects, 5 lovable.app domains</td></tr>
+          <tr><td>Pro</td><td class="price">$25/mo</td><td>100 monthly credits + 5 daily bonus credits, private projects, custom domains ($250/year)</td></tr>
+          <tr><td>Business</td><td class="price">$50/mo</td><td>Higher credit allocation, team features ($500/year)</td></tr>
+          <tr><td>Enterprise</td><td class="price">Custom</td><td>Volume credits, admin controls, procurement support</td></tr>
+        </tbody>
+      </table>
+      <p>Top-ups run $15 per 50 credits on Pro and $30 per 50 credits on Business. The free tier is genuinely useful for kicking the tires — 5 credits a day is enough to find out whether Lovable fits how you work before you pay. The catch, again, is that credit consumption isn't shown before you act, so "100 credits a month" tells you less about real-world capacity than you'd like.</p>
+
+      <h2>Score Breakdown</h2>
+      <div class="score-breakdown">
+        <h4>How we rated it</h4>
+        <div class="score-row"><span class="score-name">Ease of Use</span><div class="score-bar-track"><div class="score-bar-fill" style="width:90%"></div></div><span class="score-val">9.0</span></div>
+        <div class="score-row"><span class="score-name">Features</span><div class="score-bar-track"><div class="score-bar-fill" style="width:85%"></div></div><span class="score-val">8.5</span></div>
+        <div class="score-row"><span class="score-name">Value for Money</span><div class="score-bar-track"><div class="score-bar-fill" style="width:70%"></div></div><span class="score-val">7.0</span></div>
+        <div class="score-row"><span class="score-name">Integration</span><div class="score-bar-track"><div class="score-bar-fill" style="width:80%"></div></div><span class="score-val">8.0</span></div>
+        <div class="score-row"><span class="score-name">Support &amp; Docs</span><div class="score-bar-track"><div class="score-bar-fill" style="width:75%"></div></div><span class="score-val">7.5</span></div>
+      </div>
+      <p>Ease of use is the standout — a visual editor, no code required, an intuitive prompt interface, and a free tier to test. Features are deep for the category, with full-stack generation, GitHub sync, one-click deploy, and Stripe and auth out of the box. Value takes the hit because of credit opacity, not raw cost. Integration is strong on the Supabase-and-GitHub axis. Support and docs are solid — a strong community and good documentation — though response speed at the platform's current scale is reported as mixed.</p>
+
+      <h2>Who Should Use Lovable?</h2>
+      <p>Lovable is built for non-technical founders validating ideas, solo builders shipping MVPs fast, and designers who want a working prototype from a mockup. If your goal is to get from concept to a shareable, deployed app in hours rather than weeks, no tool in the category matches it right now. One Reddit user summed up the appeal: "I did 6 months of work in 2 days." For idea validation, that's the whole point.</p>
+      <h3>Who should look elsewhere</h3>
+      <p>If you're building a production application that needs a security audit, or your project leans on complex custom business logic, Lovable will get you part of the way and then need a developer. And if you need predictable monthly costs, the credit model works against you — the opacity makes budgeting unreliable. Developers who want full control over an existing codebase are better served by <a href="../review/cursor.html">Cursor</a>; teams weighing browser-based builders should also look at <a href="../review/bolt.html">Bolt.new</a> and <a href="../review/replit.html">Replit</a>, which we cover separately.</p>
+
+      <div class="affiliate-box">
+        <h3>Try Lovable Free</h3>
+        <p>5 credits/day on the free tier. No credit card required to start.</p>
+        <a href="https://lovable.dev" class="affiliate-btn" target="_blank" rel="noopener">Try Lovable Free →</a>
+        <div class="affiliate-note">We may earn a commission at no extra cost to you</div>
+      </div>
+
+      <!-- What Users Are Saying -->
+      <div class="users-saying" style="margin:48px 0;">
+        <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Community Sentiment</div>
+        <h2 style="font-family:var(--display);font-size:1.75rem;font-weight:800;color:var(--text);margin:0 0 8px 0;">What Users Are Saying</h2>
+        <p style="font-family:var(--sans);font-size:0.95rem;color:var(--text2);margin:0 0 32px 0;line-height:1.6;">We track discussion across r/vibecoding, r/nocode, Product Hunt, and G2 to surface real sentiment. The pattern is unusually clear: strongly positive for prototyping and MVPs, with concentrated frustration around credit burn and bug loops.</p>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:32px;display:flex;gap:40px;flex-wrap:wrap;">
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--accent)">8M</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Users</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">$206M</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">ARR</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">$6.6B</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Valuation</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">89K</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">r/vibecoding</div></div>
+        </div>
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:#22a05a;">●</span> What users consistently praise</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"I did 6 months of work in 2 days in Lovable. For validating ideas, nothing else comes close."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Reddit · r/vibecoding · 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"Full-stack generation that actually works — frontend, backend, auth, database. One prompt, deployed in minutes. The category bar everyone else is chasing."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Product Hunt review · 2026</div>
+          </div>
+        </div>
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:var(--accent);">●</span> Common frustrations</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"It feels like a slot machine with credits. You spend them to fix something Lovable just said it fixed. Bug loops are the biggest frustration by far."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Reddit · r/nocode · 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"Credit consumption is not transparent. A complex AI instruction might consume anywhere from 10–50 credits. Many users report 100 credits are insufficient for a complex project in a month."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Independent review · WeavAI · 2026</div>
+          </div>
+        </div>
+        <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.15);border-radius:12px;padding:20px 24px;">
+          <div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:8px;">AIToolGrade Take</div>
+          <p style="font-family:var(--sans);font-size:0.93rem;color:var(--text);line-height:1.7;margin:0;">Lovable's community consensus is the clearest in the AI coding category — it wins on speed and design quality for prototypes and MVPs, and it loses on predictable cost and production readiness. The credit opacity is a real issue: not knowing what an action will cost before triggering it makes budgeting difficult on Pro. The bug loop problem is the other consistent friction point. Neither undermines Lovable's core value for its target user — non-technical founders validating ideas fast. For that use case, no tool in the category matches it. The $25/month Pro plan is worth it if you're building one or two apps a month; intensive daily builders should budget for top-ups or look at Business at $50/month.</p>
+        </div>
+      </div>
+      <!-- END: What Users Are Saying -->
+
+      <h2>The Bottom Line</h2>
+      <p>Lovable earns its place as the category leader for what it's actually for: turning an idea into a working, deployed full-stack app faster than anything else available. The Supabase backend works, the GitHub sync means you're never locked in, and Plan Mode keeps bigger builds coherent. The case against it is narrow but real — credit pricing you can't see before you spend, bug loops on complex work, and a ceiling that production apps will run into.</p>
+      <p>If you're a founder or designer validating ideas and shipping MVPs, that trade is easy to make, and the free tier lets you confirm the fit before paying a cent. If you need predictable costs or you're building something that has to survive a security audit, go in with eyes open and a developer on call. Scored against its own target use case, Lovable lands at 8.1 — strong, with two friction points worth knowing about before you start.</p>
+    </div>
+  </div>
+  <div class="review-sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-title">Overall score</div>
+      <div class="sidebar-score">
+        <div class="sidebar-score-num">8.1</div>
+        <div>
+          <div style="color:var(--accent);font-size:18px;letter-spacing:-1px">★★★★☆</div>
+          <div class="sidebar-score-label">out of 10</div>
+        </div>
+      </div>
+      <div class="sidebar-title" style="margin-top:16px">Pricing</div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Free</span><span class="sidebar-price-val">$0/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Pro</span><span class="sidebar-price-val">$25/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Business</span><span class="sidebar-price-val">$50/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Free plan</span><span class="sidebar-price-val">✓ Yes</span></div>
+      <a href="https://lovable.dev" class="sidebar-cta" target="_blank" rel="noopener">Try Lovable Free →</a>
+      <div class="sidebar-disclosure">Affiliate link</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">AI Tool<span>Grade</span></div><p class="footer-desc">Independent reviews and comparisons of AI tools. Researched, fact-checked, and independently rated.</p></div>
+    <div><div class="footer-col-title">Reviews</div><div class="footer-links"><a href="../category/writing.html">AI Writing</a><a href="../category/coding.html">AI Coding</a><a href="../category/image.html">AI Image</a><a href="../category/automation.html">Automation</a><a href="../category/productivity.html">Productivity</a></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="../about.html">About</a><a href="../how-we-review.html">How we review</a>
+        <a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
+    <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+</footer>
+</body></html>

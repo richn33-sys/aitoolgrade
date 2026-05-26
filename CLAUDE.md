@@ -588,6 +588,8 @@ All pricing verified May 2026. Update this table when pricing changes are confir
 | Jasper | May 2026 | Boss Mode discontinued, Starter gone, Creator $49/Pro $69 |
 | Notion AI | May 2026 | $10 add-on gone since May 2025, full AI requires Business $20/user/month |
 
+All tools verified May 25, 2026 via research agent brief — no new changes beyond what was updated May 19-20.
+
 ## Long-Term SEO Strategy
 Key Google ranking systems:
 1. Helpful Content System - every piece must genuinely help someone decide whether to use a tool
@@ -599,9 +601,67 @@ Medium-term: contributor bylines, outreach for links from AI newsletters
 Longer-term: topic clusters, deep comparison posts (2000+ words)
 
 Content published to date: 20 reviews, 6 blog posts, 1 comparison page, 1 resources page
-Next content priorities (from May 2026 research brief):
-- ChatGPT Go vs Plus blog post (Friday)
-- Microsoft Agent 365 review (Friday)
+Next content priorities (from May 24, 2026 session):
+- Monitor Search Console in 2-3 weeks for position movement on Notion AI, Copy.ai, Midjourney rewrites
+- Monitor CTR improvement on Bolt.new and ChatGPT vs Claude
+- Next rewrite candidates: identify from next Search Console export
+
+## Content Queue (from May 25, 2026 research brief)
+
+### Reviews to add
+- Lovable — App Builder — HIGH (hit $20M ARR in 2 months, need for comparison post)
+- Google Antigravity 2.0 — Coding/Agents — HIGH (just launched at I/O 2026)
+- Perplexity Computer — Research Agents — MEDIUM ($200/mo multi-agent, Cowork competitor)
+- DeepSeek V4 — LLM — MEDIUM (undercuts frontier models on price)
+
+### Blog posts to write
+- "Best AI App Builders 2026: Lovable vs Bolt vs Replit" — HIGH (write Lovable review first)
+- "Best AI Coding Agents 2026" — HIGH (category matured past copilots)
+- "ChatGPT Pro $100 vs Pro $200: Which One?" — MEDIUM (new tiers confusing users)
+
+### Priority order
+1. Lovable review
+2. Lovable vs Bolt vs Replit comparison post
+3. Google Antigravity 2.0 review
+4. Best AI Coding Agents blog post
+
+### Already completed from this brief
+- Cursor pricing blog post ✅
+- ChatGPT Go vs Plus blog post ✅
+- ChatGPT, Cursor, Grammarly, Perplexity, Jasper, Notion AI pricing all updated ✅
+
+## Search Console Optimization
+
+### Last audit: May 24, 2026
+Data source: Google Search Console — 3-month performance report
+
+### Deep rewrites completed (position improvement goal)
+| Page | Query | Position before | Action taken | Date |
+|---|---|---|---|---|
+| review/notion-ai.html | notion ai review | 66.5 | Deep rewrite — 2,594 words, Custom Agents, AI paywall controversy, Notion vs ChatGPT table | May 2026 |
+| review/copyai.html | copy ai review | 80-81 | Deep rewrite — 2,076 words, Fullcast acquisition Oct 2025, GTM pivot, Trustpilot 1.9/5 | May 2026 |
+| review/midjourney.html | midjourney review | 77.2 | Deep rewrite — 2,051 words, V8 Alpha March 2026, Trustpilot 1.5/5, model lineup | May 2026 |
+
+### CTR optimizations completed (click improvement goal — already ranking)
+| Page | Query | Position | Action taken | Date |
+|---|---|---|---|---|
+| review/bolt.html | bolt design to code | 8.4 | New title with Figma-to-code angle, 70% wall section added | May 2026 |
+| blog/chatgpt-vs-claude-vs-perplexity.html | chatgpt vs claude | 5.3 | New title with benchmark data, verdict up front, benchmark table added | May 2026 |
+
+### How to prioritize future rewrites
+1. Export queries from Search Console sorted by impressions descending
+2. Identify pages with position 15-80 and 5+ impressions — these are rewrite candidates
+3. Identify pages with position 5-15 and impressions but 0 clicks — these are CTR candidates
+4. Check what top-ranking competitors cover that our review does not
+5. Deep rewrite target: 2,000+ words, specific sections competitors rank on, updated pricing/features
+
+### Rewrite checklist per page
+- New SEO title including year and most-searched angle
+- Updated meta description with specific hook (stat, controversy, verdict)
+- Add sections covering topics top-ranking competitors include
+- Update pricing to current
+- Update dateModified in schema
+- Run prohibited language check
 
 ## Google AI Optimization (Updated May 2026)
 Source: https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
@@ -701,6 +761,11 @@ CLAUDE.md: ~/Desktop/ClaudeWork/aitoolgrade_research/CLAUDE.md
 Manual trigger: python3 ~/Desktop/ClaudeWork/aitoolgrade_research/research_agent.py
 Schedule: Every Monday 8am via ~/Library/LaunchAgents/com.aitoolgrade.research.plist
 
+### Agent tuning (Last upgraded May 25, 2026)
+- max_tokens reduced to 1000 — Gmail clips emails over ~102KB, so the brief must stay compact
+- Conciseness instruction updated: bullet points only, max 1 sentence per item, max 3 items per section, under 300 words total
+- API key updated May 25, 2026
+
 ## Site Maintenance
 
 ### What Users Are Saying sections
@@ -723,7 +788,7 @@ Apply similar disclosure to any future Anthropic product reviews.
 ## Sitemap
 
 File: sitemap.xml (root level)
-Last updated: May 21, 2026
+Last updated: May 24, 2026
 
 Rules:
 - Reviews: changefreq="monthly", priority=0.8
@@ -733,7 +798,7 @@ Rules:
 - Run sitemap audit whenever new reviews or blog posts are added
 - Submit updated sitemap to Google Search Console after significant additions
 
-Current page count: 52 URLs (as of May 21, 2026)
+Current page count: 52 URLs (as of May 24, 2026)
 
 ## Technical Fixes Applied (May 2026)
 

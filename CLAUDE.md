@@ -74,7 +74,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 
 ## Category Review Counts (homepage displays these — keep in sync)
 - AI Writing: 4
-- AI Coding: 5
+- AI Coding: 7 (Cursor, GitHub Copilot, Windsurf, Bolt.new, Replit, Lovable, Google Antigravity)
 - AI Image: 3
 - Automation: 2
 - AI Video: 3
@@ -606,26 +606,18 @@ Next content priorities (from May 24, 2026 session):
 - Monitor CTR improvement on Bolt.new and ChatGPT vs Claude
 - Next rewrite candidates: identify from next Search Console export
 
-## Content Queue (from May 25, 2026 research brief)
+## Content Queue (updated May 26, 2026 session)
 
-### Reviews to add
-- Lovable — App Builder — HIGH (hit $20M ARR in 2 months, need for comparison post)
-- Google Antigravity 2.0 — Coding/Agents — HIGH (just launched at I/O 2026)
-- Perplexity Computer — Research Agents — MEDIUM ($200/mo multi-agent, Cowork competitor)
-- DeepSeek V4 — LLM — MEDIUM (undercuts frontier models on price)
+### Remaining queue
+- "Best AI Coding Agents 2026" blog post — HIGH (category matured past copilots)
+- "ChatGPT Pro $100 vs Pro $200" blog post — MEDIUM (new tiers confusing users)
+- Perplexity Computer review — MEDIUM ($200/mo multi-agent, Cowork competitor)
+- DeepSeek V4 review — MEDIUM (undercuts frontier models on price)
 
-### Blog posts to write
-- "Best AI App Builders 2026: Lovable vs Bolt vs Replit" — HIGH (write Lovable review first)
-- "Best AI Coding Agents 2026" — HIGH (category matured past copilots)
-- "ChatGPT Pro $100 vs Pro $200: Which One?" — MEDIUM (new tiers confusing users)
-
-### Priority order
-1. Lovable review
-2. Lovable vs Bolt vs Replit comparison post
-3. Google Antigravity 2.0 review
-4. Best AI Coding Agents blog post
-
-### Already completed from this brief
+### Completed
+- Google Antigravity 2.0 review ✅ (May 28, 2026)
+- Lovable review ✅ (May 26, 2026)
+- Best AI App Builders comparison post (Lovable vs Bolt vs Replit) ✅ (May 26, 2026)
 - Cursor pricing blog post ✅
 - ChatGPT Go vs Plus blog post ✅
 - ChatGPT, Cursor, Grammarly, Perplexity, Jasper, Notion AI pricing all updated ✅
@@ -662,6 +654,29 @@ Data source: Google Search Console — 3-month performance report
 - Update pricing to current
 - Update dateModified in schema
 - Run prohibited language check
+
+## Thin Reviews — Rewrite Priority (May 2026 audit)
+
+Reviews under 1,700 words are vulnerable to May 2026 Google Core Update.
+Target: rewrite to 2,000+ words using Search Console query data and competitor analysis.
+
+Priority order:
+1. writesonic.html — 1,554 words (thinnest)
+2. windsurf.html — 1,681 words (most timely — Cursor pricing backlash driving alternative searches)
+3. zapier.html — 1,683 words
+4. synthesia.html — 1,654 words
+5. n8n.html — 1,720 words
+6. github-copilot.html — 1,786 words
+
+Already protected (2,000+ words after recent rewrites):
+notion-ai, copyai, midjourney, replit, lovable, descript, claude-cowork, microsoft-agent-365
+
+Rewrite process:
+1. Web search top-ranking competitors for "[tool] review 2026"
+2. Identify sections they cover that we don't
+3. Update pricing, add comparison table, expand community sentiment
+4. Target 2,000+ words
+5. Update dateModified in schema and byline
 
 ## Google AI Optimization (Updated May 2026)
 Source: https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
@@ -734,6 +749,8 @@ Affiliate link Claude Code prompt: ready to run when URLs approved — located i
 | Best AI Agents for Non-Developers 2026 | Priya Nolan | May 2026 | best ai agents 2026 |
 | Descript Review | Priya Nolan | May 2026 | descript review 2026 |
 | ChatGPT Go vs Plus 2026 | Priya Nolan | May 2026 | chatgpt go vs plus |
+| Best AI App Builders 2026: Lovable vs Bolt vs Replit | Marcus Veil | May 2026 | best ai app builders 2026 |
+| Lovable Review | Marcus Veil | May 2026 | lovable review 2026 |
 
 ## Research Agent
 
@@ -788,7 +805,7 @@ Apply similar disclosure to any future Anthropic product reviews.
 ## Sitemap
 
 File: sitemap.xml (root level)
-Last updated: May 24, 2026
+Last updated: May 26, 2026
 
 Rules:
 - Reviews: changefreq="monthly", priority=0.8
@@ -798,7 +815,7 @@ Rules:
 - Run sitemap audit whenever new reviews or blog posts are added
 - Submit updated sitemap to Google Search Console after significant additions
 
-Current page count: 52 URLs (as of May 24, 2026)
+Current page count: 54 URLs (as of May 26, 2026)
 
 ## Technical Fixes Applied (May 2026)
 

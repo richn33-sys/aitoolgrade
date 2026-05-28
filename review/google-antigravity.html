@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="canonical" href="https://aitoolgrade.com/review/google-antigravity.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Google Antigravity 2.0 review — the most ambitious agentic coding platform of 2026 and the worst-executed launch. Parallel subagents, Gemini 3.5 Flash, and a CLI that wasn't shippable on day one.">
+<title>Google Antigravity 2.0 Review 2026 — Parallel Subagents and a Broken Launch | AIToolGrade</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fafaf8;--bg2:#f3f2ee;--bg3:#eceae3;--text:#1a1a18;--text2:#4a4a45;--text3:#8a8a82;--accent:#e85d26;--accent2:#f07d4a;--accent-dim:rgba(232,93,38,0.08);--border:#e2e0d8;--white:#ffffff;--display:'Playfair Display',serif;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:4px}
+.nav-dropdown>a::after{content:"▾";font-size:10px}
+.dropdown-menu{visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.15s ease,visibility 0s linear 0.5s;position:absolute;top:calc(100% + 8px);left:-16px;background:white;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:200;max-height:80vh;overflow-y:auto}
+.dropdown-menu a{display:block;padding:8px 12px;font-size:14px;color:var(--text2);text-decoration:none;border-radius:6px;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--bg2);color:var(--accent)}
+.nav-dropdown:hover .dropdown-menu{visibility:visible;opacity:1;pointer-events:auto;transition:opacity 0.15s ease,visibility 0s}
+.nav-dropdown .dropdown-menu::before{content:"";position:absolute;top:-20px;left:0;right:0;height:20px}
+.nav-dropdown::after{content:"";position:absolute;height:20px;width:calc(100% + 16px);bottom:-20px;left:-16px}
+.review-layout{max-width:1100px;margin:0 auto;padding:60px 40px;display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:start}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:24px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+.review-header{margin-bottom:40px}
+.review-tool-row{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.review-tool-logo{width:56px;height:56px;border-radius:14px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:28px;border:1px solid var(--border)}
+.review-tool-title{font-size:15px;font-weight:600;margin-bottom:2px}
+.review-tool-url{font-size:13px;color:var(--text3);font-family:var(--mono)}
+h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;margin-bottom:16px}
+.review-meta-row{display:flex;align-items:center;gap:20px;font-size:13px;color:var(--text3);margin-bottom:24px}
+.verdict-banner{background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:20px 24px;margin-bottom:40px;display:flex;align-items:center;gap:16px}
+.verdict-score{font-family:var(--display);font-size:48px;font-weight:800;color:var(--accent);line-height:1}
+.verdict-text h3{font-size:15px;font-weight:600;margin-bottom:4px}
+.verdict-text p{font-size:13px;color:var(--text2)}
+.review-body h2{font-family:var(--display);font-size:28px;font-weight:700;margin:40px 0 16px}
+.review-body h3{font-family:var(--display);font-size:20px;font-weight:700;margin:28px 0 12px}
+.review-body p{color:var(--text2);margin-bottom:16px}
+.review-body ul{color:var(--text2);margin:0 0 16px 20px}
+.review-body li{margin-bottom:8px}
+.callout-box{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:28px 0}
+.callout-box h4{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:10px}
+.callout-box p{font-size:14px;margin-bottom:0;color:var(--text2)}
+.pricing-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.pricing-table th,.pricing-table td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--border)}
+.pricing-table th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3);font-weight:500}
+.pricing-table td:first-child{font-weight:600;color:var(--text)}
+.pricing-table .price{font-family:var(--mono);color:var(--accent)}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
+.pros-box,.cons-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px}
+.pros-box{border-top:3px solid #2e7d32}
+.cons-box{border-top:3px solid #c62828}
+.pros-box h4{color:#2e7d32;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.cons-box h4{color:#c62828;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.pro-item,.con-item{font-size:14px;color:var(--text2);margin-bottom:8px;display:flex;gap:8px;align-items:flex-start}
+.pro-item::before{content:'✓';color:#2e7d32;font-weight:600;flex-shrink:0}
+.con-item::before{content:'✗';color:#c62828;font-weight:600;flex-shrink:0}
+.score-breakdown{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;margin:32px 0}
+.score-breakdown h4{font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:20px}
+.score-row{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.score-row:last-child{margin-bottom:0}
+.score-name{font-size:14px;color:var(--text2);width:170px;flex-shrink:0}
+.score-bar-track{flex:1;height:8px;background:var(--bg2);border-radius:100px;overflow:hidden}
+.score-bar-fill{height:100%;border-radius:100px;background:var(--accent)}
+.score-val{font-family:var(--mono);font-size:13px;font-weight:500;width:30px;text-align:right}
+.related-callout{background:var(--accent-dim);border:1px solid rgba(232,93,38,0.15);border-radius:10px;padding:14px 18px;margin-bottom:28px;font-size:14px}
+.related-callout a{color:var(--accent);font-weight:500;text-decoration:none}
+.related-callout a:hover{text-decoration:underline}
+.affiliate-box{background:var(--text);color:white;border-radius:14px;padding:28px;margin:40px 0;text-align:center}
+.affiliate-box h3{font-family:var(--display);font-size:24px;font-weight:700;margin-bottom:8px}
+.affiliate-box p{color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:20px}
+.affiliate-btn{display:inline-block;background:var(--accent);color:white;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;transition:background 0.15s}
+.affiliate-btn:hover{background:var(--accent2)}
+.affiliate-note{font-size:11px;color:rgba(255,255,255,0.4);margin-top:12px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px;position:sticky;top:84px}
+.sidebar-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:16px}
+.sidebar-score{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.sidebar-score-num{font-family:var(--display);font-size:52px;font-weight:800;color:var(--accent);line-height:1}
+.sidebar-score-label{font-size:13px;color:var(--text3)}
+.sidebar-price-row{display:flex;justify-content:space-between;font-size:14px;padding:10px 0;border-bottom:1px solid var(--border)}
+.sidebar-price-row:last-of-type{border-bottom:none}
+.sidebar-price-label{color:var(--text2)}
+.sidebar-price-val{font-family:var(--mono);font-weight:500}
+.sidebar-cta{display:block;background:var(--accent);color:white;text-align:center;padding:14px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;margin-top:20px;transition:background 0.15s}
+.sidebar-cta:hover{background:var(--accent2)}
+.sidebar-disclosure{font-size:11px;color:var(--text3);margin-top:10px;text-align:center}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}
+.footer-brand span{color:var(--accent)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--accent)}
+@media(max-width:768px){.review-layout{grid-template-columns:1fr;padding:40px 20px}.pros-cons{grid-template-columns:1fr}h1{font-size:30px}nav{padding:0 20px}.footer-inner{grid-template-columns:1fr 1fr}.score-name{width:120px}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "name": "Google Antigravity 2.0 Review 2026",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "7.5",
+    "bestRating": "10",
+    "worstRating": "0"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Marcus Veil",
+    "url": "https://aitoolgrade.com/author/marcus-veil.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIToolGrade",
+    "url": "https://aitoolgrade.com"
+  },
+  "itemReviewed": {
+    "@type": "SoftwareApplication",
+    "name": "Google Antigravity",
+    "applicationCategory": "AI Coding Tool",
+    "operatingSystem": "Windows,macOS,Linux",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "url": "https://antigravity.google"
+    }
+  },
+  "datePublished": "2026-05-28",
+  "dateModified": "2026-05-28"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolgrade.com"},
+    {"@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://aitoolgrade.com/reviews.html"},
+    {"@type": "ListItem", "position": 3, "name": "AI Coding", "item": "https://aitoolgrade.com/category/coding.html"},
+    {"@type": "ListItem", "position": 4, "name": "Google Antigravity", "item": "https://aitoolgrade.com/review/google-antigravity.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">AI Tool<span>Grade</span></a>
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <a href="/#categories">Categories</a>
+        <div class="dropdown-menu">
+          <a href="../category/writing.html">AI Writing</a>
+          <a href="../category/coding.html">AI Coding</a>
+          <a href="../category/image.html">AI Image</a>
+          <a href="../category/automation.html">Automation</a>
+          <a href="../category/video.html">AI Video</a>
+          <a href="../category/productivity.html">Productivity</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="../reviews.html">Reviews</a>
+        <div class="dropdown-menu">
+          <a href="../review/jasper.html">Jasper AI</a>
+          <a href="../review/copyai.html">Copy.ai</a>
+          <a href="../review/cursor.html">Cursor</a>
+          <a href="../review/chatgpt.html">ChatGPT</a>
+          <a href="../review/writesonic.html">Writesonic</a>
+          <a href="../review/github-copilot.html">GitHub Copilot</a>
+          <a href="../review/windsurf.html">Windsurf</a>
+          <a href="../review/bolt.html">Bolt.new</a>
+          <a href="../review/lovable.html">Lovable</a>
+          <a href="../review/google-antigravity.html">Google Antigravity</a>
+          <a href="../review/zapier.html">Zapier</a>
+          <a href="../review/n8n.html">n8n</a>
+          <a href="../review/microsoft-agent-365.html">Microsoft Agent 365</a>
+          <a href="../review/midjourney.html">Midjourney</a>
+          <a href="../review/adobe-firefly.html">Adobe Firefly</a>
+          <a href="../review/leonardo-ai.html">Leonardo AI</a>
+          <a href="../review/runway.html">Runway</a>
+          <a href="../review/synthesia.html">Synthesia</a>
+          <a href="../review/descript.html">Descript</a>
+          <a href="../review/notion-ai.html">Notion AI</a>
+          <a href="../review/perplexity.html">Perplexity AI</a>
+          <a href="../review/grammarly.html">Grammarly</a>
+          <a href="../review/replit.html">Replit</a>
+          <a href="../review/claude-cowork.html">Claude Cowork</a>
+        </div>
+      </div>
+      <a href="../compare.html">Compare</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#newsletter" class="nav-cta">Get Updates</a>
+    </div>
+  </div>
+</nav>
+
+<div class="review-layout">
+  <div class="review-main">
+    <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="../reviews.html">Reviews</a><span>›</span><a href="../category/coding.html">AI Coding</a><span>›</span>Google Antigravity Review</div>
+    <div class="review-header">
+      <div class="review-tool-row">
+        <div class="review-tool-logo">🛸</div>
+        <div>
+          <div class="review-tool-title">Google Antigravity 2.0</div>
+          <div class="review-tool-url">antigravity.google</div>
+        </div>
+      </div>
+      <h1>Google Antigravity 2.0 Review — Parallel Subagents, Gemini 3.5 Flash, and a Launch That Went Sideways</h1>
+      <div class="review-meta-row">
+        <span>📅 Published May 2026</span>
+        <span>⏱ 11 min read</span>
+        <span>🔎 Research-based</span>
+      </div>
+    </div>
+    <div class="verdict-banner">
+      <div class="verdict-score">7.5</div>
+      <div class="verdict-text">
+        <h3>Editor's Verdict: Promising, Premature</h3>
+        <p>The most technically ambitious agentic coding platform of 2026 and the most poorly executed launch in the category. Wait 60–90 days before committing it to production work.</p>
+      </div>
+    </div>
+    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified May 2026</p>
+<div class="review-body">
+
+      <div class="related-callout">Comparing AI coding platforms? See how Antigravity stacks up against <a href="../review/cursor.html">Cursor</a>, <a href="../review/github-copilot.html">GitHub Copilot</a>, and <a href="../review/windsurf.html">Windsurf</a>.</div>
+
+      <h2>What is Google Antigravity?</h2>
+      <p>Google Antigravity is Google's agent-first development platform. The 2.0 release, announced at Google I/O on May 19, 2026, is not just a code editor — it is a five-surface platform: a desktop app, a CLI called <code>agy</code>, an SDK for building custom agents, a Managed Agents API delivered through the Gemini API, and an Enterprise Agent Platform. The platform is optimized for Gemini 3.5 Flash, which Google says was co-developed using Antigravity itself, with multi-model support for Anthropic's Claude Sonnet 4.5 and GPT-OSS.</p>
+      <p>The original 1.0 launched in November 2025 as an AI-powered IDE competing with Cursor and Windsurf. The 2.0 release reframes the product around multi-agent orchestration — running several specialized subagents in parallel across distinct coding tasks rather than driving a single Composer-style agent through one task at a time. That's the headline capability, and on paper it's a real category shift.</p>
+      <p>This review is based on Google's documented features and pricing, primary-source coverage of the I/O announcement, and community sentiment across developer forums, TechCrunch, The Next Web, and independent reviews — not hands-on testing.</p>
+
+      <div class="callout-box">
+        <h4>What changed</h4>
+        <p>Version 2.0 launched May 19, 2026 at Google I/O. The product expanded from a single IDE to a five-surface platform with a new <code>agy</code> CLI, an SDK, and a Managed Agents API. A new $100/month AI Ultra tier sits between the existing Pro subscription and the $200/month top tier, which dropped from a former $250 price point. The Gemini CLI is being retired June 18, 2026 — every Gemini CLI user must migrate to the Antigravity CLI before that date. The 2.0 update was pushed automatically on launch day, wiping stored configurations and removing the built-in code editor from existing user installations.</p>
+      </div>
+
+      <h2>Pros and Cons</h2>
+      <div class="pros-cons">
+        <div class="pros-box">
+          <h4>What stands out</h4>
+          <div class="pro-item">Parallel multi-agent execution is a real category differentiator — Cursor runs one Composer agent at a time</div>
+          <div class="pro-item">Deepest Google ecosystem integration available — Android, Firebase, Google Cloud, AI Studio all native</div>
+          <div class="pro-item">Gemini 3.5 Flash default means lower cost and lower latency than frontier-only alternatives</div>
+          <div class="pro-item">$100 AI Ultra tier is price-competitive with Claude Max and ChatGPT Pro at the same level</div>
+          <div class="pro-item">Multi-model support — run Claude Sonnet 4.5 or GPT-OSS alongside Gemini in one environment</div>
+          <div class="pro-item">Voice commands are practical for developers who switch between coding and documentation</div>
+        </div>
+        <div class="cons-box">
+          <h4>Where it falls short</h4>
+          <div class="con-item">Automatic 2.0 update wiped configurations and removed the built-in editor for existing users</div>
+          <div class="con-item">agy CLI was not installable on any public package manager at launch, despite a hard migration deadline</div>
+          <div class="con-item">Gemini CLI is being retired June 18, 2026 with a closed-source replacement</div>
+          <div class="con-item">Documentation lagged the I/O announcement — features shipped without supporting guides</div>
+          <div class="con-item">Free tier agent limits have been cut multiple times since the November 2025 launch</div>
+          <div class="con-item">Most of the value lives inside the Google ecosystem — non-Android, non-Firebase teams get less</div>
+        </div>
+      </div>
+
+      <h2>The Five-Surface Platform</h2>
+      <p>Antigravity 2.0 is structured around five distinct surfaces rather than a single application. Understanding what each one does is the difference between treating Antigravity as "Google's Cursor" and treating it as the agent platform Google clearly wants it to be.</p>
+      <ul>
+        <li><strong>Desktop app</strong> — the original IDE surface. Code editor, chat panel, and direct access to subagents from the editor.</li>
+        <li><strong>agy CLI</strong> — a Go-built command-line interface that replaces the Gemini CLI. Intended as the terminal-first entry point for agents, scripting, and pipeline integration.</li>
+        <li><strong>SDK</strong> — for building and deploying custom agents that fit your team's workflow rather than relying on Google's defaults.</li>
+        <li><strong>Managed Agents API</strong> — agents-as-a-service via the Gemini API, for embedding agent behavior into third-party products without standing up your own infrastructure.</li>
+        <li><strong>Enterprise Agent Platform</strong> — admin, billing, audit, and policy controls for organizations deploying agents across teams.</li>
+      </ul>
+      <p>The Manager Surface inside the desktop app is the new central hub — an asynchronous dashboard for orchestrating and monitoring multiple agents at once. Dynamic subagents can be spun up on demand for split workflows, and scheduled background tasks let agents run automatically while you work on something else. That's the differentiated capability story in one paragraph.</p>
+
+      <h2>Multi-Agent Orchestration — The Headline Feature</h2>
+      <p>Parallel multi-agent execution is where Antigravity separates itself from the rest of the category. Cursor runs a single Composer agent through one task at a time. Windsurf's Cascade is similar in shape. Antigravity is built around the assumption that you'll dispatch several specialized subagents simultaneously across distinct tasks — one refactoring a module, another writing tests, another updating documentation, another running a scheduled lint pass — and review the outputs from a Manager Surface.</p>
+      <p>If multi-agent workflows are the future of coding assistants, this is the most committed bet on that thesis from any major vendor in 2026. The honest question is whether the orchestration UX, agent reliability, and cost economics support that bet under sustained daily use. That's what 60–90 days of usage in the wild will tell us.</p>
+
+      <div class="callout-box">
+        <h4>Google eating its own cooking</h4>
+        <p>Google says Gemini 3.5 Flash was itself co-developed using Antigravity. That's a credibility signal worth noting — using your own platform to build the underlying model is the strongest possible internal validation. It does not, however, fix the launch execution problems below.</p>
+      </div>
+
+      <h2>The Launch Failure — Read This Before You Migrate</h2>
+      <p>This is the most important thing for developers to know about Antigravity in May 2026, and there's no soft way to put it. The 2.0 launch was a trust failure, and it happened in three specific ways that anyone considering this platform should weigh before committing.</p>
+      <p><strong>First: the auto-update wiped configurations.</strong> Google pushed the 2.0 update automatically on launch day. For existing Antigravity 1.0 users, that meant stored configurations were wiped, and the built-in code editor was removed in favor of the new platform structure. There was no opt-in, no migration window, and no clear path to restore prior state. Developers logged in to a setup that no longer matched the one they'd been using the day before.</p>
+      <p><strong>Second: the replacement CLI wasn't ready.</strong> Google announced at I/O that the Gemini CLI is being retired on June 18, 2026 — a 27-day window — and that all users must migrate to <code>agy</code>, the new Antigravity CLI. At launch, <code>agy</code> was not available on Homebrew, apt, npm, or any other public package manager. The replacement for the tool being mandatorily retired was not installable. Telling developers "your current tool ends in 27 days; the new one isn't shippable yet" is the kind of operational miss that defines how a platform launch is remembered.</p>
+      <p><strong>Third: the open-source-to-closed-source change.</strong> Gemini CLI was open source. Antigravity CLI is closed source. For developers and teams that chose Gemini CLI specifically because they could read, audit, fork, and self-host the code, the forced migration removes that property. It's a meaningful change for the security-conscious and the regulated, and it was not framed as such in the I/O announcement.</p>
+      <p>Each of those decisions on its own would be a papercut. Together they are a signal about how the team treats developers who already depend on the product. That signal matters more than any individual feature.</p>
+
+      <h2>Pricing</h2>
+      <p>Pricing was verified May 2026. Antigravity sits inside Google's broader AI subscription stack, so the tiers map onto existing Google AI Pro and AI Ultra plans rather than being a standalone product subscription.</p>
+      <table class="pricing-table">
+        <thead><tr><th>Plan</th><th>Price</th><th>What you get</th></tr></thead>
+        <tbody>
+          <tr><td>Free</td><td class="price">$0</td><td>Basic editor and tab completion; agent usage is heavily rate-limited and has been cut multiple times since launch — not suitable for daily agent-heavy work</td></tr>
+          <tr><td>AI Pro</td><td class="price">~$19.99/mo</td><td>Standard Antigravity access; included in the existing Google AI Pro subscription</td></tr>
+          <tr><td>AI Ultra</td><td class="price">$100/mo</td><td>5× Pro limits, 20TB storage, Gemini 3.5 Flash access — new tier launched May 2026</td></tr>
+          <tr><td>AI Ultra Premium</td><td class="price">$200/mo</td><td>20× Pro limits, maximum agent usage — reduced from a former $250 price point</td></tr>
+        </tbody>
+      </table>
+      <p>At the $100/month tier Antigravity is in the same price band as Claude Max and ChatGPT Pro. The Pro tier being bundled into an existing Google AI subscription is the strongest value point in the lineup — if you already pay Google for AI features, Antigravity Pro is a zero-marginal-cost addition. The free tier, on the other hand, has been hollowed out by repeated agent-limit cuts since November 2025; treat it as an evaluation tier, not a workable daily plan.</p>
+
+      <h2>Score Breakdown</h2>
+      <div class="score-breakdown">
+        <h4>How we rated it</h4>
+        <div class="score-row"><span class="score-name">Ease of Use</span><div class="score-bar-track"><div class="score-bar-fill" style="width:65%"></div></div><span class="score-val">6.5</span></div>
+        <div class="score-row"><span class="score-name">Features</span><div class="score-bar-track"><div class="score-bar-fill" style="width:90%"></div></div><span class="score-val">9.0</span></div>
+        <div class="score-row"><span class="score-name">Value for Money</span><div class="score-bar-track"><div class="score-bar-fill" style="width:80%"></div></div><span class="score-val">8.0</span></div>
+        <div class="score-row"><span class="score-name">Integration</span><div class="score-bar-track"><div class="score-bar-fill" style="width:90%"></div></div><span class="score-val">9.0</span></div>
+        <div class="score-row"><span class="score-name">Support &amp; Docs</span><div class="score-bar-track"><div class="score-bar-fill" style="width:50%"></div></div><span class="score-val">5.0</span></div>
+      </div>
+      <p>Features score the highest — the five-surface architecture, parallel subagents, scheduled tasks, voice commands, and multi-model support are a strong, differentiated package. Integration is equally strong inside the Google ecosystem: Android, Firebase, Google Cloud, and AI Studio are all native rather than bolted on. Value lands at 8.0 because Pro is bundled with an existing Google subscription and Ultra is competitive at the same $100 price point as Claude Max and ChatGPT Pro. Ease of Use takes the hit from the rocky 2.0 rollout and missing CLI. Support and Documentation score the lowest — documentation was not ready at launch, and the forced migration with no installable replacement is the single biggest operational failure here.</p>
+
+      <h2>Who Should Use Antigravity?</h2>
+      <p>Antigravity is a strong evaluation candidate for two specific audiences. The first is Google ecosystem developers — anyone building on Android, Firebase, or Google Cloud, where Antigravity's native integrations remove the most friction. The second is teams that want parallel multi-agent execution at a lower per-month cost than Cursor Ultra or Claude Max, with the willingness to absorb a noisy launch period.</p>
+      <h3>Who should look elsewhere</h3>
+      <p>If you need a stable production coding tool in May 2026, this is not it yet. The platform deserves an evaluation, not a commitment. Developers outside the Google ecosystem will get less marginal value than the marketing implies, since the Android/Firebase integrations are where the differentiation is densest. And anyone who chose Gemini CLI specifically for its open-source license has a real reason to push back against the forced closed-source migration — that's not a workflow preference, it's a procurement decision. <a href="../review/cursor.html">Cursor</a> remains the most capable IDE-first option, <a href="../review/windsurf.html">Windsurf</a> the most beginner-friendly agentic editor, and <a href="../review/github-copilot.html">GitHub Copilot</a> the default for teams already on GitHub.</p>
+
+      <div class="affiliate-box">
+        <h3>Try Google Antigravity</h3>
+        <p>Free tier available. Pro is included in the existing Google AI Pro subscription.</p>
+        <a href="https://antigravity.google" class="affiliate-btn" target="_blank" rel="noopener">Visit Antigravity →</a>
+        <div class="affiliate-note">We may earn a commission at no extra cost to you</div>
+      </div>
+
+      <!-- What Users Are Saying -->
+      <div class="users-saying" style="margin:48px 0;">
+        <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Community Sentiment</div>
+        <h2 style="font-family:var(--display);font-size:1.75rem;font-weight:800;color:var(--text);margin:0 0 8px 0;">What Users Are Saying</h2>
+        <p style="font-family:var(--sans);font-size:0.95rem;color:var(--text2);margin:0 0 32px 0;line-height:1.6;">We track discussion across developer forums, TechCrunch, The Next Web, and independent reviews to surface real sentiment. The pattern in May 2026 is consistent: technically impressed, operationally frustrated.</p>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:32px;display:flex;gap:40px;flex-wrap:wrap;">
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--accent)">5</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Surfaces</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">27</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Days to migrate</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">$100</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Ultra tier/mo</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">3</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Models supported</div></div>
+        </div>
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:#22a05a;">●</span> What users consistently praise</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"Multi-agent parallel execution is where Antigravity separates from Cursor. Cursor runs one Composer agent. Antigravity runs multiple simultaneously across distinct tasks. That's a different category of tool."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Developer community analysis · May 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"Gemini 3.5 Flash was itself co-developed using Antigravity — Google eating its own cooking is the strongest possible signal that this platform works for serious AI development."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">The Next Web · May 2026</div>
+          </div>
+        </div>
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:var(--accent);">●</span> Common frustrations</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"The update was pushed automatically on launch day, removing the built-in code editor from existing user environments, wiping stored configurations, and leaving developers with a broken setup and no clear path to the replacement CLI."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">ChatForest independent review · May 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"Developers were told at I/O that the Gemini CLI is ending in 27 days. The replacement is not yet installable. The Gemini CLI was open source; the Antigravity CLI is closed source. The migration is mandatory and has a hard deadline."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">ChatForest independent review · May 2026</div>
+          </div>
+        </div>
+        <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.15);border-radius:12px;padding:20px 24px;">
+          <div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:8px;">AIToolGrade Take</div>
+          <p style="font-family:var(--sans);font-size:0.93rem;color:var(--text);line-height:1.7;margin:0;">Antigravity 2.0 is the most technically ambitious agentic coding platform launched in 2026 — and the most poorly executed launch in the category. The product vision is clear and differentiated: parallel multi-agent orchestration at lower cost than Cursor or Claude Code, with the deepest Google ecosystem integration available. The execution on launch day was a trust failure. Wiping configurations automatically, shipping without an installable CLI, and mandating a 27-day migration with no working replacement are not minor papercuts — they are decisions that tell developers how the company treats production workflows. Our recommendation: evaluate Antigravity 2.0 seriously, but wait 60–90 days for the CLI to ship properly and documentation to catch up before committing it to production work. The underlying platform deserves a fair evaluation when it works.</p>
+        </div>
+      </div>
+      <!-- END: What Users Are Saying -->
+
+      <h2>The Bottom Line</h2>
+      <p>Antigravity 2.0 is a real bet on a different shape of AI coding — multiple specialized agents working in parallel rather than a single agent driven through tasks one at a time. If that thesis plays out, this is the platform best positioned to lead it, especially for teams already on Android, Firebase, and Google Cloud. The five-surface architecture, the $100 Ultra tier, and the multi-model support inside one environment are the right ingredients.</p>
+      <p>The case against adopting it today is narrow but firm. The launch wiped configs and shipped without an installable CLI. The 27-day forced migration to a closed-source replacement is a credibility issue, not a minor papercut. Documentation hasn't caught up. None of these are fatal — they are recoverable inside a quarter — but they are the reason this scores 7.5 and not higher. Evaluate seriously, hold off on production migration, and revisit in Q3 2026 when the CLI and the docs have had a chance to settle.</p>
+    </div>
+  </div>
+  <div class="review-sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-title">Overall score</div>
+      <div class="sidebar-score">
+        <div class="sidebar-score-num">7.5</div>
+        <div>
+          <div style="color:var(--accent);font-size:18px;letter-spacing:-1px">★★★★☆</div>
+          <div class="sidebar-score-label">out of 10</div>
+        </div>
+      </div>
+      <div class="sidebar-title" style="margin-top:16px">Pricing</div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Free</span><span class="sidebar-price-val">$0/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">AI Pro</span><span class="sidebar-price-val">~$19.99/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">AI Ultra</span><span class="sidebar-price-val">$100/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Ultra Premium</span><span class="sidebar-price-val">$200/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Free plan</span><span class="sidebar-price-val">✓ Yes</span></div>
+      <a href="https://antigravity.google" class="sidebar-cta" target="_blank" rel="noopener">Visit Antigravity →</a>
+      <div class="sidebar-disclosure">Affiliate link</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">AI Tool<span>Grade</span></div><p class="footer-desc">Independent reviews and comparisons of AI tools. Researched, fact-checked, and independently rated.</p></div>
+    <div><div class="footer-col-title">Reviews</div><div class="footer-links"><a href="../category/writing.html">AI Writing</a><a href="../category/coding.html">AI Coding</a><a href="../category/image.html">AI Image</a><a href="../category/automation.html">Automation</a><a href="../category/productivity.html">Productivity</a></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="../about.html">About</a><a href="../how-we-review.html">How we review</a>
+        <a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
+    <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+</footer>
+</body></html>

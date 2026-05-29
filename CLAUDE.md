@@ -606,14 +606,15 @@ Next content priorities (from May 24, 2026 session):
 - Monitor CTR improvement on Bolt.new and ChatGPT vs Claude
 - Next rewrite candidates: identify from next Search Console export
 
-## Content Queue (updated May 26, 2026 session)
+## Content Queue (updated May 29, 2026 session)
 
-### Remaining queue
+### Remaining queue (confirmed current from May 25 brief)
 - "ChatGPT Pro $100 vs Pro $200" blog post — MEDIUM (new tiers confusing users)
 - Perplexity Computer review — MEDIUM ($200/mo multi-agent, Cowork competitor)
 - DeepSeek V4 review — MEDIUM (undercuts frontier models on price)
 
 ### Completed
+- Thin review sweep — writesonic, windsurf, zapier, synthesia, n8n, github-copilot all 2,000+ words ✅ (May 29, 2026)
 - "Best AI Coding Agents 2026" blog post ✅ (May 28, 2026)
 - Google Antigravity 2.0 review ✅ (May 28, 2026)
 - Lovable review ✅ (May 26, 2026)
@@ -640,6 +641,11 @@ Data source: Google Search Console — 3-month performance report
 | review/bolt.html | bolt design to code | 8.4 | New title with Figma-to-code angle, 70% wall section added | May 2026 |
 | blog/chatgpt-vs-claude-vs-perplexity.html | chatgpt vs claude | 5.3 | New title with benchmark data, verdict up front, benchmark table added | May 2026 |
 
+### May 29, 2026 — Thin review sweep
+All 6 remaining thin reviews rewritten to 2,000+ words ahead of May 2026 Google Core Update rollout (completing ~June 4, 2026).
+- Do not analyze Search Console data until after June 4
+- Check all 9 rewritten reviews for position movement week of June 7
+
 ### How to prioritize future rewrites
 1. Export queries from Search Console sorted by impressions descending
 2. Identify pages with position 15-80 and 5+ impressions — these are rewrite candidates
@@ -655,21 +661,32 @@ Data source: Google Search Console — 3-month performance report
 - Update dateModified in schema
 - Run prohibited language check
 
-## Thin Reviews — Rewrite Priority (May 2026 audit) — ✅ ALL COMPLETE
+## Thin Reviews — Rewrite Priority (COMPLETED May 29, 2026)
 
-Reviews under 1,700 words are vulnerable to May 2026 Google Core Update.
-Target: rewrite to 2,000+ words using Search Console query data and competitor analysis.
+All reviews now 2,000+ words. Zero thin pages remaining.
 
-**All four thin reviews rewritten to 2,000+ words on May 29, 2026. Section closed out.**
+### Completed rewrites
+| Review | Before | After | Date |
+|---|---|---|---|
+| writesonic.html | 1,554 words | 2,124 words | May 29, 2026 |
+| windsurf.html | 1,681 words | 2,000+ words | May 29, 2026 |
+| zapier.html | 1,683 words | 2,000+ words | May 29, 2026 |
+| synthesia.html | 1,654 words | 2,067 words | May 29, 2026 |
+| n8n.html | 1,720 words | 2,082 words | May 29, 2026 |
+| github-copilot.html | 1,786 words | 2,000+ words | May 29, 2026 |
 
-Priority order:
-1. ~~zapier.html — 1,683 words~~ ✅ DONE — deep rewrite May 29, 2026, 2,000+ words, score 8.2→8.1, AI Orchestration Platform rebrand, task pricing problem, no-mobile-app gap, Zapier vs n8n table
-2. ~~synthesia.html — 1,654 words~~ ✅ DONE — deep rewrite May 29, 2026, 2,067 words, score 8.3→8.0, Express-2 model, video minute problem, Synthesia vs HeyGen table, author corrected to Priya Nolan
-3. ~~n8n.html — 1,720 words~~ ✅ DONE — deep rewrite May 29, 2026, 2,082 words, score 8.7→8.3, execution pricing cost comparison, 70+ LangChain AI nodes, n8n vs Zapier table
-4. ~~github-copilot.html — 1,786 words~~ ✅ DONE — deep rewrite May 29, 2026, 2,064 words, score 8.8→8.9, MIT 55% productivity study, premium requests system, Agent mode question, Copilot vs Cursor vs Windsurf table, removed hands-on testing claims
+### Earlier deep rewrites (Search Console data — May 24, 2026)
+| Review | Before | After | Date |
+|---|---|---|---|
+| notion-ai.html | ~1,000 words | 2,594 words | May 24, 2026 |
+| copyai.html | ~700 words | 2,963 words | May 24, 2026 |
+| midjourney.html | ~900 words | 2,989 words | May 24, 2026 |
 
-Already protected (2,000+ words after recent rewrites):
-notion-ai, copyai, midjourney, replit, lovable, descript, claude-cowork, microsoft-agent-365, zapier (2,000+ words — deep rewrite May 29, 2026, score 8.2→8.1, AI Orchestration Platform rebrand), synthesia (2,067 words — deep rewrite May 29, 2026, score 8.3→8.0, Express-2 + video minute problem + HeyGen comparison), n8n (2,082 words — deep rewrite May 29, 2026, score 8.7→8.3, execution pricing + LangChain AI nodes + Zapier cost comparison), github-copilot (2,064 words — deep rewrite May 29, 2026, score 8.8→8.9, MIT productivity study + premium requests + Copilot vs Cursor vs Windsurf), writesonic (2,124 words — deep rewrite May 29, 2026, score 8.1→8.0, SEO platform repositioning), windsurf (deep rewrite May 29, 2026, score 9.1→8.2, $2.4B acquisition story + SWE-1.5)
+### Protected list (all 2,000+ words)
+writesonic, windsurf, zapier, synthesia, n8n, github-copilot,
+notion-ai, copyai, midjourney, replit, lovable, descript,
+claude-cowork, microsoft-agent-365, chatgpt, grammarly,
+perplexity, cursor, bolt, google-antigravity
 
 Rewrite process:
 1. Web search top-ranking competitors for "[tool] review 2026"

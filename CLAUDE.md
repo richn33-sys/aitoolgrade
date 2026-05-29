@@ -661,14 +661,13 @@ Reviews under 1,700 words are vulnerable to May 2026 Google Core Update.
 Target: rewrite to 2,000+ words using Search Console query data and competitor analysis.
 
 Priority order:
-1. windsurf.html — 1,681 words (most timely — Cursor pricing backlash driving alternative searches)
-2. zapier.html — 1,683 words
-3. synthesia.html — 1,654 words
-4. n8n.html — 1,720 words
-5. github-copilot.html — 1,786 words
+1. zapier.html — 1,683 words
+2. synthesia.html — 1,654 words
+3. n8n.html — 1,720 words
+4. github-copilot.html — 1,786 words
 
 Already protected (2,000+ words after recent rewrites):
-notion-ai, copyai, midjourney, replit, lovable, descript, claude-cowork, microsoft-agent-365, writesonic (2,124 words — deep rewrite May 29, 2026, score 8.1→8.0, SEO platform repositioning)
+notion-ai, copyai, midjourney, replit, lovable, descript, claude-cowork, microsoft-agent-365, writesonic (2,124 words — deep rewrite May 29, 2026, score 8.1→8.0, SEO platform repositioning), windsurf (deep rewrite May 29, 2026, score 9.1→8.2, $2.4B acquisition story + SWE-1.5)
 
 Rewrite process:
 1. Web search top-ranking competitors for "[tool] review 2026"

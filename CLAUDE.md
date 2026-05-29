@@ -609,12 +609,12 @@ Next content priorities (from May 24, 2026 session):
 ## Content Queue (updated May 26, 2026 session)
 
 ### Remaining queue
-- "Best AI Coding Agents 2026" blog post — HIGH (category matured past copilots)
 - "ChatGPT Pro $100 vs Pro $200" blog post — MEDIUM (new tiers confusing users)
 - Perplexity Computer review — MEDIUM ($200/mo multi-agent, Cowork competitor)
 - DeepSeek V4 review — MEDIUM (undercuts frontier models on price)
 
 ### Completed
+- "Best AI Coding Agents 2026" blog post ✅ (May 28, 2026)
 - Google Antigravity 2.0 review ✅ (May 28, 2026)
 - Lovable review ✅ (May 26, 2026)
 - Best AI App Builders comparison post (Lovable vs Bolt vs Replit) ✅ (May 26, 2026)
@@ -751,6 +751,7 @@ Affiliate link Claude Code prompt: ready to run when URLs approved — located i
 | ChatGPT Go vs Plus 2026 | Priya Nolan | May 2026 | chatgpt go vs plus |
 | Best AI App Builders 2026: Lovable vs Bolt vs Replit | Marcus Veil | May 2026 | best ai app builders 2026 |
 | Lovable Review | Marcus Veil | May 2026 | lovable review 2026 |
+| Best AI Coding Agents 2026 | Marcus Veil | May 2026 | best ai coding agents 2026 |
 
 ## Research Agent
 

@@ -32,28 +32,32 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ├── favicon.svg / .png   ← favicon on all pages
 ├── robots.txt
 ├── sitemap.xml          ← submitted to Google Search Console
-├── review/              ← 20 individual tool review pages
-│   ├── jasper.html          (AI Writing, 8.2)
-│   ├── copyai.html          (AI Writing, 8.4)
-│   ├── writesonic.html      (AI Writing, 8.1)
-│   ├── cursor.html          (AI Coding, 9.4)
-│   ├── github-copilot.html  (AI Coding, 8.8)
-│   ├── windsurf.html        (AI Coding, 9.1)
-│   ├── bolt.html            (AI Coding, 8.6)
-│   ├── chatgpt.html         (Productivity, 9.0)
-│   ├── notion-ai.html       (Productivity, 8.6)
-│   ├── zapier.html          (Automation, 8.2)
-│   ├── n8n.html             (Automation, 8.7)
-│   ├── midjourney.html      (AI Image, 9.3)
-│   ├── adobe-firefly.html   (AI Image, 8.4)
-│   ├── leonardo-ai.html     (AI Image, 8.7)
-│   ├── runway.html          (AI Video, 8.9)
-│   ├── synthesia.html       (AI Video, 8.3)
-│   ├── descript.html        (AI Video, 8.5)
-│   ├── grammarly.html       (AI Writing, 8.5)
-│   ├── perplexity.html      (Productivity, 8.8)
-│   ├── replit.html          (AI Coding, 8.3)
-│   └── claude-cowork.html   (Productivity, 8.2)
+├── nav.js               ← shared nav (single source of truth — see Site Architecture)
+├── review/              ← 24 individual tool review pages
+│   ├── jasper.html              (AI Writing, 8.2)
+│   ├── copyai.html              (AI Writing, 7.3)
+│   ├── writesonic.html          (AI Writing, 8.0)
+│   ├── grammarly.html           (AI Writing, 8.5)
+│   ├── cursor.html              (AI Coding, 9.4)
+│   ├── github-copilot.html      (AI Coding, 8.9)
+│   ├── windsurf.html            (AI Coding, 8.2)
+│   ├── bolt.html                (AI Coding, 8.6)
+│   ├── replit.html              (AI Coding, 8.3)
+│   ├── lovable.html             (AI Coding, 8.1)
+│   ├── google-antigravity.html  (AI Coding, 7.5)
+│   ├── midjourney.html          (AI Image, 7.8)
+│   ├── adobe-firefly.html       (AI Image, 8.4)
+│   ├── leonardo-ai.html         (AI Image, 8.7)
+│   ├── zapier.html              (Automation, 8.1)
+│   ├── n8n.html                 (Automation, 8.3)
+│   ├── microsoft-agent-365.html (Automation, 7.1)
+│   ├── runway.html              (AI Video, 8.9)
+│   ├── synthesia.html           (AI Video, 8.0)
+│   ├── descript.html            (AI Video, 7.9)
+│   ├── chatgpt.html             (Productivity, 9.0)
+│   ├── notion-ai.html           (Productivity, 8.6)
+│   ├── perplexity.html          (Productivity, 8.8)
+│   └── claude-cowork.html       (Productivity, 8.2)
 ├── category/            ← 6 category listing pages
 │   ├── writing.html
 │   ├── coding.html
@@ -61,7 +65,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── automation.html
 │   ├── video.html
 │   └── productivity.html
-└── blog/
+└── blog/              ← 12 blog posts + index
     ├── index.html
     ├── cursor-vs-windsurf-vs-github-copilot.html
     ├── best-free-ai-tools-2026.html
@@ -69,16 +73,27 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
     ├── chatgpt-vs-claude-vs-perplexity.html
     ├── how-to-automate-business-with-n8n.html
     ├── cursor-pricing-2026.html
-    └── notion-ai-pricing-2026.html
+    ├── notion-ai-pricing-2026.html
+    ├── best-ai-agents-non-developers-2026.html
+    ├── best-ai-app-builders-2026.html
+    ├── best-ai-coding-agents-2026.html
+    ├── chatgpt-go-vs-plus-2026.html
+    └── chatgpt-pro-100-vs-200-2026.html
 ```
+> Root also has: about.html, resources.html, how-we-review.html, contribute.html, contact.html,
+> advertise.html, and legal pages (see "Missing File Structure Details"). author/ holds
+> marcus-veil.html and priya-nolan.html. Full HTML page count: 58.
 
 ## Category Review Counts (homepage displays these — keep in sync)
-- AI Writing: 4
+- AI Writing: 4 (Jasper, Copy.ai, Writesonic, Grammarly)
 - AI Coding: 7 (Cursor, GitHub Copilot, Windsurf, Bolt.new, Replit, Lovable, Google Antigravity)
-- AI Image: 3
-- Automation: 2
-- AI Video: 3
-- Productivity: 4
+- AI Image: 3 (Midjourney, Adobe Firefly, Leonardo AI)
+- Automation: 3 (Zapier, n8n, Microsoft Agent 365)
+- AI Video: 3 (Runway, Synthesia, Descript)
+- Productivity: 4 (ChatGPT, Notion AI, Perplexity, Claude Cowork)
+
+Total: 24 reviews. Homepage `cat-count` values in index.html match these (Productivity corrected
+from "2" to "4 tools reviewed" May 30, 2026; Automation is 3).
 
 When adding a new review, update the count in `index.html` using this script pattern:
 ```bash
@@ -250,7 +265,7 @@ To change the nav:
 3. **Link Analysis / PageRank** — quality inbound links from relevant sources are required to break through on competitive queries. Content quality alone is not enough.
 
 ### Near-Term Priorities (Content and Credibility)
-- Add screenshots to Tier 1 review pages: Cursor, Grammarly, Jasper, Perplexity
+- Add screenshots to Tier 1 review pages: ~~Cursor, Grammarly, Perplexity~~ done — only **Jasper** still needs its screenshot embedded (jasper-pricing.jpg exists in img/reviews/ but isn't referenced in review/jasper.html)
 - Add a methodology callout box at the top of each review page linking to how-we-review.html
 - Keep adding reviews and blog posts to build topical depth
 
@@ -355,9 +370,9 @@ All schema is implemented as JSON-LD in the <head> of each page. Do not add dupl
 
 ### Implemented
 - **Organization schema** — index.html (entity signal for Google)
-- **Review schema** — all 18 review pages (eligible for star ratings in SERPs)
+- **Review schema** — all 24 review pages (eligible for star ratings in SERPs)
   - Includes: reviewRating, author, itemReviewed with applicationCategory + operatingSystem + offers
-- **Article schema** — all 5 blog posts (eligible for article rich results)
+- **Article schema** — all 12 blog posts (eligible for article rich results)
   - Includes: headline, author (Person), publisher (Organization), datePublished, dateModified
 - **BreadcrumbList schema** — all review and blog pages
 
@@ -603,7 +618,7 @@ Near-term: screenshots on remaining reviews, methodology callout box, keep addin
 Medium-term: contributor bylines, outreach for links from AI newsletters
 Longer-term: topic clusters, deep comparison posts (2000+ words)
 
-Content published to date: 20 reviews, 6 blog posts, 1 comparison page, 1 resources page
+Content published to date: 24 reviews, 12 blog posts, 1 comparison page, 1 resources page
 Next content priorities (from May 24, 2026 session):
 - Monitor Search Console in 2-3 weeks for position movement on Notion AI, Copy.ai, Midjourney rewrites
 - Monitor CTR improvement on Bolt.new and ChatGPT vs Claude
@@ -764,19 +779,21 @@ Affiliate link Claude Code prompt: ready to run when URLs approved — located i
 
 ## Blog Posts Published
 
+_12 blog posts deployed in `blog/` (excluding index.html). Descript and Lovable are **review**
+pages (`review/`), not blog posts — they are tracked in the File Structure review list, not here._
+
 | Post | Author | Date | Target Keyword |
 |---|---|---|---|
 | Cursor vs Windsurf vs GitHub Copilot | Marcus Veil | April 2026 | cursor vs windsurf |
 | Best Free AI Tools 2026 | Priya Nolan | April 2026 | best free ai tools 2026 |
 | Best AI Tools for SEO 2026 | Marcus Veil | April 2026 | best ai tools seo |
 | ChatGPT vs Claude vs Perplexity | Priya Nolan | April 2026 | chatgpt vs claude vs perplexity |
+| How to Automate Your Business with n8n | Marcus Veil | April 2026 | how to automate business n8n |
 | Cursor Pricing Explained | Marcus Veil | May 2026 | cursor pricing 2026 |
 | Notion AI Pricing 2026 | Priya Nolan | May 2026 | notion ai pricing 2026 |
 | Best AI Agents for Non-Developers 2026 | Priya Nolan | May 2026 | best ai agents 2026 |
-| Descript Review | Priya Nolan | May 2026 | descript review 2026 |
 | ChatGPT Go vs Plus 2026 | Priya Nolan | May 2026 | chatgpt go vs plus |
 | Best AI App Builders 2026: Lovable vs Bolt vs Replit | Marcus Veil | May 2026 | best ai app builders 2026 |
-| Lovable Review | Marcus Veil | May 2026 | lovable review 2026 |
 | Best AI Coding Agents 2026 | Marcus Veil | May 2026 | best ai coding agents 2026 |
 | ChatGPT Pro $100 vs $200 | Marcus Veil | May 2026 | chatgpt pro $100 vs $200 |
 
@@ -790,7 +807,7 @@ pricing updates needed, blog post opportunities, and what competitors are coveri
 
 What the brief covers:
 1. New tools worth reviewing - 3-5 tools not yet on site with estimated scores
-2. Pricing changes - flags if any of the 19 reviewed tools have updated pricing
+2. Pricing changes - flags if any of the 24 reviewed tools have updated pricing
 3. Trending search queries - high-opportunity keywords to target with new content
 4. Competitor activity - topics G2/TechRadar/PCMag are covering that we are not
 5. Community sentiment - Reddit discussions about tools getting significant attention
@@ -834,7 +851,7 @@ Placed after intro section, before first H2.
 ## Site Maintenance
 
 ### What Users Are Saying sections
-Added to all 20 reviews (May 2026). Sources: Reddit + G2/Trustpilot per tool.
+Added to all 24 reviews (May 2026). Sources: Reddit + G2/Trustpilot per tool.
 Update community sentiment quotes when research agent briefs surface significant new feedback.
 
 ### Nav
@@ -866,7 +883,8 @@ Rules:
 - Run sitemap audit whenever new reviews or blog posts are added
 - Submit updated sitemap to Google Search Console after significant additions
 
-Current page count: 54 URLs (as of May 26, 2026)
+Current page count: 58 URLs (as of May 30, 2026) — one per HTML page.
+(May 30, 2026: added the previously-missing `blog/best-ai-agents-non-developers-2026.html` entry.)
 
 ## Technical Fixes Applied (May 2026)
 
@@ -876,7 +894,7 @@ Current page count: 54 URLs (as of May 26, 2026)
 - Sitemap uses https://aitoolgrade.com/ not /index.html
 
 ### Canonical tags
-- All 52 pages audited and canonical tags verified/added May 2026
+- All pages audited and canonical tags verified/added May 2026 — coverage now 58/58 pages (May 30, 2026)
 - Format: <link rel="canonical" href="https://aitoolgrade.com/[path]" />
 - blog/index.html canonical: https://aitoolgrade.com/blog/
 

@@ -33,7 +33,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ├── robots.txt
 ├── sitemap.xml          ← submitted to Google Search Console
 ├── review/              ← 20 individual tool review pages
-│   ├── jasper.html          (AI Writing, 9.2)
+│   ├── jasper.html          (AI Writing, 8.2)
 │   ├── copyai.html          (AI Writing, 8.4)
 │   ├── writesonic.html      (AI Writing, 8.1)
 │   ├── cursor.html          (AI Coding, 9.4)
@@ -609,11 +609,11 @@ Next content priorities (from May 24, 2026 session):
 ## Content Queue (updated May 29, 2026 session)
 
 ### Remaining queue (confirmed current from May 25 brief)
-- "ChatGPT Pro $100 vs Pro $200" blog post — MEDIUM (new tiers confusing users)
 - Perplexity Computer review — MEDIUM ($200/mo multi-agent, Cowork competitor)
 - DeepSeek V4 review — MEDIUM (undercuts frontier models on price)
 
 ### Completed
+- "ChatGPT Pro $100 vs $200" blog post ✅ (May 2026)
 - Thin review sweep — writesonic, windsurf, zapier, synthesia, n8n, github-copilot all 2,000+ words ✅ (May 29, 2026)
 - "Best AI Coding Agents 2026" blog post ✅ (May 28, 2026)
 - Google Antigravity 2.0 review ✅ (May 28, 2026)
@@ -645,6 +645,12 @@ Data source: Google Search Console — 3-month performance report
 All 6 remaining thin reviews rewritten to 2,000+ words ahead of May 2026 Google Core Update rollout (completing ~June 4, 2026).
 - Do not analyze Search Console data until after June 4
 - Check all 9 rewritten reviews for position movement week of June 7
+
+### May 30, 2026 — Jasper deep rewrite
+review/jasper.html — ~1,300 words → 2,106 words
+Score corrected 9.2 → 8.2
+Added: Jasper IQ section, 100+ agents, Content Pipelines, "The Jasper IQ Question", comparison table
+Removed: "Hands-on tested" badge → "Research verified"
 
 ### How to prioritize future rewrites
 1. Export queries from Search Console sorted by impressions descending
@@ -686,7 +692,7 @@ All reviews now 2,000+ words. Zero thin pages remaining.
 writesonic, windsurf, zapier, synthesia, n8n, github-copilot,
 notion-ai, copyai, midjourney, replit, lovable, descript,
 claude-cowork, microsoft-agent-365, chatgpt, grammarly,
-perplexity, cursor, bolt, google-antigravity
+perplexity, cursor, bolt, google-antigravity, jasper
 
 Rewrite process:
 1. Web search top-ranking competitors for "[tool] review 2026"
@@ -769,6 +775,7 @@ Affiliate link Claude Code prompt: ready to run when URLs approved — located i
 | Best AI App Builders 2026: Lovable vs Bolt vs Replit | Marcus Veil | May 2026 | best ai app builders 2026 |
 | Lovable Review | Marcus Veil | May 2026 | lovable review 2026 |
 | Best AI Coding Agents 2026 | Marcus Veil | May 2026 | best ai coding agents 2026 |
+| ChatGPT Pro $100 vs $200 | Marcus Veil | May 2026 | chatgpt pro $100 vs $200 |
 
 ## Research Agent
 
@@ -801,6 +808,26 @@ Schedule: Every Monday 8am via ~/Library/LaunchAgents/com.aitoolgrade.research.p
 - Conciseness instruction updated: bullet points only, max 1 sentence per item, max 3 items per section, under 300 words total
 - API key updated May 25, 2026
 
+## Site Architecture
+
+### Nav — single source of truth (implemented May 30, 2026)
+File: nav.js (project root)
+All 58 HTML pages reference nav.js — zero hardcoded nav blocks remain.
+To add a new review to nav: edit nav.js only — one line, updates all pages.
+To add a new category: edit nav.js only.
+4,292 lines of duplicated nav HTML removed.
+Note: depth detection is server-relative — test via HTTP server not file://
+
+### Mobile nav
+Hamburger menu implemented May 30, 2026 — all 58 pages.
+Toggle logic embedded in nav.js (not per-file inline scripts).
+
+### Table of Contents
+Added to all 24 review pages May 30, 2026.
+Numbered TOC, var(--bg2) card, mono label, accent links.
+Placed after intro section, before first H2.
+"What Users Are Saying" excluded from TOC.
+
 ## Site Maintenance
 
 ### What Users Are Saying sections
@@ -823,7 +850,7 @@ Apply similar disclosure to any future Anthropic product reviews.
 ## Sitemap
 
 File: sitemap.xml (root level)
-Last updated: May 26, 2026
+Last updated: May 30, 2026
 
 Rules:
 - Reviews: changefreq="monthly", priority=0.8

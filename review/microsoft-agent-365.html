@@ -237,12 +237,28 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
   <p style="font-size:13px;font-family:'DM Mono',monospace;color:var(--accent);margin-bottom:6px">RELATED</p>
   <a href="../review/zapier.html" style="font-size:15px;font-weight:600;color:var(--text)">Zapier Review — automation for non-technical teams →</a>
 </div>
-<h2>What is Microsoft Agent 365?</h2>
+<h2 id="what-is-microsoft-agent-365">What is Microsoft Agent 365?</h2>
       <p>Microsoft Agent 365 is the company's enterprise control plane for AI agents running inside the Microsoft 365 environment. It became generally available on May 1, 2026 after a multi-month preview, and Microsoft positions it alongside the new M365 E7 Frontier Suite as the centerpiece of its agent strategy for large organizations.</p>
       <p>The most important thing to understand up front: Agent 365 is not a tool for building agents. It is a governance and control layer for agents that already exist. If your team is shopping for an agent builder — something to design, deploy, and orchestrate new AI agents — Agent 365 is not that product, and Microsoft sells the building blocks separately through Copilot Studio. Agent 365 is what IT runs once those agents start landing in the environment.</p>
       <p>This review covers the documented capabilities, the GA pricing, and the early independent assessments — including Gartner's notably blunt March 2026 take, which has shaped how enterprise buyers are looking at the product.</p>
 
-      <h2>Pros and Cons</h2>
+      <!-- toc -->
+<nav aria-label="Table of contents" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 32px 0;">
+  <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 12px;">In this review</div>
+  <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#what-is-microsoft-agent-365" style="color: var(--accent); text-decoration: none;">What is Microsoft Agent 365?</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pros-and-cons" style="color: var(--accent); text-decoration: none;">Pros and Cons</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#performance-scores" style="color: var(--accent); text-decoration: none;">Performance Scores</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-five-capabilities-that-actually-matter" style="color: var(--accent); text-decoration: none;">The Five Capabilities That Actually Matter</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pricing-and-why-the-number-matters" style="color: var(--accent); text-decoration: none;">Pricing — and Why the Number Matters</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-gartner-quote-you-should-read-carefully" style="color: var(--accent); text-decoration: none;">The Gartner Quote You Should Read Carefully</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#who-should-actually-be-looking-at-this" style="color: var(--accent); text-decoration: none;">Who Should Actually Be Looking at This</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#microsoft-agent-365-vs-building-on-zapier-or-n8n" style="color: var(--accent); text-decoration: none;">Microsoft Agent 365 vs Building on Zapier or n8n</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#what-the-it-community-is-saying" style="color: var(--accent); text-decoration: none;">What the IT Community Is Saying</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-bottom-line" style="color: var(--accent); text-decoration: none;">The Bottom Line</a></li>
+  </ol>
+</nav>
+      <h2 id="pros-and-cons">Pros and Cons</h2>
       <div class="pros-cons">
         <div class="pros-box">
           <h4>What stands out</h4>
@@ -262,7 +278,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         </div>
       </div>
 
-      <h2>Performance Scores</h2>
+      <h2 id="performance-scores">Performance Scores</h2>
       <div class="score-breakdown">
         <h4>Category breakdown</h4>
         <div class="score-row"><span class="score-name">Ease of Use</span><div class="score-bar-track"><div class="score-bar-fill" style="width:65%"></div></div><span class="score-val">6.5</span></div>
@@ -272,34 +288,34 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <div class="score-row"><span class="score-name">Support &amp; Docs</span><div class="score-bar-track"><div class="score-bar-fill" style="width:70%"></div></div><span class="score-val">7.0</span></div>
       </div>
 
-      <h2>The Five Capabilities That Actually Matter</h2>
+      <h2 id="the-five-capabilities-that-actually-matter">The Five Capabilities That Actually Matter</h2>
       <p><strong>Agent registry.</strong> A centralized inventory of every AI agent running across the Microsoft 365 environment — including agents that were deployed without IT approval. For organizations where Copilot Studio agents, third-party connectors, and one-off departmental experiments have been multiplying quietly, the registry is the first place that visibility actually exists.</p>
       <p><strong>Shadow agent detection.</strong> The registry doesn't just catalog what IT already knows about. It surfaces agents that were never sanctioned and lets admins quarantine them pending review. For most enterprises this is the single capability that justifies a conversation about Agent 365 at all — it solves a problem CIOs are starting to flag and that nothing else in the Microsoft stack addresses directly.</p>
       <p><strong>Entra identity for agents.</strong> Every agent gets a first-class identity in Microsoft Entra — the same identity system Microsoft says now protects more than a billion enterprise users. That means agents get unique sign-in credentials, conditional access policies, least-privilege enforcement, and full audit trails. Treating agents as identity-bearing actors rather than scripts is the architectural decision most likely to age well.</p>
       <p><strong>Centralized governance dashboard.</strong> A single console for agent activity, permissions, and compliance posture across the tenant. Useful for compliance and security reporting, less useful for day-to-day operations than the registry and identity pieces.</p>
       <p><strong>Conditional access policies for agents.</strong> Apply the same conditional access framework used for human employees — risk-based access, location and device controls, MFA-equivalent constraints — to agents. This is where Agent 365 actually differentiates from anything outside the Microsoft ecosystem.</p>
 
-      <h2>Pricing — and Why the Number Matters</h2>
+      <h2 id="pricing-and-why-the-number-matters">Pricing — and Why the Number Matters</h2>
       <p>Agent 365 is sold two ways. As a standalone add-on, it runs <strong>$15 per user per month</strong>. As part of the new Microsoft 365 E7 "Frontier Suite," it is bundled with M365 E5, Microsoft 365 Copilot, and Entra Suite for <strong>$99 per user per month</strong>.</p>
       <p>The headline standalone price needs context. $15/user/month is per seat across the organization, not per agent. At 100 users that's $1,500 a month — for governance tooling alone, layered on top of whatever you are already paying for Copilot, Entra, and the rest of the M365 stack. At 500 users it is $7,500/month. At a 5,000-user enterprise it is $75,000/month.</p>
       <p>The E7 bundle is the cleaner buy if the rest of the suite is already on the roadmap, but Gartner's March 2026 guidance was explicit: do not upgrade to E7 specifically to get Agent 365 until Microsoft adds value. The bundle math only works for organizations that would have purchased the underlying components anyway.</p>
 
-      <h2>The Gartner Quote You Should Read Carefully</h2>
+      <h2 id="the-gartner-quote-you-should-read-carefully">The Gartner Quote You Should Read Carefully</h2>
       <p>In a March 2026 client note that has since been quoted widely in enterprise IT coverage, Gartner described Agent 365 as <em>"a work in progress with limited net new functionality to justify its $15 per user per month price point. Upgrading to the ME7 bundle for Agent 365 is not advised until Microsoft adds value."</em></p>
       <p>That is a strikingly direct line from an analyst firm that usually softens its commercial assessments of Microsoft. Two things are worth pulling out of it. First, Gartner is not questioning the architecture — the agent registry and Entra integration are not in dispute. The concern is the gap between the feature set and the asking price at this stage of the product. Second, the guidance specifically targets the bundle upgrade path. Organizations already on a Frontier Suite trajectory aren't being told to walk away; organizations considering E7 <em>because of</em> Agent 365 are.</p>
 
-      <h2>Who Should Actually Be Looking at This</h2>
+      <h2 id="who-should-actually-be-looking-at-this">Who Should Actually Be Looking at This</h2>
       <p>Agent 365 is built for a narrow buyer: large enterprises already running M365 E5 plus Microsoft 365 Copilot, with active AI agent deployments and a security or compliance function that has noticed agents proliferating without governance. For that profile, Agent 365 is the most credible option in the market for one reason — nothing else inherits Entra. Treating agents as identity-bearing actors inside an existing zero-trust framework is harder to retrofit than it looks, and Microsoft is the only vendor positioned to make that the default starting state.</p>
       <p>For anyone outside that profile, the math gets harder. Mid-market organizations without a Copilot footprint, SMBs running on Microsoft 365 Business Standard, agencies building agent workflows on Zapier or <a href="../review/n8n.html">n8n</a>, and enterprises whose AI agent strategy lives mostly outside the M365 surfaces all have better options — usually a lighter governance layer or simply waiting another six months.</p>
 
-      <h2>Microsoft Agent 365 vs Building on Zapier or n8n</h2>
+      <h2 id="microsoft-agent-365-vs-building-on-zapier-or-n8n">Microsoft Agent 365 vs Building on Zapier or n8n</h2>
       <p>This is a category mismatch worth naming. <a href="../review/zapier.html">Zapier</a> and <a href="../review/n8n.html">n8n</a> are automation builders — they let you create the workflows and agents in the first place. Agent 365 is the governance layer that sits above those agents once they're in the Microsoft environment. They solve different problems and most enterprises will need both: a builder (or several) plus a control plane.</p>
       <p>The decision is not "Agent 365 or Zapier." It's "we already have agents running across our M365 tenant — do we need Microsoft's governance layer specifically, or is what we have good enough for now." Today, for most organizations, the honest answer is "good enough for now."</p>
 
       <!-- What Users Are Saying -->
       <div class="users-saying" style="margin:48px 0;">
         <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Community Sentiment</div>
-        <h2 style="font-family:var(--display);font-size:1.75rem;font-weight:800;color:var(--text);margin:0 0 8px 0;">What the IT Community Is Saying</h2>
+        <h2 id="what-the-it-community-is-saying" style="font-family:var(--display);font-size:1.75rem;font-weight:800;color:var(--text);margin:0 0 8px 0;">What the IT Community Is Saying</h2>
         <p style="font-family:var(--sans);font-size:0.95rem;color:var(--text2);margin:0 0 32px 0;line-height:1.6;">Agent 365 is too new for a meaningful G2 footprint, so we pulled sentiment from IT community forums, The Register, Gartner client notes that have surfaced publicly, and enterprise IT discussions in the weeks around GA. Overall posture is cautious: most IT pros see the long-term value but question the current price-to-feature ratio.</p>
         <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:32px;display:flex;gap:40px;flex-wrap:wrap;">
           <div style="display:flex;flex-direction:column;gap:4px;min-width:120px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--accent)">May 2026</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">GA Date</div></div>
@@ -337,7 +353,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       </div>
       <!-- END: What Users Are Saying -->
 
-      <h2>The Bottom Line</h2>
+      <h2 id="the-bottom-line">The Bottom Line</h2>
       <p>Microsoft Agent 365 is the right architectural answer to a problem enterprises are about to confront at scale — agents proliferating inside the M365 environment with no consistent identity, governance, or audit trail. The shadow agent registry and Entra integration are not marketing — they are the two things you will struggle to replicate without Microsoft.</p>
       <p>The catch is timing. At GA, the product is doing less than its price suggests, and Gartner has said so out loud. If you are a large enterprise already running M365 E5 plus Microsoft 365 Copilot with agents actively deployed, this is worth a serious evaluation. If you are anyone else — particularly a buyer being pitched the E7 Frontier Suite primarily to get Agent 365 — wait. The product will be more interesting in six to twelve months, and the price will likely be easier to justify by then.</p>
       <p><strong>Best for:</strong> Large enterprises already on M365 E5 + Copilot with active AI agent deployments.<br>

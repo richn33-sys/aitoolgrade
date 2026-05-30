@@ -259,7 +259,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
 
       <div class="related-callout">Comparing app builders? See how it stacks up against <a href="../review/bolt.html">Bolt.new</a>, <a href="../review/replit.html">Replit</a>, and <a href="../review/cursor.html">Cursor</a>.</div>
 
-      <h2>What is Lovable?</h2>
+      <h2 id="what-is-lovable">What is Lovable?</h2>
       <p>Lovable is an AI app builder that generates a complete web application — frontend, backend, database, authentication, and deployment — from natural-language prompts. You describe what you want, it writes a React and Tailwind CSS frontend wired to a Supabase backend, and it ships the result to a live URL. No local setup, no terminal, no boilerplate.</p>
       <p>The company is based in Stockholm and was founded in November 2023 by Anton Osika, a former CERN engineer and YC founder, alongside Fabian Hedin. It launched as the open-source CLI project GPT Engineer — which picked up 51,000 GitHub stars — before rebuilding into the hosted product and rebranding to Lovable in December 2024. The reinvention worked. By early 2026 the platform reports 8 million users and $206M in annual recurring revenue, with a $330M Series B in December 2025 valuing it at $6.6 billion. That makes it the fastest-growing AI app builder on record and the name most often cited when people talk about "vibe coding" — the subreddit r/vibecoding now has 89,000 members, and Lovable is its default reference point.</p>
       <p>This review is based on Lovable's documented features, verified pricing, and a read of community sentiment across Reddit, Product Hunt, and G2 — not hands-on testing. The goal is to tell you whether it fits your workflow before you spend your first credit.</p>
@@ -269,7 +269,22 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <p>Rebranded from GPT Engineer to Lovable in December 2024 with a full product rebuild. Raised a $330M Series B at a $6.6B valuation in December 2025 and crossed 8 million users in early 2026. The pricing model moved to credits — the free tier dropped from effectively unlimited use to 5 credits per day.</p>
       </div>
 
-      <h2>Pros and Cons</h2>
+      <!-- toc -->
+<nav aria-label="Table of contents" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 32px 0;">
+  <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 12px;">In this review</div>
+  <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#what-is-lovable" style="color: var(--accent); text-decoration: none;">What is Lovable?</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pros-and-cons" style="color: var(--accent); text-decoration: none;">Pros and Cons</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#key-features" style="color: var(--accent); text-decoration: none;">Key Features</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-credit-system-read-this-before-you-subscribe" style="color: var(--accent); text-decoration: none;">The Credit System — Read This Before You Subscribe</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-complexity-ceiling" style="color: var(--accent); text-decoration: none;">The Complexity Ceiling</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pricing" style="color: var(--accent); text-decoration: none;">Pricing</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#score-breakdown" style="color: var(--accent); text-decoration: none;">Score Breakdown</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#who-should-use-lovable" style="color: var(--accent); text-decoration: none;">Who Should Use Lovable?</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-bottom-line" style="color: var(--accent); text-decoration: none;">The Bottom Line</a></li>
+  </ol>
+</nav>
+      <h2 id="pros-and-cons">Pros and Cons</h2>
       <div class="pros-cons">
         <div class="pros-box">
           <h4>What stands out</h4>
@@ -289,7 +304,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         </div>
       </div>
 
-      <h2>Key Features</h2>
+      <h2 id="key-features">Key Features</h2>
       <p>Lovable's pitch is that one prompt produces a real, deployable app rather than a static mockup. The pieces that make that work:</p>
       <ul>
         <li><strong>Full-stack generation</strong> — a React + Tailwind frontend connected to a Supabase backend with authentication, database, and file storage, generated together from a single description.</li>
@@ -302,7 +317,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <li><strong>Credit-based AI</strong> — every prompt consumes credits scaled to task complexity. This is also the source of the platform's biggest friction, covered below.</li>
       </ul>
 
-      <h2>The Credit System — Read This Before You Subscribe</h2>
+      <h2 id="the-credit-system-read-this-before-you-subscribe">The Credit System — Read This Before You Subscribe</h2>
       <p>This is the single most important thing to understand about Lovable, and it's the number one frustration in the community. Lovable runs on credits. Each prompt you send consumes some number of them based on how complex the task is. Simple edits cost roughly half a credit; a complex feature might cost one to two. So far, reasonable.</p>
       <p>The problem is that <strong>the cost of an action is not disclosed before you trigger it.</strong> You don't see "this will cost 3 credits" and get a chance to decline. You send the prompt, the work happens, and the credits are gone. On a free or Pro budget where credits are scarce, that turns every instruction into a small gamble. One independent review put it bluntly: a complex AI instruction can consume anywhere from 10 to 50 credits, and many users report that 100 credits is not enough for a complex project in a single month.</p>
       <p>This matters because it makes budgeting genuinely hard. A 100-credit Pro allowance can last a few days or a full month depending entirely on what you build and how often the AI has to redo work. If you're a non-technical founder validating one idea, you'll probably be fine. If you're iterating daily on something with real complexity, plan to buy top-ups or step up to a higher tier.</p>
@@ -312,11 +327,11 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <p>The second-most-cited frustration compounds the first. Lovable tells you it fixed a bug. It didn't. So you prompt it again to fix the fix — spending more credits — and sometimes it introduces a new problem in the process. Community members describe it as "a slot machine with credits." On simple apps this is rare. On complex business logic it's common, and it's where the opaque pricing hurts most: the harder your problem, the more the AI struggles, and the faster your credits burn fixing the same thing twice.</p>
       </div>
 
-      <h2>The Complexity Ceiling</h2>
+      <h2 id="the-complexity-ceiling">The Complexity Ceiling</h2>
       <p>Lovable's quality is not uniform across project types, and being honest about where the line sits is the most useful thing a review can do. For simple-to-moderate apps — landing pages, CRUD dashboards, internal tools, standard SaaS scaffolding with auth and payments — it's excellent, and fast. The further you push into custom business logic, bespoke APIs, intricate state management, and genuine edge cases, the more you'll need a developer to step in and finish the job.</p>
       <p>That isn't a knock unique to Lovable — every tool in this category hits a similar wall. But it sets expectations correctly: Lovable is a prototyping and MVP engine, not a replacement for a development team on a production system. The community consensus on r/vibecoding is consistent here — it's the strongest choice for UI-first, design-forward prototypes, and it's not where you finish a complex product.</p>
 
-      <h2>Pricing</h2>
+      <h2 id="pricing">Pricing</h2>
       <p>Pricing was verified April 25, 2026. Lovable runs a credit model across four tiers, with paid top-ups available when you run dry.</p>
       <table class="pricing-table">
         <thead><tr><th>Plan</th><th>Price</th><th>What you get</th></tr></thead>
@@ -329,7 +344,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       </table>
       <p>Top-ups run $15 per 50 credits on Pro and $30 per 50 credits on Business. The free tier is genuinely useful for kicking the tires — 5 credits a day is enough to find out whether Lovable fits how you work before you pay. The catch, again, is that credit consumption isn't shown before you act, so "100 credits a month" tells you less about real-world capacity than you'd like.</p>
 
-      <h2>Score Breakdown</h2>
+      <h2 id="score-breakdown">Score Breakdown</h2>
       <div class="score-breakdown">
         <h4>How we rated it</h4>
         <div class="score-row"><span class="score-name">Ease of Use</span><div class="score-bar-track"><div class="score-bar-fill" style="width:90%"></div></div><span class="score-val">9.0</span></div>
@@ -340,7 +355,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       </div>
       <p>Ease of use is the standout — a visual editor, no code required, an intuitive prompt interface, and a free tier to test. Features are deep for the category, with full-stack generation, GitHub sync, one-click deploy, and Stripe and auth out of the box. Value takes the hit because of credit opacity, not raw cost. Integration is strong on the Supabase-and-GitHub axis. Support and docs are solid — a strong community and good documentation — though response speed at the platform's current scale is reported as mixed.</p>
 
-      <h2>Who Should Use Lovable?</h2>
+      <h2 id="who-should-use-lovable">Who Should Use Lovable?</h2>
       <p>Lovable is built for non-technical founders validating ideas, solo builders shipping MVPs fast, and designers who want a working prototype from a mockup. If your goal is to get from concept to a shareable, deployed app in hours rather than weeks, no tool in the category matches it right now. One Reddit user summed up the appeal: "I did 6 months of work in 2 days." For idea validation, that's the whole point.</p>
       <h3>Who should look elsewhere</h3>
       <p>If you're building a production application that needs a security audit, or your project leans on complex custom business logic, Lovable will get you part of the way and then need a developer. And if you need predictable monthly costs, the credit model works against you — the opacity makes budgeting unreliable. Developers who want full control over an existing codebase are better served by <a href="../review/cursor.html">Cursor</a>; teams weighing browser-based builders should also look at <a href="../review/bolt.html">Bolt.new</a> and <a href="../review/replit.html">Replit</a>, which we cover separately.</p>
@@ -355,7 +370,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       <!-- What Users Are Saying -->
       <div class="users-saying" style="margin:48px 0;">
         <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Community Sentiment</div>
-        <h2 style="font-family:var(--display);font-size:1.75rem;font-weight:800;color:var(--text);margin:0 0 8px 0;">What Users Are Saying</h2>
+        <h2 id="what-users-are-saying" style="font-family:var(--display);font-size:1.75rem;font-weight:800;color:var(--text);margin:0 0 8px 0;">What Users Are Saying</h2>
         <p style="font-family:var(--sans);font-size:0.95rem;color:var(--text2);margin:0 0 32px 0;line-height:1.6;">We track discussion across r/vibecoding, r/nocode, Product Hunt, and G2 to surface real sentiment. The pattern is unusually clear: strongly positive for prototyping and MVPs, with concentrated frustration around credit burn and bug loops.</p>
         <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:32px;display:flex;gap:40px;flex-wrap:wrap;">
           <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--accent)">8M</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Users</div></div>
@@ -392,7 +407,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       </div>
       <!-- END: What Users Are Saying -->
 
-      <h2>The Bottom Line</h2>
+      <h2 id="the-bottom-line">The Bottom Line</h2>
       <p>Lovable earns its place as the category leader for what it's actually for: turning an idea into a working, deployed full-stack app faster than anything else available. The Supabase backend works, the GitHub sync means you're never locked in, and Plan Mode keeps bigger builds coherent. The case against it is narrow but real — credit pricing you can't see before you spend, bug loops on complex work, and a ceiling that production apps will run into.</p>
       <p>If you're a founder or designer validating ideas and shipping MVPs, that trade is easy to make, and the free tier lets you confirm the fit before paying a cent. If you need predictable costs or you're building something that has to survive a security audit, go in with eyes open and a developer on call. Scored against its own target use case, Lovable lands at 8.1 — strong, with two friction points worth knowing about before you start.</p>
     </div>

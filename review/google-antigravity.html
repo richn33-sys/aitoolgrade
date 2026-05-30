@@ -259,7 +259,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
 
       <div class="related-callout">Comparing AI coding platforms? See how Antigravity stacks up against <a href="../review/cursor.html">Cursor</a>, <a href="../review/github-copilot.html">GitHub Copilot</a>, and <a href="../review/windsurf.html">Windsurf</a>.</div>
 
-      <h2>What is Google Antigravity?</h2>
+      <h2 id="what-is-google-antigravity">What is Google Antigravity?</h2>
       <p>Google Antigravity is Google's agent-first development platform. The 2.0 release, announced at Google I/O on May 19, 2026, is not just a code editor — it is a five-surface platform: a desktop app, a CLI called <code>agy</code>, an SDK for building custom agents, a Managed Agents API delivered through the Gemini API, and an Enterprise Agent Platform. The platform is optimized for Gemini 3.5 Flash, which Google says was co-developed using Antigravity itself, with multi-model support for Anthropic's Claude Sonnet 4.5 and GPT-OSS.</p>
       <p>The original 1.0 launched in November 2025 as an AI-powered IDE competing with Cursor and Windsurf. The 2.0 release reframes the product around multi-agent orchestration — running several specialized subagents in parallel across distinct coding tasks rather than driving a single Composer-style agent through one task at a time. That's the headline capability, and on paper it's a real category shift.</p>
       <p>This review is based on Google's documented features and pricing, primary-source coverage of the I/O announcement, and community sentiment across developer forums, TechCrunch, The Next Web, and independent reviews — not hands-on testing.</p>
@@ -269,7 +269,22 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <p>Version 2.0 launched May 19, 2026 at Google I/O. The product expanded from a single IDE to a five-surface platform with a new <code>agy</code> CLI, an SDK, and a Managed Agents API. A new $100/month AI Ultra tier sits between the existing Pro subscription and the $200/month top tier, which dropped from a former $250 price point. The Gemini CLI is being retired June 18, 2026 — every Gemini CLI user must migrate to the Antigravity CLI before that date. The 2.0 update was pushed automatically on launch day, wiping stored configurations and removing the built-in code editor from existing user installations.</p>
       </div>
 
-      <h2>Pros and Cons</h2>
+      <!-- toc -->
+<nav aria-label="Table of contents" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 32px 0;">
+  <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 12px;">In this review</div>
+  <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#what-is-google-antigravity" style="color: var(--accent); text-decoration: none;">What is Google Antigravity?</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pros-and-cons" style="color: var(--accent); text-decoration: none;">Pros and Cons</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-five-surface-platform" style="color: var(--accent); text-decoration: none;">The Five-Surface Platform</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#multi-agent-orchestration-the-headline-feature" style="color: var(--accent); text-decoration: none;">Multi-Agent Orchestration — The Headline Feature</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-launch-failure-read-this-before-you-migrate" style="color: var(--accent); text-decoration: none;">The Launch Failure — Read This Before You Migrate</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pricing" style="color: var(--accent); text-decoration: none;">Pricing</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#score-breakdown" style="color: var(--accent); text-decoration: none;">Score Breakdown</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#who-should-use-antigravity" style="color: var(--accent); text-decoration: none;">Who Should Use Antigravity?</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-bottom-line" style="color: var(--accent); text-decoration: none;">The Bottom Line</a></li>
+  </ol>
+</nav>
+      <h2 id="pros-and-cons">Pros and Cons</h2>
       <div class="pros-cons">
         <div class="pros-box">
           <h4>What stands out</h4>
@@ -291,7 +306,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         </div>
       </div>
 
-      <h2>The Five-Surface Platform</h2>
+      <h2 id="the-five-surface-platform">The Five-Surface Platform</h2>
       <p>Antigravity 2.0 is structured around five distinct surfaces rather than a single application. Understanding what each one does is the difference between treating Antigravity as "Google's Cursor" and treating it as the agent platform Google clearly wants it to be.</p>
       <ul>
         <li><strong>Desktop app</strong> — the original IDE surface. Code editor, chat panel, and direct access to subagents from the editor.</li>
@@ -302,7 +317,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       </ul>
       <p>The Manager Surface inside the desktop app is the new central hub — an asynchronous dashboard for orchestrating and monitoring multiple agents at once. Dynamic subagents can be spun up on demand for split workflows, and scheduled background tasks let agents run automatically while you work on something else. That's the differentiated capability story in one paragraph.</p>
 
-      <h2>Multi-Agent Orchestration — The Headline Feature</h2>
+      <h2 id="multi-agent-orchestration-the-headline-feature">Multi-Agent Orchestration — The Headline Feature</h2>
       <p>Parallel multi-agent execution is where Antigravity separates itself from the rest of the category. Cursor runs a single Composer agent through one task at a time. Windsurf's Cascade is similar in shape. Antigravity is built around the assumption that you'll dispatch several specialized subagents simultaneously across distinct tasks — one refactoring a module, another writing tests, another updating documentation, another running a scheduled lint pass — and review the outputs from a Manager Surface.</p>
       <p>If multi-agent workflows are the future of coding assistants, this is the most committed bet on that thesis from any major vendor in 2026. The honest question is whether the orchestration UX, agent reliability, and cost economics support that bet under sustained daily use. That's what 60–90 days of usage in the wild will tell us.</p>
 
@@ -311,14 +326,14 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <p>Google says Gemini 3.5 Flash was itself co-developed using Antigravity. That's a credibility signal worth noting — using your own platform to build the underlying model is the strongest possible internal validation. It does not, however, fix the launch execution problems below.</p>
       </div>
 
-      <h2>The Launch Failure — Read This Before You Migrate</h2>
+      <h2 id="the-launch-failure-read-this-before-you-migrate">The Launch Failure — Read This Before You Migrate</h2>
       <p>This is the most important thing for developers to know about Antigravity in May 2026, and there's no soft way to put it. The 2.0 launch was a trust failure, and it happened in three specific ways that anyone considering this platform should weigh before committing.</p>
       <p><strong>First: the auto-update wiped configurations.</strong> Google pushed the 2.0 update automatically on launch day. For existing Antigravity 1.0 users, that meant stored configurations were wiped, and the built-in code editor was removed in favor of the new platform structure. There was no opt-in, no migration window, and no clear path to restore prior state. Developers logged in to a setup that no longer matched the one they'd been using the day before.</p>
       <p><strong>Second: the replacement CLI wasn't ready.</strong> Google announced at I/O that the Gemini CLI is being retired on June 18, 2026 — a 27-day window — and that all users must migrate to <code>agy</code>, the new Antigravity CLI. At launch, <code>agy</code> was not available on Homebrew, apt, npm, or any other public package manager. The replacement for the tool being mandatorily retired was not installable. Telling developers "your current tool ends in 27 days; the new one isn't shippable yet" is the kind of operational miss that defines how a platform launch is remembered.</p>
       <p><strong>Third: the open-source-to-closed-source change.</strong> Gemini CLI was open source. Antigravity CLI is closed source. For developers and teams that chose Gemini CLI specifically because they could read, audit, fork, and self-host the code, the forced migration removes that property. It's a meaningful change for the security-conscious and the regulated, and it was not framed as such in the I/O announcement.</p>
       <p>Each of those decisions on its own would be a papercut. Together they are a signal about how the team treats developers who already depend on the product. That signal matters more than any individual feature.</p>
 
-      <h2>Pricing</h2>
+      <h2 id="pricing">Pricing</h2>
       <p>Pricing was verified May 2026. Antigravity sits inside Google's broader AI subscription stack, so the tiers map onto existing Google AI Pro and AI Ultra plans rather than being a standalone product subscription.</p>
       <table class="pricing-table">
         <thead><tr><th>Plan</th><th>Price</th><th>What you get</th></tr></thead>
@@ -331,7 +346,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       </table>
       <p>At the $100/month tier Antigravity is in the same price band as Claude Max and ChatGPT Pro. The Pro tier being bundled into an existing Google AI subscription is the strongest value point in the lineup — if you already pay Google for AI features, Antigravity Pro is a zero-marginal-cost addition. The free tier, on the other hand, has been hollowed out by repeated agent-limit cuts since November 2025; treat it as an evaluation tier, not a workable daily plan.</p>
 
-      <h2>Score Breakdown</h2>
+      <h2 id="score-breakdown">Score Breakdown</h2>
       <div class="score-breakdown">
         <h4>How we rated it</h4>
         <div class="score-row"><span class="score-name">Ease of Use</span><div class="score-bar-track"><div class="score-bar-fill" style="width:65%"></div></div><span class="score-val">6.5</span></div>
@@ -342,7 +357,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       </div>
       <p>Features score the highest — the five-surface architecture, parallel subagents, scheduled tasks, voice commands, and multi-model support are a strong, differentiated package. Integration is equally strong inside the Google ecosystem: Android, Firebase, Google Cloud, and AI Studio are all native rather than bolted on. Value lands at 8.0 because Pro is bundled with an existing Google subscription and Ultra is competitive at the same $100 price point as Claude Max and ChatGPT Pro. Ease of Use takes the hit from the rocky 2.0 rollout and missing CLI. Support and Documentation score the lowest — documentation was not ready at launch, and the forced migration with no installable replacement is the single biggest operational failure here.</p>
 
-      <h2>Who Should Use Antigravity?</h2>
+      <h2 id="who-should-use-antigravity">Who Should Use Antigravity?</h2>
       <p>Antigravity is a strong evaluation candidate for two specific audiences. The first is Google ecosystem developers — anyone building on Android, Firebase, or Google Cloud, where Antigravity's native integrations remove the most friction. The second is teams that want parallel multi-agent execution at a lower per-month cost than Cursor Ultra or Claude Max, with the willingness to absorb a noisy launch period.</p>
       <h3>Who should look elsewhere</h3>
       <p>If you need a stable production coding tool in May 2026, this is not it yet. The platform deserves an evaluation, not a commitment. Developers outside the Google ecosystem will get less marginal value than the marketing implies, since the Android/Firebase integrations are where the differentiation is densest. And anyone who chose Gemini CLI specifically for its open-source license has a real reason to push back against the forced closed-source migration — that's not a workflow preference, it's a procurement decision. <a href="../review/cursor.html">Cursor</a> remains the most capable IDE-first option, <a href="../review/windsurf.html">Windsurf</a> the most beginner-friendly agentic editor, and <a href="../review/github-copilot.html">GitHub Copilot</a> the default for teams already on GitHub.</p>
@@ -357,7 +372,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       <!-- What Users Are Saying -->
       <div class="users-saying" style="margin:48px 0;">
         <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Community Sentiment</div>
-        <h2 style="font-family:var(--display);font-size:1.75rem;font-weight:800;color:var(--text);margin:0 0 8px 0;">What Users Are Saying</h2>
+        <h2 id="what-users-are-saying" style="font-family:var(--display);font-size:1.75rem;font-weight:800;color:var(--text);margin:0 0 8px 0;">What Users Are Saying</h2>
         <p style="font-family:var(--sans);font-size:0.95rem;color:var(--text2);margin:0 0 32px 0;line-height:1.6;">We track discussion across developer forums, TechCrunch, The Next Web, and independent reviews to surface real sentiment. The pattern in May 2026 is consistent: technically impressed, operationally frustrated.</p>
         <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:32px;display:flex;gap:40px;flex-wrap:wrap;">
           <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--accent)">5</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Surfaces</div></div>
@@ -394,7 +409,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       </div>
       <!-- END: What Users Are Saying -->
 
-      <h2>The Bottom Line</h2>
+      <h2 id="the-bottom-line">The Bottom Line</h2>
       <p>Antigravity 2.0 is a real bet on a different shape of AI coding — multiple specialized agents working in parallel rather than a single agent driven through tasks one at a time. If that thesis plays out, this is the platform best positioned to lead it, especially for teams already on Android, Firebase, and Google Cloud. The five-surface architecture, the $100 Ultra tier, and the multi-model support inside one environment are the right ingredients.</p>
       <p>The case against adopting it today is narrow but firm. The launch wiped configs and shipped without an installable CLI. The 27-day forced migration to a closed-source replacement is a credibility issue, not a minor papercut. Documentation hasn't caught up. None of these are fatal — they are recoverable inside a quarter — but they are the reason this scores 7.5 and not higher. Evaluate seriously, hold off on production migration, and revisit in Q3 2026 when the CLI and the docs have had a chance to settle.</p>
     </div>

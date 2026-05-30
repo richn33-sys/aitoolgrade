@@ -52,11 +52,27 @@ p{color:var(--text2);margin-bottom:16px}
 .cta-btn{display:inline-block;background:var(--accent);color:white;padding:14px 32px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none}
 footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px}.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}.footer-brand span{color:var(--accent)}.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}.footer-links{display:flex;flex-direction:column;gap:10px}.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color 0.15s}.footer-links a:hover{color:var(--accent)}.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text3)}.footer-bottom a{color:var(--text3);text-decoration:none}.footer-bottom a:hover{color:var(--accent)}
 @media(max-width:768px){.page-wrap{padding:40px 20px}nav{padding:0 20px}h1{font-size:30px}.options-grid{grid-template-columns:1fr}}
+
+/* === MOBILE NAV + RESPONSIVE TABLE FIX === */
+.nav-toggle{display:none;order:2;background:none;border:0;font-size:24px;line-height:1;color:var(--text);cursor:pointer;padding:4px 6px}
+@media(max-width:768px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(250,250,248,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 20px 16px;box-shadow:0 8px 24px rgba(0,0,0,0.06);max-height:calc(100vh - 64px);overflow-y:auto}
+  nav.nav-open .nav-links{display:flex}
+  .nav-links>a,.nav-dropdown{padding:12px 2px;border-bottom:1px solid var(--border)}
+  .nav-dropdown{position:static}
+  .nav-dropdown>a::after{display:none}
+  .dropdown-menu{display:none!important}
+  .nav-cta{display:block;text-align:center;background:var(--accent);color:#fff;margin-top:14px;padding:12px;border:0!important;border-radius:6px}
+  .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+  .comparison-wrap{overflow-x:auto}
+}
 </style>
 </head>
 <body>
 <nav>
   <div class="nav-inner">
+    <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
     <a href="/" class="nav-logo">AI Tool<span>Grade</span></a>
     <div class="nav-links">
       <div class="nav-dropdown">
@@ -186,4 +202,27 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
     <span>Some links are affiliate links. <a href="affiliate-disclosure.html">Learn more</a></span>
   </div>
 </footer>
+<script>
+/* nav-toggle-script */
+(function(){
+  document.addEventListener('click',function(e){
+    var nav=document.querySelector('nav');
+    if(!nav)return;
+    var toggle=e.target.closest&&e.target.closest('.nav-toggle');
+    if(toggle){
+      var open=nav.classList.toggle('nav-open');
+      toggle.setAttribute('aria-expanded',open?'true':'false');
+      e.preventDefault();
+      return;
+    }
+    if(nav.classList.contains('nav-open')){
+      if((e.target.closest&&e.target.closest('.nav-links a'))||!(e.target.closest&&e.target.closest('nav'))){
+        nav.classList.remove('nav-open');
+        var t=nav.querySelector('.nav-toggle');
+        if(t)t.setAttribute('aria-expanded','false');
+      }
+    }
+  });
+})();
+</script>
 </body></html>

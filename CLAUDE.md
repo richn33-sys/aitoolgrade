@@ -57,7 +57,8 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── chatgpt.html             (Productivity, 9.0)
 │   ├── notion-ai.html           (Productivity, 8.6)
 │   ├── perplexity.html          (Productivity, 8.8)
-│   └── claude-cowork.html       (Productivity, 8.2)
+│   ├── claude-cowork.html       (Productivity, 8.2)
+│   └── perplexity-computer.html (Productivity, 7.4)
 ├── category/            ← 6 category listing pages
 │   ├── writing.html
 │   ├── coding.html
@@ -82,7 +83,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ```
 > Root also has: about.html, resources.html, how-we-review.html, contribute.html, contact.html,
 > advertise.html, and legal pages (see "Missing File Structure Details"). author/ holds
-> marcus-veil.html and priya-nolan.html. Full HTML page count: 58.
+> marcus-veil.html and priya-nolan.html. Full HTML page count: 59.
 
 ## Category Review Counts (homepage displays these — keep in sync)
 - AI Writing: 4 (Jasper, Copy.ai, Writesonic, Grammarly)
@@ -90,10 +91,10 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 - AI Image: 3 (Midjourney, Adobe Firefly, Leonardo AI)
 - Automation: 3 (Zapier, n8n, Microsoft Agent 365)
 - AI Video: 3 (Runway, Synthesia, Descript)
-- Productivity: 4 (ChatGPT, Notion AI, Perplexity, Claude Cowork)
+- Productivity: 5 (ChatGPT, Notion AI, Perplexity, Claude Cowork, Perplexity Computer)
 
-Total: 24 reviews. Homepage `cat-count` values in index.html match these (Productivity corrected
-from "2" to "4 tools reviewed" May 30, 2026; Automation is 3).
+Total: 25 reviews. Homepage `cat-count` values in index.html match these (Productivity is 5 as of
+May 31, 2026 after adding Perplexity Computer; Automation is 3).
 
 When adding a new review, update the count in `index.html` using this script pattern:
 ```bash
@@ -163,7 +164,7 @@ As a final step in any writing task, humanize the text so it does not feel AI-ge
 
 ## Nav Structure (current — defined once in nav.js; see Site Architecture)
 > As of May 30, 2026 the nav is rendered from `nav.js` (single source of truth). Do NOT
-> edit nav markup per-page — edit `nav.js` only and it updates all 58 pages. The structure
+> edit nav markup per-page — edit `nav.js` only and it updates all 59 pages. The structure
 > below documents what nav.js renders.
 ```
 Categories ▾         Reviews ▾            Compare    Blog    Get Updates
@@ -184,6 +185,7 @@ Categories ▾         Reviews ▾            Compare    Blog    Get Updates
                        Synthesia
                        Notion AI
                        Perplexity AI
+                       Perplexity Computer
                        Grammarly
                        Replit
                        Claude Cowork
@@ -217,7 +219,7 @@ directly in page content (breadcrumbs, in-body links, footer links):
 ## Adding a New Review Page
 1. Use an existing review page as template (e.g. `review/cursor.html`)
 2. Update: title, meta description, tool name, score, pros/cons, affiliate link
-3. Add to nav dropdown — edit `nav.js` only (one line; updates all 58 pages)
+3. Add to nav dropdown — edit `nav.js` only (one line; updates all 59 pages)
 4. Add a card to the relevant `category/` page
 5. Add a card to `reviews.html`
 6. Add a row to `compare.html`
@@ -227,11 +229,11 @@ directly in page content (breadcrumbs, in-body links, footer links):
 
 ## Updating Nav (nav.js — single source of truth)
 > Superseded May 30, 2026. The old per-page Python find-and-replace pattern is no longer used —
-> all 58 pages now load nav markup from `nav.js`, so there is no per-page nav HTML to rewrite.
+> all 59 pages now load nav markup from `nav.js`, so there is no per-page nav HTML to rewrite.
 
 To change the nav:
 1. Edit `nav.js` (project root) only — add/remove a review or category entry (one line).
-2. The change propagates to all 58 pages automatically; no per-page edits.
+2. The change propagates to all 59 pages automatically; no per-page edits.
 3. Test via an HTTP server (depth detection is server-relative — `file://` will not resolve paths correctly).
 4. Commit, push, and SSH deploy as usual.
 
@@ -370,7 +372,7 @@ All schema is implemented as JSON-LD in the <head> of each page. Do not add dupl
 
 ### Implemented
 - **Organization schema** — index.html (entity signal for Google)
-- **Review schema** — all 24 review pages (eligible for star ratings in SERPs)
+- **Review schema** — all 25 review pages (eligible for star ratings in SERPs)
   - Includes: reviewRating, author, itemReviewed with applicationCategory + operatingSystem + offers
 - **Article schema** — all 12 blog posts (eligible for article rich results)
   - Includes: headline, author (Person), publisher (Organization), datePublished, dateModified
@@ -618,7 +620,7 @@ Near-term: screenshots on remaining reviews, methodology callout box, keep addin
 Medium-term: contributor bylines, outreach for links from AI newsletters
 Longer-term: topic clusters, deep comparison posts (2000+ words)
 
-Content published to date: 24 reviews, 12 blog posts, 1 comparison page, 1 resources page
+Content published to date: 25 reviews, 12 blog posts, 1 comparison page, 1 resources page
 Next content priorities (from May 24, 2026 session):
 - Monitor Search Console in 2-3 weeks for position movement on Notion AI, Copy.ai, Midjourney rewrites
 - Monitor CTR improvement on Bolt.new and ChatGPT vs Claude
@@ -807,7 +809,7 @@ pricing updates needed, blog post opportunities, and what competitors are coveri
 
 What the brief covers:
 1. New tools worth reviewing - 3-5 tools not yet on site with estimated scores
-2. Pricing changes - flags if any of the 24 reviewed tools have updated pricing
+2. Pricing changes - flags if any of the 25 reviewed tools have updated pricing
 3. Trending search queries - high-opportunity keywords to target with new content
 4. Competitor activity - topics G2/TechRadar/PCMag are covering that we are not
 5. Community sentiment - Reddit discussions about tools getting significant attention
@@ -832,14 +834,14 @@ Schedule: Every Monday 8am via ~/Library/LaunchAgents/com.aitoolgrade.research.p
 
 ### Nav — single source of truth (implemented May 30, 2026)
 File: nav.js (project root)
-All 58 HTML pages reference nav.js — zero hardcoded nav blocks remain.
+All 59 HTML pages reference nav.js — zero hardcoded nav blocks remain.
 To add a new review to nav: edit nav.js only — one line, updates all pages.
 To add a new category: edit nav.js only.
 4,292 lines of duplicated nav HTML removed.
 Note: depth detection is server-relative — test via HTTP server not file://
 
 ### Mobile nav
-Hamburger menu implemented May 30, 2026 — all 58 pages.
+Hamburger menu implemented May 30, 2026 — all 59 pages.
 Toggle logic embedded in nav.js (not per-file inline scripts).
 
 ### Table of Contents
@@ -856,7 +858,7 @@ Update community sentiment quotes when research agent briefs surface significant
 
 ### Nav
 Standardized across all pages May 2026, then converted to a single source of truth (`nav.js`)
-May 30, 2026 — now rendered from `nav.js` on all 58 pages (see Site Architecture). No per-page
+May 30, 2026 — now rendered from `nav.js` on all 59 pages (see Site Architecture). No per-page
 nav markup remains.
 Dropdown hover fix applied May 2026 — uses .nav-dropdown::after pseudo-element bridge (now in nav.js).
 When adding new reviews: edit `nav.js` only (one line); depth/relative paths are handled
@@ -886,7 +888,8 @@ Rules:
 - Run sitemap audit whenever new reviews or blog posts are added
 - Submit updated sitemap to Google Search Console after significant additions
 
-Current page count: 58 URLs (as of May 30, 2026) — one per HTML page.
+Current page count: 59 URLs (as of May 31, 2026) — one per HTML page.
+(May 31, 2026: added `review/perplexity-computer.html`.)
 (May 30, 2026: added the previously-missing `blog/best-ai-agents-non-developers-2026.html` entry.)
 
 ## Technical Fixes Applied (May 2026)
@@ -897,7 +900,7 @@ Current page count: 58 URLs (as of May 30, 2026) — one per HTML page.
 - Sitemap uses https://aitoolgrade.com/ not /index.html
 
 ### Canonical tags
-- All pages audited and canonical tags verified/added May 2026 — coverage now 58/58 pages (May 30, 2026)
+- All pages audited and canonical tags verified/added May 2026 — coverage now 59/59 pages (May 31, 2026)
 - Format: <link rel="canonical" href="https://aitoolgrade.com/[path]" />
 - blog/index.html canonical: https://aitoolgrade.com/blog/
 

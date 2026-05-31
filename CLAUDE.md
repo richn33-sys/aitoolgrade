@@ -870,6 +870,9 @@ Always update: pricing table, What Changed callout box, byline "Last verified [M
 Claude Cowork review includes editorial disclosure — AIToolGrade uses Claude for content production.
 Apply similar disclosure to any future Anthropic product reviews.
 
+### Pending Cleanup
+- [ ] Audit images/reviews/<tool>/ directory for orphaned feature.png files not referenced in any review page. Flagged May 31, 2026 during Jasper screenshot fix. Check each tool folder and remove any unreferenced images.
+
 ## Sitemap
 
 File: sitemap.xml (root level)

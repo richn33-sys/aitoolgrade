@@ -59,6 +59,7 @@
     '<a href="' + prefix + 'review/descript.html">Descript</a>' +
     '<a href="' + prefix + 'review/notion-ai.html">Notion AI</a>' +
     '<a href="' + prefix + 'review/perplexity.html">Perplexity AI</a>' +
+    '<a href="' + prefix + 'review/perplexity-computer.html">Perplexity Computer</a>' +
     '<a href="' + prefix + 'review/grammarly.html">Grammarly</a>' +
     '<a href="' + prefix + 'review/replit.html">Replit</a>' +
     '<a href="' + prefix + 'review/claude-cowork.html">Claude Cowork</a>' +

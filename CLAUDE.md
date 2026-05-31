@@ -265,7 +265,7 @@ To change the nav:
 3. **Link Analysis / PageRank** — quality inbound links from relevant sources are required to break through on competitive queries. Content quality alone is not enough.
 
 ### Near-Term Priorities (Content and Credibility)
-- Add screenshots to Tier 1 review pages: ~~Cursor, Grammarly, Perplexity~~ done — only **Jasper** still needs its screenshot embedded (jasper-pricing.jpg exists in img/reviews/ but isn't referenced in review/jasper.html)
+- ~~Add screenshots to Tier 1 review pages: Cursor, Grammarly, Perplexity, Jasper~~ ✅ done (May 31, 2026) — all Tier 1 reviews now embed their pricing screenshot. Jasper now references `img/reviews/jasper-pricing.jpg` (replaced a non-standard `images/reviews/jasper/pricing.png` path; orphaned file removed)
 - Add a methodology callout box at the top of each review page linking to how-we-review.html
 - Keep adding reviews and blog posts to build topical depth
 

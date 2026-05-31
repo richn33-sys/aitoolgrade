@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="canonical" href="https://aitoolgrade.com/review/deepseek-v4.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DeepSeek V4 review 2026 — open-weight LLM scoring 80.6% on SWE-bench at $0.435/M input, roughly 1/30th the cost of Claude Opus 4.7. The cost case, and the catches.">
+<title>DeepSeek V4 Review 2026 — Frontier Coding Benchmarks at 1/30th the Cost | AIToolGrade</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fafaf8;--bg2:#f3f2ee;--bg3:#eceae3;--text:#1a1a18;--text2:#4a4a45;--text3:#8a8a82;--accent:#e85d26;--accent2:#f07d4a;--accent-dim:rgba(232,93,38,0.08);--border:#e2e0d8;--white:#ffffff;--display:'Playfair Display',serif;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:4px}
+.nav-dropdown>a::after{content:"▾";font-size:10px}
+.dropdown-menu{visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.15s ease,visibility 0s linear 0.5s;position:absolute;top:calc(100% + 8px);left:-16px;background:white;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:200;max-height:80vh;overflow-y:auto}
+.dropdown-menu a{display:block;padding:8px 12px;font-size:14px;color:var(--text2);text-decoration:none;border-radius:6px;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--bg2);color:var(--accent)}
+.nav-dropdown:hover .dropdown-menu{visibility:visible;opacity:1;pointer-events:auto;transition:opacity 0.15s ease,visibility 0s}
+.nav-dropdown .dropdown-menu::before{content:"";position:absolute;top:-20px;left:0;right:0;height:20px}
+.nav-dropdown::after{content:"";position:absolute;height:20px;width:calc(100% + 16px);bottom:-20px;left:-16px}
+.review-layout{max-width:1100px;margin:0 auto;padding:60px 40px;display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:start}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:24px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+.review-header{margin-bottom:40px}
+.review-tool-row{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.review-tool-logo{width:56px;height:56px;border-radius:14px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:28px;border:1px solid var(--border)}
+.review-tool-title{font-size:15px;font-weight:600;margin-bottom:2px}
+.review-tool-url{font-size:13px;color:var(--text3);font-family:var(--mono)}
+h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;margin-bottom:16px}
+.review-meta-row{display:flex;align-items:center;gap:20px;font-size:13px;color:var(--text3);margin-bottom:24px}
+.verdict-banner{background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:20px 24px;margin-bottom:40px;display:flex;align-items:center;gap:16px}
+.verdict-score{font-family:var(--display);font-size:48px;font-weight:800;color:var(--accent);line-height:1}
+.verdict-text h3{font-size:15px;font-weight:600;margin-bottom:4px}
+.verdict-text p{font-size:13px;color:var(--text2)}
+.review-body h2{font-family:var(--display);font-size:28px;font-weight:700;margin:40px 0 16px}
+.review-body p{color:var(--text2);margin-bottom:16px}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
+.pros-box,.cons-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px}
+.pros-box{border-top:3px solid #2e7d32}
+.cons-box{border-top:3px solid #c62828}
+.pros-box h4{color:#2e7d32;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.cons-box h4{color:#c62828;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.pro-item,.con-item{font-size:14px;color:var(--text2);margin-bottom:8px;display:flex;gap:8px;align-items:flex-start}
+.pro-item::before{content:'✓';color:#2e7d32;font-weight:600;flex-shrink:0}
+.con-item::before{content:'✗';color:#c62828;font-weight:600;flex-shrink:0}
+.score-breakdown{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;margin:32px 0}
+.score-breakdown h4{font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:20px}
+.score-row{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.score-row:last-child{margin-bottom:0}
+.score-name{font-size:14px;color:var(--text2);width:160px;flex-shrink:0}
+.score-bar-track{flex:1;height:8px;background:var(--bg2);border-radius:100px;overflow:hidden}
+.score-bar-fill{height:100%;border-radius:100px;background:var(--accent)}
+.score-val{font-family:var(--mono);font-size:13px;font-weight:500;width:30px;text-align:right}
+.comparison-wrap{overflow-x:auto;margin:24px 0}
+.comparison-table{width:100%;border-collapse:collapse;font-size:14px}
+.comparison-table th,.comparison-table td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
+.comparison-table th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.05em;color:var(--text3);background:var(--bg2)}
+.comparison-table td{color:var(--text2)}
+.comparison-table tr td:first-child{font-weight:600;color:var(--text)}
+.comparison-table th a,.comparison-table td a{color:var(--accent);text-decoration:none}
+.affiliate-box{background:var(--text);color:white;border-radius:14px;padding:28px;margin:40px 0;text-align:center}
+.affiliate-box h3{font-family:var(--display);font-size:24px;font-weight:700;margin-bottom:8px}
+.affiliate-box p{color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:20px}
+.affiliate-btn{display:inline-block;background:var(--accent);color:white;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;transition:background 0.15s}
+.affiliate-btn:hover{background:var(--accent2)}
+.affiliate-note{font-size:11px;color:rgba(255,255,255,0.4);margin-top:12px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px;position:sticky;top:84px}
+.sidebar-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:16px}
+.sidebar-score{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.sidebar-score-num{font-family:var(--display);font-size:52px;font-weight:800;color:var(--accent);line-height:1}
+.sidebar-score-label{font-size:13px;color:var(--text3)}
+.sidebar-price-row{display:flex;justify-content:space-between;font-size:14px;padding:10px 0;border-bottom:1px solid var(--border)}
+.sidebar-price-row:last-of-type{border-bottom:none}
+.sidebar-price-label{color:var(--text2)}
+.sidebar-price-val{font-family:var(--mono);font-weight:500}
+.sidebar-cta{display:block;background:var(--accent);color:white;text-align:center;padding:14px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;margin-top:20px;transition:background 0.15s}
+.sidebar-cta:hover{background:var(--accent2)}
+.sidebar-disclosure{font-size:11px;color:var(--text3);margin-top:10px;text-align:center}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}
+.footer-brand span{color:var(--accent)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--accent)}
+@media(max-width:768px){.review-layout{grid-template-columns:1fr;padding:40px 20px}.pros-cons{grid-template-columns:1fr}h1{font-size:30px}nav{padding:0 20px}.footer-inner{grid-template-columns:1fr 1fr}}
+
+/* === MOBILE NAV + RESPONSIVE TABLE FIX === */
+.nav-toggle{display:none;order:2;background:none;border:0;font-size:24px;line-height:1;color:var(--text);cursor:pointer;padding:4px 6px}
+@media(max-width:768px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(250,250,248,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 20px 16px;box-shadow:0 8px 24px rgba(0,0,0,0.06);max-height:calc(100vh - 64px);overflow-y:auto}
+  nav.nav-open .nav-links{display:flex}
+  .nav-links>a,.nav-dropdown{padding:12px 2px;border-bottom:1px solid var(--border)}
+  .nav-dropdown{position:static}
+  .nav-dropdown>a::after{display:none}
+  .dropdown-menu{display:none!important}
+  .nav-cta{display:block;text-align:center;background:var(--accent);color:#fff;margin-top:14px;padding:12px;border:0!important;border-radius:6px}
+  .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+  .comparison-wrap{overflow-x:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "name": "DeepSeek V4 Review 2026",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "8.1",
+    "bestRating": "10",
+    "worstRating": "0"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Marcus Veil",
+    "url": "https://aitoolgrade.com/author/marcus-veil.html"
+  },
+  "itemReviewed": {
+    "@type": "SoftwareApplication",
+    "name": "DeepSeek V4",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web, API",
+    "offers": {
+      "@type": "Offer",
+      "price": "0.435",
+      "priceCurrency": "USD",
+      "url": "https://deepseek.com"
+    }
+  },
+  "datePublished": "2026-05-31",
+  "dateModified": "2026-05-31"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolgrade.com"},
+    {"@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://aitoolgrade.com/reviews.html"},
+    {"@type": "ListItem", "position": 3, "name": "AI Coding", "item": "https://aitoolgrade.com/category/coding.html"},
+    {"@type": "ListItem", "position": 4, "name": "DeepSeek V4", "item": "https://aitoolgrade.com/review/deepseek-v4.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<div id="nav-root"></div>
+<script src="../nav.js"></script>
+
+<div class="review-layout">
+  <div class="review-main">
+    <div style="background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 14px 18px; margin-bottom: 28px; display: flex; align-items: flex-start; gap: 12px;">
+      <span style="font-family: var(--mono); font-size: 18px; line-height: 1;">🔍</span>
+      <div>
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 4px;">Research-Based Review</div>
+        <p style="font-family: var(--sans); font-size: 0.88rem; color: var(--text2); line-height: 1.6; margin: 0;">This review is based on documented features, verified pricing, and community sentiment — not hands-on testing. <a href="../how-we-review.html" style="color: var(--accent); text-decoration: none;">See how we research →</a></p>
+      </div>
+    </div>
+    <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="../category/coding.html">AI Coding</a><span>›</span>DeepSeek V4 Review</div>
+    <div class="review-header">
+      <div class="review-tool-row">
+        <div class="review-tool-logo">🐋</div>
+        <div><div class="review-tool-title">DeepSeek V4</div><div class="review-tool-url">deepseek.com</div></div>
+      </div>
+      <h1>DeepSeek V4 Review 2026 — Frontier Coding Benchmarks at 1/30th the Cost</h1>
+      <div class="review-meta-row">
+        <span>📅 May 2026</span>
+        <span>⏱ 12 min read</span>
+        <span>📊 Research-based</span>
+      </div>
+    </div>
+    <div class="verdict-banner">
+      <div class="verdict-score">8.1</div>
+      <div class="verdict-text">
+        <h3>Editor's Verdict: A Genuine Price Floor for Frontier Coding</h3>
+        <p>V4-Pro posts an 80.6% SWE-bench Verified score at $0.435 per million input tokens — comparable coding performance to Claude Opus 4.7 and GPT-5.5 at a fraction of the cost. The constraints are real and specific: it's a developer API rather than a consumer app, V4-Pro is still preview status, and the Chinese-company data-residency question matters for enterprise compliance. For cost-sensitive, high-volume technical workloads, it's the rational evaluation target in 2026.</p>
+      </div>
+    </div>
+    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified May 2026</p>
+
+    <div class="review-body">
+
+      <div style="background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; margin-bottom: 24px;">
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 6px;">Editorial Disclosure</div>
+        <p style="font-family: var(--sans); font-size: 0.88rem; color: var(--text2); line-height: 1.6; margin: 0;">AIToolGrade uses Claude (Anthropic) for content production. Claude Opus 4.7 is a direct competitor to DeepSeek V4-Pro. We have applied our standard research methodology to this review. Benchmark data is vendor-reported and third-party verified where noted.</p>
+      </div>
+
+      <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:16px 20px;margin:0 0 24px 0">
+        <p style="font-size:13px;font-family:'DM Mono',monospace;color:var(--accent);margin-bottom:8px">RELATED REVIEWS</p>
+        <a href="../review/cursor.html" style="font-size:15px;font-weight:600;color:var(--text);display:block;margin-bottom:6px;text-decoration:none">Cursor Review 2026 — The Most Capable AI Code Editor →</a>
+        <a href="../review/github-copilot.html" style="font-size:15px;font-weight:600;color:var(--text);display:block;text-decoration:none">GitHub Copilot Review 2026 — The Default AI Coding Assistant →</a>
+      </div>
+
+      <h2 id="what-is-deepseek-v4">What is DeepSeek V4?</h2>
+      <p>DeepSeek V4 is an open-weight large language model released on April 24, 2026 by DeepSeek, a Chinese AI lab. Under the hood it's a 1.6-trillion-parameter Mixture-of-Experts model that activates roughly 49 billion parameters per token — the architecture that lets it deliver frontier-class output without frontier-class serving costs. It ships in two tiers: V4-Flash, tuned for cost, and V4-Pro, tuned for performance. Both are released under an MIT license, which means the weights are downloadable and the model can be self-hosted with no per-token API fee at all.</p>
+      <p>The headline number is the one that reframes the market. V4-Pro scores 80.6% on SWE-bench Verified — the industry's most trusted real-world coding benchmark — which puts it level with Claude Code and within a point of GPT-5.5. It does that at $0.435 per million input tokens. For context, Claude Opus 4.7 runs about $15 per million input tokens for comparable coding performance. That's roughly a 1/30th cost ratio on the same workload, and after the May 22, 2026 price change it's permanent rather than promotional.</p>
+      <p>What makes V4 a category event rather than just another cheap model is that the cost reduction doesn't come with the usual quality cliff. Cheap models have existed for years; cheap models that match the frontier on a benchmark buyers actually trust have not. DeepSeek paired that with a 1M-token context window, a 384K maximum output, an OpenAI-compatible API, and prompt caching that drives repeated-prompt workloads close to free. For developers and teams running high-volume AI workloads, it's the most consequential cost-reduction option available in 2026 — provided the tradeoffs below fit your situation.</p>
+
+      <!-- toc -->
+<nav aria-label="Table of contents" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 32px 0;">
+  <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 12px;">In this review</div>
+  <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#what-is-deepseek-v4" style="color: var(--accent); text-decoration: none;">What is DeepSeek V4?</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#who-is-it-for" style="color: var(--accent); text-decoration: none;">Who Is It For?</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pros-and-cons" style="color: var(--accent); text-decoration: none;">Pros and Cons</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#score-breakdown" style="color: var(--accent); text-decoration: none;">Score Breakdown</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#benchmarks" style="color: var(--accent); text-decoration: none;">Benchmarks vs Claude and GPT-5.5</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pricing" style="color: var(--accent); text-decoration: none;">Pricing and Cost Comparison</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#key-features" style="color: var(--accent); text-decoration: none;">Key Features</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-chinese-company-question" style="color: var(--accent); text-decoration: none;">The Chinese Company Question</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-bottom-line" style="color: var(--accent); text-decoration: none;">The Bottom Line</a></li>
+  </ol>
+</nav>
+
+      <h2 id="who-is-it-for">Who Is It For?</h2>
+      <p>DeepSeek V4 is squarely a developer tool, and the fit is sharpest where API cost is a primary constraint. If you're running high-volume LLM workloads — code review pipelines, RAG systems, agentic loops, batch inference — the price-performance ratio changes what's economically viable. Workloads that were too expensive to run at frontier quality become routine. Startups and indie developers building AI products get the clearest benefit: frontier coding performance without frontier pricing, which is often the difference between a margin that works and one that doesn't.</p>
+      <p>It also suits teams comfortable with open weights. The MIT license means you can download the model and self-host it, trading API fees for infrastructure cost and control. For organizations with GPU capacity and a reason to keep inference in-house — data sensitivity, latency, or sheer volume — that option is rare among frontier-class models. And for anyone already calling the OpenAI API, the compatibility layer makes V4 a drop-in cost reduction: in most cases, migration is a single endpoint change.</p>
+      <p>It is not for everyone, and the misfits are worth naming plainly. Enterprise teams under strict US or EU data-residency rules face real questions about routing data to a Chinese company's API servers — covered in its own section below. Non-technical users won't find a polished consumer product here; <a href="https://chat.deepseek.com">chat.deepseek.com</a> exists but is secondary to the API. Teams that require SOC 2, HIPAA, or a contractual SLA won't find those on the standard consumer tiers. And because V4-Pro is still labelled preview, production deployments that can't tolerate behavioral drift should either pin a version or wait for general availability. If you need a turnkey IDE assistant rather than an API, <a href="../review/cursor.html">Cursor</a> or <a href="../review/github-copilot.html">GitHub Copilot</a> remain the better starting points.</p>
+
+      <h2 id="pros-and-cons">Pros and Cons</h2>
+      <div class="pros-cons">
+        <div class="pros-box">
+          <h4>What works well</h4>
+          <div class="pro-item">Strongest price-performance ratio available in 2026 — 80.6% SWE-bench at roughly 1/30th the cost of Claude Opus 4.7</div>
+          <div class="pro-item">A 1M-token context window at this price point isn't offered by any frontier competitor — entire codebases in a single call</div>
+          <div class="pro-item">Open-weight MIT license — self-host for zero per-token API cost if you have the infrastructure</div>
+          <div class="pro-item">OpenAI-compatible API — migrating from OpenAI or Anthropic is usually a single endpoint change</div>
+          <div class="pro-item">Prompt caching makes repeated-system-prompt workloads (RAG, agents) nearly free</div>
+          <div class="pro-item">Multiple provider options — DeepSeek API, OpenRouter, Fireworks, DeepInfra, Together.ai — so you're not locked to one vendor</div>
+        </div>
+        <div class="cons-box">
+          <h4>What to watch out for</h4>
+          <div class="con-item">Chinese company — data residency, GDPR, compliance, and geopolitical risk are legitimate concerns that don't apply to OpenAI, Anthropic, or Google</div>
+          <div class="con-item">API-first — no native IDE integration, requires developer setup, not a consumer tool</div>
+          <div class="con-item">No enterprise SLA or compliance certifications (SOC 2, HIPAA) on the consumer API</div>
+          <div class="con-item">V4-Pro is preview status — behavior may shift before GA; pin the version in production</div>
+          <div class="con-item">Community/open-source support model — no dedicated enterprise support on standard tiers</div>
+          <div class="con-item">Self-hosting the full 1.6T-parameter model requires substantial GPU infrastructure</div>
+        </div>
+      </div>
+
+      <h2 id="score-breakdown">Score Breakdown</h2>
+      <div class="score-breakdown">
+        <h4>Category scores — AIToolGrade methodology</h4>
+        <div class="score-row"><span class="score-name">Ease of Use</span><div class="score-bar-track"><div class="score-bar-fill" style="width:70%"></div></div><span class="score-val">7.0</span></div>
+        <div class="score-row"><span class="score-name">Features</span><div class="score-bar-track"><div class="score-bar-fill" style="width:90%"></div></div><span class="score-val">9.0</span></div>
+        <div class="score-row"><span class="score-name">Value for Money</span><div class="score-bar-track"><div class="score-bar-fill" style="width:100%"></div></div><span class="score-val">10</span></div>
+        <div class="score-row"><span class="score-name">Integration</span><div class="score-bar-track"><div class="score-bar-fill" style="width:80%"></div></div><span class="score-val">8.0</span></div>
+        <div class="score-row"><span class="score-name">Support &amp; Docs</span><div class="score-bar-track"><div class="score-bar-fill" style="width:65%"></div></div><span class="score-val">6.5</span></div>
+      </div>
+      <p>The shape is lopsided on purpose. Value for Money is a clean 10 — nothing else on the market delivers this benchmark tier at this price. Support &amp; Documentation sits at 6.5 for equally honest reasons: docs are improving but still maturing, there's no enterprise SLA on the consumer API, and support runs through GitHub and community channels rather than a dedicated desk. The 8.1 overall is a model that is exceptional on the axes developers optimize for and weakest exactly where risk-averse enterprises look first.</p>
+
+      <h2 id="benchmarks">Benchmarks vs Claude and GPT-5.5</h2>
+      <p>Benchmark figures below are vendor-reported and, where noted, third-party verified. SWE-bench Verified is the number that carries the most weight here because it measures real GitHub issue resolution rather than synthetic puzzles — and it's the one where V4-Pro lands in a statistical tie with the frontier.</p>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Benchmark</th>
+              <th>DeepSeek V4-Pro</th>
+              <th>Claude Opus 4.7</th>
+              <th>GPT-5.5</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>SWE-bench Verified</td><td>80.6%</td><td>80.8%</td><td>~80%</td></tr>
+            <tr><td>LiveCodeBench</td><td>93.5</td><td>—</td><td>—</td></tr>
+            <tr><td>MMLU-Pro</td><td>Strong</td><td>Strong</td><td>Strong</td></tr>
+            <tr><td>Context window</td><td>1M tokens</td><td>200K tokens</td><td>128K tokens</td></tr>
+            <tr><td>Input price / M</td><td>$0.435</td><td>$15.00</td><td>~$15.00</td></tr>
+            <tr><td>Cost advantage</td><td>—</td><td>~34x cheaper</td><td>~34x cheaper</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Read the table as a single trade. On coding capability the three models are effectively indistinguishable — a 0.2-point SWE-bench gap is noise, not a moat. On context window V4-Pro carries a 5x-to-8x advantage. On price it's an order of magnitude and then some below both Western frontier models. The question a technical buyer faces isn't "is it as good?" — on the benchmark that matters for coding, it essentially is — but "do the non-benchmark constraints (preview status, data residency, support model) outweigh a roughly 34x cost reduction?" For a lot of workloads, they don't.</p>
+
+      <h2 id="pricing">Pricing and Cost Comparison</h2>
+      <p>Pricing is per million tokens and verified May 2026. The critical context: the 75% discount that brought these numbers down is permanent as of May 22, 2026 — it is no longer a promotional rate that can quietly expire. DeepSeek has also signaled that prices may fall further in H2 2026 once Huawei Ascend 950 chips become available, so this is a floor that may still be moving down.</p>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr><th>Tier</th><th>Input / M</th><th>Output / M</th><th>Cache hit / M</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>V4-Flash</td><td>$0.14</td><td>$0.28</td><td>$0.0028</td></tr>
+            <tr><td>V4-Pro</td><td>$0.435</td><td>$0.87</td><td>$0.003625</td></tr>
+            <tr><td>Self-hosted (open weights)</td><td colspan="3">Infrastructure cost only — no per-token fee. Requires significant GPU compute for the full 1.6T-parameter model.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>V4-Pro carries a 1M-token context and a 384K maximum output, so long-context jobs don't fragment into multiple calls or get truncated mid-generation. The cache-hit price is the detail that quietly matters most for production: at $0.003625 per million tokens, a repeated system prompt — the backbone of most RAG and agent setups — costs effectively nothing on subsequent calls. The numbers below translate the per-token rates into the workloads teams actually run.</p>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr><th>Workload</th><th>DeepSeek V4-Pro</th><th>Claude Opus 4.7</th><th>GPT-5.5</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1B tokens / month</td><td>~$522</td><td>~$9,000</td><td>~$10,000</td></tr>
+            <tr><td>1K code reviews / day</td><td>~$18 / month</td><td>~$350 / month</td><td>~$350 / month</td></tr>
+            <tr><td>Heavy RAG (cache hits)</td><td>&lt;$50 / month</td><td>$500+ / month</td><td>$500+ / month</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="background: var(--accent-dim); border: 1px solid rgba(232,93,38,0.15); border-radius: 10px; padding: 16px 20px; margin-top: 16px;">
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 6px;">What Changed</div>
+        <p style="font-family: var(--sans); font-size: 0.9rem; color: var(--text); line-height: 1.65; margin: 0;">DeepSeek V4 released April 24, 2026. The 75% price discount was made permanent on May 22, 2026 (previously a promotional rate). V4-Pro now runs $0.435/M input — roughly 17-19x cheaper than Claude Opus 4.7 at comparable benchmark performance. The prior reference price was $1.74/$3.48 per million input/output.</p>
+      </div>
+
+      <h2 id="key-features">Key Features</h2>
+
+      <p><strong>Two tiers — Flash and Pro.</strong> V4-Flash is cost-optimized at $0.14/M input for high-throughput, latency-sensitive, or budget-bound work. V4-Pro is performance-optimized at $0.435/M input and is the tier that posts the 80.6% SWE-bench score. The split lets you route cheap-and-fast versus best-quality on a per-call basis rather than committing to one model.</p>
+
+      <p><strong>1M-token context window.</strong> A single call can hold an entire codebase, a long document set, or full system context. For coding agents and RAG, the practical effect is fewer chunking compromises — you can give the model the whole picture instead of engineering around a small window.</p>
+
+      <p><strong>384K maximum output.</strong> Long generations — full file rewrites, large structured documents, bulk transformations — complete without the mid-output truncation that smaller output ceilings force you to stitch around.</p>
+
+      <p><strong>Hybrid reasoning modes.</strong> V4 offers standard and extended reasoning. You spend compute on deliberate, multi-step reasoning when the task needs it and run lean when it doesn't, rather than paying the reasoning tax on every call.</p>
+
+      <p><strong>OpenAI-compatible API.</strong> The API mirrors the OpenAI surface, so existing SDKs and tooling generally work with a changed base URL and key. This is the feature that makes "try it" cheap: migrating an existing pipeline is usually a single endpoint change, not a rewrite.</p>
+
+      <p><strong>Open weights, MIT license.</strong> The weights are downloadable and the license is permissive. You can self-host with no per-token fee, keep inference inside your own environment, or fine-tune — options that closed frontier models simply don't offer.</p>
+
+      <p><strong>Prompt caching.</strong> Cache hits are billed at $0.003625/M on Pro. For any workload with a stable system prompt — agents, RAG, repeated templates — the recurring cost of that prompt drops to near zero after the first call.</p>
+
+      <p><strong>Function calling and JSON mode.</strong> Structured outputs and tool calling are supported, which is what makes the model production-ready for agentic workflows rather than just chat. Reliable JSON and function calls are the plumbing real applications depend on.</p>
+
+      <p><strong>Available through 5+ providers.</strong> Beyond DeepSeek's own API, V4 is served by OpenRouter, Fireworks, DeepInfra, Together.ai, and SiliconFlow. Multiple providers mean redundancy, price competition, and — for teams wary of routing through DeepSeek's own servers — alternative hosting paths.</p>
+
+      <div class="affiliate-box">
+        <h3>Evaluate DeepSeek V4</h3>
+        <p>Open-weight, OpenAI-compatible, and priced from $0.14/M input. Self-host or call it through any major provider.</p>
+        <a href="https://deepseek.com" class="affiliate-btn">Visit DeepSeek →</a>
+        <div class="affiliate-note">We may earn a commission at no extra cost to you</div>
+      </div>
+
+      <h2 id="the-chinese-company-question">The Chinese Company Question</h2>
+      <p>This is the part of the evaluation that has nothing to do with the benchmark and everything to do with whether you can actually deploy it. DeepSeek is a Chinese AI lab, and for US and EU organizations that introduces a set of concerns that don't exist for OpenAI, Anthropic, or Google: where does your data physically go, who can compel access to it, and does routing prompts to a Chinese company's API servers create a GDPR, contractual, or geopolitical exposure your legal and security teams won't sign off on.</p>
+      <p>These are legitimate questions, not a reason to dismiss the model. The distinction matters. A regulated enterprise handling customer PII under EU data-residency rules has a genuine blocker on the hosted API. An indie developer running a side project, or a team processing non-sensitive internal data, faces a much lower bar. And the open-weight release changes the calculus entirely for those with infrastructure: self-hosting keeps every token inside your own environment, which neutralizes the data-routing concern at the cost of running the hardware yourself. Several of the third-party providers also offer hosting outside China, which is a middle path worth investigating if the model fits but the default API endpoint doesn't.</p>
+      <p>The honest framing: treat the data-residency question as a hard gate to clear before the cost savings matter, not as a footnote. If your compliance posture rules out a Chinese-hosted API and you can't self-host, the price advantage is irrelevant — the model isn't deployable for you. If it doesn't, or if you can route around it, then the cost case stands on its own.</p>
+
+      <div class="users-saying" style="margin:48px 0;">
+        <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Community Sentiment</div>
+        <h2 id="what-users-are-saying" style="font-family:var(--display);font-size:1.75rem;font-weight:800;color:var(--text);margin:0 0 8px 0;">What Users Are Saying</h2>
+        <p style="font-family:var(--sans);font-size:0.95rem;color:var(--text2);margin:0 0 32px 0;line-height:1.6;">We track discussion across Hacker News, r/MachineLearning, r/LocalLLaMA, developer forums, and API review sites to understand how V4 holds up on real workloads — and where the hesitations are.</p>
+
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:32px;display:flex;gap:40px;flex-wrap:wrap;">
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--accent)">80.6%</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">SWE-bench Verified</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">~34x</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Cheaper / Token</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">1M</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Token Context</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">MIT</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Open License</div></div>
+        </div>
+
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:#22a05a;">●</span> What developers consistently praise</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"At $0.435/M input, V4-Pro delivers 80.6% SWE-bench at roughly 1/30th the cost of Claude Opus 4.7. For any team running serious coding workloads at volume, this forces a cost conversation."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Developer community analysis · May 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"The OpenAI-compatible API means migration is usually a single endpoint change. We switched a RAG pipeline in 20 minutes and cut our monthly API bill by 85%."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">r/MachineLearning · May 2026</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:var(--accent);">●</span> Common reservations</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"The Chinese company question is real for enterprise. Not a reason to dismiss the model — but data residency, GDPR, and geopolitical risk are legitimate concerns that don't apply to OpenAI or Anthropic."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Hacker News · April 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"V4-Pro is labelled preview. The behavior may shift before GA. We pin the version in production and budget a re-validation pass with every DeepSeek update — that overhead is worth tracking."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Developer review · May 2026</div>
+          </div>
+        </div>
+
+        <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.15);border-radius:12px;padding:20px 24px;">
+          <div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:8px;">AIToolGrade Take</div>
+          <p style="font-family:var(--sans);font-size:0.93rem;color:var(--text);line-height:1.7;margin:0;">DeepSeek V4 is the most significant cost-disruption to the frontier AI market in 2026. V4-Pro's 80.6% SWE-bench score at $0.435/M input — permanently confirmed May 22, 2026 — creates a pricing floor that OpenAI and Anthropic cannot easily match without restructuring their own economics. For developers and technical teams running high-volume workloads, the case for evaluating it is straightforward: comparable benchmark performance at 17-34x lower cost, open-weight with a self-hosting option, and a drop-in OpenAI-compatible API. The honest constraints are equally clear: Chinese-company data-residency concerns matter for enterprise compliance, preview status requires version pinning in production, and this is a developer tool, not a consumer product. If your primary use case is cost-optimized API access for coding, RAG, or agentic workflows, DeepSeek V4-Pro is the rational evaluation target in 2026.</p>
+        </div>
+      </div>
+
+      <h2 id="the-bottom-line">The Bottom Line</h2>
+      <p>DeepSeek V4 is the clearest evidence yet that frontier coding capability is decoupling from frontier pricing. V4-Pro matches Claude Opus 4.7 and GPT-5.5 on the SWE-bench score that technical buyers actually trust, carries a context window several times larger, and does it at roughly a thirtieth of the per-token cost. The May 22, 2026 decision to make the discount permanent turned a promotional curiosity into a structural pricing floor — one that pressures every closed-model provider's economics, and one DeepSeek says may drop further later in the year. On pure price-performance, nothing else in 2026 is in the same conversation.</p>
+      <p>The reasons to hesitate are real, and none of them are about the model's quality. It's a developer API, not a consumer app — there's no native IDE plugin and setup assumes engineering fluency. V4-Pro is still preview, so production users need to pin versions and budget re-validation. There's no enterprise SLA or compliance certification on the consumer tiers. And the data-residency question for a Chinese-hosted API is a genuine gate for regulated organizations — clear it before the savings mean anything, because if you can't, they don't.</p>
+      <p>So the recommendation is conditional and specific. <strong>Best for:</strong> developers and teams running high-volume coding, RAG, or agentic workloads where API cost is a primary constraint; startups needing frontier performance without frontier pricing; and organizations comfortable with open weights and self-hosting. <strong>Not for:</strong> teams with strict US/EU data-residency requirements that can't self-host, non-technical users wanting a polished chat product, or production deployments that need SOC 2, HIPAA, or guaranteed API stability today. If you're optimizing cost on technical workloads and can clear the compliance gate, DeepSeek V4-Pro is the model to evaluate first. If you want a turnkey assistant instead of an API, <a href="../review/cursor.html">Cursor</a>, <a href="../review/github-copilot.html">GitHub Copilot</a>, and <a href="../review/google-antigravity.html">Google Antigravity</a> remain the more practical picks. This score reflects the May 2026 state of a fast-moving release; we'll revisit it as V4-Pro moves toward general availability.</p>
+    </div>
+  </div>
+
+  <div class="review-sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-title">Overall score</div>
+      <div class="sidebar-score">
+        <div class="sidebar-score-num">8.1</div>
+        <div>
+          <div style="color:var(--accent);font-size:18px;letter-spacing:-1px">★★★★</div>
+          <div class="sidebar-score-label">out of 10</div>
+        </div>
+      </div>
+      <div class="sidebar-title" style="margin-top:16px">Pricing (per M tokens)</div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">V4-Flash input</span><span class="sidebar-price-val">$0.14</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">V4-Pro input</span><span class="sidebar-price-val">$0.435</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">V4-Pro output</span><span class="sidebar-price-val">$0.87</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Cache hit</span><span class="sidebar-price-val">$0.003625</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">License</span><span class="sidebar-price-val">MIT (open)</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Self-host</span><span class="sidebar-price-val">✓ Yes</span></div>
+      <a href="https://deepseek.com" class="sidebar-cta">Visit DeepSeek →</a>
+      <div class="sidebar-disclosure">We may earn a commission</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">AI Tool<span>Grade</span></div><p class="footer-desc">Independent reviews and comparisons of AI tools. Researched, fact-checked, and independently rated.</p></div>
+    <div><div class="footer-col-title">Reviews</div><div class="footer-links"><a href="../category/writing.html">AI Writing</a><a href="../category/coding.html">AI Coding</a><a href="../category/image.html">AI Image</a><a href="../category/automation.html">Automation</a><a href="../category/productivity.html">Productivity</a></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="../about.html">About</a><a href="../how-we-review.html">How we review</a><a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
+    <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+</footer>
+</body></html>

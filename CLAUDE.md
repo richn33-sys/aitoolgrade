@@ -46,6 +46,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── lovable.html             (AI Coding, 8.1)
 │   ├── google-antigravity.html  (AI Coding, 7.5)
 │   ├── deepseek-v4.html         (AI Coding, 8.1)
+│   ├── claude-code.html         (AI Coding, 8.0)
 │   ├── midjourney.html          (AI Image, 7.8)
 │   ├── adobe-firefly.html       (AI Image, 8.4)
 │   ├── leonardo-ai.html         (AI Image, 8.7)
@@ -84,18 +85,18 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ```
 > Root also has: about.html, resources.html, how-we-review.html, contribute.html, contact.html,
 > advertise.html, and legal pages (see "Missing File Structure Details"). author/ holds
-> marcus-veil.html and priya-nolan.html. Full HTML page count: 60.
+> marcus-veil.html and priya-nolan.html. Full HTML page count: 61.
 
 ## Category Review Counts (homepage displays these — keep in sync)
 - AI Writing: 4 (Jasper, Copy.ai, Writesonic, Grammarly)
-- AI Coding: 8 (Cursor, GitHub Copilot, Windsurf, Bolt.new, Replit, Lovable, Google Antigravity, DeepSeek V4)
+- AI Coding: 9 (Cursor, GitHub Copilot, Windsurf, Bolt.new, Replit, Lovable, Google Antigravity, DeepSeek V4, Claude Code)
 - AI Image: 3 (Midjourney, Adobe Firefly, Leonardo AI)
 - Automation: 3 (Zapier, n8n, Microsoft Agent 365)
 - AI Video: 3 (Runway, Synthesia, Descript)
 - Productivity: 5 (ChatGPT, Notion AI, Perplexity, Claude Cowork, Perplexity Computer)
 
-Total: 26 reviews. Homepage `cat-count` values in index.html match these (AI Coding is 8 as of
-May 31, 2026 after adding DeepSeek V4; Productivity is 5 after Perplexity Computer; Automation is 3).
+Total: 27 reviews. Homepage `cat-count` values in index.html match these (AI Coding is 9 as of
+June 1, 2026 after adding Claude Code; Productivity is 5 after Perplexity Computer; Automation is 3).
 
 When adding a new review, update the count in `index.html` using this script pattern:
 ```bash
@@ -165,7 +166,7 @@ As a final step in any writing task, humanize the text so it does not feel AI-ge
 
 ## Nav Structure (current — defined once in nav.js; see Site Architecture)
 > As of May 30, 2026 the nav is rendered from `nav.js` (single source of truth). Do NOT
-> edit nav markup per-page — edit `nav.js` only and it updates all 60 pages. The structure
+> edit nav markup per-page — edit `nav.js` only and it updates all 61 pages. The structure
 > below documents what nav.js renders.
 ```
 Categories ▾         Reviews ▾            Compare    Blog    Get Updates
@@ -177,6 +178,7 @@ Categories ▾         Reviews ▾            Compare    Blog    Get Updates
   Productivity         GitHub Copilot
                        Windsurf
                        Bolt.new
+                       Claude Code
                        DeepSeek V4
                        Zapier
                        n8n
@@ -221,7 +223,7 @@ directly in page content (breadcrumbs, in-body links, footer links):
 ## Adding a New Review Page
 1. Use an existing review page as template (e.g. `review/cursor.html`)
 2. Update: title, meta description, tool name, score, pros/cons, affiliate link
-3. Add to nav dropdown — edit `nav.js` only (one line; updates all 60 pages)
+3. Add to nav dropdown — edit `nav.js` only (one line; updates all 61 pages)
 4. Add a card to the relevant `category/` page
 5. Add a card to `reviews.html`
 6. Add a row to `compare.html`
@@ -231,11 +233,11 @@ directly in page content (breadcrumbs, in-body links, footer links):
 
 ## Updating Nav (nav.js — single source of truth)
 > Superseded May 30, 2026. The old per-page Python find-and-replace pattern is no longer used —
-> all 60 pages now load nav markup from `nav.js`, so there is no per-page nav HTML to rewrite.
+> all 61 pages now load nav markup from `nav.js`, so there is no per-page nav HTML to rewrite.
 
 To change the nav:
 1. Edit `nav.js` (project root) only — add/remove a review or category entry (one line).
-2. The change propagates to all 60 pages automatically; no per-page edits.
+2. The change propagates to all 61 pages automatically; no per-page edits.
 3. Test via an HTTP server (depth detection is server-relative — `file://` will not resolve paths correctly).
 4. Commit, push, and SSH deploy as usual.
 
@@ -634,6 +636,7 @@ Next content priorities (from May 24, 2026 session):
 - (none — both May 25 brief review items now built; see Completed below)
 
 ### Completed
+- Claude Code review ✅ (June 1, 2026) — AI Coding, 8.0, Anthropic's coding agent (1M context, Opus 4.7 87.6% SWE-bench, Agent Teams). Carries a prominent conflict-of-interest disclosure: AIToolGrade is built and maintained with Claude Code — the most significant COI on the site, placed immediately after the methodology callout, before the score. Score deliberately conservative (community evidence supports 8.5–9.0).
 - DeepSeek V4 review ✅ (May 31, 2026) — AI Coding, 8.1, open-weight cost-disruptor
 - Perplexity Computer review ✅ (May 31, 2026) — Productivity, 7.4, multi-agent / Cowork competitor
 - "ChatGPT Pro $100 vs $200" blog post ✅ (May 2026)
@@ -837,14 +840,14 @@ Schedule: Every Monday 8am via ~/Library/LaunchAgents/com.aitoolgrade.research.p
 
 ### Nav — single source of truth (implemented May 30, 2026)
 File: nav.js (project root)
-All 60 HTML pages reference nav.js — zero hardcoded nav blocks remain.
+All 61 HTML pages reference nav.js — zero hardcoded nav blocks remain.
 To add a new review to nav: edit nav.js only — one line, updates all pages.
 To add a new category: edit nav.js only.
 4,292 lines of duplicated nav HTML removed.
 Note: depth detection is server-relative — test via HTTP server not file://
 
 ### Mobile nav
-Hamburger menu implemented May 30, 2026 — all 60 pages.
+Hamburger menu implemented May 30, 2026 — all 61 pages.
 Toggle logic embedded in nav.js (not per-file inline scripts).
 
 ### Table of Contents
@@ -861,7 +864,7 @@ Update community sentiment quotes when research agent briefs surface significant
 
 ### Nav
 Standardized across all pages May 2026, then converted to a single source of truth (`nav.js`)
-May 30, 2026 — now rendered from `nav.js` on all 60 pages (see Site Architecture). No per-page
+May 30, 2026 — now rendered from `nav.js` on all 61 pages (see Site Architecture). No per-page
 nav markup remains.
 Dropdown hover fix applied May 2026 — uses .nav-dropdown::after pseudo-element bridge (now in nav.js).
 When adding new reviews: edit `nav.js` only (one line); depth/relative paths are handled
@@ -891,7 +894,8 @@ Rules:
 - Run sitemap audit whenever new reviews or blog posts are added
 - Submit updated sitemap to Google Search Console after significant additions
 
-Current page count: 60 URLs (as of May 31, 2026) — one per HTML page.
+Current page count: 61 URLs (as of June 1, 2026) — one per HTML page.
+(June 1, 2026: added `review/claude-code.html`.)
 (May 31, 2026: added `review/deepseek-v4.html`.)
 (May 31, 2026: added `review/perplexity-computer.html`.)
 (May 30, 2026: added the previously-missing `blog/best-ai-agents-non-developers-2026.html` entry.)
@@ -904,7 +908,7 @@ Current page count: 60 URLs (as of May 31, 2026) — one per HTML page.
 - Sitemap uses https://aitoolgrade.com/ not /index.html
 
 ### Canonical tags
-- All pages audited and canonical tags verified/added May 2026 — coverage now 60/60 pages (May 31, 2026)
+- All pages audited and canonical tags verified/added May 2026 — coverage now 61/61 pages (June 1, 2026)
 - Format: <link rel="canonical" href="https://aitoolgrade.com/[path]" />
 - blog/index.html canonical: https://aitoolgrade.com/blog/
 

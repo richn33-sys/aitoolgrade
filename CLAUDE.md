@@ -85,7 +85,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ```
 > Root also has: about.html, resources.html, how-we-review.html, contribute.html, contact.html,
 > advertise.html, and legal pages (see "Missing File Structure Details"). author/ holds
-> marcus-veil.html and priya-nolan.html. Full HTML page count: 61.
+> marcus-veil.html and priya-nolan.html. Full HTML page count: 62.
 
 ## Category Review Counts (homepage displays these — keep in sync)
 - AI Writing: 4 (Jasper, Copy.ai, Writesonic, Grammarly)
@@ -630,10 +630,13 @@ Next content priorities (from May 24, 2026 session):
 - Monitor CTR improvement on Bolt.new and ChatGPT vs Claude
 - Next rewrite candidates: identify from next Search Console export
 
-## Content Queue (updated May 29, 2026 session)
+## Content Queue (updated June 2, 2026 session)
 
-### Remaining queue (confirmed current from May 25 brief)
-- (none — both May 25 brief review items now built; see Completed below)
+### Remaining queue
+- HeyGen review — HIGH
+- NotebookLM review — HIGH
+- Kimi Code K2.6 review — MEDIUM
+- "Best Free AI Tools for Students 2026" blog post — MEDIUM
 
 ### Completed
 - "Claude Code vs Cursor vs GitHub Copilot 2026" blog post ✅ (June 2, 2026) — Comparison, Marcus Veil. Leads with the 46% / 19% / 9% developer love-rating stat. Three-scenario head-to-head, full comparison table, team-pricing reality check ($190 / $400 / $1,250 for 10 devs), and a "use two tools" (Cursor + Claude Code) conclusion. Carries the COI yellow box near the top + editorial disclosure at the bottom (AIToolGrade uses Claude Code; scored conservatively at 8.0).
@@ -651,6 +654,12 @@ Next content priorities (from May 24, 2026 session):
 - ChatGPT, Cursor, Grammarly, Perplexity, Jasper, Notion AI pricing all updated ✅
 
 ## Search Console Optimization
+
+### June 2, 2026 — New comparison post
+blog/claude-code-vs-cursor-vs-github-copilot-2026.html published
+Target: "claude code vs cursor vs github copilot 2026"
+Author: Marcus Veil
+COI disclosure included — AIToolGrade uses Claude Code
 
 ### Last audit: May 24, 2026
 Data source: Google Search Console — 3-month performance report

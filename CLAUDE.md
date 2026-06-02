@@ -636,6 +636,7 @@ Next content priorities (from May 24, 2026 session):
 - (none — both May 25 brief review items now built; see Completed below)
 
 ### Completed
+- "Claude Code vs Cursor vs GitHub Copilot 2026" blog post ✅ (June 2, 2026) — Comparison, Marcus Veil. Leads with the 46% / 19% / 9% developer love-rating stat. Three-scenario head-to-head, full comparison table, team-pricing reality check ($190 / $400 / $1,250 for 10 devs), and a "use two tools" (Cursor + Claude Code) conclusion. Carries the COI yellow box near the top + editorial disclosure at the bottom (AIToolGrade uses Claude Code; scored conservatively at 8.0).
 - Claude Code review ✅ (June 1, 2026) — AI Coding, 8.0, Anthropic's coding agent (1M context, Opus 4.7 87.6% SWE-bench, Agent Teams). Carries a prominent conflict-of-interest disclosure: AIToolGrade is built and maintained with Claude Code — the most significant COI on the site, placed immediately after the methodology callout, before the score. Score deliberately conservative (community evidence supports 8.5–9.0).
 - DeepSeek V4 review ✅ (May 31, 2026) — AI Coding, 8.1, open-weight cost-disruptor
 - Perplexity Computer review ✅ (May 31, 2026) — Productivity, 7.4, multi-agent / Cowork competitor
@@ -787,7 +788,7 @@ Affiliate link Claude Code prompt: ready to run when URLs approved — located i
 
 ## Blog Posts Published
 
-_12 blog posts deployed in `blog/` (excluding index.html). Descript and Lovable are **review**
+_13 blog posts deployed in `blog/` (excluding index.html). Descript and Lovable are **review**
 pages (`review/`), not blog posts — they are tracked in the File Structure review list, not here._
 
 | Post | Author | Date | Target Keyword |
@@ -804,6 +805,7 @@ pages (`review/`), not blog posts — they are tracked in the File Structure rev
 | Best AI App Builders 2026: Lovable vs Bolt vs Replit | Marcus Veil | May 2026 | best ai app builders 2026 |
 | Best AI Coding Agents 2026 | Marcus Veil | May 2026 | best ai coding agents 2026 |
 | ChatGPT Pro $100 vs $200 | Marcus Veil | May 2026 | chatgpt pro $100 vs $200 |
+| Claude Code vs Cursor vs GitHub Copilot 2026 | Marcus Veil | June 2026 | claude code vs cursor vs github copilot 2026 |
 
 ## Research Agent
 
@@ -894,7 +896,8 @@ Rules:
 - Run sitemap audit whenever new reviews or blog posts are added
 - Submit updated sitemap to Google Search Console after significant additions
 
-Current page count: 61 URLs (as of June 1, 2026) — one per HTML page.
+Current page count: 62 URLs (as of June 2, 2026) — one per HTML page.
+(June 2, 2026: added `blog/claude-code-vs-cursor-vs-github-copilot-2026.html`.)
 (June 1, 2026: added `review/claude-code.html`.)
 (May 31, 2026: added `review/deepseek-v4.html`.)
 (May 31, 2026: added `review/perplexity-computer.html`.)

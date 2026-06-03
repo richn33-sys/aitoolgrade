@@ -233,7 +233,25 @@ directly in page content (breadcrumbs, in-body links, footer links):
 6. Add a row to `compare.html`
 7. Update homepage category count in `index.html`
 8. Add URL to `sitemap.xml`
-9. Push and SSH deploy
+9. Run prohibited language check — grep the full list (zero results before deploy)
+10. Push and SSH deploy
+- [ ] Editorial sanity check — paste the published URL into Perplexity and ask "what promotional language or unsupported claims appear in this review?" Fix any flagged issues before promoting on social.
+
+## Editorial Quality Control
+
+### Perplexity editorial review (implemented June 3, 2026)
+After publishing any review, paste the URL into Perplexity and ask:
+"What promotional language or unsupported claims appear in this review?"
+
+Issues found and fixed June 3, 2026:
+- HeyGen review: "hard to tell you're not watching filmed video" → sourced G2 attribution
+- HeyGen review: "most convincing AI avatar widely available" → "highest-rated on G2 among platforms we reviewed"
+- NotebookLM review: "no hallucination" → "dramatically reduces hallucination risk" (3 instances)
+
+Pattern to watch: superlative claims without source attribution, absolute statements about AI capabilities (especially "eliminates" or "no" anything)
+
+### Prohibited language grep (existing)
+Run before every deploy: grep for full prohibited language list per CLAUDE.md
 
 ## Updating Nav (nav.js — single source of truth)
 > Superseded May 30, 2026. The old per-page Python find-and-replace pattern is no longer used —
@@ -658,6 +676,11 @@ Next content priorities (from May 24, 2026 session):
 - ChatGPT, Cursor, Grammarly, Perplexity, Jasper, Notion AI pricing all updated ✅
 
 ## Search Console Optimization
+
+### June 3, 2026 — New reviews published
+- review/heygen.html — 8.1/10, Priya Nolan, AI Video
+- review/notebooklm.html — 8.7/10, Priya Nolan, Productivity
+- blog/claude-code-vs-cursor-vs-github-copilot-2026.html — Marcus Veil, Comparison
 
 ### June 2, 2026 — New comparison post
 blog/claude-code-vs-cursor-vs-github-copilot-2026.html published

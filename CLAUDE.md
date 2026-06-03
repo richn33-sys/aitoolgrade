@@ -33,7 +33,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ├── robots.txt
 ├── sitemap.xml          ← submitted to Google Search Console
 ├── nav.js               ← shared nav (single source of truth — see Site Architecture)
-├── review/              ← 24 individual tool review pages
+├── review/              ← 28 individual tool review pages
 │   ├── jasper.html              (AI Writing, 8.2)
 │   ├── copyai.html              (AI Writing, 7.3)
 │   ├── writesonic.html          (AI Writing, 8.0)
@@ -55,6 +55,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── microsoft-agent-365.html (Automation, 7.1)
 │   ├── runway.html              (AI Video, 8.9)
 │   ├── synthesia.html           (AI Video, 8.0)
+│   ├── heygen.html              (AI Video, 8.1)
 │   ├── descript.html            (AI Video, 7.9)
 │   ├── chatgpt.html             (Productivity, 9.0)
 │   ├── notion-ai.html           (Productivity, 8.6)
@@ -85,17 +86,17 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ```
 > Root also has: about.html, resources.html, how-we-review.html, contribute.html, contact.html,
 > advertise.html, and legal pages (see "Missing File Structure Details"). author/ holds
-> marcus-veil.html and priya-nolan.html. Full HTML page count: 62.
+> marcus-veil.html and priya-nolan.html. Full HTML page count: 63.
 
 ## Category Review Counts (homepage displays these — keep in sync)
 - AI Writing: 4 (Jasper, Copy.ai, Writesonic, Grammarly)
 - AI Coding: 9 (Cursor, GitHub Copilot, Windsurf, Bolt.new, Replit, Lovable, Google Antigravity, DeepSeek V4, Claude Code)
 - AI Image: 3 (Midjourney, Adobe Firefly, Leonardo AI)
 - Automation: 3 (Zapier, n8n, Microsoft Agent 365)
-- AI Video: 3 (Runway, Synthesia, Descript)
+- AI Video: 4 (Runway, Synthesia, HeyGen, Descript)
 - Productivity: 5 (ChatGPT, Notion AI, Perplexity, Claude Cowork, Perplexity Computer)
 
-Total: 27 reviews. Homepage `cat-count` values in index.html match these (AI Coding is 9 as of
+Total: 28 reviews. Homepage `cat-count` values in index.html match these (AI Coding is 9 as of
 June 1, 2026 after adding Claude Code; Productivity is 5 after Perplexity Computer; Automation is 3).
 
 When adding a new review, update the count in `index.html` using this script pattern:
@@ -187,6 +188,7 @@ Categories ▾         Reviews ▾            Compare    Blog    Get Updates
                        Leonardo AI
                        Runway
                        Synthesia
+                       HeyGen
                        Notion AI
                        Perplexity AI
                        Perplexity Computer
@@ -633,12 +635,12 @@ Next content priorities (from May 24, 2026 session):
 ## Content Queue (updated June 2, 2026 session)
 
 ### Remaining queue
-- HeyGen review — HIGH
 - NotebookLM review — HIGH
 - Kimi Code K2.6 review — MEDIUM
 - "Best Free AI Tools for Students 2026" blog post — MEDIUM
 
 ### Completed
+- HeyGen review ✅ (June 3, 2026) — AI Video, 8.1, Priya Nolan. Realism leader (Avatar IV), photo-to-avatar, 175+ language translation, used by 40,000+ businesses. Carries the HeyGen vs Synthesia comparison table and an honest treatment of the credit-opacity issue (the #1 community complaint, partially addressed by the Feb 2026 upfront-estimate feature). datePublished/dateModified 2026-06-02.
 - "Claude Code vs Cursor vs GitHub Copilot 2026" blog post ✅ (June 2, 2026) — Comparison, Marcus Veil. Leads with the 46% / 19% / 9% developer love-rating stat. Three-scenario head-to-head, full comparison table, team-pricing reality check ($190 / $400 / $1,250 for 10 devs), and a "use two tools" (Cursor + Claude Code) conclusion. Carries the COI yellow box near the top + editorial disclosure at the bottom (AIToolGrade uses Claude Code; scored conservatively at 8.0).
 - Claude Code review ✅ (June 1, 2026) — AI Coding, 8.0, Anthropic's coding agent (1M context, Opus 4.7 87.6% SWE-bench, Agent Teams). Carries a prominent conflict-of-interest disclosure: AIToolGrade is built and maintained with Claude Code — the most significant COI on the site, placed immediately after the methodology callout, before the score. Score deliberately conservative (community evidence supports 8.5–9.0).
 - DeepSeek V4 review ✅ (May 31, 2026) — AI Coding, 8.1, open-weight cost-disruptor
@@ -905,7 +907,8 @@ Rules:
 - Run sitemap audit whenever new reviews or blog posts are added
 - Submit updated sitemap to Google Search Console after significant additions
 
-Current page count: 62 URLs (as of June 2, 2026) — one per HTML page.
+Current page count: 63 URLs (as of June 3, 2026) — one per HTML page.
+(June 3, 2026: added `review/heygen.html` — AI Video, lastmod 2026-06-02.)
 (June 2, 2026: added `blog/claude-code-vs-cursor-vs-github-copilot-2026.html`.)
 (June 1, 2026: added `review/claude-code.html`.)
 (May 31, 2026: added `review/deepseek-v4.html`.)

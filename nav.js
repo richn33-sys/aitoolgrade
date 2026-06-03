@@ -58,6 +58,7 @@
     '<a href="' + prefix + 'review/leonardo-ai.html">Leonardo AI</a>' +
     '<a href="' + prefix + 'review/runway.html">Runway</a>' +
     '<a href="' + prefix + 'review/synthesia.html">Synthesia</a>' +
+    '<a href="' + prefix + 'review/heygen.html">HeyGen</a>' +
     '<a href="' + prefix + 'review/descript.html">Descript</a>' +
     '<a href="' + prefix + 'review/notion-ai.html">Notion AI</a>' +
     '<a href="' + prefix + 'review/perplexity.html">Perplexity AI</a>' +

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="canonical" href="https://aitoolgrade.com/review/notebooklm.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NotebookLM is Google's source-grounded AI research assistant — answers only from your documents, generates podcast-style Audio Overviews, and ships a genuinely powerful free tier. The honest catch: it can't do open-web research, and the free tier caps daily chats.">
+<title>NotebookLM Review 2026: Audio Overviews, Source-Grounded Answers, and a Free Tier That Delivers | AIToolGrade</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fafaf8;--bg2:#f3f2ee;--bg3:#eceae3;--text:#1a1a18;--text2:#4a4a45;--text3:#8a8a82;--accent:#e85d26;--accent2:#f07d4a;--accent-dim:rgba(232,93,38,0.08);--border:#e2e0d8;--white:#ffffff;--display:'Playfair Display',serif;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:4px}
+.nav-dropdown>a::after{content:"▾";font-size:10px}
+.dropdown-menu{visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.15s ease,visibility 0s linear 0.5s;position:absolute;top:calc(100% + 8px);left:-16px;background:white;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:200;max-height:80vh;overflow-y:auto}
+.dropdown-menu a{display:block;padding:8px 12px;font-size:14px;color:var(--text2);text-decoration:none;border-radius:6px;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--bg2);color:var(--accent)}
+.nav-dropdown:hover .dropdown-menu{visibility:visible;opacity:1;pointer-events:auto;transition:opacity 0.15s ease,visibility 0s}
+.nav-dropdown .dropdown-menu::before{content:"";position:absolute;top:-20px;left:0;right:0;height:20px}
+.nav-dropdown::after{content:"";position:absolute;height:20px;width:calc(100% + 16px);bottom:-20px;left:-16px}
+.review-layout{max-width:1100px;margin:0 auto;padding:60px 40px;display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:start}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:24px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+.review-header{margin-bottom:40px}
+.review-tool-row{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.review-tool-logo{width:56px;height:56px;border-radius:14px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:28px;border:1px solid var(--border)}
+.review-tool-title{font-size:15px;font-weight:600;margin-bottom:2px}
+.review-tool-url{font-size:13px;color:var(--text3);font-family:var(--mono)}
+h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;margin-bottom:16px}
+.review-meta-row{display:flex;align-items:center;gap:20px;font-size:13px;color:var(--text3);margin-bottom:24px}
+.verdict-banner{background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:20px 24px;margin-bottom:40px;display:flex;align-items:center;gap:16px}
+.verdict-score{font-family:var(--display);font-size:48px;font-weight:800;color:var(--accent);line-height:1}
+.verdict-text h3{font-size:15px;font-weight:600;margin-bottom:4px}
+.verdict-text p{font-size:13px;color:var(--text2)}
+.review-body h2{font-family:var(--display);font-size:28px;font-weight:700;margin:40px 0 16px}
+.review-body p{color:var(--text2);margin-bottom:16px}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
+.pros-box,.cons-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px}
+.pros-box{border-top:3px solid #2e7d32}
+.cons-box{border-top:3px solid #c62828}
+.pros-box h4{color:#2e7d32;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.cons-box h4{color:#c62828;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.pro-item,.con-item{font-size:14px;color:var(--text2);margin-bottom:8px;display:flex;gap:8px;align-items:flex-start}
+.pro-item::before{content:'✓';color:#2e7d32;font-weight:600;flex-shrink:0}
+.con-item::before{content:'✗';color:#c62828;font-weight:600;flex-shrink:0}
+.score-breakdown{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;margin:32px 0}
+.score-breakdown h4{font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:20px}
+.score-row{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.score-row:last-child{margin-bottom:0}
+.score-name{font-size:14px;color:var(--text2);width:140px;flex-shrink:0}
+.score-bar-track{flex:1;height:8px;background:var(--bg2);border-radius:100px;overflow:hidden}
+.score-bar-fill{height:100%;border-radius:100px;background:var(--accent)}
+.score-val{font-family:var(--mono);font-size:13px;font-weight:500;width:30px;text-align:right}
+.affiliate-box{background:var(--text);color:white;border-radius:14px;padding:28px;margin:40px 0;text-align:center}
+.affiliate-box h3{font-family:var(--display);font-size:24px;font-weight:700;margin-bottom:8px}
+.affiliate-box p{color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:20px}
+.affiliate-btn{display:inline-block;background:var(--accent);color:white;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;transition:background 0.15s}
+.affiliate-btn:hover{background:var(--accent2)}
+.affiliate-note{font-size:11px;color:rgba(255,255,255,0.4);margin-top:12px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px;position:sticky;top:84px}
+.sidebar-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:16px}
+.sidebar-score{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.sidebar-score-num{font-family:var(--display);font-size:52px;font-weight:800;color:var(--accent);line-height:1}
+.sidebar-score-label{font-size:13px;color:var(--text3)}
+.sidebar-price-row{display:flex;justify-content:space-between;font-size:14px;padding:10px 0;border-bottom:1px solid var(--border)}
+.sidebar-price-row:last-of-type{border-bottom:none}
+.sidebar-price-label{color:var(--text2)}
+.sidebar-price-val{font-family:var(--mono);font-weight:500}
+.sidebar-cta{display:block;background:var(--accent);color:white;text-align:center;padding:14px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;margin-top:20px;transition:background 0.15s}
+.sidebar-cta:hover{background:var(--accent2)}
+.sidebar-disclosure{font-size:11px;color:var(--text3);margin-top:10px;text-align:center}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}
+.footer-brand span{color:var(--accent)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--accent)}
+@media(max-width:768px){.review-layout{grid-template-columns:1fr;padding:40px 20px}.pros-cons{grid-template-columns:1fr}h1{font-size:30px}nav{padding:0 20px}.footer-inner{grid-template-columns:1fr 1fr}}
+
+/* === MOBILE NAV + RESPONSIVE TABLE FIX === */
+.nav-toggle{display:none;order:2;background:none;border:0;font-size:24px;line-height:1;color:var(--text);cursor:pointer;padding:4px 6px}
+@media(max-width:768px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(250,250,248,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 20px 16px;box-shadow:0 8px 24px rgba(0,0,0,0.06);max-height:calc(100vh - 64px);overflow-y:auto}
+  nav.nav-open .nav-links{display:flex}
+  .nav-links>a,.nav-dropdown{padding:12px 2px;border-bottom:1px solid var(--border)}
+  .nav-dropdown{position:static}
+  .nav-dropdown>a::after{display:none}
+  .dropdown-menu{display:none!important}
+  .nav-cta{display:block;text-align:center;background:var(--accent);color:#fff;margin-top:14px;padding:12px;border:0!important;border-radius:6px}
+  .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+  .comparison-wrap{overflow-x:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "name": "NotebookLM Review 2026",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "8.7",
+    "bestRating": "10",
+    "worstRating": "0"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Priya Nolan",
+    "url": "https://aitoolgrade.com/author/priya-nolan.html"
+  },
+  "itemReviewed": {
+    "@type": "SoftwareApplication",
+    "name": "NotebookLM",
+    "applicationCategory": "Productivity Tool",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "url": "https://notebooklm.google.com"
+    }
+  },
+  "datePublished": "2026-06-03",
+  "dateModified": "2026-06-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolgrade.com"},
+    {"@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://aitoolgrade.com/reviews.html"},
+    {"@type": "ListItem", "position": 3, "name": "Productivity", "item": "https://aitoolgrade.com/category/productivity.html"},
+    {"@type": "ListItem", "position": 4, "name": "NotebookLM", "item": "https://aitoolgrade.com/review/notebooklm.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<div id="nav-root"></div>
+<script src="../nav.js"></script>
+<div class="review-layout">
+  <div class="review-main">
+    <div style="background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 14px 18px; margin-bottom: 28px; display: flex; align-items: flex-start; gap: 12px;">
+      <span style="font-family: var(--mono); font-size: 18px; line-height: 1;">🔍</span>
+      <div>
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 4px;">Research-Based Review</div>
+        <p style="font-family: var(--sans); font-size: 0.88rem; color: var(--text2); line-height: 1.6; margin: 0;">This review is based on documented features, verified pricing, and community sentiment — not hands-on testing. <a href="../how-we-review.html" style="color: var(--accent); text-decoration: none;">See how we research →</a></p>
+      </div>
+    </div>
+    <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="../category/productivity.html">Productivity</a><span>›</span>NotebookLM Review</div>
+    <div class="review-header">
+      <div class="review-tool-row">
+        <div class="review-tool-logo">📓</div>
+        <div><div class="review-tool-title">NotebookLM</div><div class="review-tool-url">notebooklm.google.com</div></div>
+      </div>
+      <h1>NotebookLM Review 2026: Audio Overviews, Source-Grounded Answers, and a Free Tier That Delivers</h1>
+      <div class="review-meta-row">
+        <span>📅 Updated June 2026</span>
+        <span>⏱ 11 min read</span>
+        <span>🔍 Research-based review</span>
+      </div>
+    </div>
+    <div class="verdict-banner">
+      <div class="verdict-score">8.7</div>
+      <div class="verdict-text">
+        <h3>Editor's Verdict: Excellent</h3>
+        <p>Google's source-grounded research assistant — it answers only from your documents, turns them into podcast-style Audio Overviews, and ships one of the most capable free tiers in AI. The honest catch: it can't do open-web research, and the free tier caps daily chats.</p>
+      </div>
+    </div>
+    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/priya-nolan.html" style="color:var(--accent)">Priya Nolan</a>, AI Tools Writer &middot; AIToolGrade Editorial Team &middot; Last verified June 2026</p>
+<div class="review-body">
+      <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:16px 20px;margin:24px 0">
+  <p style="font-size:13px;font-family:'DM Mono',monospace;color:var(--accent);margin-bottom:6px">RELATED</p>
+  <a href="../review/perplexity.html" style="font-size:15px;font-weight:600;color:var(--text)">Perplexity AI Review — Cited Answers from the Live Web →</a>
+</div>
+      <h2 id="notebooklm-in-2026-an-ai-that-only-knows-your-sources">NotebookLM in 2026: An AI That Only Knows Your Sources</h2>
+      <p>NotebookLM is Google's AI research assistant, and it works differently from the chatbots most people know. ChatGPT and Perplexity answer from the open web or their training data. NotebookLM answers only from the sources you give it. Upload PDFs, Google Docs, research papers, YouTube videos, or web URLs, and it becomes an expert on exactly those documents — nothing more, nothing less. Every answer cites the specific passage it came from, so there's no guessing about where a claim originated.</p>
+      <p>That single design choice is the whole point. Because the model is boxed into your material, it doesn't invent facts from the wider internet — the hallucination problem that makes people double-check ChatGPT for research mostly disappears. On top of that grounding, Google layered the feature that has made NotebookLM a word-of-mouth favorite: Audio Overviews, a two-host podcast-style discussion of your sources generated in a few minutes. This review covers what the platform does in 2026, why the free tier is so generous, where the source-only model becomes a limitation, and how it compares to Perplexity and ChatGPT — the tools it gets weighed against most. It's based on verified pricing, documented features, and community sentiment across Reddit, G2, and independent testing, not hands-on use.</p>
+
+      <!-- toc -->
+<nav aria-label="Table of contents" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 32px 0;">
+  <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 12px;">In this review</div>
+  <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#notebooklm-in-2026-an-ai-that-only-knows-your-sources" style="color: var(--accent); text-decoration: none;">NotebookLM in 2026: An AI That Only Knows Your Sources</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#what-notebooklm-does-in-2026" style="color: var(--accent); text-decoration: none;">What NotebookLM Does in 2026</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#audio-overviews-the-feature-people-talk-about" style="color: var(--accent); text-decoration: none;">Audio Overviews: The Feature People Talk About</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pros-and-cons" style="color: var(--accent); text-decoration: none;">Pros and Cons</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#performance-scores" style="color: var(--accent); text-decoration: none;">Performance Scores</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#notebooklm-pricing-verified-june-2026" style="color: var(--accent); text-decoration: none;">NotebookLM Pricing (Verified June 2026)</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#notebooklm-vs-perplexity-vs-chatgpt" style="color: var(--accent); text-decoration: none;">NotebookLM vs Perplexity vs ChatGPT</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#who-notebooklm-is-for" style="color: var(--accent); text-decoration: none;">Who NotebookLM Is For</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-bottom-line" style="color: var(--accent); text-decoration: none;">The Bottom Line</a></li>
+  </ol>
+</nav>
+
+      <h2 id="what-notebooklm-does-in-2026">What NotebookLM Does in 2026</h2>
+      <p>NotebookLM has grown well past simple document Q&amp;A. Here's the full feature picture:</p>
+      <ul style="color:var(--text2);margin:0 0 16px 20px;line-height:1.7;">
+        <li><strong>Source-grounded Q&amp;A</strong> — answers questions using only your uploaded sources, with citations to the exact passage. No open-web hallucination. This is the core difference from ChatGPT and Perplexity.</li>
+        <li><strong>Audio Overviews</strong> — a two-AI-host podcast-style discussion of your sources, generated in minutes. A Q1 2026 update added interactive mode, so you can ask follow-up questions during playback.</li>
+        <li><strong>Video Overviews</strong> — narrated video summaries of your material. Cinematic Video Overviews, added in 2026, layer in visual scenes and B-roll.</li>
+        <li><strong>1M token context window</strong> — fits entire research corpora, long books, or complete documentation sets into a single notebook.</li>
+        <li><strong>50 sources per notebook</strong> — PDFs, Google Docs, YouTube videos, web URLs, Google Drive files, and pasted text all live side by side.</li>
+        <li><strong>Deep Research mode</strong> — autonomous, multi-step synthesis across every source in a notebook, added in 2026.</li>
+        <li><strong>Slide generation with editing</strong> — builds presentation decks from your sources; a February 2026 update added prompt-based editing of individual slides, and decks export to PPTX or Google Slides.</li>
+        <li><strong>Comparison tables</strong> — turns qualitative text into structured tables and exports them to Google Sheets.</li>
+        <li><strong>Gemini app integration</strong> — load a notebook as a source into the Gemini app and have questions answered by Gemini's most capable models.</li>
+        <li><strong>Study guides and FAQs</strong> — one-click study materials, briefing docs, and FAQs generated from your source content.</li>
+      </ul>
+      <p>The throughline is comprehension at speed. NotebookLM isn't trying to be a general assistant — it's built to help you understand a specific body of material faster and more reliably than reading every page yourself. Where Perplexity searches the world and ChatGPT writes and codes, NotebookLM goes deep on the documents in front of you and refuses to wander outside them.</p>
+
+      <h2 id="audio-overviews-the-feature-people-talk-about">Audio Overviews: The Feature People Talk About</h2>
+      <p>If one feature explains NotebookLM's word-of-mouth reputation, it's Audio Overviews — and it's worth dwelling on, because the community sentiment around it is the strongest we track in the productivity category. Point it at your sources and it generates a two-host audio discussion that talks through the material conversationally, the way a well-prepared podcast would. A dense stack of lecture notes or research papers becomes a 15-minute conversation you can listen to on a commute.</p>
+      <p>The use case that keeps coming up is studying. Students upload their notes and papers, generate an Audio Overview, and absorb the material passively while doing something else. Researchers use it to get oriented in an unfamiliar corpus before deciding what to read closely. The Q1 2026 interactive mode pushed it further: you can interrupt playback to ask a follow-up question and the hosts respond, which turns a passive listen into something closer to a tutoring session. It's the feature most people mean when they say NotebookLM changed how they work — and it's free.</p>
+
+      <h2 id="pros-and-cons">Pros and Cons</h2>
+      <div class="pros-cons">
+        <div class="pros-box">
+          <h4>What we liked</h4>
+          <div class="pro-item">Free tier is genuinely powerful — 100 notebooks, 1M context</div>
+          <div class="pro-item">Source-grounded answers remove the hallucination worry</div>
+          <div class="pro-item">Audio Overviews are the standout, most-loved feature</div>
+          <div class="pro-item">1M token context at the free tier fits entire books</div>
+          <div class="pro-item">No setup friction — Google login, drag-and-drop, done</div>
+        </div>
+        <div class="cons-box">
+          <h4>What we didn't like</h4>
+          <div class="con-item">Source-only model can't answer beyond what you upload</div>
+          <div class="con-item">Free tier caps at 50 chats/day — power users hit it fast</div>
+          <div class="con-item">Strongest integrations are Google-only (Docs, Drive, YouTube)</div>
+          <div class="con-item">No real-time web access inside notebooks</div>
+          <div class="con-item">Not a writing tool — it summarizes, it doesn't draft</div>
+        </div>
+      </div>
+
+      <h2 id="performance-scores">Performance Scores</h2>
+      <div class="score-breakdown">
+        <h4>Category breakdown</h4>
+        <div class="score-row"><span class="score-name">Ease of Use</span><div class="score-bar-track"><div class="score-bar-fill" style="width:95%"></div></div><span class="score-val">9.5</span></div>
+        <div class="score-row"><span class="score-name">Features</span><div class="score-bar-track"><div class="score-bar-fill" style="width:90%"></div></div><span class="score-val">9.0</span></div>
+        <div class="score-row"><span class="score-name">Value for Money</span><div class="score-bar-track"><div class="score-bar-fill" style="width:100%"></div></div><span class="score-val">10</span></div>
+        <div class="score-row"><span class="score-name">Integration</span><div class="score-bar-track"><div class="score-bar-fill" style="width:75%"></div></div><span class="score-val">7.5</span></div>
+        <div class="score-row"><span class="score-name">Support &amp; Documentation</span><div class="score-bar-track"><div class="score-bar-fill" style="width:70%"></div></div><span class="score-val">7.0</span></div>
+      </div>
+      <p><strong>Ease of Use (9.5/10)</strong> — there's no setup at all: sign in with a free Google account, drag in your sources, and they upload in seconds; Audio Overviews generate in a single click. <strong>Features (9/10)</strong> — source-grounded Q&amp;A, Audio and Video Overviews, slide generation with editing, comparison tables, Deep Research, a 1M token context, and 50 sources per notebook. <strong>Value for Money (10/10)</strong> — the free Standard tier covers most real use cases, and Pro at $19.99/month (via Google AI Pro) is strong value for heavy users. <strong>Integration (7.5/10)</strong> — deep ties to Google Docs, Drive, and YouTube plus Gemini app integration, but little beyond the Google ecosystem. <strong>Support &amp; Documentation (7/10)</strong> — Google's documentation is solid, but there's no dedicated support channel for free users; enterprise support comes with Workspace plans.</p>
+
+      <h2 id="notebooklm-pricing-verified-june-2026">NotebookLM Pricing (Verified June 2026)</h2>
+      <p>This is the part that surprises people: the free tier isn't a stripped-down demo. It's most of the product. Here's the current structure:</p>
+      <ul style="color:var(--text2);margin:0 0 16px 20px;line-height:1.7;">
+        <li><strong>Standard — Free ($0):</strong> 100 notebooks, 50 sources per notebook, 50 daily chats, Audio and Video Overviews, and the full 1M token context. No credit card required.</li>
+        <li><strong>Google AI Plus — $7.99/month:</strong> roughly doubles all limits and unlocks NotebookLM Plus features.</li>
+        <li><strong>Google AI Pro — $19.99/month:</strong> full NotebookLM Pro — higher daily limits, priority generation, and 5TB of storage (raised from 2TB in April 2026 at no extra cost).</li>
+        <li><strong>Google AI Ultra — $99.99–$200/month:</strong> maximum limits and watermark-free outputs.</li>
+        <li><strong>Google Workspace (Enterprise) — ~$14/user/month:</strong> organization controls, data governance, and admin features.</li>
+      </ul>
+      <p>The honest read: most people never need to pay. The free tier's 100 notebooks and 1M context cover students, casual researchers, and most knowledge workers comfortably. The reason to upgrade is volume — if you routinely hit the 50-chats-a-day ceiling, Pro removes it. That's a real jump from $0 to $19.99/month, but it buys away the one limit that frustrates intensive users.</p>
+      <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:16px 20px;margin:24px 0">
+        <p style="font-size:13px;font-family:'DM Mono',monospace;color:var(--accent);margin-bottom:6px">WHAT CHANGED</p>
+        <p style="font-size:14px;color:var(--text2);margin:0;">Q1 2026 brought interactive Audio Overviews — you can ask follow-up questions during playback. February 2026 added prompt-based slide editing, so you no longer regenerate a whole deck to change one slide. Cinematic Video Overviews with visual scenes arrived in 2026, alongside a new Deep Research mode. In April 2026, Google AI Pro storage jumped from 2TB to 5TB at no extra cost, and in May 2026 Gemini 3.5 Flash became the default model.</p>
+      </div>
+
+      <h2 id="notebooklm-vs-perplexity-vs-chatgpt">NotebookLM vs Perplexity vs ChatGPT</h2>
+      <p>These three get compared constantly, but they're really doing three different jobs. NotebookLM goes deep on documents you provide, Perplexity searches the live web, and ChatGPT is the general-purpose assistant. Here's the side-by-side:</p>
+      <div style="overflow-x:auto;margin:24px 0;">
+      <table style="width:100%;border-collapse:collapse;font-size:14px;">
+        <thead>
+          <tr style="background:var(--bg2);">
+            <th style="text-align:left;padding:10px 12px;border:1px solid var(--border);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:0.04em;"></th>
+            <th style="text-align:left;padding:10px 12px;border:1px solid var(--border);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:0.04em;">NotebookLM</th>
+            <th style="text-align:left;padding:10px 12px;border:1px solid var(--border);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:0.04em;">Perplexity</th>
+            <th style="text-align:left;padding:10px 12px;border:1px solid var(--border);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:0.04em;">ChatGPT Plus</th>
+          </tr>
+        </thead>
+        <tbody style="color:var(--text2);">
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Primary use case</td><td style="padding:10px 12px;border:1px solid var(--border);">Research on your own documents</td><td style="padding:10px 12px;border:1px solid var(--border);">Web research and Q&amp;A</td><td style="padding:10px 12px;border:1px solid var(--border);">General-purpose AI assistant</td></tr>
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Answer grounding</td><td style="padding:10px 12px;border:1px solid var(--border);">Your sources only (no hallucination)</td><td style="padding:10px 12px;border:1px solid var(--border);">Live web (cited)</td><td style="padding:10px 12px;border:1px solid var(--border);">Training data + web (variable)</td></tr>
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Audio Overviews</td><td style="padding:10px 12px;border:1px solid var(--border);">✓ Podcast format</td><td style="padding:10px 12px;border:1px solid var(--border);">✗</td><td style="padding:10px 12px;border:1px solid var(--border);">✗</td></tr>
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Source upload limit</td><td style="padding:10px 12px;border:1px solid var(--border);">50 sources/notebook</td><td style="padding:10px 12px;border:1px solid var(--border);">Limited</td><td style="padding:10px 12px;border:1px solid var(--border);">Files (size-limited)</td></tr>
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Context window</td><td style="padding:10px 12px;border:1px solid var(--border);">1M tokens</td><td style="padding:10px 12px;border:1px solid var(--border);">—</td><td style="padding:10px 12px;border:1px solid var(--border);">128K</td></tr>
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Real-time web access</td><td style="padding:10px 12px;border:1px solid var(--border);">✗</td><td style="padding:10px 12px;border:1px solid var(--border);">✓ Best in class</td><td style="padding:10px 12px;border:1px solid var(--border);">✓</td></tr>
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Free tier</td><td style="padding:10px 12px;border:1px solid var(--border);">✓ Genuinely powerful</td><td style="padding:10px 12px;border:1px solid var(--border);">✓ Limited</td><td style="padding:10px 12px;border:1px solid var(--border);">✓ Limited</td></tr>
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Price (paid)</td><td style="padding:10px 12px;border:1px solid var(--border);">$19.99/month (Pro)</td><td style="padding:10px 12px;border:1px solid var(--border);">$20/month (Pro)</td><td style="padding:10px 12px;border:1px solid var(--border);">$20/month (Plus)</td></tr>
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Best for</td><td style="padding:10px 12px;border:1px solid var(--border);">Document-heavy research</td><td style="padding:10px 12px;border:1px solid var(--border);">Current events research</td><td style="padding:10px 12px;border:1px solid var(--border);">General writing and coding</td></tr>
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Google integration</td><td style="padding:10px 12px;border:1px solid var(--border);">✓ Native</td><td style="padding:10px 12px;border:1px solid var(--border);">✗</td><td style="padding:10px 12px;border:1px solid var(--border);">✗</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>The honest recommendation is to stop thinking of these as competitors. The most effective setup is to use more than one: NotebookLM for anything grounded in documents you already have, <a href="../review/perplexity.html" style="color:var(--accent)">Perplexity</a> for live-web and current-events research, and <a href="../review/chatgpt.html" style="color:var(--accent)">ChatGPT</a> for writing and coding. NotebookLM and Perplexity in particular cover opposite halves of research — your sources versus the open web — and pairing them is what most heavy researchers in the community actually do.</p>
+
+      <h2 id="who-notebooklm-is-for">Who NotebookLM Is For</h2>
+      <p><strong>Best for:</strong></p>
+      <ul style="color:var(--text2);margin:0 0 16px 20px;line-height:1.7;">
+        <li>Students and academics — upload papers, textbooks, and lecture notes; ask questions, generate study guides, and make Audio Overviews for commute studying</li>
+        <li>Researchers and analysts — synthesize large document corpora without reading every page, and extract specific insights across up to 50 sources</li>
+        <li>Knowledge workers processing long documents — legal contracts, research reports, technical documentation</li>
+        <li>Content creators — turn source research into Audio Overviews, structured summaries, and slide decks</li>
+        <li>Anyone who needs to understand complex material quickly without hallucination risk</li>
+      </ul>
+      <p><strong>Not for:</strong></p>
+      <ul style="color:var(--text2);margin:0 0 16px 20px;line-height:1.7;">
+        <li>Open-web research — NotebookLM only knows what you upload; use Perplexity for current events and live-web work</li>
+        <li>Writing original content — it summarizes and analyzes; it doesn't draft marketing copy or blog posts</li>
+        <li>Teams on the Microsoft stack needing SharePoint or OneDrive integration</li>
+        <li>Anyone who needs real-time data inside their research</li>
+      </ul>
+      <p>If your work leans toward writing or general assistance rather than document analysis, two of our other reviews are worth a look: <a href="../review/chatgpt.html" style="color:var(--accent)">ChatGPT</a> for versatile writing and coding, and <a href="../review/notion-ai.html" style="color:var(--accent)">Notion AI</a> for workspace-aware Q&amp;A inside your team's docs. For live-web research, our <a href="../review/perplexity.html" style="color:var(--accent)">Perplexity</a> review covers the other half of the research workflow.</p>
+
+      <div class="affiliate-box">
+        <h3>Try NotebookLM Free</h3>
+        <p>Sign in with a Google account and start a notebook — no credit card required.</p>
+        <a href="https://notebooklm.google.com" class="affiliate-btn">Try NotebookLM Free →</a>
+        <div class="affiliate-note">We may earn a commission on some links at no extra cost to you</div>
+      </div>
+
+      <!-- What Users Are Saying -->
+      <div class="users-saying" style="margin:48px 0;">
+        <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Community Sentiment</div>
+        <h2 id="what-users-are-saying" style="font-family:var(--display);font-size:1.75rem;font-weight:800;color:var(--text);margin:0 0 8px 0;">What Users Are Saying</h2>
+        <p style="font-family:var(--sans);font-size:0.95rem;color:var(--text2);margin:0 0 32px 0;line-height:1.6;">We track discussion across r/NotebookLM (an unusually active community), r/productivity, r/MachineLearning, and G2 to surface how students, researchers, and professionals actually use NotebookLM. The pattern is consistent: strong enthusiasm for Audio Overviews, with the daily chat cap as the main recurring complaint.</p>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:32px;display:flex;gap:40px;flex-wrap:wrap;">
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--accent)">$0</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Free Tier</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">1M</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Token Context</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">50</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Sources / Notebook</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">100</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Notebooks (Free)</div></div>
+        </div>
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:#22a05a;">●</span> What users consistently praise</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"Audio Overviews changed how I study. I upload my lecture notes and research papers, generate a 15-minute podcast discussion, and listen during my commute. It's the most useful AI feature I've used this year."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Reddit r/NotebookLM · 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"For source-grounded research, nothing beats it. I upload 40 PDFs and ask questions across all of them. Every answer cites the exact passage. I've stopped worrying about hallucination for document analysis."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Reddit r/productivity · 2026</div>
+          </div>
+        </div>
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:var(--accent);">●</span> Common frustrations</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"The 50 daily chat limit on the free tier is the main frustration. On an intensive research day I hit it by noon. The $19.99 Pro plan removes this but that's a real cost jump from free."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Reddit r/NotebookLM · 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"It only knows what you upload. For anything requiring current information or open-web research, you still need Perplexity or ChatGPT. I use NotebookLM and Perplexity together — different jobs."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Reddit r/MachineLearning · 2026</div>
+          </div>
+        </div>
+        <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.15);border-radius:12px;padding:20px 24px;">
+          <div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:8px;">AIToolGrade Take</div>
+          <p style="font-family:var(--sans);font-size:0.93rem;color:var(--text);line-height:1.7;margin:0;">NotebookLM's value proposition is unusually clear: if you regularly work with large documents and need reliable, citation-backed answers, it's the most capable tool for that job at any price — and the free tier puts it in everyone's hands. Audio Overviews generate the strongest community sentiment of any feature we track in the productivity category; students, researchers, and professionals describe them as changing how they consume complex material. The limitations are narrow and honest: no open-web research, no original writing, and a 50-chat daily cap that intensive free-tier users will hit. The recommendation is straightforward — use NotebookLM for document-based research, Perplexity for the live web, and ChatGPT for writing and coding. At $0, starting with NotebookLM has no real downside.</p>
+        </div>
+      </div>
+      <!-- END: What Users Are Saying -->
+
+      <h2 id="the-bottom-line">The Bottom Line</h2>
+      <p>NotebookLM does one job and does it better than anything else at any price: it turns a pile of your own documents into a reliable, citation-backed research assistant. The source-grounding removes the hallucination worry that follows general chatbots into research work, Audio Overviews give you a genuinely useful new way to absorb dense material, and the free tier — 100 notebooks, 50 sources each, a 1M token context — is generous enough that most people never need to pay. For students, researchers, analysts, and anyone who lives in long documents, it's one of the easiest tools on the site to recommend.</p>
+      <p>The honest limits are narrow but real. It can't research the open web, it won't write your marketing copy, and the 50-chats-a-day cap on the free tier will frustrate heavy users until they move to the $19.99/month Pro plan. None of that undercuts the core: this is the best document-research tool available, and it costs nothing to start. Pair it with <a href="../review/perplexity.html" style="color:var(--accent)">Perplexity</a> for live-web research and <a href="../review/chatgpt.html" style="color:var(--accent)">ChatGPT</a> for writing, and you've covered the whole research-and-output workflow with three tools that each do their part well.</p>
+    </div>
+  </div>
+  <div class="review-sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-title">Overall score</div>
+      <div class="sidebar-score">
+        <div class="sidebar-score-num">8.7</div>
+        <div>
+          <div style="color:var(--accent);font-size:18px;letter-spacing:-1px">★★★★☆</div>
+          <div class="sidebar-score-label">out of 10</div>
+        </div>
+      </div>
+      <div class="sidebar-title" style="margin-top:16px">Pricing</div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Standard (Free)</span><span class="sidebar-price-val">$0/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Google AI Plus</span><span class="sidebar-price-val">$7.99/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Google AI Pro</span><span class="sidebar-price-val">$19.99/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Google AI Ultra</span><span class="sidebar-price-val">$99.99+/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Free plan</span><span class="sidebar-price-val">✓ Yes</span></div>
+      <a href="https://notebooklm.google.com" class="sidebar-cta">Try NotebookLM Free →</a>
+      <div class="sidebar-disclosure">Some links may be affiliate links</div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">AI Tool<span>Grade</span></div><p class="footer-desc">Independent reviews and comparisons of AI tools. Researched, fact-checked, and independently rated.</p></div>
+    <div><div class="footer-col-title">Reviews</div><div class="footer-links"><a href="../category/writing.html">AI Writing</a><a href="../category/coding.html">AI Coding</a><a href="../category/image.html">AI Image</a><a href="../category/automation.html">Automation</a><a href="../category/productivity.html">Productivity</a></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="../about.html">About</a><a href="../how-we-review.html">How we review</a>
+        <a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
+    <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+</footer>
+</body></html>

@@ -87,7 +87,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ```
 > Root also has: about.html, resources.html, how-we-review.html, contribute.html, contact.html,
 > advertise.html, and legal pages (see "Missing File Structure Details"). author/ holds
-> marcus-veil.html and priya-nolan.html. Full HTML page count: 64.
+> marcus-veil.html and priya-nolan.html. Full HTML page count: 65.
 
 ## Category Review Counts (homepage displays these — keep in sync)
 - AI Writing: 4 (Jasper, Copy.ai, Writesonic, Grammarly)
@@ -235,7 +235,9 @@ directly in page content (breadcrumbs, in-body links, footer links):
 8. Add URL to `sitemap.xml`
 9. Run prohibited language check — grep the full list (zero results before deploy)
 10. Push and SSH deploy
-- [ ] Editorial sanity check — paste the published URL into Perplexity and ask "what promotional language or unsupported claims appear in this review?" Fix any flagged issues before promoting on social.
+- [ ] Editorial sanity check — paste this into Perplexity after deploy:
+  "Review [LIVE URL] for promotional language, unsupported claims, and anything that reads more like marketing than research-based analysis. Flag specific phrases that should be qualified or removed."
+  Fix any flagged issues with a quick Claude Code prompt before promoting on social.
 
 ## Editorial Quality Control
 
@@ -465,6 +467,8 @@ Deploy: cd ~/domains/aitoolgrade.com/public_html && git fetch origin && git rese
 
 Begin by outputting your plan. Then execute end-to-end without checking in until done or genuinely blocked.
 
+Final step after deploy: paste the live URL into Perplexity and ask — "Review [LIVE URL] for promotional language, unsupported claims, and anything that reads more like marketing than research-based analysis. Flag specific phrases that should be qualified or removed." Fix any flagged issues with a quick Claude Code prompt before promoting on social.
+
 
 ## Missing File Structure Details
 
@@ -601,6 +605,8 @@ Deploy: cd ~/domains/aitoolgrade.com/public_html && git fetch origin && git rese
 
 Begin by outputting your plan. Then execute end-to-end without checking in until done or genuinely blocked.
 
+Final step after deploy (before generating social posts): paste the live URL into Perplexity and ask — "Review [LIVE URL] for promotional language, unsupported claims, and anything that reads more like marketing than research-based analysis. Flag specific phrases that should be qualified or removed." Fix any flagged issues with a quick Claude Code prompt before promoting on social.
+
 ## Schema Markup
 All schema is JSON-LD in the head of each page. Do not add duplicate schema.
 
@@ -656,9 +662,9 @@ Next content priorities (from May 24, 2026 session):
 
 ### Remaining queue
 - Kimi Code K2.6 review — MEDIUM
-- "Best Free AI Tools for Students 2026" blog post — MEDIUM
 
 ### Completed
+- "Best Free AI Tools for Students 2026" blog post ✅ (June 4, 2026) — Guide, Priya Nolan. Organized by job (studying/research/writing/coding/visual/notes) rather than ranking, with an honest free-tier rule stating each tool's exact limits upfront. Covers NotebookLM, Perplexity, ChatGPT, Grammarly, GitHub Copilot, Leonardo AI (not yet reviewed), Notion AI. Includes the "$0 with a .edu email" student stack table and a non-preachy academic-integrity note. datePublished/dateModified 2026-06-04.
 - NotebookLM review ✅ (June 3, 2026) — Productivity, 8.7, Priya Nolan. Google's source-grounded research assistant (answers only from uploaded sources, no open-web hallucination). Audio Overviews given prominent coverage as the most-loved community feature; carries the NotebookLM vs Perplexity vs ChatGPT table and the explicit "use both" (NotebookLM + Perplexity) recommendation. Free tier scored 10/10 on value. datePublished/dateModified 2026-06-03.
 - HeyGen review ✅ (June 3, 2026) — AI Video, 8.1, Priya Nolan. Realism leader (Avatar IV), photo-to-avatar, 175+ language translation, used by 40,000+ businesses. Carries the HeyGen vs Synthesia comparison table and an honest treatment of the credit-opacity issue (the #1 community complaint, partially addressed by the Feb 2026 upfront-estimate feature). datePublished/dateModified 2026-06-02.
 - "Claude Code vs Cursor vs GitHub Copilot 2026" blog post ✅ (June 2, 2026) — Comparison, Marcus Veil. Leads with the 46% / 19% / 9% developer love-rating stat. Three-scenario head-to-head, full comparison table, team-pricing reality check ($190 / $400 / $1,250 for 10 devs), and a "use two tools" (Cursor + Claude Code) conclusion. Carries the COI yellow box near the top + editorial disclosure at the bottom (AIToolGrade uses Claude Code; scored conservatively at 8.0).
@@ -824,7 +830,7 @@ Affiliate link Claude Code prompt: ready to run when URLs approved — located i
 
 ## Blog Posts Published
 
-_13 blog posts deployed in `blog/` (excluding index.html). Descript and Lovable are **review**
+_14 blog posts deployed in `blog/` (excluding index.html). Descript and Lovable are **review**
 pages (`review/`), not blog posts — they are tracked in the File Structure review list, not here._
 
 | Post | Author | Date | Target Keyword |
@@ -842,6 +848,7 @@ pages (`review/`), not blog posts — they are tracked in the File Structure rev
 | Best AI Coding Agents 2026 | Marcus Veil | May 2026 | best ai coding agents 2026 |
 | ChatGPT Pro $100 vs $200 | Marcus Veil | May 2026 | chatgpt pro $100 vs $200 |
 | Claude Code vs Cursor vs GitHub Copilot 2026 | Marcus Veil | June 2026 | claude code vs cursor vs github copilot 2026 |
+| Best Free AI Tools for Students 2026 | Priya Nolan | June 2026 | best free ai tools for students 2026 |
 
 ## Research Agent
 
@@ -932,7 +939,8 @@ Rules:
 - Run sitemap audit whenever new reviews or blog posts are added
 - Submit updated sitemap to Google Search Console after significant additions
 
-Current page count: 64 URLs (as of June 3, 2026) — one per HTML page.
+Current page count: 65 URLs (as of June 4, 2026) — one per HTML page.
+(June 4, 2026: added `blog/best-free-ai-tools-students-2026.html` — Guide, lastmod 2026-06-04.)
 (June 3, 2026: added `review/notebooklm.html` — Productivity, lastmod 2026-06-03.)
 (June 3, 2026: added `review/heygen.html` — AI Video, lastmod 2026-06-02.)
 (June 2, 2026: added `blog/claude-code-vs-cursor-vs-github-copilot-2026.html`.)

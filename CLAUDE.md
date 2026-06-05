@@ -47,6 +47,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── google-antigravity.html  (AI Coding, 7.5)
 │   ├── deepseek-v4.html         (AI Coding, 8.1)
 │   ├── claude-code.html         (AI Coding, 8.0)
+│   ├── kimi-code.html           (AI Coding, 7.8)
 │   ├── midjourney.html          (AI Image, 7.8)
 │   ├── adobe-firefly.html       (AI Image, 8.4)
 │   ├── leonardo-ai.html         (AI Image, 8.7)
@@ -87,18 +88,18 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ```
 > Root also has: about.html, resources.html, how-we-review.html, contribute.html, contact.html,
 > advertise.html, and legal pages (see "Missing File Structure Details"). author/ holds
-> marcus-veil.html and priya-nolan.html. Full HTML page count: 65.
+> marcus-veil.html and priya-nolan.html. Full HTML page count: 66.
 
 ## Category Review Counts (homepage displays these — keep in sync)
 - AI Writing: 4 (Jasper, Copy.ai, Writesonic, Grammarly)
-- AI Coding: 9 (Cursor, GitHub Copilot, Windsurf, Bolt.new, Replit, Lovable, Google Antigravity, DeepSeek V4, Claude Code)
+- AI Coding: 10 (Cursor, GitHub Copilot, Windsurf, Bolt.new, Replit, Lovable, Google Antigravity, DeepSeek V4, Claude Code, Kimi Code)
 - AI Image: 3 (Midjourney, Adobe Firefly, Leonardo AI)
 - Automation: 3 (Zapier, n8n, Microsoft Agent 365)
 - AI Video: 4 (Runway, Synthesia, HeyGen, Descript)
 - Productivity: 6 (ChatGPT, Notion AI, Perplexity, Claude Cowork, Perplexity Computer, NotebookLM)
 
-Total: 29 reviews. Homepage `cat-count` values in index.html match these (AI Coding is 9 as of
-June 1, 2026 after adding Claude Code; Productivity is 5 after Perplexity Computer; Automation is 3).
+Total: 30 reviews. Homepage `cat-count` values in index.html match these (AI Coding is 10 as of
+June 5, 2026 after adding Kimi Code; Productivity is 6 after NotebookLM; Automation is 3).
 
 When adding a new review, update the count in `index.html` using this script pattern:
 ```bash
@@ -182,6 +183,7 @@ Categories ▾         Reviews ▾            Compare    Blog    Get Updates
                        Bolt.new
                        Claude Code
                        DeepSeek V4
+                       Kimi Code
                        Zapier
                        n8n
                        Midjourney
@@ -661,9 +663,10 @@ Next content priorities (from May 24, 2026 session):
 ## Content Queue (updated June 2, 2026 session)
 
 ### Remaining queue
-- Kimi Code K2.6 review — MEDIUM
+- (none currently)
 
 ### Completed
+- Kimi Code review ✅ (June 5, 2026) — AI Coding, 7.8, Marcus Veil. Moonshot AI's open-source Claude Code competitor powered by Kimi K2.6 (1T-param MoE, 32B active; 80.2% SWE-bench Verified, ties GPT-5.5 on SWE-bench Pro). Leads on the MCP-compatibility migration story (every Claude Code MCP server works unchanged) and Agent Swarms (up to 300 parallel agents). Carries the yellow COI disclosure box (AIToolGrade uses Claude; Kimi Code is a direct competitor) plus the same Chinese-company data-residency treatment as DeepSeek V4. Pricing $0.60/M input (~25x cheaper than Opus 4.7). datePublished/dateModified 2026-06-05.
 - "Best Free AI Tools for Students 2026" blog post ✅ (June 4, 2026) — Guide, Priya Nolan. Organized by job (studying/research/writing/coding/visual/notes) rather than ranking, with an honest free-tier rule stating each tool's exact limits upfront. Covers NotebookLM, Perplexity, ChatGPT, Grammarly, GitHub Copilot, Leonardo AI (not yet reviewed), Notion AI. Includes the "$0 with a .edu email" student stack table and a non-preachy academic-integrity note. datePublished/dateModified 2026-06-04.
 - NotebookLM review ✅ (June 3, 2026) — Productivity, 8.7, Priya Nolan. Google's source-grounded research assistant (answers only from uploaded sources, no open-web hallucination). Audio Overviews given prominent coverage as the most-loved community feature; carries the NotebookLM vs Perplexity vs ChatGPT table and the explicit "use both" (NotebookLM + Perplexity) recommendation. Free tier scored 10/10 on value. datePublished/dateModified 2026-06-03.
 - HeyGen review ✅ (June 3, 2026) — AI Video, 8.1, Priya Nolan. Realism leader (Avatar IV), photo-to-avatar, 175+ language translation, used by 40,000+ businesses. Carries the HeyGen vs Synthesia comparison table and an honest treatment of the credit-opacity issue (the #1 community complaint, partially addressed by the Feb 2026 upfront-estimate feature). datePublished/dateModified 2026-06-02.
@@ -939,7 +942,8 @@ Rules:
 - Run sitemap audit whenever new reviews or blog posts are added
 - Submit updated sitemap to Google Search Console after significant additions
 
-Current page count: 65 URLs (as of June 4, 2026) — one per HTML page.
+Current page count: 66 URLs (as of June 5, 2026) — one per HTML page.
+(June 5, 2026: added `review/kimi-code.html` — AI Coding, lastmod 2026-06-05.)
 (June 4, 2026: added `blog/best-free-ai-tools-students-2026.html` — Guide, lastmod 2026-06-04.)
 (June 3, 2026: added `review/notebooklm.html` — Productivity, lastmod 2026-06-03.)
 (June 3, 2026: added `review/heygen.html` — AI Video, lastmod 2026-06-02.)

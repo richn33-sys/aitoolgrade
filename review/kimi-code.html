@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="canonical" href="https://aitoolgrade.com/review/kimi-code.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kimi Code review 2026 — Moonshot AI's open-source Claude Code competitor. Kimi K2.6 scores 80.2% on SWE-bench at $0.60/M input, 25x cheaper than Claude Opus 4.7. The MCP migration story, Agent Swarms, and the catches.">
+<title>Kimi Code Review 2026 — Open-Source Claude Code Alternative at 1/25th the Cost | AIToolGrade</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fafaf8;--bg2:#f3f2ee;--bg3:#eceae3;--text:#1a1a18;--text2:#4a4a45;--text3:#8a8a82;--accent:#e85d26;--accent2:#f07d4a;--accent-dim:rgba(232,93,38,0.08);--border:#e2e0d8;--white:#ffffff;--display:'Playfair Display',serif;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:4px}
+.nav-dropdown>a::after{content:"▾";font-size:10px}
+.dropdown-menu{visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.15s ease,visibility 0s linear 0.5s;position:absolute;top:calc(100% + 8px);left:-16px;background:white;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:200;max-height:80vh;overflow-y:auto}
+.dropdown-menu a{display:block;padding:8px 12px;font-size:14px;color:var(--text2);text-decoration:none;border-radius:6px;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--bg2);color:var(--accent)}
+.nav-dropdown:hover .dropdown-menu{visibility:visible;opacity:1;pointer-events:auto;transition:opacity 0.15s ease,visibility 0s}
+.nav-dropdown .dropdown-menu::before{content:"";position:absolute;top:-20px;left:0;right:0;height:20px}
+.nav-dropdown::after{content:"";position:absolute;height:20px;width:calc(100% + 16px);bottom:-20px;left:-16px}
+.review-layout{max-width:1100px;margin:0 auto;padding:60px 40px;display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:start}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:24px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+.review-header{margin-bottom:40px}
+.review-tool-row{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.review-tool-logo{width:56px;height:56px;border-radius:14px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:28px;border:1px solid var(--border)}
+.review-tool-title{font-size:15px;font-weight:600;margin-bottom:2px}
+.review-tool-url{font-size:13px;color:var(--text3);font-family:var(--mono)}
+h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;margin-bottom:16px}
+.review-meta-row{display:flex;align-items:center;gap:20px;font-size:13px;color:var(--text3);margin-bottom:24px}
+.verdict-banner{background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:20px 24px;margin-bottom:40px;display:flex;align-items:center;gap:16px}
+.verdict-score{font-family:var(--display);font-size:48px;font-weight:800;color:var(--accent);line-height:1}
+.verdict-text h3{font-size:15px;font-weight:600;margin-bottom:4px}
+.verdict-text p{font-size:13px;color:var(--text2)}
+.review-body h2{font-family:var(--display);font-size:28px;font-weight:700;margin:40px 0 16px}
+.review-body p{color:var(--text2);margin-bottom:16px}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
+.pros-box,.cons-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px}
+.pros-box{border-top:3px solid #2e7d32}
+.cons-box{border-top:3px solid #c62828}
+.pros-box h4{color:#2e7d32;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.cons-box h4{color:#c62828;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.pro-item,.con-item{font-size:14px;color:var(--text2);margin-bottom:8px;display:flex;gap:8px;align-items:flex-start}
+.pro-item::before{content:'✓';color:#2e7d32;font-weight:600;flex-shrink:0}
+.con-item::before{content:'✗';color:#c62828;font-weight:600;flex-shrink:0}
+.score-breakdown{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;margin:32px 0}
+.score-breakdown h4{font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:20px}
+.score-row{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.score-row:last-child{margin-bottom:0}
+.score-name{font-size:14px;color:var(--text2);width:160px;flex-shrink:0}
+.score-bar-track{flex:1;height:8px;background:var(--bg2);border-radius:100px;overflow:hidden}
+.score-bar-fill{height:100%;border-radius:100px;background:var(--accent)}
+.score-val{font-family:var(--mono);font-size:13px;font-weight:500;width:30px;text-align:right}
+.comparison-wrap{overflow-x:auto;margin:24px 0}
+.comparison-table{width:100%;border-collapse:collapse;font-size:14px}
+.comparison-table th,.comparison-table td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
+.comparison-table th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.05em;color:var(--text3);background:var(--bg2)}
+.comparison-table td{color:var(--text2)}
+.comparison-table tr td:first-child{font-weight:600;color:var(--text)}
+.comparison-table th a,.comparison-table td a{color:var(--accent);text-decoration:none}
+.affiliate-box{background:var(--text);color:white;border-radius:14px;padding:28px;margin:40px 0;text-align:center}
+.affiliate-box h3{font-family:var(--display);font-size:24px;font-weight:700;margin-bottom:8px}
+.affiliate-box p{color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:20px}
+.affiliate-btn{display:inline-block;background:var(--accent);color:white;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;transition:background 0.15s}
+.affiliate-btn:hover{background:var(--accent2)}
+.affiliate-note{font-size:11px;color:rgba(255,255,255,0.4);margin-top:12px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px;position:sticky;top:84px}
+.sidebar-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:16px}
+.sidebar-score{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.sidebar-score-num{font-family:var(--display);font-size:52px;font-weight:800;color:var(--accent);line-height:1}
+.sidebar-score-label{font-size:13px;color:var(--text3)}
+.sidebar-price-row{display:flex;justify-content:space-between;font-size:14px;padding:10px 0;border-bottom:1px solid var(--border)}
+.sidebar-price-row:last-of-type{border-bottom:none}
+.sidebar-price-label{color:var(--text2)}
+.sidebar-price-val{font-family:var(--mono);font-weight:500}
+.sidebar-cta{display:block;background:var(--accent);color:white;text-align:center;padding:14px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;margin-top:20px;transition:background 0.15s}
+.sidebar-cta:hover{background:var(--accent2)}
+.sidebar-disclosure{font-size:11px;color:var(--text3);margin-top:10px;text-align:center}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}
+.footer-brand span{color:var(--accent)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--accent)}
+@media(max-width:768px){.review-layout{grid-template-columns:1fr;padding:40px 20px}.pros-cons{grid-template-columns:1fr}h1{font-size:30px}nav{padding:0 20px}.footer-inner{grid-template-columns:1fr 1fr}}
+
+/* === MOBILE NAV + RESPONSIVE TABLE FIX === */
+.nav-toggle{display:none;order:2;background:none;border:0;font-size:24px;line-height:1;color:var(--text);cursor:pointer;padding:4px 6px}
+@media(max-width:768px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(250,250,248,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 20px 16px;box-shadow:0 8px 24px rgba(0,0,0,0.06);max-height:calc(100vh - 64px);overflow-y:auto}
+  nav.nav-open .nav-links{display:flex}
+  .nav-links>a,.nav-dropdown{padding:12px 2px;border-bottom:1px solid var(--border)}
+  .nav-dropdown{position:static}
+  .nav-dropdown>a::after{display:none}
+  .dropdown-menu{display:none!important}
+  .nav-cta{display:block;text-align:center;background:var(--accent);color:#fff;margin-top:14px;padding:12px;border:0!important;border-radius:6px}
+  .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+  .comparison-wrap{overflow-x:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "name": "Kimi Code Review 2026",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "7.8",
+    "bestRating": "10",
+    "worstRating": "0"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Marcus Veil",
+    "url": "https://aitoolgrade.com/author/marcus-veil.html"
+  },
+  "itemReviewed": {
+    "@type": "SoftwareApplication",
+    "name": "Kimi Code",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web, API, CLI",
+    "offers": {
+      "@type": "Offer",
+      "price": "0.60",
+      "priceCurrency": "USD",
+      "url": "https://kimi.ai"
+    }
+  },
+  "datePublished": "2026-06-05",
+  "dateModified": "2026-06-05"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolgrade.com"},
+    {"@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://aitoolgrade.com/reviews.html"},
+    {"@type": "ListItem", "position": 3, "name": "AI Coding", "item": "https://aitoolgrade.com/category/coding.html"},
+    {"@type": "ListItem", "position": 4, "name": "Kimi Code", "item": "https://aitoolgrade.com/review/kimi-code.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<div id="nav-root"></div>
+<script src="../nav.js"></script>
+
+<div class="review-layout">
+  <div class="review-main">
+    <div style="background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 14px 18px; margin-bottom: 28px; display: flex; align-items: flex-start; gap: 12px;">
+      <span style="font-family: var(--mono); font-size: 18px; line-height: 1;">🔍</span>
+      <div>
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 4px;">Research-Based Review</div>
+        <p style="font-family: var(--sans); font-size: 0.88rem; color: var(--text2); line-height: 1.6; margin: 0;">This review is based on documented features, verified pricing, and community sentiment — not hands-on testing. <a href="../how-we-review.html" style="color: var(--accent); text-decoration: none;">See how we research →</a></p>
+      </div>
+    </div>
+    <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="../category/coding.html">AI Coding</a><span>›</span>Kimi Code Review</div>
+    <div class="review-header">
+      <div class="review-tool-row">
+        <div class="review-tool-logo">🌙</div>
+        <div><div class="review-tool-title">Kimi Code</div><div class="review-tool-url">kimi.ai</div></div>
+      </div>
+      <h1>Kimi Code Review 2026 — Open-Source Claude Code Alternative at 1/25th the Cost</h1>
+      <div class="review-meta-row">
+        <span>📅 June 2026</span>
+        <span>⏱ 12 min read</span>
+        <span>📊 Research-based</span>
+      </div>
+    </div>
+    <div class="verdict-banner">
+      <div class="verdict-score">7.8</div>
+      <div class="verdict-text">
+        <h3>Editor's Verdict: The Lowest-Friction Migration Path Off Claude Code</h3>
+        <p>Powered by the open-weight Kimi K2.6 model (80.2% SWE-bench Verified, ties GPT-5.5 on SWE-bench Pro), Kimi Code clones the Claude Code interaction model and runs every Claude Code MCP server without modification — at roughly 1/25th the API cost. Agent Swarms of up to 300 parallel agents have no direct equivalent anywhere. The constraints are specific: CLI-only in June 2026, a 7.4-point SWE-bench gap behind Claude Opus 4.7, and the same Chinese-company data-residency questions that apply to DeepSeek. For cost-conscious developers already invested in the MCP ecosystem, it's the most rational alternative to evaluate.</p>
+      </div>
+    </div>
+    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified June 2026</p>
+
+    <div class="review-body">
+
+      <div style="background: #fef3cd; border: 1px solid #f0c040; border-radius: 10px; padding: 16px 20px; margin-bottom: 28px;">
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: #8a6000; margin-bottom: 6px;">⚠️ Editorial Disclosure</div>
+        <p style="font-family: var(--sans); font-size: 0.9rem; color: #5a4000; line-height: 1.65; margin: 0;">AIToolGrade uses Claude (Anthropic) for content production. Kimi Code is a direct competitor to Claude Code. We have applied our standard research methodology — documented features, verified pricing, community benchmarks — and have not received compensation from Moonshot AI.</p>
+      </div>
+
+      <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:16px 20px;margin:0 0 24px 0">
+        <p style="font-size:13px;font-family:'DM Mono',monospace;color:var(--accent);margin-bottom:8px">RELATED REVIEWS</p>
+        <a href="../review/claude-code.html" style="font-size:15px;font-weight:600;color:var(--text);display:block;margin-bottom:6px;text-decoration:none">Claude Code Review 2026 — Anthropic's Agentic Coding Tool →</a>
+        <a href="../review/deepseek-v4.html" style="font-size:15px;font-weight:600;color:var(--text);display:block;text-decoration:none">DeepSeek V4 Review 2026 — Frontier Coding Benchmarks at 1/30th the Cost →</a>
+      </div>
+
+      <h2 id="what-is-kimi-code">What is Kimi Code?</h2>
+      <p>Kimi Code is Moonshot AI's open-source coding agent, and the easiest way to describe it is also the most accurate: it's an Apache 2.0 answer to Claude Code. Moonshot — a Chinese AI lab founded in 2023 — shipped the Kimi Code CLI in January 2026 with the same terminal-first interaction model Anthropic popularized, the same Model Context Protocol (MCP) ecosystem, and API pricing that runs 8–25x below the closed alternatives. If you've used Claude Code, the muscle memory transfers almost completely. That's not an accident; it's the entire pitch.</p>
+      <p>The engine underneath is Kimi K2.6, released April 20, 2026. It's a 1-trillion-parameter Mixture-of-Experts model that activates only 32 billion parameters per token — so inference costs stay at the 32B level while the model carries 1T worth of capacity. The benchmarks back the architecture: 80.2% on SWE-bench Verified, 58.6% on the harder SWE-bench Pro, where it lands in a statistical tie with GPT-5.5. On Code Arena's WebDev leaderboard it ranks 6th out of 67 models — ahead of every other open-weight model in the field.</p>
+      <p>What makes Kimi Code worth a serious look isn't the raw score, though. It's the combination. A frontier-adjacent coding model, a drop-in MCP-compatible agent that mirrors a tool developers already know, an OpenAI-compatible API that turns migration into a single endpoint swap, and an open-weight license that lets you self-host for zero per-token cost. For developers running coding workloads at volume — and especially for Claude Code users watching their API bills climb — that bundle is the most direct cost-reduction path available in the open-weight category in 2026, provided the tradeoffs below fit your situation.</p>
+
+      <!-- toc -->
+<nav aria-label="Table of contents" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 32px 0;">
+  <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 12px;">In this review</div>
+  <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#what-is-kimi-code" style="color: var(--accent); text-decoration: none;">What is Kimi Code?</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#who-is-it-for" style="color: var(--accent); text-decoration: none;">Who Is It For?</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pros-and-cons" style="color: var(--accent); text-decoration: none;">Pros and Cons</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#score-breakdown" style="color: var(--accent); text-decoration: none;">Score Breakdown</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#benchmarks" style="color: var(--accent); text-decoration: none;">Benchmarks and Cost Comparison</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pricing" style="color: var(--accent); text-decoration: none;">Pricing</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#key-features" style="color: var(--accent); text-decoration: none;">Key Features</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#vs-claude-deepseek" style="color: var(--accent); text-decoration: none;">Kimi Code vs Claude Code vs DeepSeek V4</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-chinese-company-question" style="color: var(--accent); text-decoration: none;">The Chinese Company Question</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-bottom-line" style="color: var(--accent); text-decoration: none;">The Bottom Line</a></li>
+  </ol>
+</nav>
+
+      <h2 id="who-is-it-for">Who Is It For?</h2>
+      <p>Kimi Code is a developer tool first and last, and the fit is sharpest where API cost is a live constraint. If you're running high-volume coding workloads — agentic loops, batch refactors, code review pipelines, multi-repo validation — the per-token math changes what's economically sane. But the cleaner signal is the migration story. For Claude Code users specifically, this is the lowest-friction alternative in the open-weight category: the MCP servers you already configured work without a single edit, the interaction model is the same, and the API bill drops by roughly 25x. That's a rare combination, and it's the reason the Claude Code community is paying attention.</p>
+      <p>It also suits teams that need genuine parallelism. Agent Swarms — up to 300 coordinated K2.6 instances running at once — have no direct equivalent in Claude Code or any other coding agent at any price. For naturally parallel work like multi-repo refactors or large batch validation, that's a different shape of tool, not just a cheaper one. And because the weights are Apache 2.0, teams with GPU capacity can self-host and drop the per-token API fee to zero entirely — a path closed frontier models don't offer.</p>
+      <p>It is not for everyone, and the misfits are worth naming plainly. Enterprise teams under strict US or EU data-residency rules face the same questions a Chinese-hosted API always raises — covered in its own section below. IDE-first developers who live in VS Code or JetBrains will feel the friction immediately: in June 2026 Kimi Code is terminal-only, with no native editor extension. Teams that need an enterprise SLA, SOC 2, or HIPAA won't find them here. And if you need production K2.6 rather than preview access, that sits behind Ultra/custom pricing — the $25/month Pro plan gives you a preview, not the production tier. If you want a polished IDE assistant rather than a CLI agent, <a href="../review/github-copilot.html">GitHub Copilot</a> or <a href="../review/cursor.html">Cursor</a> remain the more practical starting points.</p>
+
+      <h2 id="pros-and-cons">Pros and Cons</h2>
+      <div class="pros-cons">
+        <div class="pros-box">
+          <h4>What works well</h4>
+          <div class="pro-item">Roughly 25x cheaper than Claude Opus 4.7 at comparable benchmark performance — the strongest cost argument in the open-weight coding category</div>
+          <div class="pro-item">MCP compatibility means Claude Code users migrate without reconfiguring their tool ecosystem — the servers just work</div>
+          <div class="pro-item">Agent Swarms are a genuinely new capability — 300 coordinated parallel agents have no direct equivalent at any price</div>
+          <div class="pro-item">1M-token context with verified accuracy above 80% past 900K tokens, where frontier models drop sharply past 200K</div>
+          <div class="pro-item">Apache 2.0 open weights — self-host for zero per-token API cost, no vendor lock-in</div>
+          <div class="pro-item">OpenAI-compatible API — migrating from a Claude Code or GPT-based setup is usually a single endpoint change</div>
+        </div>
+        <div class="cons-box">
+          <h4>What to watch out for</h4>
+          <div class="con-item">Chinese company — the same data residency and compliance questions as DeepSeek V4; a real gate for US/EU enterprise teams</div>
+          <div class="con-item">CLI-only in June 2026 — no native VS Code or JetBrains extension, so IDE-first developers face friction</div>
+          <div class="con-item">Kimi Code Pro ($25/month) gives K2.6 preview only; production K2.6 requires Ultra or custom pricing</div>
+          <div class="con-item">Documentation is thin in places — a January 2026 product still maturing</div>
+          <div class="con-item">Agent Swarms shine on parallel work; linear debugging sessions see much less benefit</div>
+          <div class="con-item">A 7.4-point SWE-bench Verified gap behind Claude Opus 4.7 (80.2% vs 87.6%) that matters for the hardest tasks</div>
+        </div>
+      </div>
+
+      <h2 id="score-breakdown">Score Breakdown</h2>
+      <div class="score-breakdown">
+        <h4>Category scores — AIToolGrade methodology</h4>
+        <div class="score-row"><span class="score-name">Ease of Use</span><div class="score-bar-track"><div class="score-bar-fill" style="width:70%"></div></div><span class="score-val">7.0</span></div>
+        <div class="score-row"><span class="score-name">Features</span><div class="score-bar-track"><div class="score-bar-fill" style="width:85%"></div></div><span class="score-val">8.5</span></div>
+        <div class="score-row"><span class="score-name">Value for Money</span><div class="score-bar-track"><div class="score-bar-fill" style="width:95%"></div></div><span class="score-val">9.5</span></div>
+        <div class="score-row"><span class="score-name">Integration</span><div class="score-bar-track"><div class="score-bar-fill" style="width:75%"></div></div><span class="score-val">7.5</span></div>
+        <div class="score-row"><span class="score-name">Support &amp; Docs</span><div class="score-bar-track"><div class="score-bar-fill" style="width:60%"></div></div><span class="score-val">6.0</span></div>
+      </div>
+      <p>The shape tells the story. Value for Money sits at 9.5 — at $0.60/M input against Claude Opus 4.7's $15, and with a self-hosting option that drops the API fee to zero, almost nothing competes on price-performance. Features land at 8.5 thanks to the 1M context, Agent Swarms, and dual thinking/instant modes. The drag is at the bottom: Support &amp; Documentation scores 6.0 because the docs are still thin in places, there's no enterprise SLA, and support runs through GitHub and community channels rather than a dedicated desk. Ease of Use and Integration sit in the mid-7s for the same reason — CLI-only with no IDE extension is a real ceiling for a chunk of developers. The 7.8 overall is a tool that's strong where developers optimize and weakest exactly where risk-averse buyers look first.</p>
+
+      <h2 id="benchmarks">Benchmarks and Cost Comparison</h2>
+      <p>Benchmark figures below are vendor-reported and, where noted, third-party verified. SWE-bench Verified carries the most weight because it measures real GitHub issue resolution rather than synthetic puzzles. The honest read: K2.6 is frontier-adjacent on coding, not frontier-leading — it trails Claude Opus 4.7 by 7.4 points on Verified but ties GPT-5.5 on the harder Pro split. The question isn't whether it's as good as the best closed model; it's whether the gap matters for your workloads at a 25x cost difference.</p>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Input / M</th>
+              <th>Output / M</th>
+              <th>SWE-bench</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Kimi K2.6</td><td>$0.60</td><td>$2.50</td><td>80.2% Verified · 58.6% Pro</td></tr>
+            <tr><td>DeepSeek V4-Pro</td><td>$0.435</td><td>$0.87</td><td>80.6% Verified</td></tr>
+            <tr><td>Claude Opus 4.7</td><td>$15.00</td><td>$75.00</td><td>87.6% Verified</td></tr>
+            <tr><td>GPT-5.5</td><td>~$15.00</td><td>~$60.00</td><td>~80% Pro</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Read it as a trade. Against Claude Opus 4.7, K2.6 gives up roughly 7 points of SWE-bench Verified and buys a 25x cut in input cost — for most day-to-day agentic coding, that's a trade plenty of teams will take. Against DeepSeek V4-Pro, the benchmark numbers are nearly identical and DeepSeek is marginally cheaper on raw tokens; what Kimi Code adds on top is the coding-agent layer — the CLI, MCP compatibility, and Agent Swarms — which DeepSeek's API-only model doesn't have. That's the real distinction between these two open-weight options: DeepSeek is a model, Kimi Code is an agent built around one.</p>
+
+      <h2 id="pricing">Pricing</h2>
+      <p>Pricing is verified May 2026 and splits into three paths: managed subscriptions, pay-per-token API, and self-hosting. The subscription tiers cover the CLI agent; the API is billed per million tokens via kimi.ai; and the open weights let you run it on your own hardware for infrastructure cost alone.</p>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr><th>Plan</th><th>Price</th><th>What you get</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Starter</td><td>$10 / month</td><td>K2 model, basic agent features</td></tr>
+            <tr><td>Pro</td><td>$25 / month</td><td>K2.6 preview access, higher quotas, predictable usage metrics</td></tr>
+            <tr><td>Ultra</td><td>Custom</td><td>K2.6 production, highest limits</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The API rates are where the cost case lives. Input runs $0.60/M on a cache miss, output $2.50/M, and a cache hit drops input to $0.16/M — which, for any workload with a stable system prompt (agents, RAG, repeated templates), pushes the recurring cost of that prompt close to nothing after the first call. Third-party providers — OpenRouter, DeepInfra, Fireworks — serve K2.6 at a blended $1.15–$2.15/M depending on provider and volume, which gives you redundancy and hosting paths outside Moonshot's own servers.</p>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr><th>Access path</th><th>Cost</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Kimi K2.6 API — input</td><td>$0.60 / M</td><td>Cache miss; $0.16/M on cache hit</td></tr>
+            <tr><td>Kimi K2.6 API — output</td><td>$2.50 / M</td><td>Billed via kimi.ai</td></tr>
+            <tr><td>Third-party providers</td><td>$1.15–$2.15 / M</td><td>OpenRouter, DeepInfra, Fireworks — blended</td></tr>
+            <tr><td>Self-hosted (open weights)</td><td colspan="1">Infra only</td><td>~594GB INT4 weights; ~8x H200 141GB for full 256K context</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>One caveat that matters for planning: the $25/month Pro plan gives K2.6 <em>preview</em> access, not production. Teams that need the production model at scale are routed to Ultra or custom pricing. For self-hosters, the native INT4 weights are roughly 594GB on HuggingFace, and running the full 256K-token context needs around 640GB of aggregate VRAM — call it eight H200 141GB cards. That's a serious hardware commitment, but for high-volume shops it can still undercut API spend.</p>
+
+      <div style="background: var(--accent-dim); border: 1px solid rgba(232,93,38,0.15); border-radius: 10px; padding: 16px 20px; margin-top: 16px;">
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 6px;">What Changed</div>
+        <p style="font-family: var(--sans); font-size: 0.9rem; color: var(--text); line-height: 1.65; margin: 0;">Kimi K2.6 released April 20, 2026. SWE-bench Verified improved from 76.8% (K2.5) to 80.2%; SWE-bench Pro jumped from 50.7% to 58.6%. Agent Swarms launched, coordinating up to 300 parallel agents. Native INT4 quantization was added — 2x inference speed and 50% less GPU memory versus FP16. Context accuracy above 80% past 900K tokens is now confirmed.</p>
+      </div>
+
+      <h2 id="key-features">Key Features</h2>
+
+      <p><strong>Kimi K2.6 — the model under the hood.</strong> A 1-trillion-parameter Mixture-of-Experts architecture activating 32 billion parameters per token, so serving cost tracks the 32B active count while capacity stays at 1T. It posts 80.2% on SWE-bench Verified and 58.6% on SWE-bench Pro, tying GPT-5.5 on the harder split. This is the engine everything else is built around.</p>
+
+      <p><strong>1M-token context window.</strong> A single call holds a full monorepo, a legacy codebase, or a spec-heavy domain in one shot. The detail that sets it apart: accuracy stays above 80% past 900K tokens, where frontier models tend to degrade sharply past 200K. For agents working across large codebases, that's the difference between real whole-repo reasoning and chunking compromises.</p>
+
+      <p><strong>Agent Swarms.</strong> Up to 300 K2.6 agents coordinated as a single swarm. On the BrowseComp benchmark, swarms score 86.3% versus 83.2% without — and the gap widens on naturally parallel work like multi-repo refactors and batch validation. It's the most differentiated thing Kimi Code offers; nothing else in the coding-agent space runs parallelism at this scale.</p>
+
+      <p><strong>Thinking and instant modes.</strong> A deep reasoning mode trades speed for thoroughness on hard problems; an instant mode runs fast for routine work. You switch per task rather than paying the reasoning tax on every call — a practical lever for controlling both latency and cost.</p>
+
+      <p><strong>Shell-aware CLI.</strong> Ctrl-X toggles into bash inline without leaving the agent, so you can run a command and feed the result straight back into the loop. A companion zsh-kimi-cli plugin adds AI-powered zsh completions. It's a small thing that adds up over a working day in the terminal.</p>
+
+      <p><strong>MCP compatibility — the headline for migrators.</strong> Every MCP server configured for Claude Code works in Kimi Code without modification. For any team already invested in the Claude Code MCP ecosystem, this is the feature that makes switching near-free: you don't rebuild your tooling, you point it at a different agent. This is the single most important practical detail for the target audience.</p>
+
+      <p><strong>OpenAI-compatible API.</strong> The standard OpenAI SDK works against Kimi K2.6 with an endpoint swap. Migrating an existing pipeline — whether it currently calls OpenAI, Anthropic, or anything OpenAI-shaped — is usually a single change, not a rewrite.</p>
+
+      <p><strong>Apache 2.0 license.</strong> Full open source, commercial use permitted below a 100M monthly-active-user / $20M monthly-revenue threshold. Below those numbers it's effectively MIT for most teams; above them you negotiate. Self-hosting carries no per-token fee at all.</p>
+
+      <p><strong>Native INT4 quantization.</strong> Quantization is built in, not bolted on — roughly 2x inference speed and 50% less GPU memory versus FP16. The INT4 weights land around 594GB on HuggingFace, which is what makes self-hosting the full model merely expensive rather than impractical.</p>
+
+      <p><strong>Multimodal input.</strong> Text, image, and video are all accepted, and the model supports multimodal tool-calling workflows. For coding-adjacent tasks — reading a screenshot of an error, parsing a diagram, processing a short clip — the inputs aren't limited to text.</p>
+
+      <div class="affiliate-box">
+        <h3>Evaluate Kimi Code</h3>
+        <p>Open-weight, OpenAI-compatible, MCP-ready, and priced from $0.60/M input. Run the CLI, call the API, or self-host the weights.</p>
+        <a href="https://kimi.ai" class="affiliate-btn">Visit Kimi →</a>
+        <div class="affiliate-note">We may earn a commission at no extra cost to you</div>
+      </div>
+
+      <h2 id="vs-claude-deepseek">Kimi Code vs Claude Code vs DeepSeek V4</h2>
+      <p>These are the three reference points the target audience actually weighs. Claude Code is the closed frontier benchmark; <a href="../review/deepseek-v4.html">DeepSeek V4</a> is the other open-weight cost-disruptor; Kimi Code sits between them as an open-weight agent that mirrors Claude Code's workflow. The table lays out where each one wins.</p>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Kimi Code</th>
+              <th><a href="../review/claude-code.html">Claude Code</a></th>
+              <th><a href="../review/deepseek-v4.html">DeepSeek V4-Pro</a></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Model</td><td>K2.6 (open-weight)</td><td>Opus 4.7 (closed)</td><td>V4-Pro (open-weight)</td></tr>
+            <tr><td>SWE-bench Verified</td><td>80.2%</td><td>87.6%</td><td>80.6%</td></tr>
+            <tr><td>Input price / M</td><td>$0.60</td><td>$15.00</td><td>$0.435</td></tr>
+            <tr><td>Context window</td><td>1M tokens</td><td>1M tokens</td><td>1M tokens</td></tr>
+            <tr><td>Agent capability</td><td>Swarms (300 agents)</td><td>Agent Teams</td><td>Single agent</td></tr>
+            <tr><td>Open source</td><td>✓ Apache 2.0</td><td>✗</td><td>✓ MIT</td></tr>
+            <tr><td>MCP compatible</td><td>✓ (Claude Code MCPs work)</td><td>✓ Native</td><td>✗</td></tr>
+            <tr><td>CLI</td><td>✓</td><td>✓</td><td>API only</td></tr>
+            <tr><td>IDE extension</td><td>✗</td><td>VS Code + JetBrains</td><td>✗</td></tr>
+            <tr><td>Chinese company</td><td>✓</td><td>✗</td><td>✓</td></tr>
+            <tr><td>Best for</td><td>Cost-conscious devs, MCP migration</td><td>Complex autonomous tasks</td><td>High-volume API workloads</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The pattern is clean. If absolute capability on the hardest autonomous tasks is the priority and budget isn't the binding constraint, Claude Code's 87.6% and native IDE extensions still lead. If you want the lowest raw token cost for high-volume API workloads and don't need an agent layer, DeepSeek V4-Pro edges it on price. Kimi Code wins the specific middle ground that a lot of teams actually occupy: you want a Claude Code–style agent, you want to keep your MCP setup, and you want the bill to drop by an order of magnitude. For that profile, it's the most logical switch.</p>
+
+      <h2 id="the-chinese-company-question">The Chinese Company Question</h2>
+      <p>This is the part of the evaluation that has nothing to do with the benchmark and everything to do with whether you can deploy it. Moonshot AI is a Chinese lab, and for US and EU organizations that introduces the same set of concerns DeepSeek raises: where does your data physically go, who can compel access to it, and does routing prompts and source code to a Chinese company's API servers create a GDPR, contractual, or geopolitical exposure your legal and security teams won't approve.</p>
+      <p>These are legitimate questions, not a reason to dismiss the tool — and the distinction matters. A regulated enterprise handling customer data or proprietary source under EU residency rules has a genuine blocker on the hosted API. A solo developer, a startup below the license threshold, or a team working non-sensitive code faces a far lower bar. And the Apache 2.0 release changes the calculus for anyone with infrastructure: self-hosting keeps every token inside your own environment, which neutralizes the data-routing concern at the cost of running ~640GB of VRAM yourself. Several of the third-party providers also host outside China, which is a middle path worth investigating when the tool fits but the default endpoint doesn't.</p>
+      <p>The honest framing is the same one we applied to DeepSeek: treat data residency as a hard gate to clear before the cost savings matter, not as a footnote. If your compliance posture rules out a Chinese-hosted API and you can't self-host, the 25x price advantage is irrelevant — the tool isn't deployable for you. If it doesn't, or you can route around it, the cost case stands on its own.</p>
+
+      <div class="users-saying" style="margin:48px 0;">
+        <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Community Sentiment</div>
+        <h2 id="what-users-are-saying" style="font-family:var(--display);font-size:1.75rem;font-weight:800;color:var(--text);margin:0 0 8px 0;">What Users Are Saying</h2>
+        <p style="font-family:var(--sans);font-size:0.95rem;color:var(--text2);margin:0 0 32px 0;line-height:1.6;">We track discussion across GitHub, Hacker News, developer forums, and independent Medium testing to understand how Kimi Code holds up on real workloads — and where the hesitations are. The response so far is strongly positive on cost-performance, with the Claude Code community taking notice; the recurring reservations are CLI-only access and the Chinese-company compliance question.</p>
+
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:32px;display:flex;gap:40px;flex-wrap:wrap;">
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--accent)">80.2%</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">SWE-bench Verified</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">~25x</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Cheaper / Token</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">300</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Swarm Agents</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">6.4K+</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">GitHub Stars</div></div>
+        </div>
+
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:#22a05a;">●</span> What developers consistently praise</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"MCP servers configured for Claude Code work in Kimi Code without modification. For any team already invested in the Claude Code MCP ecosystem, the migration cost is near zero. The 25x cost reduction is hard to ignore."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Medium independent review · April 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"Agent Swarms running 300 coordinated K2.6 instances is a genuinely new primitive. On multi-repo refactors and batch validation tasks, the parallel execution is meaningfully faster than single-agent alternatives."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Developer community analysis · May 2026</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:var(--accent);">●</span> Common reservations</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"The CLI-only limitation is real friction. Claude Code has VS Code and JetBrains extensions. Kimi Code is terminal-only in June 2026. For developers who live in their IDE, that's a meaningful workflow difference."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Developer review · May 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"Same Chinese company concern as DeepSeek. The open-weight license and self-hosting option partially mitigate it — but for enterprise teams with compliance requirements, it's a hard gate, not a soft preference."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Hacker News · April 2026</div>
+          </div>
+        </div>
+
+        <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.15);border-radius:12px;padding:20px 24px;">
+          <div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:8px;">AIToolGrade Take</div>
+          <p style="font-family:var(--sans);font-size:0.93rem;color:var(--text);line-height:1.7;margin:0;">Kimi Code's value proposition mirrors DeepSeek V4's but with a coding-agent layer on top: open-weight model, Apache 2.0 license, MCP compatibility, and API pricing roughly 25x below Claude Opus 4.7 at 80.2% SWE-bench performance. The Agent Swarms capability is genuinely differentiated — 300 coordinated parallel agents have no direct equivalent in Claude Code or any other coding agent at any price. The honest constraints are the same as DeepSeek's: Chinese-company data-residency concerns apply to enterprise teams, and CLI-only availability creates friction for IDE-first developers. For Claude Code users specifically, Kimi Code is the most frictionless migration path in the open-weight category — same MCP ecosystem, same interaction model, 25x lower API cost. The real question is whether the 7.4-point SWE-bench gap (80.2% vs 87.6%) matters for your specific workloads. For most day-to-day agentic coding, the answer is likely no.</p>
+        </div>
+      </div>
+
+      <h2 id="the-bottom-line">The Bottom Line</h2>
+      <p>Kimi Code is the clearest sign yet that the open-weight category is no longer just about cheap models — it's about cheap <em>agents</em>. Moonshot took the Claude Code playbook, matched it on interaction model and MCP compatibility, wrapped it around a frontier-adjacent K2.6 model scoring 80.2% on SWE-bench Verified, and priced the underlying API at roughly a twenty-fifth of Claude Opus 4.7. Then it added something the closed competitor doesn't have at all: Agent Swarms of up to 300 coordinated instances. On price-performance for agentic coding, very little else in 2026 is in the same conversation.</p>
+      <p>The reasons to hesitate are real and specific, and none of them are about whether the model can code. It's CLI-only in June 2026 — no native IDE extension, so editor-first developers feel the friction immediately. The $25/month Pro plan is preview access, not production K2.6. Documentation is still maturing. And the data-residency question for a Chinese-hosted API is a genuine gate for regulated organizations — clear it before the savings mean anything, because if you can't, they don't. There's also the 7.4-point SWE-bench gap behind Claude Opus 4.7, which is noise for routine work and signal for the hardest autonomous tasks.</p>
+      <p>So the recommendation is conditional and specific. <strong>Best for:</strong> cost-conscious developers running high-volume coding workloads; Claude Code users who want to migrate to a cheaper alternative while keeping their MCP setup; teams that need Agent Swarms for naturally parallel work; and solo developers and startups under the 100M MAU / $20M revenue threshold who want effectively-MIT commercial use. <strong>Not for:</strong> enterprise teams with US/EU data-residency requirements that can't self-host, IDE-first developers who need a VS Code or JetBrains extension, teams requiring enterprise SLAs or compliance certifications, or production use at the K2.6 level without Ultra pricing. If you're already invested in the Claude Code MCP ecosystem and watching your API bill, Kimi Code is the most rational alternative to evaluate first. If you want the absolute ceiling on autonomous capability or a turnkey IDE assistant, <a href="../review/claude-code.html">Claude Code</a> and <a href="../review/github-copilot.html">GitHub Copilot</a> remain the more practical picks. This score reflects the June 2026 state of a fast-moving release; we'll revisit it as IDE support and production access mature.</p>
+    </div>
+  </div>
+
+  <div class="review-sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-title">Overall score</div>
+      <div class="sidebar-score">
+        <div class="sidebar-score-num">7.8</div>
+        <div>
+          <div style="color:var(--accent);font-size:18px;letter-spacing:-1px">★★★★</div>
+          <div class="sidebar-score-label">out of 10</div>
+        </div>
+      </div>
+      <div class="sidebar-title" style="margin-top:16px">Pricing</div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Pro plan</span><span class="sidebar-price-val">$25/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">API input / M</span><span class="sidebar-price-val">$0.60</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">API output / M</span><span class="sidebar-price-val">$2.50</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Cache hit / M</span><span class="sidebar-price-val">$0.16</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">License</span><span class="sidebar-price-val">Apache 2.0</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Self-host</span><span class="sidebar-price-val">✓ Yes</span></div>
+      <a href="https://kimi.ai" class="sidebar-cta">Visit Kimi →</a>
+      <div class="sidebar-disclosure">We may earn a commission</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">AI Tool<span>Grade</span></div><p class="footer-desc">Independent reviews and comparisons of AI tools. Researched, fact-checked, and independently rated.</p></div>
+    <div><div class="footer-col-title">Reviews</div><div class="footer-links"><a href="../category/writing.html">AI Writing</a><a href="../category/coding.html">AI Coding</a><a href="../category/image.html">AI Image</a><a href="../category/automation.html">Automation</a><a href="../category/productivity.html">Productivity</a></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="../about.html">About</a><a href="../how-we-review.html">How we review</a><a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
+    <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+</footer>
+</body></html>

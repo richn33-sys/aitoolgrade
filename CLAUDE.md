@@ -49,7 +49,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── claude-code.html         (AI Coding, 8.0)
 │   ├── kimi-code.html           (AI Coding, 7.8)
 │   ├── midjourney.html          (AI Image, 7.8)
-│   ├── adobe-firefly.html       (AI Image, 8.4)
+│   ├── adobe-firefly.html       (AI Image, 8.7)
 │   ├── leonardo-ai.html         (AI Image, 8.7)
 │   ├── zapier.html              (Automation, 8.1)
 │   ├── n8n.html                 (Automation, 8.3)
@@ -685,6 +685,13 @@ Next content priorities (from May 24, 2026 session):
 - ChatGPT, Cursor, Grammarly, Perplexity, Jasper, Notion AI pricing all updated ✅
 
 ## Search Console Optimization
+
+### June 6, 2026 — Adobe Firefly deep rewrite (ranking improvement)
+- review/adobe-firefly.html — target query "adobe firefly review"
+- Position before: 20.7 (96 impressions)
+- Action taken: deep rewrite → 2,400+ words. New title "Adobe Firefly Review 2026: Runway Video, FLUX.2, and the Model Marketplace Strategy". Added "What Adobe Firefly Is in 2026" feature section, "The Model Marketplace Angle" (Dec 2025 Runway Gen-4.5 partnership + FLUX.2 + video editor beta), Firefly vs Midjourney vs Runway comparison table, "Who Adobe Firefly Is For" section, credit-system honesty callout. Pricing restructured (Free 25cr, Standard $9.99/2K, Pro $19.99/4K, Premium $199.99/50K). Score corrected 8.4 → 8.7 (synced across reviews.html, compare.html, category/image.html). Community Sentiment refreshed (G2 4.5, Capterra 4.6, 40%+ pros on CC). Internal links to midjourney/runway/leonardo-ai reviews. dateModified 2026-06-05.
+- Author: Marcus Veil. Removed "Hands-on tested" → "Research verified".
+- Monitor position movement week of June 13, 2026.
 
 ### June 6, 2026 — Bolt.new deep rewrite (ranking improvement)
 - review/bolt.html — target query "bolt.new review"

@@ -41,7 +41,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── cursor.html              (AI Coding, 9.4)
 │   ├── github-copilot.html      (AI Coding, 8.9)
 │   ├── windsurf.html            (AI Coding, 8.2)
-│   ├── bolt.html                (AI Coding, 8.6)
+│   ├── bolt.html                (AI Coding, 8.3)
 │   ├── replit.html              (AI Coding, 8.3)
 │   ├── lovable.html             (AI Coding, 8.1)
 │   ├── google-antigravity.html  (AI Coding, 7.5)
@@ -685,6 +685,13 @@ Next content priorities (from May 24, 2026 session):
 - ChatGPT, Cursor, Grammarly, Perplexity, Jasper, Notion AI pricing all updated ✅
 
 ## Search Console Optimization
+
+### June 6, 2026 — Bolt.new deep rewrite (ranking improvement)
+- review/bolt.html — target query "bolt.new review"
+- Position before: 11.6 (252 impressions, near page 1 but no clicks)
+- Action taken: deep rewrite ~1,300 words → 2,800+ words. New title "Bolt.new Review 2026: WebContainers, Figma Import, and the Token Problem". Added "What Bolt.new Does in 2026" feature section, "The Token Problem" section, Bolt vs Lovable vs Replit comparison table, "Who Bolt.new Is For" section. Score corrected 8.6 → 8.3 (synced across reviews.html, compare.html, category/coding.html). Community Sentiment refreshed (1M+ sites, 89K r/vibecoding, $105.5M Series B). Internal links to lovable/replit/cursor reviews + best-ai-app-builders-2026 blog. dateModified 2026-06-05.
+- Author: Marcus Veil. Removed "Hands-on tested" → "Research verified".
+- Monitor position movement week of June 13, 2026.
 
 ### June 3, 2026 — New reviews published
 - review/heygen.html — 8.1/10, Priya Nolan, AI Video

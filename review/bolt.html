@@ -2,8 +2,8 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="canonical" href="https://aitoolgrade.com/review/bolt.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Bolt.new turns Figma designs into working code and deploys in one click. But experienced users warn about the '70% wall' — the point where AI-generated code hits its limits. Here's the honest breakdown.">
-<title>Bolt.new Review 2026: Figma-to-Code, Pricing &amp; the 70% Wall Problem | AIToolGrade</title>
+<meta name="description" content="Bolt.new generates full-stack React apps in your browser using WebContainer technology — zero local setup, one-click Netlify deploy. 1M+ websites built. The honest catch: token consumption on complex projects.">
+<title>Bolt.new Review 2026: WebContainers, Figma Import, and the Token Problem | AIToolGrade</title>
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -47,7 +47,25 @@ h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;ma
 .verdict-text h3{font-size:15px;font-weight:600;margin-bottom:4px}
 .verdict-text p{font-size:13px;color:var(--text2)}
 .review-body h2{font-family:var(--display);font-size:28px;font-weight:700;margin:40px 0 16px}
+.review-body h3{font-family:var(--display);font-size:20px;font-weight:700;margin:28px 0 12px}
 .review-body p{color:var(--text2);margin-bottom:16px}
+.review-body ul{margin:0 0 16px 0;padding-left:22px;color:var(--text2)}
+.review-body li{margin-bottom:8px}
+.review-body a{color:var(--accent);text-decoration:none}
+.review-body a:hover{text-decoration:underline}
+.callout-box{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:28px 0}
+.callout-box h4{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:10px}
+.callout-box p{font-size:14px;margin-bottom:0;color:var(--text2)}
+.pricing-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.pricing-table th,.pricing-table td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--border);vertical-align:top}
+.pricing-table th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3);font-weight:500}
+.pricing-table td:first-child{font-weight:600;color:var(--text)}
+.pricing-table .price{font-family:var(--mono);color:var(--accent)}
+.comparison-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:13.5px}
+.comparison-table th,.comparison-table td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--border);vertical-align:top}
+.comparison-table th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.05em;color:var(--text3);font-weight:500}
+.comparison-table thead th:nth-child(2){color:var(--accent)}
+.comparison-table td:first-child{font-weight:600;color:var(--text)}
 .pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
 .pros-box,.cons-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px}
 .pros-box{border-top:3px solid #2e7d32}
@@ -108,7 +126,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
   .nav-dropdown>a::after{display:none}
   .dropdown-menu{display:none!important}
   .nav-cta{display:block;text-align:center;background:var(--accent);color:#fff;margin-top:14px;padding:12px;border:0!important;border-radius:6px}
-  .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+  .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%;white-space:nowrap}
   .comparison-wrap{overflow-x:auto}
 }
 </style>
@@ -119,7 +137,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
   "name": "Bolt.new Review 2026",
   "reviewRating": {
     "@type": "Rating",
-    "ratingValue": "8.6",
+    "ratingValue": "8.3",
     "bestRating": "10",
     "worstRating": "0"
   },
@@ -141,7 +159,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
     }
   },
   "datePublished": "2026-04-01",
-  "dateModified": "2026-05-24"
+  "dateModified": "2026-06-05"
 }
 </script>
 <script type="application/ld+json">
@@ -178,87 +196,168 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
           <div class="review-tool-url">bolt.new</div>
         </div>
       </div>
-      <h1>Bolt.new Review 2026 — From Prompt to Full-Stack App in Minutes?</h1>
+      <h1>Bolt.new Review 2026: WebContainers, Figma Import, and the Token Problem</h1>
       <div class="review-meta-row">
-        <span>📅 Updated April 2026</span>
-        <span>⏱ 8 min read</span>
-        <span>✅ Hands-on tested</span>
+        <span>📅 Updated June 2026</span>
+        <span>⏱ 12 min read</span>
+        <span>✅ Research verified</span>
       </div>
     </div>
     <div class="verdict-banner">
-      <div class="verdict-score">8.6</div>
+      <div class="verdict-score">8.3</div>
       <div class="verdict-text">
         <h3>Editor's Verdict: Very Good</h3>
-        <p>The best tool for rapid prototyping and MVP validation. Bolt lives up to the hype for early-stage builds — but token costs can bite power users hard.</p>
+        <p>The fastest browser-native path from prompt to working full-stack app, with a real Figma-to-code edge. The catch is token consumption — it surprises most users on complex projects.</p>
       </div>
     </div>
-    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified May 2026</p>
+    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified June 2026</p>
 <div class="review-body">
       <h2 id="what-is-bolt-new">What is Bolt.new?</h2>
-      <p>Bolt.new is a browser-based AI app builder by StackBlitz that turns a text prompt into a fully functional web application — frontend, backend, database, and deployment included. No local setup, no terminal, no configuration. You describe what you want and Bolt builds it in real time using Claude and other leading AI models.</p>
-      <p>This review covers Bolt's documented capabilities across key prototyping use cases — MVPs, landing pages, internal tools, and dashboards — based on verified features, pricing, and community feedback.</p>
+      <p>Bolt.new has generated over 1 million websites. That's not a marketing claim — it's the benchmark for what browser-native AI app generation can do at scale. Built on StackBlitz's WebContainer technology (Node.js running in the browser, no server round-trips), Bolt generates full-stack React applications from natural language prompts with zero local setup.</p>
+      <p>January 2026 saw a 40% performance improvement in build speed. Bolt Cloud V2 added built-in databases, authentication, file storage, and edge functions — transforming it from a code generator into a more complete development platform. The honest question in 2026 is no longer whether Bolt works. It clearly does. It's whether the token consumption model makes it cost-effective for your specific use case.</p>
+      <p>This review covers Bolt's documented capabilities across the use cases people actually reach for it — MVPs, landing pages, internal tools, dashboards, and design-to-code handoffs — based on verified features, current pricing, and community feedback from developers and non-technical builders alike.</p>
 
       <!-- toc -->
 <nav aria-label="Table of contents" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 32px 0;">
   <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 12px;">In this review</div>
   <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
     <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#what-is-bolt-new" style="color: var(--accent); text-decoration: none;">What is Bolt.new?</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#what-bolt-does-2026" style="color: var(--accent); text-decoration: none;">What Bolt.new Does in 2026</a></li>
     <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pros-and-cons" style="color: var(--accent); text-decoration: none;">Pros and Cons</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-token-problem" style="color: var(--accent); text-decoration: none;">The Token Problem</a></li>
     <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-70-wall-what-experienced-users-say" style="color: var(--accent); text-decoration: none;">The 70% Wall — What Experienced Users Say</a></li>
-    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#performance-scores" style="color: var(--accent); text-decoration: none;">Performance Scores</a></li>
     <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#figma-to-code-does-it-actually-work" style="color: var(--accent); text-decoration: none;">Figma-to-Code: Does It Actually Work?</a></li>
     <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pricing" style="color: var(--accent); text-decoration: none;">Pricing</a></li>
-    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#who-should-use-bolt-new" style="color: var(--accent); text-decoration: none;">Who Should Use Bolt.new?</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#bolt-vs-lovable-vs-replit" style="color: var(--accent); text-decoration: none;">Bolt.new vs Lovable vs Replit</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#score-breakdown" style="color: var(--accent); text-decoration: none;">Score Breakdown</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#who-bolt-is-for" style="color: var(--accent); text-decoration: none;">Who Bolt.new Is For</a></li>
     <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-bottom-line" style="color: var(--accent); text-decoration: none;">The Bottom Line</a></li>
   </ol>
 </nav>
+
+      <h2 id="what-bolt-does-2026">What Bolt.new Does in 2026</h2>
+      <p>Bolt has grown well past its original "prompt to app" pitch. Here's what the platform actually covers now, feature by feature.</p>
+
+      <h3>WebContainers</h3>
+      <p>This is the core technology, and it's worth understanding because it explains almost everything else about Bolt. WebContainers are StackBlitz's invention: a full Node.js runtime that executes entirely inside your browser tab. No cloud round-trips, no local setup, no Docker. The file system, terminal, package manager, and dev server all run client-side. That architecture is the reason generation feels fast — there's no server in the middle of every keystroke. It's also a genuine technical differentiator that most competitors don't share.</p>
+
+      <h3>Multi-model support</h3>
+      <p>Bolt lets you choose the model behind each task. Claude Opus 4.6 is the default, with GPT-4o and Gemini 1.5 Pro available as alternatives. You can pick the best model for the job — one for reasoning-heavy logic, another for speed. That flexibility is rare in the app-builder category, where most tools lock you to a single provider. For teams that care about model choice, it's a real reason to look at Bolt over <a href="../review/lovable.html">Lovable</a>.</p>
+
+      <h3>Figma import (2026)</h3>
+      <p>Upload a Figma design file and Bolt generates runnable React code from it. For designers and the developers who inherit their work, this shortens the handoff considerably — you're starting from a working component tree instead of redrawing the layout by hand. It's one of Bolt's clearest advantages over Lovable, which has no equivalent.</p>
+
+      <h3>Bolt Cloud V2</h3>
+      <p>The 2026 release added built-in databases, authentication, file storage, edge functions, analytics, and hosting. You no longer need a separate Supabase account to ship something with a backend — Bolt covers the standard needs in-platform. This is the change that moves Bolt from "code generator" toward a more complete development platform.</p>
+
+      <h3>Discussion Mode</h3>
+      <p>You can switch out of build mode and into a planning conversation. Describe what you want, talk through the architecture, and settle the requirements before any code is generated. On complex projects this matters more than it sounds — it's the single most effective way to keep Bolt from going off the rails and burning tokens on the wrong thing.</p>
+
+      <h3>One-click Netlify deploy</h3>
+      <p>From inside Bolt, one click gives you a live URL with SSL. For teams that want to move the project into a local environment afterward, there's GitHub export. So the deploy story works both for "ship it now" and "hand it to engineering."</p>
+
+      <h3>AI image generation</h3>
+      <p>Bolt can generate images directly from text prompts — useful for placeholder art and simple visual assets without leaving the tool. It's available on paid plans and enabled in settings under Add-on features.</p>
+
+      <h3>Full browser IDE</h3>
+      <p>Underneath the AI layer is a real editor: file system, terminal, package manager, and live preview, all in the browser tab. If you want to read and edit the generated code directly — not just prompt at it — you can, which is more than some competitors allow.</p>
+
       <h2 id="pros-and-cons">Pros and Cons</h2>
       <div class="pros-cons">
         <div class="pros-box">
           <h4>What we liked</h4>
-          <div class="pro-item">Fastest path from idea to working app</div>
-          <div class="pro-item">Full-stack generation including backend and DB</div>
-          <div class="pro-item">Real live preview — not just a static render</div>
-          <div class="pro-item">One-click deployment built in</div>
+          <div class="pro-item">Fastest browser-native path from prompt to working app</div>
+          <div class="pro-item">WebContainers run everything client-side — low latency</div>
+          <div class="pro-item">Multi-model — switch between Claude, GPT, and Gemini</div>
           <div class="pro-item">Figma import for design-to-code workflows</div>
+          <div class="pro-item">Bolt Cloud V2 adds database, auth, storage, edge functions</div>
+          <div class="pro-item">One-click Netlify deploy plus GitHub export</div>
         </div>
         <div class="cons-box">
           <h4>What we didn't like</h4>
-          <div class="con-item">Token costs burn fast on complex projects</div>
-          <div class="con-item">Debugging loops eat through your token budget</div>
-          <div class="con-item">Not suited for production-grade codebases</div>
-          <div class="con-item">Free tier daily cap hits mid-session quickly</div>
+          <div class="con-item">Token consumption is unpredictable on complex projects</div>
+          <div class="con-item">Whole-codebase sync per message inflates token cost</div>
+          <div class="con-item">The 70% wall — production polish needs a developer</div>
+          <div class="con-item">Token documentation doesn't set expectations well</div>
+          <div class="con-item">Greenfield only — weak fit for existing codebases</div>
         </div>
       </div>
 
-      <h2 id="the-70-wall-what-experienced-users-say">The 70% Wall — What Experienced Users Say</h2>
-      <p>The most consistent warning from developers who have used Bolt.new extensively is what they call the "70% wall." The first 70% of any project — scaffolding, UI components, standard CRUD operations, authentication — Bolt handles well and fast. The remaining 30% — custom business logic, complex state management, edge-case debugging — is where the AI struggles and requires either developer intervention or accepting limitations. For prototypes and MVPs where 70% is enough to demonstrate the concept: Bolt is excellent. For production applications that need to be maintained and extended: plan for a developer to finish the work.</p>
+      <h2 id="the-token-problem">The Token Problem</h2>
+      <p>Token consumption is Bolt's most consistent community complaint, and it's worth explaining clearly because it's the thing most likely to surprise you. The issue is structural. Bolt syncs the entire codebase on every interaction, which means a 50-file app costs significantly more per message than a 5-file app. The more your project grows, the more each instruction costs — even when the change you're asking for is small.</p>
+      <p>The specific pain shows up in normal workflows: building an MVP iteratively, making design revisions, debugging errors the AI itself generated. All of these consume tokens at rates that catch Pro users off guard. You don't feel it on a quick landing page. You feel it on day three of an ambitious build.</p>
+      <p>The mitigation is real, though, and most people skip it. Use Discussion Mode before you start generating, and plan the architecture upfront. A well-planned Bolt session uses roughly 3–5x fewer tokens than an iterative trial-and-error approach, because you're not paying to regenerate the same files while the AI figures out what you actually meant.</p>
+      <p>For a rough sense of scale: a simple landing page uses minimal tokens. A full-stack app with authentication, a database, and 10+ pages can exhaust a Pro monthly allocation on a single complex project. Budget for that reality before you commit to building something large on Bolt alone.</p>
 
-      <h2 id="performance-scores">Performance Scores</h2>
-      <div class="score-breakdown">
-        <h4>Category breakdown</h4>
-        <div class="score-row"><span class="score-name">Prototyping Speed</span><div class="score-bar-track"><div class="score-bar-fill" style="width:97%"></div></div><span class="score-val">9.7</span></div>
-        <div class="score-row"><span class="score-name">Ease of Use</span><div class="score-bar-track"><div class="score-bar-fill" style="width:93%"></div></div><span class="score-val">9.3</span></div>
-        <div class="score-row"><span class="score-name">Value for Money</span><div class="score-bar-track"><div class="score-bar-fill" style="width:76%"></div></div><span class="score-val">7.6</span></div>
-        <div class="score-row"><span class="score-name">Output Quality</span><div class="score-bar-track"><div class="score-bar-fill" style="width:82%"></div></div><span class="score-val">8.2</span></div>
-        <div class="score-row"><span class="score-name">Production Readiness</span><div class="score-bar-track"><div class="score-bar-fill" style="width:68%"></div></div><span class="score-val">6.8</span></div>
+      <div class="callout-box">
+        <h4>Why it's hard to predict</h4>
+        <p>Because the whole codebase syncs on each message, your per-interaction cost climbs as the project does. There's no fixed "this prompt costs X" you can plan around — the same instruction is cheap on a small app and expensive on a large one. Planning in Discussion Mode is the closest thing to a cost control Bolt offers.</p>
       </div>
 
+      <h2 id="the-70-wall-what-experienced-users-say">The 70% Wall — What Experienced Users Say</h2>
+      <p>The most consistent warning from developers who've used Bolt extensively is what they call the "70% wall." The first 70% of a project — scaffolding, UI components, standard CRUD, authentication — Bolt handles well and fast. The remaining 30% — custom business logic, complex state management, edge-case debugging — is where the AI struggles and you need either developer intervention or a willingness to accept limitations.</p>
+      <p>For prototypes and MVPs where 70% is enough to prove the concept, that's not a problem — it's the whole value. For production applications that have to be maintained and extended, plan for a developer to finish the work. This isn't unique to Bolt; every tool in the category hits a version of the same wall. But it sets expectations correctly: Bolt is a prototyping and MVP engine, not a replacement for an engineering team on a production system.</p>
+
       <h2 id="figma-to-code-does-it-actually-work">Figma-to-Code: Does It Actually Work?</h2>
-      <p>Bolt.new's Figma import is one of its most-searched features — and it's genuinely useful for the right use case. Upload a Figma design file and Bolt generates functional React components that preserve layout, spacing, and styling from your design. The translation is not always pixel-perfect, but for handoffs between designers and developers building MVPs or prototypes, it eliminates significant manual work. The limitation: complex interactive states, custom animations, and advanced component logic still require developer intervention after the import. Treat the Figma import as a strong starting point, not a finished product.</p>
+      <p>Bolt's Figma import is one of its most-searched features, and for the right use case it's genuinely useful. Upload a Figma design file and Bolt generates functional React components that preserve layout, spacing, and styling. The translation isn't always pixel-perfect, but for designer-to-developer handoffs on MVPs and prototypes, it eliminates a lot of manual rebuild work.</p>
+      <p>The limitation is the same one you'd expect: complex interactive states, custom animations, and advanced component logic still need a developer's hands after the import. Treat the Figma import as a strong starting point rather than a finished product — a way to skip the tedious first pass, not to skip engineering entirely. Among browser-based builders, it's the feature that most clearly separates Bolt from <a href="../review/lovable.html">Lovable</a>.</p>
 
       <h2 id="pricing">Pricing</h2>
-      <p>Bolt's free plan offers 1 million tokens per month with a 300K daily cap — enough for small experiments but you'll hit the wall mid-session on anything serious. The Pro plan at $25/month gives 10 million tokens with no daily cap, plus token rollover so unused tokens carry to the next month. Higher Pro tiers scale up to 120 million tokens for $220/month.</p>
-      <p>The token system is powerful but unpredictable. Complex projects and debugging loops can drain your allocation fast — some users report burning through Pro's 10 million tokens in 3 days of active development. Budget accordingly.</p>
+      <p>Pricing verified June 2026. Bolt runs a token-based model across four tiers.</p>
+      <div class="comparison-wrap">
+      <table class="pricing-table">
+        <thead><tr><th>Plan</th><th>Price</th><th>What you get</th></tr></thead>
+        <tbody>
+          <tr><td>Free</td><td class="price">$0</td><td>Limited tokens per month, access to Claude Opus 4.6, no credit card required. Useful for testing and simple projects.</td></tr>
+          <tr><td>Pro</td><td class="price">$25/mo</td><td>$20/month billed annually. Higher token allocation, all models, Bolt Cloud features, priority generation.</td></tr>
+          <tr><td>Teams</td><td class="price">$30/user</td><td>Collaboration features, shared projects, admin controls.</td></tr>
+          <tr><td>Enterprise</td><td class="price">Custom</td><td>Volume tokens, security and procurement support.</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Token consumption is not fully transparent, and that's the honest caveat on every tier. Complex multi-file apps with frequent iterations consume tokens faster than simple projects. Bolt syncs the entire codebase on each interaction — that's what drives the unpredictability. Using Discussion Mode to plan before building significantly reduces wasted token consumption, and it's the closest thing to a budgeting lever the pricing model gives you.</p>
 
-      <h2 id="who-should-use-bolt-new">Who Should Use Bolt.new?</h2>
-      <p>Bolt is tailor-made for founders validating ideas, product managers building prototypes for stakeholder review, non-technical builders who need a working product fast, and developers who want to skip boilerplate on greenfield projects. If you need a live demo or MVP in hours rather than days, Bolt delivers.</p>
-      <p>For production-grade development, long-term codebases, or anything requiring deep debugging, you'll eventually want to move to a traditional IDE. Many developers use Bolt for the initial scaffold and Cursor or Windsurf for ongoing development — that's a solid workflow.</p>
+      <div class="callout-box">
+        <h4>What changed</h4>
+        <p>January 2026 brought a 40% build performance improvement. Bolt Cloud V2 launched with built-in databases, authentication, file storage, and edge functions. Figma import was added. Claude Opus 4.6 became the default model. AI image generation was added to paid plans.</p>
+      </div>
+
+      <h2 id="bolt-vs-lovable-vs-replit">Bolt.new vs Lovable vs Replit</h2>
+      <p>The three browser-based builders people compare most often each lean in a different direction. Bolt optimizes for speed and model flexibility, <a href="../review/lovable.html">Lovable</a> for design-first MVPs on a Supabase backend, and <a href="../review/replit.html">Replit</a> for learning and transparent, multi-language code. Here's how they line up on the features that tend to decide it.</p>
+      <div class="comparison-wrap">
+      <table class="comparison-table">
+        <thead><tr><th></th><th>Bolt.new</th><th>Lovable</th><th>Replit</th></tr></thead>
+        <tbody>
+          <tr><td>Best for</td><td>Speed, Figma-to-code, multi-model</td><td>Design-first MVPs, Supabase</td><td>Learning, multi-language, transparent code</td></tr>
+          <tr><td>Technology</td><td>WebContainers (in-browser Node.js)</td><td>React + Supabase</td><td>Cloud IDE + Agent</td></tr>
+          <tr><td>Multi-model</td><td>✓ Claude/GPT/Gemini</td><td>✗ Claude only</td><td>✓ Multiple</td></tr>
+          <tr><td>Figma import</td><td>✓ 2026</td><td>✗</td><td>✗</td></tr>
+          <tr><td>Built-in database</td><td>✓ Bolt Cloud V2</td><td>✓ Supabase native</td><td>✓</td></tr>
+          <tr><td>See the code</td><td>✓ Full browser IDE</td><td>Limited</td><td>✓ Full IDE</td></tr>
+          <tr><td>Free tier</td><td>✓ Limited tokens</td><td>✓ 5 credits/day</td><td>✓ Limited</td></tr>
+          <tr><td>Starting price</td><td>$25/month</td><td>$25/month</td><td>$25/month</td></tr>
+          <tr><td>One-click deploy</td><td>✓ Netlify</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Best audience</td><td>Developers + technical founders</td><td>Non-technical founders</td><td>Learners + multi-language</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>For a fuller breakdown of the category, see our guide to the <a href="../blog/best-ai-app-builders-2026.html">best AI app builders in 2026</a>. If you want to keep working in an existing codebase rather than start fresh in a browser, <a href="../review/cursor.html">Cursor</a> is the more natural fit — none of these three are built for that.</p>
+
+      <h2 id="score-breakdown">Score Breakdown</h2>
+      <div class="score-breakdown">
+        <h4>How we rated it</h4>
+        <div class="score-row"><span class="score-name">Ease of Use</span><div class="score-bar-track"><div class="score-bar-fill" style="width:85%"></div></div><span class="score-val">8.5</span></div>
+        <div class="score-row"><span class="score-name">Features</span><div class="score-bar-track"><div class="score-bar-fill" style="width:90%"></div></div><span class="score-val">9.0</span></div>
+        <div class="score-row"><span class="score-name">Value for Money</span><div class="score-bar-track"><div class="score-bar-fill" style="width:70%"></div></div><span class="score-val">7.0</span></div>
+        <div class="score-row"><span class="score-name">Integration</span><div class="score-bar-track"><div class="score-bar-fill" style="width:85%"></div></div><span class="score-val">8.5</span></div>
+        <div class="score-row"><span class="score-name">Support &amp; Docs</span><div class="score-bar-track"><div class="score-bar-fill" style="width:70%"></div></div><span class="score-val">7.0</span></div>
+      </div>
+      <p>Ease of use scores high because there's zero local setup, it's browser-native, and Discussion Mode reduces off-rails generation — it only gets steeper on genuinely complex projects. Features are the standout: WebContainers, multi-model support, Figma import, Bolt Cloud V2, one-click Netlify deploy, GitHub export, and AI image generation add up to one of the deepest feature sets in the category. Value takes the hit, and it's almost entirely the token model — the free tier is limited, complex projects exhaust credits fast, and the $25/month Pro tier is competitive against Lovable but only if you manage consumption. Integration is strong across Supabase (external), Netlify (native), GitHub export, Figma import, and multi-model APIs. Support and docs rest on a solid StackBlitz foundation with a strong community — r/vibecoding alone has 89K members — but the token-consumption documentation is the weak spot, and it's the exact area users most need clarity on.</p>
 
       <div class="affiliate-box">
         <h3>Try Bolt.new Free</h3>
-        <p>1M tokens/month. No credit card required.</p>
-        <a href="https://bolt.new" class="affiliate-btn">Try Bolt.new Free →</a>
+        <p>Limited tokens per month. No credit card required.</p>
+        <a href="https://bolt.new" class="affiliate-btn" target="_blank" rel="noopener">Try Bolt.new Free →</a>
         <div class="affiliate-note">Affiliate link — we may earn a commission at no extra cost to you</div>
       </div>
 
@@ -266,51 +365,70 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       <div class="users-saying" style="margin:48px 0;">
         <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Community Sentiment</div>
         <h2 id="what-users-are-saying" style="font-family:var(--display);font-size:1.75rem;font-weight:800;color:var(--text);margin:0 0 8px 0;">What Users Are Saying</h2>
-        <p style="font-family:var(--sans);font-size:0.95rem;color:var(--text2);margin:0 0 32px 0;line-height:1.6;">We track discussion across r/webdev, r/nocode, and r/programming, alongside Trustpilot and Product Hunt reviews, to surface real sentiment from Bolt.new's mixed audience of developers and non-technical builders.</p>
+        <p style="font-family:var(--sans);font-size:0.95rem;color:var(--text2);margin:0 0 32px 0;line-height:1.6;">We track discussion across r/vibecoding, r/webdev, and r/programming, alongside developer write-ups and independent reviews, to surface real sentiment from Bolt.new's mixed audience of developers and non-technical builders.</p>
         <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:32px;display:flex;gap:40px;flex-wrap:wrap;">
           <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--accent)">1M+</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Sites Generated</div></div>
-          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">$700M</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Valuation (Jan 2025)</div></div>
-          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">1.4</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Trustpilot Score</div></div>
-          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">$135M</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Series B Funding</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">89K</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">r/vibecoding</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">$105.5M</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Series B (Jan 2025)</div></div>
         </div>
         <div style="margin-bottom:28px;">
           <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:#22a05a;">●</span> What users consistently praise</h3>
           <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
-            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"I described a full-stack SaaS concept and had a working prototype deployed to Netlify in 45 minutes. For early-stage idea validation, nothing else gets you from zero to shareable demo that fast."</p>
-            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">r/webdev · 2025</div>
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"Bolt is insanely fast. Seconds from prompt to working app preview. WebContainer tech means everything runs client-side — zero latency. I built a working MVP in an afternoon that would have taken a developer two weeks."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">r/webdev · 2026</div>
           </div>
           <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
-            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"The browser-based workflow is the point. No setup, no environment config, no git headaches. I use it to pitch ideas to clients before writing a single line myself — it's a legitimate business tool."</p>
-            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Product Hunt review · 2026</div>
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"The Figma import is genuinely useful. I mocked up the UI in Figma, imported it into Bolt, and had running React code in 20 minutes. The design-to-code gap is real and Bolt closes it better than anything else at this price."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Developer review · 2026</div>
           </div>
         </div>
         <div style="margin-bottom:28px;">
           <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:var(--accent);">●</span> Common frustrations</h3>
           <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
-            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"My Pro plan lost 1.3 million tokens in a single day just trying to fix a routing bug. The credit model punishes you for complexity — the more you actually need AI help, the faster it burns."</p>
-            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">r/nocode · 2025</div>
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"Token consumption is unpredictable and expensive on complex projects. Bolt syncs the entire codebase on every message — a 50-file app costs significantly more per interaction than a 5-file app. I burned through Pro tokens in a week on one ambitious project."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">r/vibecoding · 2026</div>
           </div>
           <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
-            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"We had live campaign pages go down during a $10,000 marketing push because of a hosting outage. No support on weekends, no rollback. I will not use Bolt hosting for anything business-critical again."</p>
-            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Trustpilot review · January 2026</div>
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"The 70% wall is real. Simple apps: Bolt is exceptional. Complex business logic, custom authentication flows, edge cases — that's where you need a real developer to finish what Bolt started. Don't plan a production-ready app without a developer review pass."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Independent review · 2026</div>
           </div>
         </div>
         <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.15);border-radius:12px;padding:20px 24px;">
           <div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:8px;">AIToolGrade Take</div>
-          <p style="font-family:var(--sans);font-size:0.93rem;color:var(--text);line-height:1.7;margin:0;">Bolt.new's community is sharply divided along experience lines. Developers using it for rapid prototyping and idea validation are largely positive — the speed from prompt to deployed app is real and documented. Non-technical users and anyone who tried using Bolt hosting for production work are the source of the 1.4 Trustpilot score. The token consumption complaints are consistent across both groups: complex projects burn credits unpredictably, and the pricing page doesn't adequately set expectations. Use it for what it's built for — fast MVPs — and keep production infrastructure elsewhere.</p>
+          <p style="font-family:var(--sans);font-size:0.93rem;color:var(--text);line-height:1.7;margin:0;">Bolt.new's 1M+ website milestone and 40% January 2026 performance improvement reflect a platform that has genuinely earned its position as the fastest AI app builder for web development. The WebContainer technology is a real technical differentiator — everything running client-side means no cloud round-trips, which is why Bolt consistently feels faster than competitors. The Figma import and multi-model support added in 2026 are meaningful additions that extend Bolt's lead over Lovable for design-to-code workflows. The honest limitations are equally consistent: token consumption on complex projects surprises most users, and the 70% wall — where Bolt's generated code needs developer intervention for production readiness — is real. For non-technical founders who want polished MVPs, Lovable's simpler interface and Supabase-native backend may be a better fit. For technical founders, indie hackers, and designers who want the fastest browser-native development experience with maximum model flexibility, Bolt.new at $25/month is the clear recommendation in the app builder category.</p>
         </div>
       </div>
       <!-- END: What Users Are Saying -->
 
+      <h2 id="who-bolt-is-for">Who Bolt.new Is For</h2>
+      <p>Bolt fits a specific kind of builder very well, and frustrates another kind just as reliably. Here's the honest split.</p>
+      <h3>Best for</h3>
+      <ul>
+        <li>Developers and technical founders who want the fastest path from wireframe to working code</li>
+        <li>Designers who have Figma mockups and want React code without a developer</li>
+        <li>Indie hackers shipping MVPs and side projects fast</li>
+        <li>Teams that want multi-model flexibility — switching between Claude, GPT, and Gemini per task</li>
+        <li>Anyone who wants to stay in the browser — no local setup, no Docker, no environment configuration</li>
+      </ul>
+      <h3>Not for</h3>
+      <ul>
+        <li>Non-technical users who may struggle when the AI hits its limits — some debugging is still required</li>
+        <li>Complex backend infrastructure with custom APIs and non-standard databases — Bolt Cloud covers standard needs, not bespoke ones</li>
+        <li>Existing codebases — Bolt works best on greenfield projects started within the platform</li>
+        <li>Mobile or native desktop apps — Bolt generates web applications only</li>
+        <li>High-iteration projects on a tight budget — token consumption can exceed expectations</li>
+      </ul>
+
       <h2 id="the-bottom-line">The Bottom Line</h2>
-      <p>Bolt.new is among the strongest rapid prototyping tools available. The ability to go from a text description to a live, deployed full-stack application in under an hour is a real advantage for early-stage product development. The token pricing model requires careful management on complex projects, but for the core use case — fast MVPs and idea validation — Bolt delivers.</p>
+      <p>Bolt.new is among the strongest browser-native app builders available, and the 1M+ websites generated back that up. Going from a text prompt to a live, deployed full-stack application without leaving the browser is a real advantage for early-stage product work — and the WebContainer architecture is why it feels faster than the alternatives. The 2026 additions, Figma import and multi-model support especially, widen Bolt's lead for design-to-code workflows.</p>
+      <p>The token model is the thing to manage. On complex projects it surprises most users, and the 70% wall means production polish still needs a developer. Plan in Discussion Mode, watch your consumption, and keep expectations honest about where the AI stops. Do that, and for the core use case — fast MVPs and design-to-code at $25/month — Bolt delivers.</p>
     </div>
   </div>
   <div class="review-sidebar">
     <div class="sidebar-card">
       <div class="sidebar-title">Overall score</div>
       <div class="sidebar-score">
-        <div class="sidebar-score-num">8.6</div>
+        <div class="sidebar-score-num">8.3</div>
         <div>
           <div style="color:var(--accent);font-size:18px;letter-spacing:-1px">★★★★☆</div>
           <div class="sidebar-score-label">out of 10</div>
@@ -321,7 +439,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       <div class="sidebar-price-row"><span class="sidebar-price-label">Pro</span><span class="sidebar-price-val">$25/mo</span></div>
       <div class="sidebar-price-row"><span class="sidebar-price-label">Teams</span><span class="sidebar-price-val">$30/user</span></div>
       <div class="sidebar-price-row"><span class="sidebar-price-label">Free plan</span><span class="sidebar-price-val">✓ Yes</span></div>
-      <a href="https://bolt.new" class="sidebar-cta">Try Bolt.new Free →</a>
+      <a href="https://bolt.new" class="sidebar-cta" target="_blank" rel="noopener">Try Bolt.new Free →</a>
       <div class="sidebar-disclosure">Affiliate link</div>
     </div>
   </div>

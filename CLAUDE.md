@@ -254,6 +254,9 @@ Issues found and fixed June 3, 2026:
 
 Pattern to watch: superlative claims without source attribution, absolute statements about AI capabilities (especially "eliminates" or "no" anything)
 
+The Perplexity editorial check is now a standard step on all new reviews per the checklist.
+Reviews checked this session (June 5-6, 2026): Kimi Code (fixes applied), Bolt.new (pending check), Adobe Firefly (pending check).
+
 ### Prohibited language grep (existing)
 Run before every deploy: grep for full prohibited language list per CLAUDE.md
 
@@ -660,10 +663,12 @@ Next content priorities (from May 24, 2026 session):
 - Monitor CTR improvement on Bolt.new and ChatGPT vs Claude
 - Next rewrite candidates: identify from next Search Console export
 
-## Content Queue (updated June 2, 2026 session)
+## Content Queue (updated June 6, 2026 session)
 
 ### Remaining queue
-- (none currently)
+- (none currently) — brief fully cleared. Next priorities now come from Search Console
+  data, not the research-agent brief. See "Search Console Optimization" for current
+  rewrite candidates.
 
 ### Completed
 - Kimi Code review ✅ (June 5, 2026) — AI Coding, 7.8, Marcus Veil. Moonshot AI's open-source Claude Code competitor powered by Kimi K2.6 (1T-param MoE, 32B active; 80.2% SWE-bench Verified, ties GPT-5.5 on SWE-bench Pro). Leads on the MCP-compatibility migration story (every Claude Code MCP server works unchanged) and Agent Swarms (up to 300 parallel agents). Carries the yellow COI disclosure box (AIToolGrade uses Claude; Kimi Code is a direct competitor) plus the same Chinese-company data-residency treatment as DeepSeek V4. Pricing $0.60/M input (~25x cheaper than Opus 4.7). datePublished/dateModified 2026-06-05.
@@ -686,19 +691,24 @@ Next content priorities (from May 24, 2026 session):
 
 ## Search Console Optimization
 
-### June 6, 2026 — Adobe Firefly deep rewrite (ranking improvement)
-- review/adobe-firefly.html — target query "adobe firefly review"
-- Position before: 20.7 (96 impressions)
-- Action taken: deep rewrite → 2,400+ words. New title "Adobe Firefly Review 2026: Runway Video, FLUX.2, and the Model Marketplace Strategy". Added "What Adobe Firefly Is in 2026" feature section, "The Model Marketplace Angle" (Dec 2025 Runway Gen-4.5 partnership + FLUX.2 + video editor beta), Firefly vs Midjourney vs Runway comparison table, "Who Adobe Firefly Is For" section, credit-system honesty callout. Pricing restructured (Free 25cr, Standard $9.99/2K, Pro $19.99/4K, Premium $199.99/50K). Score corrected 8.4 → 8.7 (synced across reviews.html, compare.html, category/image.html). Community Sentiment refreshed (G2 4.5, Capterra 4.6, 40%+ pros on CC). Internal links to midjourney/runway/leonardo-ai reviews. dateModified 2026-06-05.
-- Author: Marcus Veil. Removed "Hands-on tested" → "Research verified".
-- Monitor position movement week of June 13, 2026.
+### June 5, 2026 — Search Console-driven rewrites
+Based on GSC data (3-month period ending June 5):
+- review/bolt.html — 252 impressions, position 11.6 → deep rewrite (2,808 words)
+  New title: "Bolt.new Review 2026: WebContainers, Figma Import, and the Token Problem"
+  Added: Bolt Cloud V2, multi-model, Figma import, Discussion Mode, token problem section
+- review/adobe-firefly.html — 96 impressions, position 20.7 → deep rewrite (2,446 words)
+  New title: "Adobe Firefly Review 2026: Runway Video, FLUX.2, and the Model Marketplace Strategy"
+  Added: Runway Gen-4.5 partnership, FLUX.2, model marketplace strategy, updated pricing
 
-### June 6, 2026 — Bolt.new deep rewrite (ranking improvement)
-- review/bolt.html — target query "bolt.new review"
-- Position before: 11.6 (252 impressions, near page 1 but no clicks)
-- Action taken: deep rewrite ~1,300 words → 2,800+ words. New title "Bolt.new Review 2026: WebContainers, Figma Import, and the Token Problem". Added "What Bolt.new Does in 2026" feature section, "The Token Problem" section, Bolt vs Lovable vs Replit comparison table, "Who Bolt.new Is For" section. Score corrected 8.6 → 8.3 (synced across reviews.html, compare.html, category/coding.html). Community Sentiment refreshed (1M+ sites, 89K r/vibecoding, $105.5M Series B). Internal links to lovable/replit/cursor reviews + best-ai-app-builders-2026 blog. dateModified 2026-06-05.
-- Author: Marcus Veil. Removed "Hands-on tested" → "Research verified".
-- Monitor position movement week of June 13, 2026.
+Both authored by Marcus Veil. "Hands-on tested" → "Research verified" on both. Scores corrected and synced across reviews.html, compare.html, and category pages: bolt 8.6 → 8.3, adobe-firefly 8.4 → 8.7. dateModified 2026-06-05.
+
+Reminders set:
+- June 19, 2026 — check bolt.html and adobe-firefly.html for position movement
+- Also check: notion-ai (was 66.5→36.2), copyai (80), midjourney (77)
+
+Next Search Console candidates (not yet rewritten):
+- review/n8n.html — 123 impressions, position 67.2
+- review/writesonic.html — 160 impressions, position 77.7
 
 ### June 3, 2026 — New reviews published
 - review/heygen.html — 8.1/10, Priya Nolan, AI Video

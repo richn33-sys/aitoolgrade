@@ -391,7 +391,7 @@ A full 30-day content calendar exists at:
 ~/Desktop/ClaudeWork/aitoolgrade/x-calendar-30day.md
 
 After Day 30, rotate back to Day 1 — posts are evergreen.
-Update stats and community sentiment pulls using the Monday research brief.
+Update stats and community sentiment pulls using the Sunday research brief.
 
 ### Generating New Posts
 When new content is published, generate posts for all three accounts:

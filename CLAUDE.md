@@ -669,8 +669,8 @@ Next content priorities (from May 24, 2026 session):
 
 ### Remaining queue
 - "Grok Build vs Codex vs Claude Code 2026" blog post — HIGH
-- MiniMax M3 review — HIGH
 - ZoomMate review — MEDIUM
+- MiniMax M3 review — HIGH
 - "ChatGPT Go vs Plus vs Pro" full comparison — MEDIUM
 
 ### Completed

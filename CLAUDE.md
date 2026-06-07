@@ -879,8 +879,8 @@ pages (`review/`), not blog posts — they are tracked in the File Structure rev
 
 ## Research Agent
 
-A weekly automated research agent that runs every Monday at 8am via launchd on Rich's Mac.
-Emails a structured brief to richn33@gmail.com every Monday morning.
+A weekly automated research agent that runs every Sunday at 7am via launchd on Rich's Mac.
+Emails a structured brief to richn33@gmail.com every Sunday morning.
 
 Purpose: Tells Rich what to work on for AIToolGrade that week — new tools to review, 
 pricing updates needed, blog post opportunities, and what competitors are covering.
@@ -901,7 +901,7 @@ How to act on it:
 Location: ~/Desktop/ClaudeWork/aitoolgrade_research/
 CLAUDE.md: ~/Desktop/ClaudeWork/aitoolgrade_research/CLAUDE.md
 Manual trigger: python3 ~/Desktop/ClaudeWork/aitoolgrade_research/research_agent.py
-Schedule: Every Monday 8am via ~/Library/LaunchAgents/com.aitoolgrade.research.plist
+Schedule: Every Sunday 7am via ~/Library/LaunchAgents/com.aitoolgrade.research.plist
 
 ### Agent tuning (Last upgraded May 25, 2026)
 - max_tokens reduced to 1000 — Gmail clips emails over ~102KB, so the brief must stay compact

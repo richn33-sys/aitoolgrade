@@ -185,6 +185,7 @@ Categories ▾         Reviews ▾            Compare    Blog    Get Updates
                        Claude Code
                        DeepSeek V4
                        Kimi Code
+                       Grok Build
                        Zapier
                        n8n
                        Midjourney
@@ -640,7 +641,7 @@ All pricing verified May 2026. Update this table when pricing changes are confir
 | Tool | Last Verified | Notes |
 |---|---|---|
 | ChatGPT | May 2026 | 7-tier structure — Free, Go $8, Plus $20, Pro $100, Pro $200, Business $20-25, Enterprise |
-| Cursor | May 2026 | Credit-based since June 2025 — ~225 usable requests at Pro when selecting frontier models manually |
+| Cursor | June 2026 | Credit-based since June 2025 — ~225 usable requests at Pro when selecting frontier models manually. June 1, 2026 Teams restructure: Teams Standard $40/seat (split credit pools — Composer/Auto vs third-party frontier models), Teams Premium NEW $120/seat ($96 annual), Enterprise custom |
 | Grammarly | May 2026 | Premium renamed to Pro, Business replaced by Enterprise |
 | Perplexity | May 2026 | Max $200 tier added, Comet browser now free |
 | Jasper | May 2026 | Boss Mode discontinued, Starter gone, Creator $49/Pro $69 |
@@ -664,14 +665,16 @@ Next content priorities (from May 24, 2026 session):
 - Monitor CTR improvement on Bolt.new and ChatGPT vs Claude
 - Next rewrite candidates: identify from next Search Console export
 
-## Content Queue (updated June 6, 2026 session)
+## Content Queue (updated June 7, 2026 session)
 
 ### Remaining queue
-- (none currently) — brief fully cleared. Next priorities now come from Search Console
-  data, not the research-agent brief. See "Search Console Optimization" for current
-  rewrite candidates.
+- "Grok Build vs Codex vs Claude Code 2026" blog post — HIGH
+- MiniMax M3 review — HIGH
+- ZoomMate review — MEDIUM
+- "ChatGPT Go vs Plus vs Pro" full comparison — MEDIUM
 
 ### Completed
+- Cursor pricing update ✅ (June 7, 2026) — review/cursor.html. June 1, 2026 Teams restructure: single Teams row split into Teams Standard ($40/seat, split credit pools — Composer/Auto vs third-party frontier models) and NEW Teams Premium ($120/user/mo, $96 annual — higher credit allocation, priority access); Enterprise (custom) row added. Added a "What Changed — June 2026" callout; relabeled the older callout "What Changed — June 2025". dateModified → 2026-06-07, byline → June 2026. Screenshot caption left at May 2026 (image unchanged).
 - Grok Build review ✅ (June 7, 2026) — AI Coding, 6.7, Marcus Veil. xAI's first terminal-native agentic coding CLI; third lab-backed entry alongside Claude Code and Codex CLI. Standout feature is 8 parallel sub-agents each isolated in its own Git worktree — a genuine architectural first the category lacks. Underlying grok-build-0.1 scores 70.8% SWE-Bench Verified (17 pts below Claude Code's 87.6%); 256K context; MCP-compatible (Claude Code MCPs work unchanged); plan mode; headless -p CI mode. Arena Mode announced but not yet live. Carries the yellow COI box (AIToolGrade uses Claude Code; Grok Build is a direct competitor). Pricing trajectory is the key practical fact: $99/mo SuperHeavy intro reverts to $299/mo after 6 months (most expensive in category); SuperGrok $30 / X Premium+ $40 give basic access; API $0.20/M in, $1.50/M out (cheapest tokens in category). Early-beta score — revisit Q3 2026 when Arena Mode ships. datePublished/dateModified 2026-06-07. NOT added to compare.html (consistent with claude-code/kimi-code/deepseek-v4, which were also left out of that curated subset).
 - Kimi Code review ✅ (June 5, 2026) — AI Coding, 7.8, Marcus Veil. Moonshot AI's open-source Claude Code competitor powered by Kimi K2.6 (1T-param MoE, 32B active; 80.2% SWE-bench Verified, ties GPT-5.5 on SWE-bench Pro). Leads on the MCP-compatibility migration story (every Claude Code MCP server works unchanged) and Agent Swarms (up to 300 parallel agents). Carries the yellow COI disclosure box (AIToolGrade uses Claude; Kimi Code is a direct competitor) plus the same Chinese-company data-residency treatment as DeepSeek V4. Pricing $0.60/M input (~25x cheaper than Opus 4.7). datePublished/dateModified 2026-06-05.
 - "Best Free AI Tools for Students 2026" blog post ✅ (June 4, 2026) — Guide, Priya Nolan. Organized by job (studying/research/writing/coding/visual/notes) rather than ranking, with an honest free-tier rule stating each tool's exact limits upfront. Covers NotebookLM, Perplexity, ChatGPT, Grammarly, GitHub Copilot, Leonardo AI (not yet reviewed), Notion AI. Includes the "$0 with a .edu email" student stack table and a non-preachy academic-integrity note. datePublished/dateModified 2026-06-04.
@@ -692,6 +695,11 @@ Next content priorities (from May 24, 2026 session):
 - ChatGPT, Cursor, Grammarly, Perplexity, Jasper, Notion AI pricing all updated ✅
 
 ## Search Console Optimization
+
+### June 7, 2026 — Search Console-driven rewrites
+- review/bolt.html — 252 impressions, position 11.6 → deep rewrite June 5
+- review/adobe-firefly.html — 96 impressions, position 20.7 → deep rewrite June 5
+Reminder: check both June 19, 2026.
 
 ### June 5, 2026 — Search Console-driven rewrites
 Based on GSC data (3-month period ending June 5):
@@ -883,6 +891,9 @@ pages (`review/`), not blog posts — they are tracked in the File Structure rev
 
 A weekly automated research agent that runs every Sunday at 7am via launchd on Rich's Mac.
 Emails a structured brief to richn33@gmail.com every Sunday morning.
+
+> Schedule note: the weekly brief moved to Sunday 7am (was Monday 8am) — updated May/June 2026
+> in both the plist (`com.aitoolgrade.research.plist`) and the research repo's CLAUDE.md.
 
 Purpose: Tells Rich what to work on for AIToolGrade that week — new tools to review, 
 pricing updates needed, blog post opportunities, and what competitors are covering.

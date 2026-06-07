@@ -33,7 +33,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ├── robots.txt
 ├── sitemap.xml          ← submitted to Google Search Console
 ├── nav.js               ← shared nav (single source of truth — see Site Architecture)
-├── review/              ← 29 individual tool review pages
+├── review/              ← 30 individual tool review pages
 │   ├── jasper.html              (AI Writing, 8.2)
 │   ├── copyai.html              (AI Writing, 7.3)
 │   ├── writesonic.html          (AI Writing, 8.0)
@@ -48,6 +48,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── deepseek-v4.html         (AI Coding, 8.1)
 │   ├── claude-code.html         (AI Coding, 8.0)
 │   ├── kimi-code.html           (AI Coding, 7.8)
+│   ├── grok-build.html          (AI Coding, 6.7)
 │   ├── midjourney.html          (AI Image, 7.8)
 │   ├── adobe-firefly.html       (AI Image, 8.7)
 │   ├── leonardo-ai.html         (AI Image, 8.7)
@@ -88,18 +89,18 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ```
 > Root also has: about.html, resources.html, how-we-review.html, contribute.html, contact.html,
 > advertise.html, and legal pages (see "Missing File Structure Details"). author/ holds
-> marcus-veil.html and priya-nolan.html. Full HTML page count: 66.
+> marcus-veil.html and priya-nolan.html. Full HTML page count: 67.
 
 ## Category Review Counts (homepage displays these — keep in sync)
 - AI Writing: 4 (Jasper, Copy.ai, Writesonic, Grammarly)
-- AI Coding: 10 (Cursor, GitHub Copilot, Windsurf, Bolt.new, Replit, Lovable, Google Antigravity, DeepSeek V4, Claude Code, Kimi Code)
+- AI Coding: 11 (Cursor, GitHub Copilot, Windsurf, Bolt.new, Replit, Lovable, Google Antigravity, DeepSeek V4, Claude Code, Kimi Code, Grok Build)
 - AI Image: 3 (Midjourney, Adobe Firefly, Leonardo AI)
 - Automation: 3 (Zapier, n8n, Microsoft Agent 365)
 - AI Video: 4 (Runway, Synthesia, HeyGen, Descript)
 - Productivity: 6 (ChatGPT, Notion AI, Perplexity, Claude Cowork, Perplexity Computer, NotebookLM)
 
-Total: 30 reviews. Homepage `cat-count` values in index.html match these (AI Coding is 10 as of
-June 5, 2026 after adding Kimi Code; Productivity is 6 after NotebookLM; Automation is 3).
+Total: 31 reviews. Homepage `cat-count` values in index.html match these (AI Coding is 11 as of
+June 7, 2026 after adding Grok Build; Productivity is 6 after NotebookLM; Automation is 3).
 
 When adding a new review, update the count in `index.html` using this script pattern:
 ```bash
@@ -671,6 +672,7 @@ Next content priorities (from May 24, 2026 session):
   rewrite candidates.
 
 ### Completed
+- Grok Build review ✅ (June 7, 2026) — AI Coding, 6.7, Marcus Veil. xAI's first terminal-native agentic coding CLI; third lab-backed entry alongside Claude Code and Codex CLI. Standout feature is 8 parallel sub-agents each isolated in its own Git worktree — a genuine architectural first the category lacks. Underlying grok-build-0.1 scores 70.8% SWE-Bench Verified (17 pts below Claude Code's 87.6%); 256K context; MCP-compatible (Claude Code MCPs work unchanged); plan mode; headless -p CI mode. Arena Mode announced but not yet live. Carries the yellow COI box (AIToolGrade uses Claude Code; Grok Build is a direct competitor). Pricing trajectory is the key practical fact: $99/mo SuperHeavy intro reverts to $299/mo after 6 months (most expensive in category); SuperGrok $30 / X Premium+ $40 give basic access; API $0.20/M in, $1.50/M out (cheapest tokens in category). Early-beta score — revisit Q3 2026 when Arena Mode ships. datePublished/dateModified 2026-06-07. NOT added to compare.html (consistent with claude-code/kimi-code/deepseek-v4, which were also left out of that curated subset).
 - Kimi Code review ✅ (June 5, 2026) — AI Coding, 7.8, Marcus Veil. Moonshot AI's open-source Claude Code competitor powered by Kimi K2.6 (1T-param MoE, 32B active; 80.2% SWE-bench Verified, ties GPT-5.5 on SWE-bench Pro). Leads on the MCP-compatibility migration story (every Claude Code MCP server works unchanged) and Agent Swarms (up to 300 parallel agents). Carries the yellow COI disclosure box (AIToolGrade uses Claude; Kimi Code is a direct competitor) plus the same Chinese-company data-residency treatment as DeepSeek V4. Pricing $0.60/M input (~25x cheaper than Opus 4.7). datePublished/dateModified 2026-06-05.
 - "Best Free AI Tools for Students 2026" blog post ✅ (June 4, 2026) — Guide, Priya Nolan. Organized by job (studying/research/writing/coding/visual/notes) rather than ranking, with an honest free-tier rule stating each tool's exact limits upfront. Covers NotebookLM, Perplexity, ChatGPT, Grammarly, GitHub Copilot, Leonardo AI (not yet reviewed), Notion AI. Includes the "$0 with a .edu email" student stack table and a non-preachy academic-integrity note. datePublished/dateModified 2026-06-04.
 - NotebookLM review ✅ (June 3, 2026) — Productivity, 8.7, Priya Nolan. Google's source-grounded research assistant (answers only from uploaded sources, no open-web hallucination). Audio Overviews given prominent coverage as the most-loved community feature; carries the NotebookLM vs Perplexity vs ChatGPT table and the explicit "use both" (NotebookLM + Perplexity) recommendation. Free tier scored 10/10 on value. datePublished/dateModified 2026-06-03.
@@ -966,7 +968,8 @@ Rules:
 - Run sitemap audit whenever new reviews or blog posts are added
 - Submit updated sitemap to Google Search Console after significant additions
 
-Current page count: 66 URLs (as of June 5, 2026) — one per HTML page.
+Current page count: 67 URLs (as of June 7, 2026) — one per HTML page.
+(June 7, 2026: added `review/grok-build.html` — AI Coding, lastmod 2026-06-07.)
 (June 5, 2026: added `review/kimi-code.html` — AI Coding, lastmod 2026-06-05.)
 (June 4, 2026: added `blog/best-free-ai-tools-students-2026.html` — Guide, lastmod 2026-06-04.)
 (June 3, 2026: added `review/notebooklm.html` — Productivity, lastmod 2026-06-03.)

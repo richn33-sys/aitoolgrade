@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="canonical" href="https://aitoolgrade.com/review/grok-build.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Grok Build review 2026 — xAI's terminal-native coding agent. Git worktree isolation for 8 parallel sub-agents is a genuine innovation, but grok-build-0.1 scores 70.8% on SWE-Bench vs Claude Code's 87.6%, and the $99/mo intro price reverts to $299/mo after 6 months.">
+<title>Grok Build Review 2026 — xAI's Coding Agent, the Worktree Bet, and the $99→$299 Catch | AIToolGrade</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fafaf8;--bg2:#f3f2ee;--bg3:#eceae3;--text:#1a1a18;--text2:#4a4a45;--text3:#8a8a82;--accent:#e85d26;--accent2:#f07d4a;--accent-dim:rgba(232,93,38,0.08);--border:#e2e0d8;--white:#ffffff;--display:'Playfair Display',serif;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:4px}
+.nav-dropdown>a::after{content:"▾";font-size:10px}
+.dropdown-menu{visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.15s ease,visibility 0s linear 0.5s;position:absolute;top:calc(100% + 8px);left:-16px;background:white;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:200;max-height:80vh;overflow-y:auto}
+.dropdown-menu a{display:block;padding:8px 12px;font-size:14px;color:var(--text2);text-decoration:none;border-radius:6px;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--bg2);color:var(--accent)}
+.nav-dropdown:hover .dropdown-menu{visibility:visible;opacity:1;pointer-events:auto;transition:opacity 0.15s ease,visibility 0s}
+.nav-dropdown .dropdown-menu::before{content:"";position:absolute;top:-20px;left:0;right:0;height:20px}
+.nav-dropdown::after{content:"";position:absolute;height:20px;width:calc(100% + 16px);bottom:-20px;left:-16px}
+.review-layout{max-width:1100px;margin:0 auto;padding:60px 40px;display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:start}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:24px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+.review-header{margin-bottom:40px}
+.review-tool-row{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.review-tool-logo{width:56px;height:56px;border-radius:14px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:28px;border:1px solid var(--border)}
+.review-tool-title{font-size:15px;font-weight:600;margin-bottom:2px}
+.review-tool-url{font-size:13px;color:var(--text3);font-family:var(--mono)}
+h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;margin-bottom:16px}
+.review-meta-row{display:flex;align-items:center;gap:20px;font-size:13px;color:var(--text3);margin-bottom:24px}
+.verdict-banner{background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:20px 24px;margin-bottom:40px;display:flex;align-items:center;gap:16px}
+.verdict-score{font-family:var(--display);font-size:48px;font-weight:800;color:var(--accent);line-height:1}
+.verdict-text h3{font-size:15px;font-weight:600;margin-bottom:4px}
+.verdict-text p{font-size:13px;color:var(--text2)}
+.review-body h2{font-family:var(--display);font-size:28px;font-weight:700;margin:40px 0 16px}
+.review-body p{color:var(--text2);margin-bottom:16px}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
+.pros-box,.cons-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px}
+.pros-box{border-top:3px solid #2e7d32}
+.cons-box{border-top:3px solid #c62828}
+.pros-box h4{color:#2e7d32;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.cons-box h4{color:#c62828;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.pro-item,.con-item{font-size:14px;color:var(--text2);margin-bottom:8px;display:flex;gap:8px;align-items:flex-start}
+.pro-item::before{content:'✓';color:#2e7d32;font-weight:600;flex-shrink:0}
+.con-item::before{content:'✗';color:#c62828;font-weight:600;flex-shrink:0}
+.score-breakdown{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;margin:32px 0}
+.score-breakdown h4{font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:20px}
+.score-row{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.score-row:last-child{margin-bottom:0}
+.score-name{font-size:14px;color:var(--text2);width:160px;flex-shrink:0}
+.score-bar-track{flex:1;height:8px;background:var(--bg2);border-radius:100px;overflow:hidden}
+.score-bar-fill{height:100%;border-radius:100px;background:var(--accent)}
+.score-val{font-family:var(--mono);font-size:13px;font-weight:500;width:30px;text-align:right}
+.comparison-wrap{overflow-x:auto;margin:24px 0}
+.comparison-table{width:100%;border-collapse:collapse;font-size:14px}
+.comparison-table th,.comparison-table td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
+.comparison-table th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.05em;color:var(--text3);background:var(--bg2)}
+.comparison-table td{color:var(--text2)}
+.comparison-table tr td:first-child{font-weight:600;color:var(--text)}
+.comparison-table th a,.comparison-table td a{color:var(--accent);text-decoration:none}
+.affiliate-box{background:var(--text);color:white;border-radius:14px;padding:28px;margin:40px 0;text-align:center}
+.affiliate-box h3{font-family:var(--display);font-size:24px;font-weight:700;margin-bottom:8px}
+.affiliate-box p{color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:20px}
+.affiliate-btn{display:inline-block;background:var(--accent);color:white;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;transition:background 0.15s}
+.affiliate-btn:hover{background:var(--accent2)}
+.affiliate-note{font-size:11px;color:rgba(255,255,255,0.4);margin-top:12px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px;position:sticky;top:84px}
+.sidebar-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:16px}
+.sidebar-score{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.sidebar-score-num{font-family:var(--display);font-size:52px;font-weight:800;color:var(--accent);line-height:1}
+.sidebar-score-label{font-size:13px;color:var(--text3)}
+.sidebar-price-row{display:flex;justify-content:space-between;font-size:14px;padding:10px 0;border-bottom:1px solid var(--border)}
+.sidebar-price-row:last-of-type{border-bottom:none}
+.sidebar-price-label{color:var(--text2)}
+.sidebar-price-val{font-family:var(--mono);font-weight:500}
+.sidebar-cta{display:block;background:var(--accent);color:white;text-align:center;padding:14px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;margin-top:20px;transition:background 0.15s}
+.sidebar-cta:hover{background:var(--accent2)}
+.sidebar-disclosure{font-size:11px;color:var(--text3);margin-top:10px;text-align:center}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}
+.footer-brand span{color:var(--accent)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--accent)}
+@media(max-width:768px){.review-layout{grid-template-columns:1fr;padding:40px 20px}.pros-cons{grid-template-columns:1fr}h1{font-size:30px}nav{padding:0 20px}.footer-inner{grid-template-columns:1fr 1fr}}
+
+/* === MOBILE NAV + RESPONSIVE TABLE FIX === */
+.nav-toggle{display:none;order:2;background:none;border:0;font-size:24px;line-height:1;color:var(--text);cursor:pointer;padding:4px 6px}
+@media(max-width:768px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(250,250,248,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 20px 16px;box-shadow:0 8px 24px rgba(0,0,0,0.06);max-height:calc(100vh - 64px);overflow-y:auto}
+  nav.nav-open .nav-links{display:flex}
+  .nav-links>a,.nav-dropdown{padding:12px 2px;border-bottom:1px solid var(--border)}
+  .nav-dropdown{position:static}
+  .nav-dropdown>a::after{display:none}
+  .dropdown-menu{display:none!important}
+  .nav-cta{display:block;text-align:center;background:var(--accent);color:#fff;margin-top:14px;padding:12px;border:0!important;border-radius:6px}
+  .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+  .comparison-wrap{overflow-x:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "name": "Grok Build Review 2026",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "6.7",
+    "bestRating": "10",
+    "worstRating": "0"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Marcus Veil",
+    "url": "https://aitoolgrade.com/author/marcus-veil.html"
+  },
+  "itemReviewed": {
+    "@type": "SoftwareApplication",
+    "name": "Grok Build",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "CLI, API",
+    "offers": {
+      "@type": "Offer",
+      "price": "99.00",
+      "priceCurrency": "USD",
+      "url": "https://x.ai"
+    }
+  },
+  "datePublished": "2026-06-07",
+  "dateModified": "2026-06-07"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolgrade.com"},
+    {"@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://aitoolgrade.com/reviews.html"},
+    {"@type": "ListItem", "position": 3, "name": "AI Coding", "item": "https://aitoolgrade.com/category/coding.html"},
+    {"@type": "ListItem", "position": 4, "name": "Grok Build", "item": "https://aitoolgrade.com/review/grok-build.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<div id="nav-root"></div>
+<script src="../nav.js"></script>
+
+<div class="review-layout">
+  <div class="review-main">
+    <div style="background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 14px 18px; margin-bottom: 28px; display: flex; align-items: flex-start; gap: 12px;">
+      <span style="font-family: var(--mono); font-size: 18px; line-height: 1;">🔍</span>
+      <div>
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 4px;">Research-Based Review</div>
+        <p style="font-family: var(--sans); font-size: 0.88rem; color: var(--text2); line-height: 1.6; margin: 0;">This review is based on documented features, verified pricing, and community sentiment — not hands-on testing. <a href="../how-we-review.html" style="color: var(--accent); text-decoration: none;">See how we research →</a></p>
+      </div>
+    </div>
+    <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="../category/coding.html">AI Coding</a><span>›</span>Grok Build Review</div>
+    <div class="review-header">
+      <div class="review-tool-row">
+        <div class="review-tool-logo">🛠️</div>
+        <div><div class="review-tool-title">Grok Build</div><div class="review-tool-url">x.ai</div></div>
+      </div>
+      <h1>Grok Build Review 2026 — xAI's Coding Agent, the Worktree Bet, and the $99→$299 Catch</h1>
+      <div class="review-meta-row">
+        <span>📅 June 2026</span>
+        <span>⏱ 13 min read</span>
+        <span>📊 Research-based</span>
+      </div>
+    </div>
+    <div class="verdict-banner">
+      <div class="verdict-score">6.7</div>
+      <div class="verdict-text">
+        <h3>Editor's Verdict: The Most Interesting Architecture in the Category, Wrapped in an Early Beta</h3>
+        <p style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:6px">Genuinely new ideas on parallel execution, held back by a real benchmark gap, an unshipped flagship feature, and pricing that triples after six months.</p>
+        <p>Grok Build is xAI's first terminal-native coding agent and the third major lab-backed entry in the category, alongside <a href="../review/claude-code.html">Claude Code</a> and OpenAI's Codex CLI. Its standout idea is real: up to 8 parallel sub-agents, each isolated in its own Git worktree, experimenting on separate branches and merging after review. No other coding agent works this way. But the underlying grok-build-0.1 model scores 70.8% on SWE-Bench Verified — 17 points behind Claude Code — Arena Mode (the feature meant to close that gap) isn't live yet, and the $99/month introductory price reverts to $299/month after six months, the highest list price in the category. The architecture is worth understanding now; the product is worth committing to later.</p>
+      </div>
+    </div>
+    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified June 2026</p>
+
+    <div class="review-body">
+
+      <div style="background: #fef3cd; border: 1px solid #f0c040; border-radius: 10px; padding: 16px 20px; margin-bottom: 28px;">
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: #8a6000; margin-bottom: 6px;">⚠️ Editorial Disclosure</div>
+        <p style="font-family: var(--sans); font-size: 0.9rem; color: #5a4000; line-height: 1.65; margin: 0;">AIToolGrade uses Claude Code (Anthropic) for content production. Grok Build is a direct competitor to Claude Code. We have applied our standard research methodology — documented features, verified pricing, community benchmarks — and have not received compensation from xAI.</p>
+      </div>
+
+      <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:16px 20px;margin:0 0 24px 0">
+        <p style="font-size:13px;font-family:'DM Mono',monospace;color:var(--accent);margin-bottom:8px">RELATED REVIEWS</p>
+        <a href="../review/claude-code.html" style="font-size:15px;font-weight:600;color:var(--text);display:block;margin-bottom:6px;text-decoration:none">Claude Code Review 2026 — Anthropic's Agentic Coding Tool →</a>
+        <a href="../review/kimi-code.html" style="font-size:15px;font-weight:600;color:var(--text);display:block;margin-bottom:6px;text-decoration:none">Kimi Code Review 2026 — Open-Source Claude Code Alternative →</a>
+        <a href="../review/github-copilot.html" style="font-size:15px;font-weight:600;color:var(--text);display:block;text-decoration:none">GitHub Copilot Review 2026 — Agent Mode and the Premium Requests System →</a>
+      </div>
+
+      <h2 id="what-is-grok-build">What is Grok Build?</h2>
+      <p>Grok Build is xAI's first terminal-native agentic coding CLI, launched in early beta on May 14, 2026. It runs locally in your terminal, plans multi-step coding tasks, edits files, executes shell commands, and — its defining trick — spawns up to 8 concurrent sub-agents, each isolated in its own Git worktree. With this release, xAI enters a three-way race with Anthropic's <a href="../review/claude-code.html">Claude Code</a> and OpenAI's Codex CLI as the third major lab-backed coding agent. That framing matters: this isn't a startup experiment, it's a frontier lab planting a flag in a category that's quickly becoming the default way serious developers work with AI.</p>
+      <p>The engine is grok-build-0.1, a model xAI built specifically for agentic coding rather than adapting from a general chat model. It scores 70.8% on SWE-Bench Verified — the benchmark that measures real GitHub issue resolution — and carries a 256K-token context window. That number deserves an honest frame up front: 70.8% is respectable, but it sits 17 points below Claude Code's 87.6% and nearly 18 below Codex CLI's 88.7%. For an early beta, that's not surprising. For a buying decision today, it's the first thing to weigh.</p>
+      <p>What makes Grok Build worth studying isn't the benchmark, though — it's the architecture. The Git worktree isolation for parallel sub-agents is the single most distinctive design decision in the terminal-agent category, and it's a genuine innovation over how both Claude Code and Codex CLI handle parallel work. Where Claude Code's sub-agents share a workspace, Grok Build gives each one its own branch to experiment in, then merges the results after review. It's a different shape of tool — and the rest of this review is mostly about whether that idea is enough to outweigh an early beta with a real benchmark gap and an aggressive pricing trajectory.</p>
+
+      <!-- toc -->
+<nav aria-label="Table of contents" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 32px 0;">
+  <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 12px;">In this review</div>
+  <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#what-is-grok-build" style="color: var(--accent); text-decoration: none;">What is Grok Build?</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#who-is-it-for" style="color: var(--accent); text-decoration: none;">Who Is It For?</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pros-and-cons" style="color: var(--accent); text-decoration: none;">Pros and Cons</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#score-breakdown" style="color: var(--accent); text-decoration: none;">Score Breakdown</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-worktree-bet" style="color: var(--accent); text-decoration: none;">The Git Worktree Bet</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pricing" style="color: var(--accent); text-decoration: none;">Pricing — and the $99→$299 Catch</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#key-features" style="color: var(--accent); text-decoration: none;">Key Features</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#vs-claude-codex" style="color: var(--accent); text-decoration: none;">Grok Build vs Claude Code vs Codex CLI</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-beta-question" style="color: var(--accent); text-decoration: none;">The Early Beta Question</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-bottom-line" style="color: var(--accent); text-decoration: none;">The Bottom Line</a></li>
+  </ol>
+</nav>
+
+      <h2 id="who-is-it-for">Who Is It For?</h2>
+      <p>Grok Build has a sharper target audience than most early-beta tools, and being honest about it cuts both ways. The clearest fit is developers who want to evaluate the Git worktree isolation approach firsthand — it's a genuinely new primitive in agentic coding, and if your work involves running several speculative changes in parallel, no other tool lets you do it with this kind of branch-level separation. If you're the type who's curious about where the category is heading, this is the most interesting thing to test in 2026.</p>
+      <p>The second clean fit is anyone already paying for X Premium+ or SuperGrok. Basic Grok Build access comes bundled with subscriptions those users already hold, which makes evaluation effectively free — and SuperGrok at $30/month is the lowest entry price in the terminal-agent category. There's also a real case for high-volume API users: grok-build-0.1 runs at $0.20 per million input tokens, the cheapest in the category, so workloads dominated by input cost can pencil out favorably even with the benchmark gap. And for the large population of <a href="../review/claude-code.html">Claude Code</a> users invested in MCP, the migration is low-friction — the same MCP servers work unmodified, the same way they do in <a href="../review/kimi-code.html">Kimi Code</a>.</p>
+      <p>It is not for everyone, and the misfits are worth stating plainly. Teams that need a production-ready tool today should wait — this is an early beta with a 17-point benchmark gap and sparse documentation. Anyone evaluating at the $99/month price point needs to plan for the $299/month reversion after six months, or the budget math will break. Developers who rely on a 1M-token context for large monorepos will hit the 256K ceiling fast. IDE-first developers who live in VS Code or JetBrains won't find an extension — it's CLI only. And anyone deterred by xAI's product-continuity track record, or by the auto-renewal concerns Reddit users are already flagging, has a legitimate reason to hold off. If you want a polished, production-grade agent right now, <a href="../review/claude-code.html">Claude Code</a> and <a href="../review/github-copilot.html">GitHub Copilot</a> are the safer picks today.</p>
+
+      <h2 id="pros-and-cons">Pros and Cons</h2>
+      <div class="pros-cons">
+        <div class="pros-box">
+          <h4>What works well</h4>
+          <div class="pro-item">Git worktree isolation is a genuine architectural innovation — sub-agents work in separate branches, preventing the conflicts that shared-workspace agents hit; no equivalent in Claude Code or Codex CLI</div>
+          <div class="pro-item">MCP compatibility means existing Claude Code MCP setups migrate without reconfiguration</div>
+          <div class="pro-item">API pricing at $0.20/M input is the cheapest in the terminal-agent category</div>
+          <div class="pro-item">Plan mode's approval gate reduces destructive changes — useful on production codebases</div>
+          <div class="pro-item">Local-first execution means no code leaves your machine to run</div>
+          <div class="pro-item">SuperGrok access at $30/month is the lowest entry price in the category</div>
+        </div>
+        <div class="cons-box">
+          <h4>What to watch out for</h4>
+          <div class="con-item">70.8% SWE-Bench Verified is 17 points below Claude Code (87.6%) and Codex CLI (88.7%) — a real gap that matters for complex tasks</div>
+          <div class="con-item">$99/month introductory pricing reverts to $299/month after 6 months — the most expensive coding agent in the category at list price</div>
+          <div class="con-item">Arena Mode — the feature that could narrow the benchmark gap — is announced but not yet live in early beta</div>
+          <div class="con-item">Early beta quality — documentation is sparse and behavior may change; not suitable for production-critical workflows</div>
+          <div class="con-item">xAI's product-continuity track record raises questions; Reddit is flagging auto-renewal surprises consistent with prior xAI patterns</div>
+          <div class="con-item">No VS Code or JetBrains extension — CLI only</div>
+          <div class="con-item">256K-token context vs Claude Code's 1M — a meaningful limit for large monorepos</div>
+        </div>
+      </div>
+
+      <h2 id="score-breakdown">Score Breakdown</h2>
+      <div class="score-breakdown">
+        <h4>Category scores — AIToolGrade methodology</h4>
+        <div class="score-row"><span class="score-name">Ease of Use</span><div class="score-bar-track"><div class="score-bar-fill" style="width:70%"></div></div><span class="score-val">7.0</span></div>
+        <div class="score-row"><span class="score-name">Features</span><div class="score-bar-track"><div class="score-bar-fill" style="width:80%"></div></div><span class="score-val">8.0</span></div>
+        <div class="score-row"><span class="score-name">Value for Money</span><div class="score-bar-track"><div class="score-bar-fill" style="width:55%"></div></div><span class="score-val">5.5</span></div>
+        <div class="score-row"><span class="score-name">Integration</span><div class="score-bar-track"><div class="score-bar-fill" style="width:75%"></div></div><span class="score-val">7.5</span></div>
+        <div class="score-row"><span class="score-name">Support &amp; Docs</span><div class="score-bar-track"><div class="score-bar-fill" style="width:55%"></div></div><span class="score-val">5.5</span></div>
+      </div>
+      <p>The shape of this score is the whole story. Features lands at 8.0 — the worktree architecture, plan mode, MCP compatibility, local execution, and a headless CI mode add up to a capable feature set even in beta. Ease of Use sits at 7.0: a single curl install and a terminal-native plan-mode flow are clean, but beta roughness and a genuinely confusing subscription structure pull it down. Integration earns 7.5 for MCP compatibility and Git-worktree-native design, docked for the absence of any IDE extension. The two numbers that drag the overall down are Value for Money (5.5) and Support &amp; Documentation (5.5): the $299/month list price after the intro period is the highest in the category, and the documentation is thin against a vendor whose product-continuity history is mixed. The 6.7 overall is an honest early-beta number — strong ideas, unfinished execution, and a price that doesn't yet match what you get.</p>
+
+      <h2 id="the-worktree-bet">The Git Worktree Bet</h2>
+      <p>If you only take one thing from this review, make it this section. The Git worktree isolation is the reason Grok Build is worth talking about, and it's a real solution to a real problem that the rest of the category hasn't solved cleanly.</p>
+      <p>Here's the problem. When a coding agent spawns multiple sub-agents to work in parallel, they usually share a single workspace. That's fine until two sub-agents want to edit the same file, or one's half-finished change breaks the build for another. The result is contention, clobbered work, and merge headaches — the parallelism looks good on paper but fights itself in practice. Claude Code's Agent Teams coordinate around this; Codex CLI's parallelism is more limited. Neither isolates the work physically.</p>
+      <p>Grok Build's answer is to give each of its 8 sub-agents its own Git worktree — a separate working directory tied to its own branch. Each sub-agent experiments in genuine isolation, commits to its branch, and the results are merged only after review. Nothing one agent does can corrupt another's state, because they're not sharing state at all. For naturally parallel work — trying three different fixes for the same bug, refactoring several modules at once, generating competing implementations to compare — that isolation is the difference between speculative parallelism that works and speculative parallelism that creates cleanup work. It's the kind of primitive that, if it holds up, other agents will likely copy. That's the strongest signal that it's a genuine innovation and not just a feature.</p>
+      <p>The caveat is that the feature meant to build on this — Arena Mode, which would rank competing sub-agent outputs before review — is announced but not yet live in the early beta. The worktree foundation is shipping and usable today; the competition layer on top of it is a promise. Evaluate the foundation on its merits, and treat Arena Mode as a reason to revisit later, not a reason to buy now.</p>
+
+      <h2 id="pricing">Pricing — and the $99→$299 Catch</h2>
+      <p>Pricing is verified June 2026, and it's the most important practical section in this review — because the headline number is not the number you'll actually pay. Read this before you evaluate anything else.</p>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr><th>Plan</th><th>Price</th><th>What you get</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>X Premium+</td><td>$40 / month</td><td>Basic Grok Build access — limited capability tier</td></tr>
+            <tr><td>SuperGrok</td><td>$30 / month ($300/yr)</td><td>Basic Grok Build access — limited capability tier</td></tr>
+            <tr><td>SuperHeavy (intro)</td><td>$99 / month</td><td>Full Grok Build, all features — first 6 months only</td></tr>
+            <tr><td>SuperGrok Heavy</td><td>$299 / month</td><td>Full Grok Build — standard list price</td></tr>
+            <tr><td>API (grok-build-0.1)</td><td>$0.20 / $1.50 per M</td><td>Input / output tokens</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="background: #fef3cd; border: 1px solid #f0c040; border-radius: 10px; padding: 16px 20px; margin:16px 0;">
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: #8a6000; margin-bottom: 6px;">⚠️ The Pricing Trap</div>
+        <p style="font-family: var(--sans); font-size: 0.9rem; color: #5a4000; line-height: 1.65; margin: 0;">The $99/month SuperHeavy rate is an introductory promotion. Multiple independent sources confirm it reverts to <strong>$299/month after 6 months</strong>. Reddit users are already flagging auto-renewal surprises. For any team evaluation, budget <strong>$299/month per user</strong> — not $99. Plan for the list price, and check the auto-renewal terms before you subscribe.</p>
+      </div>
+      <p>With that out of the way, the structure breaks into three real paths. The cheapest is bundled access: if you already pay for SuperGrok ($30/month) or X Premium+ ($40/month), you get a basic, limited-capability tier of Grok Build at no extra cost — the right way to test the tool. The full-feature path is SuperHeavy, and this is where the trap lives: $99/month looks competitive against Claude Code's tiers, but at $299/month after six months it becomes the most expensive terminal coding agent in the category by a wide margin. The third path is the API at $0.20/M input and $1.50/M output — genuinely the cheapest token pricing among terminal agents, and the most defensible reason to use grok-build-0.1 for high-volume, input-heavy workloads where the benchmark gap matters less than the per-token cost.</p>
+
+      <div style="background: var(--accent-dim); border: 1px solid rgba(232,93,38,0.15); border-radius: 10px; padding: 16px 20px; margin-top: 16px;">
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 6px;">What Changed</div>
+        <p style="font-family: var(--sans); font-size: 0.9rem; color: var(--text); line-height: 1.65; margin: 0;">Grok Build launched May 14, 2026 in early beta, initially limited to SuperGrok Heavy subscribers. On May 24, 2026 access expanded to all SuperGrok and X Premium+ subscribers at the basic tier. Arena Mode has been announced but is not yet live. All specs in this review reflect the early beta state — behavior, pricing, and feature availability may change before general availability.</p>
+      </div>
+
+      <h2 id="key-features">Key Features</h2>
+
+      <p><strong>8 parallel sub-agents in isolated Git worktrees.</strong> The headline capability and the genuine innovation. Each sub-agent works in its own worktree on its own branch, experiments in isolation, and merges back after review. It's structurally different from Claude Code's shared-workspace coordination — see the <a href="#the-worktree-bet">worktree section</a> above for why it matters.</p>
+
+      <p><strong>Plan mode.</strong> Before touching a single file, the agent proposes a full plan and waits for you to approve or edit it. The approval gate is a practical safeguard against destructive changes, which makes the tool noticeably safer to point at a production codebase than agents that act first and explain later.</p>
+
+      <p><strong>MCP compatibility.</strong> MCP servers configured for <a href="../review/claude-code.html">Claude Code</a> run in Grok Build without modification — the same low-friction migration path <a href="../review/kimi-code.html">Kimi Code</a> offers. For teams already invested in the MCP ecosystem, switching costs are close to zero on the tooling side.</p>
+
+      <p><strong>Local-first execution.</strong> All code runs on your machine; there's no cloud dependency for execution. For developers who don't want source or runtime state leaving their environment, that's a meaningful default.</p>
+
+      <p><strong>grok-build-0.1 model.</strong> A purpose-built agentic coding model with a 256K-token context window, priced at $0.20/M input and $1.50/M output via API. It scores 70.8% on SWE-Bench Verified — frontier-adjacent, not frontier-leading.</p>
+
+      <p><strong>Headless -p mode.</strong> A non-interactive mode that runs Grok Build inside CI/CD pipelines. For teams that want to wire an agent into automated checks, builds, or scripted workflows, this is the integration hook that makes it possible.</p>
+
+      <p><strong>Arena Mode (announced, not yet live).</strong> A multi-agent competition layer that would rank competing sub-agent outputs before review — the natural extension of the worktree architecture. It's announced but not shipping in the early beta. Promising, but not something to evaluate the product on today.</p>
+
+      <p><strong>Terminal TUI.</strong> A full-screen terminal UI with a dedicated sub-agent view, integrated plan mode, and a project view, rendered as a flicker-free layout. For a CLI-only tool, the interface is one of the more polished parts of the beta.</p>
+
+      <div class="affiliate-box">
+        <h3>Evaluate Grok Build</h3>
+        <p>Terminal-native, MCP-compatible, with Git-worktree-isolated parallel agents. Test it on the SuperGrok tier if you already subscribe — and budget for the $299/month list price before committing to SuperHeavy.</p>
+        <a href="https://x.ai" class="affiliate-btn">Visit xAI →</a>
+        <div class="affiliate-note">We may earn a commission at no extra cost to you</div>
+      </div>
+
+      <h2 id="vs-claude-codex">Grok Build vs Claude Code vs Codex CLI</h2>
+      <p>These are the three lab-backed terminal coding agents, and they're the reference points any serious evaluation will weigh against each other. <a href="../review/claude-code.html">Claude Code</a> is the capability and maturity benchmark; Codex CLI is OpenAI's entry, strongest for teams already in that ecosystem; Grok Build is the newcomer betting on architecture over raw benchmark scores. The table lays out where each one stands today.</p>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Grok Build</th>
+              <th><a href="../review/claude-code.html">Claude Code</a></th>
+              <th>Codex CLI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>SWE-Bench Verified</td><td>70.8%</td><td>87.6%</td><td>88.7%</td></tr>
+            <tr><td>Parallel agents</td><td>8 (isolated worktrees)</td><td>Agent Teams</td><td>Limited</td></tr>
+            <tr><td>Context window</td><td>256K</td><td>1M</td><td>128K</td></tr>
+            <tr><td>Plan mode</td><td>✓</td><td>✓</td><td>✓</td></tr>
+            <tr><td>MCP compatible</td><td>✓</td><td>✓ Native</td><td>Limited</td></tr>
+            <tr><td>Local execution</td><td>✓</td><td>✓</td><td>✓</td></tr>
+            <tr><td>VS Code extension</td><td>✗</td><td>✓</td><td>✓</td></tr>
+            <tr><td>API input price / M</td><td>$0.20</td><td>$15.00 (Opus)</td><td>~$15.00</td></tr>
+            <tr><td>Subscription price</td><td>$99 intro → $299/mo</td><td>$20–200/mo</td><td>Included in ChatGPT Pro</td></tr>
+            <tr><td>Status</td><td>Early beta</td><td>GA</td><td>GA</td></tr>
+            <tr><td>Best for</td><td>Parallel branch experiments</td><td>Complex autonomous tasks</td><td>OpenAI ecosystem teams</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The pattern is clear once you line them up. On raw capability and maturity, Claude Code and Codex CLI both lead — they're generally available, they clear 87% on SWE-Bench, and they ship IDE extensions. Grok Build's case is narrower and more specific: it's the only one of the three with branch-isolated parallel agents, the cheapest on API tokens by two orders of magnitude, and the most architecturally interesting — but it's also the only early beta, the only one missing an IDE extension, and the most expensive at its post-intro list price. If you want the safest production choice today, the two GA tools win. If you want to evaluate the most novel idea in the category, Grok Build is the one to test.</p>
+
+      <h2 id="the-beta-question">The Early Beta Question</h2>
+      <p>Every evaluation of Grok Build has to separate the architecture from the state of the product, because they point in opposite directions. The architecture is ahead of the category. The product is behind it. Holding both ideas at once is the only honest way to assess this tool.</p>
+      <p>On the product side, the gaps are concrete. Documentation is sparse — expected for a May 2026 early beta, but a real cost when you hit an edge case and there's nothing to read. Behavior may change before general availability, so anything you build around it today carries the risk of shifting under you. The 70.8% SWE-Bench score means more failed or incomplete attempts on hard tasks than you'd see from Claude Code or Codex CLI. None of this makes Grok Build a bad tool; it makes it an unfinished one.</p>
+      <p>Then there's xAI itself. The company's track record on product continuity is mixed, and the auto-renewal surprises Reddit users are already reporting fit a pattern that predates this product. That's not a reason to avoid the tool, but it is a reason to read the subscription terms carefully, prefer the bundled SuperGrok tier for evaluation over a SuperHeavy commitment, and treat the six-month promo clock as something to put on your calendar. The architecture earns the benefit of the doubt; the billing terms have not.</p>
+
+      <div class="users-saying" style="margin:48px 0;">
+        <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Community Sentiment</div>
+        <h2 id="what-users-are-saying" style="font-family:var(--display);font-size:1.75rem;font-weight:800;color:var(--text);margin:0 0 8px 0;">What Users Are Saying</h2>
+        <p style="font-family:var(--sans);font-size:0.95rem;color:var(--text2);margin:0 0 32px 0;line-height:1.6;">We track discussion across r/programming, Hacker News, the xAI Discord, and independent reviews from outlets like ChatForest, BuiltFastWithAI, and DigitalApplied to gauge how Grok Build is landing. The response splits cleanly: technical excitement about the worktree architecture, real caution about pricing and beta quality.</p>
+
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:32px;display:flex;gap:40px;flex-wrap:wrap;">
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--accent)">70.8%</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">SWE-Bench Verified</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">8</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Parallel Sub-Agents</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">$0.20</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">/ M Input Tokens</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">256K</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Context Window</div></div>
+        </div>
+
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:#22a05a;">●</span> What developers consistently praise</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"The Git worktree isolation is the single most distinctive architectural choice in the terminal agent category. Claude Code sub-agents share a workspace. Grok Build sub-agents experiment in isolated branches and merge later. That's a genuine innovation."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">DigitalApplied independent analysis · May 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"MCP servers configured for Claude Code work in Grok Build without modification. The migration path from Claude Code is the lowest-friction in the category."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Developer community analysis · May 2026</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:var(--accent);">●</span> Common reservations</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"The $99/month intro price is a 6-month promotion — plan for $300/month. Reddit users are already flagging auto-renewal surprises consistent with xAI's prior product patterns. Budget for the list price, not the promo."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">DigitalApplied independent analysis · May 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"70.8% SWE-Bench is respectable but sits 17 points below Claude Code at 87.6%. Arena Mode — the feature that would narrow this gap — is announced but not live in early beta. Evaluate Grok Build on what it does today, not what it promises."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">ChatForest review · May 2026</div>
+          </div>
+        </div>
+
+        <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.15);border-radius:12px;padding:20px 24px;">
+          <div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:8px;">AIToolGrade Take</div>
+          <p style="font-family:var(--sans);font-size:0.93rem;color:var(--text);line-height:1.7;margin:0;">Grok Build is the most architecturally interesting entry in the terminal coding agent category since Claude Code launched. The Git worktree isolation for parallel sub-agents is a genuine innovation — it solves a real problem (conflicting agent changes) that Claude Code's shared-workspace approach doesn't address. The honest assessment requires separating the architecture from the current beta state: 70.8% SWE-Bench with Arena Mode still unshipped, a $299/month list price after the 6-month intro, and early-beta documentation gaps make Grok Build a compelling tool to watch rather than a production recommendation today. The $0.20/M API pricing is a real differentiator for high-volume workloads. The subscription trajectory is the biggest concern — $299/month is the most expensive terminal agent in the category, and xAI's promotional-pricing patterns warrant careful attention to auto-renewal terms. Our recommendation: evaluate the architecture, test it on the SuperGrok tier if you already subscribe, and revisit in Q3 2026 when Arena Mode ships and the beta roughness resolves.</p>
+        </div>
+      </div>
+
+      <h2 id="the-bottom-line">The Bottom Line</h2>
+      <p>Grok Build is the rare tool that's easy to admire and hard to recommend at the same time, and both halves are true for the same reason: it's an early beta built around a genuinely new idea. The Git worktree isolation for 8 parallel sub-agents is the most distinctive architecture the terminal-agent category has seen since Claude Code defined the shape of these tools. It solves a real problem — conflicting changes across parallel agents — that the incumbents work around rather than eliminate. If the rest of the category copies this approach over the next year, no one should be surprised.</p>
+      <p>But you don't buy architecture, you buy a product, and the product is unfinished. grok-build-0.1 scores 70.8% on SWE-Bench Verified, 17 points behind Claude Code and Codex CLI — a gap that's noise on routine work and signal on the hardest tasks. Arena Mode, the feature that would build on the worktree foundation and potentially narrow that gap, is announced but not shipping. The documentation is thin. And the pricing trajectory is the single biggest practical concern: $99/month looks competitive until it becomes $299/month after six months, the highest list price in the category, attached to a vendor whose auto-renewal behavior Reddit users are already flagging.</p>
+      <p>So the recommendation is specific and conditional. <strong>Best for:</strong> developers who want to evaluate the worktree architecture firsthand; existing X Premium+ or SuperGrok subscribers who get basic access bundled; and high-volume API users where $0.20/M input pricing outweighs the benchmark gap. <strong>Not for:</strong> teams needing a production-ready tool today, anyone evaluating at $99/month without budgeting for the $299/month reversion, developers who need 1M-token context for large monorepos, or teams that require VS Code or JetBrains extensions. The score reflects the early-beta state — the architecture is genuinely interesting, and we'll revisit in Q3 2026 when Arena Mode ships and the beta roughness resolves. For a production decision right now, <a href="../review/claude-code.html">Claude Code</a> and <a href="../review/github-copilot.html">GitHub Copilot</a> remain the more practical picks; for a look at where parallel agentic coding is heading, Grok Build is the most interesting thing to test.</p>
+    </div>
+  </div>
+
+  <div class="review-sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-title">Overall score</div>
+      <div class="sidebar-score">
+        <div class="sidebar-score-num">6.7</div>
+        <div>
+          <div style="color:var(--accent);font-size:18px;letter-spacing:-1px">★★★</div>
+          <div class="sidebar-score-label">out of 10</div>
+        </div>
+      </div>
+      <div class="sidebar-title" style="margin-top:16px">Pricing</div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">SuperGrok (basic)</span><span class="sidebar-price-val">$30/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">SuperHeavy intro</span><span class="sidebar-price-val">$99/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">List (after 6mo)</span><span class="sidebar-price-val">$299/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">API input / M</span><span class="sidebar-price-val">$0.20</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">API output / M</span><span class="sidebar-price-val">$1.50</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Context</span><span class="sidebar-price-val">256K</span></div>
+      <a href="https://x.ai" class="sidebar-cta">Visit xAI →</a>
+      <div class="sidebar-disclosure">We may earn a commission</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">AI Tool<span>Grade</span></div><p class="footer-desc">Independent reviews and comparisons of AI tools. Researched, fact-checked, and independently rated.</p></div>
+    <div><div class="footer-col-title">Reviews</div><div class="footer-links"><a href="../category/writing.html">AI Writing</a><a href="../category/coding.html">AI Coding</a><a href="../category/image.html">AI Image</a><a href="../category/automation.html">Automation</a><a href="../category/productivity.html">Productivity</a></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="../about.html">About</a><a href="../how-we-review.html">How we review</a><a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
+    <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+</footer>
+</body></html>

@@ -188,6 +188,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
 
     <p>Here's where the three land on the numbers that get quoted most. Read the caveat under the table before you read anything into the gaps.</p>
 
+    <p style="font-style:italic">All benchmark scores are vendor-reported under each company's evaluation setup and may not be directly comparable. Use as directional signals only.</p>
+
     <table class="comparison-table">
       <thead><tr><th>Benchmark</th><th>Claude Code</th><th>Codex CLI</th><th>Grok Build</th></tr></thead>
       <tbody>
@@ -200,7 +202,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
 
     <p><strong>Important caveat:</strong> these are vendor-reported numbers, each produced under its own evaluation setup. Direct comparisons have real limits — a score generated on one harness isn't strictly comparable to a score generated on another. Treat the table as a directional signal, not a definitive ranking. The gaps tell you roughly where each tool sits; they don't settle a winner to the decimal point.</p>
 
-    <p>That said, the Terminal-Bench 2.0 line is the one to sit with. Codex CLI leads at 82.0% against Claude Code's 69.4% on realistic shell tasks — the kind of work these agents actually do all day. That gap partially explains why Codex CLI <em>feels</em> faster in practice on boilerplate and iteration-heavy work, beyond just its raw tokens-per-second advantage. SWE-Bench measures whether an agent can close a GitHub issue. Terminal-Bench measures whether it's fluent in the shell. On the second one, the spread is wide.</p>
+    <p>That said, the Terminal-Bench 2.0 line is the one to sit with. On Terminal-Bench 2.0 — which tests realistic shell tasks — Codex CLI is reported at 82.0% and Claude Code at 69.4%, per public leaderboard data. Grok Build has not yet appeared on the public leaderboard. That gap partially explains why Codex CLI <em>feels</em> faster in practice on boilerplate and iteration-heavy work, beyond just its raw tokens-per-second advantage. SWE-Bench measures whether an agent can close a GitHub issue. Terminal-Bench measures whether it's fluent in the shell. On the second one, the spread is wide.</p>
 
     <h2 id="profiles">The three workflow profiles</h2>
 
@@ -242,11 +244,13 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
 
     <p>Second, the Grok Build subscription trajectory. That $99/month is a six-month promotional rate. It reverts to $299/month after, which makes it the most expensive CLI subscription in the category once the intro window closes. Budget for $299, not $99 — pricing your year-two stack around the promo rate is how you get a nasty surprise in November.</p>
 
+    <p>Note: xAI pricing has changed frequently since launch. Verify current rates at x.ai before subscribing.</p>
+
     <p>Codex CLI, meanwhile, has the cleanest value story if you're already an OpenAI subscriber: the CLI is bundled in, so the marginal cost is zero. Claude Code sits in the middle — more than Codex for an OpenAI household, less than Grok Build's list price, with the billing wrinkle below to factor in.</p>
 
     <h2 id="billing">The June 15, 2026 Claude Code billing change</h2>
 
-    <p>One thing heavy Claude Code users need on their radar: Anthropic announced a metered-credit change to Claude Code effective June 15, 2026. If you run Claude Code hard, verify the current billing details before you commit to the Premium team tier — the change affects the cost calculation for teams weighing Claude Code against Codex CLI at scale.</p>
+    <p>One thing heavy Claude Code users need on their radar: Anthropic's June 15, 2026 change moves Claude Code to metered, API-style usage billing — separating capability access from usage costs. Heavy Claude Code users should verify current billing details at anthropic.com before committing to team plans. The change affects the cost calculation for teams weighing Claude Code against Codex CLI at scale.</p>
 
     <p>This doesn't change Claude Code's capability case. Opus 4.7 still posts the strongest reasoning numbers, and the 1M context window is still the reason it wins Profile 1. But the cost side of the comparison is in motion, and a team doing the Claude-Code-vs-Codex-CLI math for ten developers should run it on current billing, not last month's. Check before you sign.</p>
 

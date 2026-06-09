@@ -668,8 +668,8 @@ Next content priorities (from May 24, 2026 session):
 ## Content Queue (updated June 7, 2026 session)
 
 ### Remaining queue
-- ZoomMate review — MEDIUM
 - MiniMax M3 review — HIGH
+- ZoomMate review — MEDIUM
 - "ChatGPT Go vs Plus vs Pro" full comparison — MEDIUM
 
 ### Completed
@@ -695,6 +695,12 @@ Next content priorities (from May 24, 2026 session):
 - ChatGPT, Cursor, Grammarly, Perplexity, Jasper, Notion AI pricing all updated ✅
 
 ## Search Console Optimization
+
+### June 9, 2026 — New comparison post
+blog/grok-build-vs-codex-vs-claude-code-2026.html
+Target: "grok build vs codex vs claude code 2026"
+Author: Marcus Veil — COI disclosure included
+Editorial fixes applied post-Perplexity check (billing framing, benchmark caveats, Terminal-Bench sourcing, xAI pricing caveat)
 
 ### June 7, 2026 — Search Console-driven rewrites
 - review/bolt.html — 252 impressions, position 11.6 → deep rewrite June 5

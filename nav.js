@@ -52,6 +52,7 @@
     '<a href="' + prefix + 'review/deepseek-v4.html">DeepSeek V4</a>' +
     '<a href="' + prefix + 'review/kimi-code.html">Kimi Code</a>' +
     '<a href="' + prefix + 'review/grok-build.html">Grok Build</a>' +
+    '<a href="' + prefix + 'review/minimax-m3.html">MiniMax M3</a>' +
     '<a href="' + prefix + 'review/zapier.html">Zapier</a>' +
     '<a href="' + prefix + 'review/n8n.html">n8n</a>' +
     '<a href="' + prefix + 'review/microsoft-agent-365.html">Microsoft Agent 365</a>' +

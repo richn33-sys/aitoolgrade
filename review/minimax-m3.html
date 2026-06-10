@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="canonical" href="https://aitoolgrade.com/review/minimax-m3.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MiniMax M3 review 2026 — the first open-weight model to combine 59% SWE-Bench Pro, a 1M-token context, and native multimodal input. MSA sparse attention, $0.60/M pricing, and the benchmark and data-residency caveats.">
+<title>MiniMax M3 Review 2026 — Open-Weight Frontier Coding, 1M Context, Native Multimodal | AIToolGrade</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fafaf8;--bg2:#f3f2ee;--bg3:#eceae3;--text:#1a1a18;--text2:#4a4a45;--text3:#8a8a82;--accent:#e85d26;--accent2:#f07d4a;--accent-dim:rgba(232,93,38,0.08);--border:#e2e0d8;--white:#ffffff;--display:'Playfair Display',serif;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:4px}
+.nav-dropdown>a::after{content:"▾";font-size:10px}
+.dropdown-menu{visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.15s ease,visibility 0s linear 0.5s;position:absolute;top:calc(100% + 8px);left:-16px;background:white;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:200;max-height:80vh;overflow-y:auto}
+.dropdown-menu a{display:block;padding:8px 12px;font-size:14px;color:var(--text2);text-decoration:none;border-radius:6px;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--bg2);color:var(--accent)}
+.nav-dropdown:hover .dropdown-menu{visibility:visible;opacity:1;pointer-events:auto;transition:opacity 0.15s ease,visibility 0s}
+.nav-dropdown .dropdown-menu::before{content:"";position:absolute;top:-20px;left:0;right:0;height:20px}
+.nav-dropdown::after{content:"";position:absolute;height:20px;width:calc(100% + 16px);bottom:-20px;left:-16px}
+.review-layout{max-width:1100px;margin:0 auto;padding:60px 40px;display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:start}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:24px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+.review-header{margin-bottom:40px}
+.review-tool-row{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.review-tool-logo{width:56px;height:56px;border-radius:14px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:28px;border:1px solid var(--border)}
+.review-tool-title{font-size:15px;font-weight:600;margin-bottom:2px}
+.review-tool-url{font-size:13px;color:var(--text3);font-family:var(--mono)}
+h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;margin-bottom:16px}
+.review-meta-row{display:flex;align-items:center;gap:20px;font-size:13px;color:var(--text3);margin-bottom:24px}
+.verdict-banner{background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:20px 24px;margin-bottom:40px;display:flex;align-items:center;gap:16px}
+.verdict-score{font-family:var(--display);font-size:48px;font-weight:800;color:var(--accent);line-height:1}
+.verdict-text h3{font-size:15px;font-weight:600;margin-bottom:4px}
+.verdict-text p{font-size:13px;color:var(--text2)}
+.review-body h2{font-family:var(--display);font-size:28px;font-weight:700;margin:40px 0 16px}
+.review-body p{color:var(--text2);margin-bottom:16px}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
+.pros-box,.cons-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px}
+.pros-box{border-top:3px solid #2e7d32}
+.cons-box{border-top:3px solid #c62828}
+.pros-box h4{color:#2e7d32;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.cons-box h4{color:#c62828;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.pro-item,.con-item{font-size:14px;color:var(--text2);margin-bottom:8px;display:flex;gap:8px;align-items:flex-start}
+.pro-item::before{content:'✓';color:#2e7d32;font-weight:600;flex-shrink:0}
+.con-item::before{content:'✗';color:#c62828;font-weight:600;flex-shrink:0}
+.score-breakdown{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;margin:32px 0}
+.score-breakdown h4{font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:20px}
+.score-row{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.score-row:last-child{margin-bottom:0}
+.score-name{font-size:14px;color:var(--text2);width:160px;flex-shrink:0}
+.score-bar-track{flex:1;height:8px;background:var(--bg2);border-radius:100px;overflow:hidden}
+.score-bar-fill{height:100%;border-radius:100px;background:var(--accent)}
+.score-val{font-family:var(--mono);font-size:13px;font-weight:500;width:30px;text-align:right}
+.comparison-wrap{overflow-x:auto;margin:24px 0}
+.comparison-table{width:100%;border-collapse:collapse;font-size:14px}
+.comparison-table th,.comparison-table td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
+.comparison-table th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.05em;color:var(--text3);background:var(--bg2)}
+.comparison-table td{color:var(--text2)}
+.comparison-table tr td:first-child{font-weight:600;color:var(--text)}
+.comparison-table th a,.comparison-table td a{color:var(--accent);text-decoration:none}
+.affiliate-box{background:var(--text);color:white;border-radius:14px;padding:28px;margin:40px 0;text-align:center}
+.affiliate-box h3{font-family:var(--display);font-size:24px;font-weight:700;margin-bottom:8px}
+.affiliate-box p{color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:20px}
+.affiliate-btn{display:inline-block;background:var(--accent);color:white;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;transition:background 0.15s}
+.affiliate-btn:hover{background:var(--accent2)}
+.affiliate-note{font-size:11px;color:rgba(255,255,255,0.4);margin-top:12px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px;position:sticky;top:84px}
+.sidebar-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:16px}
+.sidebar-score{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.sidebar-score-num{font-family:var(--display);font-size:52px;font-weight:800;color:var(--accent);line-height:1}
+.sidebar-score-label{font-size:13px;color:var(--text3)}
+.sidebar-price-row{display:flex;justify-content:space-between;font-size:14px;padding:10px 0;border-bottom:1px solid var(--border)}
+.sidebar-price-row:last-of-type{border-bottom:none}
+.sidebar-price-label{color:var(--text2)}
+.sidebar-price-val{font-family:var(--mono);font-weight:500}
+.sidebar-cta{display:block;background:var(--accent);color:white;text-align:center;padding:14px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;margin-top:20px;transition:background 0.15s}
+.sidebar-cta:hover{background:var(--accent2)}
+.sidebar-disclosure{font-size:11px;color:var(--text3);margin-top:10px;text-align:center}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}
+.footer-brand span{color:var(--accent)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--accent)}
+@media(max-width:768px){.review-layout{grid-template-columns:1fr;padding:40px 20px}.pros-cons{grid-template-columns:1fr}h1{font-size:30px}nav{padding:0 20px}.footer-inner{grid-template-columns:1fr 1fr}}
+
+/* === MOBILE NAV + RESPONSIVE TABLE FIX === */
+.nav-toggle{display:none;order:2;background:none;border:0;font-size:24px;line-height:1;color:var(--text);cursor:pointer;padding:4px 6px}
+@media(max-width:768px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(250,250,248,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 20px 16px;box-shadow:0 8px 24px rgba(0,0,0,0.06);max-height:calc(100vh - 64px);overflow-y:auto}
+  nav.nav-open .nav-links{display:flex}
+  .nav-links>a,.nav-dropdown{padding:12px 2px;border-bottom:1px solid var(--border)}
+  .nav-dropdown{position:static}
+  .nav-dropdown>a::after{display:none}
+  .dropdown-menu{display:none!important}
+  .nav-cta{display:block;text-align:center;background:var(--accent);color:#fff;margin-top:14px;padding:12px;border:0!important;border-radius:6px}
+  .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+  .comparison-wrap{overflow-x:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "name": "MiniMax M3 Review 2026",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "7.9",
+    "bestRating": "10",
+    "worstRating": "0"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Marcus Veil",
+    "url": "https://aitoolgrade.com/author/marcus-veil.html"
+  },
+  "itemReviewed": {
+    "@type": "SoftwareApplication",
+    "name": "MiniMax M3",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web, API, Self-hosted",
+    "offers": {
+      "@type": "Offer",
+      "price": "0.60",
+      "priceCurrency": "USD",
+      "url": "https://platform.minimax.io"
+    }
+  },
+  "datePublished": "2026-06-10",
+  "dateModified": "2026-06-10"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolgrade.com"},
+    {"@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://aitoolgrade.com/reviews.html"},
+    {"@type": "ListItem", "position": 3, "name": "AI Coding", "item": "https://aitoolgrade.com/category/coding.html"},
+    {"@type": "ListItem", "position": 4, "name": "MiniMax M3", "item": "https://aitoolgrade.com/review/minimax-m3.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<div id="nav-root"></div>
+<script src="../nav.js"></script>
+
+<div class="review-layout">
+  <div class="review-main">
+    <div style="background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 14px 18px; margin-bottom: 28px; display: flex; align-items: flex-start; gap: 12px;">
+      <span style="font-family: var(--mono); font-size: 18px; line-height: 1;">🔍</span>
+      <div>
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 4px;">Research-Based Review</div>
+        <p style="font-family: var(--sans); font-size: 0.88rem; color: var(--text2); line-height: 1.6; margin: 0;">This review is based on documented features, verified pricing, and community sentiment — not hands-on testing. <a href="../how-we-review.html" style="color: var(--accent); text-decoration: none;">See how we research →</a></p>
+      </div>
+    </div>
+    <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="../category/coding.html">AI Coding</a><span>›</span>MiniMax M3 Review</div>
+    <div class="review-header">
+      <div class="review-tool-row">
+        <div class="review-tool-logo">🜂</div>
+        <div><div class="review-tool-title">MiniMax M3</div><div class="review-tool-url">platform.minimax.io</div></div>
+      </div>
+      <h1>MiniMax M3 Review 2026 — Open-Weight Frontier Coding, 1M Context, Native Multimodal</h1>
+      <div class="review-meta-row">
+        <span>📅 June 2026</span>
+        <span>⏱ 13 min read</span>
+        <span>📊 Research-based</span>
+      </div>
+    </div>
+    <div class="verdict-banner">
+      <div class="verdict-score">7.9</div>
+      <div class="verdict-text">
+        <h3>Editor's Verdict: The Most Technically Ambitious Open-Weight Model of 2026 — With Caveats Attached</h3>
+        <p style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:6px">Frontier-level coding, a 1M context, and native multimodal in one open-weight model at $0.60/M — held back by vendor-only benchmarks, data-residency exposure, and new-model maturity.</p>
+        <p>MiniMax M3 launched June 1, 2026 as the first open-weight model to combine three things at once: frontier-level coding (59% SWE-Bench Pro, edging GPT-5.5's 58.6%), a 1-million-token context window, and native text/image/video input. The new MiniMax Sparse Attention (MSA) architecture delivers 15.6x faster decoding at 1M context, and at $0.60/M input it runs roughly 12x cheaper than Claude Opus 4.7. The constraints are equally specific: the benchmarks are vendor-reported and not yet independently verified, the open weights hadn't shipped at launch, and a Shanghai-based developer raises the same data-residency questions as DeepSeek and Kimi. Genuinely interesting — but a 60-to-90-day "wait and verify" tool for most production use.</p>
+      </div>
+    </div>
+    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified June 2026</p>
+
+    <div class="review-body">
+
+      <div style="background: #fef3cd; border: 1px solid #f0c040; border-radius: 10px; padding: 16px 20px; margin-bottom: 28px;">
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: #8a6000; margin-bottom: 6px;">⚠️ Editorial Disclosure</div>
+        <p style="font-family: var(--sans); font-size: 0.9rem; color: #5a4000; line-height: 1.65; margin: 0;">AIToolGrade uses Claude (Anthropic) for content production. Claude Opus 4.7/4.8 is a direct competitor to MiniMax M3. We have applied our standard research methodology — documented features, verified pricing, community sentiment — and have not received compensation from MiniMax. Where M3's vendor-reported benchmarks compare it favorably to Claude, we have flagged that those figures are not yet independently verified.</p>
+      </div>
+
+      <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:16px 20px;margin:0 0 24px 0">
+        <p style="font-size:13px;font-family:'DM Mono',monospace;color:var(--accent);margin-bottom:8px">RELATED REVIEWS</p>
+        <a href="../review/deepseek-v4.html" style="font-size:15px;font-weight:600;color:var(--text);display:block;margin-bottom:6px;text-decoration:none">DeepSeek V4 Review 2026 — Frontier Coding Benchmarks at 1/30th the Cost →</a>
+        <a href="../review/kimi-code.html" style="font-size:15px;font-weight:600;color:var(--text);display:block;margin-bottom:6px;text-decoration:none">Kimi Code Review 2026 — Open-Source Claude Code Alternative →</a>
+        <a href="../review/claude-code.html" style="font-size:15px;font-weight:600;color:var(--text);display:block;text-decoration:none">Claude Code Review 2026 — Anthropic's Agentic Coding Tool →</a>
+      </div>
+
+      <h2 id="what-is-minimax-m3">What is MiniMax M3?</h2>
+      <p>MiniMax M3 is an open-weight frontier language model launched June 1, 2026 by MiniMax, a Shanghai-based AI lab. The pitch is unusually specific for a model release: M3 is positioned as the first open-weight model to do three things simultaneously — code at a frontier level, hold a million tokens of context, and accept native multimodal input across text, image, and video. Plenty of models do one or two of those. M3 claims all three in a single open-weight system, and that combination is what makes it worth a serious look rather than a passing one.</p>
+      <p>The headline coding number is 59.0% on SWE-Bench Pro, the hardest of the real-world coding benchmarks — narrowly ahead of GPT-5.5's 58.6%. Carry the obligatory caveat with that figure everywhere it appears: it's vendor-reported, measured under MiniMax's own evaluation setup, and not yet independently confirmed. The architecture underneath is the genuinely new part. MiniMax Sparse Attention (MSA) brings back sparse attention the company had deliberately stripped out of the previous M2 generation, this time with a lightweight index branch that scans tokens and decides which key-value blocks actually need attention. The result MiniMax reports is 15.6x faster decoding and 9.7x faster prefill at 1M context versus M2 — a direct attack on the cost of running long-context inference.</p>
+      <p>Then there's the price. At $0.60/M input tokens (with a launch-week promo at $0.30/M), M3 costs roughly 12x less than Claude Opus 4.7 at what MiniMax claims is comparable benchmark performance. The open weights — under an MIT-style license — are scheduled to land on HuggingFace and GitHub within about ten days of launch, putting full self-hosting on the table for anyone with the infrastructure. If the benchmarks hold up to independent scrutiny, that is one of the strongest cost-performance propositions in the open-weight category. The conditional in that sentence is the whole review.</p>
+
+      <!-- toc -->
+<nav aria-label="Table of contents" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 32px 0;">
+  <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 12px;">In this review</div>
+  <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#what-is-minimax-m3" style="color: var(--accent); text-decoration: none;">What is MiniMax M3?</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#who-is-it-for" style="color: var(--accent); text-decoration: none;">Who Is It For?</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pros-and-cons" style="color: var(--accent); text-decoration: none;">Pros and Cons</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#score-breakdown" style="color: var(--accent); text-decoration: none;">Score Breakdown</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#benchmarks" style="color: var(--accent); text-decoration: none;">Benchmarks and the Verification Question</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pricing" style="color: var(--accent); text-decoration: none;">Pricing</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#key-features" style="color: var(--accent); text-decoration: none;">Key Features</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#vs-kimi-deepseek" style="color: var(--accent); text-decoration: none;">MiniMax M3 vs Kimi K2.6 vs DeepSeek V4</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-chinese-company-question" style="color: var(--accent); text-decoration: none;">The Chinese Company Question</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-bottom-line" style="color: var(--accent); text-decoration: none;">The Bottom Line</a></li>
+  </ol>
+</nav>
+
+      <h2 id="who-is-it-for">Who Is It For?</h2>
+      <p>M3 is an API-first frontier model, and the fit is sharpest for developers who actually need its specific combination rather than any one piece. The clearest match is multimodal agentic work. If your workload involves reading screenshots, parsing diagrams, processing short video, and then writing or fixing code off that input, M3 is unusual: it does all of that natively in a single open-weight model, with no separate vision model bolted on. That combination — multimodal input plus frontier coding plus a million-token window — doesn't have a direct open-weight equivalent right now.</p>
+      <p>It also fits high-volume agentic pipelines where token cost is the binding constraint. At $0.60/M input against Claude Opus 4.7's $15, the per-call math changes what's economically sane to run — batch refactors, long-running agent loops, large-corpus analysis. And for teams that need full data sovereignty, the open weights (once they ship) make self-hosting a real option: every token stays inside your own environment, API cost drops to infrastructure-only. Researchers evaluating the MSA sparse-attention architecture are another natural audience — the technical contribution here is the kind of thing worth studying directly. So are teams already running DeepSeek or Kimi who want to compare their open-weight options head to head.</p>
+      <p>The misfits are worth naming just as plainly. Enterprise teams with strict US or EU data-residency requirements face the same Shanghai-hosting concerns covered below — the same gate that applies to DeepSeek V4 and Kimi Code. Anyone whose production decision depends on independently verified benchmarks should wait; at the time of this review, the numbers are MiniMax's own. Developers who want native IDE integration won't find it — M3 is an API and a set of weights, not a VS Code extension. And if you needed the weights at launch, they weren't there: the HuggingFace release was scheduled for roughly June 11, ten days after the model went live. If you want a polished, turnkey agentic coding tool today, <a href="../review/claude-code.html">Claude Code</a> or <a href="../review/cursor.html">Cursor</a> are the more practical starting points.</p>
+
+      <h2 id="pros-and-cons">Pros and Cons</h2>
+      <div class="pros-cons">
+        <div class="pros-box">
+          <h4>What works well</h4>
+          <div class="pro-item">59% SWE-Bench Pro at $0.60/M input — if the benchmarks verify independently, the strongest cost-performance ratio in open-weight coding models</div>
+          <div class="pro-item">MSA architecture is a genuine technical contribution — 15.6x faster decoding at 1M context attacks a real inference-cost problem</div>
+          <div class="pro-item">Native multimodal (text, image, video) in a single open-weight model is unique in the category right now</div>
+          <div class="pro-item">Desktop computer operation extends M3 into agentic territory comparable to Claude Cowork and Google Antigravity</div>
+          <div class="pro-item">Open weights enable complete data sovereignty via self-hosting once they ship</div>
+          <div class="pro-item">OpenAI-compatible API means migration is usually a single endpoint change, not a rewrite</div>
+        </div>
+        <div class="cons-box">
+          <h4>What to watch out for</h4>
+          <div class="con-item">Benchmarks are vendor-reported and not yet independently verified — the SWE-Bench Pro scores need third-party confirmation before any production commitment</div>
+          <div class="con-item">Chinese company — China's 2017 National Intelligence Law means API prompts are legally accessible to the government; the same concern as DeepSeek V4 and Kimi Code</div>
+          <div class="con-item">Open weights weren't shipped at review time (due ~June 11) — architecture and safety behavior are unverifiable until then</div>
+          <div class="con-item">No native IDE extension — an API-first tool; you build or reuse integrations</div>
+          <div class="con-item">New-model maturity — a June 1, 2026 launch means edge cases and production reliability are unproven</div>
+          <div class="con-item">Promotional pricing ($0.30/M) reverts to $0.60/M — still competitive, but factor it into cost projections</div>
+        </div>
+      </div>
+
+      <h2 id="score-breakdown">Score Breakdown</h2>
+      <div class="score-breakdown">
+        <h4>Category scores — AIToolGrade methodology</h4>
+        <div class="score-row"><span class="score-name">Ease of Use</span><div class="score-bar-track"><div class="score-bar-fill" style="width:70%"></div></div><span class="score-val">7.0</span></div>
+        <div class="score-row"><span class="score-name">Features</span><div class="score-bar-track"><div class="score-bar-fill" style="width:95%"></div></div><span class="score-val">9.5</span></div>
+        <div class="score-row"><span class="score-name">Value for Money</span><div class="score-bar-track"><div class="score-bar-fill" style="width:95%"></div></div><span class="score-val">9.5</span></div>
+        <div class="score-row"><span class="score-name">Integration</span><div class="score-bar-track"><div class="score-bar-fill" style="width:75%"></div></div><span class="score-val">7.5</span></div>
+        <div class="score-row"><span class="score-name">Support &amp; Docs</span><div class="score-bar-track"><div class="score-bar-fill" style="width:55%"></div></div><span class="score-val">5.5</span></div>
+      </div>
+      <p>The shape is lopsided in an instructive way. Features and Value for Money both sit at 9.5 — the feature set (59% SWE-Bench Pro, 1M context, MSA, native multimodal, desktop operation) is among the most complete in the open-weight category, and at $0.60/M input with a self-host option, the price-performance is hard to argue with on paper. Ease of Use (7.0) and Integration (7.5) sit in the mid-7s: the OpenAI-compatible API and OpenRouter access ease onboarding, but it's API-first with no IDE extension, and self-hosting demands real infrastructure. Support &amp; Documentation drags hardest at 5.5 — this is a ten-day-old model, the docs are still developing, support runs through a Chinese-company structure, and the community is only beginning to form. The 7.9 overall deliberately holds the line: the feature and value scores would push higher, but unverified benchmarks, data-residency exposure, and new-model maturity cap it. We expect the number to move once independent verification arrives — likely upward, in 60 to 90 days.</p>
+
+      <h2 id="benchmarks">Benchmarks and the Verification Question</h2>
+      <p>Every number in this section carries the same asterisk: the scores are vendor-reported, measured under each company's own evaluation setup, and may not be directly comparable. Independent verification is pending for M3 specifically. That isn't a throwaway disclaimer — it's the single most important fact about M3 at the time of this review. A 59% SWE-Bench Pro result that edges GPT-5.5 is a meaningful claim if it survives third-party testing, and a marketing line if it doesn't. We're reporting the claim and the uncertainty together because that's the honest state of the evidence.</p>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Benchmark</th>
+              <th>MiniMax M3</th>
+              <th>Kimi K2.6</th>
+              <th>DeepSeek V4-Pro</th>
+              <th>Claude Opus 4.7</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>SWE-Bench Pro</td><td>59.0%</td><td>58.6%</td><td>—</td><td>—</td></tr>
+            <tr><td>SWE-Bench Verified</td><td>—</td><td>80.2%</td><td>80.6%</td><td>87.6%</td></tr>
+            <tr><td>Terminal-Bench 2.1</td><td>66.0%</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td>BrowseComp</td><td>83.5</td><td>86.3 (swarms)</td><td>—</td><td>—</td></tr>
+            <tr><td>Context window</td><td>1M tokens</td><td>1M tokens</td><td>1M tokens</td><td>1M tokens</td></tr>
+            <tr><td>Input price / M</td><td>$0.60</td><td>$0.60</td><td>$0.435</td><td>$15.00</td></tr>
+            <tr><td>Open weight</td><td>✓</td><td>✓ Apache 2.0</td><td>✓ MIT</td><td>✗</td></tr>
+            <tr><td>Multimodal</td><td>✓ Text/Image/Video</td><td>✗</td><td>✗</td><td>✓ Text/Image</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Read the table as a profile, not a leaderboard. M3 and Kimi K2.6 report SWE-Bench Pro within half a point of each other, but the benchmarks don't line up cleanly across models — M3 leans on Pro and Terminal-Bench, the others on Verified — so cross-model comparison is approximate at best. The two facts that do hold up regardless of evaluation noise are price and modality: M3 matches Kimi on input cost while undercutting Claude Opus 4.7 by roughly 12x, and it's the only model in this group accepting native video input. Its 66% on Terminal-Bench 2.1 and 83.5 on BrowseComp point to real agentic and web-research capability, but again — vendor-reported, awaiting confirmation. The TechTimes analysis is worth weighing here too: it argues M3 trails Claude Opus 4.8 by meaningful margins on directly comparable agent evaluations, a reminder that "beats GPT-5.5 on SWE-Bench Pro" is one slice of a larger picture.</p>
+
+      <h2 id="pricing">Pricing</h2>
+      <p>Pricing is verified June 2026 and splits into three paths: MiniMax's own standard API, OpenRouter access, and self-hosting the open weights. The launch week carried a 50%-off promotion that's worth understanding before you build a cost model on it — the promo rate reverts to standard, and your projections should use the standard figure.</p>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr><th>Access path</th><th>Input / M</th><th>Output / M</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Standard API (platform.minimax.io)</td><td>$0.60</td><td>$2.40</td><td>Standard rate</td></tr>
+            <tr><td>Launch promo (first week)</td><td>$0.30</td><td>$1.20</td><td>50% off — reverts to standard</td></tr>
+            <tr><td>Via OpenRouter</td><td>$0.30–$0.60</td><td>$1.20–$2.40</td><td>Promo / standard; routing redundancy</td></tr>
+            <tr><td>Self-hosted (open weights)</td><td colspan="2">Infrastructure only</td><td>Weights on HuggingFace ~June 11, 2026</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The cost case is the cleanest part of the M3 story. At $0.60/M standard input, it's roughly 12x cheaper than Claude Opus 4.7's $15/M, and it matches Kimi K2.6 on input price while sitting just above DeepSeek V4-Pro's $0.435/M. For high-volume agentic workloads, that order-of-magnitude gap against the closed frontier alternatives is the number that drives adoption. The MiniMax Code subscription product — a coding-workflow tool built on M3 — gives a managed path for teams that don't want to wire up the raw API. And the self-hosting route, once the weights land, drops the per-token fee to zero entirely; you trade API spend for server and infrastructure cost. One planning note: the promotional $0.30/M is a launch lever, not the baseline. Model your spend on $0.60/M input and $2.40/M output, and treat anything cheaper as upside.</p>
+
+      <div style="background: var(--accent-dim); border: 1px solid rgba(232,93,38,0.15); border-radius: 10px; padding: 16px 20px; margin-top: 16px;">
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 6px;">What Changed</div>
+        <p style="font-family: var(--sans); font-size: 0.9rem; color: var(--text); line-height: 1.65; margin: 0;">MiniMax M3 launched June 1, 2026. It's the first MiniMax model to use the MSA sparse-attention architecture — the M2 generation had removed sparse attention, and M3 brings it back with a lightweight index branch (15.6x faster decoding, 9.7x faster prefill at 1M context vs M2). It's positioned as the first open-weight model to combine frontier coding, a 1M context, and native multimodal input. The open weights are scheduled for HuggingFace release around June 11, 2026. M3 reports 59% SWE-Bench Pro, edging GPT-5.5 — vendor-reported, independent verification pending.</p>
+      </div>
+
+      <h2 id="key-features">Key Features</h2>
+
+      <p><strong>59% SWE-Bench Pro coding.</strong> M3 reports 59.0% on SWE-Bench Pro, the most demanding real-world coding benchmark, narrowly ahead of GPT-5.5's 58.6%. SWE-Bench Pro measures resolution of genuinely hard GitHub issues rather than synthetic puzzles, so a frontier-adjacent score there is the headline capability claim. The caveat travels with the number: vendor-reported, independent verification pending.</p>
+
+      <p><strong>1M-token context window.</strong> A single call can hold an entire codebase, a full documentation set, or a long research corpus. For agents reasoning across large systems, that's the difference between whole-repo context and chunking compromises — and it's a capability M3 shares with Kimi, DeepSeek, and Claude at the top of the category.</p>
+
+      <p><strong>MiniMax Sparse Attention (MSA).</strong> The architectural centerpiece. A lightweight index branch scans tokens and selects which key-value blocks actually need attention, rather than attending to everything. MiniMax reports 15.6x faster decoding and 9.7x faster prefill at 1M context versus M2. Notably, M2 had removed sparse attention; M3 brings it back in a more refined form. Independent developers have called this a genuine contribution rather than a marketing claim — it targets the real cost of long-context inference.</p>
+
+      <p><strong>Native multimodal input.</strong> Text, image, and video in a single model, with no separate vision component. In the open-weight category this is currently unique — Kimi and DeepSeek are text-only, and even Claude Opus 4.7's multimodal stops at text and image. For coding-adjacent tasks that involve screenshots, diagrams, or short clips, the inputs aren't limited to text.</p>
+
+      <p><strong>Desktop computer operation.</strong> M3 can operate a desktop computer for agentic workflows — comparable in scope to <a href="../review/claude-cowork.html">Claude Cowork</a> and Google Antigravity. This pushes M3 beyond a pure API model into agentic territory, where it can take actions in a real environment rather than only returning text.</p>
+
+      <p><strong>66% Terminal-Bench 2.1.</strong> Strong performance on realistic shell tasks — the kind of work an agentic coding tool actually does at the command line. Combined with the coding scores, it points to a model built for agent loops, not just chat completion. Vendor-reported, like the rest.</p>
+
+      <p><strong>83.5 BrowseComp.</strong> Autonomous browsing and web-research capability. For agents that need to gather information from the live web as part of a task, this is the relevant signal — though Kimi's swarm configuration reports a higher 86.3 on the same benchmark.</p>
+
+      <p><strong>Open weights.</strong> Released under an MIT-style license, self-hostable, with weights scheduled for HuggingFace and GitHub roughly ten days after the June 1 launch. Self-hosting carries no per-token fee and keeps every token inside your environment — the path to full data sovereignty. The catch at review time: the weights hadn't actually shipped yet.</p>
+
+      <p><strong>OpenAI-compatible API.</strong> A drop-in replacement for most OpenAI API calls. Migrating an existing pipeline — whether it currently targets OpenAI, Anthropic, or anything OpenAI-shaped — is usually a single endpoint change rather than a rewrite.</p>
+
+      <p><strong>MiniMax Code.</strong> A subscription product built on M3 for coding workflows, giving teams a managed path into the model without wiring up the raw API. It's the productized front door for developers who want the coding capability without the integration work.</p>
+
+      <div class="affiliate-box">
+        <h3>Evaluate MiniMax M3</h3>
+        <p>Open-weight, OpenAI-compatible, multimodal, and priced from $0.60/M input. Call the standard API, route through OpenRouter, or self-host the weights once they ship.</p>
+        <a href="https://platform.minimax.io" class="affiliate-btn">Visit MiniMax →</a>
+        <div class="affiliate-note">We may earn a commission at no extra cost to you</div>
+      </div>
+
+      <h2 id="vs-kimi-deepseek">MiniMax M3 vs Kimi K2.6 vs DeepSeek V4</h2>
+      <p>These are the three open-weight reference points the target audience actually weighs against each other. <a href="../review/kimi-code.html">Kimi K2.6</a> leads on agent swarms and MCP compatibility; <a href="../review/deepseek-v4.html">DeepSeek V4-Pro</a> leads on raw cost efficiency; M3's distinguishing move is folding multimodal input and a 1M context into the same open-weight coding model. The table lays out where each one earns its place.</p>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>MiniMax M3</th>
+              <th><a href="../review/kimi-code.html">Kimi K2.6</a></th>
+              <th><a href="../review/deepseek-v4.html">DeepSeek V4-Pro</a></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Primary strength</td><td>Multimodal + coding + 1M context</td><td>Agent swarms + MCP</td><td>Cost efficiency + coding</td></tr>
+            <tr><td>SWE-Bench</td><td>59% Pro (vendor)</td><td>80.2% Verified</td><td>80.6% Verified</td></tr>
+            <tr><td>Multimodal</td><td>✓ Text/Image/Video</td><td>✗</td><td>✗</td></tr>
+            <tr><td>Context window</td><td>1M tokens</td><td>1M tokens</td><td>1M tokens</td></tr>
+            <tr><td>Architecture</td><td>MSA sparse attention</td><td>MoE 1T params</td><td>MoE</td></tr>
+            <tr><td>License</td><td>Open weight (MIT-style)</td><td>Apache 2.0</td><td>MIT</td></tr>
+            <tr><td>Input price / M</td><td>$0.60 ($0.30 promo)</td><td>$0.60</td><td>$0.435</td></tr>
+            <tr><td>Chinese company</td><td>✓</td><td>✓</td><td>✓</td></tr>
+            <tr><td>Desktop operation</td><td>✓</td><td>✗</td><td>✗</td></tr>
+            <tr><td>Independent verification</td><td>Pending</td><td>✓</td><td>✓</td></tr>
+            <tr><td>Best for</td><td>Multimodal agentic workflows</td><td>Parallel coding agents</td><td>High-volume API workloads</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The pattern is clean. If you need multimodal input or desktop operation in an open-weight model, M3 is the only one of the three that offers it — that's its lane, and nothing here competes in it. If you want maximum parallelism and a frictionless migration off Claude Code, Kimi's swarms and MCP compatibility win. If you want the lowest raw token cost for high-volume API workloads, DeepSeek edges it on price. The one row that should give a cautious buyer pause is the last technical line: M3's benchmarks are still pending independent verification, while Kimi's and DeepSeek's have been third-party confirmed. For a production decision, that's not a tiebreaker — it's a reason to evaluate M3 in parallel and commit once the numbers are confirmed.</p>
+
+      <h2 id="the-chinese-company-question">The Chinese Company Question</h2>
+      <p>This is the part of the evaluation that has nothing to do with the benchmark and everything to do with whether you can deploy it. MiniMax is a Shanghai-based lab, and for US and EU organizations that raises the same concern that applies to DeepSeek and Kimi: China's 2017 National Intelligence Law requires Chinese companies to cooperate with government intelligence requests. In practical terms, every prompt processed through MiniMax's API is legally accessible to the Chinese government. For any deployment involving sensitive code, proprietary data, or regulated information, that's a hard gate, not a soft preference — the same framing the TechTimes analysis applied, and the same one we apply here.</p>
+      <p>These are legitimate questions, not a reason to dismiss the tool — and the distinction matters. A regulated enterprise handling customer data or proprietary source under EU residency rules has a genuine blocker on the hosted API. A solo developer, a startup, or a team working non-sensitive code faces a far lower bar. And the open-weight release changes the calculus for anyone with infrastructure: self-hosting keeps every token inside your own environment, which neutralizes the data-routing concern entirely — at the cost of running the model yourself, and contingent on the weights actually shipping as scheduled around June 11. OpenRouter and other third-party hosts also provide routing paths outside MiniMax's own servers, a middle option worth investigating when the tool fits but the default endpoint doesn't.</p>
+      <p>The honest framing is the same one we applied to DeepSeek V4 and Kimi Code: treat data residency as a hard gate to clear before the cost savings matter, not as a footnote. If your compliance posture rules out a Chinese-hosted API and you can't self-host, the 12x price advantage is irrelevant — the tool isn't deployable for you. If your posture allows it, or you can route around it via self-hosting or a non-China host, the cost case stands on its own. Apply the same compliance review you would to any Chinese-developed open-weight model.</p>
+
+      <div class="users-saying" style="margin:48px 0;">
+        <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Community Sentiment</div>
+        <h2 id="what-users-are-saying" style="font-family:var(--display);font-size:1.75rem;font-weight:800;color:var(--text);margin:0 0 8px 0;">What Users Are Saying</h2>
+        <p style="font-family:var(--sans);font-size:0.95rem;color:var(--text2);margin:0 0 32px 0;line-height:1.6;">We track discussion across developer forums, independent Medium evaluations, TechTimes, and Hacker News to gauge how M3 lands beyond the launch announcement. The early response is technically excited about the MSA architecture and the multimodal combination, and appropriately cautious about the two open questions: benchmarks that haven't been independently verified, and the data-residency exposure that comes with a Chinese-hosted API.</p>
+
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:32px;display:flex;gap:40px;flex-wrap:wrap;">
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--accent)">59%</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">SWE-Bench Pro*</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">~12x</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Cheaper / Token</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">15.6x</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Faster Decode</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">1M</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Token Context</div></div>
+        </div>
+        <p style="font-family:var(--mono);font-size:11px;color:var(--text3);margin:-20px 0 32px 0;">* Vendor-reported, independent verification pending</p>
+
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:#22a05a;">●</span> What developers consistently praise</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"The MSA architecture's efficiency at long context is a genuine contribution, not a marketing claim. The agentic demonstrations, particularly the CUDA kernel optimization, are the kind of results that should change how seriously people take this model. The cost advantage is real and significant."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Independent developer evaluation · Medium · June 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"The first open-weight model to pack frontier coding, 1M context, and native video understanding into one system. The MSA architecture solves a real inference cost problem — 15.6x faster decoding at scale is not incremental."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Developer community analysis · June 2026</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:var(--accent);">●</span> Common reservations</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"MiniMax M3's benchmark scores are company-reported and not yet independently verified. M3 trails Claude Opus 4.8 by meaningful margins on directly comparable agent evaluations. The promised open weights had not shipped at launch, making the architecture and safety behavior unverifiable."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">TechTimes independent analysis · June 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"Every prompt processed through MiniMax's API is legally accessible to the Chinese government under the 2017 National Intelligence Law. For any deployment involving sensitive code, proprietary data, or regulated information, this is a hard gate, not a soft preference."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">TechTimes independent analysis · June 2026</div>
+          </div>
+        </div>
+
+        <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.15);border-radius:12px;padding:20px 24px;">
+          <div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:8px;">AIToolGrade Take</div>
+          <p style="font-family:var(--sans);font-size:0.93rem;color:var(--text);line-height:1.7;margin:0;">MiniMax M3 is the most technically ambitious open-weight model launched in 2026 — the combination of MSA sparse attention, 59% SWE-Bench Pro, native multimodal, and $0.60/M input pricing represents a real advance in what open-weight models can deliver per dollar. The honest assessment requires holding two things at once: the cost-performance proposition is real if the benchmarks verify independently, and the data-residency concern is equally real for any organization deploying sensitive workloads. The pattern is consistent with DeepSeek V4 and Kimi Code — Chinese company, open-weight, dramatically cheaper than Western alternatives, same 2017 National Intelligence Law exposure. Our recommendation: evaluate M3 seriously for multimodal agentic workflows, where the architecture is genuinely interesting and the pricing is compelling. Wait for independent benchmark verification before production commitment. Self-host the open weights if data sovereignty is required. And apply the same compliance review you would to DeepSeek V4 or Kimi Code.</p>
+        </div>
+      </div>
+
+      <h2 id="the-bottom-line">The Bottom Line</h2>
+      <p>MiniMax M3 is the clearest evidence yet that open-weight models are pushing into territory the closed frontier used to own outright. MiniMax took a frontier-adjacent coding model (59% SWE-Bench Pro, vendor-reported), wrapped it in a genuinely new sparse-attention architecture that runs 15.6x faster at 1M context, added native text/image/video input and desktop operation, and priced the underlying API at roughly a twelfth of Claude Opus 4.7. On paper, the combination of capabilities per dollar is among the strongest the open-weight category has produced in 2026. The combination is the achievement — no other open-weight model folds multimodal input, a million-token context, and frontier coding into one system.</p>
+      <p>The reasons to hold back are real and specific, and none of them is about whether the architecture is interesting. The benchmarks are MiniMax's own, measured on MiniMax's setup, and not yet independently verified — and the SWE-Bench Pro lead over GPT-5.5 needs third-party confirmation before anyone bets production on it. The open weights weren't shipped at launch, which means the architecture and safety behavior were unverifiable at review time, pending the ~June 11 HuggingFace release. There's no native IDE extension. It's a ten-day-old model with unproven production reliability. And the data-residency question for a Shanghai-hosted API is a genuine gate for regulated organizations — clear it before the savings mean anything, because if you can't, they don't.</p>
+      <p>So the recommendation is conditional and specific. <strong>Best for:</strong> developers who need native multimodal processing in a single open-weight model; teams running high-volume agentic workflows where $0.60/M versus $15/M changes the math; organizations comfortable with self-hosting who want full data sovereignty once the weights ship; researchers evaluating the MSA architecture; and teams already on DeepSeek or Kimi comparing open-weight options. <strong>Not for:</strong> enterprise teams with strict US/EU data-residency requirements; production deployments that need independently verified benchmarks before commitment; developers who need native IDE integration; or anyone who needed the weights at launch. Evaluate M3 seriously now, wait for independent verification before you commit production to it, and self-host if data sovereignty is non-negotiable. This 7.9 reflects the June 2026 state — unverified benchmarks, data-residency exposure, new-model maturity — and we expect to revisit it, likely upward, in 60 to 90 days as third-party verification arrives. If you want absolute verified capability or a turnkey IDE assistant today, <a href="../review/claude-code.html">Claude Code</a> and <a href="../review/cursor.html">Cursor</a> remain the more practical picks.</p>
+    </div>
+  </div>
+
+  <div class="review-sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-title">Overall score</div>
+      <div class="sidebar-score">
+        <div class="sidebar-score-num">7.9</div>
+        <div>
+          <div style="color:var(--accent);font-size:18px;letter-spacing:-1px">★★★★</div>
+          <div class="sidebar-score-label">out of 10</div>
+        </div>
+      </div>
+      <div class="sidebar-title" style="margin-top:16px">Pricing</div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">API input / M</span><span class="sidebar-price-val">$0.60</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">API output / M</span><span class="sidebar-price-val">$2.40</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Launch promo / M</span><span class="sidebar-price-val">$0.30</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">License</span><span class="sidebar-price-val">MIT-style</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Open weights</span><span class="sidebar-price-val">✓ Yes</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Self-host</span><span class="sidebar-price-val">✓ Yes</span></div>
+      <a href="https://platform.minimax.io" class="sidebar-cta">Visit MiniMax →</a>
+      <div class="sidebar-disclosure">We may earn a commission</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">AI Tool<span>Grade</span></div><p class="footer-desc">Independent reviews and comparisons of AI tools. Researched, fact-checked, and independently rated.</p></div>
+    <div><div class="footer-col-title">Reviews</div><div class="footer-links"><a href="../category/writing.html">AI Writing</a><a href="../category/coding.html">AI Coding</a><a href="../category/image.html">AI Image</a><a href="../category/automation.html">Automation</a><a href="../category/productivity.html">Productivity</a></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="../about.html">About</a><a href="../how-we-review.html">How we review</a><a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
+    <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+</footer>
+</body></html>

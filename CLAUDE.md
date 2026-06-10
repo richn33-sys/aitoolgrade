@@ -33,7 +33,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ├── robots.txt
 ├── sitemap.xml          ← submitted to Google Search Console
 ├── nav.js               ← shared nav (single source of truth — see Site Architecture)
-├── review/              ← 30 individual tool review pages
+├── review/              ← 32 individual tool review pages
 │   ├── jasper.html              (AI Writing, 8.2)
 │   ├── copyai.html              (AI Writing, 7.3)
 │   ├── writesonic.html          (AI Writing, 8.0)
@@ -49,6 +49,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── claude-code.html         (AI Coding, 8.0)
 │   ├── kimi-code.html           (AI Coding, 7.8)
 │   ├── grok-build.html          (AI Coding, 6.7)
+│   ├── minimax-m3.html          (AI Coding, 7.9)
 │   ├── midjourney.html          (AI Image, 7.8)
 │   ├── adobe-firefly.html       (AI Image, 8.7)
 │   ├── leonardo-ai.html         (AI Image, 8.7)
@@ -89,18 +90,18 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ```
 > Root also has: about.html, resources.html, how-we-review.html, contribute.html, contact.html,
 > advertise.html, and legal pages (see "Missing File Structure Details"). author/ holds
-> marcus-veil.html and priya-nolan.html. Full HTML page count: 68.
+> marcus-veil.html and priya-nolan.html. Full HTML page count: 69.
 
 ## Category Review Counts (homepage displays these — keep in sync)
 - AI Writing: 4 (Jasper, Copy.ai, Writesonic, Grammarly)
-- AI Coding: 11 (Cursor, GitHub Copilot, Windsurf, Bolt.new, Replit, Lovable, Google Antigravity, DeepSeek V4, Claude Code, Kimi Code, Grok Build)
+- AI Coding: 12 (Cursor, GitHub Copilot, Windsurf, Bolt.new, Replit, Lovable, Google Antigravity, DeepSeek V4, Claude Code, Kimi Code, Grok Build, MiniMax M3)
 - AI Image: 3 (Midjourney, Adobe Firefly, Leonardo AI)
 - Automation: 3 (Zapier, n8n, Microsoft Agent 365)
 - AI Video: 4 (Runway, Synthesia, HeyGen, Descript)
 - Productivity: 6 (ChatGPT, Notion AI, Perplexity, Claude Cowork, Perplexity Computer, NotebookLM)
 
-Total: 31 reviews. Homepage `cat-count` values in index.html match these (AI Coding is 11 as of
-June 7, 2026 after adding Grok Build; Productivity is 6 after NotebookLM; Automation is 3).
+Total: 32 reviews. Homepage `cat-count` values in index.html match these (AI Coding is 12 as of
+June 10, 2026 after adding MiniMax M3; Productivity is 6 after NotebookLM; Automation is 3).
 
 When adding a new review, update the count in `index.html` using this script pattern:
 ```bash
@@ -186,6 +187,7 @@ Categories ▾         Reviews ▾            Compare    Blog    Get Updates
                        DeepSeek V4
                        Kimi Code
                        Grok Build
+                       MiniMax M3
                        Zapier
                        n8n
                        Midjourney
@@ -668,11 +670,11 @@ Next content priorities (from May 24, 2026 session):
 ## Content Queue (updated June 7, 2026 session)
 
 ### Remaining queue
-- MiniMax M3 review — HIGH
 - ZoomMate review — MEDIUM
 - "ChatGPT Go vs Plus vs Pro" full comparison — MEDIUM
 
 ### Completed
+- MiniMax M3 review ✅ (June 10, 2026) — AI Coding, 7.9, Marcus Veil. Open-weight frontier model from MiniMax (Shanghai), launched June 1, 2026. First open-weight model to combine frontier coding (59% SWE-Bench Pro, edging GPT-5.5's 58.6%), a 1M-token context, and native text/image/video input. New MSA sparse-attention architecture (brought back after M2 removed it) reports 15.6x faster decoding / 9.7x faster prefill at 1M context. $0.60/M input (~12x cheaper than Claude Opus 4.7; $0.30/M launch promo). Also: desktop computer operation, 66% Terminal-Bench 2.1, 83.5 BrowseComp, OpenAI-compatible API, MiniMax Code subscription. Carries the yellow COI box (AIToolGrade uses Claude; Opus 4.7/4.8 is a direct competitor) + the same Chinese-company / 2017 National Intelligence Law data-residency treatment as DeepSeek V4 and Kimi Code. Held to 7.9 because benchmarks are vendor-reported (independent verification pending), weights hadn't shipped at launch (~June 11 HuggingFace), and the model is new — note in review says score may rise in 60-90 days. Benchmark caveat carried throughout. NOT added to compare.html (consistent with deepseek-v4/claude-code/kimi-code/grok-build). datePublished/dateModified 2026-06-10.
 - "Grok Build vs Codex vs Claude Code 2026" blog post ✅ (June 9, 2026) — Comparison, Marcus Veil. Three terminal coding agents: Claude Code (Anthropic, Opus 4.7 87.6% SWE-Bench, 1M context), Codex CLI (OpenAI, GPT-5.5 88.7% SWE-Bench, ~2.5x faster / 240+ tok/s, Terminal-Bench 2.0 82.0% vs Claude's 69.4%, 1M context, omnimodal, bundled in ChatGPT Pro/Plus), Grok Build (xAI, grok-build-0.1 70.8% SWE-Bench, 256K context — NOT 2M, 8 parallel sub-agents in isolated Git worktrees, $99/mo intro → $299/mo). Carries yellow COI box near top + editorial disclosure at bottom (AIToolGrade uses Claude Code; scored conservatively 8.0). Calls out the $99→$299 Grok pricing trajectory, the June 15 2026 Claude Code metered-credit billing change, and benchmark caveats (vendor-reported, different eval setups). Grok API $0.20/M input = order of magnitude cheaper than the other two. 2,160 words. Links to all three reviews + best-ai-coding-agents-2026. datePublished/dateModified 2026-06-09. NOTE: source spec's Profile 2 limitation called Codex "smallest context window" but its own benchmark table puts Codex at 1M and Grok at 256K — resolved in favor of the table (Codex limitation framed as ecosystem lock-in + depth gap).
 - Cursor pricing update ✅ (June 7, 2026) — review/cursor.html. June 1, 2026 Teams restructure: single Teams row split into Teams Standard ($40/seat, split credit pools — Composer/Auto vs third-party frontier models) and NEW Teams Premium ($120/user/mo, $96 annual — higher credit allocation, priority access); Enterprise (custom) row added. Added a "What Changed — June 2026" callout; relabeled the older callout "What Changed — June 2025". dateModified → 2026-06-07, byline → June 2026. Screenshot caption left at May 2026 (image unchanged).
 - Grok Build review ✅ (June 7, 2026) — AI Coding, 6.7, Marcus Veil. xAI's first terminal-native agentic coding CLI; third lab-backed entry alongside Claude Code and Codex CLI. Standout feature is 8 parallel sub-agents each isolated in its own Git worktree — a genuine architectural first the category lacks. Underlying grok-build-0.1 scores 70.8% SWE-Bench Verified (17 pts below Claude Code's 87.6%); 256K context; MCP-compatible (Claude Code MCPs work unchanged); plan mode; headless -p CI mode. Arena Mode announced but not yet live. Carries the yellow COI box (AIToolGrade uses Claude Code; Grok Build is a direct competitor). Pricing trajectory is the key practical fact: $99/mo SuperHeavy intro reverts to $299/mo after 6 months (most expensive in category); SuperGrok $30 / X Premium+ $40 give basic access; API $0.20/M in, $1.50/M out (cheapest tokens in category). Early-beta score — revisit Q3 2026 when Arena Mode ships. datePublished/dateModified 2026-06-07. NOT added to compare.html (consistent with claude-code/kimi-code/deepseek-v4, which were also left out of that curated subset).
@@ -986,7 +988,8 @@ Rules:
 - Run sitemap audit whenever new reviews or blog posts are added
 - Submit updated sitemap to Google Search Console after significant additions
 
-Current page count: 68 URLs (as of June 9, 2026) — one per HTML page.
+Current page count: 69 URLs (as of June 10, 2026) — one per HTML page.
+(June 10, 2026: added `review/minimax-m3.html` — AI Coding, lastmod 2026-06-10.)
 (June 9, 2026: added `blog/grok-build-vs-codex-vs-claude-code-2026.html` — Comparison, lastmod 2026-06-09.)
 (June 7, 2026: added `review/grok-build.html` — AI Coding, lastmod 2026-06-07.)
 (June 5, 2026: added `review/kimi-code.html` — AI Coding, lastmod 2026-06-05.)

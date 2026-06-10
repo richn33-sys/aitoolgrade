@@ -73,7 +73,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── automation.html
 │   ├── video.html
 │   └── productivity.html
-└── blog/              ← 12 blog posts + index
+└── blog/              ← 15 blog posts + index
     ├── index.html
     ├── cursor-vs-windsurf-vs-github-copilot.html
     ├── best-free-ai-tools-2026.html
@@ -412,9 +412,9 @@ All schema is implemented as JSON-LD in the <head> of each page. Do not add dupl
 
 ### Implemented
 - **Organization schema** — index.html (entity signal for Google)
-- **Review schema** — all 26 review pages (eligible for star ratings in SERPs)
+- **Review schema** — all 32 review pages (eligible for star ratings in SERPs)
   - Includes: reviewRating, author, itemReviewed with applicationCategory + operatingSystem + offers
-- **Article schema** — all 12 blog posts (eligible for article rich results)
+- **Article schema** — all 15 blog posts (eligible for article rich results)
   - Includes: headline, author (Person), publisher (Organization), datePublished, dateModified
 - **BreadcrumbList schema** — all review and blog pages
 
@@ -664,7 +664,7 @@ Near-term: screenshots on remaining reviews, methodology callout box, keep addin
 Medium-term: contributor bylines, outreach for links from AI newsletters
 Longer-term: topic clusters, deep comparison posts (2000+ words)
 
-Content published to date: 26 reviews, 12 blog posts, 1 comparison page, 1 resources page
+Content published to date: 32 reviews, 15 blog posts, 1 comparison page, 1 resources page
 Next content priorities (from May 24, 2026 session):
 - Monitor Search Console in 2-3 weeks for position movement on Notion AI, Copy.ai, Midjourney rewrites
 - Monitor CTR improvement on Bolt.new and ChatGPT vs Claude

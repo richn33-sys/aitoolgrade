@@ -86,7 +86,10 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
     ├── best-ai-app-builders-2026.html
     ├── best-ai-coding-agents-2026.html
     ├── chatgpt-go-vs-plus-2026.html
-    └── chatgpt-pro-100-vs-200-2026.html
+    ├── chatgpt-pro-100-vs-200-2026.html
+    ├── claude-code-vs-cursor-vs-github-copilot-2026.html
+    ├── best-free-ai-tools-students-2026.html
+    └── grok-build-vs-codex-vs-claude-code-2026.html
 ```
 > Root also has: about.html, resources.html, how-we-review.html, contribute.html, contact.html,
 > advertise.html, and legal pages (see "Missing File Structure Details"). author/ holds

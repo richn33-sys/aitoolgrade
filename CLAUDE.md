@@ -261,6 +261,9 @@ Pattern to watch: superlative claims without source attribution, absolute statem
 The Perplexity editorial check is now a standard step on all new reviews per the checklist.
 Reviews checked this session (June 5-6, 2026): Kimi Code (fixes applied), Bolt.new (pending check), Adobe Firefly (pending check).
 
+MiniMax M3 review — Perplexity check June 10, 2026
+Key fixes: "legally accessible" → "raises data-access concerns", "first" → "one of the first", pricing promo/standard separation, benchmark "(vendor-reported)" qualifiers
+
 ### Prohibited language grep (existing)
 Run before every deploy: grep for full prohibited language list per CLAUDE.md
 
@@ -697,6 +700,12 @@ Next content priorities (from May 24, 2026 session):
 - ChatGPT, Cursor, Grammarly, Perplexity, Jasper, Notion AI pricing all updated ✅
 
 ## Search Console Optimization
+
+### June 10, 2026 — New review published
+review/minimax-m3.html — 7.9/10, Marcus Veil, AI Coding
+Target: "minimax m3 review 2026"
+COI disclosure included — Claude is a direct competitor
+Perplexity editorial check applied — 5 fixes: data-access framing, superlative claim, pricing clarity, open weights timing, benchmark qualifiers
 
 ### June 9, 2026 — New comparison post
 blog/grok-build-vs-codex-vs-claude-code-2026.html

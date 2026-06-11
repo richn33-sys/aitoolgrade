@@ -73,7 +73,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── automation.html
 │   ├── video.html
 │   └── productivity.html
-└── blog/              ← 15 blog posts + index
+└── blog/              ← 16 blog posts + index
     ├── index.html
     ├── cursor-vs-windsurf-vs-github-copilot.html
     ├── best-free-ai-tools-2026.html
@@ -89,7 +89,8 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
     ├── chatgpt-pro-100-vs-200-2026.html
     ├── claude-code-vs-cursor-vs-github-copilot-2026.html
     ├── best-free-ai-tools-students-2026.html
-    └── grok-build-vs-codex-vs-claude-code-2026.html
+    ├── grok-build-vs-codex-vs-claude-code-2026.html
+    └── chatgpt-go-vs-plus-vs-pro-2026.html
 ```
 > Root also has: about.html, resources.html, how-we-review.html, contribute.html, contact.html,
 > advertise.html, and legal pages (see "Missing File Structure Details"). author/ holds
@@ -417,7 +418,7 @@ All schema is implemented as JSON-LD in the <head> of each page. Do not add dupl
 - **Organization schema** — index.html (entity signal for Google)
 - **Review schema** — all 32 review pages (eligible for star ratings in SERPs)
   - Includes: reviewRating, author, itemReviewed with applicationCategory + operatingSystem + offers
-- **Article schema** — all 15 blog posts (eligible for article rich results)
+- **Article schema** — all 16 blog posts (eligible for article rich results)
   - Includes: headline, author (Person), publisher (Organization), datePublished, dateModified
 - **BreadcrumbList schema** — all review and blog pages
 
@@ -667,7 +668,7 @@ Near-term: screenshots on remaining reviews, methodology callout box, keep addin
 Medium-term: contributor bylines, outreach for links from AI newsletters
 Longer-term: topic clusters, deep comparison posts (2000+ words)
 
-Content published to date: 32 reviews, 15 blog posts, 1 comparison page, 1 resources page
+Content published to date: 32 reviews, 16 blog posts, 1 comparison page, 1 resources page
 Next content priorities (from May 24, 2026 session):
 - Monitor Search Console in 2-3 weeks for position movement on Notion AI, Copy.ai, Midjourney rewrites
 - Monitor CTR improvement on Bolt.new and ChatGPT vs Claude
@@ -677,9 +678,9 @@ Next content priorities (from May 24, 2026 session):
 
 ### Remaining queue
 - ZoomMate review — MEDIUM
-- "ChatGPT Go vs Plus vs Pro" full comparison — MEDIUM
 
 ### Completed
+- "ChatGPT Go vs Plus vs Pro 2026" blog post ✅ (June 11, 2026) — Comparison hub, Marcus Veil. Covers the three individual-buyer tiers people actually confuse: Go $8, Plus $20, Pro $100/$200. Frames the decision, not the catalog. Key facts: Go runs GPT-5.3 in regular chat (GPT-5.5 only inside Codex at 400K context), still shows ads on Free/Go in the US since Feb 9, 2026, and excludes reasoning models / Sora / Agent Mode / Deep Research / Tasks. Plus = default for most professionals (full suite, ad-free, $20 held three years; GPT-5.5 default since Apr 23, 2026). Pro $100 (launched Apr 9, 2026, price-matched to Claude Max) and $200 share the same model suite — only volume differs (5x vs 20x Plus); the Pro $100 "10x Codex" promo expired May 31, 2026 (now 5x); $200 is for parallel/heavy-Codex/1M-token workloads. Naming caveat callout: two tiers display "Pro" in billing — verify at chatgpt.com/subscription. Codex Mobile free on all plans since May 14, 2026. 2,267 words. At-a-glance comparison table, TOC, decision section, verdict. Internal links to review/chatgpt.html + both sibling ChatGPT pricing posts; reciprocal contextual links added UP from chatgpt-go-vs-plus-2026 and chatgpt-pro-100-vs-200-2026. No COI box (pure ChatGPT pricing, no Claude head-to-head — consistent with the two sibling posts). datePublished/dateModified 2026-06-11.
 - MiniMax M3 review ✅ (June 10, 2026) — AI Coding, 7.9, Marcus Veil. Open-weight frontier model from MiniMax (Shanghai), launched June 1, 2026. First open-weight model to combine frontier coding (59% SWE-Bench Pro, edging GPT-5.5's 58.6%), a 1M-token context, and native text/image/video input. New MSA sparse-attention architecture (brought back after M2 removed it) reports 15.6x faster decoding / 9.7x faster prefill at 1M context. $0.60/M input (~12x cheaper than Claude Opus 4.7; $0.30/M launch promo). Also: desktop computer operation, 66% Terminal-Bench 2.1, 83.5 BrowseComp, OpenAI-compatible API, MiniMax Code subscription. Carries the yellow COI box (AIToolGrade uses Claude; Opus 4.7/4.8 is a direct competitor) + the same Chinese-company / 2017 National Intelligence Law data-residency treatment as DeepSeek V4 and Kimi Code. Held to 7.9 because benchmarks are vendor-reported (independent verification pending), weights hadn't shipped at launch (~June 11 HuggingFace), and the model is new — note in review says score may rise in 60-90 days. Benchmark caveat carried throughout. NOT added to compare.html (consistent with deepseek-v4/claude-code/kimi-code/grok-build). datePublished/dateModified 2026-06-10.
 - "Grok Build vs Codex vs Claude Code 2026" blog post ✅ (June 9, 2026) — Comparison, Marcus Veil. Three terminal coding agents: Claude Code (Anthropic, Opus 4.7 87.6% SWE-Bench, 1M context), Codex CLI (OpenAI, GPT-5.5 88.7% SWE-Bench, ~2.5x faster / 240+ tok/s, Terminal-Bench 2.0 82.0% vs Claude's 69.4%, 1M context, omnimodal, bundled in ChatGPT Pro/Plus), Grok Build (xAI, grok-build-0.1 70.8% SWE-Bench, 256K context — NOT 2M, 8 parallel sub-agents in isolated Git worktrees, $99/mo intro → $299/mo). Carries yellow COI box near top + editorial disclosure at bottom (AIToolGrade uses Claude Code; scored conservatively 8.0). Calls out the $99→$299 Grok pricing trajectory, the June 15 2026 Claude Code metered-credit billing change, and benchmark caveats (vendor-reported, different eval setups). Grok API $0.20/M input = order of magnitude cheaper than the other two. 2,160 words. Links to all three reviews + best-ai-coding-agents-2026. datePublished/dateModified 2026-06-09. NOTE: source spec's Profile 2 limitation called Codex "smallest context window" but its own benchmark table puts Codex at 1M and Grok at 256K — resolved in favor of the table (Codex limitation framed as ecosystem lock-in + depth gap).
 - Cursor pricing update ✅ (June 7, 2026) — review/cursor.html. June 1, 2026 Teams restructure: single Teams row split into Teams Standard ($40/seat, split credit pools — Composer/Auto vs third-party frontier models) and NEW Teams Premium ($120/user/mo, $96 annual — higher credit allocation, priority access); Enterprise (custom) row added. Added a "What Changed — June 2026" callout; relabeled the older callout "What Changed — June 2025". dateModified → 2026-06-07, byline → June 2026. Screenshot caption left at May 2026 (image unchanged).
@@ -887,7 +888,7 @@ Affiliate link Claude Code prompt: ready to run when URLs approved — located i
 
 ## Blog Posts Published
 
-_15 blog posts deployed in `blog/` (excluding index.html). Descript and Lovable are **review**
+_16 blog posts deployed in `blog/` (excluding index.html). Descript and Lovable are **review**
 pages (`review/`), not blog posts — they are tracked in the File Structure review list, not here._
 
 | Post | Author | Date | Target Keyword |
@@ -907,6 +908,7 @@ pages (`review/`), not blog posts — they are tracked in the File Structure rev
 | Claude Code vs Cursor vs GitHub Copilot 2026 | Marcus Veil | June 2026 | claude code vs cursor vs github copilot 2026 |
 | Best Free AI Tools for Students 2026 | Priya Nolan | June 2026 | best free ai tools for students 2026 |
 | Grok Build vs Codex vs Claude Code 2026 | Marcus Veil | June 2026 | grok build vs codex vs claude code 2026 |
+| ChatGPT Go vs Plus vs Pro 2026 | Marcus Veil | June 2026 | chatgpt go vs plus vs pro |
 
 ## Research Agent
 
@@ -1000,7 +1002,8 @@ Rules:
 - Run sitemap audit whenever new reviews or blog posts are added
 - Submit updated sitemap to Google Search Console after significant additions
 
-Current page count: 69 URLs (as of June 10, 2026) — one per HTML page.
+Current page count: 70 URLs (as of June 11, 2026) — one per HTML page.
+(June 11, 2026: added `blog/chatgpt-go-vs-plus-vs-pro-2026.html` — Comparison, lastmod 2026-06-11.)
 (June 10, 2026: added `review/minimax-m3.html` — AI Coding, lastmod 2026-06-10.)
 (June 9, 2026: added `blog/grok-build-vs-codex-vs-claude-code-2026.html` — Comparison, lastmod 2026-06-09.)
 (June 7, 2026: added `review/grok-build.html` — AI Coding, lastmod 2026-06-07.)

@@ -658,6 +658,8 @@ All pricing verified May 2026. Update this table when pricing changes are confir
 
 All tools verified May 25, 2026 via research agent brief — no new changes beyond what was updated May 19-20.
 
+**Model versions verified:** June 11 2026 — GPT-5.5 Instant is default across all tiers (including Go and Free); GPT-5.5 Pro = Pro/Business/Enterprise/Edu only. (The pricing table tracks tiers/prices, not per-tier model versions — this line is the source of truth for ChatGPT model assignments.)
+
 ## Long-Term SEO Strategy
 Key Google ranking systems:
 1. Helpful Content System - every piece must genuinely help someone decide whether to use a tool

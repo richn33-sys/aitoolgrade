@@ -658,7 +658,7 @@ All pricing verified May 2026. Update this table when pricing changes are confir
 
 All tools verified May 25, 2026 via research agent brief — no new changes beyond what was updated May 19-20.
 
-**Model versions verified:** June 11 2026 — GPT-5.5 Instant is default across all tiers (including Go and Free); GPT-5.5 Pro = Pro/Business/Enterprise/Edu only. (The pricing table tracks tiers/prices, not per-tier model versions — this line is the source of truth for ChatGPT model assignments.)
+**Model versions verified:** June 11 2026 — GPT-5.5 Instant is default across all tiers (including Go and Free); GPT-5.5 Pro = Pro/Business/Enterprise/Edu only. (The pricing table tracks tiers/prices, not per-tier model versions — this line is the source of truth for ChatGPT model assignments.) Model assignments and promo expirations are fast-drift facts — re-verify against OpenAI's own posts before publishing any ChatGPT/OpenAI content. (This pass caught a GPT-5.3→5.5 drift that secondary sources had stale.)
 
 ## Long-Term SEO Strategy
 Key Google ranking systems:
@@ -706,6 +706,21 @@ Next content priorities (from May 24, 2026 session):
 - ChatGPT, Cursor, Grammarly, Perplexity, Jasper, Notion AI pricing all updated ✅
 
 ## Search Console Optimization
+
+### June 11, 2026 — New comparison post + cluster model-version correction
+- Published blog/chatgpt-go-vs-plus-vs-pro-2026.html (Marcus Veil, 2,267 words,
+  target "chatgpt go vs plus vs pro"). Reciprocal-linked to review/chatgpt.html and
+  both sibling pricing posts.
+- Correction pass (triggered by Perplexity editorial flag): GPT-5.5 Instant became
+  the DEFAULT model across ALL tiers — incl. Go and Free — in early May 2026,
+  replacing GPT-5.3. Fixed stale GPT-5.3/GPT-5.2 refs across the cluster.
+  - go-vs-plus-vs-pro: table + body reframed (Go runs GPT-5.5 Instant, same base as
+    Plus; real gap = features + no GPT-5.5 Pro). Removed stale o1 Pro mode.
+  - go-vs-plus: base-model-gap thesis pillar removed (Free/Go/Plus share GPT-5.5
+    Instant base); reframed around features + fuller Thinking access on Plus.
+    Byline → June 2026.
+  - pro-100-vs-200: no change needed (already accurate).
+- GPT-5.5 Pro is the real model gate: Pro/Business/Enterprise/Edu only.
 
 ### June 10, 2026 — New review published
 review/minimax-m3.html — 7.9/10, Marcus Veil, AI Coding
@@ -990,6 +1005,8 @@ Apply similar disclosure to any future Anthropic product reviews.
 
 ### Pending Cleanup
 - [ ] Audit images/reviews/<tool>/ directory for orphaned feature.png files not referenced in any review page. Flagged May 31, 2026 during Jasper screenshot fix. Check each tool folder and remove any unreferenced images.
+- [ ] Re-verify blog/chatgpt-pro-100-vs-200-2026.html o3-pro reference (~line 182)
+  by mid-to-late August 2026 — OpenAI retiring o3 from ChatGPT Aug 26, 2026 (90-day sunset).
 
 ## Sitemap
 

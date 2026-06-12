@@ -33,7 +33,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ├── robots.txt
 ├── sitemap.xml          ← submitted to Google Search Console
 ├── nav.js               ← shared nav (single source of truth — see Site Architecture)
-├── review/              ← 32 individual tool review pages
+├── review/              ← 33 individual tool review pages
 │   ├── jasper.html              (AI Writing, 8.2)
 │   ├── copyai.html              (AI Writing, 7.3)
 │   ├── writesonic.html          (AI Writing, 8.0)
@@ -65,7 +65,8 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── perplexity.html          (Productivity, 8.8)
 │   ├── claude-cowork.html       (Productivity, 8.2)
 │   ├── perplexity-computer.html (Productivity, 7.4)
-│   └── notebooklm.html          (Productivity, 8.7)
+│   ├── notebooklm.html          (Productivity, 8.7)
+│   └── zoommate.html            (Productivity, 7.2)
 ├── category/            ← 6 category listing pages
 │   ├── writing.html
 │   ├── coding.html
@@ -94,7 +95,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ```
 > Root also has: about.html, resources.html, how-we-review.html, contribute.html, contact.html,
 > advertise.html, and legal pages (see "Missing File Structure Details"). author/ holds
-> marcus-veil.html and priya-nolan.html. Full HTML page count: 69.
+> marcus-veil.html and priya-nolan.html. Full HTML page count: 70.
 
 ## Category Review Counts (homepage displays these — keep in sync)
 - AI Writing: 4 (Jasper, Copy.ai, Writesonic, Grammarly)
@@ -102,10 +103,11 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 - AI Image: 3 (Midjourney, Adobe Firefly, Leonardo AI)
 - Automation: 3 (Zapier, n8n, Microsoft Agent 365)
 - AI Video: 4 (Runway, Synthesia, HeyGen, Descript)
-- Productivity: 6 (ChatGPT, Notion AI, Perplexity, Claude Cowork, Perplexity Computer, NotebookLM)
+- Productivity: 7 (ChatGPT, Notion AI, Perplexity, Claude Cowork, Perplexity Computer, NotebookLM, ZoomMate)
 
-Total: 32 reviews. Homepage `cat-count` values in index.html match these (AI Coding is 12 as of
-June 10, 2026 after adding MiniMax M3; Productivity is 6 after NotebookLM; Automation is 3).
+Total: 33 reviews. Homepage `cat-count` values in index.html match these (AI Coding is 12 as of
+June 10, 2026 after adding MiniMax M3; Productivity is 7 as of June 12, 2026 after adding ZoomMate;
+Automation is 3).
 
 When adding a new review, update the count in `index.html` using this script pattern:
 ```bash
@@ -670,7 +672,7 @@ Near-term: screenshots on remaining reviews, methodology callout box, keep addin
 Medium-term: contributor bylines, outreach for links from AI newsletters
 Longer-term: topic clusters, deep comparison posts (2000+ words)
 
-Content published to date: 32 reviews, 16 blog posts, 1 comparison page, 1 resources page
+Content published to date: 33 reviews, 16 blog posts, 1 comparison page, 1 resources page
 Next content priorities (from May 24, 2026 session):
 - Monitor Search Console in 2-3 weeks for position movement on Notion AI, Copy.ai, Midjourney rewrites
 - Monitor CTR improvement on Bolt.new and ChatGPT vs Claude
@@ -679,9 +681,10 @@ Next content priorities (from May 24, 2026 session):
 ## Content Queue (updated June 7, 2026 session)
 
 ### Remaining queue
-- ZoomMate review — MEDIUM
+- _(empty — ZoomMate review completed June 12, 2026; queue cleared)_
 
 ### Completed
+- ZoomMate review ✅ (June 12, 2026) — Productivity, 7.2, Priya Nolan. Zoom's agentic AI "work surface" add-on ($20/user/mo on any paid Zoom plan, AI credits included) that turns meeting conversations into finished work, not just summaries. Three capabilities: Agentic Search (across Zoom/web/Salesforce/ServiceNow/Workday), Orchestration (meeting context as the trigger to update records / schedule / keep Jira current), Content Creation (formatted decks/docs/sheets/plans from transcript + enterprise data, landing into Zoom Canvas/Slides/Sheets/Paper). Built on Zoom's March 2026 "system of action" vision; positioned vs Microsoft Copilot + Slack AI. Integrations: Salesforce, Jira, Slack, ServiceNow, Workday, Google Workspace, Microsoft 365. Scored conservatively on maturity — GA only ~2 weeks, North America only, enterprise-leaning, unproven integration reliability/governance at scale (open questions analysts are already flagging). Rubric landed at 7.2 (Output 7.5 / Ease 7.5 / Value 7.0 / Features &amp; Integrations 8.0 / Support &amp; Maturity 6.0), matching the provisional. No COI box (meeting/workflow agent, not a direct Claude substitute — consistent with other non-LLM-competitor productivity tools). NOT added to compare.html — agentic productivity agents (perplexity-computer, claude-cowork) were also deliberately excluded from the curated subset. Verdict: promising direction, not yet a proven default; recommend a scoped pilot. datePublished/dateModified 2026-06-12.
 - "ChatGPT Go vs Plus vs Pro 2026" blog post ✅ (June 11, 2026) — Comparison hub, Marcus Veil. Covers the three individual-buyer tiers people actually confuse: Go $8, Plus $20, Pro $100/$200. Frames the decision, not the catalog. Key facts: Go runs GPT-5.3 in regular chat (GPT-5.5 only inside Codex at 400K context), still shows ads on Free/Go in the US since Feb 9, 2026, and excludes reasoning models / Sora / Agent Mode / Deep Research / Tasks. Plus = default for most professionals (full suite, ad-free, $20 held three years; GPT-5.5 default since Apr 23, 2026). Pro $100 (launched Apr 9, 2026, price-matched to Claude Max) and $200 share the same model suite — only volume differs (5x vs 20x Plus); the Pro $100 "10x Codex" promo expired May 31, 2026 (now 5x); $200 is for parallel/heavy-Codex/1M-token workloads. Naming caveat callout: two tiers display "Pro" in billing — verify at chatgpt.com/subscription. Codex Mobile free on all plans since May 14, 2026. 2,267 words. At-a-glance comparison table, TOC, decision section, verdict. Internal links to review/chatgpt.html + both sibling ChatGPT pricing posts; reciprocal contextual links added UP from chatgpt-go-vs-plus-2026 and chatgpt-pro-100-vs-200-2026. No COI box (pure ChatGPT pricing, no Claude head-to-head — consistent with the two sibling posts). datePublished/dateModified 2026-06-11.
 - MiniMax M3 review ✅ (June 10, 2026) — AI Coding, 7.9, Marcus Veil. Open-weight frontier model from MiniMax (Shanghai), launched June 1, 2026. First open-weight model to combine frontier coding (59% SWE-Bench Pro, edging GPT-5.5's 58.6%), a 1M-token context, and native text/image/video input. New MSA sparse-attention architecture (brought back after M2 removed it) reports 15.6x faster decoding / 9.7x faster prefill at 1M context. $0.60/M input (~12x cheaper than Claude Opus 4.7; $0.30/M launch promo). Also: desktop computer operation, 66% Terminal-Bench 2.1, 83.5 BrowseComp, OpenAI-compatible API, MiniMax Code subscription. Carries the yellow COI box (AIToolGrade uses Claude; Opus 4.7/4.8 is a direct competitor) + the same Chinese-company / 2017 National Intelligence Law data-residency treatment as DeepSeek V4 and Kimi Code. Held to 7.9 because benchmarks are vendor-reported (independent verification pending), weights hadn't shipped at launch (~June 11 HuggingFace), and the model is new — note in review says score may rise in 60-90 days. Benchmark caveat carried throughout. NOT added to compare.html (consistent with deepseek-v4/claude-code/kimi-code/grok-build). datePublished/dateModified 2026-06-10.
 - "Grok Build vs Codex vs Claude Code 2026" blog post ✅ (June 9, 2026) — Comparison, Marcus Veil. Three terminal coding agents: Claude Code (Anthropic, Opus 4.7 87.6% SWE-Bench, 1M context), Codex CLI (OpenAI, GPT-5.5 88.7% SWE-Bench, ~2.5x faster / 240+ tok/s, Terminal-Bench 2.0 82.0% vs Claude's 69.4%, 1M context, omnimodal, bundled in ChatGPT Pro/Plus), Grok Build (xAI, grok-build-0.1 70.8% SWE-Bench, 256K context — NOT 2M, 8 parallel sub-agents in isolated Git worktrees, $99/mo intro → $299/mo). Carries yellow COI box near top + editorial disclosure at bottom (AIToolGrade uses Claude Code; scored conservatively 8.0). Calls out the $99→$299 Grok pricing trajectory, the June 15 2026 Claude Code metered-credit billing change, and benchmark caveats (vendor-reported, different eval setups). Grok API $0.20/M input = order of magnitude cheaper than the other two. 2,160 words. Links to all three reviews + best-ai-coding-agents-2026. datePublished/dateModified 2026-06-09. NOTE: source spec's Profile 2 limitation called Codex "smallest context window" but its own benchmark table puts Codex at 1M and Grok at 256K — resolved in favor of the table (Codex limitation framed as ecosystem lock-in + depth gap).
@@ -706,6 +709,15 @@ Next content priorities (from May 24, 2026 session):
 - ChatGPT, Cursor, Grammarly, Perplexity, Jasper, Notion AI pricing all updated ✅
 
 ## Search Console Optimization
+
+### June 12, 2026 — New review published
+review/zoommate.html — 7.2/10, Priya Nolan, Productivity
+Target: "zoommate review" (secondary: "zoom ai agent", "zoommate pricing", "what is zoommate")
+Zoom's agentic AI add-on ($20/user/mo) that turns meeting conversations into completed work
+across Salesforce/Jira/Slack. Review + Article + BreadcrumbList schema. No COI box (not a Claude
+substitute). Scored conservatively for maturity (GA ~2 weeks, NA-only, unproven at scale).
+compare.html intentionally skipped (agentic productivity agents were excluded from the curated subset).
+Prohibited-language grep clean; live HTTP 200 confirmed. Perplexity editorial check: pending manual run.
 
 ### June 11, 2026 — New comparison post + cluster model-version correction
 - Published blog/chatgpt-go-vs-plus-vs-pro-2026.html (Marcus Veil, 2,267 words,
@@ -1021,7 +1033,8 @@ Rules:
 - Run sitemap audit whenever new reviews or blog posts are added
 - Submit updated sitemap to Google Search Console after significant additions
 
-Current page count: 70 URLs (as of June 11, 2026) — one per HTML page.
+Current page count: 71 URLs (as of June 12, 2026) — one per HTML page.
+(June 12, 2026: added `review/zoommate.html` — Productivity, lastmod 2026-06-12.)
 (June 11, 2026: added `blog/chatgpt-go-vs-plus-vs-pro-2026.html` — Comparison, lastmod 2026-06-11.)
 (June 10, 2026: added `review/minimax-m3.html` — AI Coding, lastmod 2026-06-10.)
 (June 9, 2026: added `blog/grok-build-vs-codex-vs-claude-code-2026.html` — Comparison, lastmod 2026-06-09.)

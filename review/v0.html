@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<!--
+  v0 by Vercel review — published June 12, 2026
+  Author: Marcus Veil. Category: AI Coding (App Builder cluster — Bolt/Lovable peer).
+  Score: 8.4. Research-based, no hands-on testing claims.
+-->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="canonical" href="https://aitoolgrade.com/review/v0.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="v0's February 2026 rebuild added Git, a code editor, and database connectivity. We break down the pricing, what it does well, and its full-stack limits.">
+<title>v0 by Vercel Review 2026 — Features, Pricing, and Where It Falls Short | AIToolGrade</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fafaf8;--bg2:#f3f2ee;--bg3:#eceae3;--text:#1a1a18;--text2:#4a4a45;--text3:#8a8a82;--accent:#e85d26;--accent2:#f07d4a;--accent-dim:rgba(232,93,38,0.08);--border:#e2e0d8;--white:#ffffff;--display:'Playfair Display',serif;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:4px}
+.nav-dropdown>a::after{content:"▾";font-size:10px}
+.dropdown-menu{visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.15s ease,visibility 0s linear 0.5s;position:absolute;top:calc(100% + 8px);left:-16px;background:white;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:200;max-height:80vh;overflow-y:auto}
+.dropdown-menu a{display:block;padding:8px 12px;font-size:14px;color:var(--text2);text-decoration:none;border-radius:6px;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--bg2);color:var(--accent)}
+.nav-dropdown:hover .dropdown-menu{visibility:visible;opacity:1;pointer-events:auto;transition:opacity 0.15s ease,visibility 0s}
+.nav-dropdown .dropdown-menu::before{content:"";position:absolute;top:-20px;left:0;right:0;height:20px}
+.nav-dropdown::after{content:"";position:absolute;height:20px;width:calc(100% + 16px);bottom:-20px;left:-16px}
+.review-layout{max-width:1100px;margin:0 auto;padding:60px 40px;display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:start}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:24px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+.review-header{margin-bottom:40px}
+.review-tool-row{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.review-tool-logo{width:56px;height:56px;border-radius:14px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:28px;border:1px solid var(--border)}
+.review-tool-title{font-size:15px;font-weight:600;margin-bottom:2px}
+.review-tool-url{font-size:13px;color:var(--text3);font-family:var(--mono)}
+h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;margin-bottom:16px}
+.review-meta-row{display:flex;align-items:center;gap:20px;font-size:13px;color:var(--text3);margin-bottom:24px}
+.verdict-banner{background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:20px 24px;margin-bottom:40px;display:flex;align-items:center;gap:16px}
+.verdict-score{font-family:var(--display);font-size:48px;font-weight:800;color:var(--accent);line-height:1}
+.verdict-text h3{font-size:15px;font-weight:600;margin-bottom:4px}
+.verdict-text p{font-size:13px;color:var(--text2)}
+.review-body h2{font-family:var(--display);font-size:28px;font-weight:700;margin:40px 0 16px}
+.review-body h3{font-family:var(--display);font-size:20px;font-weight:700;margin:28px 0 12px}
+.review-body p{color:var(--text2);margin-bottom:16px}
+.review-body ul{margin:0 0 16px 0;padding-left:22px;color:var(--text2)}
+.review-body li{margin-bottom:8px}
+.review-body a{color:var(--accent);text-decoration:none}
+.review-body a:hover{text-decoration:underline}
+.callout-box{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:28px 0}
+.callout-box h4{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:10px}
+.callout-box p{font-size:14px;margin-bottom:0;color:var(--text2)}
+.pricing-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.pricing-table th,.pricing-table td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--border);vertical-align:top}
+.pricing-table th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3);font-weight:500}
+.pricing-table td:first-child{font-weight:600;color:var(--text)}
+.pricing-table .price{font-family:var(--mono);color:var(--accent)}
+.comparison-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:13.5px}
+.comparison-table th,.comparison-table td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--border);vertical-align:top}
+.comparison-table th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.05em;color:var(--text3);font-weight:500}
+.comparison-table thead th:nth-child(2){color:var(--accent)}
+.comparison-table td:first-child{font-weight:600;color:var(--text)}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
+.pros-box,.cons-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px}
+.pros-box{border-top:3px solid #2e7d32}
+.cons-box{border-top:3px solid #c62828}
+.pros-box h4{color:#2e7d32;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.cons-box h4{color:#c62828;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.pro-item,.con-item{font-size:14px;color:var(--text2);margin-bottom:8px;display:flex;gap:8px;align-items:flex-start}
+.pro-item::before{content:'✓';color:#2e7d32;font-weight:600;flex-shrink:0}
+.con-item::before{content:'✗';color:#c62828;font-weight:600;flex-shrink:0}
+.score-breakdown{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;margin:32px 0}
+.score-breakdown h4{font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:20px}
+.score-row{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.score-row:last-child{margin-bottom:0}
+.score-name{font-size:14px;color:var(--text2);width:140px;flex-shrink:0}
+.score-bar-track{flex:1;height:8px;background:var(--bg2);border-radius:100px;overflow:hidden}
+.score-bar-fill{height:100%;border-radius:100px;background:var(--accent)}
+.score-val{font-family:var(--mono);font-size:13px;font-weight:500;width:30px;text-align:right}
+.affiliate-box{background:var(--text);color:white;border-radius:14px;padding:28px;margin:40px 0;text-align:center}
+.affiliate-box h3{font-family:var(--display);font-size:24px;font-weight:700;margin-bottom:8px}
+.affiliate-box p{color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:20px}
+.affiliate-btn{display:inline-block;background:var(--accent);color:white;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;transition:background 0.15s}
+.affiliate-btn:hover{background:var(--accent2)}
+.affiliate-note{font-size:11px;color:rgba(255,255,255,0.4);margin-top:12px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px;position:sticky;top:84px}
+.sidebar-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:16px}
+.sidebar-score{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.sidebar-score-num{font-family:var(--display);font-size:52px;font-weight:800;color:var(--accent);line-height:1}
+.sidebar-score-label{font-size:13px;color:var(--text3)}
+.sidebar-price-row{display:flex;justify-content:space-between;font-size:14px;padding:10px 0;border-bottom:1px solid var(--border)}
+.sidebar-price-row:last-of-type{border-bottom:none}
+.sidebar-price-label{color:var(--text2)}
+.sidebar-price-val{font-family:var(--mono);font-weight:500}
+.sidebar-cta{display:block;background:var(--accent);color:white;text-align:center;padding:14px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;margin-top:20px;transition:background 0.15s}
+.sidebar-cta:hover{background:var(--accent2)}
+.sidebar-disclosure{font-size:11px;color:var(--text3);margin-top:10px;text-align:center}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}
+.footer-brand span{color:var(--accent)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--accent)}
+@media(max-width:768px){.review-layout{grid-template-columns:1fr;padding:40px 20px}.pros-cons{grid-template-columns:1fr}h1{font-size:30px}nav{padding:0 20px}.footer-inner{grid-template-columns:1fr 1fr}}
+
+/* === MOBILE NAV + RESPONSIVE TABLE FIX === */
+.nav-toggle{display:none;order:2;background:none;border:0;font-size:24px;line-height:1;color:var(--text);cursor:pointer;padding:4px 6px}
+@media(max-width:768px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(250,250,248,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 20px 16px;box-shadow:0 8px 24px rgba(0,0,0,0.06);max-height:calc(100vh - 64px);overflow-y:auto}
+  nav.nav-open .nav-links{display:flex}
+  .nav-links>a,.nav-dropdown{padding:12px 2px;border-bottom:1px solid var(--border)}
+  .nav-dropdown{position:static}
+  .nav-dropdown>a::after{display:none}
+  .dropdown-menu{display:none!important}
+  .nav-cta{display:block;text-align:center;background:var(--accent);color:#fff;margin-top:14px;padding:12px;border:0!important;border-radius:6px}
+  .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%;white-space:nowrap}
+  .comparison-wrap{overflow-x:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "name": "v0 by Vercel Review 2026",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "8.4",
+    "bestRating": "10",
+    "worstRating": "0"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "AIToolGrade",
+    "url": "https://aitoolgrade.com"
+  },
+  "itemReviewed": {
+    "@type": "SoftwareApplication",
+    "name": "v0 by Vercel",
+    "applicationCategory": "AI Coding Tool",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "url": "https://v0.app"
+    }
+  },
+  "datePublished": "2026-06-12",
+  "dateModified": "2026-06-12"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "v0 by Vercel Review 2026 — Features, Pricing, and Where It Falls Short",
+  "author": {
+    "@type": "Person",
+    "name": "Marcus Veil",
+    "url": "https://aitoolgrade.com/author/marcus-veil.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIToolGrade",
+    "url": "https://aitoolgrade.com"
+  },
+  "datePublished": "2026-06-12",
+  "dateModified": "2026-06-12"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolgrade.com"},
+    {"@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://aitoolgrade.com/reviews.html"},
+    {"@type": "ListItem", "position": 3, "name": "v0", "item": "https://aitoolgrade.com/review/v0.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<div id="nav-root"></div>
+<script src="../nav.js"></script>
+
+<div class="review-layout">
+  <div class="review-main">
+    <div style="background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 14px 18px; margin-bottom: 28px; display: flex; align-items: flex-start; gap: 12px;">
+      <span style="font-family: var(--mono); font-size: 18px; line-height: 1;">🔍</span>
+      <div>
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 4px;">Research-Based Review</div>
+        <p style="font-family: var(--sans); font-size: 0.88rem; color: var(--text2); line-height: 1.6; margin: 0;">This review is based on documented features, verified pricing, and community sentiment — not hands-on testing. <a href="../how-we-review.html" style="color: var(--accent); text-decoration: none;">See how we research →</a></p>
+      </div>
+    </div>
+    <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="../category/coding.html">AI Coding</a><span>›</span>v0 by Vercel Review</div>
+    <div class="review-header">
+      <div class="review-tool-row">
+        <div class="review-tool-logo">▲</div>
+        <div>
+          <div class="review-tool-title">v0 by Vercel</div>
+          <div class="review-tool-url">v0.app</div>
+        </div>
+      </div>
+      <h1>v0 by Vercel Review 2026: What the February Rebuild Changed — and Where It Still Falls Short</h1>
+      <div class="review-meta-row">
+        <span>📅 Updated June 2026</span>
+        <span>⏱ 11 min read</span>
+        <span>✅ Research verified</span>
+      </div>
+    </div>
+    <div class="verdict-banner">
+      <div class="verdict-score">8.4</div>
+      <div class="verdict-text">
+        <h3>Editor's Verdict: Very Good</h3>
+        <p>The strongest UI and React/Next.js generation in the app-builder category, with a Vercel deploy path that's hard to beat. The catch: it's still frontend-first, the credit pricing is hard to predict, and you're betting on the Vercel ecosystem.</p>
+      </div>
+    </div>
+    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified June 2026</p>
+<div class="review-body">
+      <h2 id="what-is-v0">What v0 Is — and What the February Rebuild Changed</h2>
+      <p>v0 launched in late 2023 as a narrow, very good idea: type a description, get a React component. It was a text-to-UI generator from the team behind Vercel and Next.js, and it did one thing better than almost anything else — turn a prompt into clean, production-grade React with Tailwind CSS and shadcn/ui. For a couple of years that was the whole pitch, and it was enough to make v0 a fixture in the Next.js community.</p>
+      <p>On February 4, 2026, Vercel rebuilt it. The new v0 added Git integration, a full VS Code-style editor, a sandbox runtime that mirrors production, GitHub repository import, database connectivity, server-side and API-route handling, agentic workflows, and environment-variable import from existing Vercel projects. Vercel's own framing was telling: the rebuild was aimed at what it called the "90% problem" — connecting AI-generated code to real production infrastructure rather than stopping at a pretty prototype. That's a meaningful shift in ambition for a tool that started life as a component generator.</p>
+      <p>Here's the part that matters for anyone reading the marketing carefully: v0 moved <em>toward</em> full-stack, but it is not a full-stack builder in the way <a href="../review/bolt.html">Bolt</a> and <a href="../review/lovable.html">Lovable</a> are. It still leans frontend-first, and for deeper backend, auth, and database logic it still expects you to reach for external tools. That gap isn't a footnote — it's the center of the verdict. This review covers what v0 documents it can do, what the rebuild actually added, how the credit pricing works, and where the platform's limits sit, drawn from primary sources and community feedback rather than hands-on testing.</p>
+
+      <!-- toc -->
+<nav aria-label="Table of contents" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 32px 0;">
+  <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 12px;">In this review</div>
+  <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#what-is-v0" style="color: var(--accent); text-decoration: none;">What v0 Is &amp; What the Rebuild Changed</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#core-strengths" style="color: var(--accent); text-decoration: none;">Core Strengths</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pricing" style="color: var(--accent); text-decoration: none;">Pricing &amp; the Credit System</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#where-it-falls-short" style="color: var(--accent); text-decoration: none;">Where It Falls Short</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pros-and-cons" style="color: var(--accent); text-decoration: none;">Pros and Cons</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#v0-vs-lovable-vs-bolt" style="color: var(--accent); text-decoration: none;">v0 vs Lovable vs Bolt</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#score-breakdown" style="color: var(--accent); text-decoration: none;">Score Breakdown</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#who-its-for" style="color: var(--accent); text-decoration: none;">Who It's For / Who Should Skip</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-bottom-line" style="color: var(--accent); text-decoration: none;">The Bottom Line</a></li>
+  </ol>
+</nav>
+
+      <h2 id="core-strengths">Core Strengths</h2>
+      <p>v0's reputation rests on a small number of things it does better than its peers. The rebuild widened the surface area, but the core advantages are still the ones it was known for.</p>
+
+      <h3>UI and component generation</h3>
+      <p>This is the reason to look at v0 at all. Its output for interfaces — layouts, dashboards, marketing pages, component systems — is among the strongest in the category, and the community consensus is fairly settled on that point. The generated code reads like something a competent React developer would write: sensible structure, accessible markup, consistent styling. When the job is "make this screen look right and ship as real code," v0 sets the bar that other app builders get measured against.</p>
+
+      <h3>React, Next.js, Tailwind, and shadcn/ui</h3>
+      <p>v0 is opinionated, and the opinion is the modern Vercel stack: React and Next.js, styled with Tailwind, built on shadcn/ui primitives. If that's already your stack, the output drops into your project with very little reshaping. If it isn't, the opinion is less of a fit — v0 isn't trying to be framework-agnostic, and it doesn't pretend otherwise. For Next.js teams, the alignment is the whole point.</p>
+
+      <h3>One-click Vercel deploy and GitHub sync</h3>
+      <p>Deployment is where v0's ownership of the surrounding ecosystem pays off. Pushing a project live on Vercel is about as frictionless as the category gets, and the February rebuild made the round trip cleaner: GitHub repository import, branch and PR workflows, and environment-variable import from existing Vercel projects. You can bring an existing repo in, work on it in the browser editor, and move changes back through normal Git. For teams already living on Vercel, that loop is hard to beat.</p>
+
+      <h3>The rebuild's new surface</h3>
+      <p>The February update added the pieces that make v0 feel like a development platform rather than a widget. A VS Code-style editor means you read and edit the code directly, not just prompt at it. A sandbox runtime mirrors production, so previews run server-side code, API routes, and database connections instead of faking them. Direct connectors to databases such as Snowflake and AWS let you wire up reporting and internal tools without standing up a separate pipeline first. None of this turns v0 into a full backend platform — but it closes part of the distance between "demo" and "deployable."</p>
+
+      <div class="callout-box">
+        <h4>What changed — February 4, 2026</h4>
+        <p>The rebuild added Git integration, a VS Code-style editor, a production-mirroring sandbox runtime, GitHub repository import, server-side/API-route handling, database connectivity (Snowflake, AWS), agentic workflows, and environment-variable import from existing Vercel projects. Notably, pricing did <em>not</em> change with the rebuild — Vercel kept the existing tier structure in place.</p>
+      </div>
+
+      <h2 id="pricing">Pricing &amp; the Credit System</h2>
+      <p>Pricing verified June 2026. v0 runs five tiers, and usage is metered through a credit system rather than a flat seat fee — input and output tokens are converted into credits, and your plan determines how many you get.</p>
+      <div class="comparison-wrap">
+      <table class="pricing-table">
+        <thead><tr><th>Plan</th><th>Price</th><th>What you get</th></tr></thead>
+        <tbody>
+          <tr><td>Free</td><td class="price">$0</td><td>Roughly $5 in monthly credits that reset each billing cycle. Enough to try the platform and build small projects; no credit card required.</td></tr>
+          <tr><td>Premium</td><td class="price">$20/mo</td><td>A larger monthly credit allocation for individuals building regularly. The practical entry point for steady use.</td></tr>
+          <tr><td>Team</td><td class="price">$30/user</td><td>Shared workspaces, collaboration, and centralized billing for small teams.</td></tr>
+          <tr><td>Business</td><td class="price">$100/user</td><td>Higher limits and org-level controls for larger teams with more demanding usage.</td></tr>
+          <tr><td>Enterprise</td><td class="price">Custom</td><td>Volume credits, security and compliance review, and procurement support.</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>The honest caveat is the credit model itself. Because consumption is metered on tokens converted to credits, the cost of any given session depends on how much the model has to read and write — and that's genuinely hard to estimate in advance. Community discussion routinely flags the same thing: credits are difficult to predict and can run down faster than expected on iterative work, and the $5 free allocation is tight enough that serious evaluation usually means paying. Paid tiers can buy additional credits, which helps, but it doesn't make the underlying cost any easier to forecast. If predictable monthly spend matters to you, treat the credit system as the line item to watch.</p>
+
+      <h2 id="where-it-falls-short">Where It Falls Short</h2>
+      <p>v0's limits are as consistent as its strengths, and they cluster around three things: the full-stack gap, the lock-in, and the pricing model. The pricing is covered above; the other two are worth spelling out.</p>
+
+      <h3>The full-stack gap</h3>
+      <p>This is the one to be clear-eyed about. The rebuild added database connectivity, API routes, and server-side handling, and that's real progress — but v0 remains frontend-first. For deeper backend logic, authentication flows, and complex data models, it still leans on external tools rather than owning the stack the way Bolt's Cloud V2 or Lovable's Supabase-native approach do. v0 is excellent at the interface and the React layer; it is not yet the place you build and own a full backend from a single prompt. Treat the "full-stack" language around the February release as a direction of travel, not a finished destination.</p>
+
+      <h3>Vercel ecosystem lock-in</h3>
+      <p>Most of what makes v0 feel smooth is tied to Vercel's own infrastructure. The one-click deploy, the environment-variable import, the production-mirroring sandbox — they're frictionless because they assume you're on Vercel. That's a real benefit if you already are, and a real cost if you'd rather not be. The lock-in is deeper here than with most competitors, and it's worth weighing before you build anything substantial on the platform. You can export code and move it, but the parts that make v0 pleasant are the parts you leave behind when you go.</p>
+
+      <h3>Frontend-first reality, and the smaller gaps</h3>
+      <p>Beyond the headline limits, a few practical ones round out the picture. There's no native mobile-app generation — v0 builds for the web. The opinionated stack is a strength for Next.js teams and a constraint for anyone outside it. And the credit-metered pricing means the more you iterate, the more you pay, with little ability to cap the cost in advance. None of these are disqualifying, but together they define the shape of the tool: a frontend specialist with a widening, not yet complete, backend story.</p>
+
+      <h2 id="pros-and-cons">Pros and Cons</h2>
+      <div class="pros-cons">
+        <div class="pros-box">
+          <h4>What stands out</h4>
+          <div class="pro-item">Among the strongest UI and component generation in the category</div>
+          <div class="pro-item">Clean React, Next.js, Tailwind, and shadcn/ui output</div>
+          <div class="pro-item">One-click Vercel deploy that's hard to beat for Vercel teams</div>
+          <div class="pro-item">GitHub import, branch/PR workflows, and env-var import</div>
+          <div class="pro-item">February rebuild added a real editor, sandbox, and DB connectors</div>
+        </div>
+        <div class="cons-box">
+          <h4>What holds it back</h4>
+          <div class="con-item">Still frontend-first — not at Bolt/Lovable full-stack parity</div>
+          <div class="con-item">Deep Vercel ecosystem lock-in</div>
+          <div class="con-item">Credit-metered pricing is hard to predict and can creep</div>
+          <div class="con-item">Limited free tier — roughly $5 in monthly credits</div>
+          <div class="con-item">No native mobile app generation; web only</div>
+        </div>
+      </div>
+
+      <h2 id="v0-vs-lovable-vs-bolt">v0 vs Lovable vs Bolt</h2>
+      <p>These three get compared constantly because they overlap on the same promise — prompt to working app — while pulling in different directions. v0 optimizes for UI quality and Vercel-native deploy, <a href="../review/lovable.html">Lovable</a> for design-first full-stack MVPs on Supabase, and <a href="../review/bolt.html">Bolt</a> for browser-native speed and model flexibility. Here's how they line up on the points that tend to decide it.</p>
+      <div class="comparison-wrap">
+      <table class="comparison-table">
+        <thead><tr><th></th><th>v0</th><th>Lovable</th><th>Bolt.new</th></tr></thead>
+        <tbody>
+          <tr><td>Best for</td><td>UI quality, Next.js + Vercel deploy</td><td>Design-first full-stack MVPs</td><td>Speed, Figma-to-code, multi-model</td></tr>
+          <tr><td>Output focus</td><td>Frontend-first (React/Next/Tailwind/shadcn)</td><td>Full-stack (React + Supabase)</td><td>Full-stack (WebContainers + Bolt Cloud)</td></tr>
+          <tr><td>Backend / database</td><td>Connects to external (Snowflake/AWS) + API routes</td><td>Supabase-native</td><td>Bolt Cloud V2 (DB, auth, storage)</td></tr>
+          <tr><td>Code access</td><td>✓ VS Code-style editor + GitHub import</td><td>Limited</td><td>✓ Full browser IDE</td></tr>
+          <tr><td>Deploy</td><td>✓ One-click to Vercel (native)</td><td>✓ One-click</td><td>✓ One-click Netlify</td></tr>
+          <tr><td>Ecosystem lock-in</td><td>High (Vercel-native)</td><td>Moderate (Supabase)</td><td>Moderate (Netlify/StackBlitz)</td></tr>
+          <tr><td>Pricing model</td><td>Credit/token-metered</td><td>Credit-metered</td><td>Token-metered</td></tr>
+          <tr><td>Free tier</td><td>~$5 credits/mo</td><td>5 credits/day</td><td>Limited tokens</td></tr>
+          <tr><td>Starting paid</td><td>$20/month</td><td>$25/month</td><td>$25/month</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>The short version: if your priority is the best-looking, cleanest React output and you live on Vercel, v0 is the pick. If you need a real backend out of the box from day one, Bolt and Lovable are further along. A fuller head-to-head is a separate piece — we'll link it here once it's published. For the wider category, our guide to the <a href="../blog/best-ai-app-builders-2026.html">best AI app builders in 2026</a> covers how the field stacks up.</p>
+
+      <h2 id="score-breakdown">Score Breakdown</h2>
+      <div class="score-breakdown">
+        <h4>How we rated it</h4>
+        <div class="score-row"><span class="score-name">Output Quality</span><div class="score-bar-track"><div class="score-bar-fill" style="width:90%"></div></div><span class="score-val">9.0</span></div>
+        <div class="score-row"><span class="score-name">Ease of Use</span><div class="score-bar-track"><div class="score-bar-fill" style="width:85%"></div></div><span class="score-val">8.5</span></div>
+        <div class="score-row"><span class="score-name">Value for Money</span><div class="score-bar-track"><div class="score-bar-fill" style="width:70%"></div></div><span class="score-val">7.0</span></div>
+        <div class="score-row"><span class="score-name">Features &amp; Integrations</span><div class="score-bar-track"><div class="score-bar-fill" style="width:85%"></div></div><span class="score-val">8.5</span></div>
+        <div class="score-row"><span class="score-name">Support &amp; Maturity</span><div class="score-bar-track"><div class="score-bar-fill" style="width:85%"></div></div><span class="score-val">8.5</span></div>
+      </div>
+      <p>Output quality is the standout and the single biggest reason for the overall score — v0's UI and React/Next.js generation is among the best the category offers, and the weighting reflects that. Ease of use is strong: natural-language prompting, a real editor, and a clean deploy path, with the credit meter as the main source of friction. Value takes the hit, almost entirely on the pricing model — the $5 free tier is tight and credit consumption is hard to forecast. Features and integrations climbed meaningfully after the February rebuild (editor, sandbox, GitHub workflows, database connectors), held just short of a higher mark by the frontend-first backend story. Support and maturity rest on Vercel's foundation — a well-resourced company with strong documentation and a large Next.js community behind it. Weighted toward the output quality and deploy experience that define the tool, the overall lands at <strong>8.4</strong> — the top of the app-builder cluster, with the full-stack gap and lock-in keeping it from going higher.</p>
+
+      <div class="affiliate-box">
+        <h3>Try v0 by Vercel Free</h3>
+        <p>Roughly $5 in monthly credits on the free plan. No credit card required.</p>
+        <a href="https://v0.app" class="affiliate-btn" target="_blank" rel="noopener">Try v0 Free →</a>
+        <div class="affiliate-note">Affiliate link — we may earn a commission at no extra cost to you</div>
+      </div>
+
+      <!-- What Users Are Saying -->
+      <div class="users-saying" style="margin:48px 0;">
+        <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Community Sentiment</div>
+        <h2 id="what-users-are-saying" style="font-family:var(--display);font-size:1.75rem;font-weight:800;color:var(--text);margin:0 0 8px 0;">What Users Are Saying</h2>
+        <p style="font-family:var(--sans);font-size:0.95rem;color:var(--text2);margin:0 0 32px 0;line-height:1.6;">We track discussion across r/nextjs, r/webdev, and developer write-ups, alongside Vercel's own release notes, to surface how v0's audience of React and Next.js developers actually talks about the tool.</p>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:32px;display:flex;gap:40px;flex-wrap:wrap;">
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--accent)">Feb 2026</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Platform rebuild</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">5</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Pricing tiers</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">$5/mo</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Free credits</div></div>
+        </div>
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:#22a05a;">●</span> What users consistently praise</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"For UI work it's the cleanest output I've seen from an AI builder. The React and Tailwind it produces actually looks like code I'd write, and the shadcn components drop straight into my Next.js project."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">r/nextjs · 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"The new editor and GitHub import changed how I use it. I can bring an existing repo in, fix the front end, and push a PR without leaving the browser. Deploying to Vercel is a single click."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Developer write-up · 2026</div>
+          </div>
+        </div>
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:var(--accent);">●</span> Common frustrations</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"The credits are impossible to budget. A few rounds of iteration on a bigger component and the meter just disappears. The $5 free tier barely lets you evaluate it before you're paying."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">r/webdev · 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"It's brilliant at the front end and then you remember the backend is on you. If you're not already all-in on Vercel, a lot of the magic doesn't follow you out the door."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Independent review · 2026</div>
+          </div>
+        </div>
+        <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.15);border-radius:12px;padding:20px 24px;">
+          <div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:8px;">AIToolGrade Take</div>
+          <p style="font-family:var(--sans);font-size:0.93rem;color:var(--text);line-height:1.7;margin:0;">The community read on v0 is consistent and fair. The praise is almost always about the same thing — UI and React/Next.js output quality, plus a Vercel deploy path that's genuinely smooth. The frustrations are equally predictable: credit costs that are hard to plan around, a thin free tier, and the realization that the backend and the ecosystem lock-in are real constraints once a project grows past the front end. The February rebuild closed part of that gap with an editor, a sandbox, and database connectors, but it didn't change the fundamental shape of the tool. For Next.js teams on Vercel, that shape is a strong fit. For everyone else, it's a tradeoff worth pricing out before committing.</p>
+        </div>
+      </div>
+      <!-- END: What Users Are Saying -->
+
+      <h2 id="who-its-for">Who It's For / Who Should Skip</h2>
+      <p>v0 rewards a specific profile and frustrates another just as reliably. Here's the honest split.</p>
+      <h3>Best for</h3>
+      <ul>
+        <li>React and Next.js developers who want high-quality UI generated as clean, real code</li>
+        <li>Teams already in the Vercel ecosystem who value the frictionless deploy path</li>
+        <li>Anyone building dashboards, marketing pages, internal tools, or component systems fast</li>
+        <li>Developers who want to import an existing GitHub repo and work the front end through a real editor and PR workflow</li>
+      </ul>
+      <h3>Who should skip</h3>
+      <ul>
+        <li>Anyone who needs built-in full-stack, auth, and database from day one — <a href="../review/bolt.html">Bolt</a> or <a href="../review/lovable.html">Lovable</a> are further along there</li>
+        <li>Teams that want to avoid Vercel ecosystem lock-in</li>
+        <li>Builders on a tight, fixed monthly budget — the credit meter is hard to cap</li>
+        <li>Anyone who needs native mobile app generation — v0 builds for the web only</li>
+        <li>Developers outside the React/Next.js/Tailwind stack, where the opinionated output fits less cleanly</li>
+      </ul>
+
+      <h2 id="the-bottom-line">The Bottom Line</h2>
+      <p>The February rebuild expanded v0 in a real way. Git, a proper editor, a production-mirroring sandbox, and database connectivity move it well past its origins as a component generator, and Vercel's "90% problem" framing is the right ambition to be chasing. Its UI and React/Next.js output is among the strongest available, and for teams already on Vercel the deploy path is hard to beat.</p>
+      <p>The caveats are just as real, and they're the reason the score lands where it does rather than higher. v0 is still frontend-first rather than a true full-stack builder, the credit-metered pricing is genuinely hard to predict, and the whole experience is tied tightly to Vercel's ecosystem. For Next.js and Vercel teams who want excellent UI fast with a clean deploy, it's a strong choice — arguably the best in the category for that job. For built-in full-stack from the start, Bolt or Lovable remain the better fit. Match the tool to which of those two situations you're actually in, and v0 is easy to recommend or easy to pass on.</p>
+    </div>
+  </div>
+  <div class="review-sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-title">Overall score</div>
+      <div class="sidebar-score">
+        <div class="sidebar-score-num">8.4</div>
+        <div>
+          <div style="color:var(--accent);font-size:18px;letter-spacing:-1px">★★★★☆</div>
+          <div class="sidebar-score-label">out of 10</div>
+        </div>
+      </div>
+      <div class="sidebar-title" style="margin-top:16px">Pricing</div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Free</span><span class="sidebar-price-val">$0/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Premium</span><span class="sidebar-price-val">$20/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Team</span><span class="sidebar-price-val">$30/user</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Business</span><span class="sidebar-price-val">$100/user</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Free plan</span><span class="sidebar-price-val">✓ Yes</span></div>
+      <a href="https://v0.app" class="sidebar-cta" target="_blank" rel="noopener">Try v0 Free →</a>
+      <div class="sidebar-disclosure">Affiliate link</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">AI Tool<span>Grade</span></div><p class="footer-desc">Independent reviews and comparisons of AI tools. Researched, fact-checked, and independently rated.</p></div>
+    <div><div class="footer-col-title">Reviews</div><div class="footer-links"><a href="../category/writing.html">AI Writing</a><a href="../category/coding.html">AI Coding</a><a href="../category/image.html">AI Image</a><a href="../category/automation.html">Automation</a><a href="../category/productivity.html">Productivity</a></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="../about.html">About</a><a href="../how-we-review.html">How we review</a>
+        <a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
+    <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+</footer>
+</body></html>

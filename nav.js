@@ -47,6 +47,7 @@
     '<a href="' + prefix + 'review/windsurf.html">Windsurf</a>' +
     '<a href="' + prefix + 'review/bolt.html">Bolt.new</a>' +
     '<a href="' + prefix + 'review/lovable.html">Lovable</a>' +
+    '<a href="' + prefix + 'review/v0.html">v0 by Vercel</a>' +
     '<a href="' + prefix + 'review/google-antigravity.html">Google Antigravity</a>' +
     '<a href="' + prefix + 'review/claude-code.html">Claude Code</a>' +
     '<a href="' + prefix + 'review/deepseek-v4.html">DeepSeek V4</a>' +

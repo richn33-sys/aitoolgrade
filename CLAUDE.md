@@ -33,7 +33,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ├── robots.txt
 ├── sitemap.xml          ← submitted to Google Search Console
 ├── nav.js               ← shared nav (single source of truth — see Site Architecture)
-├── review/              ← 33 individual tool review pages
+├── review/              ← 34 individual tool review pages
 │   ├── jasper.html              (AI Writing, 8.2)
 │   ├── copyai.html              (AI Writing, 7.3)
 │   ├── writesonic.html          (AI Writing, 8.0)
@@ -44,6 +44,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── bolt.html                (AI Coding, 8.3)
 │   ├── replit.html              (AI Coding, 8.3)
 │   ├── lovable.html             (AI Coding, 8.1)
+│   ├── v0.html                  (AI Coding, 8.4)
 │   ├── google-antigravity.html  (AI Coding, 7.5)
 │   ├── deepseek-v4.html         (AI Coding, 8.1)
 │   ├── claude-code.html         (AI Coding, 8.0)
@@ -99,14 +100,14 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 
 ## Category Review Counts (homepage displays these — keep in sync)
 - AI Writing: 4 (Jasper, Copy.ai, Writesonic, Grammarly)
-- AI Coding: 12 (Cursor, GitHub Copilot, Windsurf, Bolt.new, Replit, Lovable, Google Antigravity, DeepSeek V4, Claude Code, Kimi Code, Grok Build, MiniMax M3)
+- AI Coding: 13 (Cursor, GitHub Copilot, Windsurf, Bolt.new, Replit, Lovable, v0 by Vercel, Google Antigravity, DeepSeek V4, Claude Code, Kimi Code, Grok Build, MiniMax M3)
 - AI Image: 3 (Midjourney, Adobe Firefly, Leonardo AI)
 - Automation: 3 (Zapier, n8n, Microsoft Agent 365)
 - AI Video: 4 (Runway, Synthesia, HeyGen, Descript)
 - Productivity: 7 (ChatGPT, Notion AI, Perplexity, Claude Cowork, Perplexity Computer, NotebookLM, ZoomMate)
 
-Total: 33 reviews. Homepage `cat-count` values in index.html match these (AI Coding is 12 as of
-June 10, 2026 after adding MiniMax M3; Productivity is 7 as of June 12, 2026 after adding ZoomMate;
+Total: 34 reviews. Homepage `cat-count` values in index.html match these (AI Coding is 13 as of
+June 12, 2026 after adding v0 by Vercel; Productivity is 7 as of June 12, 2026 after adding ZoomMate;
 Automation is 3).
 
 When adding a new review, update the count in `index.html` using this script pattern:
@@ -189,6 +190,8 @@ Categories ▾         Reviews ▾            Compare    Blog    Get Updates
   Productivity         GitHub Copilot
                        Windsurf
                        Bolt.new
+                       Lovable
+                       v0 by Vercel
                        Claude Code
                        DeepSeek V4
                        Kimi Code
@@ -418,7 +421,7 @@ All schema is implemented as JSON-LD in the <head> of each page. Do not add dupl
 
 ### Implemented
 - **Organization schema** — index.html (entity signal for Google)
-- **Review schema** — all 32 review pages (eligible for star ratings in SERPs)
+- **Review schema** — all 34 review pages (eligible for star ratings in SERPs)
   - Includes: reviewRating, author, itemReviewed with applicationCategory + operatingSystem + offers
 - **Article schema** — all 16 blog posts (eligible for article rich results)
   - Includes: headline, author (Person), publisher (Organization), datePublished, dateModified
@@ -672,18 +675,22 @@ Near-term: screenshots on remaining reviews, methodology callout box, keep addin
 Medium-term: contributor bylines, outreach for links from AI newsletters
 Longer-term: topic clusters, deep comparison posts (2000+ words)
 
-Content published to date: 33 reviews, 16 blog posts, 1 comparison page, 1 resources page
+Content published to date: 34 reviews, 16 blog posts, 1 comparison page, 1 resources page
 Next content priorities (from May 24, 2026 session):
 - Monitor Search Console in 2-3 weeks for position movement on Notion AI, Copy.ai, Midjourney rewrites
 - Monitor CTR improvement on Bolt.new and ChatGPT vs Claude
 - Next rewrite candidates: identify from next Search Console export
 
-## Content Queue (updated June 7, 2026 session)
+## Content Queue (updated June 12, 2026 session — reconciled against the v0 research brief)
 
-### Remaining queue
-- _(empty — ZoomMate review completed June 12, 2026; queue cleared)_
+### Remaining queue (OPEN)
+- **OpenCode review** — HIGH (Coding Agent; entered LogRocket #1 June 2026, displaced Cursor; model-agnostic, MIT-licensed, air-gapped). Marcus Veil, AI Coding.
+- **"v0 vs Lovable vs Bolt 2026" comparison** — HIGH (KW "v0 vs lovable"; build off the new v0 review — link the three reviews and back-link from each). Marcus Veil, Comparison.
+- **Cursor pricing post** — HIGH. NOTE: likely a REFRESH of existing `blog/cursor-pricing-2026.html` (same KW "cursor pricing 2026"), NOT a new URL — confirm before building to avoid cannibalization.
+- **"Perplexity Max vs Pro"** — MEDIUM (KW "perplexity max pricing"). Also update Perplexity pricing facts ($200 Max tier, $325/user/mo Enterprise Max) wherever Perplexity is referenced.
 
 ### Completed
+- v0 by Vercel review ✅ (June 12, 2026) — AI Coding, 8.4, Marcus Veil. Vercel's AI development platform; natural-language prompts → React + Tailwind + shadcn/ui, one-click Vercel deploy. The news hook is the **February 4, 2026 rebuild**: added Git integration, a VS Code-style editor, a production-mirroring sandbox runtime, GitHub repository import, server-side/API-route handling, database connectivity (Snowflake, AWS), agentic workflows, and env-var import from existing Vercel projects — but pricing did NOT change with the rebuild. ACCURACY GUARDRAIL held: framed as moving TOWARD full-stack but NOT a full-stack builder / not at Bolt/Lovable parity — the frontend-first gap is the center of the verdict, not a footnote. 5-tier credit/token-metered pricing: Free $0 (~$5 credits) / Premium $20 / Team $30/user / Business $100/user / Enterprise custom. Markdowns: frontend-first, deep Vercel lock-in, hard-to-predict credit pricing, thin free tier. Unverified "6M+ users" claim OMITTED (only a single secondary 4M figure surfaced; left out entirely). Rubric: Output 9.0 / Ease 8.5 / Value 7.0 / Features & Integrations 8.5 / Support & Maturity 8.5 → weighted to 8.4 (top of the app-builder cluster, above Bolt 8.3, held under 8.5 by the full-stack gap + lock-in). Provisional was 8.5 — 0.1 divergence, immaterial. No COI box (app/UI builder, not a Claude substitute — consistent with other app-builder reviews). NOT added to compare.html (curated subset; Lovable, the closest peer, is itself absent, and every coding review since DeepSeek was left out). Review + Article + BreadcrumbList schema. Prohibited-language grep clean; live HTTP 200 confirmed. Perplexity editorial check: pending manual run. datePublished/dateModified 2026-06-12.
 - ZoomMate review ✅ (June 12, 2026) — Productivity, 7.2, Priya Nolan. Zoom's agentic AI "work surface" add-on ($20/user/mo on any paid Zoom plan, AI credits included) that turns meeting conversations into finished work, not just summaries. Three capabilities: Agentic Search (across Zoom/web/Salesforce/ServiceNow/Workday), Orchestration (meeting context as the trigger to update records / schedule / keep Jira current), Content Creation (formatted decks/docs/sheets/plans from transcript + enterprise data, landing into Zoom Canvas/Slides/Sheets/Paper). Built on Zoom's March 2026 "system of action" vision; positioned vs Microsoft Copilot + Slack AI. Integrations: Salesforce, Jira, Slack, ServiceNow, Workday, Google Workspace, Microsoft 365. Scored conservatively on maturity — GA only ~2 weeks, North America only, enterprise-leaning, unproven integration reliability/governance at scale (open questions analysts are already flagging). Rubric landed at 7.2 (Output 7.5 / Ease 7.5 / Value 7.0 / Features &amp; Integrations 8.0 / Support &amp; Maturity 6.0), matching the provisional. No COI box (meeting/workflow agent, not a direct Claude substitute — consistent with other non-LLM-competitor productivity tools). NOT added to compare.html — agentic productivity agents (perplexity-computer, claude-cowork) were also deliberately excluded from the curated subset. Verdict: promising direction, not yet a proven default; recommend a scoped pilot. datePublished/dateModified 2026-06-12.
 - "ChatGPT Go vs Plus vs Pro 2026" blog post ✅ (June 11, 2026) — Comparison hub, Marcus Veil. Covers the three individual-buyer tiers people actually confuse: Go $8, Plus $20, Pro $100/$200. Frames the decision, not the catalog. Key facts: Go runs GPT-5.3 in regular chat (GPT-5.5 only inside Codex at 400K context), still shows ads on Free/Go in the US since Feb 9, 2026, and excludes reasoning models / Sora / Agent Mode / Deep Research / Tasks. Plus = default for most professionals (full suite, ad-free, $20 held three years; GPT-5.5 default since Apr 23, 2026). Pro $100 (launched Apr 9, 2026, price-matched to Claude Max) and $200 share the same model suite — only volume differs (5x vs 20x Plus); the Pro $100 "10x Codex" promo expired May 31, 2026 (now 5x); $200 is for parallel/heavy-Codex/1M-token workloads. Naming caveat callout: two tiers display "Pro" in billing — verify at chatgpt.com/subscription. Codex Mobile free on all plans since May 14, 2026. 2,267 words. At-a-glance comparison table, TOC, decision section, verdict. Internal links to review/chatgpt.html + both sibling ChatGPT pricing posts; reciprocal contextual links added UP from chatgpt-go-vs-plus-2026 and chatgpt-pro-100-vs-200-2026. No COI box (pure ChatGPT pricing, no Claude head-to-head — consistent with the two sibling posts). datePublished/dateModified 2026-06-11.
 - MiniMax M3 review ✅ (June 10, 2026) — AI Coding, 7.9, Marcus Veil. Open-weight frontier model from MiniMax (Shanghai), launched June 1, 2026. First open-weight model to combine frontier coding (59% SWE-Bench Pro, edging GPT-5.5's 58.6%), a 1M-token context, and native text/image/video input. New MSA sparse-attention architecture (brought back after M2 removed it) reports 15.6x faster decoding / 9.7x faster prefill at 1M context. $0.60/M input (~12x cheaper than Claude Opus 4.7; $0.30/M launch promo). Also: desktop computer operation, 66% Terminal-Bench 2.1, 83.5 BrowseComp, OpenAI-compatible API, MiniMax Code subscription. Carries the yellow COI box (AIToolGrade uses Claude; Opus 4.7/4.8 is a direct competitor) + the same Chinese-company / 2017 National Intelligence Law data-residency treatment as DeepSeek V4 and Kimi Code. Held to 7.9 because benchmarks are vendor-reported (independent verification pending), weights hadn't shipped at launch (~June 11 HuggingFace), and the model is new — note in review says score may rise in 60-90 days. Benchmark caveat carried throughout. NOT added to compare.html (consistent with deepseek-v4/claude-code/kimi-code/grok-build). datePublished/dateModified 2026-06-10.
@@ -709,6 +716,16 @@ Next content priorities (from May 24, 2026 session):
 - ChatGPT, Cursor, Grammarly, Perplexity, Jasper, Notion AI pricing all updated ✅
 
 ## Search Console Optimization
+
+### June 12, 2026 — New review published (v0 by Vercel)
+review/v0.html — 8.4/10, Marcus Veil, AI Coding
+Target: "v0 review" (secondary: "v0 by vercel review", "v0 pricing", "v0 vs lovable")
+News hook: the February 4, 2026 rebuild (Git, editor, sandbox runtime, GitHub import, Snowflake/AWS
+database connectivity, server-side/API routes, agentic workflows) — pricing unchanged. Framed
+strictly as frontend-first / not full-stack parity with Bolt/Lovable. Unverified "6M+ users" omitted.
+Review + Article + BreadcrumbList schema. No COI box. compare.html intentionally skipped (curated
+subset; Lovable peer also absent). Prohibited-language grep clean; live HTTP 200 confirmed.
+Perplexity editorial check: pending manual run.
 
 ### June 12, 2026 — New review published
 review/zoommate.html — 7.2/10, Priya Nolan, Productivity
@@ -1033,7 +1050,8 @@ Rules:
 - Run sitemap audit whenever new reviews or blog posts are added
 - Submit updated sitemap to Google Search Console after significant additions
 
-Current page count: 71 URLs (as of June 12, 2026) — one per HTML page.
+Current page count: 72 URLs (as of June 12, 2026) — one per HTML page.
+(June 12, 2026: added `review/v0.html` — AI Coding, lastmod 2026-06-12.)
 (June 12, 2026: added `review/zoommate.html` — Productivity, lastmod 2026-06-12.)
 (June 11, 2026: added `blog/chatgpt-go-vs-plus-vs-pro-2026.html` — Comparison, lastmod 2026-06-11.)
 (June 10, 2026: added `review/minimax-m3.html` — AI Coding, lastmod 2026-06-10.)

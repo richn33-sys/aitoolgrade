@@ -718,6 +718,19 @@ Next content priorities (from May 24, 2026 session):
 
 ## Search Console Optimization
 
+### June 12, 2026 — New review published (OpenCode)
+review/opencode.html — 8.4/10, Marcus Veil, AI Coding
+Target: "opencode review" (secondary: "opencode vs claude code", "open source ai coding agent", "opencode air-gapped")
+News hook: entered LogRocket's June 2026 dev-tool power rankings at #1, displacing Cursor — framed as
+news/context, scored INDEPENDENT of the ranking. Model-agnostic (75+ providers), MIT-licensed free core +
+BYOK, LSP diagnostics in the agent loop, viable air-gapped use (with the documented session-title caveat,
+GitHub issue #16117). All adoption metrics attributed (~160K stars, ~7.5M MAU). Carries the yellow COI box
+(competes with Claude Code, which builds this site, and can run on Claude models). Review + Article +
+BreadcrumbList schema. compare.html intentionally skipped (curated subset). Prohibited-language grep clean;
+post-publish editorial pass softened two category-wide superlatives; live HTTP 200 confirmed.
+Perplexity editorial check: pending manual run (independent adversarial editorial agent run at build — clean
+on COI, air-gap caveat, attributed metrics, no hands-on claims).
+
 ### June 12, 2026 — New review published (v0 by Vercel)
 review/v0.html — 8.4/10, Marcus Veil, AI Coding
 Target: "v0 review" (secondary: "v0 by vercel review", "v0 pricing", "v0 vs lovable")

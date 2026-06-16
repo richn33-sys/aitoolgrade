@@ -686,9 +686,10 @@ Next content priorities (from May 24, 2026 session):
 ## Content Queue (updated June 12, 2026 session — reconciled against the v0 research brief)
 
 ### Remaining queue (OPEN)
+- **cursor-vs-windsurf-vs-github-copilot verdict re-eval** — MEDIUM (follow-up from the June 16, 2026 Cursor re-score to 8.8). The post's "winner" framing was neutralized as a stopgap (score row de-crowned, reframed to "score closely, choose by use case"); a real re-eval must re-verify Windsurf (9.1) and GitHub Copilot (8.9 in CLAUDE.md vs 8.8 displayed on category/coding.html — reconcile this discrepancy too) are still current before deciding whether/how to reframe the verdict. Do NOT flip a comparison's winner without that re-verification. Marcus Veil.
 - **"Perplexity Max vs Pro"** — MEDIUM (KW "perplexity max pricing"). Also update Perplexity pricing facts ($200 Max tier, $325/user/mo Enterprise Max) wherever Perplexity is referenced.
 
-> All HIGH-priority items from the June 12, 2026 brief are now complete (v0 vs Lovable vs Bolt comparison + Cursor pricing refresh both shipped June 12). Only the MEDIUM Perplexity item remains.
+> All HIGH-priority items from the June 12, 2026 brief are now complete (v0 vs Lovable vs Bolt comparison + Cursor pricing refresh both shipped June 12). Remaining: the MEDIUM Perplexity item and the cursor-vs-windsurf verdict re-eval (queued June 16).
 
 ### Completed
 - "v0 vs Lovable vs Bolt 2026" comparison ✅ (June 12, 2026) — `blog/v0-vs-lovable-vs-bolt-2026.html`, Marcus Veil, ~2,175 words, KW "v0 vs lovable" (secondary: "v0 vs bolt vs lovable", "best ai app builder 2026", "lovable vs bolt"). Built from on-site review scores as the single source of truth (v0 8.4 / Bolt 8.3 / Lovable 8.1). At-a-glance scorecard, per-tool sections (v0 frontend-first UI quality + the not-yet-full-stack limitation; Lovable chat-first full-stack on Supabase, easiest for non-coders; Bolt WebContainers browser dev env + framework breadth + Bolt Cloud + token unpredictability), shared-limitations section, decision matrix, verdict. FRAMING GUARDRAIL held: explicitly NO universal winner — leads scoped per-dimension ("best UI quality of the three", not "best builder"); ARR/traction figures ATTRIBUTED as reported (Lovable ~$20M ARR in ~2 months, Bolt ~$40M ARR in ~5–6 months), not bare fact. Pricing qualified as a June 2026 snapshot (verify at each official site); Lovable tiers kept conservative/aligned with its review per the brief. In-post links to review/v0, review/lovable, review/bolt + blog/best-ai-app-builders-2026; reciprocal contextual links added UP from all three reviews (v0 placeholder filled, bolt + lovable callouts updated). Card added to blog/index.html (top, newest-first). Article + BreadcrumbList schema; datePublished/dateModified 2026-06-12; sitemap lastmod 2026-06-12 (weekly, 0.7). Prohibited-language + superlative scan clean; no hands-on claims. NO nav.js / compare.html / review-count change (blog post). Live HTTP 200 confirmed. Perplexity editorial check: independent adversarial editorial agent run at build (manual Perplexity run pending).
@@ -720,6 +721,34 @@ Next content priorities (from May 24, 2026 session):
 - ChatGPT, Cursor, Grammarly, Perplexity, Jasper, Notion AI pricing all updated ✅
 
 ## Search Console Optimization
+
+### June 16, 2026 — Cursor review refresh + re-score (page dateModified set 2026-06-12)
+review/cursor.html — refreshed in place (same URL/slug), Marcus Veil. On-page dateModified/sitemap
+lastmod set to 2026-06-12 to sit with the cursor-pricing refresh batch.
+- **Re-score 9.4 → 8.8.** Re-ran the 5-dimension rubric on Cursor 3 + usage-based pricing:
+  Output 9.3 / Ease 9.0 / Value 7.5 / Features 9.5 / Support 8.5 → mean 8.8. Driver: **Value
+  corrected 9.2 → 7.5** for the usage-based credit reality (pool drains on frontier models,
+  overage at API rates, lingering 2025 backlash). Old 9.4 headline was already above its own
+  on-page bars (avg 9.16). Synced headline + schema ratingValue + 5 bars + reviews.html +
+  compare.html + category/coding.html (intro de-claimed "leads the category").
+- **Content refresh:** reframed to the agent-first **Cursor 3** rebuild (Composer 2.5, multi-repo,
+  parallel local+cloud agents, integrated browser, plugin marketplace, commit-to-merged-PR,
+  multi-surface agent launch, JetBrains, Bugbot — spot-checked at cursor.com). Removed the
+  "Hands-on tested" badge (research framing); scoped superlatives ("Best in Class"/"most capable"/
+  "most impressive"/"genuine leap forward"). Pricing aligned to the refreshed blog: Business $40 /
+  Premium ~$120 (renamed from Teams Standard/Premium — note cursor.com still labels the $40 tier
+  "Teams"), added the ~$20 Pro credit pool + Pro+ ~3x / Ultra ~20x framing, replaced the dated
+  GPT-4o example with Opus 4.8 / GPT-5.5 / Gemini 3.1 Pro, and added a contextual link to
+  blog/cursor-pricing-2026.html. Fixed the local font-CSS path back to the standard Google Fonts link.
+- **cursor-vs-windsurf-vs-github-copilot.html:** updated Cursor's table number to 8.8 and
+  **neutralized the "winner" framing** (no new winner crowned) — reframed to "score closely, choose
+  by use case" with links to the three reviews. Also fixed that post's own "Hands-on tested" badge.
+  dateModified/sitemap lastmod → 2026-06-12.
+- **Follow-up queued (NOT done this pass):** deliberate re-eval of the cursor-vs-windsurf comparison
+  verdict, which must re-verify Windsurf (9.1) and GitHub Copilot (8.9 in CLAUDE.md / displayed 8.8 on
+  category page — reconcile) are still current before flipping the comparison's verdict. See Content Queue.
+- Prohibited-language + superlative scan clean across all 6 edited files; schema re-validated;
+  live HTTP 200 confirmed on both pages. No review-count change (existing pages).
 
 ### June 12, 2026 — New comparison post (v0 vs Lovable vs Bolt)
 blog/v0-vs-lovable-vs-bolt-2026.html — Marcus Veil, ~2,175 words.

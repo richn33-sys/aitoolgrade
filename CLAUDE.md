@@ -38,7 +38,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── copyai.html              (AI Writing, 7.3)
 │   ├── writesonic.html          (AI Writing, 8.0)
 │   ├── grammarly.html           (AI Writing, 8.5)
-│   ├── cursor.html              (AI Coding, 9.4)
+│   ├── cursor.html              (AI Coding, 8.8)
 │   ├── github-copilot.html      (AI Coding, 8.9)
 │   ├── windsurf.html            (AI Coding, 8.2)
 │   ├── bolt.html                (AI Coding, 8.3)
@@ -171,7 +171,7 @@ All content (reviews, blog posts, any copy) must be humanized — not AI-soundin
 As a final step in any writing task, humanize the text so it does not feel AI-generated. Vary sentence length, add natural phrasing, improve transitions, and make it feel organic and authentic — without adding fluff or changing the message.
 
 ## Key UI Patterns
-- **Scores:** displayed as `★ 9.4 / 10` using `var(--mono)` font, `var(--accent)` color
+- **Scores:** displayed as `★ 8.8 / 10` using `var(--mono)` font, `var(--accent)` color
 - **Free badge:** `<span class="free-badge">FREE</span>` — green pill badge
 - **Nav:** sticky, frosted glass (`backdrop-filter: blur(12px)`), dropdown menus on hover
 - **Cards:** white bg, `var(--border)` border, 14px border-radius, lift on hover (`translateY(-2px)` + box-shadow)
@@ -423,7 +423,7 @@ All schema is implemented as JSON-LD in the <head> of each page. Do not add dupl
 
 ### Implemented
 - **Organization schema** — index.html (entity signal for Google)
-- **Review schema** — all 34 review pages (eligible for star ratings in SERPs)
+- **Review schema** — all 35 review pages (eligible for star ratings in SERPs)
   - Includes: reviewRating, author, itemReviewed with applicationCategory + operatingSystem + offers
 - **Article schema** — all 17 blog posts (eligible for article rich results)
   - Includes: headline, author (Person), publisher (Organization), datePublished, dateModified
@@ -543,6 +543,23 @@ to links authored in page content (breadcrumbs, in-body links):
 
 When a new review or blog post is published, ask Claude to write posts for all three accounts.
 Prompt: "Write X posts for [article name]"
+
+### Social Drafts — Pending (status as of June 16, 2026)
+Tracks which published pieces still need social posts written.
+
+**Drafted (posts written, not all posted yet):**
+- **ChatGPT Go vs Plus vs Pro** — draft exists (`social-posts/chatgpt-go-vs-plus-vs-pro-posts.md`).
+  PENDING FIX before posting: the Day 1 @marcusveil_ line still says Go "locks out reasoning
+  models" — that's stale. Per the June 11, 2026 correction, GPT-5.5 Instant is the default base
+  across all tiers (incl. Go); Go's real gap is features + no GPT-5.5 Pro, not a reasoning-model
+  lockout. Reword that line before it goes out.
+
+**Not yet drafted (need social posts):**
+- ZoomMate review
+- v0 by Vercel review
+- OpenCode review
+- v0 vs Lovable vs Bolt comparison post
+- Cursor review refresh (June 16 re-score to 8.8)
 
 ### Post Types Per Article
 1. Main posts x3 (one per account)
@@ -677,7 +694,7 @@ Near-term: screenshots on remaining reviews, methodology callout box, keep addin
 Medium-term: contributor bylines, outreach for links from AI newsletters
 Longer-term: topic clusters, deep comparison posts (2000+ words)
 
-Content published to date: 34 reviews, 17 blog posts, 1 comparison page, 1 resources page
+Content published to date: 35 reviews, 17 blog posts, 1 comparison page, 1 resources page
 Next content priorities (from May 24, 2026 session):
 - Monitor Search Console in 2-3 weeks for position movement on Notion AI, Copy.ai, Midjourney rewrites
 - Monitor CTR improvement on Bolt.new and ChatGPT vs Claude
@@ -686,7 +703,9 @@ Next content priorities (from May 24, 2026 session):
 ## Content Queue (updated June 12, 2026 session — reconciled against the v0 research brief)
 
 ### Remaining queue (OPEN)
-- **cursor-vs-windsurf-vs-github-copilot verdict re-eval** — MEDIUM (follow-up from the June 16, 2026 Cursor re-score to 8.8). The post's "winner" framing was neutralized as a stopgap (score row de-crowned, reframed to "score closely, choose by use case"); a real re-eval must re-verify Windsurf (9.1) and GitHub Copilot (8.9 in CLAUDE.md vs 8.8 displayed on category/coding.html — reconcile this discrepancy too) are still current before deciding whether/how to reframe the verdict. Do NOT flip a comparison's winner without that re-verification. Marcus Veil.
+- **cursor-vs-windsurf-vs-github-copilot verdict re-eval** — MEDIUM (follow-up from the June 16, 2026 Cursor re-score to 8.8). The post's "winner" framing was neutralized as a stopgap (score row de-crowned, reframed to "score closely, choose by use case"); a real re-eval must re-verify Windsurf (9.1) and GitHub Copilot are still current before deciding whether/how to reframe the verdict. Do NOT flip a comparison's winner without that re-verification. Marcus Veil. This re-eval folds in two reconciles to settle next session (logged, NOT yet resolved):
+  - **KNOWN DISCREPANCY — GitHub Copilot score: 8.9 in CLAUDE.md (File Structure tree) vs 8.8 displayed on category/coding.html.** Deliberately left unresolved — do NOT pick a number here. Settle it during the re-eval (verify against the live review page + rubric) and sync all surfaces to the agreed value.
+  - **Teams/Business naming:** Cursor's $40 tier is labeled "Business" on-site but cursor.com still labels it "Teams" (Premium ~$120 renamed from Teams Premium). Reconcile naming across the Cursor review, pricing table, and comparison post during the re-eval.
 - **"Perplexity Max vs Pro"** — MEDIUM (KW "perplexity max pricing"). Also update Perplexity pricing facts ($200 Max tier, $325/user/mo Enterprise Max) wherever Perplexity is referenced.
 
 > All HIGH-priority items from the June 12, 2026 brief are now complete (v0 vs Lovable vs Bolt comparison + Cursor pricing refresh both shipped June 12). Remaining: the MEDIUM Perplexity item and the cursor-vs-windsurf verdict re-eval (queued June 16).
@@ -1046,7 +1065,7 @@ pricing updates needed, blog post opportunities, and what competitors are coveri
 
 What the brief covers:
 1. New tools worth reviewing - 3-5 tools not yet on site with estimated scores
-2. Pricing changes - flags if any of the 26 reviewed tools have updated pricing
+2. Pricing changes - flags if any of the 35 reviewed tools have updated pricing
 3. Trending search queries - high-opportunity keywords to target with new content
 4. Competitor activity - topics G2/TechRadar/PCMag are covering that we are not
 5. Community sentiment - Reddit discussions about tools getting significant attention

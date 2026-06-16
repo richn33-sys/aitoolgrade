@@ -2,8 +2,8 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="canonical" href="https://aitoolgrade.com/blog/cursor-pricing-2026.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Cursor switched from 500 fixed requests to a credit-based system in June 2025 — effectively cutting monthly usage in half for most Pro users. Here's what it actually costs now.">
-<title>Cursor Pricing Explained: The Credit System Change That Doubled Real Costs | AIToolGrade</title>
+<meta name="description" content="Cursor's 2026 pricing, explained: the June 2025 switch to usage-based credit billing, why the backlash still drives search, and where the bill actually gets written.">
+<title>Cursor Pricing 2026: What Changed and What It Really Costs | AIToolGrade</title>
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -89,7 +89,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Cursor Pricing Explained: The Credit System Change That Doubled Real Costs",
+  "headline": "Cursor Pricing 2026: What Changed and What It Really Costs",
   "author": {
     "@type": "Person",
     "name": "Marcus Veil",
@@ -101,7 +101,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
     "url": "https://aitoolgrade.com"
   },
   "datePublished": "2026-05-19",
-  "dateModified": "2026-05-19"
+  "dateModified": "2026-06-12"
 }
 </script>
 <script type="application/ld+json">
@@ -111,7 +111,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
   "itemListElement": [
     {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolgrade.com"},
     {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aitoolgrade.com/blog/index.html"},
-    {"@type": "ListItem", "position": 3, "name": "Cursor Pricing Explained", "item": "https://aitoolgrade.com/blog/cursor-pricing-2026.html"}
+    {"@type": "ListItem", "position": 3, "name": "Cursor Pricing 2026", "item": "https://aitoolgrade.com/blog/cursor-pricing-2026.html"}
   ]
 }
 </script>
@@ -121,111 +121,124 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
 <script src="../nav.js"></script>
 
 <div class="post-wrap">
-  <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/">Blog</a><span>›</span>Cursor Pricing Explained</div>
+  <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/">Blog</a><span>›</span>Cursor Pricing 2026</div>
   <span class="post-tag">Pricing Guide</span>
-  <h1>Cursor Pricing Explained: The Credit System Change That Doubled Real Costs</h1>
-  <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:32px;font-family:'DM Mono',monospace;">By <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade &middot; Last verified May 2026</p>
-  <div class="post-meta"><span>📅 May 2026</span><span>⏱ 7 min read</span></div>
+  <h1>Cursor Pricing 2026: What Changed and What It Really Costs</h1>
+  <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:32px;font-family:'DM Mono',monospace;">By <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade &middot; Last verified June 2026</p>
+  <div class="post-meta"><span>📅 Updated June 2026</span><span>⏱ 9 min read</span></div>
 
   <div class="post-body">
-    <p>In June 2025, Cursor quietly changed how Pro plan usage works. The shift from 500 fixed fast requests to a credit-based system went live with minimal fanfare — until developers started hitting limits far earlier than expected. A Reddit thread documenting the frustration reached 3,200+ upvotes. The CEO posted a public apology. The dust has since settled, but the pricing structure is genuinely more complicated than it looks. Here is exactly what changed, what it costs now, and who should care.</p>
+    <p>Look up "Cursor pricing" today and you'll still find threads arguing about a change that landed in June 2025. That's unusual. Pricing pages rarely keep people talking a year later. But Cursor didn't just raise a number — it swapped the whole billing model, did it abruptly, and a lot of paying users felt the floor move. The plan table tells you the sticker price. The credit system tells you what you'll actually be charged. Those are two different stories, and the second one is where the bill gets written.</p>
 
     <div class="verdict-box">
       <h4>Bottom line up front</h4>
-      <p>Auto mode is unlimited and works well for most developers. Credits only get consumed when you manually select a frontier model like Claude Opus or GPT-4o. If that describes your workflow, Pro at $20/month is still reasonable. If it doesn't — if you depend on manually choosing the strongest model for complex multi-file work — budget for Pro+ at $60.</p>
+      <p>Cursor's flat monthly fee buys a dollar-denominated pool of model credits. Auto mode — where Cursor routes your request to a cost-efficient model — is unlimited on paid plans and does <em>not</em> draw from that pool. Manually picking a frontier model (Claude Opus, Claude Sonnet, Gemini) does. Once the pool is spent, extra usage bills at API rates in arrears. Net effect: your real cost tracks how hard you push the AI, not just which tier you chose. For routine work on Auto mode, Pro at $20/month holds up. For daily frontier-model use, plan on Pro+ at $60 — or rethink the model entirely.</p>
     </div>
 
     <div class="toc" style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin:32px 0">
       <p style="font-size:12px;font-family:'DM Mono',monospace;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px">In This Article</p>
       <ol style="padding-left:20px;display:flex;flex-direction:column;gap:8px">
-        <li style="font-size:15px;color:var(--text2)"><a href="#current-pricing" style="color:var(--text2)">Current pricing (May 2026)</a></li>
-        <li style="font-size:15px;color:var(--text2)"><a href="#what-changed" style="color:var(--text2)">What changed in June 2025</a></li>
-        <li style="font-size:15px;color:var(--text2)"><a href="#auto-mode" style="color:var(--text2)">Is auto mode actually unlimited?</a></li>
-        <li style="font-size:15px;color:var(--text2)"><a href="#vs-windsurf" style="color:var(--text2)">Cursor vs Windsurf pricing</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#current-pricing" style="color:var(--text2)">Current pricing (June 2026)</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#what-changed" style="color:var(--text2)">What changed in June 2025 — and why the backlash sticks</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#credit-mechanic" style="color:var(--text2)">The credit system in plain English</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#cost-control" style="color:var(--text2)">How to keep the bill predictable</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#alternatives" style="color:var(--text2)">If unpredictability is the problem</a></li>
         <li style="font-size:15px;color:var(--text2)"><a href="#verdict" style="color:var(--text2)">Who should pay for what</a></li>
       </ol>
     </div>
 
-    <h2 id="current-pricing">Current Cursor Pricing (May 2026)</h2>
-    <p>Cursor now offers five plans. The range is wide — from free to $200/month — and the right tier depends almost entirely on how you use the tool.</p>
+    <h2 id="current-pricing">Current Cursor Pricing (June 2026)</h2>
+    <p>Cursor runs six tiers, from a free Hobby plan to a $200/month Ultra plan, plus team and enterprise options. Annual billing knocks roughly 20% off the monthly rate. The prices below were verified against <a href="https://cursor.com/pricing" target="_blank" rel="noopener" style="color:var(--accent)">cursor.com/pricing</a> in June 2026 — confirm there before you commit, because Cursor has shown it will restructure mid-year.</p>
 
     <table class="comparison-table">
-      <thead><tr><th>Plan</th><th>Monthly price</th><th>Annual price</th><th>Best for</th></tr></thead>
+      <thead><tr><th>Plan</th><th>Monthly</th><th>Annual (~20% off)</th><th>What you get</th></tr></thead>
       <tbody>
-        <tr><td>Hobby</td><td>Free</td><td>Free</td><td>Evaluation, light use</td></tr>
-        <tr><td>Pro</td><td>$20/mo</td><td class="winner">$16/mo</td><td>Most individual developers</td></tr>
-        <tr><td>Pro+</td><td>$60/mo</td><td>$48/mo</td><td>Heavy frontier model users</td></tr>
-        <tr><td>Ultra</td><td>$200/mo</td><td>—</td><td>Maximum usage ceiling</td></tr>
-        <tr><td>Teams</td><td>$40/user/mo</td><td>$32/user/mo</td><td>Small teams</td></tr>
+        <tr><td>Hobby</td><td>Free</td><td>Free</td><td>~2,000 completions + limited agent requests, no card; 7-day Pro trial</td></tr>
+        <tr><td>Pro</td><td>$20/mo</td><td class="winner">~$16/mo</td><td>$20 monthly credit pool; unlimited Auto mode + Tab</td></tr>
+        <tr><td>Pro+</td><td>$60/mo</td><td>~$48/mo</td><td>Everything in Pro, ~3&times; premium-model usage</td></tr>
+        <tr><td>Ultra</td><td>$200/mo</td><td>—</td><td>Everything in Pro, ~20&times; premium-model usage + priority access</td></tr>
+        <tr><td>Business (Teams)</td><td>$40/user/mo</td><td>~$32/user/mo</td><td>Standard seat; admin, SSO, analytics. Premium seats ~$120/user</td></tr>
+        <tr><td>Enterprise</td><td>Custom</td><td>Custom</td><td>Pooled usage, access controls, audit logs, support</td></tr>
       </tbody>
     </table>
 
-    <p>The Hobby plan is genuinely functional for evaluating Cursor, but usage limits hit quickly in real work. Pro at $20/month is where most individual developers land. The jump to Pro+ at $60 is steep — whether it's justified depends on the credit system, which is where things get complicated.</p>
+    <p>A separate Bugbot add-on handles AI code review on usage-based billing. The Hobby plan is fine for kicking the tires, but the included allotment runs out fast in real work. Pro at $20 is where most solo developers land. The leap to Pro+ at $60 looks steep on paper — whether it's worth it comes down to the credit math, which is the part the table can't show you.</p>
 
-    <h2 id="what-changed">What Changed in June 2025</h2>
-    <p>Before June 2025, Cursor Pro gave you 500 fast requests per month. Fixed number, predictable, easy to understand. Then the credit system arrived.</p>
+    <h2 id="what-changed">What Changed in June 2025 — and Why the Backlash Sticks</h2>
+    <p>Before June 2025, a Cursor Pro subscription gave you a fixed monthly allotment of "fast requests." You could count them. You knew where the ceiling was. Then Cursor replaced that with usage-based credit billing tied to the actual API cost of the model you run. Heavier models, longer contexts, and MAX mode all burn more of your included amount. Same $20, but the ceiling now floats depending on what you ask for.</p>
 
-    <p>Under the new model, usage is tracked in credits rather than requests. The credit cost per interaction varies depending on which model processes it. Choose a frontier model — Claude Opus 4, GPT-4o, or similar — and each request consumes significantly more credits than a cheaper model would. The practical result: Pro users manually selecting frontier models for complex tasks report getting roughly 225 usable interactions before hitting limits. That is less than half the previous 500 requests.</p>
+    <p>The rollout went badly, and Cursor has said so itself. The change shipped quickly and was poorly communicated; the word "unlimited" was used in ways that turned out to be conditional; and some users hit overage charges they didn't see coming. On July 4, 2025, Cursor posted a public apology, acknowledged the confusion, and offered refunds for surprise charges incurred roughly between June 16 and July 4, 2025. A month later, in August 2025, Teams pricing moved onto the same variable, API-based billing.</p>
 
-    <p>The community response was immediate. A thread on r/cursor documented the frustration in detail, collecting over 3,200 upvotes — a clear signal this was not a fringe complaint. Cursor's CEO responded directly on Reddit with a public apology, acknowledged the communication was poor, and committed to improvements. Some adjustments followed, but the credit-based structure remained.</p>
+    <p>Here's the part worth being precise about: the company's apology, the refund window, and the billing change are documented facts. The <em>feelings</em> about it are community sentiment, and they're still loud. On Reddit and Cursor's own forums, some longtime users describe the credit prompts and upgrade nudges in harsh terms — one recurring characterization is that the experience started to feel like "nagware." That's their framing, not ours. We're reporting that the sentiment exists and runs deep enough to still surface in search a year later; we're not endorsing it as a verdict on the product. Cursor remains a capable editor with a large, active user base. What lingers is a trust gap about <em>billing predictability</em>, and that gap is exactly why "cursor pricing" is still a hot query.</p>
 
     <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin:32px 0">
       <div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:8px">Before vs After</div>
       <table style="width:100%;border-collapse:collapse">
         <tr style="border-bottom:1px solid var(--border)">
           <td style="padding:10px 0;font-size:14px;color:var(--text3);font-family:var(--mono);width:40%">Old model (pre-June 2025)</td>
-          <td style="padding:10px 0;font-size:14px;color:var(--text2)">500 fixed fast requests/month — simple, predictable</td>
+          <td style="padding:10px 0;font-size:14px;color:var(--text2)">Fixed monthly "fast requests" — countable and predictable</td>
         </tr>
         <tr>
           <td style="padding:10px 0;font-size:14px;color:var(--text3);font-family:var(--mono)">New model (June 2025+)</td>
-          <td style="padding:10px 0;font-size:14px;color:var(--text2)">Credit-based — ~225 usable requests when selecting frontier models manually</td>
+          <td style="padding:10px 0;font-size:14px;color:var(--text2)">Dollar-denominated credit pool spent at each model's real API cost; overages billed in arrears</td>
         </tr>
       </table>
     </div>
 
-    <h2 id="auto-mode">Is Auto Mode Actually Unlimited?</h2>
-    <p>This is the part that most coverage gets wrong by oversimplifying. Yes — auto mode is unlimited. When Cursor selects the model automatically, credits are not consumed in the same way. For most users doing typical development tasks — code completions, inline edits, short chat exchanges — auto mode works well and the credit system is largely irrelevant.</p>
+    <h2 id="credit-mechanic">The Credit System in Plain English</h2>
+    <p>Forget requests for a second and think in dollars, because that's how Cursor now thinks. Your monthly fee includes a credit pool measured in money — at Pro, that's a $20 pool. Different actions draw it down at different rates, and a couple of things don't draw it down at all. Once you understand which is which, the whole structure stops being mysterious.</p>
 
-    <p>The nuance is in who uses manual model selection and why. Power users working on complex multi-file refactors, architectural decisions, or debugging intricate logic often prefer to explicitly choose Claude Opus or GPT-4o because those models handle ambiguity better on genuinely hard problems. That preference is reasonable and documented across developer communities. For those users, the credit system meaningfully reduces what $20/month buys.</p>
-
-    <p>The practical breakdown:</p>
     <ul>
-      <li><strong>Casual to moderate use, auto mode:</strong> Pro at $20/month is fine. You're unlikely to hit credit limits in normal workflows.</li>
-      <li><strong>Heavy use, auto mode only:</strong> Still fine at $20/month. Auto mode's unlimited nature covers high volume if you trust it to pick the model.</li>
-      <li><strong>Heavy use, manual frontier model selection:</strong> Pro+ at $60/month is probably the realistic price for this workflow. The credit math at Pro doesn't add up for daily power use.</li>
+      <li><strong>Auto mode is unlimited and free of the pool.</strong> When you let Cursor choose the model, it routes to a cost-efficient one and that usage is included — it does not subtract from your credits. For most everyday work, this is the lane you live in.</li>
+      <li><strong>Tab completions are effectively unlimited.</strong> The inline autocomplete that fires as you type is cheap and not the thing that drains your balance.</li>
+      <li><strong>Manually selecting a frontier model draws credits.</strong> The moment you reach for Claude Opus, Claude Sonnet, or Gemini by hand, you're spending the pool at that model's API rate. Bigger model, longer context, MAX mode — faster burn.</li>
+      <li><strong>When the pool runs dry, you keep going at cost.</strong> On-demand usage past the included amount bills at API rates with no markup, charged in arrears. Nothing stops mid-task; the meter just moves to your card.</li>
     </ul>
 
-    <p>Framing it as "$20/month" is accurate but incomplete. For a segment of developers — the ones who bought Pro specifically because they wanted reliable access to the best available models — the effective price doubled without a corresponding price announcement.</p>
+    <p>That last point is the whole reason team bills can swing. Two developers on identical $20 Pro plans can post very different monthly totals — one stays in Auto mode and never touches the pool, the other hand-picks Opus for every refactor and rolls into overage by the third week. The plan tier sets the included credit; your model habits set the actual cost. An organization full of frontier-model power users will see a different bill than the seat count implies, which is precisely the unpredictability the June 2025 change introduced.</p>
 
-    <h2 id="vs-windsurf">Cursor vs Windsurf: The Pricing Reality</h2>
-    <p>Before June 2025, the pricing comparison between Cursor and Windsurf was straightforward. After, it got more interesting. Windsurf Pro is $15/month — $5 cheaper than Cursor Pro — and its usage model is simpler: Windsurf uses a flow credit system that is generally considered more transparent and predictable than Cursor's post-June structure.</p>
+    <p>None of this makes Auto mode a trap, either. For code completion, inline edits, and short chat exchanges, Auto is genuinely fine and the credit system barely registers. The friction shows up for the specific group that bought Pro <em>because</em> they wanted reliable, direct control over which frontier model runs on hard multi-file work. For them, "$20/month" is technically true but practically incomplete.</p>
+
+    <h2 id="cost-control">How to Keep the Bill Predictable</h2>
+    <p>If you want the flat-fee experience the plan implies, the levers are straightforward and they all come down to controlling when you spend the pool.</p>
+    <ul>
+      <li><strong>Default to Auto mode for routine work.</strong> Boilerplate, small edits, quick questions — let Cursor route it. You stay off the meter.</li>
+      <li><strong>Reserve frontier models for the genuinely hard problems.</strong> Save manual Opus or Sonnet selection for the gnarly refactor or the bug that Auto keeps fumbling, not for everything.</li>
+      <li><strong>Watch the usage dashboard your first month.</strong> Before you upgrade from Pro to Pro+ on a hunch, spend thirty days reading your own burn rate. The dashboard shows where the credits actually go, and the answer is often "fewer places than you feared."</li>
+      <li><strong>Set spend expectations for teams up front.</strong> Because overage is billed in arrears at API rates, a team that leans on frontier models should treat the seat price as a floor, not the bill.</li>
+    </ul>
+
+    <h2 id="alternatives">If Unpredictability Is the Problem</h2>
+    <p>Some developers don't object to paying — they object to not knowing what they'll pay. If the variable credit burn is the actual sticking point for you, two directions are worth a look.</p>
+
+    <p>The cleaner escape hatch is a model-agnostic, bring-your-own-key tool, where the editor is free or open-source and you pay only your own provider's API costs with no platform pool in the middle. <a href="../review/opencode.html" style="color:var(--accent)">OpenCode</a> is the clearest example: it's MIT-licensed and open-source, runs against 75+ providers (Claude, GPT, Gemini, DeepSeek, or local models), and bills you nothing beyond what your chosen provider charges. The trade-off is real — it's terminal-first, you manage your own keys, and it's not a beginner's tool — but the cost model is transparent in a way a credit pool isn't. For a broader survey of where it fits against the rest of the field, see our roundup of the <a href="best-ai-coding-agents-2026.html" style="color:var(--accent)">best AI coding agents in 2026</a>.</p>
+
+    <p>The lower-effort alternative is a competing editor with a simpler usage model. <a href="../review/windsurf.html" style="color:var(--accent)">Windsurf</a> Pro runs $15/month and uses a flow-credit system that many developers describe as easier to predict than Cursor's. It's not a drop-in replacement — Cursor's Composer, which coordinates edits across many files from a single prompt, is still the stronger implementation in community comparisons — but if your workflow doesn't depend on that, the gap may not matter.</p>
 
     <table class="comparison-table">
-      <thead><tr><th>Tool</th><th>Pro price</th><th>Usage model</th><th>Reddit sentiment (post-June 2025)</th></tr></thead>
+      <thead><tr><th>Tool</th><th>Cost model</th><th>What you pay</th><th>Best for</th></tr></thead>
       <tbody>
-        <tr><td><a href="../review/cursor.html" style="color:var(--accent)">Cursor</a></td><td>$20/mo</td><td>Credit-based; auto unlimited</td><td>Mixed — credit change drew criticism</td></tr>
-        <tr><td class="winner"><a href="../review/windsurf.html" style="color:var(--accent)">Windsurf</a></td><td class="winner">$15/mo</td><td>Flow credits; simpler structure</td><td class="winner">Became default recommendation for cost-conscious devs</td></tr>
+        <tr><td><a href="../review/cursor.html" style="color:var(--accent)">Cursor</a></td><td>Flat fee + credit pool</td><td>$20+/mo, overage at API rate in arrears</td><td>Composer-heavy work, Auto-mode defaults</td></tr>
+        <tr><td><a href="../review/windsurf.html" style="color:var(--accent)">Windsurf</a></td><td>Flat fee + flow credits</td><td>$15/mo, simpler structure</td><td>Cost-conscious devs who want predictability</td></tr>
+        <tr><td class="winner"><a href="../review/opencode.html" style="color:var(--accent)">OpenCode</a></td><td class="winner">Open-source + BYOK</td><td class="winner">$0 tool; pay only provider API</td><td class="winner">Power users who want full cost transparency</td></tr>
       </tbody>
     </table>
 
-    <p>The credit change made Windsurf the default recommendation in r/cursor and related communities for developers who felt burned by the shift. The reasoning is straightforward: similar AI-native editing experience, lower price, and a usage model that doesn't require understanding credit burn rates per model.</p>
-
-    <p>That said, Windsurf is not a straight swap. Cursor's Composer — the ability to orchestrate coordinated edits across multiple files with a single natural language prompt — remains the more capable implementation in documented community benchmarks. If Composer is central to your workflow, Cursor holds the advantage regardless of the pricing comparison.</p>
-
     <h2 id="verdict">Who Should Pay for What</h2>
-    <p>Auto mode users: Pro at $20/month ($16 annual) is still defensible. The tool is capable, the credit limits don't apply in auto mode, and the quality of the editing experience is well-documented.</p>
+    <p><strong>Auto-mode developers:</strong> Pro at $20/month (~$16 annual) is defensible. You'll rarely touch the credit pool, the editing experience is well-documented, and the billing stays close to flat.</p>
 
-    <p>Manual frontier model users: Pro+ at $60/month is the honest number. Running Cursor Pro and hitting credit ceilings mid-month is a real and documented pattern for this group. Don't budget $20 expecting $60 worth of heavy frontier usage.</p>
+    <p><strong>Manual frontier-model users:</strong> Pro+ at $60/month is the honest number to budget. Running $20 Pro and hitting the ceiling mid-month is a documented pattern for this group — don't plan $20 and expect $60 worth of manual Opus use.</p>
 
-    <p>Cost-conscious developers who use auto mode: Windsurf at $15/month is worth evaluating seriously. The pricing gap matters over twelve months, and Windsurf's Cascade is competitive for most standard workflows.</p>
+    <p><strong>Cost-conscious developers:</strong> If predictability outranks Composer, evaluate Windsurf at $15, or go fully transparent with an open-source BYOK setup like OpenCode and pay only your provider's rate.</p>
 
-    <p>Teams: The $40/user/month ($32 annual) Teams plan includes organizational controls and usage management. Whether that premium over individual Pro makes sense depends on how much usage visibility matters to the team — it is not a trivial feature for larger organizations tracking developer tooling spend.</p>
+    <p><strong>Teams:</strong> The $40/user Business plan adds admin controls, SSO, and usage analytics — and that last one matters most here, because variable per-seat overage is exactly what you'll want visibility into. Premium seats run about $120/user; price the plan as a floor and watch the dashboard before assuming the seat count is the bill.</p>
 
     <div class="cta-box">
       <h3>Read the full reviews</h3>
-      <p>Pricing context, documented features, and community sentiment for both tools.</p>
+      <p>Pricing context, documented features, and community sentiment for each tool.</p>
       <div class="cta-links">
         <a href="../review/cursor.html" class="cta-btn">Cursor Review →</a>
+        <a href="../review/opencode.html" class="cta-btn">OpenCode Review →</a>
         <a href="../review/windsurf.html" class="cta-btn">Windsurf Review →</a>
       </div>
     </div>
@@ -235,6 +248,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
 <div class="related-posts" style="max-width:780px;margin:0 auto 48px;padding:32px;background:var(--bg2);border-radius:14px;border:1px solid var(--border)">
   <p style="font-size:12px;font-family:DM Mono,monospace;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px">Related Reading</p>
   <div style="display:flex;flex-direction:column;gap:12px">
+    <a href="best-ai-coding-agents-2026.html" style="font-size:15px;font-weight:600;color:var(--text);border-bottom:1px solid var(--border);padding-bottom:12px;text-decoration:none">Best AI Coding Agents in 2026 →</a>
     <a href="cursor-vs-windsurf-vs-github-copilot.html" style="font-size:15px;font-weight:600;color:var(--text);border-bottom:1px solid var(--border);padding-bottom:12px;text-decoration:none">Cursor vs Windsurf vs GitHub Copilot — Best AI Code Editor in 2026? →</a>
     <a href="best-free-ai-tools-2026.html" style="font-size:15px;font-weight:600;color:var(--text);text-decoration:none">Best Free AI Tools in 2026 →</a>
   </div>

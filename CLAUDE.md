@@ -76,7 +76,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── automation.html
 │   ├── video.html
 │   └── productivity.html
-└── blog/              ← 17 blog posts + index
+└── blog/              ← 18 blog posts + index
     ├── index.html
     ├── cursor-vs-windsurf-vs-github-copilot.html
     ├── best-free-ai-tools-2026.html
@@ -94,7 +94,8 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
     ├── best-free-ai-tools-students-2026.html
     ├── grok-build-vs-codex-vs-claude-code-2026.html
     ├── chatgpt-go-vs-plus-vs-pro-2026.html
-    └── v0-vs-lovable-vs-bolt-2026.html
+    ├── v0-vs-lovable-vs-bolt-2026.html
+    └── perplexity-max-vs-pro-2026.html
 ```
 > Root also has: about.html, resources.html, how-we-review.html, contribute.html, contact.html,
 > advertise.html, and legal pages (see "Missing File Structure Details"). author/ holds
@@ -425,7 +426,7 @@ All schema is implemented as JSON-LD in the <head> of each page. Do not add dupl
 - **Organization schema** — index.html (entity signal for Google)
 - **Review schema** — all 35 review pages (eligible for star ratings in SERPs)
   - Includes: reviewRating, author, itemReviewed with applicationCategory + operatingSystem + offers
-- **Article schema** — all 17 blog posts (eligible for article rich results)
+- **Article schema** — all 18 blog posts (eligible for article rich results)
   - Includes: headline, author (Person), publisher (Organization), datePublished, dateModified
 - **BreadcrumbList schema** — all review and blog pages
 
@@ -694,7 +695,7 @@ Near-term: screenshots on remaining reviews, methodology callout box, keep addin
 Medium-term: contributor bylines, outreach for links from AI newsletters
 Longer-term: topic clusters, deep comparison posts (2000+ words)
 
-Content published to date: 35 reviews, 17 blog posts, 1 comparison page, 1 resources page
+Content published to date: 35 reviews, 18 blog posts, 1 comparison page, 1 resources page
 Next content priorities (from May 24, 2026 session):
 - Monitor Search Console in 2-3 weeks for position movement on Notion AI, Copy.ai, Midjourney rewrites
 - Monitor CTR improvement on Bolt.new and ChatGPT vs Claude
@@ -706,11 +707,11 @@ Next content priorities (from May 24, 2026 session):
 - **cursor-vs-windsurf-vs-github-copilot verdict re-eval** — MEDIUM (follow-up from the June 16, 2026 Cursor re-score to 8.8). The post's "winner" framing was neutralized as a stopgap (score row de-crowned, reframed to "score closely, choose by use case"); a real re-eval must re-verify Windsurf (9.1) and GitHub Copilot are still current before deciding whether/how to reframe the verdict. Do NOT flip a comparison's winner without that re-verification. Marcus Veil. This re-eval folds in two reconciles to settle next session (logged, NOT yet resolved):
   - **KNOWN DISCREPANCY — GitHub Copilot score: 8.9 in CLAUDE.md (File Structure tree) vs 8.8 displayed on category/coding.html.** Deliberately left unresolved — do NOT pick a number here. Settle it during the re-eval (verify against the live review page + rubric) and sync all surfaces to the agreed value.
   - **Teams/Business naming:** Cursor's $40 tier is labeled "Business" on-site but cursor.com still labels it "Teams" (Premium ~$120 renamed from Teams Premium). Reconcile naming across the Cursor review, pricing table, and comparison post during the re-eval.
-- **"Perplexity Max vs Pro"** — MEDIUM (KW "perplexity max pricing"). Also update Perplexity pricing facts ($200 Max tier, $325/user/mo Enterprise Max) wherever Perplexity is referenced.
 
-> All HIGH-priority items from the June 12, 2026 brief are now complete (v0 vs Lovable vs Bolt comparison + Cursor pricing refresh both shipped June 12). Remaining: the MEDIUM Perplexity item and the cursor-vs-windsurf verdict re-eval (queued June 16).
+> **June 16, 2026 — June 12 research brief CLOSED OUT.** With "Perplexity Max vs Pro" shipped (below), every content item from the June 12 brief is complete. The ONLY remaining OPEN item is the maintenance follow-up above: the **cursor-vs-windsurf-vs-github-copilot verdict re-eval** (which folds in the GitHub Copilot 8.9-vs-8.8 score reconcile + the Cursor Teams/Business naming reconcile). Perplexity pricing facts were verified current at build — the existing review/perplexity.html already carries the $200 Max tier and $325/seat Enterprise Max, so no stale-pricing refresh was needed.
 
 ### Completed
+- "Perplexity Max vs Pro 2026" comparison ✅ (June 16, 2026) — `blog/perplexity-max-vs-pro-2026.html`, Priya Nolan, ~1,950 words, KW "perplexity max pricing" (secondary: "perplexity max vs pro", "is perplexity max worth it"). Decision/COMPARISON post (lives in blog/, NOT a review — no nav.js / compare.html / review-count change). CORE ANGLE held: Max is 10x Pro ($20→$200); the honest answer for most readers is **Pro**, with Max a specialist power-user plan justified only by named recurring workflows. FRAMING: BLUF box, "test before you upgrade," who's-overpaying section, "pick your tier" decision table, and verdict all steer toward Pro — never nudge to the expensive tier. The Pro→Max DELTA is the heart (unlimited Labs vs ~50/30d, Model Council multi-model orchestration, Perplexity Computer ~10k credits, unlimited advanced models incl. Opus 4.8, early access, priority support). Competitive section NEUTRAL/even-handed — ChatGPT Pro ($200, different product) and Claude Max ($100, undercuts both) stated as plain facts, explicit "none is the winner," no pro-Claude bias (the site builds with Claude Code — that was the watched risk). Full pricing ladder table (Free/Pro/Max + Education $10 / Enterprise Pro $40 / Enterprise Max $325). Pricing+quotas+model availability all qualified as a June 2026 snapshot (verify at perplexity.ai/pricing); ARR figure OMITTED (tangential). Internal links: review/perplexity.html (pricing already current — Max $200 + Enterprise Max $325 present, NO refresh/flag needed), blog/chatgpt-vs-claude-vs-perplexity, chatgpt-go-vs-plus-vs-pro-2026, chatgpt-pro-100-vs-200-2026. Card added to blog/index.html (top, newest-first). Article + BreadcrumbList schema; datePublished/dateModified 2026-06-16; sitemap weekly/0.7 lastmod 2026-06-16. Prohibited-language + superlative scan clean; no hands-on claims. Live HTTP 200 confirmed. Editorial check: independent adversarial agent run at build returned PASS on honesty/pricing-qualification/competitive-even-handedness/no-hands-on; 3 tightening fixes applied (snapshot disclaimer extended to quotas+model availability; "genuinely useful"→"well-suited"). Manual Perplexity run still pending (user's final gate). CLOSES OUT the June 12, 2026 research brief.
 - "v0 vs Lovable vs Bolt 2026" comparison ✅ (June 12, 2026) — `blog/v0-vs-lovable-vs-bolt-2026.html`, Marcus Veil, ~2,175 words, KW "v0 vs lovable" (secondary: "v0 vs bolt vs lovable", "best ai app builder 2026", "lovable vs bolt"). Built from on-site review scores as the single source of truth (v0 8.4 / Bolt 8.3 / Lovable 8.1). At-a-glance scorecard, per-tool sections (v0 frontend-first UI quality + the not-yet-full-stack limitation; Lovable chat-first full-stack on Supabase, easiest for non-coders; Bolt WebContainers browser dev env + framework breadth + Bolt Cloud + token unpredictability), shared-limitations section, decision matrix, verdict. FRAMING GUARDRAIL held: explicitly NO universal winner — leads scoped per-dimension ("best UI quality of the three", not "best builder"); ARR/traction figures ATTRIBUTED as reported (Lovable ~$20M ARR in ~2 months, Bolt ~$40M ARR in ~5–6 months), not bare fact. Pricing qualified as a June 2026 snapshot (verify at each official site); Lovable tiers kept conservative/aligned with its review per the brief. In-post links to review/v0, review/lovable, review/bolt + blog/best-ai-app-builders-2026; reciprocal contextual links added UP from all three reviews (v0 placeholder filled, bolt + lovable callouts updated). Card added to blog/index.html (top, newest-first). Article + BreadcrumbList schema; datePublished/dateModified 2026-06-12; sitemap lastmod 2026-06-12 (weekly, 0.7). Prohibited-language + superlative scan clean; no hands-on claims. NO nav.js / compare.html / review-count change (blog post). Live HTTP 200 confirmed. Perplexity editorial check: independent adversarial editorial agent run at build (manual Perplexity run pending).
 - Cursor pricing refresh ✅ (June 12, 2026) — REFRESH of existing `blog/cursor-pricing-2026.html` (same URL/slug/KW "cursor pricing 2026" — NOT a new URL; no cannibalization). Marcus Veil. Retitled keyword-forward: "Cursor Pricing 2026: What Changed and What It Really Costs." Pricing table updated to current six 2026 tiers (Hobby Free / Pro $20 w/ $20 credit pool / Pro+ $60 ~3x / Ultra $200 ~20x / Business $40, Premium ~$120 / Enterprise custom; ~20% annual). Verified at cursor.com/pricing June 2026. NEW plain-English credit-mechanic explainer (the real story): dollar-denominated pool; Auto mode unlimited and does NOT draw credits; manual frontier-model selection (Claude Opus/Sonnet, Gemini) DOES; pool exhaustion → API-rate, no-markup, billed in arrears; Tab ~unlimited; org bills swing on usage not seat count. Strengthened "what changed June 2025 + why backlash persists": request→credit switch, rushed/poorly-communicated rollout, July 4 2025 public apology + refunds (~Jun 16–Jul 4), Aug 2025 Teams→variable API billing. FRAMING GUARDRAIL held: "nagware" presented as an ATTRIBUTED representative Reddit/forum community quote, explicitly "their framing, not ours" — never AIToolGrade's verdict; backlash/apology/refund stated as documented facts, community feelings not stated as objective fact. Added cost-control tips + "if unpredictability is the problem" alternatives note → interlinked review/opencode.html (open-source/BYOK escape hatch) + blog/best-ai-coding-agents-2026.html; kept/refreshed Cursor + Windsurf review links. dateModified 2026-06-12, byline "Last verified June 2026," sitemap lastmod 2026-06-12. Article + BreadcrumbList schema re-validated. Prohibited-language grep + superlative scan clean; no hands-on claims. Live HTTP 200 confirmed. Perplexity editorial check: independent adversarial editorial agent run at build (pending manual Perplexity run). NO review/blog count changes (existing post).
 - OpenCode review ✅ (June 12, 2026) — AI Coding, 8.4, Marcus Veil. Open-source, MIT-licensed, model-agnostic coding AGENT (agentic loop, not autocomplete); Go TUI + Bun/JS HTTP server, SQLite, client-server so multiple frontends drive one session. Built by the SST team (now "Anomaly"); repo github.com/sst/opencode. NEWS HOOK: entered LogRocket's June 2026 dev-tool power rankings at #1, displacing Cursor — framed as news/context, NOT scored on it. All adoption metrics ATTRIBUTED (~160K GitHub stars, ~7.5M MAU, 900+ contributors, #1 on HN March 2026 — "per LogRocket/secondary reports/community reporting"). Differentiators: 75+ providers switchable mid-session (Claude/GPT/Gemini/DeepSeek/local via Ollama/LM Studio), LSP diagnostics fed back into the agent loop for compiler-grade self-correction (uncommon among major agents), multi-session, MCP, per-agent permissions, Scout research agent. Cost model: free MIT core + BYOK (pay only provider API) or local at ~$0 marginal. CAVEATS carried throughout: ~78% slower than Claude Code on same model (Builder.io, Sonnet 4.5) BUT more thorough (21 more tests avg, DataCamp); terminal-first + BYO key (not beginner-friendly); 1GB+ RAM; aggressive release churn; community-only support, no SLA. AIR-GAP presented WITH the documented caveat — session-title generation reportedly phones home to OpenCode cloud even in local mode (GitHub issue #16117); framed as a real strength to verify/configure, not an unqualified guarantee. Carries the yellow COI box (AIToolGrade builds the site with Claude Code; OpenCode competes with Claude Code AND can run on Claude models). Rubric: Output 8.5 / Ease 7.0 / Value 9.5 / Features & Integrations 9.5 / Support & Maturity 7.5 → 8.4 (provisional 8.5; 0.1 divergence, immaterial; same resolution as v0). Scored INDEPENDENT of the #1 ranking. ~2,970 words. Review + Article + BreadcrumbList schema. NOT added to compare.html (curated subset — every coding review since DeepSeek left out). Prohibited-language grep clean; live HTTP 200 confirmed. Perplexity editorial check: pending manual run (independent adversarial editorial agent review run at build). datePublished/dateModified 2026-06-12.
@@ -740,6 +741,23 @@ Next content priorities (from May 24, 2026 session):
 - ChatGPT, Cursor, Grammarly, Perplexity, Jasper, Notion AI pricing all updated ✅
 
 ## Search Console Optimization
+
+### June 16, 2026 — New comparison post (Perplexity Max vs Pro)
+blog/perplexity-max-vs-pro-2026.html — Priya Nolan, ~1,950 words.
+Target KW: "perplexity max pricing" (secondary: "perplexity max vs pro", "is perplexity max worth it").
+Decision-shaped comparison answering "is $200/mo worth it?" honestly — the whole post steers most
+readers to Pro ($20) and treats Max ($200) as a specialist 10x upgrade justified only by named
+workflows (unlimited Labs, Model Council, Perplexity Computer, unlimited advanced models). Pricing
+ladder table (Free/Pro/Max + Education/Enterprise rows), Pro→Max delta section, "pick your tier"
+decision table, neutral competitive section (ChatGPT Pro $200 / Claude Max $100 — no pro-Claude bias),
+verdict. Pricing/quotas/model availability qualified as a June 2026 snapshot. Internal links to
+review/perplexity.html + the chatgpt-vs-claude-vs-perplexity and two ChatGPT pricing posts (cross-cluster).
+Card added to blog/index.html (top). Article + BreadcrumbList schema; datePublished/dateModified 2026-06-16;
+sitemap weekly/0.7, lastmod 2026-06-16. Prohibited-language + superlative scan clean; no hands-on claims.
+NO nav.js / compare.html / review-count change (blog post). Live HTTP 200 confirmed. Editorial check:
+independent adversarial agent returned PASS; 3 tightening fixes applied (snapshot disclaimer widened to
+quotas + model availability; softened one value word). Manual Perplexity run pending. Note: review/perplexity.html
+pricing was already current (Max $200 + Enterprise Max $325) — no stale-pricing refresh/flag was needed.
 
 ### June 16, 2026 — Cursor review refresh + re-score (page dateModified set 2026-06-12)
 review/cursor.html — refreshed in place (same URL/slug), Marcus Veil. On-page dateModified/sitemap
@@ -1029,7 +1047,7 @@ Affiliate link Claude Code prompt: ready to run when URLs approved — located i
 
 ## Blog Posts Published
 
-_17 blog posts deployed in `blog/` (excluding index.html). Descript and Lovable are **review**
+_18 blog posts deployed in `blog/` (excluding index.html). Descript and Lovable are **review**
 pages (`review/`), not blog posts — they are tracked in the File Structure review list, not here._
 
 | Post | Author | Date | Target Keyword |
@@ -1051,6 +1069,7 @@ pages (`review/`), not blog posts — they are tracked in the File Structure rev
 | Grok Build vs Codex vs Claude Code 2026 | Marcus Veil | June 2026 | grok build vs codex vs claude code 2026 |
 | ChatGPT Go vs Plus vs Pro 2026 | Marcus Veil | June 2026 | chatgpt go vs plus vs pro |
 | v0 vs Lovable vs Bolt 2026 | Marcus Veil | June 2026 | v0 vs lovable |
+| Perplexity Max vs Pro 2026 | Priya Nolan | June 2026 | perplexity max pricing |
 
 ## Research Agent
 
@@ -1146,7 +1165,8 @@ Rules:
 - Run sitemap audit whenever new reviews or blog posts are added
 - Submit updated sitemap to Google Search Console after significant additions
 
-Current page count: 74 URLs (as of June 12, 2026) — one per HTML page.
+Current page count: 75 URLs (as of June 16, 2026) — one per HTML page.
+(June 16, 2026: added `blog/perplexity-max-vs-pro-2026.html` — Comparison, lastmod 2026-06-16.)
 (June 12, 2026: added `blog/v0-vs-lovable-vs-bolt-2026.html` — Comparison, lastmod 2026-06-12.)
 (June 12, 2026: added `review/opencode.html` — AI Coding, lastmod 2026-06-12.)
 (June 12, 2026: added `review/v0.html` — AI Coding, lastmod 2026-06-12.)

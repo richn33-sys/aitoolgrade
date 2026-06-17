@@ -13,10 +13,10 @@
   <url><loc>https://aitoolgrade.com/review/jasper.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/review/copyai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/review/writesonic.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://aitoolgrade.com/review/cursor.html</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aitoolgrade.com/review/cursor.html</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/review/github-copilot.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/review/windsurf.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://aitoolgrade.com/review/bolt.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aitoolgrade.com/review/bolt.html</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/review/chatgpt.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/review/notion-ai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/review/zapier.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -28,7 +28,7 @@
   <url><loc>https://aitoolgrade.com/review/synthesia.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/review/heygen.html</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/review/notebooklm.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://aitoolgrade.com/blog/cursor-vs-windsurf-vs-github-copilot.html</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aitoolgrade.com/blog/cursor-vs-windsurf-vs-github-copilot.html</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aitoolgrade.com/blog/best-free-ai-tools-2026.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aitoolgrade.com/blog/how-to-automate-business-with-n8n.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aitoolgrade.com/about.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
@@ -47,7 +47,7 @@
   <url><loc>https://aitoolgrade.com/author/marcus-veil.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://aitoolgrade.com/author/priya-nolan.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://aitoolgrade.com/review/replit.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://aitoolgrade.com/review/lovable.html</loc><lastmod>2026-05-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aitoolgrade.com/review/lovable.html</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/resources.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://aitoolgrade.com/review/claude-cowork.html</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/review/perplexity-computer.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -57,18 +57,18 @@
   <url><loc>https://aitoolgrade.com/review/grok-build.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/review/minimax-m3.html</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/review/zoommate.html</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://aitoolgrade.com/review/v0.html</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aitoolgrade.com/review/v0.html</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/review/opencode.html</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/blog/v0-vs-lovable-vs-bolt-2026.html</loc><lastmod>2026-06-12</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://aitoolgrade.com/blog/cursor-pricing-2026.html</loc><lastmod>2026-06-12</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aitoolgrade.com/blog/cursor-pricing-2026.html</loc><lastmod>2026-06-17</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aitoolgrade.com/blog/notion-ai-pricing-2026.html</loc><lastmod>2026-05-20</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aitoolgrade.com/review/descript.html</loc><lastmod>2026-05-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/blog/best-ai-app-builders-2026.html</loc><lastmod>2026-05-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://aitoolgrade.com/blog/chatgpt-go-vs-plus-2026.html</loc><lastmod>2026-05-22</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aitoolgrade.com/blog/chatgpt-go-vs-plus-2026.html</loc><lastmod>2026-06-17</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aitoolgrade.com/review/microsoft-agent-365.html</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/review/google-antigravity.html</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/blog/best-ai-coding-agents-2026.html</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://aitoolgrade.com/blog/chatgpt-pro-100-vs-200-2026.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aitoolgrade.com/blog/chatgpt-pro-100-vs-200-2026.html</loc><lastmod>2026-06-17</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aitoolgrade.com/blog/best-ai-agents-non-developers-2026.html</loc><lastmod>2026-05-20</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aitoolgrade.com/blog/claude-code-vs-cursor-vs-github-copilot-2026.html</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aitoolgrade.com/blog/best-free-ai-tools-students-2026.html</loc><lastmod>2026-06-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>

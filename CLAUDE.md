@@ -748,6 +748,19 @@ Next content priorities (from May 24, 2026 session):
 
 ## Search Console Optimization
 
+### June 19, 2026 — Bolt score-drift reconcile (best-ai-app-builders-2026)
+blog/best-ai-app-builders-2026.html — display-drift fix, NOT a re-score. The listicle showed Bolt at a
+stale **8.6** with a "highest of the three" claim; review/bolt.html (canonical) is **8.3** — the value used
+everywhere else, incl. the v0-vs-Lovable-vs-Bolt comparison and all other surfaces. Corrected Bolt 8.6 → 8.3.
+At 8.3 Bolt ties Replit (8.3) above Lovable (8.1), so the "highest of the three" framing no longer held —
+reframed to "level with Replit at the top," acknowledging the tie from opposite strengths (Bolt speed/control,
+Replit production-capability) rather than crowning a single winner (same playbook as the cursor-vs-windsurf
+de-crowning). Site-wide grep confirmed this was the ONLY stray Bolt 8.6 (the 8.6 in minimax-m3/grammarly/
+kimi-code are unrelated benchmark/stat numbers, not Bolt scores). No other surface needed syncing; no
+review-count change. dateModified + sitemap lastmod → 2026-06-19. Prohibited-language + superlative scan clean;
+Article + BreadcrumbList schema re-validated. Committed 26957c2, pushed, SSH-deployed; live HTTP 200 confirmed
+(8.6 gone, reframe live). Closes the Bolt-discrepancy flag raised during the June 19 Notion AI review re-score.
+
 ### June 19, 2026 — Review refresh + re-score (Notion AI)
 review/notion-ai.html — refreshed in place (same URL/slug), Priya Nolan; dateModified 2026-06-19.
 Pricing-model correction to match the same-day pricing-blog refresh: standalone $10 add-on retired

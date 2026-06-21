@@ -775,6 +775,26 @@ New items prioritized below. Carried-over OPEN items still stand: **aider review
 
 ## Search Console Optimization
 
+### June 21, 2026 — Safety-section update (Grok Imagine Video 1.5)
+review/grok-imagine-video.html — content correction to the live page (same URL/slug; dateModified
+stays 2026-06-21). Tightened "The safety record" section with fuller, current, better-sourced facts,
+same handling rules (factual, attributed by name, ZERO operational/bypass detail, no lurid language).
+Reframed from a contained Dec-2025/Jan-2026 incident to a **documented ongoing pattern**: NBC News
+(April 2026, misuse continued as users evaded safeguards), WIRED investigation (June 2026, Grok still
+hosting non-consensual deepfakes), and a California federal class action (March 2026, alleges
+manipulation targeting images of apparent minors). Added one-sentence origin context (launched with a
+permissive "Spicy Mode" — built permissive, not simply failed). For balance, stated xAI's remediation
+(paid-only image generation Jan 9, anti-editing measures Jan 14, reports suspected CSAM to NCMEC,
+monitoring/prompt filters) AND paired it with the inadequacy finding (Canada's privacy commissioner:
+failed to implement appropriate safeguards from the outset, unconvinced of effectiveness; NBC/WIRED
+failures postdate the fixes). Noted active regulatory scrutiny (EU Digital Services Act, UK Ofcom) +
+the class action, framed as ongoing/unsettled. **NO re-score** — Trust &amp; Maturity stays 4.0,
+composite stays 7.5 (the fuller picture supports the existing low score). Prohibited-language +
+superlative scan clean; Review + Article + BreadcrumbList schema re-validated. Committed c90d256,
+pushed, SSH-deployed; live HTTP 200 confirmed with all new sourced facts present and 7.5/Trust-40%
+unchanged. Perplexity editorial check: still pending user's manual run (now with the stronger,
+multi-source safety framing to confirm).
+
 ### June 21, 2026 — New review (Grok Imagine Video 1.5)
 review/grok-imagine-video.html — AI Video, **7.5**, Marcus Veil; datePublished/dateModified 2026-06-21.
 xAI's image-to-video model (Aurora engine, native synced audio, up to 15s at 480p/720p, image-to-video

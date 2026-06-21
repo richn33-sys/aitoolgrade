@@ -61,6 +61,7 @@
     '<a href="' + prefix + 'review/midjourney.html">Midjourney</a>' +
     '<a href="' + prefix + 'review/adobe-firefly.html">Adobe Firefly</a>' +
     '<a href="' + prefix + 'review/leonardo-ai.html">Leonardo AI</a>' +
+    '<a href="' + prefix + 'review/grok-imagine-video.html">Grok Imagine Video</a>' +
     '<a href="' + prefix + 'review/runway.html">Runway</a>' +
     '<a href="' + prefix + 'review/synthesia.html">Synthesia</a>' +
     '<a href="' + prefix + 'review/heygen.html">HeyGen</a>' +

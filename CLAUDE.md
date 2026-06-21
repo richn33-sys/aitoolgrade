@@ -33,7 +33,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 ├── robots.txt
 ├── sitemap.xml          ← submitted to Google Search Console
 ├── nav.js               ← shared nav (single source of truth — see Site Architecture)
-├── review/              ← 35 individual tool review pages
+├── review/              ← 36 individual tool review pages
 │   ├── jasper.html              (AI Writing, 8.2)
 │   ├── copyai.html              (AI Writing, 7.3)
 │   ├── writesonic.html          (AI Writing, 8.0)
@@ -58,6 +58,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── zapier.html              (Automation, 8.1)
 │   ├── n8n.html                 (Automation, 8.3)
 │   ├── microsoft-agent-365.html (Automation, 7.1)
+│   ├── grok-imagine-video.html  (AI Video, 7.5)
 │   ├── runway.html              (AI Video, 8.9)
 │   ├── synthesia.html           (AI Video, 8.0)
 │   ├── heygen.html              (AI Video, 8.1)
@@ -106,12 +107,12 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 - AI Coding: 14 (Cursor, GitHub Copilot, Windsurf, Bolt.new, Replit, Lovable, v0 by Vercel, Google Antigravity, DeepSeek V4, Claude Code, Kimi Code, Grok Build, MiniMax M3, OpenCode)
 - AI Image: 3 (Midjourney, Adobe Firefly, Leonardo AI)
 - Automation: 3 (Zapier, n8n, Microsoft Agent 365)
-- AI Video: 4 (Runway, Synthesia, HeyGen, Descript)
+- AI Video: 5 (Grok Imagine Video 1.5, Runway, Synthesia, HeyGen, Descript)
 - Productivity: 7 (ChatGPT, Notion AI, Perplexity, Claude Cowork, Perplexity Computer, NotebookLM, ZoomMate)
 
-Total: 35 reviews. Homepage `cat-count` values in index.html match these (AI Coding is 14 as of
+Total: 36 reviews. Homepage `cat-count` values in index.html match these (AI Coding is 14 as of
 June 12, 2026 after adding OpenCode; Productivity is 7 as of June 12, 2026 after adding ZoomMate;
-Automation is 3).
+Automation is 3; AI Video is 5 as of June 21, 2026 after adding Grok Imagine Video 1.5).
 
 When adding a new review, update the count in `index.html` using this script pattern:
 ```bash
@@ -205,6 +206,7 @@ Categories ▾         Reviews ▾            Compare    Blog    Get Updates
                        Midjourney
                        Adobe Firefly
                        Leonardo AI
+                       Grok Imagine Video
                        Runway
                        Synthesia
                        HeyGen
@@ -719,8 +721,8 @@ Next content priorities (from May 24, 2026 session):
 New items prioritized below. Carried-over OPEN items still stand: **aider review** and the **cursor-vs-windsurf re-eval** (now also folding in the June 2026 Cursor Teams pricing update + the GitHub Copilot 8.9-vs-8.8 reconcile — see the re-eval item above). Note: the `research_agent.py` de-dup upgrade worked this brief — no already-covered tools were re-suggested.
 
 **HIGH**
-- **Grok Imagine Video 1.5 review** [VERIFIED] — NEW. xAI's video model; tops the Image-to-Video Arena, ~$0.14/sec, est. score **8.5–9.0**. Brief tags it **Video Generation — NEW category**; the site's existing video category is **AI Video** (Runway/Synthesia/HeyGen/Descript) — decide at build whether this is a new category or fits AI Video. Author Marcus Veil (technical).
-- **"Grok Imagine Video vs Runway vs Sora 2026" comparison** [VERIFIED] — build AFTER the Grok Imagine review (depends on it). Timely hook: the Sora consumer app is discontinued and the Sora 2 API sunsets **Sept 24**. Runway (8.9) already reviewed on-site. Marcus Veil.
+- ~~**Grok Imagine Video 1.5 review**~~ ✅ DONE June 21, 2026 — built at `review/grok-imagine-video.html`, AI Video (existing category — NOT a new one), **7.5**, Marcus Veil. Safety record foregrounded + scored (Trust &amp; Maturity 4.0); scored independent of the #1 Arena ranking; final 7.5 vs the brief's pre-safety 8.5–9.0 estimate. See Completed + Search Console below.
+- **"Grok Imagine Video vs Runway vs Sora 2026" comparison** [VERIFIED] — **OPEN, build NEXT** (its dependency, the Grok Imagine review, is now DONE). Timely hook: the Sora consumer app is discontinued and the Sora 2 API sunsets **Sept 24**. Runway (8.9) + Grok Imagine Video (7.5) both live on-site; pull scores from those review pages as the source of truth. **Carries the same safety caveat** — the comparison must surface Grok's documented moderation failure factually (attributed, no operational detail), not bury it under the leaderboard win. Marcus Veil; blog post (no nav.js / compare.html / review-count change).
 
 **MEDIUM**
 - **Cursor Teams pricing update** (June 2026) — **NOT queued standalone; FOLDED INTO the cursor-vs-windsurf re-eval** (see that item's sub-bullets above). $40 Standard seat → two usage pools + more usage, same price, eff. July 1 renewals.
@@ -739,6 +741,7 @@ New items prioritized below. Carried-over OPEN items still stand: **aider review
 - **"Claude reliability issues"** [VERIFY] — single weak source (eesel.ai), and AIToolGrade is built with Claude Code (**COI**). High verification bar; **park** unless independently corroborated, and carry a COI box if it ever proceeds.
 
 ### Completed
+- Grok Imagine Video 1.5 review ✅ (June 21, 2026) — AI Video, **7.5**, Marcus Veil. xAI's image-to-video model on the Aurora engine (native synced audio, up to 15s at 480p/720p, image-to-video only — explicitly NOT text-to-video per xAI's model docs; GA June 16, "wide release" June 17; API still carries a `-preview` alias). Built into the EXISTING AI Video category (the brief's "Video Generation — NEW category" tag was resolved to AI Video, not a new category). **SAFETY RECORD FOREGROUNDED + SCORED:** dedicated sober "The safety record" section on the late-Dec-2025/early-Jan-2026 reporting (TechTimes et al.) that the Grok Imagine image feature was misused at scale to generate non-consensual sexualized content, including content appearing to depict minors — attributed, ZERO operational detail, no lurid language, framed as a trust assessment/warning. Rubric (equal-weight mean of 5): Output 8.5 / Ease 8.5 / Value 9.0 / Features &amp; Integrations 7.5 / **Trust &amp; Maturity 4.0** → **7.5** (matches the ~7.5 provisional; deliberately NOT the brief's pre-safety 8.5–9.0). Scored INDEPENDENT of the #1 Image-to-Video Arena ranking (third-party signal only). Verdict foregrounds the safety caveat so the composite is not read as an endorsement. No COI box (xAI's video model is not a Claude substitute; the Grok chatbot is a separate product). Pricing: free web (~5/day, no X Premium) / SuperGrok $30/mo / xAI API $0.08/sec 480p, $0.14/sec 720p (~$4.20/min, ~86% below Sora 2 Pro), audio included, +$0.01 image input; also via 3rd-party ImagineArt — qualified as a June 2026 snapshot (verify docs.x.ai / grok.com). Added: nav.js AI Video entry, category/video.html card + count 4→5 (plus a pre-existing prohibited-word fix on that page's Runway card: "unmatched" → "strong"), reviews.html card, homepage AI Video cat-count 4→5, sitemap URL lastmod 2026-06-21. NOT added to compare.html (recent-review curated-subset convention). Review + Article + BreadcrumbList schema all valid; 8 TOC anchors resolve; prohibited-language + superlative scan clean; no hands-on claims. Committed 0625b08, pushed, SSH-deployed; live HTTP 200 confirmed (7.5 + safety section + Trust bar + count all present). Perplexity editorial check: pending user's manual run (priority: confirm the safety-record framing reads factual/attributed/non-sensational, the leaderboard is a third-party signal, and image-to-video — not text-to-video — is accurate). The dependent "Grok Imagine Video vs Runway vs Sora 2026" comparison remains OPEN (build next, same safety caveat).
 - Notion AI REVIEW refresh + re-score ✅ (June 19, 2026, dateModified 2026-06-19) — REFRESH of existing `review/notion-ai.html` (same URL/slug/Priya Nolan byline). Companion to the June 19 pricing-blog refresh; resolves the stale-review follow-up that was flagged in the OPEN queue. Verified at notion.com/pricing June 2026. CONTENT: corrected the central error — the review implied Plus includes usable AI; reality is Plus carries only the same limited trial as Free, so the entry point for full Notion AI is Business ($20/seat annual, $24 monthly) + Enterprise. Standalone $10 add-on framed as retired for new users (existing grandfathered, no single clean cutoff date). Plus price corrected $12 annual/$16 monthly → $10/$12. Custom Agents detail fixed: feature launched Feb 24 2026, paid Notion Credits billing began May 4 2026 ($10/1,000, pooled monthly, no rollover, Business/Enterprise only; only Custom Agent runs burn credits — routine writing/Notion Agent/AI search don't). Reframed who-it's-for around the lost cheap AI-only path; GPT-4→GPT-5-class in pros; added contextual link to blog/notion-ai-pricing-2026.html; schema offer price 12→20. **SCORE CHECKPOINT (user-gated): 8.6 → 8.4.** Re-ran the rubric on current pricing reality — only Value moved (8.0 → 7.5; capabilities Q&A 9.4 / Writing 7.6 / Ease 9.0 / Agents 8.7 unchanged) for the loss of any sub-$20 ongoing-AI path. −0.2 overall crossed the 0.2 stop-threshold, so paused and showed the per-dimension breakdown; user approved 8.4 (Value 7.5) over the more aggressive 8.3 (Value 7.0) and over no-change. Synced 8.4 across review verdict/sidebar/schema ratingValue + Value bar (number + width 80%→75%), reviews.html, category/productivity.html, compare.html, and two blog score citations (best-free-ai-tools-2026, best-free-ai-tools-students-2026). Checked all blog posts for any "Notion AI as comparison winner / banned superlative" framing tied to the old 8.6 — NONE found (the two blog hits were plain score citations, now synced; the 8.6 in best-ai-app-builders is Bolt's, not Notion's). Prohibited-language + superlative scan clean (one "genuinely useful" remains inside an attributed r/Notion quote — acceptable). Article/Review + BreadcrumbList schema re-validated. NO review-count change (existing page). Committed 6aa73ea, pushed, SSH-deployed; live HTTP 200 confirmed with refreshed content + 8.4 present. FLAG (separate, out of scope): blog/best-ai-app-builders-2026.html shows Bolt at 8.6 while CLAUDE.md/site list Bolt at 8.3 — stale score citation to reconcile in a future pass. Perplexity editorial check: pending user's manual run.
 - Notion AI pricing refresh ✅ (June 19, 2026, dateModified 2026-06-18) — REFRESH of existing `blog/notion-ai-pricing-2026.html` (same URL/slug/KW "notion ai pricing 2026"/Priya Nolan byline — NOT a new URL). Verified at notion.com/pricing June 2026. CORE CORRECTION: the old post implied Plus includes usable AI — false. Reality now: standalone $10 add-on RETIRED for new users (existing subscribers grandfathered — no single clean cutoff date, so framed as "retired for new purchases" rather than asserting one date); full Notion AI bundled into Business ($20/seat annual, $24 monthly) + Enterprise only; Free/Plus = limited AI trial only. Stale monthly prices fixed (Plus $16→$12, Business $25→$24; Plus annual $12→$10). ADDED a dedicated "The New Layer: Custom Agents and Notion Credits" section — feature launched Feb 24 2026, paid credit billing began May 4 2026 ($10/1,000, pooled across workspace, monthly, no rollover, Business/Enterprise only; ONLY Custom Agent runs burn credits — routine writing tools, included Notion Agent, AI search do not). The "August" date some sources cite = Workers needing credits (Aug 11), a separate thing. Reader-angle rewrite: cheap AI-only path is gone; for AI-only users a standalone ChatGPT/Claude/Perplexity (~$20/mo) is the cheaper route — interlinked review/chatgpt.html + review/perplexity.html. Neutral multi-model note (Business/Enterprise AI routes to GPT-5-class, Claude, others at no extra per-seat cost) — NO COI box (productivity tool, not a Claude substitute). Softened "best in class" → "strong"; removed "genuinely". Kept links to review/notion-ai.html, review/chatgpt.html, review/grammarly.html, chatgpt-vs-claude-vs-perplexity. Article + BreadcrumbList schema re-validated; both JSON-LD blocks parse; all TOC anchors (incl. new #custom-agents) resolve. dateModified + sitemap lastmod 2026-06-18 (weekly/0.7). Prohibited-language + superlative scan clean; no hands-on claims. NO nav.js / compare.html / review-count change (existing blog post). Committed fa25e55, pushed, SSH force-pulled to Hostinger; live HTTP 200 confirmed on the unchanged URL with refreshed content present (Custom Agents section, add-on-retired framing, Business bundling). FOLLOW-UP FLAGGED: review/notion-ai.html pricing is now stale (see OPEN queue) — deliberately not refreshed this pass. Perplexity editorial check: pending user's manual run (final gate).
 - "Perplexity Max vs Pro 2026" comparison ✅ (June 16, 2026) — `blog/perplexity-max-vs-pro-2026.html`, Priya Nolan, ~1,950 words, KW "perplexity max pricing" (secondary: "perplexity max vs pro", "is perplexity max worth it"). Decision/COMPARISON post (lives in blog/, NOT a review — no nav.js / compare.html / review-count change). CORE ANGLE held: Max is 10x Pro ($20→$200); the honest answer for most readers is **Pro**, with Max a specialist power-user plan justified only by named recurring workflows. FRAMING: BLUF box, "test before you upgrade," who's-overpaying section, "pick your tier" decision table, and verdict all steer toward Pro — never nudge to the expensive tier. The Pro→Max DELTA is the heart (unlimited Labs vs ~50/30d, Model Council multi-model orchestration, Perplexity Computer ~10k credits, unlimited advanced models incl. Opus 4.8, early access, priority support). Competitive section NEUTRAL/even-handed — ChatGPT Pro ($200, different product) and Claude Max ($100, undercuts both) stated as plain facts, explicit "none is the winner," no pro-Claude bias (the site builds with Claude Code — that was the watched risk). Full pricing ladder table (Free/Pro/Max + Education $10 / Enterprise Pro $40 / Enterprise Max $325). Pricing+quotas+model availability all qualified as a June 2026 snapshot (verify at perplexity.ai/pricing); ARR figure OMITTED (tangential). Internal links: review/perplexity.html (pricing already current — Max $200 + Enterprise Max $325 present, NO refresh/flag needed), blog/chatgpt-vs-claude-vs-perplexity, chatgpt-go-vs-plus-vs-pro-2026, chatgpt-pro-100-vs-200-2026. Card added to blog/index.html (top, newest-first). Article + BreadcrumbList schema; datePublished/dateModified 2026-06-16; sitemap weekly/0.7 lastmod 2026-06-16. Prohibited-language + superlative scan clean; no hands-on claims. Live HTTP 200 confirmed. Editorial check: independent adversarial agent run at build returned PASS on honesty/pricing-qualification/competitive-even-handedness/no-hands-on; 3 tightening fixes applied (snapshot disclaimer extended to quotas+model availability; "genuinely useful"→"well-suited"). Manual Perplexity run still pending (user's final gate). CLOSES OUT the June 12, 2026 research brief.
@@ -771,6 +774,29 @@ New items prioritized below. Carried-over OPEN items still stand: **aider review
 - ChatGPT, Cursor, Grammarly, Perplexity, Jasper, Notion AI pricing all updated ✅
 
 ## Search Console Optimization
+
+### June 21, 2026 — New review (Grok Imagine Video 1.5)
+review/grok-imagine-video.html — AI Video, **7.5**, Marcus Veil; datePublished/dateModified 2026-06-21.
+xAI's image-to-video model (Aurora engine, native synced audio, up to 15s at 480p/720p, image-to-video
+only — NOT text-to-video). Target KW "grok imagine video review" (secondary: "grok imagine video 1.5",
+"grok imagine video pricing"). **The documented content-moderation failure was foregrounded** — handled
+as a dedicated, sober "The safety record" section AND scored: the rubric's Trust &amp; Maturity dimension
+was set to 4.0 to reflect the late-Dec-2025/early-Jan-2026 reporting (e.g. TechTimes) that the Grok Imagine
+image feature was misused at scale to generate non-consensual sexualized content, including content appearing
+to depict minors. Attributed, zero operational detail, no lurid language. Rubric (equal-weight mean):
+Output 8.5 / Ease 8.5 / Value 9.0 / Features &amp; Integrations 7.5 / Trust &amp; Maturity 4.0 → **7.5**,
+matching the ~7.5 provisional (NOT the brief's pre-safety 8.5–9.0 estimate). Scored INDEPENDENT of the #1
+Image-to-Video Arena ranking (framed as a third-party signal, not a rubric input). Verdict foregrounds the
+safety caveat so the composite doesn't read as an endorsement. No COI box (xAI's video model is not a Claude
+substitute). Pricing: free web (~5/day) / SuperGrok $30/mo / API $0.08/sec 480p, $0.14/sec 720p (~86% below
+Sora 2 Pro), audio included — qualified as a June 2026 snapshot (verify docs.x.ai / grok.com). Added: nav.js
+AI Video entry, category/video.html card + count 4→5 (also fixed a pre-existing prohibited word "unmatched"
+in that page's Runway card → "strong"), reviews.html card, homepage AI Video cat-count 4→5, sitemap URL
+lastmod 2026-06-21. NOT added to compare.html (consistent with the recent-review curated-subset convention).
+Review + Article + BreadcrumbList schema all valid; 8 TOC anchors resolve; prohibited-language + superlative
+scan clean; no hands-on claims. Committed 0625b08, pushed, SSH-deployed; live HTTP 200 confirmed (7.5,
+safety-record section, Trust bar, category count all present). Perplexity editorial check: pending user's
+manual run (safety-record framing is the priority to confirm — factual, attributed, no sensationalism).
 
 ### June 19, 2026 — Bolt score-drift reconcile (best-ai-app-builders-2026)
 blog/best-ai-app-builders-2026.html — display-drift fix, NOT a re-score. The listicle showed Bolt at a

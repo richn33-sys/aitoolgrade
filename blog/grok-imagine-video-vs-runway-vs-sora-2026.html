@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="canonical" href="https://aitoolgrade.com/blog/grok-imagine-video-vs-runway-vs-sora-2026.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Grok is cheapest, Runway is the pro pick, and Sora is shutting down. A 2026 comparison — including the safety record the leaderboards leave out.">
+<title>Grok Imagine Video vs Runway vs Sora (2026): Which AI Video Tool to Pick | AIToolGrade</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fafaf8;--bg2:#f3f2ee;--text:#1a1a18;--text2:#4a4a45;--text3:#8a8a82;--accent:#e85d26;--accent2:#f07d4a;--accent-dim:rgba(232,93,38,0.08);--border:#e2e0d8;--white:#ffffff;--display:'Playfair Display',serif;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:4px}
+.nav-dropdown>a::after{content:"▾";font-size:10px}
+.dropdown-menu{visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.15s ease,visibility 0s linear 0.5s;position:absolute;top:calc(100% + 8px);left:-16px;background:white;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:200;max-height:80vh;overflow-y:auto}
+.dropdown-menu a{display:block;padding:8px 12px;font-size:14px;color:var(--text2);text-decoration:none;border-radius:6px;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--bg2);color:var(--accent)}
+.nav-dropdown:hover .dropdown-menu{visibility:visible;opacity:1;pointer-events:auto;transition:opacity 0.15s ease,visibility 0s}
+.nav-dropdown .dropdown-menu::before{content:"";position:absolute;top:-20px;left:0;right:0;height:20px}
+.nav-dropdown::after{content:"";position:absolute;height:20px;width:calc(100% + 16px);bottom:-20px;left:-16px}
+.post-wrap{max-width:780px;margin:0 auto;padding:60px 40px}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:24px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+.post-tag{display:inline-block;background:var(--accent-dim);color:var(--accent);font-size:12px;font-weight:600;padding:4px 10px;border-radius:100px;font-family:var(--mono);margin-bottom:16px}
+h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;margin-bottom:20px}
+.post-meta{font-size:13px;color:var(--text3);margin-bottom:40px;display:flex;gap:20px}
+.post-body h2{font-family:var(--display);font-size:28px;font-weight:700;margin:40px 0 16px}
+.post-body h3{font-size:18px;font-weight:600;margin:28px 0 12px}
+.post-body p{color:var(--text2);margin-bottom:16px;font-size:16px}
+.post-body ul{color:var(--text2);padding-left:20px;margin-bottom:16px}
+.post-body ul li{margin-bottom:8px}
+.comparison-table{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:32px 0}
+.comparison-table th{background:var(--bg2);font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);padding:14px 16px;text-align:left;border-bottom:1px solid var(--border)}
+.comparison-table td{padding:14px 16px;border-bottom:1px solid var(--border);font-size:14px;color:var(--text2)}
+.comparison-table tr:last-child td{border-bottom:none}
+.winner{background:var(--accent-dim);font-weight:600;color:var(--accent)}
+.verdict-box{background:var(--bg2);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:32px 0}
+.verdict-box h4{font-size:14px;font-weight:600;color:var(--accent);margin-bottom:8px;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.06em}
+.verdict-box p{color:var(--text2);font-size:14px;margin:0}
+.safety-box{background:#fbf3ef;border-left:4px solid #b4451f;border-radius:0 12px 12px 0;padding:20px 24px;margin:32px 0}
+.safety-box h4{font-size:14px;font-weight:600;color:#b4451f;margin-bottom:8px;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.06em}
+.safety-box p{color:var(--text2);font-size:14px;margin:0}
+.cta-box{background:var(--text);color:white;border-radius:14px;padding:28px;margin:40px 0;text-align:center}
+.cta-box h3{font-family:var(--display);font-size:22px;font-weight:700;margin-bottom:8px}
+.cta-box p{color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:20px}
+.cta-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta-btn{display:inline-block;background:var(--accent);color:white;padding:10px 20px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px;margin-top:80px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}
+.footer-brand span{color:var(--accent)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:12px;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--accent)}
+@media(max-width:768px){.post-wrap{padding:40px 20px}nav{padding:0 20px}h1{font-size:28px}.footer-inner{grid-template-columns:1fr 1fr}}
+
+/* === MOBILE NAV + RESPONSIVE TABLE FIX === */
+.nav-toggle{display:none;order:2;background:none;border:0;font-size:24px;line-height:1;color:var(--text);cursor:pointer;padding:4px 6px}
+@media(max-width:768px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(250,250,248,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 20px 16px;box-shadow:0 8px 24px rgba(0,0,0,0.06);max-height:calc(100vh - 64px);overflow-y:auto}
+  nav.nav-open .nav-links{display:flex}
+  .nav-links>a,.nav-dropdown{padding:12px 2px;border-bottom:1px solid var(--border)}
+  .nav-dropdown{position:static}
+  .nav-dropdown>a::after{display:none}
+  .dropdown-menu{display:none!important}
+  .nav-cta{display:block;text-align:center;background:var(--accent);color:#fff;margin-top:14px;padding:12px;border:0!important;border-radius:6px}
+  .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+  .comparison-wrap{overflow-x:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Grok Imagine Video vs Runway vs Sora (2026): Which AI Video Tool to Pick",
+  "author": {
+    "@type": "Person",
+    "name": "Marcus Veil",
+    "url": "https://aitoolgrade.com/author/marcus-veil.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIToolGrade",
+    "url": "https://aitoolgrade.com"
+  },
+  "datePublished": "2026-06-21",
+  "dateModified": "2026-06-21"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolgrade.com"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aitoolgrade.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "Grok Imagine Video vs Runway vs Sora 2026", "item": "https://aitoolgrade.com/blog/grok-imagine-video-vs-runway-vs-sora-2026.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<div id="nav-root"></div>
+<script src="../nav.js"></script>
+
+<div class="post-wrap">
+  <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="index.html">Blog</a><span>›</span>Grok Imagine Video vs Runway vs Sora 2026</div>
+  <span class="post-tag">Comparison</span>
+  <h1>Grok Imagine Video vs Runway vs Sora (2026): Which AI Video Tool to Pick</h1>
+  <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:32px;font-family:'DM Mono',monospace;">By <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade &middot; Last verified June 2026</p>
+  <div class="post-meta"><span>📅 June 2026</span><span>⏱ 12 min read</span></div>
+
+  <div class="post-body">
+    <p>For most of 2025, the short answer to "which AI video tool should I use?" had three names in it, and one of them was Sora. That's no longer true. OpenAI is winding Sora down — the consumer app is already gone, the API has a sunset date — and the gap it leaves is what makes this comparison worth doing now. Two tools moved into the space it vacated, and they sit at opposite ends of nearly every axis: price, control, polish, and trust.</p>
+
+    <p>So the question isn't really "which one wins." It's "which one fits the job in front of you, and what are you accepting when you pick it." Runway is the editor-first, production-grade option. Grok Imagine Video 1.5 is the cheap, fast route from a still image to a short, sound-on clip. Sora is the cautionary entry — strong in its day, but not something to build on now. And one of these three carries a documented safety record that the leaderboard write-ups tend to skip, which has to travel into the recommendation rather than sit in a footnote. Below: the scorecard from our individual reviews, where each tool leads, and a decision matrix you can act on.</p>
+
+    <div class="verdict-box">
+      <h4>The short version</h4>
+      <p>Need editing control, character consistency, and client-grade deliverables → <strong>Runway</strong>. Need the cheapest, fastest path from a still image to a short clip with sound, <em>and</em> you've weighed the platform's moderation record → <strong>Grok Imagine Video</strong>. On Sora today → migrate off it; it's exiting, not a tool to build new pipelines on. There is no single best here — the right pick depends on the work.</p>
+    </div>
+
+    <div class="toc" style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin:32px 0">
+      <p style="font-size:12px;font-family:'DM Mono',monospace;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px">In This Article</p>
+      <ol style="padding-left:20px;display:flex;flex-direction:column;gap:8px">
+        <li style="font-size:15px;color:var(--text2)"><a href="#at-a-glance" style="color:var(--text2)">At a glance: the three side by side</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#sora" style="color:var(--text2)">Sora — why it's exiting, and what that means</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#runway" style="color:var(--text2)">Runway — the editor-first pro choice</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#grok" style="color:var(--text2)">Grok Imagine Video — cheap, fast, and the safety record</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#head-to-head" style="color:var(--text2)">Head-to-head: price, quality, control, trust</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#matrix" style="color:var(--text2)">Who should pick which</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#verdict" style="color:var(--text2)">Verdict: no universal winner</a></li>
+      </ol>
+    </div>
+
+    <h2 id="at-a-glance">At a Glance: the Three Side by Side</h2>
+    <p>The scores below come from our standalone reviews, scored on the same rubric so they're directly comparable. Sora has no score in the table because we don't maintain a separate Sora review — it's being discontinued, so there's nothing forward-looking to rate. Pricing on all three moves quickly; treat these as a snapshot verified in June 2026 and confirm at each official source before you commit.</p>
+
+    <table class="comparison-table">
+      <thead><tr><th>&nbsp;</th><th>Grok Imagine Video 1.5</th><th>Runway (Gen-4.5)</th><th>Sora (OpenAI)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>AIToolGrade score</strong></td><td>7.5 / 10</td><td class="winner">8.9 / 10</td><td>Not separately reviewed — exiting</td></tr>
+        <tr><td>Core strength</td><td>Lowest cost, fast, native audio</td><td>Editing control &amp; consistency</td><td>—</td></tr>
+        <tr><td>Core caveat</td><td>720p ceiling; image-to-video only; <strong>documented safety record</strong></td><td>Credits burn fast; higher cost</td><td>Being shut down — don't build on it</td></tr>
+        <tr><td>Generation mode</td><td>Image-to-video only</td><td>Text- and image-to-video, full editor</td><td>Text- and image-to-video</td></tr>
+        <tr><td>Resolution / length</td><td>480p / 720p, up to 15s</td><td>Up to 1080p (Standard), 4K export (Pro)</td><td>Discontinued for new work</td></tr>
+        <tr><td>Entry price</td><td class="winner">Free tier + $30/mo SuperGrok</td><td>Free 125 credits; $12/mo Standard</td><td>~$0.10/sec base while it lasts</td></tr>
+        <tr><td>API rate</td><td>$0.08/sec (480p) · $0.14/sec (720p)</td><td>~$0.15/sec (verify current)</td><td>API sunsets Sept 24, 2026</td></tr>
+        <tr><td>Best suited to</td><td>Cheap, fast social clips from stills</td><td>Ads, client work, controlled production</td><td>Migrate off — not a forward pick</td></tr>
+      </tbody>
+    </table>
+
+    <p>The highlighted cells mark where a tool leads on that specific row — not an overall verdict. Read down a column for a tool's character; read across a row to see who's ahead on one dimension. And note the row that a price-and-speed table can't capture on its own: Grok's "core caveat" cell names a documented safety record, which the rest of this piece treats as a first-class factor, not fine print.</p>
+
+    <h2 id="sora">Sora — Why It's Exiting, and What That Means</h2>
+    <p>Start with Sora because its exit is the reason the field reshuffled. OpenAI is discontinuing it: the consumer app shut down on April 26, 2026, and the Sora 2 API is scheduled to sunset on September 24, 2026. The driver, by OpenAI's own framing and surrounding reporting, was economics rather than capability — the service reportedly cost on the order of $15M a day to run against roughly $2.1M in lifetime revenue, app downloads cratered after the launch spike, and Disney is reported to have walked away from a roughly $1B deal. OpenAI is said to be building a replacement on a different architecture, codenamed "Spud." Take the financial figures as reported rather than audited; the direction of travel, though, isn't in dispute.</p>
+
+    <p>While it lasts, Sora 2 runs around $0.10 per second at the base tier and roughly $0.30–0.50 per second for Pro. But the price is beside the point now. The practical takeaway is simple: don't build new pipelines on Sora, and if you're already on it, plan your migration before the September API sunset rather than after. We're covering it here as the exiting option — a useful reference for what the category looked like a year ago, not a tool to choose in 2026.</p>
+
+    <div class="verdict-box">
+      <h4>Sora in one line</h4>
+      <p>A capable model on its way out the door. Whatever its past strengths, the only sound decision today is to migrate off it — there's nothing here to build on.</p>
+    </div>
+
+    <h2 id="runway">Runway — the Editor-First Pro Choice</h2>
+    <p>Runway is the one built for people who deliver video to a client or a brief. It's a New York company, founded in 2018 and valued north of $5 billion, and its Gen-4 and Gen-4.5 models anchor a platform that's become a default in professional creative work — used on social content, ads, and film production. What separates it from the cheaper options isn't a single benchmark number; it's the environment around the model. A full timeline editor, motion brush, camera controls, and reference-driven character consistency mean you can shape a shot rather than re-roll the dice until something usable falls out. Our <a href="../review/runway.html">Runway review</a> puts it at 8.9 — the highest of the three here.</p>
+
+    <p>That control is the actual product. Maintaining a character's face, clothing, and proportions across multiple shots, directing camera movement, trimming and recomposing on a timeline — this is the work that turns "an impressive clip" into "a deliverable," and it's where Runway leads. On raw-quality leaderboards the picture is more mixed (more on that in the head-to-head), but the workflow edge is consistent regardless of where the Elo scores land in any given month.</p>
+
+    <p>The cost is the trade-off. Runway meters by credits, and Gen-4.5 spends them quickly. The free tier gives 125 one-time credits — enough to evaluate quality. Standard runs $12/month (annual) for 625 monthly credits with 1080p export; Pro is $28/month for 2,250 credits plus 4K export and priority rendering; Unlimited removes generation caps at $76/month. The catch our review flags: 625 credits on Standard translates to roughly 25 seconds of Gen-4.5 footage, which disappears fast for an active creator. For occasional use the free tier plus strategic credit top-ups makes more sense than a subscription. For developers, Runway also exposes an API in the rough range of $0.15 per second — verify the current rate before budgeting.</p>
+
+    <div class="verdict-box">
+      <h4>Runway in one line</h4>
+      <p>The production-grade pick when you need control, character consistency, and client-ready output — provided you can absorb credit costs that climb with heavy use.</p>
+    </div>
+
+    <h2 id="grok">Grok Imagine Video — Cheap, Fast, and the Safety Record</h2>
+    <p>Grok Imagine Video 1.5, from xAI, is the opposite proposition: the cheapest and fastest way to turn a still image into a short clip with sound. One distinction up front, because the category's marketing blurs it — this is image-to-video, not text-to-video. You bring the starting frame and a short prompt describing the motion; the model animates it, returning clips of up to 15 seconds at 480p or 720p with native, synchronized audio generated in the same pass. It runs on xAI's Aurora engine, which generates frames sequentially and tends to hold the subject and camera steady across a clip — the failure point where a lot of cheap video models come apart.</p>
+
+    <p>The price is the headline. A free web tier gives roughly five generation credits a day; SuperGrok at $30/month raises the limits; and the API charges $0.08 per second at 480p and $0.14 per second at 720p — about $4.20 per minute at the higher resolution, audio included, plus a small per-image input charge. Our <a href="../review/grok-imagine-video.html">Grok Imagine Video review</a> scores it 7.5: strong on output, speed, and value, with the composite deliberately pulled down by two things. The lighter one is the technical ceiling — 720p where several rivals hit 1080p, image-to-video only, short clips, a still-new public track record.</p>
+
+    <p>The heavier one is trust, and it can't be left in a footnote.</p>
+
+    <div class="safety-box">
+      <h4>Trust &amp; Safety — Stated Plainly</h4>
+      <p>Grok Imagine launched with a deliberately permissive mode, and a documented content-moderation failure emerged in that context. NBC News reported in April 2026 that non-consensual sexualized image generation continued as users worked around safeguards; a WIRED investigation in June 2026 found the platform still hosting non-consensual deepfakes; and a federal class action filed in California in March 2026 alleges manipulation targeting images of apparent minors. xAI has taken documented steps — restricting image generation to paid accounts, anti-editing measures, NCMEC reporting, prompt filtering — but these have been judged insufficient: Canada's privacy commissioner found the company failed to implement appropriate safeguards from the outset, and the failures reported by NBC and WIRED postdate the fixes. The platform is under active regulatory scrutiny in multiple jurisdictions, including the EU's Digital Services Act and the UK's Ofcom. These accounts are attributed to NBC News, WIRED, and named regulators; the proceedings are ongoing and their outcomes unsettled. This is a trust assessment, not a comment on video quality — and for many teams and brands it is reasonably disqualifying on its own.</p>
+    </div>
+
+    <p>None of that erases what the model does well. It animates a product still into a sound-on social clip cheaply and quickly, and at free-tier and API rates this low, evaluating it costs almost nothing. But "cheap and fast" and "safe to put your brand behind" are different questions, and the second one has a documented, unresolved answer that belongs in the decision.</p>
+
+    <div class="verdict-box">
+      <h4>Grok Imagine Video in one line</h4>
+      <p>The lowest-cost, fastest route from a still image to a short clip with audio — recommendable only after you've weighed a serious, well-documented moderation record and decided you can accept it.</p>
+    </div>
+
+    <h2 id="head-to-head">Head-to-Head: Price, Quality, Control, Trust</h2>
+    <p>Four axes decide this comparison. Taken together they explain why no single tool sweeps the table.</p>
+
+    <h3>Price</h3>
+    <p>Grok wins outright on cost. Free daily credits, $30/month for higher limits, and API rates of $0.08–0.14 per second undercut nearly everything in the category — it's reported to land roughly 86% below Sora 2 Pro at 720p. Runway is the pricier environment: $12–76/month in subscriptions, plus credits that Gen-4.5 burns through quickly. Sora's pricing is academic given the shutdown. If the only question were dollars per second, Grok takes it cleanly.</p>
+
+    <h3>Quality and the leaderboards</h3>
+    <p>Here the honest answer is "it's contested," and any clean crown should make you suspicious. By one widely cited measure, Grok currently tops a specific Image-to-Video Arena — but on the broader Artificial Analysis leaderboard it sits much lower, around #10. Runway led benchmarks at launch (reported around 1247 Elo) but has since dropped out of the Artificial Analysis top 10; its enduring edge is the control environment, not a current raw-quality title. Worth saying plainly: none of these three is the present Artificial Analysis quality leader — models like Veo 3.1, Seedance 2.0, and Kling 3.0 rank higher. The field is wider than the title of this post. Treat leaderboards as one contested third-party signal among several, not proof of a winner.</p>
+
+    <h3>Control and editing</h3>
+    <p>This is Runway's row and it isn't close. A timeline editor, motion brush, camera control, and reference-driven character consistency let you direct output and keep a character coherent across shots. Grok is generation-first — fast and cheap, but you're animating a frame, not editing a sequence, and it's image-to-video only with no reliable text-to-video path. For anything that has to match a brief or carry a character across cuts, the control gap is the whole story.</p>
+
+    <h3>Trust and safety</h3>
+    <p>This row is the one a feature grid usually omits, and it's decisive for many readers. Runway and Sora carry the ordinary risk profile of established creative platforms. Grok carries the documented, attributed, and still-active moderation record described above — reported by NBC News and WIRED, with regulatory and legal scrutiny ongoing. For a brand, an agency, or anyone who can't absorb that exposure, this single row can outweigh Grok's price and speed lead entirely. It's not a tiebreaker; for many it's the first filter.</p>
+
+    <h2 id="matrix">Who Should Pick Which</h2>
+    <p>Strip away the framing and it routes by what you're making and what you can accept.</p>
+
+    <table class="comparison-table">
+      <thead><tr><th>If you are…</th><th>Pick</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Producing ads or client work that needs control and consistency</td><td class="winner">Runway</td><td>Timeline editor, motion brush, character consistency, higher-res export — the production environment, not just a model</td></tr>
+        <tr><td>Making cheap, fast social clips from still images — and able to accept the safety record + 720p ceiling</td><td class="winner">Grok Imagine Video</td><td>Lowest cost in the category, fast, native audio; only after weighing the documented moderation history</td></tr>
+        <tr><td>A brand or organization that can't absorb the trust exposure</td><td class="winner">Runway</td><td>Avoids Grok's documented, still-active moderation record entirely</td></tr>
+        <tr><td>Currently building on Sora</td><td class="winner">Migrate</td><td>Consumer app gone; API sunsets Sept 24, 2026 — move before the deadline, don't start new work here</td></tr>
+      </tbody>
+    </table>
+
+    <p>A couple of edge cases. If you need cheap, sound-on clips <em>and</em> you're a brand, the routing collides — and the trust row should win that collision; cost doesn't buy back a moderation problem. And if you need the outright highest raw quality rather than control or price, look past all three to the current Artificial Analysis leaders, then weigh their pricing and availability separately.</p>
+
+    <h2 id="verdict">Verdict: No Universal Winner</h2>
+    <p>There's no single winner here, and a comparison that crowns one would be flattening the differences that make these tools worth lining up at all. The right pick depends on the job.</p>
+
+    <p><strong>Runway</strong> is the choice when you need editing control, character consistency, and client-grade deliverables, and you can absorb the higher cost — it's the production-grade option and earns the highest score of the three (8.9). <strong>Grok Imagine Video</strong> is the cheapest and fastest route from a still image to a short, sound-on clip — but its 720p ceiling, image-to-video-only scope, and, far more seriously, its documented and ongoing content-moderation failures (reported by NBC News and WIRED, with active regulatory and legal scrutiny) make it a hard recommendation for many teams and brands regardless of price. That's why its 7.5 sits where it does: a capable, inexpensive model whose composite is deliberately held down by a trust problem that outweighs any arena ranking. <strong>Sora</strong>, whatever its past strengths, is exiting — not a tool to build on now.</p>
+
+    <p>The honest summary: pick Runway for control, consider Grok only if you can accept its trust record, and migrate off Sora. Cheapest and fastest isn't automatically best — not when one of those two words comes attached to a documented safety record you'd be signing your brand up for.</p>
+
+    <p>For the wider AI video field beyond these three — including the current quality leaders — browse our <a href="../category/video.html">AI video tool reviews</a>, or read the full breakdowns linked below.</p>
+
+    <div class="cta-box">
+      <h3>Read the full reviews</h3>
+      <p>Scores, documented features, pricing context, and the safety record in full.</p>
+      <div class="cta-links">
+        <a href="../review/grok-imagine-video.html" class="cta-btn">Grok Imagine Video Review →</a>
+        <a href="../review/runway.html" class="cta-btn">Runway Review →</a>
+        <a href="../category/video.html" class="cta-btn">All AI Video Reviews →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="related-posts" style="max-width:780px;margin:0 auto 48px;padding:32px;background:var(--bg2);border-radius:14px;border:1px solid var(--border)">
+  <p style="font-size:12px;font-family:DM Mono,monospace;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px">Related Reading</p>
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <a href="../review/grok-imagine-video.html" style="font-size:15px;font-weight:600;color:var(--text);border-bottom:1px solid var(--border);padding-bottom:12px;text-decoration:none">Grok Imagine Video 1.5 Review — Strong Output, Serious Safety Caveat →</a>
+    <a href="../review/runway.html" style="font-size:15px;font-weight:600;color:var(--text);border-bottom:1px solid var(--border);padding-bottom:12px;text-decoration:none">Runway Review — The Industry Standard for AI Video →</a>
+    <a href="v0-vs-lovable-vs-bolt-2026.html" style="font-size:15px;font-weight:600;color:var(--text);text-decoration:none">v0 vs Lovable vs Bolt 2026 — Which AI App Builder Wins? →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">AI Tool<span>Grade</span></div><p class="footer-desc">Independent reviews and comparisons of AI tools. Researched, fact-checked, and independently rated.</p></div>
+    <div><div class="footer-col-title">Reviews</div><div class="footer-links"><a href="../category/writing.html">AI Writing</a><a href="../category/coding.html">AI Coding</a><a href="../category/image.html">AI Image</a><a href="../category/automation.html">Automation</a><a href="../category/productivity.html">Productivity</a></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="../about.html">About</a><a href="../how-we-review.html">How we review</a><a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
+    <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+</footer>
+</body></html>

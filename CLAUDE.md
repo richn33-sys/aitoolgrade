@@ -778,6 +778,20 @@ New items prioritized below. Carried-over OPEN items still stand: **aider review
 
 ## Search Console Optimization
 
+### June 23, 2026 — Homepage hero-stat reconcile (display copy)
+`index.html` hero stat "Tools researched" was frozen at **19** while the real review count is now
+**37** — it undersold the site to every visitor and every crawler hitting the homepage. Fixed 19 → 37
+(deliberate copy correction, not silent drift). Tied to the canonical **Category Review Counts**
+(4 Writing + 15 Coding + 3 Image + 3 Automation + 5 Video + 7 Productivity = 37); hardcoded rather
+than scripted (static vanilla page, hand-maintained like the cat-counts — a correct fixed number beats
+a fragile DOM-sum). Surrounding hero copy untouched. **Audit of all static/decorative counts on the
+homepage + key landing pages (reviews, about, how-we-review, resources, compare, blog index, contribute):**
+the hero "19" was the ONLY stale one. "Categories covered: 6" is correct; the six homepage `cat-count`
+values (4/15/3/3/5/7) are canonical and already correct; blog index's "10 Tools" is a legitimate post
+title ("Best Free AI Tools in 2026 — 10 Tools Actually Worth Using"), not a site stat. NO canonical
+review-count or score change (display only). Prohibited-language + superlative scan clean; Organization
+schema still valid. Committed 9884522, pushed, SSH force-pulled; live HTTP 200 confirmed (homepage shows 37).
+
 ### June 23, 2026 — New review (aider, AI Coding, 7.8)
 New URL `review/aider.html` (sitemap lastmod 2026-06-23, monthly/0.8). Target KW "aider review";
 secondary "aider ai coding", "aider vs opencode", "aider pricing". Topical-cluster play for the

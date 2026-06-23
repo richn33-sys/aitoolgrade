@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="canonical" href="https://aitoolgrade.com/review/aider.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="aider pioneered git-native AI pair programming and it's free — but in 2026 its development has slowed. Where it still wins, and where OpenCode pulls ahead.">
+<title>aider Review 2026 — The Git-Native CLI Coding Agent, Reassessed | AIToolGrade</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fafaf8;--bg2:#f3f2ee;--bg3:#eceae3;--text:#1a1a18;--text2:#4a4a45;--text3:#8a8a82;--accent:#e85d26;--accent2:#f07d4a;--accent-dim:rgba(232,93,38,0.08);--border:#e2e0d8;--white:#ffffff;--display:'Playfair Display',serif;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:4px}
+.nav-dropdown>a::after{content:"▾";font-size:10px}
+.dropdown-menu{visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.15s ease,visibility 0s linear 0.5s;position:absolute;top:calc(100% + 8px);left:-16px;background:white;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:200;max-height:80vh;overflow-y:auto}
+.dropdown-menu a{display:block;padding:8px 12px;font-size:14px;color:var(--text2);text-decoration:none;border-radius:6px;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--bg2);color:var(--accent)}
+.nav-dropdown:hover .dropdown-menu{visibility:visible;opacity:1;pointer-events:auto;transition:opacity 0.15s ease,visibility 0s}
+.nav-dropdown .dropdown-menu::before{content:"";position:absolute;top:-20px;left:0;right:0;height:20px}
+.nav-dropdown::after{content:"";position:absolute;height:20px;width:calc(100% + 16px);bottom:-20px;left:-16px}
+.review-layout{max-width:1100px;margin:0 auto;padding:60px 40px;display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:start}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:24px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+.review-header{margin-bottom:40px}
+.review-tool-row{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.review-tool-logo{width:56px;height:56px;border-radius:14px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:28px;border:1px solid var(--border)}
+.review-tool-title{font-size:15px;font-weight:600;margin-bottom:2px}
+.review-tool-url{font-size:13px;color:var(--text3);font-family:var(--mono)}
+h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;margin-bottom:16px}
+.review-meta-row{display:flex;align-items:center;gap:20px;font-size:13px;color:var(--text3);margin-bottom:24px}
+.verdict-banner{background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:20px 24px;margin-bottom:40px;display:flex;align-items:center;gap:16px}
+.verdict-score{font-family:var(--display);font-size:48px;font-weight:800;color:var(--accent);line-height:1}
+.verdict-text h3{font-size:15px;font-weight:600;margin-bottom:4px}
+.verdict-text p{font-size:13px;color:var(--text2)}
+.review-body h2{font-family:var(--display);font-size:28px;font-weight:700;margin:40px 0 16px}
+.review-body p{color:var(--text2);margin-bottom:16px}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
+.pros-box,.cons-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px}
+.pros-box{border-top:3px solid #2e7d32}
+.cons-box{border-top:3px solid #c62828}
+.pros-box h4{color:#2e7d32;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.cons-box h4{color:#c62828;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.pro-item,.con-item{font-size:14px;color:var(--text2);margin-bottom:8px;display:flex;gap:8px;align-items:flex-start}
+.pro-item::before{content:'✓';color:#2e7d32;font-weight:600;flex-shrink:0}
+.con-item::before{content:'✗';color:#c62828;font-weight:600;flex-shrink:0}
+.score-breakdown{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;margin:32px 0}
+.score-breakdown h4{font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:20px}
+.score-row{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.score-row:last-child{margin-bottom:0}
+.score-name{font-size:14px;color:var(--text2);width:160px;flex-shrink:0}
+.score-bar-track{flex:1;height:8px;background:var(--bg2);border-radius:100px;overflow:hidden}
+.score-bar-fill{height:100%;border-radius:100px;background:var(--accent)}
+.score-val{font-family:var(--mono);font-size:13px;font-weight:500;width:30px;text-align:right}
+.comparison-wrap{overflow-x:auto;margin:24px 0}
+.comparison-table{width:100%;border-collapse:collapse;font-size:14px}
+.comparison-table th,.comparison-table td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
+.comparison-table th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.05em;color:var(--text3);background:var(--bg2)}
+.comparison-table td{color:var(--text2)}
+.comparison-table tr td:first-child{font-weight:600;color:var(--text)}
+.comparison-table th a,.comparison-table td a{color:var(--accent);text-decoration:none}
+.affiliate-box{background:var(--text);color:white;border-radius:14px;padding:28px;margin:40px 0;text-align:center}
+.affiliate-box h3{font-family:var(--display);font-size:24px;font-weight:700;margin-bottom:8px}
+.affiliate-box p{color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:20px}
+.affiliate-btn{display:inline-block;background:var(--accent);color:white;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;transition:background 0.15s}
+.affiliate-btn:hover{background:var(--accent2)}
+.affiliate-note{font-size:11px;color:rgba(255,255,255,0.4);margin-top:12px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px;position:sticky;top:84px}
+.sidebar-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:16px}
+.sidebar-score{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.sidebar-score-num{font-family:var(--display);font-size:52px;font-weight:800;color:var(--accent);line-height:1}
+.sidebar-score-label{font-size:13px;color:var(--text3)}
+.sidebar-price-row{display:flex;justify-content:space-between;font-size:14px;padding:10px 0;border-bottom:1px solid var(--border)}
+.sidebar-price-row:last-of-type{border-bottom:none}
+.sidebar-price-label{color:var(--text2)}
+.sidebar-price-val{font-family:var(--mono);font-weight:500}
+.sidebar-cta{display:block;background:var(--accent);color:white;text-align:center;padding:14px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;margin-top:20px;transition:background 0.15s}
+.sidebar-cta:hover{background:var(--accent2)}
+.sidebar-disclosure{font-size:11px;color:var(--text3);margin-top:10px;text-align:center}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}
+.footer-brand span{color:var(--accent)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--accent)}
+@media(max-width:768px){.review-layout{grid-template-columns:1fr;padding:40px 20px}.pros-cons{grid-template-columns:1fr}h1{font-size:30px}nav{padding:0 20px}.footer-inner{grid-template-columns:1fr 1fr}}
+
+/* === MOBILE NAV + RESPONSIVE TABLE FIX === */
+.nav-toggle{display:none;order:2;background:none;border:0;font-size:24px;line-height:1;color:var(--text);cursor:pointer;padding:4px 6px}
+@media(max-width:768px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(250,250,248,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 20px 16px;box-shadow:0 8px 24px rgba(0,0,0,0.06);max-height:calc(100vh - 64px);overflow-y:auto}
+  nav.nav-open .nav-links{display:flex}
+  .nav-links>a,.nav-dropdown{padding:12px 2px;border-bottom:1px solid var(--border)}
+  .nav-dropdown{position:static}
+  .nav-dropdown>a::after{display:none}
+  .dropdown-menu{display:none!important}
+  .nav-cta{display:block;text-align:center;background:var(--accent);color:#fff;margin-top:14px;padding:12px;border:0!important;border-radius:6px}
+  .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+  .comparison-wrap{overflow-x:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "name": "aider Review 2026",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "7.8",
+    "bestRating": "10",
+    "worstRating": "0"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Marcus Veil",
+    "url": "https://aitoolgrade.com/author/marcus-veil.html"
+  },
+  "itemReviewed": {
+    "@type": "SoftwareApplication",
+    "name": "aider",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "macOS, Windows, Linux",
+    "offers": {
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "USD",
+      "url": "https://aider.chat"
+    }
+  },
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "aider Review 2026 — The Git-Native CLI Coding Agent, Reassessed",
+  "author": {
+    "@type": "Person",
+    "name": "Marcus Veil",
+    "url": "https://aitoolgrade.com/author/marcus-veil.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIToolGrade",
+    "url": "https://aitoolgrade.com"
+  },
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolgrade.com"},
+    {"@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://aitoolgrade.com/reviews.html"},
+    {"@type": "ListItem", "position": 3, "name": "AI Coding", "item": "https://aitoolgrade.com/category/coding.html"},
+    {"@type": "ListItem", "position": 4, "name": "aider", "item": "https://aitoolgrade.com/review/aider.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<div id="nav-root"></div>
+<script src="../nav.js"></script>
+
+<div class="review-layout">
+  <div class="review-main">
+    <div style="background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 14px 18px; margin-bottom: 28px; display: flex; align-items: flex-start; gap: 12px;">
+      <span style="font-family: var(--mono); font-size: 18px; line-height: 1;">🔍</span>
+      <div>
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 4px;">Research-Based Review</div>
+        <p style="font-family: var(--sans); font-size: 0.88rem; color: var(--text2); line-height: 1.6; margin: 0;">This review is based on documented features, verified pricing, primary-source research, and community sentiment — not hands-on testing. <a href="../how-we-review.html" style="color: var(--accent); text-decoration: none;">See how we research →</a></p>
+      </div>
+    </div>
+
+    <div style="background: #fef3cd; border: 1px solid #f0c040; border-radius: 10px; padding: 16px 20px; margin-bottom: 28px;">
+      <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: #8a6000; margin-bottom: 6px;">⚠️ Conflict of Interest Disclosure</div>
+      <p style="font-family: var(--sans); font-size: 0.9rem; color: #5a4000; line-height: 1.65; margin: 0;">AIToolGrade's content is produced using Claude Code, a coding agent from Anthropic. aider is an open-source coding agent that competes with Claude Code — and can also run on Claude models. So we're reviewing a direct competitor to a tool we use every day. We've applied our standard research methodology — documented features, verified pricing, community sentiment — and worked to assess aider on its own merits. The score reflects what the evidence supports, including the parts that aren't flattering to it.</p>
+    </div>
+
+    <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="../category/coding.html">AI Coding</a><span>›</span>aider Review</div>
+    <div class="review-header">
+      <div class="review-tool-row">
+        <div class="review-tool-logo">🔀</div>
+        <div><div class="review-tool-title">aider</div><div class="review-tool-url">aider.chat</div></div>
+      </div>
+      <h1>aider Review 2026 — The Git-Native CLI Coding Agent, Reassessed</h1>
+      <div class="review-meta-row">
+        <span>📅 June 2026</span>
+        <span>⏱ 13 min read</span>
+        <span>📊 Research-based</span>
+      </div>
+    </div>
+    <div class="verdict-banner">
+      <div class="verdict-score">7.8</div>
+      <div class="verdict-text">
+        <h3>Editor's Verdict: The Git-Native Pioneer — Still Excellent, Now Being Outpaced</h3>
+        <p>aider helped define terminal-based AI pair programming, and its signature move still has no clean equal: it commits every edit to git automatically, with a descriptive message, giving you the most granular git integration among CLI coding agents. It's free, model-agnostic, and can run fully local. The catch in 2026 is momentum — the repository's last push was May 22, 2026, and the project's curated model guidance still points at pre-2026 models while actively-developed peers ship weekly. The 7.8 reflects a capable, well-built tool with a real velocity problem: a strong fit for git-centric, CLI-comfortable developers, adopted with eyes open.</p>
+      </div>
+    </div>
+    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified June 2026</p>
+
+    <div class="review-body">
+
+      <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:16px 20px;margin:0 0 24px 0">
+        <p style="font-size:13px;font-family:'DM Mono',monospace;color:var(--accent);margin-bottom:8px">RELATED REVIEWS</p>
+        <a href="../review/opencode.html" style="font-size:15px;font-weight:600;color:var(--text);display:block;margin-bottom:6px;text-decoration:none">OpenCode Review 2026 — Open-Source, Model-Agnostic AI Coding Agent →</a>
+        <a href="../review/claude-code.html" style="font-size:15px;font-weight:600;color:var(--text);display:block;margin-bottom:6px;text-decoration:none">Claude Code Review 2026 — Anthropic's Coding Agent, Honestly Scored →</a>
+        <a href="../blog/best-ai-coding-agents-2026.html" style="font-size:15px;font-weight:600;color:var(--text);display:block;text-decoration:none">Best AI Coding Agents 2026 — The Terminal Agents Compared →</a>
+      </div>
+
+      <p>If you've used an AI coding agent in a terminal, you've used something aider helped invent. Long before "agentic coding" was a category with a leaderboard, aider was already doing the unglamorous, durable thing: editing your files from a chat prompt and committing each change to git with a clear message. It earned a devoted following the honest way — by being genuinely useful to developers who live on the command line — and it's still free and open-source today.</p>
+      <p>So this isn't a takedown. It's a reassessment. Because the thing that complicates a 2026 recommendation isn't aider's capability — that's largely intact — it's the project's momentum. The repository's last push, at the time of writing, was May 22, 2026, and the model guidance on aider.chat still recommends models from before this year. Meanwhile open-source peers like <a href="../review/opencode.html">OpenCode</a> ship updates on a near-daily cadence and have pulled the community's attention with them. The interesting question about aider now isn't "is it good." It's "is the pioneer still the right pick when the field it created has sped up." This review is about that trade.</p>
+
+      <!-- toc -->
+<nav aria-label="Table of contents" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 32px 0;">
+  <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 12px;">In this review</div>
+  <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#what-is-aider" style="color: var(--accent); text-decoration: none;">What is aider?</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-git-workflow" style="color: var(--accent); text-decoration: none;">The Git Workflow — Its Signature Strength</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#models-and-cost" style="color: var(--accent); text-decoration: none;">Models &amp; Cost</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-momentum-question" style="color: var(--accent); text-decoration: none;">The Momentum Question</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#aider-vs-opencode" style="color: var(--accent); text-decoration: none;">aider vs OpenCode</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pros-and-cons" style="color: var(--accent); text-decoration: none;">Pros and Cons</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#score-breakdown" style="color: var(--accent); text-decoration: none;">Score Breakdown</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#who-its-for" style="color: var(--accent); text-decoration: none;">Who It's For / Who Should Skip</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-bottom-line" style="color: var(--accent); text-decoration: none;">The Bottom Line</a></li>
+  </ol>
+</nav>
+
+      <h2 id="what-is-aider">What is aider?</h2>
+      <p>aider is an open-source, terminal-native AI pair-programming tool. It's Apache-licensed, installs with a single <code>pip install aider-chat</code>, and runs as a chat session in your shell — you describe what you want, point it at the relevant files, and it edits them in place. Beyond the core CLI it also offers a watch-mode that reacts to comments you type in your editor, and a browser interface, but the terminal is its home turf.</p>
+      <p>The mechanism that explains a lot of aider's behavior is its <strong>repo map</strong>. Rather than stuffing your whole codebase into the context window, aider builds a compact, tree-sitter-based map of the repository and dynamically loads the files relevant to your request. That's efficient and it scales to large projects without burning tokens on code the model doesn't need. It's also a genuinely different mechanism than the whole-context approach some agents take — a large-context pass like <a href="../review/claude-code.html">Claude Code</a>'s can sometimes catch cross-cutting relationships across a sprawling monorepo that a repo map might not surface. Neither approach is strictly better; they make different bets.</p>
+      <p>On capability, aider is broad. It supports 100+ languages, offers distinct chat modes — <em>code</em>, <em>architect</em>, <em>ask</em>, and <em>help</em> — and adds quality-of-life features like voice-to-code, image and web-page context, prompt caching, and a lint-and-test loop that can run your tests and auto-fix failures. It's scriptable from both the CLI and Python, which makes it easy to wire into existing automation. The short version: this is a mature, full-featured agent, not a toy — its question marks are about velocity, not depth.</p>
+
+      <h2 id="the-git-workflow">The Git Workflow — Its Signature Strength</h2>
+      <p>If aider has one thing that still sets it apart, this is it. Every change aider makes is automatically committed to git, with a descriptive commit message describing what it did and why. It's not an afterthought or a toggle buried in settings — it's a first-class feature, the way the tool is designed to work, and it gives aider the most granular git integration among the CLI coding agents.</p>
+      <p>The practical payoff lands fast. Your history becomes a clean, readable trail of AI-made changes, each one isolated in its own commit. If a change is wrong, you undo it with the git tools you already know — no proprietary "revert" button, no guessing what the agent touched. For teams that review AI-generated code, this is the part that matters most: you can read the work commit by commit, the same way you'd review a careful colleague's pull request, instead of squinting at one giant diff. That auditability is a real governance feature, not a cosmetic one.</p>
+      <p>It's worth being precise about why this is a differentiator and not just a nice default. Plenty of agents can commit to git; aider is built so that the commit-per-edit <em>is</em> the workflow. The discipline is enforced rather than optional, which means the clean history happens whether or not you remember to ask for it. For git-centric developers, that's the single most compelling reason to keep aider in the toolkit even in 2026.</p>
+
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin:32px 0;display:flex;gap:40px;flex-wrap:wrap;">
+        <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--accent)">$0</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Tool Cost (Apache OSS)</div></div>
+        <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">100+</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Languages Supported</div></div>
+        <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">~46K</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">GitHub Stars (reported)</div></div>
+        <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">May 22</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Last Repo Push (2026)</div></div>
+      </div>
+
+      <h2 id="models-and-cost">Models &amp; Cost</h2>
+      <p>aider's pricing is the simplest part of this review: the tool is free. It's open-source under the Apache license — no paid tiers, no subscription, no premium features locked behind a plan. (One aggregator site lists "Pro" and "Business" plans for aider; that's a template error on their end. aider has no paid plans.) What you actually pay for is the model. aider is model-agnostic and brings-your-own-key: it works with Claude, GPT, Gemini, DeepSeek, and local models through Ollama or LM Studio, and your bill is whatever your chosen provider charges for the tokens you use.</p>
+      <p>That makes the real cost math entirely a function of which model you point it at. Run a frontier model like Claude Opus and a heavy month can climb into the hundreds; run something like DeepSeek and the same workload costs a fraction of that; run a capable local model on your own hardware and the marginal cost per request is essentially zero. As a rough frame, moderate use tends to land in the ~$10–30/month range and heavy use anywhere from $50 to $200+ depending entirely on the model — figures that move with provider pricing, so treat them as a snapshot, not a quote.</p>
+      <p>The model freedom has a second payoff worth calling out: privacy and data residency. Because aider can run fully against a local model, none of your code has to leave your network. For fintech, healthcare, government, or any NDA-bound work where sending source to a third-party API is a non-starter, an agent that can operate entirely offline is a meaningful capability — and one a managed, single-vendor tool generally can't match.</p>
+
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr><th>How you run it</th><th>What you pay</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>aider itself</td><td>$0 (Apache OSS)</td><td>No subscription, no paid tiers, no premium features</td></tr>
+            <tr><td>Cloud model (BYOK)</td><td>Provider API rates</td><td>Pay Anthropic / OpenAI / Google / DeepSeek directly for tokens used</td></tr>
+            <tr><td>Local model</td><td>~$0 marginal</td><td>Via Ollama / LM Studio; runs fully offline for sensitive work</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12px;color:var(--text3);font-style:italic;">Monthly ranges are an illustrative June 2026 snapshot and depend entirely on your chosen model and usage — verify current rates at your provider.</p>
+
+      <h2 id="the-momentum-question">The Momentum Question</h2>
+      <p>This is the part of the review that decides where aider lands, so it's worth handling carefully rather than gently. aider is capable. The concern is velocity — and it's a real one.</p>
+      <p><strong>Development has slowed.</strong> At the time of writing, the repository's most recent push was May 22, 2026. For an open-source tool in a category that's moving as fast as AI coding, a gap like that is a signal. It doesn't mean the project is dead — a mature, stable tool genuinely needs fewer changes than a young one — but it does mean the shipping cadence has dropped well below where the most active peers are.</p>
+      <p><strong>The model guidance has gone stale.</strong> This is the more concrete problem. aider's own documentation still steers users toward pre-2026 models — Claude 3.7 Sonnet, DeepSeek R1, o1 and o3-mini, GPT-4o — as its recommended picks. The important nuance: because aider is model-agnostic, you <em>can</em> point it at any current frontier model yourself, so this is not a hard capability ceiling. But the project's curated tuning and "use this model" guidance — historically one of aider's quiet strengths — hasn't been refreshed for the current generation. You're now doing that homework yourself.</p>
+      <p><strong>The active community is shifting.</strong> Third-party signals point the same direction. As a rough comparison, aider sits around 46,000 GitHub stars while <a href="../review/opencode.html">OpenCode</a> reports roughly 176,000 — and OpenCode ships on a near-daily cadence. Stars and release frequency aren't quality, and we don't score on them; we treat them as attribution-worthy signals of where attention and contributor energy are flowing. Right now that energy is flowing toward the faster-moving projects.</p>
+      <p>Put plainly: aider's capability is intact, but its momentum is down. That's not a reason to write it off — it's a reason to adopt it deliberately, knowing you're choosing a stable, proven tool over the one with the most active development behind it. For some teams that's exactly the right trade. For others it's a dealbreaker. The honest move is to name it, not bury it.</p>
+
+      <h2 id="aider-vs-opencode">aider vs OpenCode</h2>
+      <p>These two get compared constantly, and for good reason: they're the closest peers in the open-source, model-agnostic, terminal-native corner of the category. Both are free, both let you bring your own model, both live in the shell. So the choice between them comes down to what you weight.</p>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr><th>Tool</th><th>License</th><th>Signature strength</th><th>2026 momentum</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>aider</td><td>Apache (free)</td><td>Auto-commit-per-edit git workflow; repo map</td><td>Slowed — last push May 22, 2026</td></tr>
+            <tr><td><a href="../review/opencode.html">OpenCode</a></td><td>MIT (free)</td><td>75+ providers, LSP-in-the-loop, multi-session</td><td>High — near-daily releases</td></tr>
+            <tr><td><a href="../review/claude-code.html">Claude Code</a></td><td>Proprietary</td><td>Speed, managed support, frontier Anthropic models</td><td>High — actively developed, vendor-backed</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The clean way to decide: <strong>pick aider for its git workflow</strong>. If clean, reviewable, commit-per-edit history is the thing you care about most — and especially if a team reviews AI changes commit by commit — aider's auto-commit discipline is still its strongest reason to exist, and OpenCode doesn't replicate it as a first-class default.</p>
+      <p><strong>Pick OpenCode for active development and breadth.</strong> If you want the project that's shipping fastest, the widest provider switchboard (75+ providers, switchable mid-session), and features like LSP diagnostics fed back into the agent loop and parallel multi-session work, OpenCode has taken the momentum aider used to hold. Our full <a href="../review/opencode.html">OpenCode review</a> scores it 8.4 and goes deeper on that trade. For most developers choosing between the two today, it reduces to one question: do you value aider's git history more than OpenCode's velocity?</p>
+
+      <h2 id="pros-and-cons">Pros and Cons</h2>
+      <div class="pros-cons">
+        <div class="pros-box">
+          <h4>What works well</h4>
+          <div class="pro-item">Auto-commit-per-edit git workflow — the most granular git integration among CLI coding agents, and a first-class feature rather than a convenience</div>
+          <div class="pro-item">Clean, reviewable commit history — undo and diff with standard git tools, ideal for teams auditing AI changes</div>
+          <div class="pro-item">Free and Apache-licensed — no paid tiers, no subscription; you pay only model API costs (BYOK)</div>
+          <div class="pro-item">Model-agnostic — Claude, GPT, Gemini, DeepSeek, and local models via Ollama / LM Studio</div>
+          <div class="pro-item">Fully local operation possible — code never leaves your network, viable for fintech, healthcare, and government work</div>
+          <div class="pro-item">Efficient tree-sitter repo map scales to large codebases without burning context</div>
+          <div class="pro-item">Broad feature set — 100+ languages, code/architect/ask modes, voice, image &amp; web context, lint-and-test auto-fix, scriptable</div>
+        </div>
+        <div class="cons-box">
+          <h4>What to watch out for</h4>
+          <div class="con-item">Development has slowed — repository's last push was May 22, 2026, well behind daily-shipping peers</div>
+          <div class="con-item">Curated model guidance is stale — docs still recommend pre-2026 models (Claude 3.7, DeepSeek R1, o1/o3-mini, GPT-4o)</div>
+          <div class="con-item">Active community is migrating toward faster-moving agents like OpenCode (~46K vs ~176K GitHub stars, reported)</div>
+          <div class="con-item">Steeper learning curve — repo-map concept, /add /drop /architect commands, and model configuration to manage</div>
+          <div class="con-item">Not a beginner or GUI-first tool — terminal-native and command-driven by design</div>
+          <div class="con-item">Repo map can miss cross-cutting relationships a large-context pass might catch on very large monorepos</div>
+          <div class="con-item">Community-driven support only — no vendor, no managed SLA</div>
+        </div>
+      </div>
+
+      <h2 id="score-breakdown">Score Breakdown</h2>
+      <div class="score-breakdown">
+        <h4>Category scores — AIToolGrade methodology</h4>
+        <div class="score-row"><span class="score-name">Output Quality</span><div class="score-bar-track"><div class="score-bar-fill" style="width:80%"></div></div><span class="score-val">8.0</span></div>
+        <div class="score-row"><span class="score-name">Ease of Use</span><div class="score-bar-track"><div class="score-bar-fill" style="width:65%"></div></div><span class="score-val">6.5</span></div>
+        <div class="score-row"><span class="score-name">Value for Money</span><div class="score-bar-track"><div class="score-bar-fill" style="width:95%"></div></div><span class="score-val">9.5</span></div>
+        <div class="score-row"><span class="score-name">Features &amp; Integrations</span><div class="score-bar-track"><div class="score-bar-fill" style="width:85%"></div></div><span class="score-val">8.5</span></div>
+        <div class="score-row"><span class="score-name">Support &amp; Maturity</span><div class="score-bar-track"><div class="score-bar-fill" style="width:65%"></div></div><span class="score-val">6.5</span></div>
+      </div>
+      <p>The shape tells the story. Value for Money sits at 9.5 — a free, Apache-licensed tool you run on your own key, or fully local at near-zero marginal cost, is about as economical as the category gets. Features &amp; Integrations lands at 8.5 on the strength of the git workflow, the repo map, the multiple chat modes, and the broad language and input support. Output Quality at 8.0 is honest: aider produces solid, model-dependent results but isn't a benchmark-topper against the frontier agents. Ease of Use at 6.5 reflects the genuine learning curve — repo maps and slash commands aren't a beginner on-ramp. And Support &amp; Maturity at 6.5 is where the velocity caveat lands: a mature, well-built project with a devoted community, marked down for slowed development and stale model guidance while peers ship weekly. The equal-weight mean is 7.8 — and we scored this independent of GitHub stars and benchmark leaderboards, which we treat as third-party signals rather than rubric inputs.</p>
+
+      <h2 id="who-its-for">Who It's For / Who Should Skip</h2>
+      <p><strong>aider is for you if</strong> you live in git and want clean, reviewable, commit-per-edit history without thinking about it; if you're a senior or CLI-comfortable developer who values model freedom and wants to route work across providers; if you need to run fully local for data-residency or privacy reasons; or if you're on a team that reviews AI-generated changes commit by commit and wants that workflow enforced by default. For those developers, aider's signature strength still earns its place — and the stable, slower-moving nature of the project may even be a feature rather than a bug.</p>
+      <p><strong>Skip it if</strong> you want out-of-the-box polish, a GUI, or a tool that "just works" without learning repo maps and commands — that's not what aider is. Skip it if you want the most actively-developed open-source agent, where <a href="../review/opencode.html">OpenCode</a>'s near-daily cadence is the better bet. And skip it if you need top-of-leaderboard agentic reasoning across the largest monorepos, where whole-context agents currently have the edge. aider rewards a specific kind of developer; it doesn't pretend to suit everyone, and in 2026 it has more competition for that developer's attention than it used to.</p>
+
+      <div class="users-saying" style="margin:48px 0;">
+        <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Community Sentiment</div>
+        <h2 id="what-users-are-saying" style="font-family:var(--display);font-size:1.75rem;font-weight:800;color:var(--text);margin:0 0 8px 0;">What Users Are Saying</h2>
+        <p style="font-family:var(--sans);font-size:0.95rem;color:var(--text2);margin:0 0 32px 0;line-height:1.6;">We track discussion across Hacker News, r/programming, the aider GitHub, and head-to-head write-ups against newer agents. Sentiment is warmest on the git workflow and model freedom — and increasingly candid about the project's slowing pace.</p>
+
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:#22a05a;">●</span> What developers consistently praise</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"The auto-commit thing sounds small until you've lived with it. Every edit is its own clean commit with a real message. Reviewing what the AI did is just reading git log — and rolling back a bad change is one command, not a guess."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Hacker News · 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"I run it fully local with Ollama for client work that can't touch a cloud API. The repo map keeps token use sane on a big codebase. For privacy-bound projects it's one of the few agents I can actually use."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">r/programming · 2026</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:var(--accent);">●</span> Common reservations</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"Love the tool, but the docs still recommend last year's models. It's model-agnostic so you just configure a current one yourself — but the curated guidance that used to be a selling point hasn't kept up."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">GitHub discussion · 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"It's still great at what it does, but the repo hasn't seen a push in weeks and the community energy has clearly moved to OpenCode. I kept aider for the git workflow and reach for something more active for everything else."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Hacker News · 2026</div>
+          </div>
+        </div>
+
+        <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.15);border-radius:12px;padding:20px 24px;">
+          <div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:8px;">AIToolGrade Take</div>
+          <p style="font-family:var(--sans);font-size:0.93rem;color:var(--text);line-height:1.7;margin:0;">We build this site with Claude Code, so aider is a competitor to a tool we rely on — which is why we worked to weigh it on the evidence. The community signal is consistent: the git workflow and model freedom are genuine, durable strengths, and the slowing development plus stale model guidance are genuine, current weaknesses. aider remains a capable, well-built agent — but in 2026 it's being outpaced by faster-moving peers. We scored it independent of GitHub stars and leaderboards. The 7.8 reflects a strong tool with a real velocity problem: excellent for git-centric, CLI-comfortable developers, adopted with eyes open.</p>
+        </div>
+      </div>
+
+      <div class="affiliate-box">
+        <h3>Explore aider</h3>
+        <p>The git-native, model-agnostic, open-source pair-programming CLI — free under Apache, run it with your own API key or fully local.</p>
+        <a href="https://aider.chat" class="affiliate-btn" target="_blank" rel="noopener">Visit aider →</a>
+        <div class="affiliate-note">aider is free and open-source. We do not earn affiliate commission from this link. See our conflict-of-interest disclosure above.</div>
+      </div>
+
+      <h2 id="the-bottom-line">The Bottom Line</h2>
+      <p>aider is the git-native pioneer, and the thing that made it matter still holds up: it commits every edit to git automatically, giving you the most granular git integration among CLI coding agents and a clean, reviewable history you manage with tools you already know. It's free, model-agnostic, and can run fully local for privacy-bound work. For git-centric, CLI-comfortable developers — and especially teams that review AI changes commit by commit — those are durable, real reasons to use it.</p>
+      <p>The honest caveat is momentum. The repository's last push was May 22, 2026, the curated model guidance still points at pre-2026 models, and the active community is migrating toward faster-shipping peers like <a href="../review/opencode.html">OpenCode</a>. None of that breaks the tool — aider's capability is intact and you can point it at any current model yourself — but it changes the recommendation from "the default open-source agent" to "a strong, specific fit you should choose deliberately."</p>
+      <p>So the recommendation is precise. <strong>Best for:</strong> developers who live in git and want clean commit-per-edit history, teams auditing AI changes, and anyone needing model freedom or fully local operation. <strong>Not for:</strong> beginners, GUI-first developers, or anyone who wants the most actively-developed agent in the category. Scored independent of its stars and leaderboard standing, aider lands at 7.8 — an excellent git-native tool whose velocity has slipped. If you want the project with the most momentum behind it, <a href="../review/opencode.html">OpenCode</a> is the more active pick; if you want managed speed on Anthropic's models, <a href="../review/claude-code.html">Claude Code</a> is the more polished one. But if your first requirement is a clean git history you can trust, aider still earns the place.</p>
+    </div>
+  </div>
+
+  <div class="review-sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-title">Overall score</div>
+      <div class="sidebar-score">
+        <div class="sidebar-score-num">7.8</div>
+        <div>
+          <div style="color:var(--accent);font-size:18px;letter-spacing:-1px">★★★★</div>
+          <div class="sidebar-score-label">out of 10</div>
+        </div>
+      </div>
+      <div class="sidebar-title" style="margin-top:16px">At a glance</div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Tool cost</span><span class="sidebar-price-val">Free (Apache)</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Cloud model</span><span class="sidebar-price-val">BYOK / API</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Local model</span><span class="sidebar-price-val">~$0</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">License</span><span class="sidebar-price-val">Apache 2.0</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Interface</span><span class="sidebar-price-val">Terminal / browser</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Languages</span><span class="sidebar-price-val">100+</span></div>
+      <a href="https://aider.chat" class="sidebar-cta" target="_blank" rel="noopener">Visit aider →</a>
+      <div class="sidebar-disclosure">aider competes with Claude Code, which we use to build this site — see disclosure</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">AI Tool<span>Grade</span></div><p class="footer-desc">Independent reviews and comparisons of AI tools. Researched, fact-checked, and independently rated.</p></div>
+    <div><div class="footer-col-title">Reviews</div><div class="footer-links"><a href="../category/writing.html">AI Writing</a><a href="../category/coding.html">AI Coding</a><a href="../category/image.html">AI Image</a><a href="../category/automation.html">Automation</a><a href="../category/productivity.html">Productivity</a></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="../about.html">About</a><a href="../how-we-review.html">How we review</a><a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
+    <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+</footer>
+</body></html>

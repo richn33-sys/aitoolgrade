@@ -5,12 +5,14 @@
   Deep rewrite: May 29, 2026 — 2,000+ words
   Reason: Thin content audit
   Changes: Three-way acquisition story (OpenAI $3B/Google $2.4B/Cognition $250M), SWE-1.5 model, strategic uncertainty section, updated score 9.1→8.2
+  Refresh: June 24, 2026 — Windsurf → Devin Desktop rebrand (June 2, 2026)
+  Changes: Reframed around Devin Desktop (kept Windsurf legible for search); added Agent Command Center/ACP section + Cascade EOL (July 1) section; SWE-1.5→SWE-1.6; pricing Free/Pro $20/Max $200/Teams $80+$40; added COI box; score held at 8.2 (Integration +0.5 ACP openness vs Support/Maturity -0.5 transition, roughly cancel)
 -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="canonical" href="https://aitoolgrade.com/review/windsurf.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Windsurf went from Cursor's top rival to the center of a three-way acquisition battle in 2025-2026. Google paid $2.4B for the team. Cognition got the product. Here's how that affects the IDE — and whether Pro at $20/month is still worth it.">
-<title>Windsurf Review 2026: The $2.4B Acquisition, SWE-1.5, and Whether It's Still Worth It | AIToolGrade</title>
+<meta name="description" content="Windsurf is now Devin Desktop (Cognition, June 2026). Cascade is being retired, the new Agent Command Center runs Codex, Claude Agent and OpenCode via ACP, and pricing runs Free to $200. Here's what changed — and whether it's still worth it.">
+<title>Windsurf (Now Devin Desktop) Review 2026 | AIToolGrade</title>
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -135,7 +137,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
 {
   "@context": "https://schema.org",
   "@type": "Review",
-  "name": "Windsurf Review 2026",
+  "name": "Windsurf (Now Devin Desktop) Review 2026",
   "reviewRating": {
     "@type": "Rating",
     "ratingValue": "8.2",
@@ -149,18 +151,18 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
   },
   "itemReviewed": {
     "@type": "SoftwareApplication",
-    "name": "Windsurf",
+    "name": "Devin Desktop (formerly Windsurf)",
     "applicationCategory": "AI Coding Tool",
     "operatingSystem": "Windows,macOS,Linux",
     "offers": {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD",
-      "url": "https://codeium.com/windsurf"
+      "url": "https://devin.ai/desktop"
     }
   },
   "datePublished": "2026-04-01",
-  "dateModified": "2026-05-29"
+  "dateModified": "2026-06-24"
 }
 </script>
 <script type="application/ld+json">
@@ -188,105 +190,120 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <p style="font-family: var(--sans); font-size: 0.88rem; color: var(--text2); line-height: 1.6; margin: 0;">This review is based on documented features, verified pricing, and community sentiment — not hands-on testing. <a href="../how-we-review.html" style="color: var(--accent); text-decoration: none;">See how we research →</a></p>
       </div>
     </div>
+    <div style="background: #fef3cd; border: 1px solid #f0c040; border-radius: 10px; padding: 16px 20px; margin-bottom: 28px;">
+      <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: #8a6000; margin-bottom: 6px;">⚠️ Conflict of Interest Disclosure</div>
+      <p style="font-family: var(--sans); font-size: 0.9rem; color: #5a4000; line-height: 1.65; margin: 0;">AIToolGrade's content is produced using Claude Code, a coding agent from Anthropic. Devin Desktop is a direct competitor to Claude Code — and, in a wrinkle worth naming, it can now run Claude Agent <em>inside</em> it through the open Agent Client Protocol. So we're reviewing a rival to a tool we use daily, one that also hosts that tool. We've applied our standard research methodology — documented features, verified pricing, community sentiment — and worked to assess the product on its own merits. The score reflects what the evidence supports, not what's convenient for us.</p>
+    </div>
     <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="../category/coding.html">AI Coding</a><span>›</span>Windsurf Review</div>
     <div class="review-header">
       <div class="review-tool-row">
         <div class="review-tool-logo">🌊</div>
         <div>
-          <div class="review-tool-title">Windsurf</div>
-          <div class="review-tool-url">windsurf.com</div>
+          <div class="review-tool-title">Devin Desktop <span style="color:var(--text3);font-weight:400">(formerly Windsurf)</span></div>
+          <div class="review-tool-url">devin.ai/desktop</div>
         </div>
       </div>
-      <h1>Windsurf Review 2026: The $2.4B Acquisition, SWE-1.5, and Whether It's Still Worth It</h1>
+      <h1>Windsurf (Now Devin Desktop) Review 2026: The Rebrand, ACP, and Whether It's Still Worth It</h1>
       <div class="review-meta-row">
-        <span>📅 Updated May 2026</span>
-        <span>⏱ 11 min read</span>
+        <span>📅 Updated June 2026</span>
+        <span>⏱ 12 min read</span>
         <span>🔍 Research-based review</span>
       </div>
+    </div>
+    <div class="what-changed" style="margin-top:0">
+      <h4>⚠ Important — Windsurf is now Devin Desktop</h4>
+      <p>On <strong>June 2, 2026</strong>, Cognition retired the Windsurf brand and relaunched the IDE as <strong>Devin Desktop</strong> in an over-the-air update. If you're searching for "Windsurf," this is the product you'll land on — same VS Code base, same keybindings and extensions, but a different direction. The signature Cascade agent is being retired (support ends <strong>July 1, 2026</strong>), the new <strong>Agent Command Center</strong> is the default surface, and the product now runs third-party agents like Codex, Claude Agent, and OpenCode through the open Agent Client Protocol. We've kept the "Windsurf" references below so the history stays legible — but the current reality is Devin Desktop, a product mid-transition. This review assesses the product as it stands today, with the transition itself treated as a real factor in the verdict.</p>
     </div>
     <div class="verdict-banner">
       <div class="verdict-score">8.2</div>
       <div class="verdict-text">
-        <h3>Editor's Verdict: Very Good</h3>
-        <p>The most technically interesting AI IDE in 2026 — SWE-1.5 speed, Cascade's autonomy, and 40+ IDE plugins. The open question is strategic: where Cognition takes the roadmap alongside Devin.</p>
+        <h3>Editor's Verdict: Very Good — In Transition</h3>
+        <p>A capable VS Code-based IDE with a genuinely open multi-agent direction (ACP) and Cognition's Devin backing. The catch is the transition: the signature Cascade engine is being retired and the post-rebrand roadmap is still settling. Strong tool, unsettled trajectory.</p>
       </div>
     </div>
-    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified May 2026</p>
+    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified June 2026</p>
 <div class="review-body">
       <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:16px 20px;margin:24px 0">
   <p style="font-size:13px;font-family:'DM Mono',monospace;color:var(--accent);margin-bottom:6px">RELATED</p>
   <a href="../blog/cursor-vs-windsurf-vs-github-copilot.html" style="font-size:15px;font-weight:600;color:var(--text)">Cursor vs Windsurf vs GitHub Copilot — Full Comparison →</a>
 </div>
-<h2 id="the-most-acquired-tool-in-ai-coding-history">The Most Acquired Tool in AI Coding History</h2>
-      <p>You can't evaluate Windsurf in 2026 without understanding what happened to the company behind it. In the span of a few months across 2025-2026, Windsurf became the most acquired AI coding tool in history — and the story matters, because it directly shapes the product you'd be buying today.</p>
-      <p>It started with OpenAI bidding roughly $3 billion to buy Windsurf outright. That deal fell through. Google then stepped in with a $2.4 billion licensing-and-acquihire arrangement — not buying the company, but hiring the people who mattered: CEO Varun Mohan, co-founder Douglas Chen, and around 40 core engineers. With the founding talent gone, Cognition — the company behind Devin, the most autonomous coding agent in the category — acquired what remained of the company for $250 million.</p>
-      <p>The result is unusual. Google got the people who built Windsurf. Cognition got the product. For an existing Windsurf user, the practical question isn't who won the bidding war — it's what this means for the IDE you open every morning, and whether the roadmap stays coherent under a company that now also owns Devin. Hold that question; the rest of this review keeps coming back to it.</p>
+<h2 id="the-most-acquired-tool-in-ai-coding-history">From Codeium to Windsurf to Devin Desktop</h2>
+      <p>You can't evaluate this tool in 2026 without understanding what happened to the company behind it. Over roughly a year, the product cycled through three names and three owners — and that history directly shapes what you'd be adopting today.</p>
+      <p>It began as Codeium, founded by Varun Mohan and Douglas Chen, and rebranded to Windsurf in late 2024. Then the bidding started. OpenAI reportedly offered around $3 billion to buy Windsurf outright; that deal collapsed in mid-2025. Google stepped in with a roughly $2.4 billion reverse-acquihire — not buying the company, but hiring the people who mattered: Mohan, Chen, and around 40 core engineers. With the founding talent gone, Cognition — the company behind Devin, one of the most autonomous coding agents in the category — acquired what remained for about $250 million.</p>
+      <p>The culmination came on <strong>June 2, 2026</strong>: Cognition retired the Windsurf name entirely and relaunched the IDE as <strong>Devin Desktop</strong> in an over-the-air update. Google got the people who built Windsurf; Cognition got the product, folded it into the Devin family, and renamed it. For anyone evaluating it now, the practical question isn't who won the bidding war — it's whether the product remains coherent through a rebrand that's also retiring its best-known feature. That question runs through the rest of this review.</p>
 
       <!-- toc -->
 <nav aria-label="Table of contents" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 32px 0;">
   <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 12px;">In this review</div>
   <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
-    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-most-acquired-tool-in-ai-coding-history" style="color: var(--accent); text-decoration: none;">The Most Acquired Tool in AI Coding History</a></li>
-    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#what-windsurf-is-current-state-2026" style="color: var(--accent); text-decoration: none;">What Windsurf Is — Current State (2026)</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-most-acquired-tool-in-ai-coding-history" style="color: var(--accent); text-decoration: none;">From Codeium to Windsurf to Devin Desktop</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#what-windsurf-is-current-state-2026" style="color: var(--accent); text-decoration: none;">What Devin Desktop Is — Current State (2026)</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-acp-pivot" style="color: var(--accent); text-decoration: none;">The ACP Pivot: Agent Command Center</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#cascade-eol" style="color: var(--accent); text-decoration: none;">Cascade Is Being Retired</a></li>
     <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#key-features" style="color: var(--accent); text-decoration: none;">Key Features</a></li>
     <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pros-and-cons" style="color: var(--accent); text-decoration: none;">Pros and Cons</a></li>
     <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#performance-scores" style="color: var(--accent); text-decoration: none;">Performance Scores</a></li>
-    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pricing-verified-may-2026" style="color: var(--accent); text-decoration: none;">Pricing (verified May 2026)</a></li>
-    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-strategic-uncertainty-you-re-buying-into" style="color: var(--accent); text-decoration: none;">The Strategic Uncertainty You're Buying Into</a></li>
-    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#windsurf-vs-cursor" style="color: var(--accent); text-decoration: none;">Windsurf vs Cursor</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pricing-verified-may-2026" style="color: var(--accent); text-decoration: none;">Pricing (verified June 2026)</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-strategic-uncertainty-you-re-buying-into" style="color: var(--accent); text-decoration: none;">The Transition You're Buying Into</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#windsurf-vs-cursor" style="color: var(--accent); text-decoration: none;">Devin Desktop vs Cursor</a></li>
     <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#who-windsurf-is-for" style="color: var(--accent); text-decoration: none;">Who Windsurf Is For</a></li>
     <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-bottom-line" style="color: var(--accent); text-decoration: none;">The Bottom Line</a></li>
   </ol>
 </nav>
-      <h2 id="what-windsurf-is-current-state-2026">What Windsurf Is — Current State (2026)</h2>
-      <p>Windsurf is a VS Code-based, AI-native IDE — rebranded from Codeium in April 2025 — and now owned by Cognition AI following the July 2025 acquisition. Stripped of the corporate drama, the product itself is in a strong position by the numbers.</p>
-      <ul>
-        <li>1M+ active users and an estimated $82-100M ARR</li>
-        <li>4,000+ enterprise customers, with 59% of Fortune 500 companies building with Windsurf in some capacity</li>
-        <li>Ranked #1 on the LogRocket AI Dev Tool Power Rankings (February 2026)</li>
-      </ul>
-      <p>That's the tension worth naming up front: by adoption and product quality, Windsurf is at or near the top of the category. The uncertainty is entirely strategic, not technical. As a tool to use this week, it's excellent. As a tool to standardize a 200-person engineering org on for the next three years, the calculus is more complicated — and we'll get to why.</p>
+      <h2 id="what-windsurf-is-current-state-2026">What Devin Desktop Is — Current State (2026)</h2>
+      <p>Devin Desktop is a VS Code-based, AI-native IDE — the product that was Codeium, then Windsurf, now owned and rebranded by Cognition. The June 2026 rebrand was deliberately low-friction: per Cognition, the IDE, extensions, keybindings, language servers, workflows, MCP connections, and existing plans all carry over, with "only the name and branding" changing on day one. So the editor you'd open is, mechanically, the same one Windsurf users have run for the past year.</p>
+      <p>By the adoption numbers it inherited, the product sits near the top of the category: a reported 1M+ active users, an estimated $82–100M ARR, thousands of enterprise customers, and a #1 placement on the LogRocket AI Dev Tool Power Rankings in February 2026 (all figures predate the rebrand and are reported by the company or secondary sources, not independently audited).</p>
+      <p>That's the tension worth naming up front. The bones are strong and the new multi-agent direction is interesting. What's unsettled is the transition: a brand-new identity, a signature feature on the way out, and a roadmap now steered by Cognition's broader Devin ambitions. As a tool to use this week, it holds up. As a tool to standardize a large engineering org on for the next three years, the calculus is more complicated — and the next two sections are why.</p>
+
+      <h2 id="the-acp-pivot">The ACP Pivot: Agent Command Center</h2>
+      <p>The clearest signal of where Devin Desktop is heading is the <strong>Agent Command Center</strong>, now the default surface. Instead of opening straight into the editor, you land on a Kanban-style board that manages every local and cloud agent in one place, with "Spaces" grouping related sessions, pull requests, files, and context. It reframes the product from "an editor with an AI assistant" toward "a control room for a fleet of agents."</p>
+      <p>What makes that more than a UI change is the open <strong>Agent Client Protocol (ACP)</strong>. Devin Desktop can run third-party agents — Cognition's docs list Codex CLI, Claude Agent, OpenCode, Junie, and Gemini CLI, plus any ACP-compatible agent — with the same interface as native Devin: they appear in the Kanban board, run inside Spaces, and share context. This is a genuine differentiator. Most AI IDEs lock you into one vendor's model and agent; Devin Desktop is betting on an open layer where you bring whichever agent you trust for the task. Two caveats worth knowing: ACP agents require a Pro, Max, or Teams plan, and when you run an external agent, Cognition's privacy and legal terms don't cover it — billing and data handling fall to that provider.</p>
+      <p>It's an unusual position. Devin Desktop competes with <a href="../review/claude-code.html" style="color:var(--accent)">Claude Code</a>, yet ACP lets you run Claude Agent inside it. The open-agent direction is the most compelling reason to take the rebrand seriously rather than just wait it out.</p>
+
+      <h2 id="cascade-eol">Cascade Is Being Retired</h2>
+      <p>Here's the part that should weigh on the decision: <strong>Cascade — the feature Windsurf was known for — is being end-of-lifed.</strong> Cognition has said legacy Cascade support continues through <strong>July 1, 2026</strong>, after which it's discontinued. Its replacement is <strong>Devin Local</strong>, rewritten in Rust and described as up to ~30% more token-efficient, with subagent support — positioned as the successor to Cascade as the primary local agent.</p>
+      <p>On paper, a faster and more efficient local agent is an upgrade. In practice, retiring the single most recognizable feature weeks after a rebrand is a lot of change at once, and it carries real switching cost: teams with CI or automation that explicitly invokes Cascade have to repoint it to Devin Local, and there's no indefinite opt-out. If you adopted Windsurf specifically for Cascade's read-run-observe-iterate loop, the honest framing is that you're moving to a new engine — a promising one, but new — on Cognition's timeline, not yours.</p>
 
       <h2 id="key-features">Key Features</h2>
-      <p>Windsurf's feature set is genuinely deep, and several pieces are unique in the category. Here's what actually matters.</p>
+      <p>The feature set is deep, and a few pieces are distinctive in the category. Here's what actually matters, accounting for what's changing.</p>
 
-      <h3>Cascade</h3>
-      <p>Cascade is the defining feature and the reason most people choose Windsurf. It doesn't just suggest code — it actively reads your files, runs terminal commands, observes the output, and iterates until a task is complete. That feedback loop is what separates an agent from autocomplete: it can write a change, run the test, see the failure, and fix it without you mediating each step. The free tier allows 5 Cascade sessions per day; Pro makes them unlimited.</p>
+      <h3>Cascade → Devin Local</h3>
+      <p>Cascade was the defining feature: it didn't just suggest code, it read your files, ran terminal commands, observed the output, and iterated until a task was done — the feedback loop that separates an agent from autocomplete. As covered above, it's being retired on July 1, 2026 in favor of <strong>Devin Local</strong>, a Rust rewrite that keeps the same agentic loop while claiming better token efficiency and subagent support. The capability survives the transition; the name and engine underneath it do not.</p>
 
-      <h3>SWE-1.5</h3>
-      <p>SWE-1.5 is Cognition's proprietary coding model, added after the acquisition, and it's the most consequential post-deal change. It runs at roughly 950 tokens per second — about 13x faster than Claude Sonnet 4.5 and 6x faster than Haiku 4.5 — while holding near-frontier coding quality. Speed sounds like a vanity metric until you've waited on an agent loading context for a large repo; at this inference rate, the lag that makes agentic coding feel sluggish largely disappears. It's the clearest evidence so far that Cognition's ownership is adding real capability, not just absorbing a competitor.</p>
+      <h3>SWE-1.6</h3>
+      <p>SWE-1.6 is Cognition's in-house coding model and the current default (it supersedes the post-acquisition SWE-1.5). Cognition markets it as the fastest coding model available, with high-throughput inference that targets the exact pain point of agentic coding on large repos: the lag while an agent loads context. Speed sounds like a vanity metric until you've waited on a slow agent loop; a model tuned for throughput is one of the clearer arguments that Cognition's ownership is adding capability, not just absorbing a competitor. As with any vendor benchmark, treat the "fastest" claim as the company's own positioning.</p>
 
       <h3>Codemaps</h3>
       <p>Codemaps is visual codebase navigation — it renders the relationships between files and components so you can see how a system fits together rather than spelunking through imports. On a small project it's a nicety. On a large, unfamiliar codebase it's the difference between an hour of orientation and ten minutes, and it pairs naturally with Cascade when you need the agent to work across modules.</p>
 
       <h3>Fast Context</h3>
-      <p>Fast Context is Windsurf's approach to deep codebase understanding on large projects. It loads the relevant context faster than competitors, which is exactly where most AI IDEs bog down — the bigger the repo, the slower and less accurate the assistance tends to get. Combined with SWE-1.5's throughput, Fast Context is a big part of why Windsurf holds up on real production codebases rather than just demos.</p>
+      <p>Fast Context is the product's approach to deep codebase understanding on large projects. It loads relevant context faster than many competitors, which is exactly where most AI IDEs bog down — the bigger the repo, the slower and less accurate the assistance tends to get. Combined with SWE-1.6's throughput, it's a big part of why the tool holds up on real production codebases rather than just demos.</p>
 
       <h3>Coding Agent</h3>
-      <p>The Coding Agent is Windsurf's autonomous GitHub issue handler. Point it at an issue and it reads the ticket, writes the code, and submits a pull request without manual intervention. This is the feature that most clearly overlaps with Cognition's Devin — and it's a preview of where the merged roadmap is likely heading: less "assist the developer in the editor," more "hand the work off and review the PR."</p>
+      <p>The Coding Agent is the autonomous GitHub issue handler. Point it at an issue and it reads the ticket, writes the code, and submits a pull request without manual intervention. This is the feature that most clearly overlaps with Cognition's Devin — and it's a preview of where the merged roadmap is heading: less "assist the developer in the editor," more "hand the work off and review the PR." The Agent Command Center is the surface that ties these handoffs together.</p>
 
       <h3>40+ IDE plugins</h3>
-      <p>Windsurf isn't locked to its VS Code base — it ships plugins for JetBrains, Vim, Xcode, and 40+ environments in total. This is the quietly decisive advantage over Cursor, which is a VS Code fork and only runs as a VS Code fork. If your team lives in IntelliJ, or you're an iOS developer in Xcode, Windsurf is effectively the only serious AI-native option, and that reach is the widest in the category.</p>
+      <p>The product isn't locked to its VS Code base — it ships plugins for JetBrains, Vim, Xcode, and 40+ environments in total. That's a quiet advantage over <a href="../review/cursor.html" style="color:var(--accent)">Cursor</a>, which runs only as a VS Code fork. If your team lives in IntelliJ, or you're an iOS developer in Xcode, Devin Desktop is one of the few serious AI-native options, and its editor reach is among the widest in the category.</p>
 
       <h3>Flows and Hooks</h3>
-      <p>Flows and Hooks are Windsurf's advanced automation workflows — a way to wire custom, repeatable agent behaviors into your process. The capability is powerful, but it's also where the product shows its seams: documentation is currently thin, and getting the most out of these features takes more trial and error than it should. Promising, underdocumented.</p>
+      <p>Flows and Hooks are the advanced automation workflows — a way to wire custom, repeatable agent behaviors into your process. The capability is useful, but it's also where the product shows its seams: documentation has been thin, and getting the most out of these features takes more trial and error than it should. That seam matters more during a transition, when behaviors built around Cascade may need rework for Devin Local.</p>
 
       <h2 id="pros-and-cons">Pros and Cons</h2>
       <div class="pros-cons">
         <div class="pros-box">
           <h4>Strengths</h4>
-          <div class="pro-item">Cascade's autonomous read-run-observe-iterate loop matches Cursor Composer</div>
-          <div class="pro-item">SWE-1.5 is dramatically faster (~950 tok/s) at near-frontier quality</div>
-          <div class="pro-item">40+ IDE plugins — JetBrains, Vim, Xcode — widest reach in the category</div>
-          <div class="pro-item">Free tier with 5 Cascade sessions/day, no credit card required</div>
-          <div class="pro-item">#1 on LogRocket rankings; 1M+ users, strong enterprise traction</div>
+          <div class="pro-item">Open ACP layer runs Codex, Claude Agent, OpenCode and more inside one IDE</div>
+          <div class="pro-item">Agent Command Center centralizes local and cloud agents in one board</div>
+          <div class="pro-item">SWE-1.6 in-house model tuned for fast agentic coding on large repos</div>
+          <div class="pro-item">40+ IDE plugins — JetBrains, Vim, Xcode — among the widest reach in the category</div>
+          <div class="pro-item">Free tier and a low-friction rebrand: editor, keybindings and extensions carry over</div>
         </div>
         <div class="cons-box">
           <h4>Limitations</h4>
-          <div class="con-item">Strategic uncertainty under Cognition (which also runs Devin)</div>
-          <div class="con-item">Pro raised $15 → $20; Teams $25 → $40, poorly communicated</div>
-          <div class="con-item">Email-only support on Pro; thin docs for Flows and Hooks</div>
-          <div class="con-item">Auto-refill billing has caused unexpected double-charges</div>
+          <div class="con-item">Signature Cascade engine retired July 1, 2026 — forced move to Devin Local</div>
+          <div class="con-item">Brand and product identity mid-transition; post-rebrand roadmap unsettled</div>
+          <div class="con-item">Roadmap now steered by Cognition's broader Devin strategy</div>
+          <div class="con-item">Thin docs for advanced workflows; ACP agents need a paid plan</div>
         </div>
       </div>
 
@@ -296,68 +313,69 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <div class="score-row"><span class="score-name">Ease of Use</span><div class="score-bar-track"><div class="score-bar-fill" style="width:85%"></div></div><span class="score-val">8.5</span></div>
         <div class="score-row"><span class="score-name">Features</span><div class="score-bar-track"><div class="score-bar-fill" style="width:90%"></div></div><span class="score-val">9.0</span></div>
         <div class="score-row"><span class="score-name">Value for Money</span><div class="score-bar-track"><div class="score-bar-fill" style="width:75%"></div></div><span class="score-val">7.5</span></div>
-        <div class="score-row"><span class="score-name">Integration</span><div class="score-bar-track"><div class="score-bar-fill" style="width:85%"></div></div><span class="score-val">8.5</span></div>
-        <div class="score-row"><span class="score-name">Support &amp; Docs</span><div class="score-bar-track"><div class="score-bar-fill" style="width:65%"></div></div><span class="score-val">6.5</span></div>
+        <div class="score-row"><span class="score-name">Integration</span><div class="score-bar-track"><div class="score-bar-fill" style="width:90%"></div></div><span class="score-val">9.0</span></div>
+        <div class="score-row"><span class="score-name">Support &amp; Maturity</span><div class="score-bar-track"><div class="score-bar-fill" style="width:60%"></div></div><span class="score-val">6.0</span></div>
       </div>
-      <p>Features and ease of use carry the score — the VS Code-based interface is clean, Cascade is intuitive, and the 40+ plugins plus a no-credit-card free tier lower the barrier to entry. Value takes a hit from the post-acquisition price increases, and support is the clear weak point: Pro gets email-only help, the docs for advanced features lag the product, and the March 2026 pricing overhaul was communicated poorly enough to dent trust.</p>
+      <p>Features and ease of use carry the score — the VS Code base is clean, the agent loop is intuitive, and the 40+ plugins plus a free tier lower the barrier to entry. Integration rises with the ACP pivot: an open layer that runs Codex, Claude Agent, and OpenCode inside one IDE is a real differentiator. The offsetting weak point is maturity, not capability — the rebrand, the Cascade end-of-life, and a roadmap now tied to Cognition's Devin strategy make the near-term trajectory the least predictable thing about the product. Net of those opposing moves, the composite holds at 8.2.</p>
 
-      <h2 id="pricing-verified-may-2026">Pricing (verified May 2026)</h2>
-      <p>Windsurf's pricing changed materially after the Cognition acquisition, and that context matters as much as the numbers themselves.</p>
+      <h2 id="pricing-verified-may-2026">Pricing (verified June 2026)</h2>
+      <p>Pricing carried over from Windsurf largely intact through the rebrand, and it now runs on a quota model rather than fixed request counts — quotas refresh on a daily/weekly basis, with cost per message varying by model and task complexity, and overage purchasable at API rates. Figures below are verified on the Devin Desktop pricing page as of June 2026.</p>
       <ul>
-        <li><strong>Free — $0:</strong> 5 Cascade sessions/day, basic models, no credit card required.</li>
-        <li><strong>Pro — $20/month</strong> ($16/month annual)<strong>:</strong> unlimited Cascade, all standard models, full feature access. <em>Was $15/month before the Cognition acquisition; raised to $20 in 2026.</em></li>
-        <li><strong>Pro Plus — $35/month:</strong> priority access to flagship models including Claude Opus 4.6.</li>
-        <li><strong>Teams — $40/user/month:</strong> admin controls, SSO, team analytics. <em>Was $25/user/month before; raised to $40 post-acquisition, matching Cursor Business.</em></li>
+        <li><strong>Free — $0:</strong> a light quota to code with agents; no credit card required.</li>
+        <li><strong>Pro — $20/month:</strong> the popular individual tier; quota-based agent access across models, full feature access, and ACP third-party agents.</li>
+        <li><strong>Max — $200/month:</strong> the high-volume individual tier (labeled new), for heavy agentic and parallel workloads.</li>
+        <li><strong>Teams — $80/month base + $40/month per developer seat:</strong> admin controls, SSO, shared configuration, team-pushed agent registry.</li>
+        <li><strong>Enterprise — custom:</strong> includes legacy Windsurf Enterprise plans, which Cognition has said are preserved through the rebrand.</li>
       </ul>
 
       <div class="what-changed">
         <h4>What changed in 2025-2026</h4>
-        <p>A three-way acquisition battle reshaped the company: OpenAI bid $3B (fell through), Google paid $2.4B for the team (acquihire), and Cognition acquired the company for $250M. The proprietary SWE-1.5 model was added post-acquisition (~13x faster inference). Pro rose from $15 to $20/month and Teams from $25 to $40/user/month. Product direction is now tied to Cognition's Devin roadmap.</p>
+        <p>An ownership saga reshaped the company: it began as Codeium, rebranded to Windsurf, drew a ~$3B OpenAI bid (fell through), then a ~$2.4B Google reverse-acquihire of the founders and ~40 staff, then a ~$250M Cognition acquisition of the remainder. On June 2, 2026 Cognition retired the Windsurf name and relaunched the IDE as Devin Desktop. Cascade is being retired (July 1, 2026) in favor of Devin Local; the in-house model is now SWE-1.6; the Agent Command Center and the open ACP layer are the new default direction. Product strategy is now tied to Cognition's Devin roadmap.</p>
       </div>
 
-      <h2 id="the-strategic-uncertainty-you-re-buying-into">The Strategic Uncertainty You're Buying Into</h2>
-      <p>This is the part most reviews skip, and it's the part that should shape an enterprise decision. The Cognition acquisition creates real strategic uncertainty. Cognition's primary product is Devin — the most autonomous coding agent in the category, priced around $500/month for enterprise teams. Windsurf is an IDE. These are complementary but fundamentally different products, aimed at different ways of working.</p>
-      <p>Cognition's stated plan is to merge Windsurf's IDE capabilities with Devin into fully autonomous development workflows. That's a coherent vision. What it means for a $20/month Pro subscriber, though, is not yet clear — will Windsurf remain a best-in-class editor you drive, or gradually become the consumer-facing front end of an autonomous platform you supervise?</p>
-      <p>The most honest assessment: Windsurf is excellent today. Its 12-month roadmap is simply less predictable than <a href="../review/cursor.html" style="color:var(--accent)">Cursor</a>'s, which remains an independent company answering only to its own users. For solo developers and small teams, that uncertainty is manageable — you can switch tools in an afternoon if the direction stops fitting. For enterprises making multi-year tooling commitments, it's worth monitoring closely before you standardize. It's also worth watching how <a href="../review/google-antigravity.html" style="color:var(--accent)">Google Antigravity</a> evolves, given Google now employs Windsurf's original founders.</p>
+      <h2 id="the-strategic-uncertainty-you-re-buying-into">The Transition You're Buying Into</h2>
+      <p>This is the part that should shape an enterprise decision. Cognition's flagship product is Devin — a highly autonomous coding agent aimed at hands-off, supervise-the-PR workflows. Devin Desktop is an IDE you drive directly. Folding the two together is a coherent vision, but the merge is actively underway, and a buyer today is buying into the middle of it.</p>
+      <p>Three things make the near term hard to predict. The brand is weeks old. The signature Cascade engine is being retired on the company's timeline, not yours. And the product's center of gravity is shifting from "an editor you drive" toward "a command center for a fleet of agents you supervise" — a direction the Agent Command Center makes explicit. None of that is inherently bad; the ACP openness is a real bet worth respecting. But it's change layered on change.</p>
+      <p>The honest assessment: the product is capable today, and its 12-month roadmap is simply less predictable than <a href="../review/cursor.html" style="color:var(--accent)">Cursor</a>'s, which remains an independent company answering only to its own users. For solo developers and small teams, the uncertainty is manageable — switching costs stay low, and the editor still works the way it did under Windsurf. For enterprises making multi-year tooling commitments, the reasonable move is to let the dust settle before standardizing on it. It's also worth watching how <a href="../review/google-antigravity.html" style="color:var(--accent)">Google Antigravity</a> evolves, given Google now employs the original Windsurf founders.</p>
 
-      <h2 id="windsurf-vs-cursor">Windsurf vs Cursor</h2>
-      <p>Windsurf and Cursor are the two tools most developers actually cross-shop, and in 2026 they've landed at the same price with genuinely different philosophies. Here's the side-by-side.</p>
+      <h2 id="windsurf-vs-cursor">Devin Desktop vs Cursor</h2>
+      <p>Devin Desktop (the former Windsurf) and Cursor are the two tools most developers actually cross-shop, and they've landed with genuinely different philosophies. Here's the side-by-side.</p>
       <table class="compare-table">
-        <thead><tr><th>&nbsp;</th><th>Windsurf</th><th>Cursor</th></tr></thead>
+        <thead><tr><th>&nbsp;</th><th>Devin Desktop</th><th>Cursor</th></tr></thead>
         <tbody>
-          <tr><td>Core model</td><td class="win">SWE-1.5 (proprietary, 13x faster)</td><td>Claude/GPT (user-selectable)</td></tr>
-          <tr><td>Agentic feature</td><td>Cascade (autonomous multi-step)</td><td>Composer 2.0 + Background Agents</td></tr>
+          <tr><td>Core model</td><td>SWE-1.6 (in-house) + ACP agents</td><td>Claude/GPT (user-selectable)</td></tr>
+          <tr><td>Multi-agent</td><td class="win">Open ACP: Codex, Claude Agent, OpenCode, Gemini CLI</td><td>Cursor agents only</td></tr>
+          <tr><td>Agentic feature</td><td>Devin Local (Cascade successor) + Agent Command Center</td><td>Composer + Background Agents</td></tr>
           <tr><td>IDE plugins</td><td class="win">40+ (JetBrains, Vim, Xcode, VS Code)</td><td>VS Code fork only</td></tr>
-          <tr><td>Free tier</td><td class="win">✓ 5 Cascade sessions/day</td><td>✗ None</td></tr>
-          <tr><td>Pro price</td><td>$20/month</td><td>$20/month</td></tr>
-          <tr><td>Teams price</td><td>$40/user/month</td><td>$40/user/month</td></tr>
-          <tr><td>Ownership</td><td>Cognition AI (acquired 2025)</td><td class="win">Independent</td></tr>
-          <tr><td>Best for</td><td>Multi-IDE teams, value-focused devs</td><td>VS Code users, heavy agent workflows</td></tr>
-          <tr><td>LogRocket ranking</td><td class="win">#1 (Feb 2026)</td><td>Top 3</td></tr>
+          <tr><td>Free tier</td><td class="win">✓ Light agent quota</td><td>✗ None</td></tr>
+          <tr><td>Entry price</td><td>$20/month (Pro)</td><td>$20/month (Pro)</td></tr>
+          <tr><td>Ownership</td><td>Cognition AI (rebranded June 2026)</td><td class="win">Independent</td></tr>
+          <tr><td>Roadmap stability</td><td>In transition (rebrand + Cascade EOL)</td><td class="win">Settled</td></tr>
+          <tr><td>Best for</td><td>Multi-IDE teams, open multi-agent setups</td><td>VS Code users, heavy single-vendor agent workflows</td></tr>
         </tbody>
       </table>
-      <p>The clean read: Windsurf wins on model speed, multi-IDE reach, and having a real free tier; Cursor wins on model flexibility and roadmap predictability as an independent company. At identical prices, the deciding factor is usually which editor you live in and how much the ownership question bothers you.</p>
+      <p>The clean read: Devin Desktop wins on multi-IDE reach, an open multi-agent layer, and having a real free tier; Cursor wins on a settled roadmap and its position as an independent company. At similar entry prices, the deciding factors are usually which editor you live in, whether the open-ACP direction appeals, and how much the transition risk bothers you.</p>
 
-      <h2 id="who-windsurf-is-for">Who Windsurf Is For</h2>
-      <p>Windsurf rewards a few clear profiles and asks others to weigh the uncertainty more carefully.</p>
+      <h2 id="who-windsurf-is-for">Who Devin Desktop Is For</h2>
+      <p>The product rewards a few clear profiles and asks others to weigh the transition more carefully.</p>
       <ul>
-        <li><strong>VS Code developers who want the best price-quality ratio at $20/month</strong> — Windsurf is the recommendation, with SWE-1.5 speed as the tiebreaker over Cursor.</li>
-        <li><strong>Developers on JetBrains, Vim, or Xcode</strong> — Windsurf is effectively the only serious AI-native option, since Cursor is VS Code-only.</li>
-        <li><strong>Value-focused solo devs and small teams</strong> — the free tier and unlimited Cascade on Pro make it easy to adopt, and switching costs stay low if the roadmap drifts.</li>
-        <li><strong>Enterprises committing to a multi-year stack</strong> — the tool is excellent, but watch the Cognition-Devin integration roadmap before standardizing on it. Teams wanting a lower-risk entry point may also weigh <a href="../review/github-copilot.html" style="color:var(--accent)">GitHub Copilot</a> alongside it.</li>
+        <li><strong>Developers who want an open multi-agent IDE</strong> — running Codex, Claude Agent, and OpenCode side by side through ACP is the strongest reason to pick Devin Desktop over a single-vendor editor.</li>
+        <li><strong>Developers on JetBrains, Vim, or Xcode</strong> — it's one of the few serious AI-native options, since Cursor is VS Code-only.</li>
+        <li><strong>Value-focused solo devs and small teams</strong> — the free tier and $20 Pro make it easy to adopt, and switching costs stay low if the roadmap drifts.</li>
+        <li><strong>Enterprises committing to a multi-year stack</strong> — the tool is capable, but the rebrand, the Cascade end-of-life, and the Devin integration roadmap argue for letting the dust settle before standardizing. A lower-risk entry point worth weighing alongside it is <a href="../review/github-copilot.html" style="color:var(--accent)">GitHub Copilot</a>.</li>
       </ul>
 
       <div class="affiliate-box">
-        <h3>Try Windsurf Free</h3>
-        <p>Start on the free tier — 5 Cascade sessions a day, no credit card required.</p>
-        <a href="https://windsurf.com" class="affiliate-btn" target="_blank" rel="noopener">Visit Windsurf →</a>
+        <h3>Try Devin Desktop Free</h3>
+        <p>Start on the free tier — a light agent quota, no credit card required.</p>
+        <a href="https://devin.ai/desktop" class="affiliate-btn" target="_blank" rel="noopener">Visit Devin Desktop →</a>
       </div>
 
       <!-- What Users Are Saying -->
       <div class="users-saying" style="margin:48px 0;">
         <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Community Sentiment</div>
         <h2 id="what-users-are-saying" style="font-family:var(--display);font-size:1.75rem;font-weight:800;color:var(--text);margin:0 0 8px 0;">What Users Are Saying</h2>
-        <p style="font-family:var(--sans);font-size:0.95rem;color:var(--text2);margin:0 0 32px 0;line-height:1.6;">We track discussion across r/windsurf, r/programming, and r/webdev, alongside Product Hunt, G2, and Trustpilot, to surface how developers are experiencing Windsurf's Cascade agent and the post-acquisition changes in real workflows. G2 sentiment is strong; Trustpilot is more mixed, with auto-refill billing complaints the recurring theme.</p>
+        <p style="font-family:var(--sans);font-size:0.95rem;color:var(--text2);margin:0 0 32px 0;line-height:1.6;">We track discussion across r/windsurf, r/programming, and r/webdev, alongside Product Hunt, G2, and Trustpilot, to surface how developers are experiencing the agent loop and the rebrand changes in real workflows. G2 sentiment for the underlying IDE remains strong; the live debate is the transition — the Cascade end-of-life and the Devin Desktop name change are the recurring themes.</p>
         <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:32px;display:flex;gap:40px;flex-wrap:wrap;">
           <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--accent)">1M+</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Active Users</div></div>
           <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">$82-100M</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Estimated ARR</div></div>
@@ -378,24 +396,24 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <div style="margin-bottom:28px;">
           <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:var(--accent);">●</span> Common frustrations</h3>
           <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
-            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"The March 2026 pricing overhaul left many existing users feeling they got less for the same money. The Pro jump from $15 to $20 wasn't communicated well and the Teams jump to $40 was a shock."</p>
-            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Nubia Magazine independent review · May 2026</div>
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"Retiring Cascade right after the rename is a lot. I get that Devin Local is supposed to be better, but it's a forced migration on someone else's schedule, and our CI scripts call Cascade directly."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">r/windsurf sentiment · June 2026</div>
           </div>
           <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
-            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"Auto-refill billing has caused unexpected double-charges according to some Trustpilot reviewers. Turn it off until you know your usage pattern."</p>
-            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Trustpilot pattern analysis · 2026</div>
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"Earlier pricing changes already dented trust — the Pro jump from $15 to $20 and the Teams move to $40 weren't communicated well. Now a whole new brand. Good product, but a lot of churn for users to absorb."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Independent review roundup · 2026</div>
           </div>
         </div>
         <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.15);border-radius:12px;padding:20px 24px;">
           <div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:8px;">AIToolGrade Take</div>
-          <p style="font-family:var(--sans);font-size:0.93rem;color:var(--text);line-height:1.7;margin:0;">Windsurf is the most technically interesting AI IDE in the category in May 2026. SWE-1.5's speed advantage is real, Cascade's autonomous multi-file capability matches Cursor Composer, and the 40+ IDE plugin reach is the widest in the category. The honest concern is strategic uncertainty — Cognition acquired a $100M ARR product while running a different business (Devin at $500/month enterprise). How Windsurf's roadmap integrates with Devin over the next 12 months will determine whether it remains an independent-feeling IDE or becomes the consumer face of an autonomous coding platform. For developers who live in VS Code and want the best price-quality ratio at $20/month: Windsurf is the recommendation. For developers on JetBrains, Vim, or Xcode: Windsurf is the only serious AI-native option. For enterprises committing to a multi-year tool stack: watch the Cognition-Devin integration roadmap before standardizing.</p>
+          <p style="font-family:var(--sans);font-size:0.93rem;color:var(--text);line-height:1.7;margin:0;">As of June 2026 this is a capable VS Code-based IDE in the middle of a real transition. The open ACP layer — running Codex, Claude Agent, and OpenCode inside one editor — is a genuine differentiator, the 40+ IDE plugin reach is among the widest in the category, and SWE-1.6 plus Cognition's Devin backing give it momentum. The honest concern is maturity, not capability: the Windsurf brand is gone, the signature Cascade engine retires July 1, 2026 in favor of Devin Local, and the roadmap now follows Cognition's broader Devin strategy. For developers who want an open multi-agent IDE, or who live in JetBrains, Vim, or Xcode, it's a strong pick. For enterprises committing to a multi-year stack, the reasonable move is to let the rebrand and the Cascade migration settle before standardizing.</p>
         </div>
       </div>
       <!-- END: What Users Are Saying -->
 
       <h2 id="the-bottom-line">The Bottom Line</h2>
-      <p>Windsurf is, technically, one of the best AI code editors you can use in 2026. SWE-1.5 gives it a real speed advantage, Cascade's autonomy is on par with Cursor's Composer, the 40+ IDE plugins give it reach nothing else matches, and a no-credit-card free tier makes it easy to try. By the numbers — 1M+ users, #1 on LogRocket, strong enterprise traction — it's at the front of the pack.</p>
-      <p>The caveat isn't about the product; it's about the company. Cognition now owns a $100M ARR IDE while building Devin, a $500/month autonomous agent, and how those two roadmaps merge will define what Windsurf becomes. Today the recommendation is clear: for VS Code developers it's the best value at $20/month, and for JetBrains, Vim, or Xcode users it's the only serious AI-native choice. Just go in understanding that you're buying an excellent tool with a less predictable trajectory than its independent rival — manageable for individuals and small teams, worth watching for enterprises.</p>
+      <p>The product that was Windsurf — now Devin Desktop — remains a capable AI code editor in 2026. SWE-1.6 keeps it fast, the open ACP layer lets it run Codex, Claude Agent, and OpenCode inside one IDE, the 40+ IDE plugins give it reach few rivals match, and a free tier makes it easy to try. The underlying editor carried through the rebrand essentially unchanged.</p>
+      <p>The caveat isn't really about capability; it's about timing. Cognition rebranded the product in June, is retiring its signature Cascade engine on July 1 in favor of Devin Local, and is steering the roadmap toward its broader Devin strategy — three changes stacked close together. Today the recommendation is conditional: for developers who want an open multi-agent setup, or who live in JetBrains, Vim, or Xcode, it's a strong choice at $20/month. Just go in understanding you're adopting a capable tool with a less predictable near-term trajectory than its independent rival — manageable for individuals and small teams, worth letting settle before an enterprise standardizes on it.</p>
     </div>
   </div>
   <div class="review-sidebar">
@@ -411,11 +429,11 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       <div class="sidebar-title" style="margin-top:16px">Pricing</div>
       <div class="sidebar-price-row"><span class="sidebar-price-label">Free</span><span class="sidebar-price-val">$0/mo</span></div>
       <div class="sidebar-price-row"><span class="sidebar-price-label">Pro</span><span class="sidebar-price-val">$20/mo</span></div>
-      <div class="sidebar-price-row"><span class="sidebar-price-label">Pro Plus</span><span class="sidebar-price-val">$35/mo</span></div>
-      <div class="sidebar-price-row"><span class="sidebar-price-label">Teams</span><span class="sidebar-price-val">$40/user</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Max</span><span class="sidebar-price-val">$200/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Teams</span><span class="sidebar-price-val">$80+$40/seat</span></div>
       <div class="sidebar-price-row"><span class="sidebar-price-label">Owner</span><span class="sidebar-price-val">Cognition AI</span></div>
-      <a href="https://windsurf.com" class="sidebar-cta" target="_blank" rel="noopener">Visit Windsurf →</a>
-      <div class="sidebar-disclosure">Verified May 2026</div>
+      <a href="https://devin.ai/desktop" class="sidebar-cta" target="_blank" rel="noopener">Visit Devin Desktop →</a>
+      <div class="sidebar-disclosure">Devin Desktop (formerly Windsurf) · Verified June 2026</div>
     </div>
   </div>
 </div>

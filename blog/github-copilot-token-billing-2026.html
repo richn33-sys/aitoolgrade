@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="canonical" href="https://aitoolgrade.com/blog/github-copilot-token-billing-2026.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GitHub Copilot moved to token-based AI Credits on June 1, 2026. What actually changed, why some bills jumped, and how to pick an alternative by your usage.">
+<title>GitHub Copilot Token Billing 2026: What Changed and Your Alternatives | AIToolGrade</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fafaf8;--bg2:#f3f2ee;--text:#1a1a18;--text2:#4a4a45;--text3:#8a8a82;--accent:#e85d26;--accent2:#f07d4a;--accent-dim:rgba(232,93,38,0.08);--border:#e2e0d8;--white:#ffffff;--display:'Playfair Display',serif;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:4px}
+.nav-dropdown>a::after{content:"▾";font-size:10px}
+.dropdown-menu{visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.15s ease,visibility 0s linear 0.5s;position:absolute;top:calc(100% + 8px);left:-16px;background:white;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:200;max-height:80vh;overflow-y:auto}
+.dropdown-menu a{display:block;padding:8px 12px;font-size:14px;color:var(--text2);text-decoration:none;border-radius:6px;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--bg2);color:var(--accent)}
+.nav-dropdown:hover .dropdown-menu{visibility:visible;opacity:1;pointer-events:auto;transition:opacity 0.15s ease,visibility 0s}
+.nav-dropdown .dropdown-menu::before{content:"";position:absolute;top:-20px;left:0;right:0;height:20px}
+.nav-dropdown::after{content:"";position:absolute;height:20px;width:calc(100% + 16px);bottom:-20px;left:-16px}
+.post-wrap{max-width:780px;margin:0 auto;padding:60px 40px}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:24px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+.post-tag{display:inline-block;background:var(--accent-dim);color:var(--accent);font-size:12px;font-weight:600;padding:4px 10px;border-radius:100px;font-family:var(--mono);margin-bottom:16px}
+h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;margin-bottom:20px}
+.post-meta{font-size:13px;color:var(--text3);margin-bottom:40px;display:flex;gap:20px}
+.post-body h2{font-family:var(--display);font-size:28px;font-weight:700;margin:40px 0 16px}
+.post-body h3{font-size:18px;font-weight:600;margin:28px 0 12px}
+.post-body p{color:var(--text2);margin-bottom:16px;font-size:16px}
+.post-body ul{color:var(--text2);padding-left:20px;margin-bottom:16px}
+.post-body ul li{margin-bottom:8px}
+.comparison-table{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:32px 0}
+.comparison-table th{background:var(--bg2);font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);padding:14px 16px;text-align:left;border-bottom:1px solid var(--border)}
+.comparison-table td{padding:14px 16px;border-bottom:1px solid var(--border);font-size:14px;color:var(--text2)}
+.comparison-table tr:last-child td{border-bottom:none}
+.winner{background:var(--accent-dim);font-weight:600;color:var(--accent)}
+.verdict-box{background:var(--bg2);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:32px 0}
+.verdict-box h4{font-size:14px;font-weight:600;color:var(--accent);margin-bottom:8px;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.06em}
+.verdict-box p{color:var(--text2);font-size:14px;margin:0}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-item h3{font-size:17px;font-weight:600;margin:0 0 8px;color:var(--text)}
+.faq-item p{margin:0;font-size:15px}
+.cta-box{background:var(--text);color:white;border-radius:14px;padding:28px;margin:40px 0;text-align:center}
+.cta-box h3{font-family:var(--display);font-size:22px;font-weight:700;margin-bottom:8px}
+.cta-box p{color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:20px}
+.cta-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta-btn{display:inline-block;background:var(--accent);color:white;padding:10px 20px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px;margin-top:80px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}
+.footer-brand span{color:var(--accent)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:12px;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--accent)}
+@media(max-width:768px){.post-wrap{padding:40px 20px}nav{padding:0 20px}h1{font-size:28px}.footer-inner{grid-template-columns:1fr 1fr}}
+
+/* === MOBILE NAV + RESPONSIVE TABLE FIX === */
+.nav-toggle{display:none;order:2;background:none;border:0;font-size:24px;line-height:1;color:var(--text);cursor:pointer;padding:4px 6px}
+@media(max-width:768px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(250,250,248,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 20px 16px;box-shadow:0 8px 24px rgba(0,0,0,0.06);max-height:calc(100vh - 64px);overflow-y:auto}
+  nav.nav-open .nav-links{display:flex}
+  .nav-links>a,.nav-dropdown{padding:12px 2px;border-bottom:1px solid var(--border)}
+  .nav-dropdown{position:static}
+  .nav-dropdown>a::after{display:none}
+  .dropdown-menu{display:none!important}
+  .nav-cta{display:block;text-align:center;background:var(--accent);color:#fff;margin-top:14px;padding:12px;border:0!important;border-radius:6px}
+  .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+  .comparison-wrap{overflow-x:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "GitHub Copilot Token Billing 2026: What Changed and Your Alternatives",
+  "author": {
+    "@type": "Person",
+    "name": "Marcus Veil",
+    "url": "https://aitoolgrade.com/author/marcus-veil.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIToolGrade",
+    "url": "https://aitoolgrade.com"
+  },
+  "datePublished": "2026-06-24",
+  "dateModified": "2026-06-24"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolgrade.com"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aitoolgrade.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "GitHub Copilot Token Billing 2026", "item": "https://aitoolgrade.com/blog/github-copilot-token-billing-2026.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Did GitHub Copilot raise its prices in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The base subscription prices did not change. Pro stays $10/month, Pro+ $39, Max $100, Business $19/user, and Enterprise $39/user. What changed on June 1, 2026 is the metering: plans moved to usage-based AI Credits, so heavier use of chat and agents can push you past your included allotment even though the sticker price is the same."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are GitHub Copilot code completions still free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Code completions and Next Edit Suggestions remain unlimited and do not consume AI Credits on paid plans. Credits are spent by chat, agents, and AI code review."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why did my GitHub Copilot bill jump in June 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two reasons. First, agentic sessions and chat now draw from a credit pool at each model's real token rate, and powerful models burn credits faster. Second, the old fallback that dropped you to a cheaper model when your allotment ran out was removed, so heavy agent users can exhaust credits quickly. Reports of very large bills are real but largely reflect heavy agent use, expensive models, or preview estimates rather than typical day-to-day usage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the best GitHub Copilot alternatives in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your usage profile. Cursor offers a more predictable mid-tier for IDE-centric developers. OpenCode and aider are open-source, bring-your-own-key tools where you pay only raw API cost or run a local model. Claude Code suits terminal and agent-heavy work with predictable Max tiers. Local models such as Ollama remove the subscription entirely at the cost of frontier capability. None of these is an unlimited plan; each is a different metering model."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Claude Code cheaper than GitHub Copilot now?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. Claude Code is also token-metered. Its Max tiers ($100 and $200) give predictable ceilings rather than an unlimited plan. Whether it is cheaper than Copilot depends entirely on how much agent and chat work you do. AIToolGrade is built with Claude Code, which we disclose as a conflict of interest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Did GitHub remove the unlimited Copilot plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There was never a truly unlimited agent plan, but the practical experience of one is ending. Flat-rate AI coding subscriptions are moving to metered billing across the industry because agentic workflows consume far more compute than autocomplete did. The realistic goal in 2026 is to pick the metering model that fits your usage, not to find an unlimited tier."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div id="nav-root"></div>
+<script src="../nav.js"></script>
+
+<div class="post-wrap">
+  <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/">Blog</a><span>›</span>GitHub Copilot Token Billing 2026</div>
+  <span class="post-tag">Pricing Analysis</span>
+  <h1>GitHub Copilot Token Billing 2026: What Changed and Your Alternatives</h1>
+  <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:32px;font-family:'DM Mono',monospace;">By <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade &middot; Last verified June 2026</p>
+  <div class="post-meta"><span>📅 Updated June 2026</span><span>⏱ 11 min read</span></div>
+
+  <div class="post-body">
+    <div class="verdict-box">
+      <h4>The short answer</h4>
+      <p>On June 1, 2026, GitHub Copilot moved every plan to usage-based billing: token-metered <strong>AI Credits</strong> replaced the older Premium Request Units. The base subscription prices did <em>not</em> change — Pro is still $10, Pro+ $39, Max $100, Business $19/user. What changed is the meter underneath. Code completions stay free; chat and agents now spend credits at each model's real token rate, and the old "drop to a cheaper model and keep going" fallback is gone. The result is the same sticker, a more variable bill for heavy agent users, and a search wave of people asking where to go next.</p>
+    </div>
+
+    <div style="background: #fef3cd; border: 1px solid #f0c040; border-radius: 10px; padding: 14px 18px; margin-bottom: 28px;">
+      <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: #8a6000; margin-bottom: 6px;">⚠️ Disclosure</div>
+      <p style="font-family: var(--sans); font-size: 0.88rem; color: #5a4000; line-height: 1.6; margin: 0;">AIToolGrade is built and maintained with Claude Code, and we have a direct financial relationship with Anthropic through API usage. This post routes readers toward several alternatives, Claude Code among them, so we want that on the table. We've also been deliberately honest about it below: Claude Code is token-metered too — it is not an "unlimited escape" from what Copilot just did. We've applied our standard research methodology and received no compensation from any tool mentioned here.</p>
+    </div>
+
+    <div class="toc" style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin:32px 0">
+      <p style="font-size:12px;font-family:'DM Mono',monospace;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px">In This Article</p>
+      <ol style="padding-left:20px;display:flex;flex-direction:column;gap:8px">
+        <li style="font-size:15px;color:var(--text2)"><a href="#what-changed" style="color:var(--text2)">What exactly changed on June 1</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#plans" style="color:var(--text2)">The current plans and credit allotments</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#bills-jumped" style="color:var(--text2)">Why some bills jumped — and the caveat on the big numbers</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#why-github" style="color:var(--text2)">Why GitHub did it, and what it walked back</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#bigger-picture" style="color:var(--text2)">The bigger picture: flat-rate AI coding is ending</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#alternatives" style="color:var(--text2)">Alternatives by usage profile</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#faq" style="color:var(--text2)">Frequently asked questions</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#bottom-line" style="color:var(--text2)">Bottom line</a></li>
+      </ol>
+    </div>
+
+    <h2 id="what-changed">What Exactly Changed on June 1</h2>
+    <p>Strip away the headlines and the change is narrow but consequential. GitHub retired Premium Request Units — the per-request quota Copilot used through early 2026 — and replaced them with <strong>GitHub AI Credits</strong>, where one credit equals $0.01. Instead of counting requests, the system now counts tokens. Input, output, and cached tokens all draw down your balance at each model's published API rate, and a model multiplier rides on top: powerful models cost more credits per token, smaller models cost less. These details are current as of late June 2026; GitHub has been adjusting them, so spot-check the specifics at <a href="https://docs.github.com" target="_blank" rel="noopener" style="color:var(--accent)">docs.github.com</a>.</p>
+
+    <p>Four practical shifts came with the switch:</p>
+    <ul>
+      <li><strong>Completions stay free, agents and chat are metered.</strong> Code completions and Next Edit Suggestions — the autocomplete most people associate with Copilot — remain unlimited and consume no credits. Chat, the Copilot agents, and AI code review are what draw the pool down. (Code review now also consumes GitHub Actions minutes when it runs in your pipeline.)</li>
+      <li><strong>The fallback was removed.</strong> This is the part that actually stings. Previously, exhausting your allotment dropped you to a cheaper model so you could keep working. Now an agentic session simply stops when your credits or budget run out. There's no quiet downgrade — the work halts until you add budget.</li>
+      <li><strong>Billing is token-based, not request-based.</strong> A single long agent run over a large codebase can cost far more than a short chat, even though both used to count as comparable "requests." Your cost now tracks the size and difficulty of the job.</li>
+      <li><strong>Annual plans were retired.</strong> Existing annual subscribers keep their Premium Request Units until expiry, then move to the Free plan or convert to monthly with prorated credits.</li>
+    </ul>
+
+    <h2 id="plans">The Current Plans and Credit Allotments</h2>
+    <p>Here's the thing worth repeating because it's the most common misconception in every thread on this: the prices didn't move. Pro is still $10. What moved is what each dollar buys and how fast you can spend the included credits. The allotments below were verified in late June 2026 — GitHub has tuned them more than once, so treat the credit figures as approximate and confirm at the source before budgeting.</p>
+
+    <table class="comparison-table">
+      <thead><tr><th>Plan</th><th>Price</th><th>Included AI Credits (approx.)</th><th>Who it fits</th></tr></thead>
+      <tbody>
+        <tr><td>Free</td><td>$0</td><td>Limited monthly allowance</td><td>Light/occasional use, trials</td></tr>
+        <tr><td>Pro</td><td>$10/mo</td><td>~$15 in credits</td><td>Individual devs, completion-heavy work</td></tr>
+        <tr><td>Pro+</td><td>$39/mo</td><td>~$70 in credits</td><td>Regular agent and chat users</td></tr>
+        <tr><td>Max</td><td>$100/mo</td><td>~$200 in credits</td><td>Heavy agentic workloads</td></tr>
+        <tr><td>Business</td><td>$19/user/mo</td><td>~$19/user, org-pooled</td><td>Teams wanting admin + budget controls</td></tr>
+        <tr><td>Enterprise</td><td>$39/user/mo</td><td>~$39/user, org-pooled</td><td>Large orgs, governance, pooled spend</td></tr>
+      </tbody>
+    </table>
+
+    <p>Two structural notes matter. Business and Enterprise draw from an <strong>org-pooled</strong> credit balance rather than rigid per-seat caps, which lets light users effectively subsidize heavy ones inside a team — useful, but also why an org bill can swing with usage rather than headcount. And the Max plan is new positioning: $100 buying roughly $200 in credits is GitHub signaling that the serious agent users are the ones the old flat model was quietly carrying.</p>
+
+    <h2 id="bills-jumped">Why Some Bills Jumped — and the Caveat on the Big Numbers</h2>
+    <p>The viral version of this story is a screenshot: a bill that went from $29 to $750, or claims of costs rising 10 to 50 times overnight. Those reports are real — people genuinely saw them — and it would be dishonest to wave them away. But it would be just as dishonest to present them as the typical outcome, because they mostly aren't.</p>
+
+    <p>When you read the specifics behind the alarming numbers, a pattern shows up. They tend to come from heavy, sustained agent use; from manually selecting the most expensive frontier models for routine work; from preview or estimated figures rather than final invoices; or from genuinely unusual workloads — someone running long autonomous sessions across a large monorepo all day. That's a real cost, and for that user the meter is a legitimate concern. It is not what most developers writing code with completions and the occasional chat will experience. The honest framing is: the ceiling moved for heavy agent users, and it moved a lot for the heaviest; for everyone else the day-to-day picture is closer to unchanged.</p>
+
+    <p>The removed fallback amplifies the perception. Under the old system, a heavy user who blew through their quota was silently shifted to a cheaper model and kept coding — they often never noticed the ceiling. Now they hit a hard stop and a prompt to add budget. Same underlying consumption; far more visible. A lot of the shock is that bill becoming legible, not necessarily a 25× jump in actual compute.</p>
+
+    <h2 id="why-github">Why GitHub Did It, and What It Walked Back</h2>
+    <p>GitHub's own framing was blunt: Copilot "is not the same product it was a year ago." When Copilot was autocomplete, flat-rate pricing made sense — the marginal cost of a completion is tiny. Agentic Copilot is a different animal. An agent that reads files, plans, edits across a repo, and verifies its work can consume orders of magnitude more compute than a suggestion popping up as you type. Under a flat fee, the heaviest agent users were being subsidized by everyone else, and that math stops working as agent use becomes the norm. The move to metered billing is economically defensible even if the rollout felt, to a lot of paying users, like a rug-pull.</p>
+
+    <p>The backlash was loud and worth reporting accurately. TechCrunch (May 30, 2026) wrote that "the golden age" of cheap AI coding "appears to be at an end — for the little guy." Forum and social reactions were sharper — "what a joke" was a representative line — and the discussion dominated communities like r/programming and r/cursor_ai. A recurring complaint was the sense of being "baited": GitHub spent two years encouraging developers to lean into agentic workflows, then put a meter on exactly that behavior. Those are community sentiments, attributed as such — we're reporting that they exist and run deep, not ratifying them as a verdict.</p>
+
+    <p>To GitHub's credit, this wasn't pure villainy, and it didn't stand pat. The company added several mitigations:</p>
+    <ul>
+      <li><strong>Pay-as-you-go</strong> — stay on your current plan and pay for extra usage without being forced to upgrade a tier.</li>
+      <li><strong>User-level budget controls</strong> — set spend caps so an agent can't quietly run up a bill.</li>
+      <li><strong>A preview bill experience and usage dashboard</strong> — see consumption and estimated cost before the invoice lands.</li>
+      <li><strong>A sign-up pause, then a reopening</strong> — after pausing new sign-ups around the launch, GitHub reopened them on June 16, phasing Student, Pro, Pro+, and Max back in.</li>
+    </ul>
+    <p>These are partial fixes, not a reversal. The meter is here to stay. But "GitHub got greedy" undersells what happened: a company priced a product whose cost structure had genuinely changed, executed it clumsily, and then bolted on guardrails after users pushed back.</p>
+
+    <h2 id="bigger-picture">The Bigger Picture: Flat-Rate AI Coding Is Ending</h2>
+    <p>If you take one thing from this, make it this: Copilot is not an outlier. It's the largest, most visible example of a shift that's hitting the whole category. <a href="../review/cursor.html" style="color:var(--accent)">Cursor</a> moved to usage-based credit billing back in June 2025 and is <em>still</em> fielding pricing complaints a year later — we covered that in detail in our <a href="cursor-pricing-2026.html" style="color:var(--accent)">Cursor pricing breakdown</a>. The pattern is identical: a flat fee that quietly subsidized heavy users gets replaced by a meter once agentic workflows make that subsidy untenable.</p>
+
+    <p>So the word "alternatives" needs an honest definition. It does <strong>not</strong> mean "find another unlimited plan" — there isn't one to flee to, and any tool still advertising "unlimited" agent use at a flat fee is either limiting it in ways you'll discover later or is next in line to meter it. What "alternatives" actually means in 2026 is: <em>pick the metering model that matches how you work.</em> Flat-ish with overages, open-source bring-your-own-key, predictable-tier, or local. That's the real decision, and it's a better one than chasing a plan that no longer exists.</p>
+
+    <h2 id="alternatives">Alternatives by Usage Profile</h2>
+    <p>There's no single winner here — the right move depends on your usage shape and how much variability you can stomach. Map yourself to a profile first, then pick the metering model.</p>
+
+    <table class="comparison-table">
+      <thead><tr><th>Your usage profile</th><th>Best fit</th><th>Cost model</th><th>The honest trade-off</th></tr></thead>
+      <tbody>
+        <tr><td>GitHub-native, completion-heavy, light agent use</td><td>Stay on Copilot</td><td>$10 Pro + metered agents</td><td>Cheapest entry; completions free; only agent use bites</td></tr>
+        <tr><td>IDE-centric, wants mid-tier predictability</td><td><a href="../review/cursor.html" style="color:var(--accent)">Cursor</a></td><td>Flat $20 Pro + usage overages</td><td>Strong agentic editor, but its own overages at the top</td></tr>
+        <tr><td>Wants to control its own meter</td><td><a href="../review/opencode.html" style="color:var(--accent)">OpenCode</a> / <a href="../review/aider.html" style="color:var(--accent)">aider</a></td><td>Open-source + BYO key</td><td>Pay raw API cost or run local; you manage keys</td></tr>
+        <tr><td>Terminal/agent-heavy, wants a ceiling</td><td><a href="../review/claude-code.html" style="color:var(--accent)">Claude Code</a></td><td>Predictable Max tiers ($100/$200)</td><td>Token-metered too — predictable, not unlimited</td></tr>
+        <tr><td>Subscription-fatigued, technically inclined</td><td>Local LLMs (Ollama / llamafile)</td><td>$0 marginal after hardware</td><td>No bill; capability trails frontier models</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Stay on Copilot if it already fits</h3>
+    <p>If your workflow lives in the GitHub ecosystem and leans on completions with only occasional agent runs, leaving may be solving a problem you don't have. Completions are still free, $10 is the cheapest serious entry point in the category, and Business/Enterprise teams get the budget controls and pooled credits to keep spend visible. The meter only matters in proportion to how much you actually use agents.</p>
+
+    <h3>Cursor — for IDE-centric developers wanting a predictable mid-tier</h3>
+    <p>Cursor remains one of the strongest agentic editors, and Pro at $20 gives a reasonably flat experience for most daily work. Be clear-eyed, though: Cursor isn't an escape from metering — it has its own usage-based overages once you lean on frontier models manually. It's a different shape of the same trade-off, and for many developers a more comfortable one. Our <a href="cursor-vs-windsurf-vs-github-copilot.html" style="color:var(--accent)">Cursor vs Windsurf vs GitHub Copilot comparison</a> walks through where each lands.</p>
+
+    <h3>OpenCode and aider — control your own meter</h3>
+    <p>This is the most direct response to "I object to opaque billing." Both <a href="../review/opencode.html" style="color:var(--accent)">OpenCode</a> and <a href="../review/aider.html" style="color:var(--accent)">aider</a> are open-source and model-agnostic: the tool is free, you bring your own API key, and you pay only what your provider charges with no platform markup in the middle — or run a local model for near-zero marginal cost. OpenCode entered the June 2026 dev-tool power rankings at the top (reported at 160K-plus GitHub stars and roughly 7.5M monthly active users), while aider is the lighter, git-native option. The catch is the same for both: they're terminal-first, you manage your own keys, and they assume a comfortable command-line developer. The cost, though, is transparent in a way a credit pool never is.</p>
+
+    <h3>Claude Code — predictable ceilings, honestly metered</h3>
+    <p>For terminal and agent-heavy senior developers, <a href="../review/claude-code.html" style="color:var(--accent)">Claude Code</a> offers predictable Max tiers at $100 and $200 that cap your monthly ceiling. Read that carefully: predictable is not the same as unlimited. Claude Code is token-metered like everything else here — the Max tiers buy you a known maximum, not infinite usage. We disclose, again, that we build this site with it; that's exactly why we won't dress it up as the unlimited plan the category no longer has.</p>
+
+    <h3>Local LLMs — the zero-marginal-cost route</h3>
+    <p>If subscription fatigue is the real driver and you have the hardware, running models locally through Ollama or llamafile removes the meter entirely. The honest trade-off is capability: local open-weight models have closed a lot of ground but still trail the frontier on hard, multi-file agentic work. For boilerplate, refactors, and privacy-sensitive code, they can be more than enough; for the hardest problems, you'll feel the gap.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>Did GitHub Copilot raise its prices in 2026?</h3>
+      <p>No — the base subscription prices are unchanged. Pro is $10, Pro+ $39, Max $100, Business $19/user, Enterprise $39/user. The June 1, 2026 change was to the metering: plans moved to token-based AI Credits, so heavy chat and agent use can exceed your included allotment even at the same sticker price.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Are GitHub Copilot code completions still free?</h3>
+      <p>Yes. Code completions and Next Edit Suggestions remain unlimited and don't consume credits on paid plans. Credits are spent by chat, agents, and AI code review.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why did my GitHub Copilot bill jump?</h3>
+      <p>Agent and chat usage now draws a credit pool at each model's token rate, and powerful models burn faster. The old fallback to a cheaper model was also removed, so heavy users exhaust credits instead of being quietly downgraded. The extreme bills circulating online are real but mostly reflect heavy agent use, expensive model choices, or preview estimates — not typical usage.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What are the best GitHub Copilot alternatives in 2026?</h3>
+      <p>It depends on your usage. Cursor for a predictable IDE mid-tier; OpenCode or aider for open-source bring-your-own-key control; Claude Code for predictable agent-heavy ceilings; local models like Ollama to drop the subscription entirely. None is an unlimited plan — each is a different metering model.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is Claude Code cheaper than Copilot now?</h3>
+      <p>Not automatically. Claude Code is token-metered too; its Max tiers ($100/$200) give predictable ceilings, not unlimited use. Which is cheaper depends entirely on your agent and chat volume. (Disclosure: AIToolGrade is built with Claude Code.)</p>
+    </div>
+    <div class="faq-item">
+      <h3>Did GitHub remove the unlimited Copilot plan?</h3>
+      <p>There was never a truly unlimited agent plan, and the practical feel of one is ending industry-wide as agentic workflows consume real compute. The 2026 goal is to choose the metering model that fits your usage, not to find an unlimited tier.</p>
+    </div>
+
+    <h2 id="bottom-line">Bottom Line</h2>
+    <p>Don't react to the screenshots — react to your own numbers. Before your Premium Request Unit history ages out, pull it and look at what you actually consumed: completions versus chat versus agent runs, and which models. That single data point tells you more than any rage thread. Most completion-driven developers will find the change barely touches them. Heavy agent users will feel it, and for them the question is which meter to live under.</p>
+
+    <p>Once you know your shape, the choice is straightforward. Flat-ish with overages points to Cursor. Open-source, bring-your-own-key transparency points to OpenCode or aider. A predictable ceiling for heavy agent work points to Claude Code's Max tiers. Zero marginal cost points to local models. And staying on Copilot is a perfectly rational answer if completions are most of what you use. What's gone — for Copilot and everywhere else — is the unlimited tier you could flee to. Pick the metering model that matches how you work, and you'll be ahead of the people still looking for a plan that no longer exists.</p>
+
+    <div class="cta-box">
+      <h3>Read the full reviews</h3>
+      <p>Pricing context, documented features, and community sentiment for each alternative.</p>
+      <div class="cta-links">
+        <a href="../review/cursor.html" class="cta-btn">Cursor Review →</a>
+        <a href="../review/opencode.html" class="cta-btn">OpenCode Review →</a>
+        <a href="../review/aider.html" class="cta-btn">aider Review →</a>
+        <a href="../review/claude-code.html" class="cta-btn">Claude Code Review →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="related-posts" style="max-width:780px;margin:0 auto 48px;padding:32px;background:var(--bg2);border-radius:14px;border:1px solid var(--border)">
+  <p style="font-size:12px;font-family:DM Mono,monospace;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px">Related Reading</p>
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <a href="cursor-pricing-2026.html" style="font-size:15px;font-weight:600;color:var(--text);border-bottom:1px solid var(--border);padding-bottom:12px;text-decoration:none">Cursor Pricing 2026: What Changed and What It Really Costs →</a>
+    <a href="cursor-vs-windsurf-vs-github-copilot.html" style="font-size:15px;font-weight:600;color:var(--text);border-bottom:1px solid var(--border);padding-bottom:12px;text-decoration:none">Cursor vs Windsurf vs GitHub Copilot — Best AI Code Editor in 2026? →</a>
+    <a href="best-ai-coding-agents-2026.html" style="font-size:15px;font-weight:600;color:var(--text);text-decoration:none">Best AI Coding Agents in 2026 →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">AI Tool<span>Grade</span></div><p class="footer-desc">Independent reviews and comparisons of AI tools. Researched, fact-checked, and independently rated.</p></div>
+    <div><div class="footer-col-title">Reviews</div><div class="footer-links"><a href="../category/writing.html">AI Writing</a><a href="../category/coding.html">AI Coding</a><a href="../category/image.html">AI Image</a><a href="../category/automation.html">Automation</a><a href="../category/productivity.html">Productivity</a></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="../about.html">About</a><a href="../how-we-review.html">How we review</a><a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
+    <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+</footer>
+</body></html>

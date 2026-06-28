@@ -12,7 +12,7 @@ https://aitoolgrade.com/blog/chatgpt-go-vs-plus-vs-pro-2026.html
 #AITools
 
 **@marcusveil_** (analytical, direct, skeptical)
-ChatGPT Go is $8/mo and still shows you ads — while locking out Deep Research, Agent Mode, and the reasoning models. For actual work it's a worse deal than Plus at $20. Here's where each tier actually fits:
+ChatGPT Go is $8/mo, still shows ads, and runs the same GPT-5.5 Instant base as Plus — so the gap isn't the model, it's the features (no Deep Research, Agent Mode, or GPT-5.5 Pro). For real work, Plus at $20 is the better deal. Where each tier fits:
 https://aitoolgrade.com/blog/chatgpt-go-vs-plus-vs-pro-2026.html
 
 ---
@@ -47,6 +47,7 @@ https://aitoolgrade.com/blog/chatgpt-pro-100-vs-200-2026.html
 ---
 
 Notes:
-- All 7 posts under 280 chars (X auto-shortens links to ~23 chars).
+- All posts under 280 chars (X auto-shortens links to ~23 chars).
 - No prohibited language. No threads. 1 hashtag max where used.
 - Day 4 intentionally points to the sibling Pro post to deepen the cluster, not back to the same hub.
+- FIXED June 28, 2026: Day 1 @marcusveil_ line reworded — was the stale "locks out reasoning models" claim; per the June 11 correction Go runs the same GPT-5.5 Instant base as Plus, real gap is features + no GPT-5.5 Pro. Now safe to post.

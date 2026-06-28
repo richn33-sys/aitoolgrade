@@ -723,6 +723,7 @@ Next content priorities (from May 24, 2026 session):
 
 - ~~**review/windsurf.html refresh for the Devin Desktop rebrand**~~ ✅ DONE June 24, 2026 (dateModified 2026-06-24) — REFRESH in place (same URL/slug/Marcus Veil byline; AI Coding). Reframed around Devin Desktop (Cognition's June 2, 2026 OTA rebrand) while keeping "Windsurf" legible for search; verified at devin.ai/devin.ai/pricing/docs.devin.ai. Added rebrand callout + COI box + Agent Command Center/ACP section + Cascade EOL (July 1) section; SWE-1.5→SWE-1.6; pricing Free/Pro $20/Max $200/Teams $80+$40 (quota-based). **Score held at 8.2 — no change** (Integration 8.5→9.0 for ACP openness vs Support&amp;Maturity 6.5→6.0 for transition/Cascade EOL roughly cancel; within 0.2, no checkpoint pause). **Card-copy sync DONE** on category/coding.html, compare.html, reviews.html (was "Cascade/windsurf.com" → now "Windsurf (Devin Desktop)/devin.ai/desktop" + open-multi-agent framing) — this closes the card-copy part of the stale-Windsurf follow-up. See Completed + Search Console below. **STILL OPEN (remaining sweep):** other stray "Windsurf/Cascade" references beyond the three cards — cursor-pricing-2026 + best-ai-coding-agents-2026 + (already-done) claude-code-vs-cursor-vs-github-copilot posts; nav.js label still reads "Windsurf" (kept deliberately for search; revisit). Folds into the broader AI-Coding stale-reference sweep.
 - **coding-cluster frontier-baseline sweep** — OPEN (NEW, carried from the June 24 DeepSeek V4 refresh). The DeepSeek refresh dropped stale "near-parity" framing and re-baselined to the current closed frontier (Opus 4.8 ~88.6%, Fable 5 ~95.0%). Other AI Coding pages may still compare to a stale frontier (Opus 4.6/4.7, GPT-5.x snapshots). Sweep review/claude-code, the coding comparison posts, and best-ai-coding-agents-2026 for outdated frontier baselines and re-anchor to Opus 4.8 / Fable 5.
+  - **June 28, 2026 — scoped by the consistency audit (this IS audit Category C2).** Confirmed ~10 pages anchored on a stale frontier: review/claude-code.html (built throughout on Opus 4.7 + Opus 4.6 for the 1M-context GA claim — biggest target; refreshing the model version likely means re-checking the 87.6% SWE-bench figure and possibly the score → its own checkpoint), review/kimi-code.html, review/minimax-m3.html (internally mixed: Opus 4.7 anchor but one Opus 4.8 ref), review/claude-cowork.html, review/opencode.html, review/bolt.html (also Gemini 1.5 Pro + GPT-4o), blog/chatgpt-vs-claude-vs-perplexity.html (Opus 4.6 + **GPT-5.4** benchmark table + "closer than ever" parity written against old models), blog/best-ai-coding-agents-2026.html, blog/grok-build-vs-codex-vs-claude-code-2026.html, blog/claude-code-vs-cursor-vs-github-copilot-2026.html. Use review/deepseek-v4.html as the corrected template. Still OPEN — NOT touched in the June 28 mechanical pass (which did C4/C3 only).
 
 #### New brief items (logged June 28, 2026 — alongside the GitHub Copilot Token Billing post, now DONE)
 - ~~**GitHub Copilot Token Billing 2026 post**~~ ✅ DONE June 28, 2026 — see Completed + Search Console below.
@@ -767,6 +768,7 @@ These are NOT content-build items; they're recurring obligations and projects th
 - **PENDING manual Perplexity editorial gates** — the build can't reach Perplexity directly, so every new piece carries a "pending user's manual run" until you paste the live URL and run the editorial check. Open gates (run before promoting each on social): **Windsurf → Devin Desktop review refresh** (June 24 — priority: rebrand stated accurately+prominently, Cascade EOL + ownership transition factual+attributed, pricing reflects current Devin Desktop tiers, COI present, verdict reflects a product in transition without overstating), **DeepSeek V4 refresh** (June 24), **aider review** (June 23), **Notion AI review refresh + pricing-blog refresh** (June 19), **Grok Imagine Video review** + **Grok vs Runway vs Sora comparison** (June 21 — both passed an independent proxy/adversarial read at build but still need the manual gate; priority = safety framing reads factual/attributed/non-sensational), plus the earlier still-open gates: **ZoomMate, v0, OpenCode, Perplexity Max vs Pro, Cursor pricing refresh**. Priorities per piece are noted in each Completed entry.
 - **Social drafts backlog** — biggest pool of unrealized value: only ChatGPT Go-vs-Plus-vs-Pro has drafts; ~11 other published pieces need posts for all three accounts. Full list + per-piece angles in **Social Drafts — Pending (status as of June 23, 2026)** above. Generate via "Write X posts for [article name]"; no automation (manual posting per the X strategy).
 - **FUTURE PROJECT — site-wide score-consistency audit.** Pull every review's canonical score (review page = source of truth) and sweep all listicles, category pages, and compare.html to match. Rationale: three score drifts surfaced THIS quarter (Cursor 9.4→8.8 re-score, GitHub Copilot 8.9-vs-8.8 CLAUDE.md-vs-category split, Bolt 8.6→8.3 on best-ai-app-builders — last one now resolved). A periodic automated sweep would catch these before they reach a reader. Scope it as its own session.
+  - **June 28, 2026 — RAN as the consistency audit + mechanical fix pass (C4 DONE).** Swept all secondary surfaces against canonical: found + fixed 6 drifting tools (Copy.ai, Writesonic, Midjourney, Zapier, n8n, Synthesia) across index/compare/reviews/category + two blog listicles, with Midjourney de-crowned on image surfaces. The known-clean set (Cursor 8.8, Copilot 8.9, Windsurf 8.2, Bolt 8.3, Notion 8.4, DeepSeek 8.1, aider 7.8, Grok Imagine 7.5) re-verified reconciled. **One out-of-scope drift surfaced and was deliberately NOT fixed (flagged for a follow-up):** the homepage `index.html` featured-review card shows **Cursor 9.5** (canonical 8.8) — a stray from before the 9.4→8.8 re-score; sync it next pass. The C2 frontier-baseline drift is the other open category (above).
 - **INFRA (optional)** — convert remaining site repos from expiring-PAT HTTPS remotes to SSH via `git remote set-url` (aitoolgrade is already on SSH). Prevents PAT-expiry push failures mid-session.
 
 ### Completed
@@ -808,6 +810,47 @@ These are NOT content-build items; they're recurring obligations and projects th
 - ChatGPT, Cursor, Grammarly, Perplexity, Jasper, Notion AI pricing all updated ✅
 
 ## Search Console Optimization
+
+### June 28, 2026 — Consistency audit fixes deployed (C4 score-sync + C3 Windsurf/Devin Desktop)
+Mechanical fix pass off the site-wide consistency audit (display-sync only — NO re-scores, NO
+review/blog count changes; canonical review-page ratingValues untouched). Committed a6f2978, pushed,
+SSH force-pulled to Hostinger; live HTTP 200 verified on category/image.html, review/github-copilot.html,
+compare.html, reviews.html.
+- **C4 — score-ghost sync (6 tools → canonical):** Copy.ai **7.3** (was 8.4 on reviews/compare/
+  category-writing + 8.7 on the homepage hero bar/featured card/compare table), Writesonic **8.0**
+  (was 8.1), Midjourney **7.8** (was 9.3), Zapier **8.1** (was 8.2), n8n **8.3** (was 8.7, and 8.2 in
+  one spot), Synthesia **8.0** (was 8.3). Surfaces synced: index.html (hero score-bars incl. width%,
+  featured card, comparison table), compare.html, reviews.html, the four category pages, **plus two
+  blog listicles the audit's surface list missed** — best-free-ai-tools-2026 (Copy.ai/n8n/Zapier/
+  Synthesia badges) and best-ai-tools-for-seo-2026 (n8n). Score bars/widths updated to match numbers.
+  Site-wide OLD-score re-grep came back **clean** (zero stray instances; the lone `9.1→8.2`/`8.3→8.0`
+  hits are harmless changelog comments on the canonical review pages). CLAUDE.md File Structure tree
+  was already correct (not touched).
+- **C4 de-crowning (Midjourney, the big drop 9.3→7.8):** on category/image.html and reviews.html
+  Midjourney was top-listed and crowned ("the best AI image generator… leads every benchmark" /
+  "remains the benchmark"). Reordered **below** Adobe Firefly (8.7) and Leonardo AI (8.7) on both
+  surfaces and stripped the unsupported crown — without crowning a replacement (Firefly/Leonardo
+  language softened from "clear choice / most generous / strongest" to neutral). Lighter de-crowns:
+  Copy.ai "the best free AI writing tool" → "a beginner-friendly AI writer…" (writing.html); Synthesia
+  "The best AI avatar video platform" → "A leading…" (video.html). Automation needed no reorder
+  (n8n 8.3 still > Zapier 8.1; intro crowns by use-case, not score).
+- **C3 — stale Windsurf/Cascade refs updated for the June 2, 2026 Devin Desktop rebrand** (11 hits /
+  7 files): the **ownership error fixed** (best-ai-coding-agents-2026 said "Google bought Windsurf…
+  now has Google's resources" → corrected to Cognition's ~$250M product acquisition; Google only
+  poached the team); Cascade reframed as **being retired (~July 1)** with Agent Command Center/ACP/
+  Devin Local where it was presented as the current differentiator; stale pricing/domain fixed
+  (windsurf.com/$15 + codeium.com → devin.ai, Free/$20/$200) in cursor-pricing-2026, best-free-ai-tools-2026
+  (also Windsurf score 9.1→8.2 there), review/cursor; review/github-copilot comparison table (header
+  "Windsurf (Devin Desktop)", "Cascade sessions/day"→"agent sessions/day", "Cascade (strong)"→"Devin
+  Local (strong)") + two prose lines; review/google-antigravity ("Windsurf's Cascade"→"Windsurf, now
+  Devin Desktop"); review/claude-code link text dropped the stale "Flow State" tagline. Historical
+  "Windsurf" kept legible for search throughout. Left as-is (audit-confirmed fine): review/windsurf.html,
+  the cursor-vs-windsurf comparison, the 3 already-synced cards, and generic post-title/nav mentions.
+- **Still OPEN (separate deliberate pass): C2 frontier-baseline sweep** — ~10 pages still anchor on a
+  stale frontier (Opus 4.7/4.6, GPT-5.4) incl. review/claude-code.html, kimi-code, minimax-m3,
+  claude-cowork, opencode, bolt + the coding comparison blogs + chatgpt-vs-claude-vs-perplexity.
+  Folds into the existing "coding-cluster frontier-baseline sweep" OPEN item. NOT touched this pass.
+- Prohibited-language + superlative scan clean across all 15 edited files; all JSON-LD blocks valid.
 
 ### June 28, 2026 — New analysis post (GitHub Copilot Token Billing 2026)
 New URL `blog/github-copilot-token-billing-2026.html` (sitemap lastmod 2026-06-24, weekly/0.7).

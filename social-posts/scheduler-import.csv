@@ -11,3 +11,35 @@ GitHub Copilot Token Billing 2026,@priyanolan,Day 2,main,,"Seeing the Copilot pr
 GitHub Copilot Token Billing 2026,@marcusveil_,Day 3,engagement (reply to @priyanolan),,Building on @priyanolan's point — pull your Premium Request Unit history before it ages out. That's your real data. Completion-heavy devs barely feel this; daily-agent users feel it a lot. Don't pick a meter off a screenshot. https://aitoolgrade.com/blog/github-copilot-token-billing-2026.html
 GitHub Copilot Token Billing 2026,@priyanolan,Day 3,engagement (reply to @marcusveil_),,"@marcusveil_ is right — and the bigger truth: there's no ""unlimited"" plan left to run to. Even Claude Code is metered. The job now is matching the billing model to how you work, not chasing a deal that no longer exists. https://aitoolgrade.com/blog/github-copilot-token-billing-2026.html"
 GitHub Copilot Token Billing 2026,@AIToolGrade,Day 4,follow-up,,"Copilot isn't the outlier — Cursor moved to usage-based billing a year ago and is still fielding complaints. The same pattern, same lessons. Our full Cursor pricing breakdown: https://aitoolgrade.com/blog/cursor-pricing-2026.html"
+Grok Build Review,@AIToolGrade,Day 1,main,,"Grok Build — 6.7/10.
+
+xAI's terminal coding agent runs 8 parallel sub-agents, each in its own Git worktree. A genuine first for the category.
+
+The catch: 70.8% SWE-Bench (Claude Code: 87.6%), and $99/mo intro → $299/mo after 6 months.
+
+https://aitoolgrade.com/review/grok-build.html"
+Grok Build Review,@marcusveil_,Day 1,main,,"Grok Build does one thing no other coding agent does: each of its 8 sub-agents gets its own Git worktree. Parallel branches, no shared-state conflicts.
+
+Smart design. But 70.8% SWE-Bench + an unshipped Arena Mode make it a beta to watch, not adopt yet.
+
+https://aitoolgrade.com/review/grok-build.html"
+Grok Build Review,@priyanolan,Day 2,main,,"Tempted by Grok Build's $99/mo coding agent? Read the fine print first: that intro price becomes $299/mo after 6 months — the priciest in the category.
+
+Already on SuperGrok? You can try the basics for $30. Start there.
+
+https://aitoolgrade.com/review/grok-build.html"
+Grok Build Review,@marcusveil_,Day 3,engagement (reply to @priyanolan),,"Building on @priyanolan's pricing note: even at $30, you're testing a model scoring 70.8% on SWE-Bench — 17 points behind Claude Code.
+
+The Git worktree design is the reason to look. The benchmark gap is the reason to wait.
+
+https://aitoolgrade.com/review/grok-build.html"
+Grok Build Review,@priyanolan,Day 3,engagement (reply to @marcusveil_),,"Translating @marcusveil_'s point: Grok Build has a clever new way to run several AI coders at once, but it still slips up more than the leaders on hard tasks.
+
+Worth watching — just don't bet a deadline on it yet.
+
+https://aitoolgrade.com/review/grok-build.html"
+Grok Build Review,@AIToolGrade,Day 4,follow-up,,"Weighing terminal coding agents? The benchmark leader is still the one to beat.
+
+Our Claude Code review — 8.0/10, 87.6% SWE-Bench, 1M context, with a full conflict-of-interest disclosure:
+
+https://aitoolgrade.com/review/claude-code.html"

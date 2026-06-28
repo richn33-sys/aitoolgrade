@@ -22,7 +22,7 @@ https://aitoolgrade.com/review/grok-build.html
 ### @marcusveil_ (analytical, direct, skeptical-but-fair)
 Grok Build does one thing no other coding agent does: each of its 8 sub-agents gets its own Git worktree. Parallel branches, no shared-state conflicts.
 
-Smart architecture. But 70.8% SWE-Bench + an unshipped Arena Mode make it a beta to watch, not adopt yet.
+Smart design. But 70.8% SWE-Bench + an unshipped Arena Mode make it a beta to watch, not adopt yet.
 
 https://aitoolgrade.com/review/grok-build.html
 

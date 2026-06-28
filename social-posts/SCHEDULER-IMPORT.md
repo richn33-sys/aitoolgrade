@@ -4,9 +4,10 @@ A ready-to-import file of all currently-drafted X posts. Stays useful whether yo
 posting manually or move to a scheduler — it's just the drafts in a structured format.
 
 ## What's in it
-12 posts across the two pieces that have drafts written:
+18 posts across the three pieces that have drafts written:
 - **ChatGPT Go vs Plus vs Pro 2026** (6 posts)
 - **GitHub Copilot Token Billing 2026** (6 posts)
+- **Grok Build Review** (6 posts; note its 6.7/10 score + COI — Claude Code is a competitor)
 
 Columns: `article, account, day, type, scheduled_datetime, content`
 - `scheduled_datetime` is intentionally **blank** — fill it per account before importing

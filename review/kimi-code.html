@@ -2,7 +2,7 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="canonical" href="https://aitoolgrade.com/review/kimi-code.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Kimi Code review 2026 — Moonshot AI's open-source Claude Code competitor. Kimi K2.6 scores 80.2% on SWE-bench at $0.60/M input, 25x cheaper than Claude Opus 4.7. The MCP migration story, Agent Swarms, and the catches.">
+<meta name="description" content="Kimi Code review 2026 — Moonshot AI's open-source Claude Code competitor. Kimi K2.6 scores 80.2% on SWE-bench at $0.60/M input, roughly 8x cheaper than Claude Opus 4.8. The MCP migration story, Agent Swarms, and the catches.">
 <title>Kimi Code Review 2026 — Open-Source Claude Code Alternative at 1/25th the Cost | AIToolGrade</title>
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="icon" type="image/png" href="../favicon.png">
@@ -148,7 +148,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
     }
   },
   "datePublished": "2026-06-05",
-  "dateModified": "2026-06-05"
+  "dateModified": "2026-06-24"
 }
 </script>
 <script type="application/ld+json">
@@ -195,7 +195,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       <div class="verdict-text">
         <h3>Editor's Verdict: The Lowest-Friction Migration Path Off Claude Code</h3>
         <p style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:6px">Strong on cost and features, pulled down by CLI-only UX, limited documentation, and enterprise compliance gaps.</p>
-        <p>Powered by the open-weight Kimi K2.6 model (80.2% SWE-bench Verified, roughly matches GPT-5.5 on SWE-bench Pro), Kimi Code clones the Claude Code interaction model and runs every Claude Code MCP server without modification — at roughly 1/25th the API cost. Agent Swarms of up to 300 parallel agents have no direct equivalent among current coding agents. The constraints are specific: CLI-only in June 2026, a 7.4-point SWE-bench gap behind Claude Opus 4.7, and the same Chinese-company data-residency questions that apply to DeepSeek. For cost-conscious developers already invested in the MCP ecosystem, it's one of the most practical alternatives to evaluate.</p>
+        <p>Powered by the open-weight Kimi K2.6 model (80.2% SWE-bench Verified, roughly matches GPT-5.5 on SWE-bench Pro), Kimi Code clones the Claude Code interaction model and runs every Claude Code MCP server without modification — at roughly an eighth of the API cost. Agent Swarms of up to 300 parallel agents have no direct equivalent among current coding agents. The constraints are specific: CLI-only in June 2026, an 8.4-point SWE-bench gap behind Claude Opus 4.8, and the same Chinese-company data-residency questions that apply to DeepSeek. For cost-conscious developers already invested in the MCP ecosystem, it's one of the most practical alternatives to evaluate.</p>
       </div>
     </div>
     <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified June 2026</p>
@@ -214,7 +214,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       </div>
 
       <h2 id="what-is-kimi-code">What is Kimi Code?</h2>
-      <p>Kimi Code is Moonshot AI's open-source coding agent, and the easiest way to describe it is also the most accurate: it's an Apache 2.0 answer to Claude Code. Moonshot — a Chinese AI lab founded in 2023 — shipped the Kimi Code CLI in January 2026 with the same terminal-first interaction model Anthropic popularized, the same Model Context Protocol (MCP) ecosystem, and API pricing that runs 8–25x below the closed alternatives. If you've used Claude Code, the muscle memory transfers almost completely. That's not an accident; it's the entire pitch.</p>
+      <p>Kimi Code is Moonshot AI's open-source coding agent, and the easiest way to describe it is also the most accurate: it's an Apache 2.0 answer to Claude Code. Moonshot — a Chinese AI lab founded in 2023 — shipped the Kimi Code CLI in January 2026 with the same terminal-first interaction model Anthropic popularized, the same Model Context Protocol (MCP) ecosystem, and API pricing that runs roughly 8–12x below the closed alternatives. If you've used Claude Code, the muscle memory transfers almost completely. That's not an accident; it's the entire pitch.</p>
       <p>The engine underneath is Kimi K2.6, released April 20, 2026. It's a 1-trillion-parameter Mixture-of-Experts model that activates only 32 billion parameters per token — so inference costs stay at the 32B level while the model carries 1T worth of capacity. The benchmarks back the architecture: 80.2% on SWE-bench Verified, 58.6% on the harder SWE-bench Pro, where it lands in a statistical tie with GPT-5.5. On Code Arena's WebDev leaderboard it ranks 6th out of 67 models — ahead of every other open-weight model in the field.</p>
       <p>What makes Kimi Code worth a serious look isn't the raw score, though. It's the combination. A frontier-adjacent coding model, a drop-in MCP-compatible agent that mirrors a tool developers already know, an OpenAI-compatible API that turns migration into a single endpoint swap, and an open-weight license that lets you self-host for zero per-token cost. For developers running coding workloads at volume — and especially for Claude Code users watching their API bills climb — that bundle is the most direct cost-reduction path available in the open-weight category in 2026, provided the tradeoffs below fit your situation.</p>
 
@@ -236,7 +236,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
 </nav>
 
       <h2 id="who-is-it-for">Who Is It For?</h2>
-      <p>Kimi Code is a developer tool first and last, and the fit is sharpest where API cost is a live constraint. If you're running high-volume coding workloads — agentic loops, batch refactors, code review pipelines, multi-repo validation — the per-token math changes what's economically sane. But the cleaner signal is the migration story. For Claude Code users specifically, this is the lowest-friction alternative in the open-weight category: the MCP servers you already configured work without a single edit, the interaction model is the same, and the API bill drops by roughly 25x. That's a rare combination, and it's the reason the Claude Code community is paying attention.</p>
+      <p>Kimi Code is a developer tool first and last, and the fit is sharpest where API cost is a live constraint. If you're running high-volume coding workloads — agentic loops, batch refactors, code review pipelines, multi-repo validation — the per-token math changes what's economically sane. But the cleaner signal is the migration story. For Claude Code users specifically, this is the lowest-friction alternative in the open-weight category: the MCP servers you already configured work without a single edit, the interaction model is the same, and the API bill drops by roughly 8x. That's a rare combination, and it's the reason the Claude Code community is paying attention.</p>
       <p>It also suits teams that need genuine parallelism. Agent Swarms — up to 300 coordinated K2.6 instances running at once — have no direct equivalent in Claude Code or any other coding agent at any price. For naturally parallel work like multi-repo refactors or large batch validation, that's a different shape of tool, not just a cheaper one. And because the weights are Apache 2.0, teams with GPU capacity can self-host and drop the per-token API fee to zero entirely — a path closed frontier models don't offer.</p>
       <p>It is not for everyone, and the misfits are worth naming plainly. Enterprise teams under strict US or EU data-residency rules face the same questions a Chinese-hosted API always raises — covered in its own section below. IDE-first developers who live in VS Code or JetBrains will feel the friction immediately: in June 2026 Kimi Code is terminal-only, with no native editor extension. Teams that need an enterprise SLA, SOC 2, or HIPAA won't find them here. And if you need production K2.6 rather than preview access, that sits behind Ultra/custom pricing — the $25/month Pro plan gives you a preview, not the production tier. If you want a polished IDE assistant rather than a CLI agent, <a href="../review/github-copilot.html">GitHub Copilot</a> or <a href="../review/cursor.html">Cursor</a> remain the more practical starting points.</p>
 
@@ -244,7 +244,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       <div class="pros-cons">
         <div class="pros-box">
           <h4>What works well</h4>
-          <div class="pro-item">Roughly 25x cheaper than Claude Opus 4.7 at comparable benchmark performance — the strongest cost argument in the open-weight coding category</div>
+          <div class="pro-item">Roughly 8x cheaper than Claude Opus 4.8 on input tokens — a strong cost argument in the open-weight coding category</div>
           <div class="pro-item">MCP compatibility means Claude Code users migrate without reconfiguring their tool ecosystem — the servers just work</div>
           <div class="pro-item">Agent Swarms are a genuinely new capability — 300 coordinated parallel agents have no direct equivalent at any price</div>
           <div class="pro-item">1M-token context with verified accuracy above 80% past 900K tokens, where frontier models drop sharply past 200K</div>
@@ -258,7 +258,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
           <div class="con-item">Kimi Code Pro ($25/month) gives K2.6 preview only; production K2.6 requires Ultra or custom pricing</div>
           <div class="con-item">Documentation is thin in places — a January 2026 product still maturing</div>
           <div class="con-item">Agent Swarms shine on parallel work; linear debugging sessions see much less benefit</div>
-          <div class="con-item">A 7.4-point SWE-bench Verified gap behind Claude Opus 4.7 (80.2% vs 87.6%) that matters for the hardest tasks</div>
+          <div class="con-item">An 8.4-point SWE-bench Verified gap behind Claude Opus 4.8 (80.2% vs 88.6%) that matters for the hardest tasks</div>
         </div>
       </div>
 
@@ -271,10 +271,10 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <div class="score-row"><span class="score-name">Integration</span><div class="score-bar-track"><div class="score-bar-fill" style="width:75%"></div></div><span class="score-val">7.5</span></div>
         <div class="score-row"><span class="score-name">Support &amp; Docs</span><div class="score-bar-track"><div class="score-bar-fill" style="width:60%"></div></div><span class="score-val">6.0</span></div>
       </div>
-      <p>The shape tells the story. Value for Money sits at 9.5 — at $0.60/M input against Claude Opus 4.7's $15, and with a self-hosting option that drops the API fee to zero, almost nothing competes on price-performance. Features land at 8.5 thanks to the 1M context, Agent Swarms, and dual thinking/instant modes. The drag is at the bottom: Support &amp; Documentation scores 6.0 because the docs are still thin in places, there's no enterprise SLA, and support runs through GitHub and community channels rather than a dedicated desk. Ease of Use and Integration sit in the mid-7s for the same reason — CLI-only with no IDE extension is a real ceiling for a chunk of developers. The 7.8 overall is a tool that's strong where developers optimize and weakest exactly where risk-averse buyers look first.</p>
+      <p>The shape tells the story. Value for Money sits at 9.5 — at $0.60/M input against Claude Opus 4.8's $5, and with a self-hosting option that drops the API fee to zero, almost nothing competes on price-performance. Features land at 8.5 thanks to the 1M context, Agent Swarms, and dual thinking/instant modes. The drag is at the bottom: Support &amp; Documentation scores 6.0 because the docs are still thin in places, there's no enterprise SLA, and support runs through GitHub and community channels rather than a dedicated desk. Ease of Use and Integration sit in the mid-7s for the same reason — CLI-only with no IDE extension is a real ceiling for a chunk of developers. The 7.8 overall is a tool that's strong where developers optimize and weakest exactly where risk-averse buyers look first.</p>
 
       <h2 id="benchmarks">Benchmarks and Cost Comparison</h2>
-      <p>Benchmark figures below are vendor-reported and, where noted, third-party verified. SWE-bench Verified carries the most weight because it measures real GitHub issue resolution rather than synthetic puzzles. The honest read: K2.6 is frontier-adjacent on coding, not frontier-leading — it trails Claude Opus 4.7 by 7.4 points on Verified but roughly matches GPT-5.5 on the harder Pro split. The question isn't whether it's as good as the best closed model; it's whether the gap matters for your workloads at a 25x cost difference.</p>
+      <p>Benchmark figures below are vendor-reported and, where noted, third-party verified. SWE-bench Verified carries the most weight because it measures real GitHub issue resolution rather than synthetic puzzles. The honest read: K2.6 is frontier-adjacent on coding, not frontier-leading — it trails Claude Opus 4.8 by 8.4 points on Verified but roughly matches GPT-5.5 on the harder Pro split. The question isn't whether it's as good as the best closed model; it's whether the gap matters for your workloads at an 8x cost difference.</p>
       <div class="comparison-wrap">
         <table class="comparison-table">
           <thead>
@@ -288,15 +288,15 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
           <tbody>
             <tr><td>Kimi K2.6</td><td>$0.60</td><td>$2.50</td><td>80.2% Verified · 58.6% Pro</td></tr>
             <tr><td>DeepSeek V4-Pro</td><td>$0.435</td><td>$0.87</td><td>80.6% Verified</td></tr>
-            <tr><td>Claude Opus 4.7</td><td>$15.00</td><td>$75.00</td><td>87.6% Verified</td></tr>
-            <tr><td>GPT-5.5</td><td>~$15.00</td><td>~$60.00</td><td>~80% Pro</td></tr>
+            <tr><td>Claude Opus 4.8</td><td>$5.00</td><td>$25.00</td><td>88.6% Verified</td></tr>
+            <tr><td>GPT-5.5</td><td>$5.00</td><td>$30.00</td><td>~82.6% Verified</td></tr>
           </tbody>
         </table>
       </div>
-      <p>Read it as a trade. Against Claude Opus 4.7, K2.6 gives up roughly 7 points of SWE-bench Verified and buys a 25x cut in input cost — for most day-to-day agentic coding, that's a trade plenty of teams will take. Against DeepSeek V4-Pro, the benchmark numbers are nearly identical and DeepSeek is marginally cheaper on raw tokens; what Kimi Code adds on top is the coding-agent layer — the CLI, MCP compatibility, and Agent Swarms — which DeepSeek's API-only model doesn't have. That's the real distinction between these two open-weight options: DeepSeek is a model, Kimi Code is an agent built around one.</p>
+      <p>Read it as a trade. Against Claude Opus 4.8, K2.6 gives up roughly 8 points of SWE-bench Verified and buys an 8x cut in input cost — for most day-to-day agentic coding, that's a trade plenty of teams will take. Against DeepSeek V4-Pro, the benchmark numbers are nearly identical and DeepSeek is marginally cheaper on raw tokens; what Kimi Code adds on top is the coding-agent layer — the CLI, MCP compatibility, and Agent Swarms — which DeepSeek's API-only model doesn't have. That's the real distinction between these two open-weight options: DeepSeek is a model, Kimi Code is an agent built around one.</p>
 
       <h2 id="pricing">Pricing</h2>
-      <p>Pricing is verified May 2026 and splits into three paths: managed subscriptions, pay-per-token API, and self-hosting. The subscription tiers cover the CLI agent; the API is billed per million tokens via kimi.ai; and the open weights let you run it on your own hardware for infrastructure cost alone.</p>
+      <p>Pricing is verified June 2026 and splits into three paths: managed subscriptions, pay-per-token API, and self-hosting. The subscription tiers cover the CLI agent; the API is billed per million tokens via kimi.ai; and the open weights let you run it on your own hardware for infrastructure cost alone.</p>
       <div class="comparison-wrap">
         <table class="comparison-table">
           <thead>
@@ -372,9 +372,9 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
             </tr>
           </thead>
           <tbody>
-            <tr><td>Model</td><td>K2.6 (open-weight)</td><td>Opus 4.7 (closed)</td><td>V4-Pro (open-weight)</td></tr>
-            <tr><td>SWE-bench Verified</td><td>80.2%</td><td>87.6%</td><td>80.6%</td></tr>
-            <tr><td>Input price / M</td><td>$0.60</td><td>$15.00</td><td>$0.435</td></tr>
+            <tr><td>Model</td><td>K2.6 (open-weight)</td><td>Opus 4.8 (closed)</td><td>V4-Pro (open-weight)</td></tr>
+            <tr><td>SWE-bench Verified</td><td>80.2%</td><td>88.6%</td><td>80.6%</td></tr>
+            <tr><td>Input price / M</td><td>$0.60</td><td>$5.00</td><td>$0.435</td></tr>
             <tr><td>Context window</td><td>1M tokens</td><td>1M tokens</td><td>1M tokens</td></tr>
             <tr><td>Agent capability</td><td>Swarms (300 agents)</td><td>Agent Teams</td><td>Single agent</td></tr>
             <tr><td>Open source</td><td>✓ Apache 2.0</td><td>✗</td><td>✓ MIT</td></tr>
@@ -386,12 +386,12 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
           </tbody>
         </table>
       </div>
-      <p>The pattern is clean. If absolute capability on the hardest autonomous tasks is the priority and budget isn't the binding constraint, Claude Code's 87.6% and native IDE extensions still lead. If you want the lowest raw token cost for high-volume API workloads and don't need an agent layer, DeepSeek V4-Pro edges it on price. Kimi Code wins the specific middle ground that a lot of teams actually occupy: you want a Claude Code–style agent, you want to keep your MCP setup, and you want the bill to drop by an order of magnitude. For that profile, it's the most logical switch.</p>
+      <p>The pattern is clean. If absolute capability on the hardest autonomous tasks is the priority and budget isn't the binding constraint, Claude Code's 88.6% and native IDE extensions still lead. If you want the lowest raw token cost for high-volume API workloads and don't need an agent layer, DeepSeek V4-Pro edges it on price. Kimi Code wins the specific middle ground that a lot of teams actually occupy: you want a Claude Code–style agent, you want to keep your MCP setup, and you want the bill to drop sharply. For that profile, it's the most logical switch.</p>
 
       <h2 id="the-chinese-company-question">The Chinese Company Question</h2>
       <p>This is the part of the evaluation that has nothing to do with the benchmark and everything to do with whether you can deploy it. Moonshot AI is a Chinese lab, and for US and EU organizations that introduces the same set of concerns DeepSeek raises: where does your data physically go, who can compel access to it, and does routing prompts and source code to a Chinese company's API servers create a GDPR, contractual, or geopolitical exposure your legal and security teams won't approve.</p>
       <p>These are legitimate questions, not a reason to dismiss the tool — and the distinction matters. A regulated enterprise handling customer data or proprietary source under EU residency rules has a genuine blocker on the hosted API. A solo developer, a startup below the license threshold, or a team working non-sensitive code faces a far lower bar. And the Apache 2.0 release changes the calculus for anyone with infrastructure: self-hosting keeps every token inside your own environment, which neutralizes the data-routing concern at the cost of running ~640GB of VRAM yourself. Several of the third-party providers also host outside China, which is a middle path worth investigating when the tool fits but the default endpoint doesn't.</p>
-      <p>The honest framing is the same one we applied to DeepSeek: treat data residency as a hard gate to clear before the cost savings matter, not as a footnote. If your compliance posture rules out a Chinese-hosted API and you can't self-host, the 25x price advantage is irrelevant — the tool isn't deployable for you. If it doesn't, or you can route around it, the cost case stands on its own.</p>
+      <p>The honest framing is the same one we applied to DeepSeek: treat data residency as a hard gate to clear before the cost savings matter, not as a footnote. If your compliance posture rules out a Chinese-hosted API and you can't self-host, the 8x price advantage is irrelevant — the tool isn't deployable for you. If it doesn't, or you can route around it, the cost case stands on its own.</p>
 
       <div class="users-saying" style="margin:48px 0;">
         <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Community Sentiment</div>
@@ -400,7 +400,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
 
         <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:32px;display:flex;gap:40px;flex-wrap:wrap;">
           <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--accent)">80.2%</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">SWE-bench Verified</div></div>
-          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">~25x</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Cheaper / Token</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">~8x</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Cheaper / Token</div></div>
           <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">300</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Swarm Agents</div></div>
           <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">6.4K+</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">GitHub Stars</div></div>
         </div>
@@ -408,7 +408,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <div style="margin-bottom:28px;">
           <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:#22a05a;">●</span> What developers consistently praise</h3>
           <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
-            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"MCP servers configured for Claude Code work in Kimi Code without modification. For any team already invested in the Claude Code MCP ecosystem, the migration cost is near zero. The 25x cost reduction is hard to ignore."</p>
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"MCP servers configured for Claude Code work in Kimi Code without modification. For any team already invested in the Claude Code MCP ecosystem, the migration cost is near zero. The cost reduction is hard to ignore."</p>
             <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Medium independent review · April 2026</div>
           </div>
           <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
@@ -431,13 +431,13 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
 
         <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.15);border-radius:12px;padding:20px 24px;">
           <div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:8px;">AIToolGrade Take</div>
-          <p style="font-family:var(--sans);font-size:0.93rem;color:var(--text);line-height:1.7;margin:0;">Kimi Code's value proposition mirrors DeepSeek V4's but with a coding-agent layer on top: open-weight model, Apache 2.0 license, MCP compatibility, and API pricing roughly 25x below Claude Opus 4.7 at 80.2% SWE-bench performance. The Agent Swarms capability is genuinely differentiated — 300 coordinated parallel agents have no direct equivalent in Claude Code or any other coding agent at any price. The honest constraints are the same as DeepSeek's: Chinese-company data-residency concerns apply to enterprise teams, and CLI-only availability creates friction for IDE-first developers. For Claude Code users specifically, Kimi Code is the most frictionless migration path in the open-weight category — same MCP ecosystem, same interaction model, 25x lower API cost. The real question is whether the 7.4-point SWE-bench gap (80.2% vs 87.6%) matters for your specific workloads. For most day-to-day agentic coding, the answer is likely no.</p>
+          <p style="font-family:var(--sans);font-size:0.93rem;color:var(--text);line-height:1.7;margin:0;">Kimi Code's value proposition mirrors DeepSeek V4's but with a coding-agent layer on top: open-weight model, Apache 2.0 license, MCP compatibility, and API pricing roughly 8x below Claude Opus 4.8 at 80.2% SWE-bench performance. The Agent Swarms capability is genuinely differentiated — 300 coordinated parallel agents have no direct equivalent in Claude Code or any other coding agent at any price. The honest constraints are the same as DeepSeek's: Chinese-company data-residency concerns apply to enterprise teams, and CLI-only availability creates friction for IDE-first developers. For Claude Code users specifically, Kimi Code is the most frictionless migration path in the open-weight category — same MCP ecosystem, same interaction model, 8x lower API cost. The real question is whether the 8.4-point SWE-bench gap (80.2% vs 88.6%) matters for your specific workloads. For most day-to-day agentic coding, the answer is likely no.</p>
         </div>
       </div>
 
       <h2 id="the-bottom-line">The Bottom Line</h2>
-      <p>Kimi Code is the clearest sign yet that the open-weight category is no longer just about cheap models — it's about cheap <em>agents</em>. Moonshot took the Claude Code playbook, matched it on interaction model and MCP compatibility, wrapped it around a frontier-adjacent K2.6 model scoring 80.2% on SWE-bench Verified, and priced the underlying API at roughly a twenty-fifth of Claude Opus 4.7. Then it added something the closed competitor doesn't have at all: Agent Swarms of up to 300 coordinated instances. On price-performance for agentic coding, very little else in 2026 is in the same conversation.</p>
-      <p>The reasons to hesitate are real and specific, and none of them are about whether the model can code. It's CLI-only in June 2026 — no native IDE extension, so editor-first developers feel the friction immediately. The $25/month Pro plan is preview access, not production K2.6. Documentation is still maturing. And the data-residency question for a Chinese-hosted API is a genuine gate for regulated organizations — clear it before the savings mean anything, because if you can't, they don't. There's also the 7.4-point SWE-bench gap behind Claude Opus 4.7, which is noise for routine work and signal for the hardest autonomous tasks.</p>
+      <p>Kimi Code is the clearest sign yet that the open-weight category is no longer just about cheap models — it's about cheap <em>agents</em>. Moonshot took the Claude Code playbook, matched it on interaction model and MCP compatibility, wrapped it around a frontier-adjacent K2.6 model scoring 80.2% on SWE-bench Verified, and priced the underlying API at roughly an eighth of Claude Opus 4.8. Then it added something the closed competitor doesn't have at all: Agent Swarms of up to 300 coordinated instances. On price-performance for agentic coding, very little else in 2026 is in the same conversation.</p>
+      <p>The reasons to hesitate are real and specific, and none of them are about whether the model can code. It's CLI-only in June 2026 — no native IDE extension, so editor-first developers feel the friction immediately. The $25/month Pro plan is preview access, not production K2.6. Documentation is still maturing. And the data-residency question for a Chinese-hosted API is a genuine gate for regulated organizations — clear it before the savings mean anything, because if you can't, they don't. There's also the 8.4-point SWE-bench gap behind Claude Opus 4.8, which is noise for routine work and signal for the hardest autonomous tasks.</p>
       <p>So the recommendation is conditional and specific. <strong>Best for:</strong> cost-conscious developers running high-volume coding workloads; Claude Code users who want to migrate to a cheaper alternative while keeping their MCP setup; teams that need Agent Swarms for naturally parallel work; and solo developers and startups under the 100M MAU / $20M revenue threshold who want effectively-MIT commercial use. <strong>Not for:</strong> enterprise teams with US/EU data-residency requirements that can't self-host, IDE-first developers who need a VS Code or JetBrains extension, teams requiring enterprise SLAs or compliance certifications, or production use at the K2.6 level without Ultra pricing. If you're already invested in the Claude Code MCP ecosystem and watching your API bill, Kimi Code is one of the most practical alternatives to evaluate first. If you want the absolute ceiling on autonomous capability or a turnkey IDE assistant, <a href="../review/claude-code.html">Claude Code</a> and <a href="../review/github-copilot.html">GitHub Copilot</a> remain the more practical picks. This score reflects the June 2026 state of a fast-moving release; we'll revisit it as IDE support and production access mature.</p>
     </div>
   </div>

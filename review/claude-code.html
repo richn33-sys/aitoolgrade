@@ -2,7 +2,7 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="canonical" href="https://aitoolgrade.com/review/claude-code.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Claude Code review 2026 — Anthropic's coding agent: 1M context, Opus 4.8 (88.6% SWE-bench), Agent Teams. Scored 8.0 with a full conflict-of-interest disclosure.">
+<meta name="description" content="Claude Code review 2026 — Opus 4.8 (88.6% SWE-bench) plus the new Sonnet 5 default, 1M context, Agent Teams. Scored 8.0 with a COI disclosure.">
 <title>Claude Code Review 2026 — Anthropic's Coding Agent, Honestly Scored | AIToolGrade</title>
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="icon" type="image/png" href="../favicon.png">
@@ -148,7 +148,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
     }
   },
   "datePublished": "2026-06-01",
-  "dateModified": "2026-06-24"
+  "dateModified": "2026-07-06"
 }
 </script>
 <script type="application/ld+json">
@@ -191,7 +191,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       </div>
       <h1>Claude Code Review 2026 — Anthropic's Coding Agent, Honestly Scored</h1>
       <div class="review-meta-row">
-        <span>📅 June 2026</span>
+        <span>📅 July 2026</span>
         <span>⏱ 13 min read</span>
         <span>📊 Research-based</span>
       </div>
@@ -203,7 +203,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <p>Claude Code pairs a 1M-token context window with Opus 4.8 at 88.6% SWE-bench Verified — the highest published score in the category — and Agent Teams that dispatch parallel instances across git worktrees. The constraints are equally specific: it is terminal-native and not beginner-friendly, team pricing runs roughly 3x Cursor Teams, and 5-hour usage windows interrupt heavy sessions. The 8.0 is deliberately conservative; community evidence from daily users supports higher, but our conflict of interest demands extra scrutiny, not less.</p>
       </div>
     </div>
-    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified June 2026</p>
+    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified July 2026</p>
 
     <div class="review-body">
 
@@ -278,7 +278,9 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
 
       <p><strong>1M-token context window.</strong> A single context can hold an entire codebase, a full session history, or thousands of pages of documentation — no chunking, no file-loading overhead. On large repositories this is the practical difference between an agent that keeps the whole project in mind and one that keeps re-discovering it. The 1M context is standard on the current Opus 4.8 model.</p>
 
-      <p><strong>Opus 4.8 at 88.6% SWE-bench Verified.</strong> SWE-bench Verified measures real GitHub issue resolution rather than synthetic puzzles, and 88.6% is the highest published score in the category. Opus 4.8 is available on Max plans. For autonomous, multi-step coding tasks, model quality is the ceiling on how much you can actually delegate — and this is the highest ceiling on offer.</p>
+      <p><strong>Opus 4.8 at 88.6% SWE-bench Verified.</strong> SWE-bench Verified measures real GitHub issue resolution rather than synthetic puzzles, and 88.6% is the highest published score in the category. Opus 4.8 is available on Max plans. For autonomous, multi-step coding tasks, model quality is the ceiling on how much you can actually delegate — and this is the highest ceiling on offer. Opus 4.8 remains Claude Code's flagship for the heaviest work.</p>
+
+      <p><strong>Sonnet 5 — the new cost-efficient default.</strong> Launched June 30, 2026, Sonnet 5 (model id claude-sonnet-5) is now the default model for Free and Pro users and is available across Max, Team, Enterprise, Claude Code, and the API. It gets close to Opus 4.8 on agentic coding without overtaking it — 63.2% on SWE-bench Pro versus Opus 4.8's 69.2%, with Opus still ahead on the hardest reasoning, agentic, accuracy-critical, and cyber tasks (Sonnet 5 does edge Opus on one knowledge-work benchmark, GDPval-AA v2). What it changes is the cost math: near-Opus agentic performance at roughly 40% of Opus's API price. On the API it runs $2/M input and $10/M output at introductory rates through August 31, 2026, then $3/$15 — against Opus 4.8's $5/$25. It keeps the 1M-token context and adds selectable effort levels (low, medium, high, max, x-high) so you can trade speed for depth per task. One caveat worth knowing: Sonnet 5 uses an updated tokenizer, so the same input maps to roughly 1.0–1.35x more tokens than before — the introductory pricing is set to be about cost-neutral against the prior Sonnet 4.6 default.</p>
 
       <p><strong>Agent Teams.</strong> Multiple Claude Code instances run in parallel on separate git worktrees, each with its own context and task. You dispatch the work and review the results rather than driving every step. This is the feature with no direct equivalent at any Cursor price point, and the one that reframes Claude Code from assistant to team.</p>
 
@@ -298,14 +300,14 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       <p>It's worth being clear-eyed about who benefits. Agent Teams rewards developers who can decompose work into parallel tasks and judge the results — which is a senior skill, not a universal one. For a beginner, parallel agents are more rope than leverage. The mental-model shift is real, but it lands hardest for people already equipped to manage a team, even an artificial one.</p>
 
       <h2 id="pricing">Pricing and Cost Comparison</h2>
-      <p>Pricing verified June 2026. Claude Code is included with Claude.ai subscriptions rather than sold separately, so the plan you pick is really about how much usage and which models you need. Pro is competitively priced; the gap opens up at the Max and team tiers, which is where the value debate against Cursor actually happens.</p>
+      <p>Pricing verified July 2026. Claude Code is included with Claude.ai subscriptions rather than sold separately, so the plan you pick is really about how much usage and which model you lean on — Sonnet 5 is now the default for everyday work, with Opus 4.8 reserved for the heaviest tasks on Max and Premium. Pro is competitively priced; the gap opens up at the Max and team tiers, which is where the value debate against Cursor actually happens.</p>
       <div class="comparison-wrap">
         <table class="comparison-table">
           <thead>
             <tr><th>Plan</th><th>Price</th><th>What you get</th></tr>
           </thead>
           <tbody>
-            <tr><td>Pro</td><td>$20/mo ($17 annual)</td><td>Claude Code included; Sonnet 4.6 default; limited Opus access; ~$6/day average usage per Anthropic data</td></tr>
+            <tr><td>Pro</td><td>$20/mo ($17 annual)</td><td>Claude Code included; Sonnet 5 default; limited Opus 4.8 access; ~$6/day average usage per Anthropic data</td></tr>
             <tr><td>Max 5x</td><td>$100/mo</td><td>5x Pro limits; Opus 4.8 access; Agent Teams</td></tr>
             <tr><td>Max 20x</td><td>$200/mo</td><td>20x Pro limits; maximum usage; Agent Teams; full Opus 4.8</td></tr>
             <tr><td>Team — Starter</td><td>$25/user/mo</td><td>Basic team features</td></tr>
@@ -332,7 +334,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
 
       <div style="background: var(--accent-dim); border: 1px solid rgba(232,93,38,0.15); border-radius: 10px; padding: 16px 20px; margin-top: 16px;">
         <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 6px;">What Changed</div>
-        <p style="font-family: var(--sans); font-size: 0.9rem; color: var(--text); line-height: 1.65; margin: 0;">Opus 4.8 (released May 2026) is the current default on Max plans, posting 88.6% SWE-bench Verified — up from Opus 4.7's 87.6%. Agent Teams run multiple parallel Claude instances on separate git worktrees. The browser IDE is live at claude.ai/code. The 1M-token context window is standard across the current Opus models.</p>
+        <p style="font-family: var(--sans); font-size: 0.9rem; color: var(--text); line-height: 1.65; margin: 0;">Sonnet 5 (released June 30, 2026) is now the cost-efficient default across Free, Pro, and Claude Code — near-Opus agentic performance at roughly 40% of Opus's API price, with 1M context and selectable effort levels. Opus 4.8 (released May 2026) remains the flagship for the heaviest work, posting 88.6% SWE-bench Verified — up from Opus 4.7's 87.6%. Agent Teams run multiple parallel Claude instances on separate git worktrees. The browser IDE is live at claude.ai/code. The 1M-token context window is standard across the current Opus and Sonnet models.</p>
       </div>
 
       <h2 id="vs-cursor">Claude Code vs Cursor</h2>
@@ -361,7 +363,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
 
       <div class="affiliate-box">
         <h3>Explore Claude Code</h3>
-        <p>Anthropic's coding agent — 1M context, Opus 4.8, and Agent Teams. Included with Claude.ai Pro, Max, and Team plans from $20/month.</p>
+        <p>Anthropic's coding agent — 1M context, Opus 4.8 plus the new Sonnet 5 default, and Agent Teams. Included with Claude.ai Pro, Max, and Team plans from $20/month.</p>
         <a href="https://claude.com/claude-code" class="affiliate-btn" target="_blank" rel="noopener">Visit Claude Code →</a>
         <div class="affiliate-note">We do not earn affiliate commission from Anthropic. See our conflict-of-interest disclosure above.</div>
       </div>
@@ -430,6 +432,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       <div class="sidebar-price-row"><span class="sidebar-price-label">Max 5x</span><span class="sidebar-price-val">$100/mo</span></div>
       <div class="sidebar-price-row"><span class="sidebar-price-label">Max 20x</span><span class="sidebar-price-val">$200/mo</span></div>
       <div class="sidebar-price-row"><span class="sidebar-price-label">Team Premium</span><span class="sidebar-price-val">$125/user</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Default model</span><span class="sidebar-price-val">Sonnet 5</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Flagship</span><span class="sidebar-price-val">Opus 4.8</span></div>
       <div class="sidebar-price-row"><span class="sidebar-price-label">SWE-bench</span><span class="sidebar-price-val">88.6%</span></div>
       <div class="sidebar-price-row"><span class="sidebar-price-label">Context</span><span class="sidebar-price-val">1M tokens</span></div>
       <a href="https://claude.com/claude-code" class="sidebar-cta" target="_blank" rel="noopener">Visit Claude Code →</a>

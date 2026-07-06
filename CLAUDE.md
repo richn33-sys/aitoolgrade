@@ -750,6 +750,26 @@ Verified the queue/Completed/counts against the actual repo (filesystem + `git l
 - **Wordtune review** — writing-category gap (only 4 AI Writing reviews) and monetizable. Priya Nolan; AI Writing category.
 - **local-LLM / Ollama post** — [VERIFY-low]. Subscription-fatigue angle (pairs with this billing post's "control your own meter" / local-LLM section). Confirm demand before committing.
 
+#### Weekly brief — logged July 6, 2026
+**HIGH / timely:**
+- ~~**Claude Sonnet 5 → review/claude-code.html update**~~ ✅ DONE July 6, 2026 (THIS pass; dateModified 2026-07-06, "verified July 2026"). Added Sonnet 5 (claude-sonnet-5, launched June 30, 2026) as the new cost-efficient **default** alongside the unchanged Opus 4.8 flagship: new Key-Features paragraph (SWE-bench Pro 63.2% vs Opus 4.8's 69.2%; leads on GDPval-AA v2; "near-Opus agentic at ~40% of Opus's API price"; API $2/$10 intro through Aug 31 → $3/$15 vs Opus $5/$25; 1M context; effort levels low→x-high; updated-tokenizer ~1.0–1.35x caveat, intro pricing ~cost-neutral vs Sonnet 4.6), Pro-row default Sonnet 4.6→Sonnet 5, pricing intro + What-Changed box + affiliate blurb + sidebar (Default model: Sonnet 5 / Flagship: Opus 4.8) + meta description. **Opus 4.8 / 88.6% content left fully intact** (18 Opus 4.8 + 10 "88.6%" refs). Did NOT present Sonnet 5 as displacing Opus 4.8; did NOT recommend Fable/Mythos (stay offline). **SCORE CHECKPOINT — HELD at 8.0.** Re-ran the 5-dim rubric on only what changed: a stronger default (Sonnet 5 near-Opus) at the *same subscription price* + a cheaper near-Opus API option nudges Value 7.0→~7.5 → computed **8.1** (Ease 7.0 / Features 9.5 / Value 7.5 / Integration 8.5 / Support 8.0). Delta +0.1, within the 0.2 threshold → held at 8.0, no ratingValue change. The subscription pricing structure (Pro $20 / Max $100·$200 / Team Premium $125) and the main Value drag (≈3x Cursor team pricing) are unchanged, so the improvement is real but incremental. Prohibited/superlative scan clean; both JSON-LD blocks valid (Review ratingValue 8.0, dateModified 2026-07-06; BreadcrumbList); COI box preserved. **Pending user "go" to commit + push + SSH deploy.** (sitemap lastmod bump to 2026-07-06 to do at deploy.)
+- **"Claude Sonnet 5 vs Opus 4.8 vs GPT-5.5" comparison** — **HIGH** (publish-this-week). Pulls from the updated claude-code.html review. Marcus Veil; COI box (Claude). Use SWE-bench Pro 63.2/69.2, GDPval-AA v2, cost split ($2/$10 intro vs $5/$25 vs GPT-5.5).
+- **Cursor review update (ONE cursor.html refresh)** — **HIGH**. Batch: iOS app (June 29, public beta, all paid plans) + 75% off Composer 2.5 through July 5 + Teams pricing two-pool split + $120 Premium seat. (Teams pricing partially done in the June 24 cursor-vs-windsurf re-eval — reconcile, don't duplicate.)
+- **"Cursor iOS App Review 2026" post** — **HIGH** (first-mover). Decide after folding iOS into the cursor.html refresh.
+
+**MEDIUM / net-new — local-LLM cluster (all [VERIFY] first):**
+- **Ollama + Open WebUI review** — HIGH-interest but **[VERIFY]** before building.
+- **Langfuse review** — **[VERIFY]**.
+- **WhisperX review** — **[VERIFY]**.
+- **"Best Local LLM Setup 2026: Ollama vs llamafile" post** — **[VERIFY]**.
+
+**PRICING housekeeping:**
+- **Perplexity** — Comet browser now **FREE** (March 18, 2026). Verify review/perplexity.html + pricing reflect it.
+- **ChatGPT $100 tier** — likely already covered by blog/chatgpt-pro-100-vs-200-2026.html; verify, skip if so.
+- **Jasper** — no change.
+
+> **Recurring theme:** local-first / subscription-fatigue keeps surfacing across briefs (ties to the Copilot billing post's "control your own meter" angle). The **local-LLM cluster** (Ollama + Open WebUI / Langfuse / WhisperX / the Ollama-vs-llamafile post) is the emerging net-new theme — treat as a cluster, all [VERIFY] first.
+
 > **June 16, 2026 — June 12 research brief CLOSED OUT.** With "Perplexity Max vs Pro" shipped (below), every content item from the June 12 brief is complete. The ONLY remaining OPEN item is the maintenance follow-up above: the **cursor-vs-windsurf-vs-github-copilot verdict re-eval** (which folds in the GitHub Copilot 8.9-vs-8.8 score reconcile + the Cursor Teams/Business naming reconcile). Perplexity pricing facts were verified current at build — the existing review/perplexity.html already carries the $200 Max tier and $325/seat Enterprise Max, so no stale-pricing refresh was needed.
 
 > **June 19, 2026 update.** Notion AI pricing refresh shipped (blog post — see Completed). Two items now OPEN alongside the cursor-vs-windsurf re-eval: **aider review** (net-new, from the latest brief) and **review/notion-ai.html pricing refresh** (flagged stale during the blog refresh — old add-on/Plus-has-AI model still on the review page). See Remaining queue (OPEN) above.

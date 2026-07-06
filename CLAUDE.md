@@ -78,7 +78,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── automation.html
 │   ├── video.html
 │   └── productivity.html
-└── blog/              ← 19 blog posts + index
+└── blog/              ← 21 blog posts + index
     ├── index.html
     ├── cursor-vs-windsurf-vs-github-copilot.html
     ├── best-free-ai-tools-2026.html
@@ -97,7 +97,10 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
     ├── grok-build-vs-codex-vs-claude-code-2026.html
     ├── chatgpt-go-vs-plus-vs-pro-2026.html
     ├── v0-vs-lovable-vs-bolt-2026.html
-    └── perplexity-max-vs-pro-2026.html
+    ├── perplexity-max-vs-pro-2026.html
+    ├── grok-imagine-video-vs-runway-vs-sora-2026.html
+    ├── github-copilot-token-billing-2026.html
+    └── claude-sonnet-5-vs-opus-4-8-vs-gpt-5-5-2026.html
 ```
 > Root also has: about.html, resources.html, how-we-review.html, contribute.html, contact.html,
 > advertise.html, and legal pages (see "Missing File Structure Details"). author/ holds
@@ -301,8 +304,8 @@ To change the nav:
 - Several pages already indexed by Google as of April 2026
 
 ## Monetization Status
-- Affiliate links: NOT YET ADDED — waiting for traffic to build first
-- When adding: use `target="_blank" rel="sponsored nofollow noopener"` on all affiliate links (sponsored + nofollow is what Google requires on paid/affiliate links; noopener is the security attribute for `target="_blank"`)
+- Affiliate links: **FIRST LINK LIVE (July 6, 2026)** — `review/synthesia.html` carries the site's first affiliate link (Synthesia, direct program). The broad rollout is still gated on traffic; add links one-by-one only as programs approve. Comparison/category-page affiliate links = deliberate LATER pass (a paid link must never look like it tilts a ranking).
+- **LOCKED link pattern (used on Synthesia, reuse verbatim):** `target="_blank" rel="sponsored nofollow noopener"` on every affiliate link (sponsored + nofollow is what Google requires on paid/affiliate links; noopener is the security attribute for `target="_blank"`), plus the FTC disclosure. Never let a paid link change a score.
 - Affiliate disclosure in footer on every page (legally required)
 - Display ads: planned but not implemented
 - Company name for legal pages: NashMart, LLC
@@ -429,7 +432,7 @@ All schema is implemented as JSON-LD in the <head> of each page. Do not add dupl
 - **Organization schema** — index.html (entity signal for Google)
 - **Review schema** — all 35 review pages (eligible for star ratings in SERPs)
   - Includes: reviewRating, author, itemReviewed with applicationCategory + operatingSystem + offers
-- **Article schema** — all 19 blog posts (eligible for article rich results)
+- **Article schema** — all 21 blog posts (eligible for article rich results)
   - Includes: headline, author (Person), publisher (Organization), datePublished, dateModified
 - **BreadcrumbList schema** — all review and blog pages
 
@@ -548,7 +551,7 @@ to links authored in page content (breadcrumbs, in-body links):
 When a new review or blog post is published, ask Claude to write posts for all three accounts.
 Prompt: "Write X posts for [article name]"
 
-### Social Drafts — Pending (status as of June 23, 2026)
+### Social Drafts — Pending (status as of July 6, 2026)
 Tracks which published pieces still need social posts written. **This is the biggest pool of
 unrealized value right now: only ONE piece (ChatGPT Go vs Plus vs Pro) has drafts; every other
 published piece below still needs posts written for all three accounts.**
@@ -571,6 +574,9 @@ published piece below still needs posts written for all three accounts.**
 - Grok Imagine Video 1.5 review (June 21, 7.5) — note the safety-record framing; keep social sober/non-sensational, attributed, no operational detail
 - Grok Imagine Video vs Runway vs Sora 2026 comparison (June 21) — same safety discipline
 - aider review (June 23, 7.8) — angle: git-native workflow + free/BYOK; carries COI (built with Claude Code)
+- GitHub Copilot Token Billing 2026 post (June 28) — angle: the meter changed, not the price; "control your own meter"; carries COI
+- Claude Code review Sonnet 5 update (July 6, held 8.0) — angle: Sonnet 5 = new cost-efficient default alongside Opus 4.8 flagship; carries COI
+- Claude Sonnet 5 vs Opus 4.8 vs GPT-5.5 comparison (July 6) — angle: near-Opus at ~40% price, route by task, no universal winner; carries COI; keep GPT-5.5 (not 5.6) as the comparison point
 
 ### Post Types Per Article
 1. Main posts x3 (one per account)
@@ -705,7 +711,7 @@ Near-term: screenshots on remaining reviews, methodology callout box, keep addin
 Medium-term: contributor bylines, outreach for links from AI newsletters
 Longer-term: topic clusters, deep comparison posts (2000+ words)
 
-Content published to date: 37 reviews, 19 blog posts, 1 comparison page, 1 resources page
+Content published to date: 37 reviews, 21 blog posts, 1 comparison page, 1 resources page
 Next content priorities (from May 24, 2026 session):
 - Monitor Search Console in 2-3 weeks for position movement on Notion AI, Copy.ai, Midjourney rewrites
 - Monitor CTR improvement on Bolt.new and ChatGPT vs Claude
@@ -752,9 +758,10 @@ Verified the queue/Completed/counts against the actual repo (filesystem + `git l
 
 #### Weekly brief — logged July 6, 2026
 **HIGH / timely:**
-- ~~**Claude Sonnet 5 → review/claude-code.html update**~~ ✅ DONE July 6, 2026 (THIS pass; dateModified 2026-07-06, "verified July 2026"). Added Sonnet 5 (claude-sonnet-5, launched June 30, 2026) as the new cost-efficient **default** alongside the unchanged Opus 4.8 flagship: new Key-Features paragraph (SWE-bench Pro 63.2% vs Opus 4.8's 69.2%; leads on GDPval-AA v2; "near-Opus agentic at ~40% of Opus's API price"; API $2/$10 intro through Aug 31 → $3/$15 vs Opus $5/$25; 1M context; effort levels low→x-high; updated-tokenizer ~1.0–1.35x caveat, intro pricing ~cost-neutral vs Sonnet 4.6), Pro-row default Sonnet 4.6→Sonnet 5, pricing intro + What-Changed box + affiliate blurb + sidebar (Default model: Sonnet 5 / Flagship: Opus 4.8) + meta description. **Opus 4.8 / 88.6% content left fully intact** (18 Opus 4.8 + 10 "88.6%" refs). Did NOT present Sonnet 5 as displacing Opus 4.8; did NOT recommend Fable/Mythos (stay offline). **SCORE CHECKPOINT — HELD at 8.0.** Re-ran the 5-dim rubric on only what changed: a stronger default (Sonnet 5 near-Opus) at the *same subscription price* + a cheaper near-Opus API option nudges Value 7.0→~7.5 → computed **8.1** (Ease 7.0 / Features 9.5 / Value 7.5 / Integration 8.5 / Support 8.0). Delta +0.1, within the 0.2 threshold → held at 8.0, no ratingValue change. The subscription pricing structure (Pro $20 / Max $100·$200 / Team Premium $125) and the main Value drag (≈3x Cursor team pricing) are unchanged, so the improvement is real but incremental. Prohibited/superlative scan clean; both JSON-LD blocks valid (Review ratingValue 8.0, dateModified 2026-07-06; BreadcrumbList); COI box preserved. **Pending user "go" to commit + push + SSH deploy.** (sitemap lastmod bump to 2026-07-06 to do at deploy.)
-- ~~**"Claude Sonnet 5 vs Opus 4.8 vs GPT-5.5" comparison**~~ ✅ DONE July 6, 2026 (datePublished/dateModified 2026-07-06) — `blog/claude-sonnet-5-vs-opus-4-8-vs-gpt-5-5-2026.html`, Marcus Veil. COMPARISON blog post (NOT a review; not in nav.js/compare.html; no count change). Target KW "claude sonnet 5 vs opus 4.8" (secondary: "claude sonnet 5 vs gpt-5.5", "claude sonnet 5 benchmarks"). Built from the github-copilot-token-billing structural template + FAQPage schema. **ANGLE held:** Sonnet 5 collapses the price-performance frontier (near-Opus agentic at ~40% of Opus's price) → route by task, NO universal winner. **Routing:** Sonnet 5 = most agentic/day-to-day coding + value (SWE-bench Pro 63.2%); Opus 4.8 = capability ceiling, hardest reasoning/accuracy-critical/cyber (69.2%); GPT-5.5 = terminal/CLI (Terminal-Bench 2.1 83.4% vs 80.4%) or OpenAI ecosystem. **ACCURACY GUARDRAILS honored:** SWE-bench **Pro** used throughout + explicitly flagged as a DIFFERENT test from **Verified**; Opus Verified kept consistent with the site at **88.6%** (referenced only via the Claude Code review, NO conflicting Opus number, NO unverified Sonnet 5 Verified figure introduced); cross-vendor set = GPT-5.5 + Gemini 3.5 Flash (system card), with GPT-5.6/Gemini-3.5-Pro named ONLY in the "that would be unofficial extrapolation, so we don't" disclaimer; tokenizer caveat present (~1.0–1.35x tokens, intro pricing ~cost-neutral vs Sonnet 4.6); Fable 5/Mythos 5 noted above-Opus but OFFLINE/reference-only, Opus 4.8 = usable flagship. **GPT-5.5 pricing** used ~$5/$30 **labeled "Approximate — verify at OpenAI"** (could not independently verify live rate — flagged, not asserted). **COI box present** (2 of 3 models are Anthropic's + site built with Claude Code). Answer-first "short answer" box + 6-Q FAQPage schema mirrored by a visible 6-item FAQ; benchmark table (variants labeled) + pricing table + use-case routing table. NO fabricated AIToolGrade /10 scores (models, not graded reviews). Article + BreadcrumbList + FAQPage schema all valid (3 blocks); all 7 TOC anchors resolve; prohibited-language + superlative scan CLEAN; no hands-on/first-person claims; all benchmarks/pricing attributed. Internal links out: claude-code.html review, cursor/opencode/aider reviews, AI Coding category, best-ai-coding-agents-2026 + grok-build-vs-codex + claude-code-vs-cursor comparisons. **Reciprocal link** added from review/claude-code.html related-reviews box → this post. Card added to blog/index.html (top, newest-first, ⚖️, Comparison tag); sitemap URL lastmod 2026-07-06 (weekly/0.7). Committed 1652e76, pushed, SSH force-pulled to Hostinger; live HTTP 200 confirmed (title/63.2%/SWE-bench Pro/88.6%/FAQPage all present; index card + review reciprocal propagated). **Perplexity editorial check: PENDING user's manual run** (priority: benchmark figures attributed + variant-labeled correctly [Pro vs Verified], no single model crowned universal winner, GPT-5.5 [not 5.6] is the comparison point, tokenizer cost caveat present, COI disclosed).
-- **Cursor review update (ONE cursor.html refresh)** — **HIGH**. Batch: iOS app (June 29, public beta, all paid plans) + 75% off Composer 2.5 through July 5 + Teams pricing two-pool split + $120 Premium seat. (Teams pricing partially done in the June 24 cursor-vs-windsurf re-eval — reconcile, don't duplicate.)
+- ~~**Claude Sonnet 5 → review/claude-code.html update**~~ ✅ DONE July 6, 2026 (THIS pass; dateModified 2026-07-06, "verified July 2026"). Added Sonnet 5 (claude-sonnet-5, launched June 30, 2026) as the new cost-efficient **default** alongside the unchanged Opus 4.8 flagship: new Key-Features paragraph (SWE-bench Pro 63.2% vs Opus 4.8's 69.2%; leads on GDPval-AA v2; "near-Opus agentic at ~40% of Opus's API price"; API $2/$10 intro through Aug 31 → $3/$15 vs Opus $5/$25; 1M context; effort levels low→x-high; updated-tokenizer ~1.0–1.35x caveat, intro pricing ~cost-neutral vs Sonnet 4.6), Pro-row default Sonnet 4.6→Sonnet 5, pricing intro + What-Changed box + affiliate blurb + sidebar (Default model: Sonnet 5 / Flagship: Opus 4.8) + meta description. **Opus 4.8 / 88.6% content left fully intact** (18 Opus 4.8 + 10 "88.6%" refs). Did NOT present Sonnet 5 as displacing Opus 4.8; did NOT recommend Fable/Mythos (stay offline). **SCORE CHECKPOINT — HELD at 8.0.** Re-ran the 5-dim rubric on only what changed: a stronger default (Sonnet 5 near-Opus) at the *same subscription price* + a cheaper near-Opus API option nudges Value 7.0→~7.5 → computed **8.1** (Ease 7.0 / Features 9.5 / Value 7.5 / Integration 8.5 / Support 8.0). Delta +0.1, within the 0.2 threshold → held at 8.0, no ratingValue change. The subscription pricing structure (Pro $20 / Max $100·$200 / Team Premium $125) and the main Value drag (≈3x Cursor team pricing) are unchanged, so the improvement is real but incremental. Prohibited/superlative scan clean; both JSON-LD blocks valid (Review ratingValue 8.0, dateModified 2026-07-06; BreadcrumbList); COI box preserved. **Committed 9618305, pushed, SSH force-pulled to Hostinger; live HTTP 200 confirmed** (Sonnet 5 present, Opus 4.8 intact, "Last verified July 2026", ratingValue 8.0). Sitemap lastmod bumped to 2026-07-06.
+- ~~**"Claude Sonnet 5 vs Opus 4.8 vs GPT-5.5" comparison**~~ ✅ DONE July 6, 2026 (datePublished/dateModified 2026-07-06) — `blog/claude-sonnet-5-vs-opus-4-8-vs-gpt-5-5-2026.html`, Marcus Veil. COMPARISON blog post (NOT a review; not in nav.js/compare.html; no count change). Target KW "claude sonnet 5 vs opus 4.8" (secondary: "claude sonnet 5 vs gpt-5.5", "claude sonnet 5 benchmarks"). Built from the github-copilot-token-billing structural template + FAQPage schema. **ANGLE held:** Sonnet 5 collapses the price-performance frontier (near-Opus agentic at ~40% of Opus's price) → route by task, NO universal winner. **Routing:** Sonnet 5 = most agentic/day-to-day coding + value (SWE-bench Pro 63.2%); Opus 4.8 = capability ceiling, hardest reasoning/accuracy-critical/cyber (69.2%); GPT-5.5 = terminal/CLI (Terminal-Bench 2.1 83.4% vs 80.4%) or OpenAI ecosystem. **ACCURACY GUARDRAILS honored:** SWE-bench **Pro** used throughout + explicitly flagged as a DIFFERENT test from **Verified**; Opus Verified kept consistent with the site at **88.6%** (referenced only via the Claude Code review, NO conflicting Opus number, NO unverified Sonnet 5 Verified figure introduced); cross-vendor set = GPT-5.5 + Gemini 3.5 Flash (system card), with GPT-5.6/Gemini-3.5-Pro named ONLY in the "that would be unofficial extrapolation, so we don't" disclaimer; tokenizer caveat present (~1.0–1.35x tokens, intro pricing ~cost-neutral vs Sonnet 4.6); Fable 5/Mythos 5 noted above-Opus but OFFLINE/reference-only, Opus 4.8 = usable flagship. **GPT-5.5 pricing** initially shipped ~$5/$30 labeled "Approximate — verify at OpenAI"; **later CONFIRMED at OpenAI ($5/M in, $30/M out, cached input $0.50/M) and the qualifier REMOVED** (commit 680c774, deployed, live HTTP 200). Sonnet 5 ($2/$10 → $3/$15) and Opus 4.8 ($5/$25) unchanged; no GPT-5.6 introduced; no score/verdict change. **COI box present** (2 of 3 models are Anthropic's + site built with Claude Code). Answer-first "short answer" box + 6-Q FAQPage schema mirrored by a visible 6-item FAQ; benchmark table (variants labeled) + pricing table + use-case routing table. NO fabricated AIToolGrade /10 scores (models, not graded reviews). Article + BreadcrumbList + FAQPage schema all valid (3 blocks); all 7 TOC anchors resolve; prohibited-language + superlative scan CLEAN; no hands-on/first-person claims; all benchmarks/pricing attributed. Internal links out: claude-code.html review, cursor/opencode/aider reviews, AI Coding category, best-ai-coding-agents-2026 + grok-build-vs-codex + claude-code-vs-cursor comparisons. **Reciprocal link** added from review/claude-code.html related-reviews box → this post. Card added to blog/index.html (top, newest-first, ⚖️, Comparison tag); sitemap URL lastmod 2026-07-06 (weekly/0.7). Committed 1652e76, pushed, SSH force-pulled to Hostinger; live HTTP 200 confirmed (title/63.2%/SWE-bench Pro/88.6%/FAQPage all present; index card + review reciprocal propagated). **Perplexity editorial check: PENDING user's manual run** (priority: benchmark figures attributed + variant-labeled correctly [Pro vs Verified], no single model crowned universal winner, GPT-5.5 [not 5.6] is the comparison point, tokenizer cost caveat present, COI disclosed).
+- ~~**Synthesia affiliate link — FIRST monetized page**~~ ✅ DONE July 6, 2026 (commit 3eca22c, deployed). Inserted the live Synthesia affiliate link on `review/synthesia.html` — the site's **first monetized page**. Used the locked pattern: `target="_blank" rel="sponsored nofollow noopener"` + FTC disclosure. **Score untouched (8.0)** — a paid link must never look like it tilts a ranking. This is the template for future links once Writesonic/Otterly approve (see Affiliate Programs section for verified July 6 status).
+- **Cursor review update (ONE cursor.html refresh)** — **HIGH**. Batch: iOS app (June 29, public beta, all paid plans) + Teams pricing two-pool split + $120 Premium seat. **The 75%-off Composer 2.5 sale ENDED July 5 — now expired; do NOT promote a dead discount (mention as "ended July 5" only if relevant, else drop).** (Teams pricing partially done in the June 24 cursor-vs-windsurf re-eval — reconcile, don't duplicate.)
 - **"Cursor iOS App Review 2026" post** — **HIGH** (first-mover). Decide after folding iOS into the cursor.html refresh.
 
 **MEDIUM / net-new — local-LLM cluster (all [VERIFY] first):**
@@ -769,6 +776,16 @@ Verified the queue/Completed/counts against the actual repo (filesystem + `git l
 - **Jasper** — no change.
 
 > **Recurring theme:** local-first / subscription-fatigue keeps surfacing across briefs (ties to the Copilot billing post's "control your own meter" angle). The **local-LLM cluster** (Ollama + Open WebUI / Langfuse / WhisperX / the Ollama-vs-llamafile post) is the emerging net-new theme — treat as a cluster, all [VERIFY] first.
+
+**NET-NEW surfaced July 6 (log only — do NOT action now):**
+- **GPT-5.6** launched as a **limited preview** (~July 6, 2026). Tiers: **Sol $5/M in · $30/M out · Terra $2.50/$15 · Luna $1/$6**. Potential future review/comparison target once it's GA and Anthropic publishes head-to-heads. **The Sonnet 5 comparison correctly stays vs GPT-5.5** (Anthropic's official system-card comparison point); **GPT-5.6 comparisons remain unofficial extrapolation** until official numbers exist — do NOT retro-fit GPT-5.6 into the existing comparison. [VERIFY tiers/pricing at OpenAI before building anything.]
+
+**STANDING cross-session items (confirmed present July 6, 2026):**
+- **Site-wide consistency audit CLOSED** — C1 clean, C2/C3/C4 done, homepage Cursor 9.5→8.8 stray fixed (see June 28 entries). The canonical-anchored **re-grep-after-any-re-score** lesson stands.
+- **PENDING manual Perplexity editorial gates** on recent pieces before promoting — including the July 6 Sonnet 5 comparison (and older pieces marked "pending user's manual run").
+- **SOCIAL DRAFTS remain the biggest unrealized value** — still only ChatGPT Go-vs-Plus-vs-Pro drafted; ~15+ pieces since (through the July 6 comparison) have NO social posts. See the Social Drafts — Pending section.
+- **WORKFLOW shape (keep):** prompts are now "safe to auto-run, but STOP-and-summarize before any deploy or score-write." Maintain this shape.
+- **Deferred maintenance:** (1) GPT-4o currency pass on chatgpt/perplexity + 2 listicles — **verify each free-tier model at source first** (fast-drift fact); (2) Bolt model menu left version-agnostic — re-verify the real bolt.new lineup when convenient; (3) Hostinger OpenSSH is a bit dated — SSH deploys emit a **post-quantum KEX warning** ("store now, decrypt later"); non-urgent, deploys still succeed.
 
 > **June 16, 2026 — June 12 research brief CLOSED OUT.** With "Perplexity Max vs Pro" shipped (below), every content item from the June 12 brief is complete. The ONLY remaining OPEN item is the maintenance follow-up above: the **cursor-vs-windsurf-vs-github-copilot verdict re-eval** (which folds in the GitHub Copilot 8.9-vs-8.8 score reconcile + the Cursor Teams/Business naming reconcile). Perplexity pricing facts were verified current at build — the existing review/perplexity.html already carries the $200 Max tier and $325/seat Enterprise Max, so no stale-pricing refresh was needed.
 
@@ -1411,32 +1428,36 @@ of real-world perspective.
 ## Affiliate Programs
 
 Tracker file: ~/Desktop/ClaudeWork/aitoolgrade/affiliate-tracker.md
-Last updated: May 2026
+**Status verified at source July 6, 2026** (supersedes the older May-2026 "confirmed-active" list, which was stale — several programs since closed).
 
-Networks:
-- Impact.com — applied May 19, 2026, pending approval. Search for Adobe, Grammarly, Semrush once approved.
-- PartnerStack — rejected May 2026 (early-stage traffic). Reapply in 90 days.
+**LESSON:** affiliate is the volatile, low-control revenue layer — **verify status at source before trusting any listicle or old note.** Reviews route to whatever's currently live; when a program dies, swap a link, not a strategy.
 
-Confirmed active programs:
-- Adobe Firefly — Impact marketplace
-- Grammarly — Impact marketplace
-- Semrush — Impact marketplace ($200 + 30% recurring)
-- Synthesia — synthesia.io/affiliates direct
-- Notion — not accepting new affiliates (check quarterly)
+**LIVE (link inserted):**
+- **Synthesia** — direct program; link live on `review/synthesia.html` (first monetized page, July 6, 2026).
 
-Confirmed dead/paused:
-- Jasper, Writesonic, Copy.ai — programs pulled
-- Cursor, GitHub Copilot, Midjourney, ChatGPT — no programs exist
+**APPLIED — awaiting approval:**
+- **Writesonic** — writesonic.com/affiliate (applied)
+- **Otterly.AI** — otterly.ai/referral (applied)
+- **WHEN APPROVED:** insert links using the locked `rel="sponsored nofollow noopener"` + FTC disclosure pattern (identical to Synthesia).
 
-Adjacent programs (resources.html):
-- Hostinger, NordVPN, Shopify, HubSpot — placeholders live, awaiting affiliate URLs
-- resources.html live at aitoolgrade.com/resources.html
+**CLOSED / friction (verified July 6, 2026):**
+- **Notion** — closed to new affiliates
+- **Copy.ai** — program TERMINATED (per notice)
+- **Peec AI / Profound** — no public affiliate program
+- **HeyGen** — email-only (partnerships@heygen.com)
+- **Jasper** — ambiguous / likely closed
 
-Affiliate link Claude Code prompt: ready to run when URLs approved — located in session notes May 19 2026.
+**Networks (older, re-verify before relying):**
+- Impact.com — applied May 19, 2026 (Adobe Firefly / Grammarly / Semrush live there if approval stands — re-verify).
+- PartnerStack — rejected May 2026 (early-stage traffic); reapply window ~90 days.
+
+**No program exists:** Cursor, GitHub Copilot, Midjourney, ChatGPT.
+
+**Adjacent (resources.html):** Hostinger, NordVPN, Shopify, HubSpot — placeholders live, awaiting URLs. resources.html live at aitoolgrade.com/resources.html.
 
 ## Blog Posts Published
 
-_20 blog posts deployed in `blog/` (excluding index.html). Descript and Lovable are **review**
+_21 blog posts deployed in `blog/` (excluding index.html). Descript and Lovable are **review**
 pages (`review/`), not blog posts — they are tracked in the File Structure review list, not here._
 
 | Post | Author | Date | Target Keyword |

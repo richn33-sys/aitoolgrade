@@ -243,10 +243,10 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <tr><td>Sonnet 5 (intro)</td><td class="winner">$2</td><td class="winner">$10</td><td>Introductory through Aug 31, 2026</td></tr>
         <tr><td>Sonnet 5 (standard)</td><td>$3</td><td>$15</td><td>After Aug 31, 2026</td></tr>
         <tr><td>Opus 4.8</td><td>$5</td><td>$25</td><td>Usable flagship</td></tr>
-        <tr><td>GPT-5.5</td><td>~$5</td><td>~$30</td><td>Approximate — verify at OpenAI</td></tr>
+        <tr><td>GPT-5.5</td><td>$5</td><td>$30</td><td>Confirmed at OpenAI; cached input $0.50/M</td></tr>
       </tbody>
     </table>
-    <p>At introductory rates, Sonnet 5 costs about 40% of Opus 4.8 per token ($2/$10 vs $5/$25), and it undercuts GPT-5.5's roughly $5/$30 as well. Even at its post-August standard pricing of $3/$15, it stays well under both. That's the price-performance story in one line: near-Opus results on most coding work, at a fraction of the per-token cost. (We're deliberately keeping this to the three models in the title. Gemini 3.5 Flash appears in the benchmark table because Anthropic's cross-vendor figures include it, but folding a fourth vendor's pricing in here would blur the comparison more than it helps.)</p>
+    <p>At introductory rates, Sonnet 5 costs about 40% of Opus 4.8 per token ($2/$10 vs $5/$25), and it undercuts GPT-5.5's confirmed $5/$30 as well. Even at its post-August standard pricing of $3/$15, it stays well under both. That's the price-performance story in one line: near-Opus results on most coding work, at a fraction of the per-token cost. (We're deliberately keeping this to the three models in the title. Gemini 3.5 Flash appears in the benchmark table because Anthropic's cross-vendor figures include it, but folding a fourth vendor's pricing in here would blur the comparison more than it helps.)</p>
     <p>There's a caveat that keeps the "cheaper" claim honest, and it's easy to miss. Sonnet 5 uses an <strong>updated tokenizer</strong> (the same family as Opus 4.7), so the identical prompt maps to roughly 1.0 to 1.35 times more tokens than it did on older Sonnet models. A lower per-token price on a slightly higher token count is not a flat discount. Anthropic set the introductory pricing specifically to be about <em>cost-neutral</em> versus the previous Sonnet 4.6 — meaning if you're upgrading from Sonnet 4.6, expect a similar bill, not a windfall. The real savings land when you compare Sonnet 5 to <em>Opus</em>: that's where dropping from $5/$25 to $2/$10 (or $3/$15) genuinely changes the math, even after the token-count adjustment.</p>
 
     <h2 id="by-task">Head-to-Head, by Task</h2>
@@ -268,7 +268,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
     <p>Sonnet 5's 1,618 narrowly tops Opus 4.8's 1,615 — the one benchmark where Sonnet edges the flagship. Be measured about it: it's a different scoring scale and the margin is small enough to be within noise. It's fair to say Sonnet 5 is <em>at least as good</em> as Opus on this class of knowledge work, not that it clearly beats it.</p>
 
     <h3>Cost</h3>
-    <p>Sonnet 5 wins outright. $2/$10 introductory (then $3/$15) undercuts both Opus 4.8's $5/$25 and GPT-5.5's approximate $5/$30. Factor the tokenizer caveat in when comparing to older Sonnet models, but against the two flagships in this post, Sonnet 5 is the clear value pick.</p>
+    <p>Sonnet 5 wins outright. $2/$10 introductory (then $3/$15) undercuts both Opus 4.8's $5/$25 and GPT-5.5's $5/$30. Factor the tokenizer caveat in when comparing to older Sonnet models, but against the two flagships in this post, Sonnet 5 is the clear value pick.</p>
 
     <h2 id="routing">Which to Use: Routing by Use Case</h2>
     <p>Match your primary workload to a model rather than chasing a single "winner."</p>

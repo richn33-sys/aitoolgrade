@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="canonical" href="https://aitoolgrade.com/blog/claude-sonnet-5-vs-opus-4-8-vs-gpt-5-5-2026.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sonnet 5 gets close to Opus 4.8 at ~40% the price. An independent benchmark + pricing comparison vs Opus 4.8 and GPT-5.5 — routed by use case.">
+<title>Claude Sonnet 5 vs Opus 4.8 vs GPT-5.5 (2026): Which to Use, by Task | AIToolGrade</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fafaf8;--bg2:#f3f2ee;--text:#1a1a18;--text2:#4a4a45;--text3:#8a8a82;--accent:#e85d26;--accent2:#f07d4a;--accent-dim:rgba(232,93,38,0.08);--border:#e2e0d8;--white:#ffffff;--display:'Playfair Display',serif;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:4px}
+.nav-dropdown>a::after{content:"▾";font-size:10px}
+.dropdown-menu{visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.15s ease,visibility 0s linear 0.5s;position:absolute;top:calc(100% + 8px);left:-16px;background:white;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:200;max-height:80vh;overflow-y:auto}
+.dropdown-menu a{display:block;padding:8px 12px;font-size:14px;color:var(--text2);text-decoration:none;border-radius:6px;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--bg2);color:var(--accent)}
+.nav-dropdown:hover .dropdown-menu{visibility:visible;opacity:1;pointer-events:auto;transition:opacity 0.15s ease,visibility 0s}
+.nav-dropdown .dropdown-menu::before{content:"";position:absolute;top:-20px;left:0;right:0;height:20px}
+.nav-dropdown::after{content:"";position:absolute;height:20px;width:calc(100% + 16px);bottom:-20px;left:-16px}
+.post-wrap{max-width:780px;margin:0 auto;padding:60px 40px}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:24px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+.post-tag{display:inline-block;background:var(--accent-dim);color:var(--accent);font-size:12px;font-weight:600;padding:4px 10px;border-radius:100px;font-family:var(--mono);margin-bottom:16px}
+h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;margin-bottom:20px}
+.post-meta{font-size:13px;color:var(--text3);margin-bottom:40px;display:flex;gap:20px}
+.post-body h2{font-family:var(--display);font-size:28px;font-weight:700;margin:40px 0 16px}
+.post-body h3{font-size:18px;font-weight:600;margin:28px 0 12px}
+.post-body p{color:var(--text2);margin-bottom:16px;font-size:16px}
+.post-body ul{color:var(--text2);padding-left:20px;margin-bottom:16px}
+.post-body ul li{margin-bottom:8px}
+.comparison-table{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:32px 0}
+.comparison-table th{background:var(--bg2);font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);padding:14px 16px;text-align:left;border-bottom:1px solid var(--border)}
+.comparison-table td{padding:14px 16px;border-bottom:1px solid var(--border);font-size:14px;color:var(--text2)}
+.comparison-table tr:last-child td{border-bottom:none}
+.winner{background:var(--accent-dim);font-weight:600;color:var(--accent)}
+.verdict-box{background:var(--bg2);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:32px 0}
+.verdict-box h4{font-size:14px;font-weight:600;color:var(--accent);margin-bottom:8px;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.06em}
+.verdict-box p{color:var(--text2);font-size:14px;margin:0}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-item h3{font-size:17px;font-weight:600;margin:0 0 8px;color:var(--text)}
+.faq-item p{margin:0;font-size:15px}
+.cta-box{background:var(--text);color:white;border-radius:14px;padding:28px;margin:40px 0;text-align:center}
+.cta-box h3{font-family:var(--display);font-size:22px;font-weight:700;margin-bottom:8px}
+.cta-box p{color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:20px}
+.cta-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta-btn{display:inline-block;background:var(--accent);color:white;padding:10px 20px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px;margin-top:80px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}
+.footer-brand span{color:var(--accent)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:12px;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--accent)}
+@media(max-width:768px){.post-wrap{padding:40px 20px}nav{padding:0 20px}h1{font-size:28px}.footer-inner{grid-template-columns:1fr 1fr}}
+
+/* === MOBILE NAV + RESPONSIVE TABLE FIX === */
+.nav-toggle{display:none;order:2;background:none;border:0;font-size:24px;line-height:1;color:var(--text);cursor:pointer;padding:4px 6px}
+@media(max-width:768px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(250,250,248,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 20px 16px;box-shadow:0 8px 24px rgba(0,0,0,0.06);max-height:calc(100vh - 64px);overflow-y:auto}
+  nav.nav-open .nav-links{display:flex}
+  .nav-links>a,.nav-dropdown{padding:12px 2px;border-bottom:1px solid var(--border)}
+  .nav-dropdown{position:static}
+  .nav-dropdown>a::after{display:none}
+  .dropdown-menu{display:none!important}
+  .nav-cta{display:block;text-align:center;background:var(--accent);color:#fff;margin-top:14px;padding:12px;border:0!important;border-radius:6px}
+  .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+  .comparison-wrap{overflow-x:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Claude Sonnet 5 vs Opus 4.8 vs GPT-5.5 (2026): Which to Use, by Task",
+  "author": {
+    "@type": "Person",
+    "name": "Marcus Veil",
+    "url": "https://aitoolgrade.com/author/marcus-veil.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIToolGrade",
+    "url": "https://aitoolgrade.com"
+  },
+  "datePublished": "2026-07-06",
+  "dateModified": "2026-07-06"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolgrade.com"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aitoolgrade.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "Claude Sonnet 5 vs Opus 4.8 vs GPT-5.5 (2026)", "item": "https://aitoolgrade.com/blog/claude-sonnet-5-vs-opus-4-8-vs-gpt-5-5-2026.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Claude Sonnet 5 better than Opus 4.8?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not overall. In Anthropic's June 30, 2026 launch figures, Sonnet 5 gets close to Opus 4.8 but does not surpass it: on SWE-bench Pro, Opus 4.8 scores 69.2% to Sonnet 5's 63.2%, and Opus still leads the hardest reasoning, accuracy-critical, and cyber tasks. Sonnet 5 narrowly edges Opus only on the GDPval-AA v2 knowledge-work score (1,618 vs 1,615, on a scale where that gap is likely within noise). Where Sonnet 5 clearly wins is price — it delivers near-Opus agentic performance at roughly 40% of Opus's per-token cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Sonnet 5 cheaper than Opus 4.8?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, per token. Sonnet 5 runs $2 per million input and $10 per million output at introductory rates through August 31, 2026, then $3/$15 — against Opus 4.8's $5/$25. But the discount is not flat: Sonnet 5 uses an updated tokenizer, so the same input maps to roughly 1.0 to 1.35 times more tokens than before. Anthropic set the introductory pricing to be about cost-neutral versus the prior Sonnet 4.6, so the real savings show up mostly against Opus, not against the model Sonnet 5 replaces."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sonnet 5 vs GPT-5.5 — which is better for coding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It splits by task. On SWE-bench Pro, Sonnet 5 leads at 63.2% to GPT-5.5's 58.6%. On Terminal-Bench 2.1, GPT-5.5 edges ahead at 83.4% to Sonnet 5's 80.4%, so terminal and CLI agent work is where GPT-5.5 looks strongest. Sonnet 5 also undercuts GPT-5.5 on per-token price. Pick Sonnet 5 for repository-level agentic coding and cost; consider GPT-5.5 for terminal-heavy workflows or if you are already in the OpenAI ecosystem."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What benchmarks are these figures from, and is SWE-bench Pro the same as SWE-bench Verified?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The figures come from Anthropic's Sonnet 5 launch table and system card (June 30, 2026), whose official cross-vendor comparisons are against GPT-5.5 and Gemini 3.5 Flash. SWE-bench Pro and SWE-bench Verified are different tests and are not interchangeable — a Pro score cannot be compared to a Verified score. Our Claude Code review cites SWE-bench Verified, where Opus 4.8 posts 88.6%; the tables in this post use SWE-bench Pro, the harder variant Anthropic featured at launch. Any comparison against GPT-5.6 or a Gemini 3.5 Pro would be unofficial extrapolation, so we don't make one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are Fable 5 and Mythos 5 better than Opus 4.8?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They sit above Opus 4.8 in Anthropic's model lineup, but both are offline under the June 2026 export-control suspension with no confirmed return date. That makes them reference points, not options you can actually deploy. Opus 4.8 is the usable flagship today, with Sonnet 5 as the new cost-efficient default beneath it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which model should I default to in Claude Code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most work, Sonnet 5 — it is now the default and covers the bulk of agentic coding at the best value. Switch to Opus 4.8 for the hardest reasoning, accuracy-critical, or security-sensitive tasks where the extra capability earns its price. Sonnet 5 also exposes selectable effort levels (low, medium, high, max, x-high); at x-high it approaches Opus 4.8's medium-to-high results on some evaluations, at the cost of more tokens and latency."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div id="nav-root"></div>
+<script src="../nav.js"></script>
+
+<div class="post-wrap">
+  <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="index.html">Blog</a><span>›</span>Claude Sonnet 5 vs Opus 4.8 vs GPT-5.5 (2026)</div>
+  <span class="post-tag">Comparison</span>
+  <h1>Claude Sonnet 5 vs Opus 4.8 vs GPT-5.5 (2026): Which to Use, by Task</h1>
+  <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:32px;font-family:'DM Mono',monospace;">By <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade &middot; Last verified July 2026</p>
+  <div class="post-meta"><span>📅 Updated July 2026</span><span>⏱ 13 min read</span></div>
+
+  <div class="post-body">
+    <div class="verdict-box">
+      <h4>The short answer</h4>
+      <p>Use <strong>Sonnet 5</strong> for most agentic and coding work — it gets close to Opus 4.8 on the benchmarks that matter and lands at roughly 40% of Opus's per-token price. Reach for <strong>Opus 4.8</strong> when the task is the hardest reasoning, accuracy-critical, or security-sensitive work, where its capability lead still earns the premium. Consider <strong>GPT-5.5</strong> for terminal and CLI-heavy agent workflows, where it edges Sonnet 5, or if your stack already lives in the OpenAI ecosystem. There's no universal winner here — Sonnet 5 is the value story, Opus 4.8 is the capability ceiling, and GPT-5.5 is the cross-vendor competitor with one clear strength.</p>
+    </div>
+
+    <div style="background: #fef3cd; border: 1px solid #f0c040; border-radius: 10px; padding: 14px 18px; margin-bottom: 28px;">
+      <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: #8a6000; margin-bottom: 6px;">⚠️ Disclosure</div>
+      <p style="font-family: var(--sans); font-size: 0.88rem; color: #5a4000; line-height: 1.6; margin: 0;">Two of the three models compared here are Anthropic's, and AIToolGrade is built and maintained with Claude Code — so we have a direct financial relationship with Anthropic through API usage. We're naming that up front. To keep this honest, the analysis below is grounded in Anthropic's own published benchmarks and pricing (attributed throughout), it does not crown a Claude model the universal winner, and it credits GPT-5.5 where the numbers favor it. We received no compensation from any company mentioned.</p>
+    </div>
+
+    <div class="toc" style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin:32px 0">
+      <p style="font-size:12px;font-family:'DM Mono',monospace;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px">In This Article</p>
+      <ol style="padding-left:20px;display:flex;flex-direction:column;gap:8px">
+        <li style="font-size:15px;color:var(--text2)"><a href="#what-changed" style="color:var(--text2)">What changed on June 30 — and the lineup context</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#benchmarks" style="color:var(--text2)">The benchmarks, by variant</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#pricing" style="color:var(--text2)">Pricing and the honest cost math</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#by-task" style="color:var(--text2)">Head-to-head, by task</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#routing" style="color:var(--text2)">Which to use: routing by use case</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#faq" style="color:var(--text2)">Frequently asked questions</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#verdict" style="color:var(--text2)">Verdict</a></li>
+      </ol>
+    </div>
+
+    <h2 id="what-changed">What Changed on June 30 — and the Lineup Context</h2>
+    <p>Sonnet 5 (model id <code>claude-sonnet-5</code>) launched on June 30, 2026, and the reason it's worth a post isn't a single headline number — it's what it does to the price-performance curve. For the past year, if you wanted near-frontier agentic coding from Anthropic, you paid Opus rates. Sonnet 5 collapses that gap: it lands close to Opus 4.8 on most of the benchmarks that matter for day-to-day engineering, at roughly 40% of Opus's per-token price. So the interesting question stopped being "which model is best" and became "when is Opus's extra capability actually worth its price, and where does GPT-5.5 fit in?"</p>
+    <p>Sonnet 5 is now the default model for Free and Pro users and is available across Max, Team, Enterprise, <a href="../review/claude-code.html" style="color:var(--accent)">Claude Code</a>, and the API. It ships with a 1M-token context window and selectable effort levels — low, medium, high, max, and x-high — where higher effort spends more tokens for more accuracy. On some evaluations, Sonnet 5 at x-high approaches Opus 4.8 running at medium or high, which is the clearest signal of how narrow the capability gap has become for a lot of work.</p>
+    <p>One piece of lineup context keeps the framing straight. Anthropic's tiers run Haiku → Sonnet → Opus → Fable → Mythos. Fable 5 and Mythos 5 sit above Opus, but both are offline under the June 2026 export-control suspension, with no confirmed return date — treat them as reference points, not deployable options. That makes <strong>Opus 4.8 the usable flagship</strong>, with Sonnet 5 as the new cost-efficient default underneath it. Sonnet 5 doesn't displace Opus at the top; it changes what most people reach for first.</p>
+
+    <h2 id="benchmarks">The Benchmarks, by Variant</h2>
+    <p>All figures below come from Anthropic's Sonnet 5 launch table and system card, published June 30, 2026. Anthropic's official cross-vendor comparisons are against <strong>GPT-5.5</strong> and <strong>Gemini 3.5 Flash</strong>, so those are the outside models with published, apples-to-apples numbers. A comparison against a GPT-5.6 or a Gemini 3.5 Pro would be unofficial extrapolation, and we don't invent one.</p>
+    <p>Before the table, one distinction that a lot of coverage gets wrong: <strong>SWE-bench Pro and SWE-bench Verified are different tests.</strong> They use different problem sets and produce different numbers — you cannot compare a score from one to a score from the other. Our <a href="../review/claude-code.html" style="color:var(--accent)">Claude Code review</a> cites SWE-bench Verified, where Opus 4.8 posts 88.6%. The tables here use SWE-bench Pro, the harder variant Anthropic featured at the Sonnet 5 launch, because it's the internally consistent set that includes all the models below. Don't read the 69.2% Pro figure as a downgrade from 88.6% — it's a different, tougher benchmark.</p>
+
+    <table class="comparison-table">
+      <thead><tr><th>Benchmark (variant)</th><th>Sonnet 5</th><th>Opus 4.8</th><th>GPT-5.5</th><th>Others</th></tr></thead>
+      <tbody>
+        <tr><td>SWE-bench Pro (agentic coding)</td><td class="winner">63.2%</td><td>69.2%</td><td>58.6%</td><td>Sonnet 4.6 58.1% · Gemini 3.5 Flash 55.1%</td></tr>
+        <tr><td>Terminal-Bench 2.1 (CLI agents)</td><td>80.4%</td><td>—</td><td class="winner">83.4%</td><td>Sonnet 4.6 67.0%</td></tr>
+        <tr><td>OSWorld-Verified (computer use)</td><td>81.2%</td><td>—</td><td>—</td><td>Sonnet 4.6 78.5%</td></tr>
+        <tr><td>Humanity's Last Exam (with tools)</td><td>57.4%</td><td>57.9%</td><td>—</td><td>near-parity</td></tr>
+        <tr><td>GDPval-AA v2 (knowledge work)</td><td class="winner">1,618</td><td>1,615</td><td>—</td><td>different scale; gap likely noise</td></tr>
+        <tr><td>Context window</td><td>1M tokens</td><td>1M tokens</td><td>—</td><td>effort levels: low→x-high</td></tr>
+      </tbody>
+    </table>
+    <p>Read the highlights carefully, because they don't all point one way. On <strong>SWE-bench Pro</strong>, Sonnet 5's 63.2% leads the cross-vendor set — it's ahead of GPT-5.5 (58.6%), Sonnet 4.6 (58.1%), and Gemini 3.5 Flash (55.1%) — but Opus 4.8's 69.2% leads overall. So Sonnet 5 is the strongest model here <em>except</em> for Opus. On <strong>Terminal-Bench 2.1</strong>, GPT-5.5 (83.4%) edges Sonnet 5 (80.4%); terminal and CLI agent work is GPT-5.5's clearest win in this set (Anthropic did not publish an Opus figure for this benchmark, so we leave it blank rather than guess). On <strong>Humanity's Last Exam</strong> with tools, Sonnet 5 (57.4%) and Opus 4.8 (57.9%) are effectively tied. And on <strong>GDPval-AA v2</strong> knowledge work, Sonnet 5's 1,618 nudges past Opus's 1,615 — but that's a different scoring scale and a margin small enough to treat as noise, not a real capability reversal.</p>
+    <p>The honest summary of the table: Sonnet 5 does not beat Opus 4.8 overall. It gets close, matches it on a couple of measures, and Opus keeps a clear lead on the hardest problems. GPT-5.5 is competitive and wins the terminal category outright.</p>
+
+    <h2 id="pricing">Pricing and the Honest Cost Math</h2>
+    <p>This is where Sonnet 5 actually separates itself. Prices are per million tokens; verify current rates at each provider before budgeting, because introductory windows and vendor pricing shift.</p>
+
+    <table class="comparison-table">
+      <thead><tr><th>Model</th><th>Input / M</th><th>Output / M</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Sonnet 5 (intro)</td><td class="winner">$2</td><td class="winner">$10</td><td>Introductory through Aug 31, 2026</td></tr>
+        <tr><td>Sonnet 5 (standard)</td><td>$3</td><td>$15</td><td>After Aug 31, 2026</td></tr>
+        <tr><td>Opus 4.8</td><td>$5</td><td>$25</td><td>Usable flagship</td></tr>
+        <tr><td>GPT-5.5</td><td>~$5</td><td>~$30</td><td>Approximate — verify at OpenAI</td></tr>
+      </tbody>
+    </table>
+    <p>At introductory rates, Sonnet 5 costs about 40% of Opus 4.8 per token ($2/$10 vs $5/$25), and it undercuts GPT-5.5's roughly $5/$30 as well. Even at its post-August standard pricing of $3/$15, it stays well under both. That's the price-performance story in one line: near-Opus results on most coding work, at a fraction of the per-token cost. (We're deliberately keeping this to the three models in the title. Gemini 3.5 Flash appears in the benchmark table because Anthropic's cross-vendor figures include it, but folding a fourth vendor's pricing in here would blur the comparison more than it helps.)</p>
+    <p>There's a caveat that keeps the "cheaper" claim honest, and it's easy to miss. Sonnet 5 uses an <strong>updated tokenizer</strong> (the same family as Opus 4.7), so the identical prompt maps to roughly 1.0 to 1.35 times more tokens than it did on older Sonnet models. A lower per-token price on a slightly higher token count is not a flat discount. Anthropic set the introductory pricing specifically to be about <em>cost-neutral</em> versus the previous Sonnet 4.6 — meaning if you're upgrading from Sonnet 4.6, expect a similar bill, not a windfall. The real savings land when you compare Sonnet 5 to <em>Opus</em>: that's where dropping from $5/$25 to $2/$10 (or $3/$15) genuinely changes the math, even after the token-count adjustment.</p>
+
+    <h2 id="by-task">Head-to-Head, by Task</h2>
+    <p>No single model wins across the board, so the useful way to read this is task by task. Here's where each one lands.</p>
+
+    <h3>Repository-level coding (SWE-bench Pro)</h3>
+    <p>For agentic, multi-file coding, the ranking is Opus 4.8 (69.2%), then Sonnet 5 (63.2%), then GPT-5.5 (58.6%). Opus has the highest ceiling. But Sonnet 5 is within about six points at roughly 40% of the cost — for most engineering teams, that trade favors Sonnet 5 as the daily driver, with Opus held in reserve for the genuinely hard tickets. This is the core of the "collapsed frontier" argument.</p>
+
+    <h3>Terminal and CLI agents (Terminal-Bench 2.1)</h3>
+    <p>This is GPT-5.5's category. At 83.4% it edges Sonnet 5's 80.4%, and it's the one place in this comparison where the OpenAI model is the top published number. If your workflow is heavily terminal-driven — shell-first agents, CLI tooling, command orchestration — GPT-5.5 has a measurable, if narrow, advantage. Both are a large step up from Sonnet 4.6's 67.0%.</p>
+
+    <h3>Computer use (OSWorld-Verified)</h3>
+    <p>Anthropic published Sonnet 5 at 81.2% on OSWorld-Verified, up from Sonnet 4.6's 78.5%. Without published Opus 4.8 or GPT-5.5 numbers on this exact benchmark, we won't manufacture a three-way ranking — but the takeaway stands on its own: Sonnet 5 is a solid step forward for GUI and computer-use agents relative to the model it replaces.</p>
+
+    <h3>Hardest reasoning and accuracy-critical work</h3>
+    <p>This is where Opus 4.8 earns its premium. On Humanity's Last Exam with tools, Opus (57.9%) and Sonnet 5 (57.4%) are effectively tied, but Anthropic is explicit that Opus 4.8 retains the lead on the hardest reasoning, accuracy-critical, and cyber tasks. When a wrong answer is expensive — security review, complex architectural reasoning, high-stakes analysis — the extra capability is worth paying for. For everything below that bar, the tie on HLE suggests Sonnet 5 is enough.</p>
+
+    <h3>Knowledge work (GDPval-AA v2)</h3>
+    <p>Sonnet 5's 1,618 narrowly tops Opus 4.8's 1,615 — the one benchmark where Sonnet edges the flagship. Be measured about it: it's a different scoring scale and the margin is small enough to be within noise. It's fair to say Sonnet 5 is <em>at least as good</em> as Opus on this class of knowledge work, not that it clearly beats it.</p>
+
+    <h3>Cost</h3>
+    <p>Sonnet 5 wins outright. $2/$10 introductory (then $3/$15) undercuts both Opus 4.8's $5/$25 and GPT-5.5's approximate $5/$30. Factor the tokenizer caveat in when comparing to older Sonnet models, but against the two flagships in this post, Sonnet 5 is the clear value pick.</p>
+
+    <h2 id="routing">Which to Use: Routing by Use Case</h2>
+    <p>Match your primary workload to a model rather than chasing a single "winner."</p>
+
+    <table class="comparison-table">
+      <thead><tr><th>Pick this</th><th>If your work is…</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Sonnet 5</strong></td><td>Most agentic coding, refactors, day-to-day engineering, cost-sensitive teams</td><td>Near-Opus on SWE-bench Pro at ~40% of the price; new default in Claude Code; 1M context + effort levels</td></tr>
+        <tr><td><strong>Opus 4.8</strong></td><td>Hardest reasoning, accuracy-critical, security/cyber-sensitive tasks</td><td>Highest published ceiling (SWE-bench Pro 69.2%); leads the hardest problems where a wrong answer is costly</td></tr>
+        <tr><td><strong>GPT-5.5</strong></td><td>Terminal/CLI-heavy agents, or you're already in the OpenAI ecosystem</td><td>Edges Sonnet 5 on Terminal-Bench 2.1 (83.4% vs 80.4%)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Pick Sonnet 5 if…</h3>
+    <p>…most of your work is repository-level coding, refactors, code review, and the kind of agentic tasks that make up a normal engineering week — and you care about the bill. It's the default in <a href="../review/claude-code.html" style="color:var(--accent)">Claude Code</a> for a reason: it covers the bulk of the job at the best value, and you can dial effort up to x-high on the harder tickets before you reach for Opus. This is the right starting point for most people and most teams.</p>
+
+    <h3>Pick Opus 4.8 if…</h3>
+    <p>…the task sits at the top of the difficulty curve: gnarly multi-file reasoning, security-sensitive review, or anything accuracy-critical where the cost of a mistake dwarfs the token bill. Opus keeps a real lead on the hardest problems, and the premium is easiest to justify exactly there. A common pattern that works well: default to Sonnet 5, escalate specific hard tasks to Opus.</p>
+
+    <h3>Pick GPT-5.5 if…</h3>
+    <p>…your agents live in the terminal, or your stack is already built around OpenAI. Terminal-Bench 2.1 is the one benchmark here where GPT-5.5 is the top number, and ecosystem gravity is a legitimate tiebreaker. For repository-level coding and per-token cost, though, Sonnet 5 has the edge. If you want the broader coding-tool picture, our <a href="best-ai-coding-agents-2026.html" style="color:var(--accent)">best AI coding agents guide</a> and <a href="grok-build-vs-codex-vs-claude-code-2026.html" style="color:var(--accent)">Grok Build vs Codex vs Claude Code comparison</a> map the tools these models run inside.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>Is Claude Sonnet 5 better than Opus 4.8?</h3>
+      <p>Not overall. Sonnet 5 gets close but doesn't surpass it — on SWE-bench Pro it's 63.2% to Opus's 69.2%, and Opus still leads the hardest reasoning, accuracy-critical, and cyber tasks. Sonnet 5 narrowly edges Opus only on GDPval-AA v2 knowledge work (1,618 vs 1,615, likely within noise). Its real advantage is price: near-Opus agentic performance at about 40% of the per-token cost.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is Sonnet 5 cheaper than Opus 4.8?</h3>
+      <p>Yes, per token: $2/$10 introductory through August 31, 2026, then $3/$15, versus Opus 4.8's $5/$25. The catch is Sonnet 5's updated tokenizer maps the same input to roughly 1.0–1.35× more tokens, so it isn't a flat discount. Anthropic set the intro pricing to be about cost-neutral versus Sonnet 4.6 — the big savings are against Opus, not against the model Sonnet 5 replaces.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Sonnet 5 vs GPT-5.5 — which is better for coding?</h3>
+      <p>It splits. Sonnet 5 leads SWE-bench Pro (63.2% vs 58.6%); GPT-5.5 edges Terminal-Bench 2.1 (83.4% vs 80.4%). So Sonnet 5 for repository-level agentic coding and cost, GPT-5.5 for terminal-heavy work or an existing OpenAI stack. Sonnet 5 also undercuts GPT-5.5 on per-token price.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is SWE-bench Pro the same as SWE-bench Verified?</h3>
+      <p>No — they're different tests with different problem sets, and scores aren't comparable. This post uses SWE-bench Pro (Opus 4.8 at 69.2%), the harder variant from Anthropic's launch table. Our Claude Code review cites SWE-bench Verified, where Opus 4.8 posts 88.6%. Don't read the Pro number as a drop from the Verified one. All figures trace to Anthropic's June 30, 2026 launch materials and system card, whose cross-vendor comparisons are versus GPT-5.5 and Gemini 3.5 Flash.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Are Fable 5 and Mythos 5 better than Opus 4.8?</h3>
+      <p>They rank above Opus in Anthropic's lineup, but both are offline under the June 2026 export-control suspension with no confirmed return. They're reference points, not deployable options. Opus 4.8 is the usable flagship, with Sonnet 5 as the cost-efficient default beneath it.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which model should I default to in Claude Code?</h3>
+      <p>Sonnet 5 for most work — it's the new default and handles the bulk of agentic coding at the best value. Escalate to Opus 4.8 for the hardest, accuracy-critical, or security-sensitive tasks. Effort levels (low through x-high) let you push Sonnet 5 harder before switching; at x-high it approaches Opus 4.8's medium-to-high results on some evals, for more tokens and latency.</p>
+    </div>
+
+    <h2 id="verdict">Verdict</h2>
+    <p>There's no universal winner, and pretending otherwise would miss the actual story. Sonnet 5's launch matters because it collapsed the price-performance frontier: you can now get within striking distance of Opus 4.8 on most coding and agentic work for roughly 40% of the per-token cost. That reframes the decision from "which model is strongest" to "when is the extra capability worth paying for" — and for most teams, most of the time, the answer points to Sonnet 5 as the default.</p>
+    <p>Hold Opus 4.8 in reserve for the top of the difficulty curve, where its lead on the hardest reasoning and accuracy-critical work is real and the premium is easiest to defend. Keep GPT-5.5 in mind for terminal-first agents and OpenAI-native stacks, where it has the one clear benchmark win in this comparison. Sonnet 5 is the value story, Opus 4.8 is the capability ceiling, and GPT-5.5 is the cross-vendor competitor with a specific strength — route by task and you'll get more out of all three than any single-model allegiance would give you. For how these models behave inside the tool we know best, see our <a href="../review/claude-code.html" style="color:var(--accent)">Claude Code review</a>, and for the wider field, the <a href="../category/coding.html" style="color:var(--accent)">AI Coding category</a>.</p>
+
+    <div class="cta-box">
+      <h3>Go deeper on the tools</h3>
+      <p>Pricing context, documented features, and community sentiment for the agents these models run inside.</p>
+      <div class="cta-links">
+        <a href="../review/claude-code.html" class="cta-btn">Claude Code Review →</a>
+        <a href="../review/cursor.html" class="cta-btn">Cursor Review →</a>
+        <a href="../review/opencode.html" class="cta-btn">OpenCode Review →</a>
+        <a href="../review/aider.html" class="cta-btn">aider Review →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="related-posts" style="max-width:780px;margin:0 auto 48px;padding:32px;background:var(--bg2);border-radius:14px;border:1px solid var(--border)">
+  <p style="font-size:12px;font-family:DM Mono,monospace;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px">Related Reading</p>
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <a href="best-ai-coding-agents-2026.html" style="font-size:15px;font-weight:600;color:var(--text);border-bottom:1px solid var(--border);padding-bottom:12px;text-decoration:none">Best AI Coding Agents in 2026 →</a>
+    <a href="grok-build-vs-codex-vs-claude-code-2026.html" style="font-size:15px;font-weight:600;color:var(--text);border-bottom:1px solid var(--border);padding-bottom:12px;text-decoration:none">Grok Build vs Codex vs Claude Code 2026 →</a>
+    <a href="claude-code-vs-cursor-vs-github-copilot-2026.html" style="font-size:15px;font-weight:600;color:var(--text);text-decoration:none">Claude Code vs Cursor vs GitHub Copilot 2026 →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">AI Tool<span>Grade</span></div><p class="footer-desc">Independent reviews and comparisons of AI tools. Researched, fact-checked, and independently rated.</p></div>
+    <div><div class="footer-col-title">Reviews</div><div class="footer-links"><a href="../category/writing.html">AI Writing</a><a href="../category/coding.html">AI Coding</a><a href="../category/image.html">AI Image</a><a href="../category/automation.html">Automation</a><a href="../category/productivity.html">Productivity</a></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="../about.html">About</a><a href="../how-we-review.html">How we review</a><a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
+    <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+</footer>
+</body></html>

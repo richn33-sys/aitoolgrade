@@ -186,7 +186,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
           <div class="review-tool-url">cursor.com</div>
         </div>
       </div>
-      <h1>Cursor Review 2026 — The AI Code Editor Developers Are Switching To</h1>
+      <h1>Cursor Review 2026 — Inside the Agent-First AI Code Editor</h1>
       <div class="review-meta-row">
         <span>📅 Updated July 2026</span>
         <span>⏱ 9 min read</span>
@@ -196,8 +196,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
     <div class="verdict-banner">
       <div class="verdict-score">8.8</div>
       <div class="verdict-text">
-        <h3>Editor's Verdict: Category Leader on Features, Watch the Pricing</h3>
-        <p>With the Cursor 3 rebuild, it sits at the front of the agent-first coding category on feature depth and integrations. The usage-based credit model is the main trade-off to weigh, and a free Hobby tier makes it straightforward to evaluate first.</p>
+        <h3>Editor's Verdict: A Deep Agent Feature Set, Watch the Pricing</h3>
+        <p>With the Cursor 3 rebuild, it offers one of the broader agent feature sets among AI code editors — parallel agents, multi-repo workspaces, an integrated browser, and per-task access to frontier models. The usage-based credit model is the main trade-off to weigh, and a free Hobby tier makes it straightforward to evaluate first.</p>
       </div>
     </div>
     <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified July 2026</p>
@@ -211,7 +211,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       <p>At the core is <strong>Composer</strong> (Composer 2.5), Cursor's own coding model, tuned for fast agentic loops. Cursor reports it scores around 79.8% on SWE-Bench Multilingual — in the same range as Opus 4.7 and GPT-5.5 on that benchmark, by Cursor's own numbers — while running at roughly a tenth of the per-token cost ($0.50 per million input tokens, $2.50 per million output on the Standard rate). Its main limitation is a 200K-token context window, narrower than the frontier models it sits alongside. Those are vendor-reported figures rather than our own testing, but they explain the pricing structure below: the first-party model is cheap enough for Cursor to include a generous pool of it on paid plans. You can also point Cursor at frontier models from other labs — Claude Opus 4.8, GPT-5.5, and Gemini 3.1 Pro among them — and switch per task. This review covers Cursor's documented capabilities across common developer workflows, based on verified features, current pricing, and developer community feedback.</p>
 
       <h3 style="font-family:var(--display);font-size:20px;font-weight:700;margin:28px 0 12px">What changed in Cursor 3</h3>
-      <p>The rebuild added the pieces that make agent-first development practical rather than a demo:</p>
+      <p>The rebuild added the pieces agent-first development needs to hold up in day-to-day work:</p>
       <ul style="color:var(--text2);margin:0 0 16px 20px;display:flex;flex-direction:column;gap:8px">
         <li><strong>Composer 2.5</strong> — Cursor's in-house coding model running the agentic loop, with multi-model access (Anthropic, OpenAI, Google, xAI) when you want it.</li>
         <li><strong>Multi-repo workspaces</strong> — agents reason across more than one repository in a single workspace instead of one project at a time.</li>
@@ -226,7 +226,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
 
       <h3 id="cursor-ios" style="font-family:var(--display);font-size:20px;font-weight:700;margin:28px 0 12px">Cursor for iOS (public beta)</h3>
       <p>On June 29, 2026 Cursor released a native iOS app, currently in public beta on all paid plans. It's one of the first native mobile apps from a major AI coding tool, and it does more than mirror the desktop. From your phone you can kick off always-on cloud agents, remote-control agents already running on your own machine, watch progress through lock-screen Live Activities, and get a push notification the moment an agent finishes or stops to ask a question. You can also review and merge pull requests without opening a laptop.</p>
-      <p>The practical use cases are the ones where being away from your desk is the whole problem: handling an on-call incident, reproducing a customer bug from a bug report, or turning a screenshot of mobile feedback into a task an agent picks up. It is worth being clear that this is a public beta rather than a finished release — expect rough edges — but the capability itself is a real point of differentiation right now.</p>
+      <p>The practical use cases are the ones where being away from your desk is the whole problem: handling an on-call incident, reproducing a customer bug from a bug report, or turning a screenshot of mobile feedback into a task an agent picks up. It is worth being clear that this is a public beta rather than a finished release — expect rough edges — but few competing AI coding tools ship an equivalent native mobile app yet.</p>
 
       <!-- toc -->
 <nav aria-label="Table of contents" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 32px 0;">
@@ -281,14 +281,14 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <div class="pricing-row"><div>Pro</div><div>$20/mo ($16/mo annual)</div><div>Includes a ~$20/month usage credit pool; Auto mode is unlimited and does not draw the pool, while manually selecting frontier models does</div></div>
         <div class="pricing-row"><div>Pro+</div><div>$60/mo ($48/mo annual)</div><div>Roughly 3× the Pro credit allocation for heavier frontier-model use</div></div>
         <div class="pricing-row"><div>Ultra</div><div>$200/mo</div><div>Roughly 20× the Pro credit allocation, plus priority access — for power users</div></div>
-        <div class="pricing-row"><div>Business (Standard seat)</div><div>$40/user/mo ($32 annual)</div><div>Included usage now splits into two pools — a Composer &amp; Auto pool (first-party models, including Composer 2.5) and a separate Third-Party API pool (Claude, GPT, Gemini). Same price as before, with meaningfully more total included usage. Adds centralized billing, admin controls, team-wide privacy mode, and an admin dashboard showing per-pool usage with smart spend alerts.</div></div>
-        <div class="pricing-row"><div>Premium seat</div><div>~$120/user/mo (~$96 annual)</div><div>A new tier for heavy agent users: roughly 5× the Standard seat's usage across both pools. Cursor expects the Composer pool alone to cover most heavy users for a full month, plus priority access.</div></div>
+        <div class="pricing-row"><div>Business (Standard seat)</div><div>$40/user/mo ($32 annual)</div><div>Included usage now splits into two pools — a Composer &amp; Auto pool (first-party models, including Composer 2.5) and a separate Third-Party API pool (Claude, GPT, Gemini). Same price as before, and according to Cursor, meaningfully more total included usage. Adds centralized billing, admin controls, team-wide privacy mode, and an admin dashboard showing per-pool usage with smart spend alerts.</div></div>
+        <div class="pricing-row"><div>Premium seat</div><div>~$120/user/mo (~$96 annual)</div><div>A new tier for heavy agent users: per Cursor's pricing docs, roughly 5× the Standard seat's usage across both pools. Cursor says the Composer pool alone should cover most heavy users for a full month, plus priority access.</div></div>
         <div class="pricing-row"><div>Enterprise</div><div>Custom</div><div>Pooled usage, advanced security and admin controls, SSO/SCIM for large organizations</div></div>
       </div>
       <p style="font-size:0.92rem;color:var(--text2);margin:16px 0 0;">The credit mechanic is where most of the confusion lives — what draws the pool, what doesn't, and what happens when it runs out. We break it down in full in our <a href="../blog/cursor-pricing-2026.html" style="color:var(--accent);text-decoration:none;font-weight:600">Cursor pricing 2026 deep-dive →</a></p>
       <div style="background: var(--accent-dim); border: 1px solid rgba(232,93,38,0.15); border-radius: 10px; padding: 16px 20px; margin-top: 16px;">
         <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 6px;">What Changed — June/July 2026</div>
-        <p style="font-family: var(--sans); font-size: 0.9rem; color: var(--text); line-height: 1.65; margin: 0;">Team pricing moved to a two-pool model — effective immediately for new customers and at July 1 renewal for existing ones. Every team seat now splits its included usage into a Composer &amp; Auto pool (Cursor's own models, including Composer 2.5) and a separate Third-Party API pool (Claude, GPT, Gemini). The Standard seat stays at $40/user ($32 annual) but with significantly more total included usage than before, and a new Premium seat (~$120/user/month, ~$96 annual) offers roughly 5× that usage for heavy agent users. An admin dashboard breaks down usage per pool and can fire smart spend alerts.</p>
+        <p style="font-family: var(--sans); font-size: 0.9rem; color: var(--text); line-height: 1.65; margin: 0;">Team pricing moved to a two-pool model — effective immediately for new customers and at July 1 renewal for existing ones. Every team seat now splits its included usage into a Composer &amp; Auto pool (Cursor's own models, including Composer 2.5) and a separate Third-Party API pool (Claude, GPT, Gemini). The Standard seat stays at $40/user ($32 annual) but, according to Cursor, with significantly more total included usage than before, and a new Premium seat (~$120/user/month, ~$96 annual) that Cursor says offers roughly 5× that usage for heavy agent users. An admin dashboard breaks down usage per pool and can fire smart spend alerts.</p>
       </div>
       <div style="background: var(--accent-dim); border: 1px solid rgba(232,93,38,0.15); border-radius: 10px; padding: 16px 20px; margin-top: 16px;">
         <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 6px;">What Changed — June 2025</div>
@@ -296,7 +296,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       </div>
 
       <h2 id="who-should-use-cursor">Who Should Use Cursor?</h2>
-      <p>Cursor is worth evaluating for any developer spending more than a few hours per week writing code. Whether you're a solo indie developer or part of a larger team, the productivity gains from codebase-aware AI are well-documented and consistent across user reports.</p>
+      <p>Cursor is worth evaluating for any developer spending more than a few hours per week writing code. Whether you're a solo indie developer or part of a larger team, many developers report real productivity gains from codebase-aware AI — though how much you see depends on your workload and how you use it.</p>
       <p>If you're already using GitHub Copilot, Cursor is worth switching to — the multi-file context and natural language editing capabilities are a significant step forward.</p>
 
       <div class="affiliate-box">

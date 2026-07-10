@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="canonical" href="https://aitoolgrade.com/review/ollama-open-webui.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ollama + Open WebUI is a free, self-hosted 'private ChatGPT' you run on your own hardware. Honest 2026 review: what the two-part stack does well, the real cost math, and where the capability ceiling actually sits.">
+<title>Ollama + Open WebUI Review 2026 — Private, Local AI on Your Own Hardware | AIToolGrade</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fafaf8;--bg2:#f3f2ee;--bg3:#eceae3;--text:#1a1a18;--text2:#4a4a45;--text3:#8a8a82;--accent:#e85d26;--accent2:#f07d4a;--accent-dim:rgba(232,93,38,0.08);--border:#e2e0d8;--white:#ffffff;--display:'Playfair Display',serif;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:4px}
+.nav-dropdown>a::after{content:"▾";font-size:10px}
+.dropdown-menu{visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.15s ease,visibility 0s linear 0.5s;position:absolute;top:calc(100% + 8px);left:-16px;background:white;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:200;max-height:80vh;overflow-y:auto}
+.dropdown-menu a{display:block;padding:8px 12px;font-size:14px;color:var(--text2);text-decoration:none;border-radius:6px;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--bg2);color:var(--accent)}
+.nav-dropdown:hover .dropdown-menu{visibility:visible;opacity:1;pointer-events:auto;transition:opacity 0.15s ease,visibility 0s}
+.nav-dropdown .dropdown-menu::before{content:"";position:absolute;top:-20px;left:0;right:0;height:20px}
+.nav-dropdown::after{content:"";position:absolute;height:20px;width:calc(100% + 16px);bottom:-20px;left:-16px}
+.review-layout{max-width:1100px;margin:0 auto;padding:60px 40px;display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:start}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:24px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+.review-header{margin-bottom:40px}
+.review-tool-row{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.review-tool-logo{width:56px;height:56px;border-radius:14px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:28px;border:1px solid var(--border)}
+.review-tool-title{font-size:15px;font-weight:600;margin-bottom:2px}
+.review-tool-url{font-size:13px;color:var(--text3);font-family:var(--mono)}
+h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;margin-bottom:16px}
+.review-meta-row{display:flex;align-items:center;gap:20px;font-size:13px;color:var(--text3);margin-bottom:24px}
+.verdict-banner{background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:20px 24px;margin-bottom:40px;display:flex;align-items:center;gap:16px}
+.verdict-score{font-family:var(--display);font-size:48px;font-weight:800;color:var(--accent);line-height:1}
+.verdict-text h3{font-size:15px;font-weight:600;margin-bottom:4px}
+.verdict-text p{font-size:13px;color:var(--text2)}
+.review-body h2{font-family:var(--display);font-size:28px;font-weight:700;margin:40px 0 16px}
+.review-body h3{font-family:var(--display);font-size:20px;font-weight:700;margin:28px 0 12px}
+.review-body p{color:var(--text2);margin-bottom:16px}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
+.pros-box,.cons-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px}
+.pros-box{border-top:3px solid #2e7d32}
+.cons-box{border-top:3px solid #c62828}
+.pros-box h4{color:#2e7d32;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.cons-box h4{color:#c62828;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.pro-item,.con-item{font-size:14px;color:var(--text2);margin-bottom:8px;display:flex;gap:8px;align-items:flex-start}
+.pro-item::before{content:'✓';color:#2e7d32;font-weight:600;flex-shrink:0}
+.con-item::before{content:'✗';color:#c62828;font-weight:600;flex-shrink:0}
+.score-breakdown{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;margin:32px 0}
+.score-breakdown h4{font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:20px}
+.score-row{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.score-row:last-child{margin-bottom:0}
+.score-name{font-size:14px;color:var(--text2);width:140px;flex-shrink:0}
+.score-bar-track{flex:1;height:8px;background:var(--bg2);border-radius:100px;overflow:hidden}
+.score-bar-fill{height:100%;border-radius:100px;background:var(--accent)}
+.score-val{font-family:var(--mono);font-size:13px;font-weight:500;width:30px;text-align:right}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-item h3{font-family:var(--sans);font-size:17px;font-weight:600;margin:0 0 8px;color:var(--text)}
+.faq-item p{margin:0;font-size:15px}
+.affiliate-box{background:var(--text);color:white;border-radius:14px;padding:28px;margin:40px 0;text-align:center}
+.affiliate-box h3{font-family:var(--display);font-size:24px;font-weight:700;margin-bottom:8px}
+.affiliate-box p{color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:20px}
+.affiliate-btn{display:inline-block;background:var(--accent);color:white;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;transition:background 0.15s}
+.affiliate-btn:hover{background:var(--accent2)}
+.affiliate-note{font-size:11px;color:rgba(255,255,255,0.4);margin-top:12px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px;position:sticky;top:84px}
+.sidebar-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:16px}
+.sidebar-score{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.sidebar-score-num{font-family:var(--display);font-size:52px;font-weight:800;color:var(--accent);line-height:1}
+.sidebar-score-label{font-size:13px;color:var(--text3)}
+.sidebar-price-row{display:flex;justify-content:space-between;font-size:14px;padding:10px 0;border-bottom:1px solid var(--border)}
+.sidebar-price-row:last-of-type{border-bottom:none}
+.sidebar-price-label{color:var(--text2)}
+.sidebar-price-val{font-family:var(--mono);font-weight:500}
+.sidebar-cta{display:block;background:var(--accent);color:white;text-align:center;padding:14px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;margin-top:20px;transition:background 0.15s}
+.sidebar-cta:hover{background:var(--accent2)}
+.sidebar-disclosure{font-size:11px;color:var(--text3);margin-top:10px;text-align:center}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}
+.footer-brand span{color:var(--accent)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--accent)}
+@media(max-width:768px){.review-layout{grid-template-columns:1fr;padding:40px 20px}.pros-cons{grid-template-columns:1fr}h1{font-size:30px}nav{padding:0 20px}.footer-inner{grid-template-columns:1fr 1fr}}
+
+/* === MOBILE NAV + RESPONSIVE TABLE FIX === */
+.nav-toggle{display:none;order:2;background:none;border:0;font-size:24px;line-height:1;color:var(--text);cursor:pointer;padding:4px 6px}
+@media(max-width:768px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(250,250,248,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 20px 16px;box-shadow:0 8px 24px rgba(0,0,0,0.06);max-height:calc(100vh - 64px);overflow-y:auto}
+  nav.nav-open .nav-links{display:flex}
+  .nav-links>a,.nav-dropdown{padding:12px 2px;border-bottom:1px solid var(--border)}
+  .nav-dropdown{position:static}
+  .nav-dropdown>a::after{display:none}
+  .dropdown-menu{display:none!important}
+  .nav-cta{display:block;text-align:center;background:var(--accent);color:#fff;margin-top:14px;padding:12px;border:0!important;border-radius:6px}
+  .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+  .comparison-wrap{overflow-x:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "name": "Ollama + Open WebUI Review 2026",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "8.4",
+    "bestRating": "10",
+    "worstRating": "0"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "AIToolGrade",
+    "url": "https://aitoolgrade.com"
+  },
+  "itemReviewed": {
+    "@type": "SoftwareApplication",
+    "name": "Ollama + Open WebUI",
+    "applicationCategory": "Local AI / Self-Hosted LLM Tool",
+    "operatingSystem": "Linux,macOS,Windows,Docker",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "url": "https://openwebui.com"
+    }
+  },
+  "datePublished": "2026-07-07",
+  "dateModified": "2026-07-07"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Ollama + Open WebUI Review 2026 — Private, Local AI on Your Own Hardware",
+  "author": {
+    "@type": "Person",
+    "name": "Marcus Veil",
+    "url": "https://aitoolgrade.com/author/marcus-veil.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIToolGrade",
+    "url": "https://aitoolgrade.com"
+  },
+  "datePublished": "2026-07-07",
+  "dateModified": "2026-07-07"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolgrade.com"},
+    {"@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://aitoolgrade.com/reviews.html"},
+    {"@type": "ListItem", "position": 3, "name": "Ollama + Open WebUI", "item": "https://aitoolgrade.com/review/ollama-open-webui.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can Ollama + Open WebUI actually replace ChatGPT or Claude?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a large share of everyday tasks — quick questions, drafting, summarizing, code review, document Q&A — a good open model running locally is capable enough that most people wouldn't notice the difference. What it does not replace is frontier intelligence: complex multi-step reasoning, the hardest coding problems, and very long context all still favor cloud models like GPT-5.5, Claude Opus, or Gemini. The honest framing is a private stack for the roughly 80% of tasks that don't need a frontier model, not a dollar-for-dollar replacement for a Pro subscription."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Ollama + Open WebUI free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both are free and open-source — Ollama is open-source and Open WebUI is MIT-licensed, and self-hosting is unrestricted. Your only real cost is hardware: a machine you already own, a cheap CPU VPS (around $5/month) for light single-user use, or a GPU server if you want API-like speed. Open WebUI also offers a paid cloud tier, but you never have to touch it to run the full self-hosted stack."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What hardware do I need to run local models well?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It scales with the model. Small 7–8B models run acceptably on a modern laptop, and Apple Silicon Macs are well suited because Ollama uses the Metal GPU natively. CPU-only inference is slow — often single-digit tokens per second — while a consumer NVIDIA or AMD GPU gets you into the ~30–50 tokens/second range. Larger models need more VRAM and unified memory. The practical rule: match model size to the RAM/VRAM you have, and expect local speed to trail cloud APIs, which serve hundreds of tokens per second."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Ollama and Open WebUI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are two layers of one stack. Ollama is the model layer — it downloads, quantizes, and serves local models and exposes an OpenAI-compatible API on port 11434. Open WebUI is the chat layer — the ChatGPT-like browser interface that adds RAG, web search, multi-user accounts, and more. Open WebUI talks to Ollama over HTTP. You need both for the full 'local ChatGPT' experience, though Open WebUI can also point at any OpenAI-compatible endpoint instead of, or alongside, Ollama."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Open WebUI connect to cloud models like OpenAI or Anthropic?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Open WebUI is backend-agnostic. Alongside local Ollama models it can connect to any OpenAI-compatible API, which covers OpenAI directly, vLLM, LocalAI, and LM Studio, plus providers like Anthropic through a compatibility proxy. That lets you keep private, everyday queries on local models and route only the hard prompts to a frontier API — paying for cloud tokens by exception rather than by subscription."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this suitable for a whole team or production use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open WebUI itself supports multiple users with role-based access and SSO, so a small team can share one instance. The constraint is Ollama: it defaults to roughly four parallel requests and is designed as a personal or small-team tool, not a production inference server. For many concurrent users or heavy throughput you would put a purpose-built serving engine such as vLLM or TGI behind Open WebUI instead of Ollama. Treat the default stack as excellent for individuals and small teams, and plan a different model backend before scaling to production."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div id="nav-root"></div>
+<script src="../nav.js"></script>
+<div class="review-layout">
+  <div class="review-main">
+    <div style="background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 14px 18px; margin-bottom: 28px; display: flex; align-items: flex-start; gap: 12px;">
+      <span style="font-family: var(--mono); font-size: 18px; line-height: 1;">🔍</span>
+      <div>
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 4px;">Research-Based Review</div>
+        <p style="font-family: var(--sans); font-size: 0.88rem; color: var(--text2); line-height: 1.6; margin: 0;">This review is based on documented features, verified project details, and community sentiment — not hands-on testing. <a href="../how-we-review.html" style="color: var(--accent); text-decoration: none;">See how we research →</a></p>
+      </div>
+    </div>
+    <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="../category/productivity.html">Productivity</a><span>›</span>Ollama + Open WebUI Review</div>
+    <div class="review-header">
+      <div class="review-tool-row">
+        <div class="review-tool-logo">🦙</div>
+        <div><div class="review-tool-title">Ollama + Open WebUI</div><div class="review-tool-url">ollama.com · openwebui.com</div></div>
+      </div>
+      <h1>Ollama + Open WebUI Review 2026: Private, Local AI on Your Own Hardware</h1>
+      <div class="review-meta-row">
+        <span>📅 Updated July 2026</span>
+        <span>⏱ 11 min read</span>
+        <span>🔍 Research-based review</span>
+      </div>
+    </div>
+    <div class="verdict-banner">
+      <div class="verdict-score">8.4</div>
+      <div class="verdict-text">
+        <h3>Editor's Verdict: Very Good</h3>
+        <p>A free, self-hosted "private ChatGPT" you run on your own hardware. Ollama serves the models, Open WebUI is the chat interface. It's a capable private AI stack for the large share of everyday tasks that don't need a frontier model — not a dollar-for-dollar replacement for ChatGPT Pro or Claude on the hardest work.</p>
+      </div>
+    </div>
+    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified July 2026</p>
+<div class="review-body">
+      <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:16px 20px;margin:24px 0">
+  <p style="font-size:13px;font-family:'DM Mono',monospace;color:var(--accent);margin-bottom:6px">RELATED</p>
+  <a href="../blog/github-copilot-token-billing-2026.html" style="font-size:15px;font-weight:600;color:var(--text)">GitHub Copilot Token Billing in 2026: Control Your Own Meter →</a>
+</div>
+<h2 id="the-short-version">The Short Version: A Private ChatGPT You Own</h2>
+      <p>Ollama plus Open WebUI is one of the most direct ways to run a ChatGPT-style assistant entirely on hardware you control. Ollama handles the models — it downloads them, manages quantization, allocates your GPU or CPU, and serves an OpenAI-compatible API. Open WebUI is the browser interface layered on top: a clean chat UI with document search, web search, multi-user accounts, and more. Nothing leaves your machine unless you tell it to. For privacy-sensitive work, offline use, and cost control, that's the whole appeal.</p>
+      <p>Here's the part the aggregator hype gets wrong, and it's worth stating plainly up front. You'll see claims that this stack "replaces $200/month of cloud AI on an $800 mini PC." That's overstated. Even pro-local sources are explicit that a local setup does not replace ChatGPT Pro or Claude for complex, multi-step work — frontier models still win on the hardest reasoning and coding. The honest positioning is narrower and more useful: this is a capable private AI stack for the roughly 80% of everyday tasks that don't need frontier intelligence — quick questions, drafting, code review, document analysis, anything you'd rather keep private — while giving you data ownership, offline capability, and no subscription meter. This review covers what the stack does in 2026, the real cost math, and exactly where the ceiling sits — based on documented project features and community sentiment across GitHub, r/LocalLLaMA, and r/selfhosted rather than hands-on testing.</p>
+
+      <!-- toc -->
+<nav aria-label="Table of contents" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 32px 0;">
+  <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 12px;">In this review</div>
+  <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-short-version" style="color: var(--accent); text-decoration: none;">The Short Version: A Private ChatGPT You Own</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#two-part-architecture" style="color: var(--accent); text-decoration: none;">The Two-Part Architecture: Model Layer + Chat Layer</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#setup-and-ease" style="color: var(--accent); text-decoration: none;">Setup &amp; Ease of Use</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#features" style="color: var(--accent); text-decoration: none;">Features That Set Open WebUI Apart</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#cost" style="color: var(--accent); text-decoration: none;">Cost: Free Software, Real Hardware Math</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pros-and-cons" style="color: var(--accent); text-decoration: none;">Pros and Cons</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#performance-scores" style="color: var(--accent); text-decoration: none;">Performance Scores</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-honest-limitations" style="color: var(--accent); text-decoration: none;">The Honest Limitations</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#who-its-for" style="color: var(--accent); text-decoration: none;">Who It's For — and Who Should Skip It</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#community-sentiment" style="color: var(--accent); text-decoration: none;">What Users Are Saying</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-bottom-line" style="color: var(--accent); text-decoration: none;">The Bottom Line</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#faq" style="color: var(--accent); text-decoration: none;">Frequently Asked Questions</a></li>
+  </ol>
+</nav>
+
+      <h2 id="two-part-architecture">The Two-Part Architecture: Model Layer + Chat Layer</h2>
+      <p>The single most useful thing to understand before you start is that this is a stack, not a product. Two separate open-source projects do two different jobs, and they talk to each other over HTTP.</p>
+      <ul style="color:var(--text2);margin:0 0 16px 20px;line-height:1.7;">
+        <li><strong>Ollama — the model layer.</strong> This is the engine. <code>ollama run llama3</code> is enough to download a model, quantize it, allocate your GPU or CPU, and start serving it. Ollama pulls GGUF weight files, and it exposes an OpenAI-compatible API at <code>localhost:11434</code> — which is exactly why so many other tools can talk to it. Native acceleration covers Apple Silicon (Metal), NVIDIA (CUDA), and AMD (ROCm).</li>
+        <li><strong>Open WebUI — the chat layer.</strong> This is the face. It's the ChatGPT-like browser interface that most people actually interact with, and it's where the richer features live. By default it runs on port 8080, commonly mapped to <code>:3000</code>, and it points at Ollama's API to send prompts and stream back answers.</li>
+      </ul>
+      <p>You need both for the "local ChatGPT" experience. Ollama on its own gives you a command line and an API; Open WebUI on its own is just an interface with nothing to talk to. Together they reproduce the feel of a cloud chat assistant — but running on your desk. One nuance worth knowing early: Open WebUI isn't locked to Ollama. It can point at any OpenAI-compatible endpoint, which becomes important later in the cost and limitations discussion.</p>
+
+      <h2 id="setup-and-ease">Setup &amp; Ease of Use</h2>
+      <p>Getting running is genuinely quick on a warm machine — figure roughly 5 to 10 minutes if your hardware is ready. You have three common paths: a single Docker command, a <code>pip</code>/<code>uv</code> install, or a Kubernetes deployment for anyone running a cluster. Docker is the usual recommendation because it keeps the pieces tidy.</p>
+      <p>There's one caveat that trips up a lot of first-timers, and it's specific to Macs. On Apple Silicon you should run <strong>Ollama natively</strong>, not inside Docker, so it can reach the Metal GPU — a Dockerized Ollama on a Mac falls back to slow CPU inference. The clean pattern is Ollama running natively on the host, with Open WebUI in Docker talking to it via <code>host.docker.internal:11434</code>. It's a small detail, but it's the difference between usable and painful on a MacBook.</p>
+      <p>Once it's up, the day-to-day experience is close to ChatGPT: pick a model, type, get a streamed answer. The friction isn't the chatting — it's everything around it. You're choosing which models to pull, thinking about how much RAM or VRAM each one needs, and doing the occasional bit of maintenance when you update. None of it requires being a systems engineer, but it does ask for the comfort level of someone who's happy running Docker and reading a log when something misbehaves. That's the honest reason ease of use scores below the pure-cloud alternatives.</p>
+
+      <h2 id="features">Features That Set Open WebUI Apart</h2>
+      <p>Open WebUI is where this stack earns its reputation. It's actively developed — the project ships updates frequently and carries a large community following on GitHub (65K+ stars) — and the feature set has grown well past a simple chat box. The highlights:</p>
+      <ul style="color:var(--text2);margin:0 0 16px 20px;line-height:1.7;">
+        <li><strong>Built-in RAG.</strong> Document chat is native, using ChromaDB with <code>nomic-embed-text</code> embeddings. You reference document collections inline with <code>#collection</code>, so grounding answers in your own files doesn't require a separate pipeline.</li>
+        <li><strong>Backend-agnostic connections.</strong> Beyond local Ollama models, it connects to any OpenAI-compatible API — OpenAI, vLLM, LocalAI, LM Studio, and providers like Anthropic through a compatibility proxy. One interface, local and cloud models side by side.</li>
+        <li><strong>Web search.</strong> Pull live results into a conversation with <code>@web</code>, backed by your choice of SearXNG, Google, Brave, Perplexity, and others.</li>
+        <li><strong>Multi-user with RBAC and SSO.</strong> Role-based access control and single sign-on make it viable for a small team on one shared instance, not just a solo user.</li>
+        <li><strong>Image generation.</strong> Hooks into DALL-E, Gemini, ComfyUI, or AUTOMATIC1111 for in-chat image creation.</li>
+        <li><strong>Voice input, analytics, and plugins.</strong> Voice entry, usage analytics and model-evaluation dashboards, and a plugin system for extending behavior.</li>
+        <li><strong>MCP support.</strong> Model Context Protocol tools work through the <code>mcpo</code> proxy, so you can wire in external tools and data sources.</li>
+        <li><strong>Native desktop app.</strong> There's an official desktop build for anyone who'd rather not live in a browser tab.</li>
+      </ul>
+      <p>It runs fully offline, it's MIT-licensed, and self-hosting is unrestricted. There's a paid cloud tier — Open WebUI Plus — but nothing about the self-hosted product is gated behind it. Feature-for-feature, this is one of the richer self-hosted AI interfaces available, and it's the main reason the stack scores as high as it does.</p>
+
+      <h2 id="cost">Cost: Free Software, Real Hardware Math</h2>
+      <p>Both projects are free and open-source, so the software line item is zero. The real cost is compute, and it splits cleanly by how you want to run it:</p>
+      <ul style="color:var(--text2);margin:0 0 16px 20px;line-height:1.7;">
+        <li><strong>On a machine you already own — effectively free.</strong> If you have a reasonably modern laptop or desktop, especially an Apple Silicon Mac, you can run small-to-mid models at no additional cost. This is where the "private ChatGPT for free" claim actually holds up.</li>
+        <li><strong>Cheap CPU VPS — about $5/month.</strong> A low-cost Hetzner or Contabo box handles single-user, light workloads. Inference is slow on CPU, but for occasional private queries it's an inexpensive always-on option.</li>
+        <li><strong>GPU server — variable.</strong> If you want API-like responsiveness, you're renting or buying a GPU, and that's where cost climbs. This is the tier that competes on <em>speed</em>, and it's rarely cheaper than a cloud subscription once you account for the hardware.</li>
+      </ul>
+      <p>The cost argument here is the same one that moves technical teams off metered cloud tools generally — you control your own meter. Run everyday, private queries locally at fixed cost, and because Open WebUI is backend-agnostic, route only the genuinely hard prompts to a frontier API and pay for those tokens by exception. That hybrid is where the economics get interesting: you're not paying a flat $20–$200/month for capability you mostly don't use, you're paying cloud rates only when a task actually needs a frontier model. If your usage skews toward routine work, that math favors local. If most of your prompts are hard, the savings shrink. For a related look at the "own your meter" logic on the cloud side, our breakdown of <a href="../blog/github-copilot-token-billing-2026.html" style="color:var(--accent)">GitHub Copilot's token billing</a> covers the same trade-off from the subscription angle.</p>
+
+      <h2 id="pros-and-cons">Pros and Cons</h2>
+      <div class="pros-cons">
+        <div class="pros-box">
+          <h4>What we liked</h4>
+          <div class="pro-item">Free and open-source — full data ownership, runs offline</div>
+          <div class="pro-item">Privacy by default — prompts and files stay on your hardware</div>
+          <div class="pro-item">Open WebUI is feature-rich: RAG, web search, multi-user, image gen, MCP</div>
+          <div class="pro-item">Backend-agnostic — local models and any OpenAI-compatible API together</div>
+          <div class="pro-item">Fast to stand up — one Docker command, ~5–10 min on a warm machine</div>
+        </div>
+        <div class="cons-box">
+          <h4>What we didn't like</h4>
+          <div class="con-item">Not a frontier replacement — the hardest reasoning still needs the cloud</div>
+          <div class="con-item">Ollama defaults to ~4 parallel requests — personal/small-team, not production</div>
+          <div class="con-item">Local speed and context trail cloud APIs, sometimes by a lot</div>
+          <div class="con-item">Setup and ops require real Docker/self-hosting comfort</div>
+          <div class="con-item">Apple Silicon needs Ollama run natively, not in Docker, for GPU speed</div>
+        </div>
+      </div>
+
+      <h2 id="performance-scores">Performance Scores</h2>
+      <div class="score-breakdown">
+        <h4>Category breakdown</h4>
+        <div class="score-row"><span class="score-name">Value for Money</span><div class="score-bar-track"><div class="score-bar-fill" style="width:95%"></div></div><span class="score-val">9.5</span></div>
+        <div class="score-row"><span class="score-name">Features</span><div class="score-bar-track"><div class="score-bar-fill" style="width:90%"></div></div><span class="score-val">9.0</span></div>
+        <div class="score-row"><span class="score-name">Integration</span><div class="score-bar-track"><div class="score-bar-fill" style="width:85%"></div></div><span class="score-val">8.5</span></div>
+        <div class="score-row"><span class="score-name">Support &amp; Maturity</span><div class="score-bar-track"><div class="score-bar-fill" style="width:80%"></div></div><span class="score-val">8.0</span></div>
+        <div class="score-row"><span class="score-name">Ease of Use</span><div class="score-bar-track"><div class="score-bar-fill" style="width:70%"></div></div><span class="score-val">7.0</span></div>
+      </div>
+      <p><strong>Value for Money (9.5/10)</strong> — both projects are free and open-source; on hardware you own, this is a private AI assistant at zero marginal cost, with a ~$5/month VPS path for always-on single-user use. <strong>Features (9.0/10)</strong> — Open WebUI bundles RAG, web search, multi-user RBAC/SSO, image generation, voice, plugins, MCP support, and a desktop app. <strong>Integration (8.5/10)</strong> — backend-agnostic across Ollama and any OpenAI-compatible API, plus MCP tools and multiple search/image backends. <strong>Support &amp; Maturity (8/10)</strong> — a large, active community (65K+ GitHub stars, frequent updates) and solid docs, tempered by community-only support on the self-hosted tier and an honest capability ceiling. <strong>Ease of Use (7/10)</strong> — quick to stand up, but self-hosting, model selection, and the Apple Silicon caveat ask for real technical comfort.</p>
+
+      <h2 id="the-honest-limitations">The Honest Limitations</h2>
+      <p>This is the section the hype posts skip, and it's the one that should shape your expectations. None of these are dealbreakers — they're the boundaries of what a local stack is for.</p>
+      <ul style="color:var(--text2);margin:0 0 16px 20px;line-height:1.7;">
+        <li><strong>It won't replace frontier models for complex work.</strong> Multi-step reasoning, the hardest coding problems, and nuanced analysis still favor cloud frontier models. Open models have closed a lot of ground, but the top of the curve isn't where they live yet.</li>
+        <li><strong>The parallel-request cap is real.</strong> Ollama defaults to roughly four concurrent requests. That's fine for one person or a small team, but it's not a production multi-user inference server. For that, you'd run vLLM, TGI, or a managed service behind Open WebUI instead.</li>
+        <li><strong>Speed depends entirely on your hardware.</strong> CPU inference runs at single-digit tokens per second. A consumer GPU gets you to roughly 30–50 tokens/second. Cloud APIs serve hundreds. On a modest machine, longer answers feel noticeably slower than the cloud you're used to.</li>
+        <li><strong>Context windows are smaller.</strong> Most open models cap around 8K–32K tokens, versus the 128K–200K+ that frontier models offer. For very long documents or sprawling conversations, that ceiling shows up.</li>
+        <li><strong>Self-hosting is real work at scale.</strong> One user on a laptop is easy. A team instance means updates, backups, storage, and access control — ordinary ops, but ops all the same.</li>
+      </ul>
+      <p>Put together, these define the shape of the tool: excellent for the wide band of everyday and privacy-sensitive tasks, deliberately not the thing you reach for when a problem genuinely needs the frontier. Being straight about that ceiling is exactly what makes the local approach trustworthy rather than oversold.</p>
+
+      <h2 id="who-its-for">Who It's For — and Who Should Skip It</h2>
+      <p>This stack is a strong fit if you're privacy-conscious, technically comfortable, and doing a high volume of everyday AI work. Developers, self-hosting enthusiasts, small teams that want a shared private assistant, and anyone handling sensitive documents will get real value — especially if you like the idea of keeping data on your own hardware and paying for cloud tokens only when a task truly needs one. If you already run a home server or a VPS, adding this is a natural extension of what you're doing.</p>
+      <p>It's the wrong pick if you need frontier-grade reasoning as your daily driver, want zero setup and maintenance, or don't have hardware that can run a decent model at a comfortable speed. If most of your prompts are genuinely hard, a cloud subscription like <a href="../review/chatgpt.html" style="color:var(--accent)">ChatGPT</a> or <a href="../review/claude-code.html" style="color:var(--accent)">Claude Code</a> will serve you better and save you the ops. And if what you actually want is workflow automation rather than a chat assistant, the self-hosted route runs through <a href="../review/n8n.html" style="color:var(--accent)">n8n</a> instead — which, fittingly, can drive a local Ollama model from inside its own automations.</p>
+
+      <div class="affiliate-box">
+        <h3>Try Ollama + Open WebUI</h3>
+        <p>Both are free and open-source. Install Ollama, then run Open WebUI in Docker — you'll have a private local assistant in minutes.</p>
+        <a href="https://openwebui.com" class="affiliate-btn" target="_blank" rel="noopener">Get Open WebUI →</a>
+        <div class="affiliate-note">Free, open-source software — no affiliate relationship.</div>
+      </div>
+
+      <!-- What Users Are Saying -->
+      <div class="users-saying" style="margin:48px 0;">
+        <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Community Sentiment</div>
+        <h2 id="community-sentiment" style="font-family:var(--display);font-size:1.75rem;font-weight:800;color:var(--text);margin:0 0 8px 0;">What Users Are Saying</h2>
+        <p style="font-family:var(--sans);font-size:0.95rem;color:var(--text2);margin:0 0 32px 0;line-height:1.6;">We track discussion across r/LocalLLaMA, r/selfhosted, and the projects' GitHub, where the user base is technical and unusually candid about both the appeal and the limits of running AI locally.</p>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:32px;display:flex;gap:40px;flex-wrap:wrap;">
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--accent)">65K+</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Open WebUI GitHub Stars</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">Free</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Both Projects</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">11434</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Ollama API Port</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">MIT</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Open WebUI License</div></div>
+        </div>
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:#22a05a;">●</span> What users consistently praise</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"For 80% of what I ask an AI in a day — rewording an email, summarizing a doc, a quick code question — a local 8B model is completely fine, and nothing leaves my laptop. I only open a cloud model when I hit something genuinely hard."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Reddit · r/LocalLLaMA · 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"Open WebUI is the piece that makes local models feel normal. The RAG, the web search, the multi-user setup — it's the closest thing to self-hosted ChatGPT, and it points at my Ollama and my OpenAI key from the same screen."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Reddit · r/selfhosted · 2026</div>
+          </div>
+        </div>
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:var(--accent);">●</span> Common frustrations</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"People oversell this. It's not a drop-in for Claude on a hard debugging session. Set expectations right — it's a private everyday assistant, not a frontier model — and you'll love it. Go in expecting GPT-5 on your laptop and you'll be disappointed."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Reddit · r/LocalLLaMA · 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"On my Mac the big gotcha was running Ollama in Docker — GPU wasn't used and it crawled. Running Ollama natively and Open WebUI in Docker fixed it. Wish that were louder in the setup docs."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Reddit · r/selfhosted · 2026</div>
+          </div>
+        </div>
+        <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.15);border-radius:12px;padding:20px 24px;">
+          <div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:8px;">AIToolGrade Take</div>
+          <p style="font-family:var(--sans);font-size:0.93rem;color:var(--text);line-height:1.7;margin:0;">The sentiment is remarkably consistent across the communities we monitor, and it lines up with our own read: this stack is at its best when you frame it honestly. Users who treat it as a private assistant for everyday and privacy-sensitive tasks — with a cloud API kept in reserve for the hard prompts — are the happiest. The complaints cluster around expectations set too high by hype and around the Apple Silicon Docker gotcha, both of which are fixable with the right framing and the native-Ollama setup. What almost nobody disputes is the value: free software, full data ownership, and a real path to running capable AI without a subscription meter.</p>
+        </div>
+      </div>
+      <!-- END: What Users Are Saying -->
+
+      <h2 id="the-bottom-line">The Bottom Line</h2>
+      <p>Ollama plus Open WebUI is the clearest way to run a private, self-hosted AI assistant in 2026. Ollama makes serving local models almost trivial; Open WebUI wraps them in an interface rich enough — RAG, web search, multi-user, image generation, MCP — that the experience genuinely resembles a cloud chat tool. It's free, it's open, and it runs on hardware you already own. For everyday queries, drafting, code review, document analysis, and anything you'd rather keep off someone else's servers, it's a capable and honest choice.</p>
+      <p>What it isn't — and what the hype keeps pretending it is — is a dollar-for-dollar replacement for a frontier subscription. The hardest reasoning, the biggest context windows, and the fastest responses still belong to the cloud. Score it for what it actually is: a very good private AI stack for the large majority of tasks that don't need a frontier model, held back only by the setup friction and the capability ceiling that come with running things yourself. Go in with that expectation and it delivers. Go in expecting to cancel every subscription and you'll be let down. That gap — between the honest pitch and the hype — is the whole story.</p>
+
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>Can Ollama + Open WebUI actually replace ChatGPT or Claude?</h3>
+        <p>For a large share of everyday tasks — quick questions, drafting, summarizing, code review, document Q&amp;A — a good open model running locally is capable enough that most people wouldn't notice the difference. What it doesn't replace is frontier intelligence: complex multi-step reasoning, the hardest coding problems, and very long context still favor cloud models. The honest framing is a private stack for the roughly 80% of tasks that don't need a frontier model, not a one-to-one replacement for a Pro subscription.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is Ollama + Open WebUI free?</h3>
+        <p>Both are free and open-source — Ollama is open-source and Open WebUI is MIT-licensed, and self-hosting is unrestricted. Your only real cost is hardware: a machine you already own, a cheap CPU VPS (around $5/month) for light single-user use, or a GPU server if you want API-like speed. Open WebUI has a paid cloud tier, but you never need it to run the full self-hosted stack.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What hardware do I need to run local models well?</h3>
+        <p>It scales with the model. Small 7–8B models run acceptably on a modern laptop, and Apple Silicon Macs are well suited because Ollama uses the Metal GPU natively. CPU-only inference is slow — often single-digit tokens per second — while a consumer NVIDIA or AMD GPU reaches roughly 30–50 tokens/second. Larger models need more VRAM and unified memory. Match model size to the RAM/VRAM you have, and expect local speed to trail cloud APIs.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What's the difference between Ollama and Open WebUI?</h3>
+        <p>They're two layers of one stack. Ollama is the model layer — it downloads, quantizes, and serves local models and exposes an OpenAI-compatible API on port 11434. Open WebUI is the chat layer — the ChatGPT-like browser interface that adds RAG, web search, and multi-user accounts. Open WebUI talks to Ollama over HTTP. You need both for the full local-ChatGPT experience, though Open WebUI can also point at any OpenAI-compatible endpoint.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can Open WebUI connect to cloud models like OpenAI or Anthropic?</h3>
+        <p>Yes — it's backend-agnostic. Alongside local Ollama models it connects to any OpenAI-compatible API, which covers OpenAI directly, vLLM, LocalAI, and LM Studio, plus providers like Anthropic through a compatibility proxy. That lets you keep private everyday queries on local models and route only the hard prompts to a frontier API — paying for cloud tokens by exception rather than by subscription.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is this suitable for a whole team or production use?</h3>
+        <p>Open WebUI supports multiple users with role-based access and SSO, so a small team can share one instance. The constraint is Ollama: it defaults to roughly four parallel requests and is built as a personal or small-team tool, not a production inference server. For many concurrent users you'd put a purpose-built engine such as vLLM or TGI behind Open WebUI instead. Treat the default stack as excellent for individuals and small teams, and plan a different backend before scaling to production.</p>
+      </div>
+    </div>
+  </div>
+  <div class="review-sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-title">Overall score</div>
+      <div class="sidebar-score">
+        <div class="sidebar-score-num">8.4</div>
+        <div>
+          <div style="color:var(--accent);font-size:18px;letter-spacing:-1px">★★★★☆</div>
+          <div class="sidebar-score-label">out of 10</div>
+        </div>
+      </div>
+      <div class="sidebar-title" style="margin-top:16px">Pricing</div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Ollama (software)</span><span class="sidebar-price-val">Free</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Open WebUI (self-host)</span><span class="sidebar-price-val">Free</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Run on own hardware</span><span class="sidebar-price-val">$0</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">CPU VPS (single-user)</span><span class="sidebar-price-val">~$5/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Free / open-source</span><span class="sidebar-price-val">✓ Both</span></div>
+      <a href="https://openwebui.com" class="sidebar-cta" target="_blank" rel="noopener">Get Open WebUI →</a>
+      <div class="sidebar-disclosure">Free, open-source software</div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">AI Tool<span>Grade</span></div><p class="footer-desc">Independent reviews and comparisons of AI tools. Researched, fact-checked, and independently rated.</p></div>
+    <div><div class="footer-col-title">Reviews</div><div class="footer-links"><a href="../category/writing.html">AI Writing</a><a href="../category/coding.html">AI Coding</a><a href="../category/image.html">AI Image</a><a href="../category/automation.html">Automation</a><a href="../category/productivity.html">Productivity</a></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="../about.html">About</a><a href="../how-we-review.html">How we review</a>
+        <a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
+    <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+</footer>
+</body></html>

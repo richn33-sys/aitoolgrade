@@ -75,6 +75,7 @@
     '<a href="' + prefix + 'review/grammarly.html">Grammarly</a>' +
     '<a href="' + prefix + 'review/replit.html">Replit</a>' +
     '<a href="' + prefix + 'review/claude-cowork.html">Claude Cowork</a>' +
+    '<a href="' + prefix + 'review/ollama-open-webui.html">Ollama + Open WebUI</a>' +
     '</div>' +
     '</div>' +
     '<a href="' + prefix + 'compare.html">Compare</a>' +

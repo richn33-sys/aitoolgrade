@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="canonical" href="https://aitoolgrade.com/blog/spacex-cursor-acquisition-2026.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SpaceX is buying Cursor for $60B and folding it into the xAI/Grok orbit. What actually changes for developers — data, direction, and whether to stay.">
+<title>SpaceX's Cursor Acquisition: What It Actually Means for Developers | AIToolGrade</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fafaf8;--bg2:#f3f2ee;--text:#1a1a18;--text2:#4a4a45;--text3:#8a8a82;--accent:#e85d26;--accent2:#f07d4a;--accent-dim:rgba(232,93,38,0.08);--border:#e2e0d8;--white:#ffffff;--display:'Playfair Display',serif;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:4px}
+.nav-dropdown>a::after{content:"▾";font-size:10px}
+.dropdown-menu{visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.15s ease,visibility 0s linear 0.5s;position:absolute;top:calc(100% + 8px);left:-16px;background:white;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:200;max-height:80vh;overflow-y:auto}
+.dropdown-menu a{display:block;padding:8px 12px;font-size:14px;color:var(--text2);text-decoration:none;border-radius:6px;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--bg2);color:var(--accent)}
+.nav-dropdown:hover .dropdown-menu{visibility:visible;opacity:1;pointer-events:auto;transition:opacity 0.15s ease,visibility 0s}
+.nav-dropdown .dropdown-menu::before{content:"";position:absolute;top:-20px;left:0;right:0;height:20px}
+.nav-dropdown::after{content:"";position:absolute;height:20px;width:calc(100% + 16px);bottom:-20px;left:-16px}
+.post-wrap{max-width:780px;margin:0 auto;padding:60px 40px}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:24px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+.post-tag{display:inline-block;background:var(--accent-dim);color:var(--accent);font-size:12px;font-weight:600;padding:4px 10px;border-radius:100px;font-family:var(--mono);margin-bottom:16px}
+h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;margin-bottom:20px}
+.post-meta{font-size:13px;color:var(--text3);margin-bottom:40px;display:flex;gap:20px}
+.post-body h2{font-family:var(--display);font-size:28px;font-weight:700;margin:40px 0 16px}
+.post-body h3{font-size:18px;font-weight:600;margin:28px 0 12px}
+.post-body p{color:var(--text2);margin-bottom:16px;font-size:16px}
+.post-body ul{color:var(--text2);padding-left:20px;margin-bottom:16px}
+.post-body ul li{margin-bottom:8px}
+.comparison-table{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:32px 0}
+.comparison-table th{background:var(--bg2);font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);padding:14px 16px;text-align:left;border-bottom:1px solid var(--border)}
+.comparison-table td{padding:14px 16px;border-bottom:1px solid var(--border);font-size:14px;color:var(--text2)}
+.comparison-table tr:last-child td{border-bottom:none}
+.winner{background:var(--accent-dim);font-weight:600;color:var(--accent)}
+.verdict-box{background:var(--bg2);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:32px 0}
+.verdict-box h4{font-size:14px;font-weight:600;color:var(--accent);margin-bottom:8px;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.06em}
+.verdict-box p{color:var(--text2);font-size:14px;margin:0}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-item h3{font-size:17px;font-weight:600;margin:0 0 8px;color:var(--text)}
+.faq-item p{margin:0;font-size:15px}
+.cta-box{background:var(--text);color:white;border-radius:14px;padding:28px;margin:40px 0;text-align:center}
+.cta-box h3{font-family:var(--display);font-size:22px;font-weight:700;margin-bottom:8px}
+.cta-box p{color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:20px}
+.cta-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta-btn{display:inline-block;background:var(--accent);color:white;padding:10px 20px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px;margin-top:80px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}
+.footer-brand span{color:var(--accent)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:12px;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--accent)}
+@media(max-width:768px){.post-wrap{padding:40px 20px}nav{padding:0 20px}h1{font-size:28px}.footer-inner{grid-template-columns:1fr 1fr}}
+
+/* === MOBILE NAV + RESPONSIVE TABLE FIX === */
+.nav-toggle{display:none;order:2;background:none;border:0;font-size:24px;line-height:1;color:var(--text);cursor:pointer;padding:4px 6px}
+@media(max-width:768px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(250,250,248,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 20px 16px;box-shadow:0 8px 24px rgba(0,0,0,0.06);max-height:calc(100vh - 64px);overflow-y:auto}
+  nav.nav-open .nav-links{display:flex}
+  .nav-links>a,.nav-dropdown{padding:12px 2px;border-bottom:1px solid var(--border)}
+  .nav-dropdown{position:static}
+  .nav-dropdown>a::after{display:none}
+  .dropdown-menu{display:none!important}
+  .nav-cta{display:block;text-align:center;background:var(--accent);color:#fff;margin-top:14px;padding:12px;border:0!important;border-radius:6px}
+  .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+  .comparison-wrap{overflow-x:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "SpaceX's Cursor Acquisition: What It Actually Means for Developers",
+  "author": {
+    "@type": "Person",
+    "name": "Marcus Veil",
+    "url": "https://aitoolgrade.com/author/marcus-veil.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIToolGrade",
+    "url": "https://aitoolgrade.com"
+  },
+  "datePublished": "2026-07-14",
+  "dateModified": "2026-07-14"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolgrade.com"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aitoolgrade.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "SpaceX's Cursor Acquisition", "item": "https://aitoolgrade.com/blog/spacex-cursor-acquisition-2026.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Has the SpaceX Cursor acquisition closed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. As of July 14, 2026, SpaceX has agreed to acquire Anysphere, Cursor's parent company, but the deal has not closed. It was announced on June 16, 2026 via an SEC filing and is expected to close in Q3 2026, subject to regulatory approval. Until then SpaceX does not own Cursor, and the terms described in deal coverage are what the two companies have agreed to, not what has already taken effect."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Cursor still safe to use in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nothing about the product has changed. Cursor works the same as it did before the announcement, its pricing and privacy settings are unchanged, and the deal has not closed. Whether it is safe for you is a governance question rather than a software question: if your organization has rules about who can own or process your source code, a pending change of control is a reason to re-read Cursor's data-use policy and check whether Privacy Mode still meets your requirements after close. For most individual developers there is no immediate technical risk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will my code train Grok?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This is not settled, and anyone telling you it is confirmed is going beyond what has been reported. Deal coverage indicates SpaceX/xAI and Cursor have been jointly training a new model slated to ship in both Cursor and Grok, and that Cursor's coding data feeds that work. What has not been established publicly is exactly which data that covers, or how Cursor's existing privacy settings and enterprise agreements will be handled after close. The concrete thing to watch is Cursor's own data-use policy and any change-of-control notice — that document, not the reporting, is what will govern your code."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the best Cursor alternatives in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no single replacement, and the useful question is what you are switching for. GitHub Copilot is the closest thing to a default if you want Microsoft-scale governance and GitHub-native workflow. Claude Code suits terminal-first and agent-heavy work. OpenCode is open-source and model-agnostic, so you bring your own key and control who sees your code. Devin Desktop, the tool formerly called Windsurf, is the option if you want an editor with open multi-model support. Each is a different trade-off, and none of them is a drop-in match for Cursor's editor experience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to switch away from Cursor right now?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most developers, no. The deal has not closed, the product is unchanged, and switching editors has a real cost in workflow disruption. The case for moving early applies to a narrower group: teams with data-governance or vendor-approval obligations that make a pending change of control a compliance question, and developers who do not want their work associated with the acquiring company. Everyone else can reasonably wait for the deal to close and read the resulting data policy before deciding."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div id="nav-root"></div>
+<script src="../nav.js"></script>
+
+<div class="post-wrap">
+  <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/">Blog</a><span>›</span>SpaceX's Cursor Acquisition</div>
+  <span class="post-tag">News Analysis</span>
+  <h1>SpaceX's Cursor Acquisition: What It Actually Means for Developers</h1>
+  <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:32px;font-family:'DM Mono',monospace;">By <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade &middot; Last verified July 2026</p>
+  <div class="post-meta"><span>📅 Updated July 2026</span><span>⏱ 12 min read</span></div>
+
+  <div class="post-body">
+    <div class="verdict-box">
+      <h4>The short answer</h4>
+      <p>SpaceX has <strong>agreed to acquire</strong> Anysphere — Cursor's parent — for $60 billion in stock, announced June 16, 2026 and expected to close in Q3 2026 pending regulatory approval. It has not closed, and SpaceX does not own Cursor today. Your editor works exactly as it did last week, and nothing in your day-to-day changes before close. The questions that actually matter are narrower and slower: what happens to your code under a company whose AI arm is xAI, and whether Cursor's roadmap starts serving Grok's needs rather than developers'. Most people can wait and watch. A specific minority — teams with data-governance obligations, and developers who object to the acquirer — have a real decision to make.</p>
+    </div>
+
+    <div style="background: #fef3cd; border: 1px solid #f0c040; border-radius: 10px; padding: 14px 18px; margin-bottom: 28px;">
+      <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: #8a6000; margin-bottom: 6px;">⚠️ Disclosure</div>
+      <p style="font-family: var(--sans); font-size: 0.88rem; color: #5a4000; line-height: 1.6; margin: 0;">AIToolGrade is built and maintained with Claude Code, and we have a direct financial relationship with Anthropic through API usage. That matters twice over on this story: Claude Code is one of the alternatives we discuss below, and Anthropic is the competitor whose gains show up in the market-share data we cite as SpaceX's motivation. We are, in other words, not a neutral party to the rivalry this deal is about. So we've kept the alternatives section routed by use case rather than crowning anything, we've noted where Claude Code is the weaker fit, and we have not softened the case for staying on Cursor. We received no compensation from any tool mentioned here, and applied our standard research methodology throughout.</p>
+    </div>
+
+    <div class="toc" style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin:32px 0">
+      <p style="font-size:12px;font-family:'DM Mono',monospace;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px">In This Article</p>
+      <ol style="padding-left:20px;display:flex;flex-direction:column;gap:8px">
+        <li style="font-size:15px;color:var(--text2)"><a href="#what-happened" style="color:var(--text2)">What actually happened</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#why" style="color:var(--text2)">Why SpaceX is buying Cursor</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#what-it-means" style="color:var(--text2)">What it means for developers</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#stay-or-go" style="color:var(--text2)">Should you stay or go?</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#alternatives" style="color:var(--text2)">The alternatives, honestly</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#faq" style="color:var(--text2)">Frequently asked questions</a></li>
+        <li style="font-size:15px;color:var(--text2)"><a href="#bottom-line" style="color:var(--text2)">Bottom line: what to watch before close</a></li>
+      </ol>
+    </div>
+
+    <h2 id="what-happened">What Actually Happened</h2>
+    <p>On June 16, 2026, an SEC filing disclosed that SpaceX had agreed to acquire Anysphere, the company behind <a href="../review/cursor.html" style="color:var(--accent)">Cursor</a>, in an all-stock deal valued at roughly $60 billion. Coverage across CNBC, TechCrunch, Axios, Bloomberg, Forbes, the Wall Street Journal and Reuters described it as the largest acquisition of a venture-backed startup on record. The deal is expected to close in Q3 2026, subject to regulatory approval.</p>
+
+    <p>That last sentence is the one most of the internet skipped, so it's worth sitting on. <strong>The deal is announced, not done.</strong> SpaceX does not own Cursor as you read this. An agreement to acquire is a contract to transact, not the transaction — it clears regulators or it doesn't, and until it does, Anysphere is an independent company operating under its own policies. Almost every practical question people are asking right now depends on a close that hasn't happened yet.</p>
+
+    <p>The mechanics, per the filings and deal coverage, fill in the picture:</p>
+    <ul>
+      <li><strong>The option came first.</strong> An option agreement was signed around April 21, 2026 — roughly two months before the public announcement — with a walk-away package reported at about $10 billion. Some filings break that into a $1.5 billion termination fee plus $8.5 billion in compute commitments.</li>
+      <li><strong>The price is a large step up.</strong> Cursor was valued at approximately $29 billion before the deal. The $60 billion figure is roughly double that.</li>
+      <li><strong>The currency is fresh stock.</strong> SpaceX went public on June 12, 2026 in what was reported as the largest IPO ever, and put the surging post-IPO stock to work as acquisition currency four days later. The timing isn't coincidence — an all-stock deal of this size is only available to a company whose shares just became liquid and highly valued.</li>
+      <li><strong>xAI is already inside SpaceX.</strong> SpaceX merged with xAI earlier in 2026, so Cursor isn't being bought by a rocket company that happens to be curious about software. It's being bought into an organization that already contains Grok.</li>
+    </ul>
+
+    <h2 id="why">Why SpaceX Is Buying Cursor</h2>
+    <p>The stated strategic logic is not mysterious, and the reporting is consistent on it: SpaceX/xAI's AI division is behind Anthropic and OpenAI on coding, and this deal is the shortcut. Buying the leading AI code editor buys you its users, its product surface, and — this is the part developers should notice — its data.</p>
+
+    <p>The concrete plan already exists. According to deal coverage, the two companies <strong>have been jointly training a new model</strong>, slated for release in both Cursor and xAI's Grok, and Cursor gains access to xAI's Colossus supercluster as part of the arrangement. Read that carefully: the joint work predates the close. This isn't a plan for what SpaceX might do with Cursor someday — it's a project reportedly already underway, which is also why the April option date matters.</p>
+
+    <h3>The part the headlines under-report: Cursor was already sliding</h3>
+    <p>There's a version of this story where a dominant tool gets scooped up at its peak. The spending data doesn't support it. Per Ramp's corporate card data, Cursor's share of AI coding tool spend fell from roughly <strong>41% in June 2025 to about 26% in May 2026</strong>, while Anthropic — largely through <a href="../review/claude-code.html" style="color:var(--accent)">Claude Code</a> — climbed to roughly half the category.</p>
+
+    <p>That slide predates the deal and partly explains it. It cuts two ways, and both are worth holding at once. For SpaceX, a company losing share is cheaper and more willing to sell than one compounding. For developers, it means "is Cursor still the right pick?" was a live question in May, before anyone said the word SpaceX. If you were already weighing alternatives on the merits, the acquisition is new information about ownership — not the first reason to look around. And if you weren't, the share slide is not by itself a reason to leave a tool that works for you. Category share measures where new spend went; it doesn't measure whether your editor is good.</p>
+
+    <div class="verdict-box">
+      <h4>Our read, flagged as analysis</h4>
+      <p>The facts above are attributed. This next bit is our interpretation, not reporting: a $60 billion all-stock price for a company at $29 billion with declining share reads less like buying a market leader and more like buying a distribution channel and a training-data pipeline for a model that needs both. That framing is ours. Treat it as a lens, not a finding.</p>
+    </div>
+
+    <h2 id="what-it-means">What It Means for Developers</h2>
+    <p>Four separate questions get mashed together in most of the discourse. They have genuinely different answers, and the honest ones are less dramatic than the takes.</p>
+
+    <h3>1. Product continuity — nothing changes today</h3>
+    <p>Cursor works the way it worked in May. Composer 2.5 still runs the agentic loop, multi-model access to Anthropic, OpenAI, Google and xAI models is still there, pricing is unchanged, and your keybindings are fine. Pre-close, the two companies are legally separate and Cursor operates under its own policies. Our <a href="../review/cursor.html" style="color:var(--accent)">Cursor review</a> scores it 8.8 on the current product, and this deal doesn't move that number — a change of control is not a change to the software. If your only question was "will my editor break," the answer is no, and you can stop reading here.</p>
+
+    <p>The forward-looking caveat is mild but real: acquisitions do eventually reshape products, and the multi-model access is the interesting thing to watch. Cursor's current willingness to route you to a rival's frontier model is a genuine feature. Whether an owner whose own model needs adoption keeps that door open as wide is an open question. We don't know. Nobody outside the companies does.</p>
+
+    <h3>2. Data and privacy — the real question, stated precisely</h3>
+    <p>This is where readers actually care, and it's where the discourse is sloppiest, so we're going to be pedantic about the difference between what's reported and what's known.</p>
+
+    <p><strong>What reporting indicates:</strong> SpaceX/xAI and Cursor have been jointly training a model intended to ship in both Cursor and Grok, and Cursor's coding data feeds that pipeline.</p>
+
+    <p><strong>What has not been established:</strong> exactly which data that covers. Whether it means data from users on default settings, or Privacy Mode users, or enterprise customers under existing agreements. Whether it's retroactive. What happens to those agreements at close. Those are the details that determine whether any of this touches <em>your</em> repository, and they have not been published.</p>
+
+    <p>So the flat claim you'll see everywhere — "your code trains Grok" — is going further than the evidence. It might turn out to be true for some users. It is a well-founded concern and the single best reason to pay attention to this deal. It is not, today, a documented fact, and we're not going to assert it as one just because it's the sentence that travels.</p>
+
+    <p>Here's the useful move instead. Stop reading acquisition coverage and go read the document that will actually govern your code: <strong>Cursor's data-use policy</strong>. That's where the answer will appear, in language that binds. Specifically, watch for whether Privacy Mode's guarantees survive close unchanged, whether the training-data language expands to name affiliates or a parent company, whether enterprise zero-retention terms are reaffirmed, and whether a change-of-control notice goes out to customers. Any of those moving is a real signal. A journalist's paraphrase of a filing is not.</p>
+
+    <h3>3. The xAI ownership question</h3>
+    <p>Cursor isn't being acquired into a neutral holding company. It's being acquired into the organization that contains xAI, and xAI has a documented record that belongs in an adoption decision. We're going to report it as attributed fact and let you weigh it, because on this topic the temptation to editorialize is exactly what would make it worthless to you.</p>
+
+    <p>The documented context: Grok's image and video generation has been the subject of sustained trust-and-safety reporting. NBC News reported in April 2026 that non-consensual sexualized image generation continued as users worked around the platform's safeguards; a WIRED investigation in June 2026 found Grok still hosting non-consensual deepfakes; and a federal class action filed in California in March 2026 alleges manipulation targeting images of apparent minors. Notably, <strong>SpaceX's own IPO filings flagged Grok's content-moderation issues as a business risk</strong> — that's not a critic's characterization, it's the company's disclosure to investors. Separately, all eleven of xAI's co-founders had departed by the end of March 2026. We covered the safety record in more detail, with the same attribution discipline and no operational specifics, in our <a href="../review/grok-imagine-video.html" style="color:var(--accent)">Grok Imagine Video review</a>.</p>
+
+    <p>What to do with that is genuinely your call, and reasonable developers land in different places. One reading: a code editor is not an image generator, moderation failures in a consumer media product say little about an IDE's engineering, and judging a tool by its parent company's other products is guilt by association. Another reading: trust-and-safety culture is organizational, not per-product, and the co-founder exodus is a signal about institutional stability at the company that would steward your code after close. Both of those are defensible. We're not going to pretend the second is hysteria or that the first is naive. What we won't do is dress a pile-on up as analysis — the facts above are sourced and specific, and they're sufficient without embellishment.</p>
+
+    <h3>4. Trajectory — the honest answer is uncertainty</h3>
+    <p>The question underneath all of this: will Cursor's direction serve developers, or xAI's strategic goals? Nobody knows, including, probably, the people signing the paperwork.</p>
+
+    <p>The optimistic case has substance: Colossus access is a serious compute upgrade, deep-pocketed ownership ends the funding treadmill, and a parent with a frontier model lab could plausibly make the product better. The pessimistic case has equal substance: a division that needs to catch up on coding has obvious incentives to make Cursor a channel for its own model, and the current multi-model openness is precisely the kind of feature that gets quietly narrowed. Both are speculation. The difference between them will show up in shipped decisions over the next several quarters, not in this article.</p>
+
+    <h2 id="stay-or-go">Should You Stay or Go?</h2>
+    <p>Route yourself. There's no universal answer here, and anyone offering one is selling something.</p>
+
+    <table class="comparison-table">
+      <thead><tr><th>If you are…</th><th>Our read</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Happy with Cursor, ownership-agnostic, deep in the workflow</td><td class="winner">Stay</td><td>Product is unchanged and the deal hasn't closed. Switching costs are real; this isn't a reason to pay them.</td></tr>
+        <tr><td>An individual dev on personal or open-source projects</td><td>Stay, but check your settings</td><td>Low stakes. Spend ten minutes confirming your privacy settings are what you assume, then get back to work.</td></tr>
+        <tr><td>On a team with data-governance or vendor-approval obligations</td><td>Evaluate now</td><td>A pending change of control is a compliance event regardless of the acquirer. Your process probably requires a re-review; start it before close, not after.</td></tr>
+        <tr><td>At an enterprise with zero-retention or contractual data terms</td><td>Get it in writing</td><td>Ask Cursor directly how existing terms survive close. A vendor answer in writing beats any reporting, including ours.</td></tr>
+        <tr><td>Uncomfortable with xAI ownership on principle</td><td>Evaluate alternatives</td><td>This is a values judgment, and it's a legitimate one. You don't need a technical justification for it.</td></tr>
+        <tr><td>Already unhappy with Cursor's pricing or output</td><td>You had reasons before this</td><td>The acquisition is a prompt, not the cause. Decide on the merits — see our <a href="cursor-pricing-2026.html" style="color:var(--accent)">Cursor pricing breakdown</a>.</td></tr>
+      </tbody>
+    </table>
+
+    <p>The unifying principle: <strong>panic-switching your editor over a deal that hasn't closed is a worse decision than waiting.</strong> Switching an IDE costs you real days of degraded output. That price is worth paying for a governance requirement or a considered objection. It is not worth paying for a headline.</p>
+
+    <h2 id="alternatives">The Alternatives, Honestly</h2>
+    <p>If you land in an "evaluate" row, here's the landscape — routed by what you're actually switching <em>for</em>, since none of these is a drop-in Cursor replacement.</p>
+
+    <table class="comparison-table">
+      <thead><tr><th>Tool</th><th>Score</th><th>Fits if you want</th><th>The honest trade-off</th></tr></thead>
+      <tbody>
+        <tr><td><a href="../review/github-copilot.html" style="color:var(--accent)">GitHub Copilot</a></td><td>8.9</td><td>GitHub-native workflow, Microsoft-scale governance</td><td>Token-metered since June 2026 — its own billing questions</td></tr>
+        <tr><td><a href="../review/opencode.html" style="color:var(--accent)">OpenCode</a></td><td>8.4</td><td>Open-source, model-agnostic, your own API key</td><td>Terminal-first; you manage keys and your own setup</td></tr>
+        <tr><td><a href="../review/windsurf.html" style="color:var(--accent)">Devin Desktop</a> (ex-Windsurf)</td><td>8.2</td><td>An editor with open multi-model support</td><td>Mid-rebrand under Cognition; its own transition risk</td></tr>
+        <tr><td><a href="../review/claude-code.html" style="color:var(--accent)">Claude Code</a></td><td>8.0</td><td>Terminal-first, agent-heavy work</td><td>Not an editor — a different workflow, not a swap</td></tr>
+      </tbody>
+    </table>
+
+    <h3>GitHub Copilot — the governance answer</h3>
+    <p>If the thing driving you off Cursor is <em>who owns my code</em>, Copilot is one of the most direct answers available to a team: Microsoft's enterprise data commitments are mature, the admin controls are real, and it's the path of least resistance if your work already lives on GitHub. At 8.9 it's also the highest-scoring tool in our AI Coding category. The catch is that it has its own live controversy — Copilot moved to token-metered AI Credits on June 1, 2026, which we covered in our <a href="github-copilot-token-billing-2026.html" style="color:var(--accent)">Copilot token billing analysis</a>. You'd be trading an ownership question for a billing question. That may well be the trade you want; just make it knowingly.</p>
+
+    <h3>OpenCode — control your own data path</h3>
+    <p><a href="../review/opencode.html" style="color:var(--accent)">OpenCode</a> is the structural answer to a data-governance objection rather than a vendor-trust one. It's open-source and model-agnostic: you bring your own API key, so you decide which provider sees your code and you can change that decision later without changing tools. If your concern is specifically "I don't want a platform company in the middle of my source," this addresses the concern at the root instead of moving it to a different platform company. The trade-off is that it's terminal-first and assumes you're comfortable managing keys and configuration — it is not an editor experience like Cursor's.</p>
+
+    <h3>Devin Desktop — the other editor</h3>
+    <p><a href="../review/windsurf.html" style="color:var(--accent)">Devin Desktop</a>, which Cognition rebranded from Windsurf in June 2026, is the closest thing to a like-for-like editor alternative, and its ACP support keeps it genuinely open to multiple models. Fair warning, though, and it's a pointed one given why you'd be looking: this tool is in the middle of its own ownership-and-identity transition, with Cascade end-of-lifed July 1, 2026. Leaving one company's transition for another's is a real consideration. It scores 8.2.</p>
+
+    <h3>Claude Code — different shape, and we're the wrong people to sell it</h3>
+    <p><a href="../review/claude-code.html" style="color:var(--accent)">Claude Code</a> is a strong fit for terminal-first, agent-heavy senior developers, and it's the tool this site is built with — which is exactly why we're going to be blunt about where it doesn't fit. It is <strong>not an IDE</strong>. Moving from Cursor to Claude Code isn't switching editors, it's changing how you work; if you want an editor with an agent in it, this isn't that, and Copilot or Devin Desktop is the more honest recommendation. It scores 8.0 on our scale — below Cursor's 8.8 — and it's token-metered with its own cost profile. It's also, for full transparency, made by the company whose share gains helped make Cursor acquirable in the first place. We are not neutral here, we're telling you so, and we'd rather you weigh that than take our word for it. Our <a href="claude-code-vs-cursor-vs-github-copilot-2026.html" style="color:var(--accent)">Claude Code vs Cursor vs GitHub Copilot comparison</a> lays out the routing in detail.</p>
+
+    <p>The broader landscape, including options we haven't covered here, is in our <a href="../category/coding.html" style="color:var(--accent)">AI Coding tools category</a> and our <a href="best-ai-coding-agents-2026.html" style="color:var(--accent)">best AI coding agents roundup</a>.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>Has the SpaceX Cursor acquisition closed?</h3>
+      <p>No. As of July 14, 2026, SpaceX has <em>agreed</em> to acquire Anysphere, Cursor's parent, but the deal has not closed. It was announced June 16, 2026 via an SEC filing and is expected to close in Q3 2026, subject to regulatory approval. SpaceX does not own Cursor today.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is Cursor still safe to use?</h3>
+      <p>The product is unchanged — same editor, same pricing, same privacy settings, and the deal hasn't closed. Whether it's safe <em>for you</em> is a governance question rather than a software one: if your organization has rules about who can own or process your source, a pending change of control is a reason to re-read Cursor's data-use policy and confirm Privacy Mode still meets your requirements after close. For most individual developers, there's no immediate technical risk.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Will my code train Grok?</h3>
+      <p>Not established, and anyone stating it as confirmed is going past the evidence. Deal coverage indicates SpaceX/xAI and Cursor have been jointly training a model slated for both Cursor and Grok, with Cursor's coding data feeding that work. What hasn't been published is which data that covers, how Privacy Mode and enterprise agreements are handled after close, or whether any of it is retroactive. Watch Cursor's data-use policy and any change-of-control notice — that document is what will actually govern your code.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What are the best Cursor alternatives in 2026?</h3>
+      <p>Depends what you're switching for. GitHub Copilot (8.9) for GitHub-native workflow and enterprise governance. OpenCode (8.4) for open-source, bring-your-own-key control over who sees your code. Devin Desktop (8.2), formerly Windsurf, for an editor with open multi-model support. Claude Code (8.0) for terminal-first agent work — though that's a workflow change, not an editor swap. None is a drop-in replacement. (Disclosure: AIToolGrade is built with Claude Code.)</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do I need to switch now?</h3>
+      <p>For most developers, no. The deal hasn't closed, the product is unchanged, and switching editors costs real workflow disruption. The case for moving early is narrower: teams with data-governance or vendor-approval obligations that make a pending change of control a compliance question, and developers who don't want their work associated with the acquiring company. Everyone else can reasonably wait for close and read the resulting data policy.</p>
+    </div>
+
+    <h2 id="bottom-line">Bottom Line: What to Watch Before Close</h2>
+    <p>The most useful thing we can tell you is that this is a slower story than it looks. A deal was announced. It hasn't closed. Your editor is fine. The reasonable posture for most developers is attention, not action — and the specific things worth your attention are concrete rather than atmospheric.</p>
+
+    <p>Four signals, in rough order of how much they should move you:</p>
+    <ul>
+      <li><strong>Cursor's data-use policy at close.</strong> Does the training language expand to name a parent or affiliates? Do Privacy Mode and enterprise zero-retention terms survive intact? This is the document that binds; everything else is commentary.</li>
+      <li><strong>Whether a change-of-control notice goes out.</strong> If you're on an enterprise agreement, this is your contractual moment. Read it when it arrives.</li>
+      <li><strong>Whether multi-model access narrows.</strong> Cursor routing you to a competitor's frontier model is a real feature today. If that quietly shrinks after the joint model ships, you've learned something about whose interests the roadmap serves.</li>
+      <li><strong>Regulatory approval itself.</strong> A $60 billion all-stock deal at this scale is not a formality. It may close on schedule, close with conditions, or not close at all — and the whole question evaporates in that last case.</li>
+    </ul>
+
+    <p>If you're in a governance-bound team, don't wait for those signals — start your vendor re-review now, because your process will demand one anyway and doing it calmly beats doing it under a deadline. If you're an individual developer who likes Cursor, spend ten minutes on your privacy settings and then go write some code. And if you object to the acquirer on principle, that's a sufficient reason to move; you don't owe anyone a technical rationalization for it.</p>
+
+    <p>What we'd ask you to resist is the framing that this is binary — that you either flee Cursor today or you've consented to something. It's a pending deal with real open questions and a genuinely uncertain outcome, and treating it that way isn't complacency. It's just accuracy. We'll update this piece when the deal closes and the policy language lands, because that's when there'll be something to actually decide on.</p>
+
+    <div class="cta-box">
+      <h3>Read the full reviews</h3>
+      <p>Documented features, verified pricing, and community sentiment for Cursor and every alternative here.</p>
+      <div class="cta-links">
+        <a href="../review/cursor.html" class="cta-btn">Cursor Review →</a>
+        <a href="../review/github-copilot.html" class="cta-btn">GitHub Copilot Review →</a>
+        <a href="../review/opencode.html" class="cta-btn">OpenCode Review →</a>
+        <a href="../review/claude-code.html" class="cta-btn">Claude Code Review →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="related-posts" style="max-width:780px;margin:0 auto 48px;padding:32px;background:var(--bg2);border-radius:14px;border:1px solid var(--border)">
+  <p style="font-size:12px;font-family:DM Mono,monospace;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px">Related Reading</p>
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <a href="cursor-pricing-2026.html" style="font-size:15px;font-weight:600;color:var(--text);border-bottom:1px solid var(--border);padding-bottom:12px;text-decoration:none">Cursor Pricing 2026: What Changed and What It Really Costs →</a>
+    <a href="claude-code-vs-cursor-vs-github-copilot-2026.html" style="font-size:15px;font-weight:600;color:var(--text);border-bottom:1px solid var(--border);padding-bottom:12px;text-decoration:none">Claude Code vs Cursor vs GitHub Copilot (2026) →</a>
+    <a href="github-copilot-token-billing-2026.html" style="font-size:15px;font-weight:600;color:var(--text);border-bottom:1px solid var(--border);padding-bottom:12px;text-decoration:none">GitHub Copilot Token Billing 2026: What Changed and Your Alternatives →</a>
+    <a href="best-ai-coding-agents-2026.html" style="font-size:15px;font-weight:600;color:var(--text);text-decoration:none">Best AI Coding Agents in 2026 →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">AI Tool<span>Grade</span></div><p class="footer-desc">Independent reviews and comparisons of AI tools. Researched, fact-checked, and independently rated.</p></div>
+    <div><div class="footer-col-title">Reviews</div><div class="footer-links"><a href="../category/writing.html">AI Writing</a><a href="../category/coding.html">AI Coding</a><a href="../category/image.html">AI Image</a><a href="../category/automation.html">Automation</a><a href="../category/productivity.html">Productivity</a></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="../about.html">About</a><a href="../how-we-review.html">How we review</a><a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
+    <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+</footer>
+</body></html>

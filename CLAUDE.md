@@ -64,6 +64,7 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 │   ├── synthesia.html           (AI Video, 8.0)
 │   ├── heygen.html              (AI Video, 8.1)
 │   ├── descript.html            (AI Video, 7.9)
+│   ├── elevenlabs.html          (AI Video, 8.3 — AI Voice/TTS; see category note)
 │   ├── chatgpt.html             (Productivity, 9.0)
 │   ├── notion-ai.html           (Productivity, 8.4)
 │   ├── perplexity.html          (Productivity, 8.8)
@@ -113,14 +114,15 @@ An AI tools review and affiliate website. Independent reviews, ratings, category
 - AI Coding: 15 (Cursor, GitHub Copilot, Windsurf, Bolt.new, Replit, Lovable, v0 by Vercel, Google Antigravity, DeepSeek V4, Claude Code, Kimi Code, Grok Build, MiniMax M3, OpenCode, aider)
 - AI Image: 3 (Midjourney, Adobe Firefly, Leonardo AI)
 - Automation: 3 (Zapier, n8n, Microsoft Agent 365)
-- AI Video: 5 (Grok Imagine Video 1.5, Runway, Synthesia, HeyGen, Descript)
+- AI Video: 6 (Grok Imagine Video 1.5, Runway, Synthesia, HeyGen, Descript, ElevenLabs)
 - Productivity: 8 (ChatGPT, Notion AI, Perplexity, Claude Cowork, Perplexity Computer, NotebookLM, ZoomMate, Ollama + Open WebUI)
 
-Total: 38 reviews. (Verify against `index.html` when counts change — do not assume they are in sync.
+Total: 39 reviews. (Verify against `index.html` when counts change — do not assume they are in sync.
 Re-derive from disk rather than trusting this block: `ls review/*.html | wc -l` for the total, and
 `grep -o 'href="\.\./review/[a-z0-9.-]*\.html"' category/<cat>.html | sort -u | wc -l` per category.
 History: AI Coding 15 as of June 23, 2026 after adding aider; AI Video 5 as of June 21, 2026 after
-adding Grok Imagine Video 1.5; Productivity 8 as of July 7, 2026 after adding Ollama + Open WebUI.)
+adding Grok Imagine Video 1.5; Productivity 8 as of July 7, 2026 after adding Ollama + Open WebUI;
+AI Video 6 as of July 20, 2026 after adding ElevenLabs (first AI Voice/TTS entry — see category note below).)
 
 When adding a new review, update the count in `index.html` using this script pattern:
 ```bash
@@ -699,6 +701,7 @@ All pricing verified May 2026. Update this table when pricing changes are confir
 | Cursor | June 2026 | Credit-based since June 2025 — ~225 usable requests at Pro when selecting frontier models manually. June 1, 2026 Teams restructure: Teams Standard $40/seat (split credit pools — Composer/Auto vs third-party frontier models), Teams Premium NEW $120/seat ($96 annual), Enterprise custom |
 | Grammarly | May 2026 | Premium renamed to Pro, Business replaced by Enterprise |
 | Perplexity | May 2026 | Max $200 tier added, Comet browser now free |
+| ElevenLabs | July 2026 | Credit-based (~1 char ≈ 1 credit; Flash/Turbo discounted; credits reset monthly, no rollover). Free $0/~10k · Starter $6/~30k · Creator $22/~121k · Pro $99/~600k · Scale $299/~1.8M · Business $990/~6M · Enterprise custom. Annual ≈ 2 months free. Low-latency TTS pricing gated to Business on self-serve. NOTE: earlier brief figures (Scale ~$330, "1 credit = 2 chars") were STALE — corrected at source. Feb 2026 $500M raise (~$11B) → ~50% price cut, so current tiers are already the discounted ones |
 | Jasper | May 2026 | Boss Mode discontinued, Starter gone, Creator $49/Pro $69 |
 | Notion AI | May 2026 | $10 add-on gone since May 2025, full AI requires Business $20/user/month |
 
@@ -1333,6 +1336,31 @@ Next Search Console candidates (not yet rewritten):
 - review/n8n.html — 123 impressions, position 67.2
 - review/writesonic.html — 160 impressions, position 77.7
 
+### July 20, 2026 — New review published: ElevenLabs (DONE)
+- **review/elevenlabs.html — 8.3/10, Priya Nolan, placed in AI Video.** Built, deployed (commit dbede93),
+  live HTTP 200 confirmed. Review + Article + BreadcrumbList + FAQPage schema all valid; prohibited-language
+  + superlative scans clean. No COI box (not a Claude Code competitor). No affiliate link (no ElevenLabs
+  program live — neutral "Official site" CTA). compare.html deliberately SKIPPED (curated-subset convention).
+  Per-dimension: Voice Quality 9.5 · Features 9.0 · Ease of Use 8.5 · Integration & API 8.0 · Value 6.5.
+  Score tempered to 8.3, BELOW the brief's suggested 8.5–9.0 (Value pressured by premium pricing +
+  credit-system unpredictability; real capability gap = no real-time on flagship v3).
+- **Byline = Priya Nolan** (creator/content-production tool, accessible framing; has an API but is
+  creator-first, so it did NOT tip to Marcus).
+- **Honest angle held:** v3 framed as GA since **March 14, 2026 (~4 months old), NOT a new launch**;
+  quality-vs-latency tradeoff foregrounded (v3 not real-time → use Flash v2.5, ~75ms, per ElevenLabs docs);
+  credit-system cost risk foregrounded (variable burn by model, non-rolling overages, steep tier jumps).
+- **AI VOICE / AI AUDIO CATEGORY DECISION (logged, NOT yet created):** site has no Voice/TTS category.
+  Placed ElevenLabs in **AI Video as the closest existing fit** (audio/voice cluster already lives there:
+  Descript, Synthesia, HeyGen); incremented AI Video 5→6. **Flagged as warranted:** a dedicated "AI Voice /
+  AI Audio" category — ElevenLabs is the FIRST voice-native entry, **Descript is adjacent**, and **WhisperX**
+  (from the earlier verified list) could seed the cluster. Left for Rich's call — not created unilaterally.
+- **Perplexity editorial gate: PASSED.** No factual errors; central quality-vs-latency framing confirmed
+  credible; not overselling as a new launch; pricing current; claims attributed. **One open nit DEFERRED:**
+  the "competitors narrowing the gap" claim is editorial synthesis — attribute or soften it the next time the
+  page is touched.
+- **Remaining brief items:** social posts NOT drafted (all 3 accounts pending — Priya lead, creator/voice
+  angle); AI Voice/Audio category creation pending Rich's decision.
+
 ### June 3, 2026 — New reviews published
 - review/heygen.html — 8.1/10, Priya Nolan, AI Video
 - review/notebooklm.html — 8.7/10, Priya Nolan, Productivity
@@ -1612,6 +1640,7 @@ Current page count: 75 URLs (as of June 16, 2026) — one per HTML page.
 (June 12, 2026: added `blog/v0-vs-lovable-vs-bolt-2026.html` — Comparison, lastmod 2026-06-12.)
 (June 12, 2026: added `review/opencode.html` — AI Coding, lastmod 2026-06-12.)
 (June 12, 2026: added `review/v0.html` — AI Coding, lastmod 2026-06-12.)
+(July 20, 2026: added `review/elevenlabs.html` — AI Video (AI Voice/TTS), lastmod 2026-07-20.)
 (June 12, 2026: added `review/zoommate.html` — Productivity, lastmod 2026-06-12.)
 (June 11, 2026: added `blog/chatgpt-go-vs-plus-vs-pro-2026.html` — Comparison, lastmod 2026-06-11.)
 (June 10, 2026: added `review/minimax-m3.html` — AI Coding, lastmod 2026-06-10.)

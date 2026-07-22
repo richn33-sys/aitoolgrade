@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="canonical" href="https://aitoolgrade.com/review/elevenlabs.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ElevenLabs v3 review 2026 — the AI voice-quality leader, and the tradeoff buyers miss: v3 is not built for real-time, and the credit system makes cost hard to predict.">
+<title>ElevenLabs v3 Review 2026 — The Voice Quality Leader, and Its Tradeoff | AIToolGrade</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fafaf8;--bg2:#f3f2ee;--bg3:#eceae3;--text:#1a1a18;--text2:#4a4a45;--text3:#8a8a82;--accent:#e85d26;--accent2:#f07d4a;--accent-dim:rgba(232,93,38,0.08);--border:#e2e0d8;--white:#ffffff;--display:'Playfair Display',serif;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:4px}
+.nav-dropdown>a::after{content:"▾";font-size:10px}
+.dropdown-menu{visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.15s ease,visibility 0s linear 0.5s;position:absolute;top:calc(100% + 8px);left:-16px;background:white;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:200;max-height:80vh;overflow-y:auto}
+.dropdown-menu a{display:block;padding:8px 12px;font-size:14px;color:var(--text2);text-decoration:none;border-radius:6px;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--bg2);color:var(--accent)}
+.nav-dropdown:hover .dropdown-menu{visibility:visible;opacity:1;pointer-events:auto;transition:opacity 0.15s ease,visibility 0s}
+.nav-dropdown .dropdown-menu::before{content:"";position:absolute;top:-20px;left:0;right:0;height:20px}
+.nav-dropdown::after{content:"";position:absolute;height:20px;width:calc(100% + 16px);bottom:-20px;left:-16px}
+.review-layout{max-width:1100px;margin:0 auto;padding:60px 40px;display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:start}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:24px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+.review-header{margin-bottom:40px}
+.review-tool-row{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.review-tool-logo{width:56px;height:56px;border-radius:14px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:28px;border:1px solid var(--border)}
+.review-tool-title{font-size:15px;font-weight:600;margin-bottom:2px}
+.review-tool-url{font-size:13px;color:var(--text3);font-family:var(--mono)}
+h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;margin-bottom:16px}
+.review-meta-row{display:flex;align-items:center;gap:20px;font-size:13px;color:var(--text3);margin-bottom:24px;flex-wrap:wrap}
+.verdict-banner{background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:20px 24px;margin-bottom:40px;display:flex;align-items:center;gap:16px}
+.verdict-score{font-family:var(--display);font-size:48px;font-weight:800;color:var(--accent);line-height:1}
+.verdict-text h3{font-size:15px;font-weight:600;margin-bottom:4px}
+.verdict-text p{font-size:13px;color:var(--text2)}
+.review-body h2{font-family:var(--display);font-size:28px;font-weight:700;margin:40px 0 16px}
+.review-body h3{font-family:var(--sans);font-size:18px;font-weight:700;margin:28px 0 10px}
+.review-body p{color:var(--text2);margin-bottom:16px}
+.answer-first{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin-bottom:8px}
+.answer-first .af-label{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:8px}
+.answer-first p{font-size:15px;color:var(--text);margin:0}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
+.pros-box,.cons-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px}
+.pros-box{border-top:3px solid #2e7d32}
+.cons-box{border-top:3px solid #c62828}
+.pros-box h4{color:#2e7d32;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.cons-box h4{color:#c62828;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.pro-item,.con-item{font-size:14px;color:var(--text2);margin-bottom:8px;display:flex;gap:8px;align-items:flex-start}
+.pro-item::before{content:'✓';color:#2e7d32;font-weight:600;flex-shrink:0}
+.con-item::before{content:'✗';color:#c62828;font-weight:600;flex-shrink:0}
+.score-breakdown{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;margin:32px 0}
+.score-breakdown h4{font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:20px}
+.score-row{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.score-row:last-child{margin-bottom:0}
+.score-name{font-size:14px;color:var(--text2);width:200px;flex-shrink:0}
+.score-bar-track{flex:1;height:8px;background:var(--bg2);border-radius:100px;overflow:hidden}
+.score-bar-fill{height:100%;border-radius:100px;background:var(--accent)}
+.score-val{font-family:var(--mono);font-size:13px;font-weight:500;width:30px;text-align:right}
+.model-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.model-table th{text-align:left;padding:12px 16px;background:var(--bg2);font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border)}
+.model-table td{padding:12px 16px;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:top}
+.model-table tr:last-child td{border-bottom:none}
+.model-table tr:hover td{background:var(--bg2)}
+.model-name{font-weight:600;color:var(--text)}
+.affiliate-box{background:var(--text);color:white;border-radius:14px;padding:28px;margin:40px 0;text-align:center}
+.affiliate-box h3{font-family:var(--display);font-size:24px;font-weight:700;margin-bottom:8px}
+.affiliate-box p{color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:20px}
+.affiliate-btn{display:inline-block;background:var(--accent);color:white;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;transition:background 0.15s}
+.affiliate-btn:hover{background:var(--accent2)}
+.affiliate-note{font-size:11px;color:rgba(255,255,255,0.4);margin-top:12px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px;position:sticky;top:84px}
+.sidebar-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:16px}
+.sidebar-score{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.sidebar-score-num{font-family:var(--display);font-size:52px;font-weight:800;color:var(--accent);line-height:1}
+.sidebar-score-label{font-size:13px;color:var(--text3)}
+.sidebar-price-row{display:flex;justify-content:space-between;font-size:14px;padding:10px 0;border-bottom:1px solid var(--border)}
+.sidebar-price-row:last-of-type{border-bottom:none}
+.sidebar-price-label{color:var(--text2)}
+.sidebar-price-val{font-family:var(--mono);font-weight:500}
+.sidebar-cta{display:block;background:var(--accent);color:white;text-align:center;padding:14px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;margin-top:20px;transition:background 0.15s}
+.sidebar-cta:hover{background:var(--accent2)}
+.sidebar-disclosure{font-size:11px;color:var(--text3);margin-top:10px;text-align:center}
+.pricing-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.pricing-table th{text-align:left;padding:12px 16px;background:var(--bg2);font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border)}
+.pricing-table td{padding:12px 16px;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:top}
+.pricing-table tr:last-child td{border-bottom:none}
+.pricing-table tr:hover td{background:var(--bg2)}
+.plan-name{font-weight:600;color:var(--text)}
+.plan-price{font-family:var(--mono);font-weight:500;color:var(--accent);white-space:nowrap}
+.what-changed{background:#fff8f0;border:1px solid rgba(232,93,38,0.25);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin:24px 0}
+.what-changed-label{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.what-changed p{font-size:14px;color:var(--text2);margin:0}
+.related-callout{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:0 0 32px 0;display:flex;align-items:flex-start;gap:12px}
+.related-callout-label{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:var(--text3);white-space:nowrap;margin-top:2px}
+.related-callout-links{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.related-callout-links a{font-size:13px;color:var(--accent);text-decoration:none;font-weight:500}
+.related-callout-links a:hover{text-decoration:underline}
+.feature-list{margin:24px 0}
+.feature-item{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-bottom:12px}
+.feature-item-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px}
+.feature-item-desc{font-size:14px;color:var(--text2);margin:0}
+.faq-item{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin-bottom:12px}
+.faq-item h3{font-family:var(--sans);font-size:15px;font-weight:700;color:var(--text);margin:0 0 8px}
+.faq-item p{font-size:14px;color:var(--text2);margin:0}
+.verdict-box{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:28px;margin:40px 0}
+.verdict-box h3{font-family:var(--display);font-size:22px;font-weight:700;margin-bottom:16px}
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;font-size:14px}
+.verdict-item strong{display:block;font-size:12px;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.05em;color:var(--text3);margin-bottom:4px}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}
+.footer-brand span{color:var(--accent)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--accent)}
+@media(max-width:768px){.review-layout{grid-template-columns:1fr;padding:40px 20px}.pros-cons{grid-template-columns:1fr}.verdict-grid{grid-template-columns:1fr}h1{font-size:30px}nav{padding:0 20px}.footer-inner{grid-template-columns:1fr 1fr}.pricing-table,.model-table{font-size:13px}.score-name{width:140px}}
+
+/* === MOBILE NAV + RESPONSIVE TABLE FIX === */
+.nav-toggle{display:none;order:2;background:none;border:0;font-size:24px;line-height:1;color:var(--text);cursor:pointer;padding:4px 6px}
+@media(max-width:768px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(250,250,248,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 20px 16px;box-shadow:0 8px 24px rgba(0,0,0,0.06);max-height:calc(100vh - 64px);overflow-y:auto}
+  nav.nav-open .nav-links{display:flex}
+  .nav-links>a,.nav-dropdown{padding:12px 2px;border-bottom:1px solid var(--border)}
+  .nav-dropdown{position:static}
+  .nav-dropdown>a::after{display:none}
+  .dropdown-menu{display:none!important}
+  .nav-cta{display:block;text-align:center;background:var(--accent);color:#fff;margin-top:14px;padding:12px;border:0!important;border-radius:6px}
+  .model-table,.pricing-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "name": "ElevenLabs v3 Review 2026",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "8.3",
+    "bestRating": "10",
+    "worstRating": "0"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Priya Nolan",
+    "url": "https://aitoolgrade.com/author/priya-nolan.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIToolGrade",
+    "url": "https://aitoolgrade.com"
+  },
+  "itemReviewed": {
+    "@type": "SoftwareApplication",
+    "name": "ElevenLabs",
+    "applicationCategory": "AI Voice Tool",
+    "operatingSystem": "Web, API",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "url": "https://elevenlabs.io"
+    }
+  },
+  "datePublished": "2026-07-20",
+  "dateModified": "2026-07-20"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ElevenLabs v3 Review 2026 — The Voice Quality Leader, and Its Tradeoff",
+  "author": {
+    "@type": "Person",
+    "name": "Priya Nolan",
+    "url": "https://aitoolgrade.com/author/priya-nolan.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIToolGrade",
+    "url": "https://aitoolgrade.com"
+  },
+  "datePublished": "2026-07-20",
+  "dateModified": "2026-07-20"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolgrade.com"},
+    {"@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://aitoolgrade.com/reviews.html"},
+    {"@type": "ListItem", "position": 3, "name": "AI Video", "item": "https://aitoolgrade.com/category/video.html"},
+    {"@type": "ListItem", "position": 4, "name": "ElevenLabs", "item": "https://aitoolgrade.com/review/elevenlabs.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is ElevenLabs v3 good for real-time or conversational use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — and ElevenLabs says so in its own documentation. Eleven v3 uses a larger model and a higher-fidelity codec that takes longer to run, so it carries higher first-token latency and is not recommended for real-time or conversational applications. For real-time voice — agents, phone systems, live assistants — ElevenLabs points users to Eleven Flash v2.5, which is documented at roughly 75ms latency. The practical takeaway: the highest quality and the lowest latency live in different models on the platform, so you choose one based on the use case rather than getting both from a single model."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does ElevenLabs actually cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per the pricing page (verified July 2026), the self-serve tiers run Free ($0, ~10,000 credits/month), Starter ($6, ~30,000), Creator ($22, ~121,000), Pro ($99, ~600,000), Scale ($299, ~1,800,000), and Business ($990, ~6,000,000), with a custom Enterprise tier above that. Annual billing is priced at roughly ten months, so about two months free. The number that actually catches teams out is not the sticker price but the credit system: different models consume credits at different rates, credits reset monthly and do not roll over, and heavy months can push you into overages or a steep tier jump. Budget by expected monthly character volume and the specific models you plan to use, not by the plan name."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is ElevenLabs worth it compared with cheaper alternatives?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ElevenLabs is premium-priced, and there are cheaper options — open-source models such as Mistral's Voxtral, native voice bundled into Google's Gemini and Meta's Llama, and lower-cost challengers like Fish Audio. Independent listening comparisons still generally rate ElevenLabs at or near the top for expressive, natural-sounding output, and its cloning and dubbing tooling is broad. So the honest answer depends on the job: if voice quality is the product — audiobooks, premium narration, character voices — the price tends to be justified. If you need good-enough voice at the lowest cost, or real-time voice at scale, a cheaper or bundled model may be the better fit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are Audio Tags in ElevenLabs v3?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Audio Tags are inline cues you place directly in the text to control delivery — things like whispers, laughs, sighs, and emotional tone — so you can direct expressiveness without leaving the script. They are one of the headline additions in Eleven v3, alongside support for 70+ languages and a reported reduction in errors on complex text versus prior models. For narration and character work they make it easier to get expressive, human-sounding reads; for real-time use they do not change the underlying constraint that v3 is not built for low latency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which ElevenLabs model should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Match the model to the job. Eleven v3 is the expressive, highest-quality option for long-form narration and pre-rendered content where quality matters more than speed. Eleven Multilingual v2 is a stable general-purpose choice for standard multilingual voiceover. Eleven Flash v2.5 is the ultra-low-latency model (documented around 75ms) built for real-time and conversational use such as voice agents and phone systems. The core rule is that v3 and Flash v2.5 sit at opposite ends of the quality-versus-latency tradeoff, so pick by whether your priority is fidelity or responsiveness."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div id="nav-root"></div>
+<script src="../nav.js"></script>
+<div class="review-layout">
+  <div class="review-main">
+    <div style="background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 14px 18px; margin-bottom: 28px; display: flex; align-items: flex-start; gap: 12px;">
+      <span style="font-family: var(--mono); font-size: 18px; line-height: 1;">🔍</span>
+      <div>
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 4px;">Research-Based Review</div>
+        <p style="font-family: var(--sans); font-size: 0.88rem; color: var(--text2); line-height: 1.6; margin: 0;">This review is based on documented features, verified pricing, and community sentiment — not hands-on testing. <a href="../how-we-review.html" style="color: var(--accent); text-decoration: none;">See how we research →</a></p>
+      </div>
+    </div>
+    <div class="breadcrumb"><a href="../index.html">Home</a><span>›</span><a href="../category/video.html">AI Video</a><span>›</span>ElevenLabs Review</div>
+    <div class="review-header">
+      <div class="review-tool-row">
+        <div class="review-tool-logo">🎙️</div>
+        <div><div class="review-tool-title">ElevenLabs</div><div class="review-tool-url">elevenlabs.io</div></div>
+      </div>
+      <h1>ElevenLabs v3 Review 2026 — The Voice Quality Leader, and Its Tradeoff</h1>
+      <div class="review-meta-row">
+        <span>📅 Updated July 2026</span>
+        <span>⏱ 11 min read</span>
+        <span>✅ Pricing verified July 2026</span>
+      </div>
+    </div>
+    <div class="verdict-banner">
+      <div class="verdict-score">8.3</div>
+      <div class="verdict-text">
+        <h3>Editor's Verdict: Strong</h3>
+        <p>The clearest voice-quality leader in AI audio, with deep cloning and dubbing tooling to match. The catch is real: the flagship v3 model is not built for real-time, and the credit-based pricing makes cost harder to predict than the sticker price suggests. A confident pick when quality is the goal — with two caveats worth understanding first.</p>
+      </div>
+    </div>
+    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/priya-nolan.html" style="color:var(--accent)">Priya Nolan</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified July 2026</p>
+    <div class="review-body">
+
+      <div class="related-callout">
+        <span class="related-callout-label">Also see</span>
+        <div class="related-callout-links">
+          <a href="../review/descript.html">Descript review</a>
+          <span style="color:var(--border)">·</span>
+          <a href="../review/synthesia.html">Synthesia review</a>
+          <span style="color:var(--border)">·</span>
+          <a href="../review/heygen.html">HeyGen review</a>
+        </div>
+      </div>
+
+      <div class="answer-first">
+        <div class="af-label">The short version</div>
+        <p>ElevenLabs is a text-to-speech and voice platform — cloning, dubbing, and a lineup of speech models used for everything from audiobooks to app voiceovers. It's aimed at creators and content teams who care most about how the voice actually sounds, and on that measure it's generally rated at the front of the field. The tradeoff to understand before you commit: its best-quality model, Eleven v3, is <strong>not</strong> built for real-time, and the credit-based pricing can cost more than the plan name implies. Quality and low latency live in different models here — you pick one.</p>
+      </div>
+
+      <!-- toc -->
+<nav aria-label="Table of contents" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 32px 0;">
+  <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 12px;">In this review</div>
+  <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#what-is-elevenlabs" style="color: var(--accent); text-decoration: none;">What ElevenLabs is — and the model lineup</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#eleven-v3" style="color: var(--accent); text-decoration: none;">Eleven v3: Audio Tags, 70+ languages, and the no-real-time constraint</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#cloning-dubbing" style="color: var(--accent); text-decoration: none;">Voice cloning, dubbing &amp; the wider platform</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pricing" style="color: var(--accent); text-decoration: none;">Pricing &amp; the credit system (the real cost risk)</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#performance-scores" style="color: var(--accent); text-decoration: none;">Performance Scores</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#limitations" style="color: var(--accent); text-decoration: none;">Honest limitations</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#who-for" style="color: var(--accent); text-decoration: none;">Who it's for / who should skip</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pros-and-cons" style="color: var(--accent); text-decoration: none;">Pros and Cons</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#faq" style="color: var(--accent); text-decoration: none;">FAQ</a></li>
+  </ol>
+</nav>
+
+      <h2 id="what-is-elevenlabs">What ElevenLabs is — and the model lineup</h2>
+      <p>ElevenLabs is an AI voice company. At its core is text-to-speech: type or paste a script, pick a voice, and get natural-sounding audio out. Around that sits a broader platform — instant and professional voice cloning, AI dubbing that translates content while preserving the original voice, a sound-effects generator, a marketplace of community voices, and API access across the paid tiers. It's used by audiobook producers, YouTubers, game studios, app developers, and localization teams, among others.</p>
+      <p>The thing to understand first is that "ElevenLabs" is not a single voice model. It's a lineup, and the model you choose changes both the quality and the latency you get. That choice is the practical heart of using the platform well, so it's worth spending a minute on before anything else.</p>
+      <table class="model-table">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Best for</th>
+            <th>The tradeoff</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="model-name">Eleven v3</span></td>
+            <td>Expressive, long-form narration — audiobooks, premium voiceover, character work</td>
+            <td>Highest quality and most control, but higher latency. Per ElevenLabs' documentation, not intended for real-time use.</td>
+          </tr>
+          <tr>
+            <td><span class="model-name">Eleven Multilingual v2</span></td>
+            <td>Stable, general-purpose multilingual voiceover</td>
+            <td>A dependable middle ground when you don't need v3's expressiveness or Flash's speed.</td>
+          </tr>
+          <tr>
+            <td><span class="model-name">Eleven Flash v2.5</span></td>
+            <td>Real-time and conversational — voice agents, phone systems, live assistants</td>
+            <td>Ultra-low latency (documented around 75ms), which ElevenLabs recommends for real-time. Less expressive than v3.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Read the table as a single decision: if the audio is pre-rendered and quality is the point, reach for v3. If the audio has to come back while someone is waiting on the other end of a conversation, reach for Flash v2.5. Multilingual v2 covers the ordinary middle. Getting this right up front avoids the most common disappointment new users report — expecting one model to be both the most lifelike and the fastest.</p>
+
+      <h2 id="eleven-v3">Eleven v3: Audio Tags, 70+ languages, and the no-real-time constraint</h2>
+      <p>Eleven v3 reached general availability on March 14, 2026, after a period in alpha. It is not a brand-new release — by mid-2026 it is a settled, roughly four-month-old model — but it's the current top of the quality ladder, so it's where most of the "is ElevenLabs still the best-sounding?" question gets answered. On that, the evidence is favorable: ElevenLabs reports that around 72% of users preferred the GA version over the alpha, and that v3 reduced errors on complex text by about 68% versus the prior generation.</p>
+      <p>Two v3 features stand out for creators:</p>
+      <div class="feature-list">
+        <div class="feature-item">
+          <div class="feature-item-title">Audio Tags — inline emotional control</div>
+          <div class="feature-item-desc">You direct delivery from inside the script by dropping in cues — whispers, laughs, sighs, shifts in emotion — rather than fiddling with sliders after the fact. For narration and character voices, this is the feature that makes v3 feel less like a reader and more like a performer. It's the headline addition in v3.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-title">70+ languages</div>
+          <div class="feature-item-desc">v3 broadens language coverage to more than 70 languages, which matters for localization and for creators publishing to multiple regions from one script. Combined with the accuracy improvement on complex text, it's a meaningful step for multilingual narration.</div>
+        </div>
+      </div>
+      <div class="what-changed">
+        <div class="what-changed-label">⚠ The constraint that defines v3</div>
+        <p>ElevenLabs' own documentation states that v3 is not for real-time use. The larger model and higher-fidelity codec take longer to run, which means higher first-token latency — fine for pre-rendered narration, a problem for live conversation. For real-time and conversational applications, ElevenLabs recommends Eleven Flash v2.5 instead. This is not a bug; it's a design choice. But it's one buyers should register early, because the voice-AI market is moving toward real-time, and the best-sounding model is deliberately the one you can't use for it.</p>
+      </div>
+      <p>None of this makes v3 a weak model — it's the reason ElevenLabs is still cited as the quality leader. It's a clarity point. If your work is narration, audiobooks, or any content rendered ahead of time, v3 is exactly what you want. If your work is a voice agent answering calls, v3 is the wrong tool on the same platform, and Flash v2.5 is the right one.</p>
+
+      <h2 id="cloning-dubbing">Voice cloning, dubbing &amp; the wider platform</h2>
+      <p>Voice quality is the headline, but the surrounding tooling is a large part of why teams standardize on ElevenLabs.</p>
+      <div class="feature-list">
+        <div class="feature-item">
+          <div class="feature-item-title">Voice cloning — instant and professional</div>
+          <div class="feature-item-desc">Instant cloning creates a usable voice from a short sample; professional voice cloning trains a higher-fidelity model from more audio and is gated to paid tiers (Creator and above). Producers use it to scale a single narrator's voice across large catalogs, or to keep a consistent brand voice across a lot of content.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-title">AI dubbing</div>
+          <div class="feature-item-desc">Translates and re-voices content into other languages while aiming to preserve the original speaker's vocal characteristics. For creators localizing videos or courses, it collapses a multi-step workflow — transcribe, translate, re-record — into a far shorter one. Results vary by language and source audio, as with any dubbing.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-title">Sound effects &amp; voice marketplace</div>
+          <div class="feature-item-desc">A text-to-sound-effects generator covers incidental audio, and a marketplace of community voices gives you a large library to start from without cloning anything yourself. Useful for creators who want variety without recording talent.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-title">API access</div>
+          <div class="feature-item-desc">The API is available across paid tiers and is where the model-choice decision becomes concrete — you select v3, Multilingual v2, or Flash v2.5 per request depending on whether you're batching narration or driving a live agent. This is also the surface that developers build voice agents and phone systems on.</div>
+        </div>
+      </div>
+      <p>For context on where ElevenLabs sits in the company's wider push: it announced an IBM watsonx partnership aimed at regulated-industry enterprise voice, and it has an MCP-based voice assistant, 11.ai, in alpha. Those are directional signals rather than things most creators will use day one, but they show the platform reaching past pure TTS toward agents and enterprise.</p>
+
+      <h2 id="pricing">Pricing &amp; the credit system (the real cost risk)</h2>
+      <p>ElevenLabs runs on credits, not on minutes or a flat seat price, and that's where cost gets slippery. As a rough anchor, one text character is about one credit on the standard multilingual model, with discounted rates on the faster Flash and Turbo variants. Credits reset monthly and don't roll over. The figures below are from the ElevenLabs pricing page, verified July 2026 — spot-check at the source before you commit, since ElevenLabs has changed pricing more than once in the past year.</p>
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Price (monthly)</th>
+            <th>Credits / month</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="plan-name">Free</span></td>
+            <td><span class="plan-price">$0</span></td>
+            <td>~10,000 (~20 min)</td>
+            <td>Attribution required; non-commercial</td>
+          </tr>
+          <tr>
+            <td><span class="plan-name">Starter</span></td>
+            <td><span class="plan-price">$6</span></td>
+            <td>~30,000</td>
+            <td>Commercial license; instant voice cloning</td>
+          </tr>
+          <tr>
+            <td><span class="plan-name">Creator</span></td>
+            <td><span class="plan-price">$22</span></td>
+            <td>~121,000</td>
+            <td>Professional voice cloning; higher-quality audio. Often ~$11 first month</td>
+          </tr>
+          <tr>
+            <td><span class="plan-name">Pro</span></td>
+            <td><span class="plan-price">$99</span></td>
+            <td>~600,000</td>
+            <td>44.1kHz audio via API</td>
+          </tr>
+          <tr>
+            <td><span class="plan-name">Scale</span></td>
+            <td><span class="plan-price">$299</span></td>
+            <td>~1,800,000</td>
+            <td>Multi-seat workspace</td>
+          </tr>
+          <tr>
+            <td><span class="plan-name">Business</span></td>
+            <td><span class="plan-price">$990</span></td>
+            <td>~6,000,000</td>
+            <td>Low-latency TTS pricing; more seats</td>
+          </tr>
+          <tr>
+            <td><span class="plan-name">Enterprise</span></td>
+            <td><span class="plan-price">Custom</span></td>
+            <td>Custom</td>
+            <td>SSO, dedicated support, custom terms</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Annual billing is priced at roughly ten months, so you save about two months versus paying monthly. On the surface the ladder looks ordinary. The risk is underneath it, in three places:</p>
+      <div class="feature-list">
+        <div class="feature-item">
+          <div class="feature-item-title">Credits burn at different rates by model</div>
+          <div class="feature-item-desc">The same script does not cost the same everywhere. Switch between models, or lean on higher-quality output, and your credit budget moves under you. A plan that felt roomy in testing can tighten once real production settles on a particular model mix.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-title">Overages accumulate</div>
+          <div class="feature-item-desc">Go past your monthly credits and you pay overage rates — reported in the rough range of a few cents per minute depending on tier. Individually small, but on a busy month they add up quietly, and because credits reset rather than roll over, a heavy week can't be "banked" against a slow one.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-title">Tier jumps are steep, and low-latency is gated</div>
+          <div class="feature-item-desc">The gaps between tiers are large — Pro to Scale to Business roughly triples each step — so outgrowing a plan is an abrupt cost change, not a gentle one. And low-latency TTS pricing is gated to higher self-serve tiers (Business), which matters if real-time is where you're headed. Verify the current gating at the source, as it has shifted before.</div>
+        </div>
+      </div>
+      <p>The fair way to read all this: the sticker prices are competitive-looking, but the credit model makes real monthly cost harder to forecast than a flat subscription. Budget from expected character volume and your actual model mix, not from the plan name. That's the single most useful thing a buyer can do before committing.</p>
+      <p>Business context worth knowing: in February 2026 ElevenLabs raised about $500M at a roughly $11B valuation, and followed it with a price cut of around 50% that made the consumer tiers meaningfully cheaper than before. So today's pricing is already the discounted version — good news for buyers, and a reminder that these numbers move.</p>
+
+      <h2 id="performance-scores">Performance Scores</h2>
+      <div class="score-breakdown">
+        <h4>Category breakdown</h4>
+        <div class="score-row"><span class="score-name">Voice Quality</span><div class="score-bar-track"><div class="score-bar-fill" style="width:95%"></div></div><span class="score-val">9.5</span></div>
+        <div class="score-row"><span class="score-name">Features</span><div class="score-bar-track"><div class="score-bar-fill" style="width:90%"></div></div><span class="score-val">9.0</span></div>
+        <div class="score-row"><span class="score-name">Ease of Use</span><div class="score-bar-track"><div class="score-bar-fill" style="width:85%"></div></div><span class="score-val">8.5</span></div>
+        <div class="score-row"><span class="score-name">Integration &amp; API</span><div class="score-bar-track"><div class="score-bar-fill" style="width:80%"></div></div><span class="score-val">8.0</span></div>
+        <div class="score-row"><span class="score-name">Value for Money</span><div class="score-bar-track"><div class="score-bar-fill" style="width:65%"></div></div><span class="score-val">6.5</span></div>
+      </div>
+      <p>The shape of the scorecard tells the story: quality and features are at the top of the category, while value is dragged down by premium pricing and a credit model that's hard to predict. The overall 8.3 reflects a leader with a real, understandable tradeoff — not a flawless one.</p>
+
+      <h2 id="limitations">Honest limitations</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <div class="feature-item-title">No real-time on the flagship model</div>
+          <div class="feature-item-desc">v3, the best-sounding model, is documented as not for real-time. You can do real-time on the platform — with Flash v2.5 — but not at v3 quality. As live and conversational voice becomes more central, this split is the limitation to weigh most carefully.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-title">Premium pricing</div>
+          <div class="feature-item-desc">Even after the 2026 price cut, ElevenLabs sits at the premium end. Cheaper and open-source options exist; if quality isn't the deciding factor, you may be paying for headroom you don't need.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-title">Cost unpredictability</div>
+          <div class="feature-item-desc">The credit system — variable burn by model, non-rolling monthly resets, overages, and steep tier jumps — makes monthly spend harder to forecast than a flat plan. This is the most common practical complaint, and it's a planning problem more than a price problem.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-title">Competitive pressure is rising</div>
+          <div class="feature-item-desc">Mistral's Voxtral pushes on the open-source side, Google and Meta are bundling native voice into Gemini and Llama, and challengers like Fish Audio compete on price. ElevenLabs still leads on quality by most independent listens, but the gap the premium buys is narrowing, not widening.</div>
+        </div>
+      </div>
+
+      <h2 id="who-for">Who it's for / who should skip</h2>
+      <p>ElevenLabs fits cleanly when voice quality is the product. Audiobook and podcast producers, YouTubers and course creators, game and app studios building character or brand voices, and localization teams dubbing across languages all get the most out of what it does best — expressive, natural narration, plus cloning and dubbing that hold up. If your output is pre-rendered and you want it to sound as human as the category allows, this is the front-runner.</p>
+      <p>Think twice if your primary need is real-time voice at scale and you were hoping to run it on the top model — you'll be on Flash v2.5, not v3, and at that point cheaper or bundled real-time voices deserve a look. Also think twice if cost predictability matters more than the last few percent of quality: the credit model rewards attention and punishes set-and-forget. And if you're doing occasional, casual voiceover, the free or Starter tier may be all you need — no reason to over-buy.</p>
+
+      <h2 id="pros-and-cons">Pros and Cons</h2>
+      <div class="pros-cons">
+        <div class="pros-box">
+          <h4>What works well</h4>
+          <div class="pro-item">Voice quality is rated at or near the top of the category in independent listening comparisons</div>
+          <div class="pro-item">Eleven v3 adds Audio Tags for inline emotional control and 70+ languages, with a reported ~68% cut in complex-text errors</div>
+          <div class="pro-item">A clear model lineup lets you match quality (v3) or latency (Flash v2.5) to the job</div>
+          <div class="pro-item">Deep platform beyond TTS — cloning, dubbing, sound effects, voice marketplace, and a full API</div>
+          <div class="pro-item">A ~50% price cut in early 2026 made the consumer tiers meaningfully cheaper</div>
+        </div>
+        <div class="cons-box">
+          <h4>What doesn't work well</h4>
+          <div class="con-item">v3, the best-quality model, is documented as not for real-time — use Flash v2.5 for live/conversational</div>
+          <div class="con-item">Credit-based pricing makes monthly cost hard to predict; credits reset and don't roll over</div>
+          <div class="con-item">Overages accumulate and tier jumps are steep (Pro → Scale → Business roughly triples each step)</div>
+          <div class="con-item">Low-latency TTS pricing is gated to higher self-serve tiers</div>
+          <div class="con-item">Premium-priced against rising open-source and bundled competition (Voxtral, Gemini/Llama, Fish Audio)</div>
+        </div>
+      </div>
+
+      <div class="affiliate-box">
+        <h3>Try ElevenLabs</h3>
+        <p>A free tier (~10,000 credits/month) is enough to test voice quality before you pay.</p>
+        <a href="https://elevenlabs.io" class="affiliate-btn" target="_blank" rel="noopener noreferrer">Visit ElevenLabs →</a>
+        <div class="affiliate-note">Official site — not an affiliate link</div>
+      </div>
+
+      <div class="verdict-box">
+        <h3>The Bottom Line</h3>
+        <p style="color:var(--text2);margin-bottom:20px;">ElevenLabs is the AI voice-quality leader in 2026, and the surrounding platform — cloning, dubbing, sound effects, and a full API — is broad enough that teams standardize on it for reasons beyond how the voice sounds. Eleven v3, GA since March, is the current top of that ladder: expressive, multilingual, and better on complex text than what came before.</p>
+        <p style="color:var(--text2);margin-bottom:20px;">The two caveats are what make this more than a spec sheet. v3 is deliberately not a real-time model — the best quality and the lowest latency live in different models, and you choose one. And the credit system, not the sticker price, is where cost gets away from teams. Neither is a dealbreaker. Both are things to understand before you commit, especially as the market tilts toward real-time and cheaper competitors close in on quality.</p>
+        <div class="verdict-grid">
+          <div class="verdict-item"><strong>Best for</strong>Audiobook and podcast producers, creators, game/app studios, localization teams — where voice quality is the product</div>
+          <div class="verdict-item"><strong>Think twice if</strong>You need real-time voice at scale on the top model, or you need predictable, flat monthly cost</div>
+          <div class="verdict-item"><strong>Free tier</strong>Yes — ~10,000 credits/month (~20 min), attribution required</div>
+          <div class="verdict-item"><strong>Starts at</strong>$6/month (Starter); Creator $22/month for professional cloning</div>
+        </div>
+      </div>
+
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>Is ElevenLabs v3 good for real-time or conversational use?</h3>
+        <p>No — and ElevenLabs says so in its own documentation. v3 uses a larger model and higher-fidelity codec that take longer to run, so it carries higher latency and isn't recommended for real-time. For live and conversational use, ElevenLabs points you to Eleven Flash v2.5, documented at roughly 75ms latency. The highest quality and the lowest latency are simply different models here.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How much does ElevenLabs actually cost?</h3>
+        <p>Per the pricing page (verified July 2026): Free ($0), Starter ($6), Creator ($22), Pro ($99), Scale ($299), Business ($990), and custom Enterprise, with annual billing running about ten months. The number that catches teams out isn't the sticker price — it's the credit system: models burn credits at different rates, credits reset monthly without rolling over, and overages and tier jumps add up. Budget by character volume and model mix, not by plan name.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is it worth it versus cheaper alternatives?</h3>
+        <p>ElevenLabs is premium-priced, and cheaper options exist — Mistral's Voxtral on the open-source side, native voice bundled into Gemini and Llama, and lower-cost players like Fish Audio. But independent listens still generally place ElevenLabs at or near the top for expressive output. If voice quality is the product, the price tends to be justified; if you need good-enough voice at the lowest cost, or real-time at scale, a cheaper or bundled model may fit better.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What are Audio Tags?</h3>
+        <p>Audio Tags are inline cues you place in the text — whispers, laughs, sighs, emotional shifts — to direct delivery without leaving the script. They're a headline addition in Eleven v3 and make expressive narration and character work easier. They don't change v3's real-time constraint.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Which model should I use?</h3>
+        <p>Match the model to the job. Eleven v3 for expressive, high-quality, pre-rendered narration. Eleven Multilingual v2 for stable general-purpose multilingual voiceover. Eleven Flash v2.5 for real-time and conversational use (voice agents, phone systems) at ~75ms latency. v3 and Flash v2.5 sit at opposite ends of the quality-versus-latency tradeoff — pick by whether your priority is fidelity or speed.</p>
+      </div>
+
+    </div>
+  </div>
+  <div class="review-sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-title">Overall score</div>
+      <div class="sidebar-score">
+        <div class="sidebar-score-num">8.3</div>
+        <div>
+          <div style="color:var(--accent);font-size:18px;letter-spacing:-1px">★★★★☆</div>
+          <div class="sidebar-score-label">out of 10</div>
+        </div>
+      </div>
+      <div class="sidebar-title" style="margin-top:16px">Pricing</div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Free</span><span class="sidebar-price-val">$0/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Starter</span><span class="sidebar-price-val">$6/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Creator</span><span class="sidebar-price-val">$22/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Pro</span><span class="sidebar-price-val">$99/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Scale</span><span class="sidebar-price-val">$299/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Free plan</span><span class="sidebar-price-val">✓ Yes</span></div>
+      <a href="https://elevenlabs.io" class="sidebar-cta" target="_blank" rel="noopener noreferrer">Visit ElevenLabs →</a>
+      <div class="sidebar-disclosure">Official site — not an affiliate link</div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">AI Tool<span>Grade</span></div><p class="footer-desc">Independent reviews and comparisons of AI tools. Researched, fact-checked, and independently rated.</p></div>
+    <div><div class="footer-col-title">Reviews</div><div class="footer-links"><a href="../category/writing.html">AI Writing</a><a href="../category/coding.html">AI Coding</a><a href="../category/image.html">AI Image</a><a href="../category/automation.html">Automation</a><a href="../category/video.html">AI Video</a><a href="../category/productivity.html">Productivity</a></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="../about.html">About</a><a href="../how-we-review.html">How we review</a><a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
+    <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+</footer>
+</body></html>

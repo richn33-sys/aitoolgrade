@@ -51,6 +51,7 @@
     '<a href="' + prefix + 'review/google-antigravity.html">Google Antigravity</a>' +
     '<a href="' + prefix + 'review/claude-code.html">Claude Code</a>' +
     '<a href="' + prefix + 'review/deepseek-v4.html">DeepSeek V4</a>' +
+    '<a href="' + prefix + 'review/zcode.html">ZCode</a>' +
     '<a href="' + prefix + 'review/kimi-code.html">Kimi Code</a>' +
     '<a href="' + prefix + 'review/grok-build.html">Grok Build</a>' +
     '<a href="' + prefix + 'review/minimax-m3.html">MiniMax M3</a>' +

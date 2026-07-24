@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="canonical" href="https://aitoolgrade.com/review/zcode.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ZCode review 2026 — Z.ai's free open-weight agentic coding environment powered by GLM-5.2. The capability story is real; the data-routing decision is the one that matters.">
+<title>ZCode Review 2026 — Z.ai's Open-Weight Agentic Coding Environment | AIToolGrade</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fafaf8;--bg2:#f3f2ee;--bg3:#eceae3;--text:#1a1a18;--text2:#4a4a45;--text3:#8a8a82;--accent:#e85d26;--accent2:#f07d4a;--accent-dim:rgba(232,93,38,0.08);--border:#e2e0d8;--white:#ffffff;--display:'Playfair Display',serif;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:4px}
+.nav-dropdown>a::after{content:"▾";font-size:10px}
+.dropdown-menu{visibility:hidden;opacity:0;pointer-events:none;transition:opacity 0.15s ease,visibility 0s linear 0.5s;position:absolute;top:calc(100% + 8px);left:-16px;background:white;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:200;max-height:80vh;overflow-y:auto}
+.dropdown-menu a{display:block;padding:8px 12px;font-size:14px;color:var(--text2);text-decoration:none;border-radius:6px;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--bg2);color:var(--accent)}
+.nav-dropdown:hover .dropdown-menu{visibility:visible;opacity:1;pointer-events:auto;transition:opacity 0.15s ease,visibility 0s}
+.nav-dropdown .dropdown-menu::before{content:"";position:absolute;top:-20px;left:0;right:0;height:20px}
+.nav-dropdown::after{content:"";position:absolute;height:20px;width:calc(100% + 16px);bottom:-20px;left:-16px}
+.review-layout{max-width:1100px;margin:0 auto;padding:60px 40px;display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:start}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:24px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+.review-header{margin-bottom:40px}
+.review-tool-row{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.review-tool-logo{width:56px;height:56px;border-radius:14px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:28px;border:1px solid var(--border)}
+.review-tool-title{font-size:15px;font-weight:600;margin-bottom:2px}
+.review-tool-url{font-size:13px;color:var(--text3);font-family:var(--mono)}
+h1{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.15;margin-bottom:16px}
+.review-meta-row{display:flex;align-items:center;gap:20px;font-size:13px;color:var(--text3);margin-bottom:24px}
+.verdict-banner{background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:20px 24px;margin-bottom:40px;display:flex;align-items:center;gap:16px}
+.verdict-score{font-family:var(--display);font-size:48px;font-weight:800;color:var(--accent);line-height:1}
+.verdict-text h3{font-size:15px;font-weight:600;margin-bottom:4px}
+.verdict-text p{font-size:13px;color:var(--text2)}
+.review-body h2{font-family:var(--display);font-size:28px;font-weight:700;margin:40px 0 16px}
+.review-body p{color:var(--text2);margin-bottom:16px}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
+.pros-box,.cons-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px}
+.pros-box{border-top:3px solid #2e7d32}
+.cons-box{border-top:3px solid #c62828}
+.pros-box h4{color:#2e7d32;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.cons-box h4{color:#c62828;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);margin-bottom:14px}
+.pro-item,.con-item{font-size:14px;color:var(--text2);margin-bottom:8px;display:flex;gap:8px;align-items:flex-start}
+.pro-item::before{content:'✓';color:#2e7d32;font-weight:600;flex-shrink:0}
+.con-item::before{content:'✗';color:#c62828;font-weight:600;flex-shrink:0}
+.score-breakdown{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;margin:32px 0}
+.score-breakdown h4{font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:20px}
+.score-row{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.score-row:last-child{margin-bottom:0}
+.score-name{font-size:14px;color:var(--text2);width:160px;flex-shrink:0}
+.score-bar-track{flex:1;height:8px;background:var(--bg2);border-radius:100px;overflow:hidden}
+.score-bar-fill{height:100%;border-radius:100px;background:var(--accent)}
+.score-val{font-family:var(--mono);font-size:13px;font-weight:500;width:30px;text-align:right}
+.comparison-wrap{overflow-x:auto;margin:24px 0}
+.comparison-table{width:100%;border-collapse:collapse;font-size:14px}
+.comparison-table th,.comparison-table td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
+.comparison-table th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.05em;color:var(--text3);background:var(--bg2)}
+.comparison-table td{color:var(--text2)}
+.comparison-table tr td:first-child{font-weight:600;color:var(--text)}
+.comparison-table th a,.comparison-table td a{color:var(--accent);text-decoration:none}
+.affiliate-box{background:var(--text);color:white;border-radius:14px;padding:28px;margin:40px 0;text-align:center}
+.affiliate-box h3{font-family:var(--display);font-size:24px;font-weight:700;margin-bottom:8px}
+.affiliate-box p{color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:20px}
+.affiliate-btn{display:inline-block;background:var(--accent);color:white;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;transition:background 0.15s}
+.affiliate-btn:hover{background:var(--accent2)}
+.affiliate-note{font-size:11px;color:rgba(255,255,255,0.4);margin-top:12px}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-item h3{font-family:var(--sans);font-size:17px;font-weight:600;margin:0 0 8px;color:var(--text)}
+.faq-item p{margin:0;font-size:15px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px;position:sticky;top:84px}
+.sidebar-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;font-family:var(--mono);color:var(--text3);margin-bottom:16px}
+.sidebar-score{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.sidebar-score-num{font-family:var(--display);font-size:52px;font-weight:800;color:var(--accent);line-height:1}
+.sidebar-score-label{font-size:13px;color:var(--text3)}
+.sidebar-price-row{display:flex;justify-content:space-between;font-size:14px;padding:10px 0;border-bottom:1px solid var(--border)}
+.sidebar-price-row:last-of-type{border-bottom:none}
+.sidebar-price-label{color:var(--text2)}
+.sidebar-price-val{font-family:var(--mono);font-weight:500}
+.sidebar-cta{display:block;background:var(--accent);color:white;text-align:center;padding:14px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;margin-top:20px;transition:background 0.15s}
+.sidebar-cta:hover{background:var(--accent2)}
+.sidebar-disclosure{font-size:11px;color:var(--text3);margin-top:10px;text-align:center}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px}
+.footer-brand span{color:var(--accent)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.6;max-width:220px}
+.footer-col-title{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:16px;font-family:var(--mono)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color 0.15s}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--accent)}
+@media(max-width:768px){.review-layout{grid-template-columns:1fr;padding:40px 20px}.pros-cons{grid-template-columns:1fr}h1{font-size:30px}nav{padding:0 20px}.footer-inner{grid-template-columns:1fr 1fr}}
+
+/* === MOBILE NAV + RESPONSIVE TABLE FIX === */
+.nav-toggle{display:none;order:2;background:none;border:0;font-size:24px;line-height:1;color:var(--text);cursor:pointer;padding:4px 6px}
+@media(max-width:768px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(250,250,248,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 20px 16px;box-shadow:0 8px 24px rgba(0,0,0,0.06);max-height:calc(100vh - 64px);overflow-y:auto}
+  nav.nav-open .nav-links{display:flex}
+  .nav-links>a,.nav-dropdown{padding:12px 2px;border-bottom:1px solid var(--border)}
+  .nav-dropdown{position:static}
+  .nav-dropdown>a::after{display:none}
+  .dropdown-menu{display:none!important}
+  .nav-cta{display:block;text-align:center;background:var(--accent);color:#fff;margin-top:14px;padding:12px;border:0!important;border-radius:6px}
+  .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+  .comparison-wrap{overflow-x:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "name": "ZCode Review 2026",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "7.8",
+    "bestRating": "10",
+    "worstRating": "0"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Marcus Veil",
+    "url": "https://aitoolgrade.com/author/marcus-veil.html"
+  },
+  "itemReviewed": {
+    "@type": "SoftwareApplication",
+    "name": "ZCode",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "macOS, Windows, Linux",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "url": "https://z.ai"
+    }
+  },
+  "datePublished": "2026-07-24",
+  "dateModified": "2026-07-24"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolgrade.com"},
+    {"@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://aitoolgrade.com/reviews.html"},
+    {"@type": "ListItem", "position": 3, "name": "AI Coding", "item": "https://aitoolgrade.com/category/coding.html"},
+    {"@type": "ListItem", "position": 4, "name": "ZCode", "item": "https://aitoolgrade.com/review/zcode.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is ZCode free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The ZCode desktop app is free to download and use on macOS, Windows, and Linux (Beta). What you pay for is the model you connect it to. ZCode works with your own API keys from any provider, so you can point it at a model you already pay for. New users get a 5-day full-feature trial of GLM-5.2. After that, GLM-5.2-powered agentic work needs a paid GLM Coding Plan (Z.ai-published base rates: Lite around $18/month, Pro around $72/month, Max around $160/month, verified via third-party pricing trackers in July 2026 and worth checking at z.ai before you subscribe)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is GLM-5.2 actually as good as Claude Opus?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On Z.ai's own published benchmarks, GLM-5.2 lands close to the closed frontier on agentic coding — 62.1% on SWE-bench Pro and 77.0 on MCP-Atlas versus Claude Opus 4.8's 77.8 — and Z.ai positions it as roughly between Claude Opus 4.7 and Opus 4.8 at comparable token budgets. Two honest caveats apply. First, every one of those numbers is vendor-published, with no independent verification available at the time of this review. Second, SWE-bench Pro itself is contested: OpenAI published an audit in July 2026 finding roughly 30% of its tasks flawed. Launch-week developer reporting also describes GLM-5.2 as roughly half as fast as Opus in practice. The fair read is credibly the strongest open-weight coding model available, not a confirmed equal to the top closed models."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe to use ZCode for proprietary code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That depends entirely on whether you route code through Z.ai's cloud API or run the open weights locally, and the distinction is the single most important thing to understand before adopting it. Z.ai (formerly Zhipu AI, Beijing) had its parent entity and nine affiliated subsidiaries added to the US Commerce Department's BIS Entity List in January 2025. Separately, China's National Intelligence Law can require China-based companies to cooperate with state intelligence requests, which applies to data sent to the GLM-5.2 cloud API, and no independent security audit of ZCode or that API infrastructure has been published. Routing proprietary or customer source code through the hosted API is therefore a materially higher-exposure decision than running the MIT-licensed open weights on your own hardware, where the code never leaves your environment. Teams handling regulated, proprietary, or customer data should treat the cloud-API path as a compliance question for their security and legal teams first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I run GLM-5.2 locally?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. GLM-5.2 is released under an MIT license with open weights published on Hugging Face and ModelScope, so it can be self-hosted with no per-token API fee if you have the GPU capacity to serve it. Running the weights locally keeps every token inside your own environment, which is the practical way to use the model while avoiding the cloud data-routing concerns tied to Z.ai's hosted API. The trade is infrastructure: a 1M-token-context frontier-scale model needs substantial hardware, so local hosting suits teams with existing GPU capacity more than individual laptop users."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does ZCode compare to Claude Code and Cursor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ZCode is architecturally different from both. Cursor is an editor-first IDE (a VS Code fork) with an agent added alongside the code; Claude Code is a terminal-native agent. ZCode is built as an Agentic Development Environment (ADE) — the agent conversation sits at the center, with the file manager, terminal, Git panel, and live browser preview arranged around it. On capability, Z.ai's published benchmarks put GLM-5.2 near Opus 4.8, though independent reporting flags it as slower in practice and rougher as a beta product. The decisive difference for most buyers is trust and cost: ZCode's app is free with cheap or self-hostable open-weight models, while Claude Code and Cursor are more mature and carry no Entity List or foreign-intelligence-law exposure. Note our conflict of interest — AIToolGrade is built with Claude Code, which competes directly with ZCode."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div id="nav-root"></div>
+<script src="../nav.js"></script>
+
+<div class="review-layout">
+  <div class="review-main">
+    <div style="background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 14px 18px; margin-bottom: 28px; display: flex; align-items: flex-start; gap: 12px;">
+      <span style="font-family: var(--mono); font-size: 18px; line-height: 1;">🔍</span>
+      <div>
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 4px;">Research-Based Review</div>
+        <p style="font-family: var(--sans); font-size: 0.88rem; color: var(--text2); line-height: 1.6; margin: 0;">This review is based on documented features, verified pricing, vendor-published benchmarks, and community sentiment — not hands-on testing. <a href="../how-we-review.html" style="color: var(--accent); text-decoration: none;">See how we research →</a></p>
+      </div>
+    </div>
+    <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="../category/coding.html">AI Coding</a><span>›</span>ZCode Review</div>
+    <div class="review-header">
+      <div class="review-tool-row">
+        <div class="review-tool-logo">⚡</div>
+        <div><div class="review-tool-title">ZCode</div><div class="review-tool-url">z.ai</div></div>
+      </div>
+      <h1>ZCode Review 2026 — Z.ai's Open-Weight Agentic Coding Environment</h1>
+      <div class="review-meta-row">
+        <span>📅 Published July 2026</span>
+        <span>⏱ 13 min read</span>
+        <span>📊 Research-based</span>
+      </div>
+    </div>
+    <div class="verdict-banner">
+      <div class="verdict-score">7.8</div>
+      <div class="verdict-text">
+        <h3>Editor's Verdict: A Real Capability Story With a Governance Asterisk</h3>
+        <p>ZCode is a free desktop "Agentic Development Environment" from Z.ai, and it's the first time an open-weight coding stack ships as a complete product rather than a model plus a README. On Z.ai's own published benchmarks, the GLM-5.2 model underneath is credibly the strongest open-weight coding model available right now. The part most coverage skips is the buying decision: Z.ai sits on the US BIS Entity List, China's National Intelligence Law applies to its cloud API, and no independent security audit exists — so running the MIT-licensed weights locally is a very different risk profile than routing your source code through the hosted API. Add beta roughness and quota opacity, and it lands as impressive and rough at the same time.</p>
+      </div>
+    </div>
+    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified July 2026</p>
+
+    <div class="review-body">
+
+      <div style="background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; margin-bottom: 24px;">
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 6px;">Editorial Disclosure — Conflict of Interest</div>
+        <p style="font-family: var(--sans); font-size: 0.88rem; color: var(--text2); line-height: 1.6; margin: 0;">AIToolGrade uses Claude (Anthropic) for content production, and this site is built with Claude Code — a direct competitor to ZCode. We disclose that plainly and have leaned against our own interest on every judgment call in this review: where the honest read favors ZCode, we say so. Benchmark figures throughout are Z.ai-published and, at the time of writing, not independently verified. We applied our standard research methodology.</p>
+      </div>
+
+      <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:16px 20px;margin:0 0 24px 0">
+        <p style="font-size:13px;font-family:'DM Mono',monospace;color:var(--accent);margin-bottom:8px">RELATED REVIEWS</p>
+        <a href="../review/claude-code.html" style="font-size:15px;font-weight:600;color:var(--text);display:block;margin-bottom:6px;text-decoration:none">Claude Code Review 2026 — Anthropic's Agentic Coding Tool →</a>
+        <a href="../review/deepseek-v4.html" style="font-size:15px;font-weight:600;color:var(--text);display:block;margin-bottom:6px;text-decoration:none">DeepSeek V4 Review 2026 — The Open-Weight Cost Leader →</a>
+        <a href="../review/opencode.html" style="font-size:15px;font-weight:600;color:var(--text);display:block;text-decoration:none">OpenCode Review 2026 — Open-Source, Model-Agnostic Coding Agent →</a>
+      </div>
+
+      <h2 id="what-is-zcode">What ZCode Is</h2>
+      <p>ZCode launched July 2, 2026 — public the week of July 1 — as a free desktop application from Z.ai, the Beijing lab formerly known as Zhipu AI. It runs on macOS, Windows, and Linux (Beta), and the current build is v3.2.2. Z.ai is careful to call it an "Agentic Development Environment," or ADE, rather than an IDE, and that label is the actual product idea, not marketing gloss.</p>
+      <p>The distinction is worth taking seriously. Most AI coding tools started as editors and bolted an agent on afterward: Cursor is a VS Code fork with an assistant panel, and even terminal-native agents like <a href="../review/claude-code.html">Claude Code</a> orbit a file-and-editor mental model. ZCode inverts that. The agent conversation sits at the center of the window, and the file manager, terminal, Git panel, and a live browser preview are arranged around it as instruments the agent drives. You describe an objective; the environment is built for the agent to work the objective rather than for you to hand-edit lines. Whether that framing wins is an open question — but as a coherent product thesis for where agentic coding is heading, it's the most complete expression of "agent-first" shipped so far.</p>
+      <p>On top of that core sit a few features that signal genuine ambition. A <span style="font-family:var(--mono);font-size:0.9em">/goal</span> command lets you set long-running, verifiable objectives the agent pursues across many steps. Multiple agents can collaborate on a task. And you can control a running bot remotely from WeChat, Feishu, or Telegram — kick off or check on a long job from your phone. This is the first time an open-weight coding stack has arrived as a finished product rather than "here are the weights, wire up your own harness," and that packaging is the headline as much as any single feature.</p>
+
+      <!-- toc -->
+<nav aria-label="Table of contents" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 32px 0;">
+  <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 12px;">In this review</div>
+  <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#what-is-zcode" style="color: var(--accent); text-decoration: none;">What ZCode Is</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-model" style="color: var(--accent); text-decoration: none;">GLM-5.2 — The Model Underneath</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#benchmarks" style="color: var(--accent); text-decoration: none;">Benchmarks (Z.ai-Published)</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pricing" style="color: var(--accent); text-decoration: none;">Pricing &amp; Quota</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#governance" style="color: var(--accent); text-decoration: none;">Data Governance &amp; Trust</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#limitations" style="color: var(--accent); text-decoration: none;">Honest Limitations</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#who-is-it-for" style="color: var(--accent); text-decoration: none;">Who It's For / Who Should Skip</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pros-and-cons" style="color: var(--accent); text-decoration: none;">Pros and Cons</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#score-breakdown" style="color: var(--accent); text-decoration: none;">Score Breakdown</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-bottom-line" style="color: var(--accent); text-decoration: none;">The Bottom Line</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#faq" style="color: var(--accent); text-decoration: none;">Frequently Asked Questions</a></li>
+  </ol>
+</nav>
+
+      <h2 id="the-model">GLM-5.2 — The Model Underneath</h2>
+      <p>ZCode is the harness; GLM-5.2 is the engine, and the engine is the more consequential story. Released mid-June 2026 under an MIT license, with open weights published on Hugging Face and ModelScope, GLM-5.2 is a model you can download and self-host, not just call through an API. That single fact separates it from the closed frontier and is the foundation everything else in this review rests on.</p>
+      <p>The specs are built for real coding work rather than demos. GLM-5.2 carries a 1M-token context window — a large jump from GLM-5.1's roughly 200K — and can produce up to about 131K output tokens in a single response, enough for full-file rewrites and large structured generations without stitching around a truncation ceiling. Z.ai says the model was trained specifically on long, messy coding trajectories, which is the kind of data that separates an agent that survives a fifty-step task from one that drifts halfway through.</p>
+      <p>One engineering detail stands out and is worth a plain mention: GLM-5.2 ships with an anti-reward-hacking module. It combines a rule-based filter with an LLM judge, and when it detects a suspicious tool call — the kind of shortcut a model takes to "pass" a check without doing the work — it blocks the call and returns dummy data rather than letting the run collapse or quietly cheat its way to a false success. Reward hacking is a well-documented failure mode in agentic systems, and building an explicit guard against it into the model layer is a thoughtful piece of engineering rather than a checkbox. On cost, Z.ai's positioning puts GLM-5.2 output at roughly an order of magnitude cheaper than Claude Fable 5 — the economics that make high-volume agentic loops viable in the first place.</p>
+
+      <h2 id="benchmarks">Benchmarks (Z.ai-Published)</h2>
+      <p>Every number in this section is published by Z.ai. No independent third-party verification of GLM-5.2's coding benchmarks was available at the time of this review, so read them as vendor claims — directionally useful, not settled fact. We label them as vendor-published each time they appear for exactly that reason.</p>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Benchmark (Z.ai-published)</th>
+              <th>GLM-5.2</th>
+              <th>Claude Opus 4.8</th>
+              <th>GPT-5.5</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>SWE-bench Pro</td><td>62.1%</td><td>—</td><td>58.6%</td></tr>
+            <tr><td>MCP-Atlas</td><td>77.0</td><td>77.8</td><td>75.3</td></tr>
+            <tr><td>FrontierSWE</td><td>74.4</td><td>75.1</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>For context on the SWE-bench Pro figure, Z.ai reports GLM-5.2 at 62.1% against GLM-5.1's 58.4% and GPT-5.5's 58.6% — a generational step for the GLM line and, on these numbers, ahead of GPT-5.5. On MCP-Atlas and FrontierSWE the model sits within a point of Claude Opus 4.8. Z.ai's own summary positions GLM-5.2's agentic coding as "roughly between Claude Opus 4.7 and Claude Opus 4.8" at comparable token budgets.</p>
+      <p>Two caveats keep this honest. First, SWE-bench Pro is itself contested: OpenAI published an audit on July 8, 2026 finding roughly 30% of its tasks flawed, so a headline percentage on that benchmark deserves a wider error bar than the single decimal place suggests — the same caveat we applied in our GPT-5.6 coverage. Second, benchmark parity is not the same as felt performance. Launch-week developer reporting (covered under limitations below) describes GLM-5.2 as roughly half as fast as Opus in day-to-day use. The measured read: GLM-5.2 is credibly the strongest open-weight coding model available in mid-2026, and near the closed frontier on Z.ai's own tests — but "near the frontier on vendor benchmarks" and "as good as Opus in your terminal" are different claims, and only the first is currently supported.</p>
+
+      <h2 id="pricing">Pricing &amp; Quota</h2>
+      <p>The ZCode app is free. What you pay for is the model behind it, and because ZCode accepts your own API keys from any provider, you can run it against a model you already have. New users also get a 5-day full-feature trial of GLM-5.2 with no payment required. After the trial, GLM-5.2-powered agentic work needs a paid GLM Coding Plan.</p>
+      <p>Published plan pricing took some untangling — different sources report different figures. Cross-checking Z.ai's own materials against several independent pricing trackers in July 2026, the base monthly rates line up at roughly <strong>Lite $18, Pro $72 (about 5× Lite's allowance), and Max $160 (about 20×)</strong>. The lower figures floating around elsewhere — Lite $16.20, Pro $64.80, Max $144 — are the same plans at the roughly 10% monthly-billing discount, not a separate tier, which reconciles the apparent conflict. These are the numbers as of this writing; verify the current figures at <a href="https://z.ai">z.ai</a> before you subscribe, because vendor pricing on a three-week-old product moves.</p>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr><th>GLM Coding Plan</th><th>Base / month</th><th>Relative quota</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Lite</td><td>~$18</td><td>Base allowance</td></tr>
+            <tr><td>Pro</td><td>~$72</td><td>~5× Lite</td></tr>
+            <tr><td>Max</td><td>~$160</td><td>~20× Lite</td></tr>
+            <tr><td>ZCode app</td><td>Free</td><td>Bring your own API key (any provider)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Here is the honest problem with that table: the quota is expressed as "5×" and "20×" multipliers rather than in absolute terms. There is no plainly stated ceiling of "N requests" or "N tokens," so buyers can't easily predict when they'll run out — and launch-week reporting is consistent that GLM-5.2 burns quota faster than users expect. The combination of an opaque cap and faster-than-expected consumption is a real friction, and it's the main reason the value score below isn't a clean 10 despite the low headline price.</p>
+      <p>Two promotions are running, and both are time-boxed — state the expiry, don't treat them as permanent. Through <strong>July 31, 2026</strong>, GLM-5.2 usage via the Coding Plan is metered at a 0.67 factor, giving roughly 1.5× usable quota for the same money. Separately, an off-peak 1×-consumption promotion runs through <strong>September 2026</strong>. Both improve the value case temporarily; neither is a standing rate you should budget around past its stated end date.</p>
+
+      <div style="background: var(--accent-dim); border: 1px solid rgba(232,93,38,0.15); border-radius: 10px; padding: 16px 20px; margin-top: 16px;">
+        <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 6px;">The Pricing In One Line</div>
+        <p style="font-family: var(--sans); font-size: 0.9rem; color: var(--text); line-height: 1.65; margin: 0;">Free app + bring-your-own key. A 5-day GLM-5.2 trial, then a GLM Coding Plan at roughly $18 / $72 / $160 per month (Lite / Pro / Max; base rates, ~10% off on monthly billing). Quota is stated as 5×/20× multipliers rather than hard numbers, and two promos (a 0.67 metering factor to July 31 2026, an off-peak 1× deal to September 2026) sweeten it temporarily. Or skip the plan entirely and self-host the MIT-licensed weights.</p>
+      </div>
+
+      <h2 id="governance">Data Governance &amp; Trust</h2>
+      <p>This is the section most coverage skips, and it's the one that decides whether you can actually deploy ZCode. It is reported here as documented fact — the listing exists, the law has a text — not as accusation or insinuation. State what's on the record; weigh it yourself.</p>
+      <p>Three items are on the record. <strong>First:</strong> Z.ai (formerly Zhipu AI, Beijing) — specifically its parent entity Beijing Zhipu Huazhang Technology, together with nine affiliated subsidiaries — was added to the US Commerce Department's Bureau of Industry and Security (BIS) Entity List in January 2025, with the listing citing the advancement of PRC military modernization through AI. <strong>Second:</strong> China's National Intelligence Law requires organizations and individuals to support and cooperate with state intelligence work; as a China-based company, Z.ai falls under it, and that obligation extends to data routed through the GLM-5.2 cloud API. <strong>Third:</strong> no independent security audit of ZCode or the GLM-5.2 API infrastructure has been published. Those are the facts; none of them require you to infer motive to matter to a security review.</p>
+      <p>The most useful thing this review can give a developer is the practical distinction that follows from those facts. Running the <strong>open weights locally</strong> — MIT-licensed, downloaded, self-hosted — keeps every token inside your own environment; the Entity List status and the intelligence-law question don't touch code that never leaves your machine. Routing your work through Z.ai's <strong>cloud API</strong> is a materially different decision, because that's the path where your source code physically travels to the vendor's servers. Same model, two very different risk profiles. If you take one thing from this page, take that: <em>which path you choose matters more than the benchmark.</em></p>
+      <p>Who each path fits follows directly. Local weights are appropriate for teams with GPU capacity that want the capability without the data-routing exposure, and for anyone working on sensitive code who can host their own inference. The cloud API is reasonable for hobby projects, open-source work, throwaway experiments, and non-sensitive code where the data-routing question genuinely doesn't bite. For teams routing proprietary or customer code, and for regulated industries, the hosted API is a question for your security and legal teams before it's a question of features — and until an independent audit exists, "we'll assume it's fine" isn't a posture that survives contact with a compliance review. This is scoped strictly to this vendor, this legal framework, and this data-routing choice; it is not a comment on Chinese developers or Chinese AI broadly.</p>
+
+      <h2 id="limitations">Honest Limitations</h2>
+      <p>The praise above is real, and so is the rough edge. Attributed to launch-week developer reporting, the recurring complaints cluster into a consistent picture of an impressive product that shipped early:</p>
+      <p><strong>Speed.</strong> Multiple early users describe GLM-5.2 in ZCode as roughly half as fast as Claude Opus in practice. Benchmark parity doesn't translate into equal responsiveness, and for interactive agentic work, latency is felt on every turn.</p>
+      <p><strong>Quota burn and opacity.</strong> The model consumes quota faster than users expect, and because the plans state allowances as 5×/20× multipliers rather than absolute caps, it's hard to predict when you'll hit the wall. Fast consumption plus an unclear ceiling is a frustrating combination.</p>
+      <p><strong>Beta roughness.</strong> This is a three-week-old product at v3.2.2 with a Linux build still labelled Beta. Expect the unfinished corners, shifting behavior, and bugs that come with any launch-week release.</p>
+      <p><strong>Broad machine permissions.</strong> The agent asks for wide control of your machine to do its job. That's inherent to the agent-first design, but it's a real trust ask, and it compounds the governance questions above when the cloud API is in the loop.</p>
+      <p><strong>Vendor-only benchmarks.</strong> As covered above, all published performance numbers are Z.ai's own, with no independent verification, and the headline SWE-bench Pro benchmark is itself under audit scrutiny.</p>
+      <p>None of these are disqualifying on their own. Together they say: a capable, ambitious tool that is early, and worth trying with clear eyes rather than adopting wholesale for critical work today.</p>
+
+      <h2 id="who-is-it-for">Who It's For / Who Should Skip</h2>
+      <p><strong>Good fit — hobbyists, open-source, and the curious.</strong> If you're building side projects, contributing to open-source, or experimenting with agent-first workflows, ZCode gives you a complete, free environment on top of a leading open-weight model. The data-routing concern is low when the code isn't sensitive, and the capability-per-dollar is hard to match.</p>
+      <p><strong>Good fit — teams with GPU capacity that self-host.</strong> Organizations that can run the MIT-licensed weights locally get the model's capability while sidestepping the cloud-API governance question entirely. For this group, ZCode's open weights are the whole point.</p>
+      <p><strong>Proceed carefully — teams routing proprietary or customer code.</strong> If your source code or customer data would travel through Z.ai's hosted API, that's a decision for your security and legal teams first, given the Entity List status, the National Intelligence Law's applicability, and the absence of an independent audit. Self-hosting changes the calculus; the default cloud endpoint doesn't.</p>
+      <p><strong>Should skip (for now) — regulated industries and compliance-bound shops.</strong> Finance, healthcare, government contractors, and anyone under strict data-residency or supply-chain rules should treat the hosted API as a non-starter until an independent audit exists, and should reach for <a href="../review/claude-code.html">Claude Code</a>, <a href="../review/cursor.html">Cursor</a>, or the open-source <a href="../review/opencode.html">OpenCode</a> instead. If the appeal is cheap open-weight coding specifically, <a href="../review/deepseek-v4.html">DeepSeek V4</a> is worth weighing in the same breath — see our <a href="../blog/gpt-5-6-vs-claude-fable-5-vs-gemini-3-1-pro-2026.html">frontier model comparison</a> for where the closed leaders stand.</p>
+
+      <h2 id="pros-and-cons">Pros and Cons</h2>
+      <div class="pros-cons">
+        <div class="pros-box">
+          <h4>What works well</h4>
+          <div class="pro-item">First open-weight coding stack shipped as a complete product — an agent-first ADE with file manager, terminal, Git panel, and live browser preview around the agent, not a model plus a README</div>
+          <div class="pro-item">GLM-5.2 is credibly the strongest open-weight coding model in mid-2026 on Z.ai-published benchmarks (SWE-bench Pro 62.1%, MCP-Atlas 77.0), positioned near Claude Opus 4.8</div>
+          <div class="pro-item">MIT-licensed open weights on Hugging Face / ModelScope — self-host with no per-token fee and keep code in your own environment</div>
+          <div class="pro-item">Free desktop app on macOS, Windows, Linux (Beta); bring your own API key from any provider</div>
+          <div class="pro-item">1M-token context (up from ~200K) and ~131K output tokens; trained on long, messy coding trajectories</div>
+          <div class="pro-item">Thoughtful engineering touches: an anti-reward-hacking module, a /goal command for long-running objectives, multi-agent collaboration, and remote bot control from WeChat / Feishu / Telegram</div>
+          <div class="pro-item">Model output roughly an order of magnitude cheaper than Claude Fable 5 (per Z.ai)</div>
+        </div>
+        <div class="cons-box">
+          <h4>What to watch out for</h4>
+          <div class="con-item">Z.ai is on the US BIS Entity List (January 2025); China's National Intelligence Law applies to cloud API calls; no independent security audit of ZCode or the GLM-5.2 API has been published</div>
+          <div class="con-item">Routing proprietary or customer code through the hosted API is a compliance decision — a materially higher-exposure path than self-hosting the weights</div>
+          <div class="con-item">Roughly half as fast as Claude Opus in practice, per launch-week developer reporting</div>
+          <div class="con-item">Quota stated as 5×/20× multipliers, not absolute caps — hard to predict, and GLM-5.2 burns quota faster than expected</div>
+          <div class="con-item">Beta-stage product (v3.2.2, launched July 2 2026; Linux still Beta) with launch-week rough edges</div>
+          <div class="con-item">The agent requests broad control of your machine</div>
+          <div class="con-item">All published benchmarks are vendor-reported; SWE-bench Pro itself is contested (OpenAI audit, July 8 2026)</div>
+        </div>
+      </div>
+
+      <h2 id="score-breakdown">Score Breakdown</h2>
+      <div class="score-breakdown">
+        <h4>Category scores — AIToolGrade methodology</h4>
+        <div class="score-row"><span class="score-name">Ease of Use</span><div class="score-bar-track"><div class="score-bar-fill" style="width:65%"></div></div><span class="score-val">6.5</span></div>
+        <div class="score-row"><span class="score-name">Features</span><div class="score-bar-track"><div class="score-bar-fill" style="width:90%"></div></div><span class="score-val">9.0</span></div>
+        <div class="score-row"><span class="score-name">Value for Money</span><div class="score-bar-track"><div class="score-bar-fill" style="width:85%"></div></div><span class="score-val">8.5</span></div>
+        <div class="score-row"><span class="score-name">Integration</span><div class="score-bar-track"><div class="score-bar-fill" style="width:85%"></div></div><span class="score-val">8.5</span></div>
+        <div class="score-row"><span class="score-name">Support &amp; Docs</span><div class="score-bar-track"><div class="score-bar-fill" style="width:65%"></div></div><span class="score-val">6.5</span></div>
+      </div>
+      <p>The shape is deliberate. Features score high — the ADE concept, 1M context, the anti-reward-hacking module, /goal, multi-agent, and remote control are a lot of real capability in one free app. Value and Integration both land at 8.5: a free app on a leading open-weight model with bring-your-own-key support is strong, but the quota opacity keeps Value off a clean 10, and beta status trims Integration. Ease of Use sits at 6.5 for honest reasons — roughly half Opus's practical speed, launch-week roughness, opaque quota, and an agent that wants broad machine access. Support &amp; Documentation is 6.5 as a three-week-old product with community-scale support and, critically, no independent security audit to lean on. The 7.8 overall lands below the low-8s some early coverage floated, and it should: the capability is real, but a buyer has to weigh beta friction and a serious governance question that no benchmark resolves.</p>
+
+      <div class="affiliate-box">
+        <h3>Evaluate ZCode</h3>
+        <p>Free desktop ADE on macOS, Windows, and Linux (Beta), powered by the open-weight GLM-5.2. Bring your own key, or self-host the MIT-licensed weights.</p>
+        <a href="https://z.ai" class="affiliate-btn">Visit Z.ai →</a>
+        <div class="affiliate-note">We do not earn a commission on this link</div>
+      </div>
+
+      <div class="users-saying" style="margin:48px 0;">
+        <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Community Sentiment</div>
+        <h2 id="what-users-are-saying" style="font-family:var(--display);font-size:1.75rem;font-weight:800;color:var(--text);margin:0 0 8px 0;">What Users Are Saying</h2>
+        <p style="font-family:var(--sans);font-size:0.95rem;color:var(--text2);margin:0 0 32px 0;line-height:1.6;">We track launch-week discussion across Hacker News, r/LocalLLaMA, developer forums, and technical write-ups to see how ZCode holds up on real workloads — and where the hesitations sit.</p>
+
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:32px;display:flex;gap:40px;flex-wrap:wrap;">
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--accent)">62.1%</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">SWE-bench Pro (Z.ai)</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">Free</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Desktop App</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">1M</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Token Context</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:90px"><div style="font-family:var(--display);font-size:2rem;font-weight:800;color:var(--text)">MIT</div><div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text3)">Open Weights</div></div>
+        </div>
+
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:#22a05a;">●</span> What developers consistently praise</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"It's the first open-weight coding tool that feels like a product, not a science project. The agent-first layout actually changes how you work — you set a goal and watch it drive the terminal and Git panel itself."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Developer community analysis · July 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid #22a05a;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"On my own hardware with the open weights, GLM-5.2 handled a multi-file refactor that I expected to need a frontier model. For the price of the electricity, that's a different conversation."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">r/LocalLLaMA · July 2026</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:28px;">
+          <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--text);margin:0 0 16px 0;"><span style="color:var(--accent);">●</span> Common reservations</h3>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"It's roughly half the speed of Opus for me, and the quota drained way faster than the '5x' label implied. Impressive model, but I can't tell how much headroom I have left on any given day."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Hacker News · July 2026</div>
+          </div>
+          <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px;">
+            <p style="font-family:var(--sans);font-size:0.92rem;font-style:italic;color:var(--text2);margin-bottom:8px;">"For a side project the cloud API is fine. For our production codebase, legal won't touch a Beijing-hosted API on the Entity List with no audit. We're evaluating the self-hosted weights instead."</p>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Developer forum · July 2026</div>
+          </div>
+        </div>
+
+        <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.15);border-radius:12px;padding:20px 24px;">
+          <div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:8px;">AIToolGrade Take</div>
+          <p style="font-family:var(--sans);font-size:0.93rem;color:var(--text);line-height:1.7;margin:0;">ZCode is two stories that both hold. The capability story is real: GLM-5.2 is credibly the strongest open-weight coding model in mid-2026 on Z.ai's published benchmarks, and ZCode is the first time that class of model ships as a finished agent-first product rather than a README. The governance story is the buying decision: Z.ai's Entity List status, the National Intelligence Law's reach over cloud API calls, and the absence of an independent audit mean the local-weights path and the cloud-API path carry very different risk. Add beta roughness, half-Opus speed, and opaque quota, and it earns a 7.8 — impressive and rough at once. Try it on non-sensitive work or self-host it; route production or customer code through the hosted API only after your security team signs off.</p>
+        </div>
+      </div>
+
+      <h2 id="the-bottom-line">The Bottom Line</h2>
+      <p>ZCode is the clearest sign yet that the open-weight coding stack has grown up. The agent-first ADE is a coherent, complete product, and GLM-5.2 underneath it is — on Z.ai's own benchmarks — the strongest open-weight coding model available in mid-2026, close to the closed frontier and an order of magnitude cheaper to run than Claude Fable 5. The free app, the MIT-licensed weights, the 1M-token context, and touches like the anti-reward-hacking module add up to a lot of capability at a price that reshapes what a solo developer or a small team can attempt. That part deserves to be said plainly, competitor or not.</p>
+      <p>The reasons to be careful aren't about the model's quality. They're about where your code goes and how finished the product is. Z.ai is on the US BIS Entity List, China's National Intelligence Law applies to data sent to its cloud API, and no independent audit of ZCode or that API exists — so self-hosting the weights and routing source code through the hosted API are genuinely different decisions, and the second one belongs to your security and legal teams before it belongs to your developers. On top of that sits real beta friction: roughly half Opus's practical speed, quota stated in multipliers you can't easily plan around, and launch-week rough edges.</p>
+      <p>So the recommendation is conditional and specific. <strong>Best for:</strong> hobbyists, open-source contributors, and the agent-curious who want a complete free environment on a leading open-weight model; and teams with GPU capacity who self-host to get the capability without the data-routing exposure. <strong>Proceed carefully:</strong> any team whose proprietary or customer code would travel through the hosted API. <strong>Skip for now:</strong> regulated industries and compliance-bound shops, until an independent audit exists — <a href="../review/claude-code.html">Claude Code</a>, <a href="../review/cursor.html">Cursor</a>, and the open-source <a href="../review/opencode.html">OpenCode</a> remain the safer picks, and <a href="../review/deepseek-v4.html">DeepSeek V4</a> is the peer to weigh if cheap open-weight coding is the specific draw. This score reflects the July 2026 state of a three-week-old release; we'll revisit it as the product matures and, ideally, as independent verification of both the benchmarks and the security posture appears.</p>
+
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>Is ZCode free?</h3>
+        <p>The desktop app is free on macOS, Windows, and Linux (Beta). What you pay for is the model you connect it to — ZCode accepts your own API keys from any provider. New users get a 5-day full-feature GLM-5.2 trial; after that, GLM-5.2-powered agentic work needs a paid GLM Coding Plan (Z.ai-published base rates around $18 / $72 / $160 a month for Lite / Pro / Max, worth verifying at z.ai before subscribing).</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is GLM-5.2 actually as good as Claude Opus?</h3>
+        <p>On Z.ai's published benchmarks it's close — 62.1% on SWE-bench Pro and 77.0 on MCP-Atlas against Opus 4.8's 77.8 — and Z.ai positions it as roughly between Claude Opus 4.7 and Opus 4.8. Two caveats: every figure is vendor-published with no independent verification, and SWE-bench Pro is itself contested (an OpenAI audit in July 2026 found roughly 30% of its tasks flawed). Early users also report it running about half as fast as Opus in practice. Credibly the strongest open-weight coding model — not a confirmed equal to the top closed models.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is it safe to use ZCode for proprietary code?</h3>
+        <p>It depends on whether you use the cloud API or the local weights, and that's the most important call to make. Z.ai is on the US BIS Entity List (January 2025), China's National Intelligence Law can compel a China-based company to cooperate with intelligence requests covering data sent to its cloud API, and no independent security audit of ZCode or that API exists. Routing proprietary or customer code through the hosted API is a higher-exposure decision than self-hosting the MIT-licensed weights, where the code never leaves your environment. Regulated or compliance-bound teams should treat the hosted API as a security-and-legal question first.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I run GLM-5.2 locally?</h3>
+        <p>Yes. GLM-5.2 is MIT-licensed with open weights on Hugging Face and ModelScope, so you can self-host it with no per-token fee — and keep every token inside your own environment, which sidesteps the cloud data-routing concerns. The trade is hardware: a 1M-token-context frontier-scale model needs substantial GPU capacity, so local hosting fits teams with existing infrastructure more than laptop users.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How does ZCode compare to Claude Code and Cursor?</h3>
+        <p>It's architecturally different. Cursor is an editor-first VS Code fork with an agent alongside; Claude Code is a terminal-native agent; ZCode is an agent-first ADE with the file manager, terminal, Git panel, and browser preview arranged around the agent. On Z.ai's benchmarks GLM-5.2 is near Opus 4.8, though independent reporting flags it as slower and rougher as a beta. The deciding factor for most buyers is trust and cost: ZCode's app is free with cheap or self-hostable weights, while Claude Code and Cursor are more mature and carry no Entity List or foreign-intelligence-law exposure. Disclosure: AIToolGrade is built with Claude Code, a direct competitor to ZCode.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="review-sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-title">Overall score</div>
+      <div class="sidebar-score">
+        <div class="sidebar-score-num">7.8</div>
+        <div>
+          <div style="color:var(--accent);font-size:18px;letter-spacing:-1px">★★★★</div>
+          <div class="sidebar-score-label">out of 10</div>
+        </div>
+      </div>
+      <div class="sidebar-title" style="margin-top:16px">At a glance</div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">App</span><span class="sidebar-price-val">Free</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Plan — Lite</span><span class="sidebar-price-val">~$18/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Plan — Pro</span><span class="sidebar-price-val">~$72/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Plan — Max</span><span class="sidebar-price-val">~$160/mo</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">License</span><span class="sidebar-price-val">MIT (weights)</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Self-host</span><span class="sidebar-price-val">✓ Yes</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Platforms</span><span class="sidebar-price-val">Mac/Win/Linux</span></div>
+      <a href="https://z.ai" class="sidebar-cta">Visit Z.ai →</a>
+      <div class="sidebar-disclosure">Not an affiliate link</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">AI Tool<span>Grade</span></div><p class="footer-desc">Independent reviews and comparisons of AI tools. Researched, fact-checked, and independently rated.</p></div>
+    <div><div class="footer-col-title">Reviews</div><div class="footer-links"><a href="../category/writing.html">AI Writing</a><a href="../category/coding.html">AI Coding</a><a href="../category/image.html">AI Image</a><a href="../category/automation.html">Automation</a><a href="../category/productivity.html">Productivity</a></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="../about.html">About</a><a href="../how-we-review.html">How we review</a><a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
+    <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+</footer>
+</body></html>

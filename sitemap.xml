@@ -10,8 +10,8 @@
   <url><loc>https://aitoolgrade.com/category/automation.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aitoolgrade.com/category/video.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aitoolgrade.com/category/productivity.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://aitoolgrade.com/review/jasper.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://aitoolgrade.com/review/copyai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aitoolgrade.com/review/jasper.html</loc><lastmod>2026-11-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aitoolgrade.com/review/copyai.html</loc><lastmod>2026-11-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/review/writesonic.html</loc><lastmod>2026-11-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/review/cursor.html</loc><lastmod>2026-07-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/review/github-copilot.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -64,7 +64,7 @@
   <url><loc>https://aitoolgrade.com/review/opencode.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/review/aider.html</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aitoolgrade.com/blog/grok-imagine-video-vs-runway-vs-sora-2026.html</loc><lastmod>2026-06-21</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://aitoolgrade.com/blog/v0-vs-lovable-vs-bolt-2026.html</loc><lastmod>2026-06-12</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aitoolgrade.com/blog/v0-vs-lovable-vs-bolt-2026.html</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aitoolgrade.com/blog/cursor-pricing-2026.html</loc><lastmod>2026-06-17</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aitoolgrade.com/blog/notion-ai-pricing-2026.html</loc><lastmod>2026-06-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aitoolgrade.com/review/descript.html</loc><lastmod>2026-05-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>

@@ -3,8 +3,9 @@
 <link rel="canonical" href="https://aitoolgrade.com/review/lovable.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Lovable review: how the credit-based app builder works, who it fits, and official plan structure. Confirm live prices on Lovable's pricing page.">
-<title>Lovable Review 2026 — App Builder and Credit Costs | AIToolGrade</title>
-<meta property="og:title" content="Lovable Review 2026 — App Builder and Credit Costs | AIToolGrade">
+<title>Lovable Review 2026 — App Builder &amp; Credits | AIToolGrade</title>
+<meta property="og:title" content="Lovable Review 2026 — App Builder &amp; Credits | AIToolGrade">
+<meta property="og:description" content="Lovable review: how the credit-based app builder works, who it fits, and official plan structure. Confirm live prices on Lovable's pricing page.">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -126,6 +127,19 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
   .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
   .comparison-wrap{overflow-x:auto}
 }
+/* === QA Nov 22, 2026: mobile overflow fix (tested at 390px) === */
+.review-layout>*,.review-main,.review-body,.review-sidebar,.post-wrap,.post-body{min-width:0;max-width:100%}
+.review-main img,.review-main figure,.post-body img{max-width:100%;height:auto}
+.review-meta-row,.post-meta{flex-wrap:wrap;row-gap:6px}
+h1,h2,h3,h4,p,li,td,th,.breadcrumb,.byline{overflow-wrap:break-word;word-wrap:break-word}
+@media(max-width:768px){
+  .verdict-banner{flex-wrap:wrap}
+  .sidebar-card{position:static}
+  footer{padding:40px 20px}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:28px}
+  .footer-bottom{flex-direction:column;gap:8px;align-items:flex-start}
+  .compare-table,.pricing-table,.comparison-table{display:block;overflow-x:auto;max-width:100%}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -139,9 +153,9 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
     "worstRating": "0"
   },
   "author": {
-    "@type": "Person",
-    "name": "Marcus Veil",
-    "url": "https://aitoolgrade.com/author/marcus-veil.html"
+    "@type": "Organization",
+    "name": "AIToolGrade Team",
+    "url": "https://aitoolgrade.com/"
   },
   "publisher": {
     "@type": "Organization",
@@ -190,6 +204,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <p style="font-family: var(--sans); font-size: 0.88rem; color: var(--text2); line-height: 1.6; margin: 0;">This review is based on documented features, verified pricing, and community sentiment — not hands-on testing. <a href="../how-we-review.html" style="color: var(--accent); text-decoration: none;">See how we research →</a></p>
       </div>
     </div>
+    <p class="disclosure-top" style="font-size:12px;color:var(--text3);margin:0 0 12px;font-family:var(--mono);">Disclosure: Buttons go to the vendor's official site, not affiliate links. Lovable's affiliate application was declined.</p>
     <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="../reviews.html">Reviews</a><span>›</span><a href="../category/coding.html">AI Coding</a><span>›</span>Lovable Review</div>
     <div class="review-header">
       <div class="review-tool-row">
@@ -199,7 +214,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
           <div class="review-tool-url">lovable.dev</div>
         </div>
       </div>
-      <h1>Lovable Review 2026 — App Builder and Credit Costs</h1>
+      <h1>Lovable Review 2026 — App Builder &amp; Credits</h1>
       <div class="review-meta-row">
         <span>📅 Last updated November 22, 2026</span>
         <span>⏱ 10 min read</span>
@@ -213,7 +228,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <p>Community sentiment is unusually consistent: Lovable wins on speed and design for prototypes and MVPs, and loses on predictable cost and production readiness.</p>
       </div>
     </div>
-    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified November 2026</p>
+    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by AIToolGrade Team &middot; Last verified November 2026</p>
 <div class="review-body">
 
       <div class="related-callout">Comparing app builders? See the head-to-head <a href="../blog/v0-vs-lovable-vs-bolt-2026.html">v0 vs Lovable vs Bolt 2026</a>, or how it stacks up against <a href="../review/bolt.html">Bolt.new</a>, <a href="../review/replit.html">Replit</a>, and <a href="../review/cursor.html">Cursor</a>.</div>
@@ -304,8 +319,10 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       </table>
       </div>
       <p style="font-size:13px;color:var(--text3);">Checked on November 22, 2026 against <a href="https://lovable.dev/pricing" target="_blank" rel="noopener" style="color:var(--accent)">lovable.dev/pricing</a>; confirm before you buy. ¹ Lovable's FAQ says paid plans include daily grants of 5 build credits, and that some regional plans cap these at 30 per month.</p>
+      <!-- Official-site link. Lovable affiliate application was declined: keep as a plain official-site link. -->
+      <div class="official-cta" style="margin:20px 0 32px;text-align:center;"><a href="https://lovable.dev/" class="affiliate-btn" target="_blank" rel="noopener">Visit Lovable (official site)</a><div style="font-size:11px;color:var(--text3);margin-top:8px;">Official site — not an affiliate link.</div></div>
       <p><strong>Why Business costs more without more credits:</strong> Lovable's FAQ says the higher price reflects the features Business adds for teams. It also says credits are priced higher on Business, so the same app-hosting and AI-feature usage draws fewer credits there than on Pro. If more building capacity is what you need, top-ups are the lever, not the Business tier.</p>
-      <p><strong>Top-ups and expiry:</strong> paid plans can buy on-demand credit top-ups; top-up prices aren't listed on the pricing page, so [confirm on official pricing page]. Top-up credits last 12 months. Unused monthly-plan credits expire two months after they're issued, and daily build grants expire at the end of each day. Students can get up to 50% off Pro with a verified student email.</p>
+      <p><strong>Top-ups and expiry:</strong> paid plans can buy on-demand credit top-ups; top-up prices aren't listed on the pricing page (<a href="https://lovable.dev/pricing" target="_blank" rel="noopener" style="color:var(--accent)">See official pricing</a>). Top-up credits last 12 months. Unused monthly-plan credits expire two months after they're issued, and daily build grants expire at the end of each day. Students can get up to 50% off Pro with a verified student email.</p>
       <p>The free tier is useful for kicking the tires — 5 credits a day is enough to find out whether Lovable fits how you work before you pay. The catch is that per-message cost in Default Mode varies with complexity, so "100 credits a month" tells you less about real-world capacity than you'd like.</p>
 
       <h2 id="score-breakdown">Score Breakdown</h2>
@@ -374,6 +391,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       <h2 id="the-bottom-line">The Bottom Line</h2>
       <p>Lovable earns its place among the leading app builders for what it's actually for: turning an idea into a working, deployed full-stack app quickly. The Supabase backend works, the GitHub sync means you're never locked in, and Plan Mode keeps bigger builds coherent. The case against it is narrow but real — per-message credit costs that vary and only show up after you spend, bug loops on complex work, and a ceiling that production apps will run into.</p>
       <p>If you're a founder or designer validating ideas and shipping MVPs, that trade is easy to make, and the free tier lets you confirm the fit before paying a cent. If you need predictable costs or you're building something that has to survive a security audit, go in with eyes open and a developer on call. Scored against its own target use case, Lovable lands at 8.1 — strong, with two friction points worth knowing about before you start.</p>
+      <!-- Official-site link. Lovable affiliate application was declined: keep as a plain official-site link. -->
+      <div class="official-cta" style="margin:20px 0 32px;text-align:center;"><a href="https://lovable.dev/" class="affiliate-btn" target="_blank" rel="noopener">Visit Lovable (official site)</a><div style="font-size:11px;color:var(--text3);margin-top:8px;">Official site — not an affiliate link.</div></div>
     </div>
   </div>
   <div class="review-sidebar">
@@ -408,6 +427,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
     <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
   </div>
-  <div class="footer-bottom"><span>© 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+  <div class="footer-bottom"><span>© 2026 AIToolGrade. All rights reserved.</span><span>No affiliate links on this page. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
 </footer>
 </body></html>

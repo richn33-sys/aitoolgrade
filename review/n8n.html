@@ -11,8 +11,9 @@
 <link rel="canonical" href="https://aitoolgrade.com/review/n8n.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="n8n review: Cloud vs self-hosted, execution pricing, and when Zapier is simpler. Confirm current Cloud prices on n8n's official pricing page first.">
-<title>n8n Review 2026 — Cloud Pricing, Self-Host, vs Zapier | AIToolGrade</title>
-<meta property="og:title" content="n8n Review 2026 — Cloud Pricing, Self-Host, vs Zapier | AIToolGrade">
+<title>n8n Review 2026 — Pricing, Self-Host &amp; Zapier | AIToolGrade</title>
+<meta property="og:title" content="n8n Review 2026 — Pricing, Self-Host &amp; Zapier | AIToolGrade">
+<meta property="og:description" content="n8n review: Cloud vs self-hosted, execution pricing, and when Zapier is simpler. Confirm current Cloud prices on n8n's official pricing page first.">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -120,6 +121,19 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
   .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
   .comparison-wrap{overflow-x:auto}
 }
+/* === QA Nov 22, 2026: mobile overflow fix (tested at 390px) === */
+.review-layout>*,.review-main,.review-body,.review-sidebar,.post-wrap,.post-body{min-width:0;max-width:100%}
+.review-main img,.review-main figure,.post-body img{max-width:100%;height:auto}
+.review-meta-row,.post-meta{flex-wrap:wrap;row-gap:6px}
+h1,h2,h3,h4,p,li,td,th,.breadcrumb,.byline{overflow-wrap:break-word;word-wrap:break-word}
+@media(max-width:768px){
+  .verdict-banner{flex-wrap:wrap}
+  .sidebar-card{position:static}
+  footer{padding:40px 20px}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:28px}
+  .footer-bottom{flex-direction:column;gap:8px;align-items:flex-start}
+  .compare-table,.pricing-table,.comparison-table{display:block;overflow-x:auto;max-width:100%}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -134,20 +148,30 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
   },
   "author": {
     "@type": "Organization",
-    "name": "AIToolGrade",
-    "url": "https://aitoolgrade.com"
+    "name": "AIToolGrade Team",
+    "url": "https://aitoolgrade.com/"
   },
   "itemReviewed": {
     "@type": "SoftwareApplication",
     "name": "n8n",
     "applicationCategory": "Automation Tool",
     "operatingSystem": "Web,Linux,Windows,macOS",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "url": "https://n8n.io"
-    }
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Community Edition (self-hosted)",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "url": "https://n8n.io/pricing"
+      },
+      {
+        "@type": "Offer",
+        "name": "Cloud Starter (per month, billed annually)",
+        "price": "20",
+        "priceCurrency": "EUR",
+        "url": "https://n8n.io/pricing"
+      }
+    ]
   },
   "datePublished": "2026-04-01",
   "dateModified": "2026-11-22"
@@ -177,13 +201,14 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <p style="font-family: var(--sans); font-size: 0.88rem; color: var(--text2); line-height: 1.6; margin: 0;">This review is based on documented features, verified pricing, and community sentiment — not hands-on testing. <a href="../how-we-review.html" style="color: var(--accent); text-decoration: none;">See how we research →</a></p>
       </div>
     </div>
+    <p class="disclosure-top" style="font-size:12px;color:var(--text3);margin:0 0 12px;font-family:var(--mono);">Disclosure: Buttons go to the vendor's official site, not affiliate links.</p>
     <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="../category/automation.html">Automation</a><span>›</span>n8n Review</div>
     <div class="review-header">
       <div class="review-tool-row">
         <div class="review-tool-logo">🔧</div>
         <div><div class="review-tool-title">n8n</div><div class="review-tool-url">n8n.io</div></div>
       </div>
-      <h1>n8n Review 2026 — Cloud Pricing, Self-Host, vs Zapier</h1>
+      <h1>n8n Review 2026 — Pricing, Self-Host &amp; Zapier</h1>
       <div class="review-meta-row">
         <span>📅 Last updated November 22, 2026</span>
         <span>⏱ 10 min read</span>
@@ -197,7 +222,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <p>A strong pick for technical teams. The self-hosted Community Edition carries no license fee, and n8n bills per workflow run rather than per step, so multi-step workflows use far less of a plan than they would on per-task tools. The trade-off is a steeper learning curve.</p>
       </div>
     </div>
-    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified November 2026</p>
+    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by AIToolGrade Team &middot; Last verified November 2026</p>
 <div class="review-body">
       <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:16px 20px;margin:24px 0">
   <p style="font-size:13px;font-family:'DM Mono',monospace;color:var(--accent);margin-bottom:6px">RELATED</p>
@@ -245,7 +270,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <li><strong>70+ LangChain nodes</strong> — chains, memory, vector stores, document loaders, and output parsers, assembled visually instead of in code.</li>
         <li><strong>Inline JavaScript/Python</strong> — custom logic directly inside a workflow, no external scripts required.</li>
         <li><strong>Self-hosting</strong> — run it on Docker, Kubernetes, or any server; the Community Edition is fully free.</li>
-        <li><strong>Git integration</strong> — version control for workflows, which makes serious team-scale workflow management possible.</li>
+        <li><strong>Git integration (Business and Enterprise only)</strong> — version control for workflows, which makes serious team-scale workflow management possible. Starter and Pro don't include it.</li>
         <li><strong>Webhook triggers</strong> — real-time execution with no polling delays.</li>
         <li><strong>RBAC and audit logging</strong> — role-based access and audit trails on the Business and Enterprise tiers.</li>
       </ul>
@@ -278,7 +303,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <div class="score-row"><span class="score-name">Integration</span><div class="score-bar-track"><div class="score-bar-fill" style="width:80%"></div></div><span class="score-val">8.0</span></div>
         <div class="score-row"><span class="score-name">Support &amp; Documentation</span><div class="score-bar-track"><div class="score-bar-fill" style="width:75%"></div></div><span class="score-val">7.5</span></div>
       </div>
-      <p><strong>Ease of Use (6.5/10)</strong> — the node canvas requires technical comfort and has a steeper learning curve than Zapier; worth it for technical users, frustrating for everyone else. <strong>Features (9.5/10)</strong> — 500+ native nodes, unlimited custom integrations via HTTP/API, 70+ LangChain AI nodes, inline JavaScript/Python, self-hosting, Git integration, and a fair-code license. <strong>Value for Money (9.5/10)</strong> — the self-hosted Community Edition carries no license fee, Cloud plans meter whole workflow runs rather than individual steps, and active workflows are unlimited on Starter and Pro. <strong>Integration (8/10)</strong> — 500+ native nodes (against Zapier's 8,500+), but unlimited custom HTTP/API integrations close the gap for technical teams. <strong>Support &amp; Documentation (7.5/10)</strong> — a strong community (400k+ members), good documentation, and an active GitHub; enterprise support requires the Business plan.</p>
+      <p><strong>Ease of Use (6.5/10)</strong> — the node canvas requires technical comfort and has a steeper learning curve than Zapier; worth it for technical users, frustrating for everyone else. <strong>Features (9.5/10)</strong> — 500+ native nodes, unlimited custom integrations via HTTP/API, 70+ LangChain AI nodes, inline JavaScript/Python, self-hosting, Git integration on Business and Enterprise, and a fair-code license. <strong>Value for Money (9.5/10)</strong> — the self-hosted Community Edition carries no license fee, Cloud plans meter whole workflow runs rather than individual steps, and active workflows are unlimited on Starter and Pro. <strong>Integration (8/10)</strong> — 500+ native nodes (against Zapier's 8,500+), but unlimited custom HTTP/API integrations close the gap for technical teams. <strong>Support &amp; Documentation (7.5/10)</strong> — a strong community (400k+ members), good documentation, and an active GitHub; enterprise support requires the Business plan.</p>
 
       <h2 id="n8n-pricing">n8n Pricing (Checked November 2026)</h2>
       <p>n8n bills per execution — one workflow run is one execution, regardless of how many steps it contains. Starter and Pro are hosted by n8n. Business, the tier with SSO and Git-based version control, is currently self-hosted only, with an n8n-hosted version on a waitlist. Here's what the official pricing page listed:</p>
@@ -289,14 +314,16 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         </thead>
         <tbody style="color:var(--text2);">
           <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Community Edition</td><td style="padding:10px 12px;border:1px solid var(--border);">No plan price listed</td><td style="padding:10px 12px;border:1px solid var(--border);">No plan price listed</td><td style="padding:10px 12px;border:1px solid var(--border);">No plan quota listed</td><td style="padding:10px 12px;border:1px solid var(--border);">Self-hosted (from GitHub)</td><td style="padding:10px 12px;border:1px solid var(--border);">You run and pay for the server</td></tr>
-          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Starter</td><td style="padding:10px 12px;border:1px solid var(--border);">€20/mo</td><td style="padding:10px 12px;border:1px solid var(--border);">[confirm on official pricing page]</td><td style="padding:10px 12px;border:1px solid var(--border);">2.5K</td><td style="padding:10px 12px;border:1px solid var(--border);">Hosted by n8n</td><td style="padding:10px 12px;border:1px solid var(--border);">1 shared project · 5 concurrent executions · unlimited active workflows · 7-day execution log retention · 1,600 Assistant credits/mo</td></tr>
-          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Pro</td><td style="padding:10px 12px;border:1px solid var(--border);">€50/mo</td><td style="padding:10px 12px;border:1px solid var(--border);">[confirm on official pricing page]</td><td style="padding:10px 12px;border:1px solid var(--border);">10K</td><td style="padding:10px 12px;border:1px solid var(--border);">Hosted by n8n</td><td style="padding:10px 12px;border:1px solid var(--border);">3 shared projects · up to 50 concurrent executions · 30-day log retention · admin roles · workflow history · up to 9,600 Assistant credits/mo</td></tr>
-          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Business</td><td style="padding:10px 12px;border:1px solid var(--border);">€667/mo</td><td style="padding:10px 12px;border:1px solid var(--border);">[confirm on official pricing page]</td><td style="padding:10px 12px;border:1px solid var(--border);">40K</td><td style="padding:10px 12px;border:1px solid var(--border);">Self-hosted only (n8n-hosted waitlist)</td><td style="padding:10px 12px;border:1px solid var(--border);">6 shared projects · SSO and LDAP · Git version control · queue mode · multiple environments</td></tr>
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Starter</td><td style="padding:10px 12px;border:1px solid var(--border);">€20/mo</td><td style="padding:10px 12px;border:1px solid var(--border);"><a href="https://n8n.io/pricing" target="_blank" rel="noopener" style="color:var(--accent)">See official pricing</a></td><td style="padding:10px 12px;border:1px solid var(--border);">2.5K</td><td style="padding:10px 12px;border:1px solid var(--border);">Hosted by n8n</td><td style="padding:10px 12px;border:1px solid var(--border);">1 shared project · 5 concurrent executions · unlimited active workflows · 7-day execution log retention · 1,600 Assistant credits/mo</td></tr>
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Pro</td><td style="padding:10px 12px;border:1px solid var(--border);">€50/mo</td><td style="padding:10px 12px;border:1px solid var(--border);"><a href="https://n8n.io/pricing" target="_blank" rel="noopener" style="color:var(--accent)">See official pricing</a></td><td style="padding:10px 12px;border:1px solid var(--border);">10K</td><td style="padding:10px 12px;border:1px solid var(--border);">Hosted by n8n</td><td style="padding:10px 12px;border:1px solid var(--border);">3 shared projects · up to 50 concurrent executions · 30-day log retention · admin roles · workflow history · up to 9,600 Assistant credits/mo</td></tr>
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Business</td><td style="padding:10px 12px;border:1px solid var(--border);">€667/mo</td><td style="padding:10px 12px;border:1px solid var(--border);"><a href="https://n8n.io/pricing" target="_blank" rel="noopener" style="color:var(--accent)">See official pricing</a></td><td style="padding:10px 12px;border:1px solid var(--border);">40K</td><td style="padding:10px 12px;border:1px solid var(--border);">Self-hosted only (n8n-hosted waitlist)</td><td style="padding:10px 12px;border:1px solid var(--border);">6 shared projects · SSO and LDAP · Git version control · queue mode · multiple environments</td></tr>
           <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Enterprise</td><td style="padding:10px 12px;border:1px solid var(--border);">Contact sales</td><td style="padding:10px 12px;border:1px solid var(--border);">Contact sales</td><td style="padding:10px 12px;border:1px solid var(--border);">Custom</td><td style="padding:10px 12px;border:1px solid var(--border);">Hosted by n8n or self-hosted</td><td style="padding:10px 12px;border:1px solid var(--border);">Unlimited shared projects · 200+ concurrent executions · log streaming · external secret store · dedicated support with SLA</td></tr>
         </tbody>
       </table>
       </div>
       <p style="font-size:13px;color:var(--text3);">Checked on November 22, 2026 against <a href="https://n8n.io/pricing" target="_blank" rel="noopener" style="color:var(--accent)">n8n.io/pricing</a>; confirm before you buy. Prices are shown in euros as listed. The page offers a Monthly / Annually toggle ("Save 17%" on annual), but only the annual-billed figures rendered when we checked, so monthly prices are left for you to confirm on n8n's page.</p>
+      <!-- Official-site link (no affiliate program approved). After approval, swap href to the tracked URL and set rel="sponsored nofollow noopener" per CLAUDE.md. -->
+      <div class="official-cta" style="margin:20px 0 32px;text-align:center;"><a href="https://n8n.io/" class="affiliate-btn" target="_blank" rel="noopener">Visit n8n (official site)</a><div style="font-size:11px;color:var(--text3);margin-top:8px;">Official site — not an affiliate link.</div></div>
       <p>A few details from the same page are worth knowing before you pick a tier. Starter and Pro list overage fees as "Capped." On Business and Enterprise, workflows keep running if you exceed your quota, but n8n says overage charges may apply unless you move up a tier. Teams under 20 employees can check eligibility for a Startup plan at 50% off Business. A Business license can be used on any number of instances, but usage across all of them counts toward one quota.</p>
       <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:16px 20px;margin:24px 0">
         <p style="font-size:13px;font-family:'DM Mono',monospace;color:var(--accent);margin-bottom:6px">WHAT CHANGED</p>
@@ -328,7 +355,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <tbody style="color:var(--text2);">
           <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Pricing model</td><td style="padding:10px 12px;border:1px solid var(--border);">Per execution (entire run)</td><td style="padding:10px 12px;border:1px solid var(--border);">Per task (each action)</td></tr>
           <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Free tier</td><td style="padding:10px 12px;border:1px solid var(--border);">✓ Self-hosted unlimited</td><td style="padding:10px 12px;border:1px solid var(--border);">100 tasks/month</td></tr>
-          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Starting paid price</td><td style="padding:10px 12px;border:1px solid var(--border);">Starter €20/mo billed annually (2.5K executions); monthly: [confirm on official pricing page]</td><td style="padding:10px 12px;border:1px solid var(--border);">Professional $19.99/mo billed annually or $29.99/mo billed monthly (750 tasks)</td></tr>
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Starting paid price</td><td style="padding:10px 12px;border:1px solid var(--border);">Starter €20/mo billed annually (2.5K executions); monthly: <a href="https://n8n.io/pricing" target="_blank" rel="noopener" style="color:var(--accent)">See official pricing</a></td><td style="padding:10px 12px;border:1px solid var(--border);">Professional $19.99/mo billed annually or $29.99/mo billed monthly (750 tasks)</td></tr>
           <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Multi-step workflows</td><td style="padding:10px 12px;border:1px solid var(--border);">One execution per run, any number of steps</td><td style="padding:10px 12px;border:1px solid var(--border);">Each action step counts as a task</td></tr>
           <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Self-hosting</td><td style="padding:10px 12px;border:1px solid var(--border);">✓ Full Docker/K8s</td><td style="padding:10px 12px;border:1px solid var(--border);">✗ Cloud only</td></tr>
           <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Native integrations</td><td style="padding:10px 12px;border:1px solid var(--border);">500+</td><td style="padding:10px 12px;border:1px solid var(--border);">8,500+</td></tr>
@@ -398,6 +425,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       <h2 id="the-bottom-line">The Bottom Line</h2>
       <p>For technical teams that want control over hosting, data, and per-run costs, n8n is one of the strongest automation options in 2026. The self-hosted Community Edition delivers extensive capability at infrastructure cost only, the Cloud plans meter whole runs rather than individual steps, which matters most on long workflows, and active workflow limits are gone on the hosted tiers. The 70+ LangChain AI nodes put agents, memory, and vector stores inside the core product rather than behind an add-on, which suits teams building AI workflows rather than just calling an LLM.</p>
       <p>The learning curve is the honest cost of entry: the node canvas and JSON handling take real time to master, and there's no pretending otherwise. But for teams willing to invest that month, n8n's flexibility and cost efficiency at scale are hard to match. If you're non-technical and need automation working this week, <a href="../review/zapier.html" style="color:var(--accent)">Zapier</a> is the better fit. If you're a developer or a scaling technical team, n8n is the rational long-term choice.</p>
+      <!-- Official-site link (no affiliate program approved). After approval, swap href to the tracked URL and set rel="sponsored nofollow noopener" per CLAUDE.md. -->
+      <div class="official-cta" style="margin:20px 0 32px;text-align:center;"><a href="https://n8n.io/" class="affiliate-btn" target="_blank" rel="noopener">Visit n8n (official site)</a><div style="font-size:11px;color:var(--text3);margin-top:8px;">Official site — not an affiliate link.</div></div>
     </div>
   </div>
   <div class="review-sidebar">
@@ -430,6 +459,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
     <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
   </div>
-  <div class="footer-bottom"><span>© 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+  <div class="footer-bottom"><span>© 2026 AIToolGrade. All rights reserved.</span><span>No affiliate links on this page. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
 </footer>
 </body></html>

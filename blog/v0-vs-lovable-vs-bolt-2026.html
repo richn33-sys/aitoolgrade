@@ -3,6 +3,7 @@
 <link rel="canonical" href="https://aitoolgrade.com/blog/v0-vs-lovable-vs-bolt-2026.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="v0, Lovable, and Bolt compared for 2026: UI quality vs full-stack speed vs developer flexibility. No universal winner — here's which fits your use case.">
+<meta property="og:description" content="v0, Lovable, and Bolt compared for 2026: UI quality vs full-stack speed vs developer flexibility. No universal winner — here's which fits your use case.">
 <title>v0 vs Lovable vs Bolt 2026 — Which AI App Builder Wins? | AIToolGrade</title>
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="icon" type="image/png" href="../favicon.png">
@@ -84,6 +85,19 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
   .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
   .comparison-wrap{overflow-x:auto}
 }
+/* === QA Nov 22, 2026: mobile overflow fix (tested at 390px) === */
+.review-layout>*,.review-main,.review-body,.review-sidebar,.post-wrap,.post-body{min-width:0;max-width:100%}
+.review-main img,.review-main figure,.post-body img{max-width:100%;height:auto}
+.review-meta-row,.post-meta{flex-wrap:wrap;row-gap:6px}
+h1,h2,h3,h4,p,li,td,th,.breadcrumb,.byline{overflow-wrap:break-word;word-wrap:break-word}
+@media(max-width:768px){
+  .verdict-banner{flex-wrap:wrap}
+  .sidebar-card{position:static}
+  footer{padding:40px 20px}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:28px}
+  .footer-bottom{flex-direction:column;gap:8px;align-items:flex-start}
+  .compare-table,.pricing-table,.comparison-table{display:block;overflow-x:auto;max-width:100%}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -91,9 +105,9 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
   "@type": "Article",
   "headline": "v0 vs Lovable vs Bolt 2026 — Which AI App Builder Wins?",
   "author": {
-    "@type": "Person",
-    "name": "Marcus Veil",
-    "url": "https://aitoolgrade.com/author/marcus-veil.html"
+    "@type": "Organization",
+    "name": "AIToolGrade Team",
+    "url": "https://aitoolgrade.com/"
   },
   "publisher": {
     "@type": "Organization",
@@ -101,7 +115,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
     "url": "https://aitoolgrade.com"
   },
   "datePublished": "2026-06-12",
-  "dateModified": "2026-06-12"
+  "dateModified": "2026-11-22"
 }
 </script>
 <script type="application/ld+json">
@@ -121,11 +135,12 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
 <script src="../nav.js"></script>
 
 <div class="post-wrap">
+  <p class="disclosure-top" style="font-size:12px;color:var(--text3);margin:0 0 12px;font-family:var(--mono);">Disclosure: Buttons go to each vendor's official site, not affiliate links. Lovable's affiliate application was declined.</p>
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/">Blog</a><span>›</span>v0 vs Lovable vs Bolt 2026</div>
   <span class="post-tag">Comparison</span>
   <h1>v0 vs Lovable vs Bolt 2026 — Which AI App Builder Wins?</h1>
-  <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:32px;font-family:'DM Mono',monospace;">By <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade &middot; Last verified June 2026</p>
-  <div class="post-meta"><span>📅 June 2026</span><span>⏱ 11 min read</span></div>
+  <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:32px;font-family:'DM Mono',monospace;">By AIToolGrade Team &middot; Last verified June 2026</p>
+  <div class="post-meta"><span>📅 Updated November 22, 2026</span><span>⏱ 11 min read</span></div>
 
   <div class="post-body">
     <p>Type a sentence, get an app. That's the promise all three of these tools make, and all three deliver some version of it. But describe v0, Lovable, and Bolt as "the same kind of tool" to anyone who has shipped with them and you'll get a quick correction. They start from three different philosophies about what an AI app builder is <em>for</em> — and that difference, not raw model quality, is what decides which one belongs in your stack.</p>
@@ -251,6 +266,18 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <a href="../review/bolt.html" class="cta-btn">Bolt.new Review →</a>
       </div>
     </div>
+
+    <!-- Official-site links. v0 and Bolt: after affiliate approval, swap href to the tracked URL and set rel="sponsored nofollow noopener" per CLAUDE.md. Lovable: affiliate application declined, keep as a plain link. -->
+    <div class="cta-box">
+      <h3>Visit the official sites</h3>
+      <p>Check current plans and credit allowances directly with each vendor.</p>
+      <div class="cta-links">
+        <a href="https://v0.dev/" class="cta-btn" target="_blank" rel="noopener">Visit v0 (official site)</a>
+        <a href="https://lovable.dev/" class="cta-btn" target="_blank" rel="noopener">Visit Lovable (official site)</a>
+        <a href="https://bolt.new/" class="cta-btn" target="_blank" rel="noopener">Visit Bolt.new (official site)</a>
+      </div>
+      <p style="font-size:11px;color:rgba(255,255,255,0.45);margin:14px 0 0;">Official sites — not affiliate links.</p>
+    </div>
   </div>
 </div>
 
@@ -270,6 +297,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
     <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="../about.html">About</a><a href="../how-we-review.html">How we review</a><a href="../resources.html">Resources</a><a href="../contact.html">Contact</a><a href="../advertise.html">Advertise</a></div></div>
     <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../cookie-policy.html">Cookie Policy</a></div></div>
   </div>
-  <div class="footer-bottom"><span>© 2026 AIToolGrade. All rights reserved.</span><span>Some links are affiliate links. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
+  <div class="footer-bottom"><span>© 2026 AIToolGrade. All rights reserved.</span><span>No affiliate links on this page. <a href="../affiliate-disclosure.html">Learn more</a></span></div>
 </footer>
 </body></html>

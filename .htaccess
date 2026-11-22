@@ -1,3 +1,10 @@
 RewriteEngine On
+
+# Block internal working files from public access (added Nov 22, 2026)
+RewriteRule ^social-posts(/|$) - [F,L]
+<FilesMatch "\.(md|csv|py)$">
+  Require all denied
+</FilesMatch>
+
 RewriteCond %{THE_REQUEST} /index\.html[\s?] [NC]
 RewriteRule ^index\.html$ https://aitoolgrade.com/ [R=301,L]

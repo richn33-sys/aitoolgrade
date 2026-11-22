@@ -5,12 +5,14 @@
   Deep rewrite: May 29, 2026 — 2,082 words
   Reason: Thin content audit
   Changes: Execution pricing vs Zapier, 70+ LangChain AI nodes, April 2026 unlimited workflows update, cost comparison section, updated score 8.7→8.3
+  Pricing refresh: November 22, 2026 — rebuilt pricing table from n8n.io/pricing (Starter €20 / Pro €50 / Business €667 annual-billed, Business now self-hosted only, 40K executions); removed stale €24 / 75% / 3-20x claims; CTAs relabeled as official-site links (no affiliate program). Score held at 8.3.
 -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="canonical" href="https://aitoolgrade.com/review/n8n.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="n8n's self-hosted Community Edition is free with unlimited executions. Cloud starts at €24/month. At scale, n8n costs 3-20x less than Zapier. The trade-off: steeper learning curve. Here's the honest breakdown.">
-<title>n8n Review 2026: The Automation Tool That's 75% Cheaper Than Zapier (If You're Technical) | AIToolGrade</title>
+<meta name="description" content="n8n review: Cloud vs self-hosted, execution pricing, and when Zapier is simpler. Confirm current Cloud prices on n8n's official pricing page first.">
+<title>n8n Review 2026 — Cloud Pricing, Self-Host, vs Zapier | AIToolGrade</title>
+<meta property="og:title" content="n8n Review 2026 — Cloud Pricing, Self-Host, vs Zapier | AIToolGrade">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -148,7 +150,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
     }
   },
   "datePublished": "2026-04-01",
-  "dateModified": "2026-05-29"
+  "dateModified": "2026-11-22"
 }
 </script>
 <script type="application/ld+json">
@@ -181,9 +183,9 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <div class="review-tool-logo">🔧</div>
         <div><div class="review-tool-title">n8n</div><div class="review-tool-url">n8n.io</div></div>
       </div>
-      <h1>n8n Review 2026: The Automation Tool That's 75% Cheaper Than Zapier (If You're Technical)</h1>
+      <h1>n8n Review 2026 — Cloud Pricing, Self-Host, vs Zapier</h1>
       <div class="review-meta-row">
-        <span>📅 Updated May 2026</span>
+        <span>📅 Last updated November 22, 2026</span>
         <span>⏱ 10 min read</span>
         <span>🔍 Research-based review</span>
       </div>
@@ -192,10 +194,10 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       <div class="verdict-score">8.3</div>
       <div class="verdict-text">
         <h3>Editor's Verdict: Very Good</h3>
-        <p>The automation platform technical teams choose when they outgrow Zapier's pricing. Self-hosting is free with unlimited executions, and execution-based billing makes complex workflows 3-20x cheaper. The trade-off is a steeper learning curve.</p>
+        <p>A strong pick for technical teams. The self-hosted Community Edition carries no license fee, and n8n bills per workflow run rather than per step, so multi-step workflows use far less of a plan than they would on per-task tools. The trade-off is a steeper learning curve.</p>
       </div>
     </div>
-    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified May 2026</p>
+    <p class="byline" style="font-size:13px;color:var(--text3);margin-bottom:24px;font-family:'DM Mono',monospace;max-width:800px;margin-left:auto;margin-right:auto;padding:0 24px;">Researched by <a href="../author/marcus-veil.html" style="color:var(--accent)">Marcus Veil</a>, AI Tools Analyst &amp; Industry Writer &middot; AIToolGrade Editorial Team &middot; Last verified November 2026</p>
 <div class="review-body">
       <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:16px 20px;margin:24px 0">
   <p style="font-size:13px;font-family:'DM Mono',monospace;color:var(--accent);margin-bottom:6px">RELATED</p>
@@ -206,8 +208,9 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
   <a href="../blog/best-ai-tools-for-seo-2026.html" style="font-size:15px;font-weight:600;color:var(--text)">Best AI Tools for SEO in 2026 — A Practitioner's Guide →</a>
 </div>
 <h2 id="n8n-in-2026-the-automation-platform-you-choose-when-you-outgrow-zapier">n8n in 2026: The Automation Platform You Choose When You Outgrow Zapier</h2>
-      <p>n8n is the automation platform technical teams reach for when they outgrow Zapier's pricing. The self-hosted Community Edition is free — unlimited executions, unlimited workflows, every integration in the catalog. The cloud plans start at €24/month. At scale — 5,000+ workflow runs per month — n8n costs 3-20x less than <a href="../review/zapier.html" style="color:var(--accent)">Zapier</a> for equivalent workloads.</p>
-      <p>The trade-off is real and worth stating up front: n8n's node canvas and JSON data handling demand more technical comfort than Zapier's guided, step-by-step interface. You don't need to be a senior engineer, but you do need to be willing to think about data shapes and read the occasional error. For technical founders, developers, and AI builders who can climb that curve, no automation platform in 2026 offers more capability per dollar. This review covers what n8n does today, the cost math that drives most buying decisions, and where the learning curve bites — based on verified pricing, documented features, and community sentiment across Reddit, G2, and Capterra rather than hands-on testing.</p>
+      <p>n8n comes in two shapes. You can self-host the Community Edition from GitHub and pay only for your own server, or you can let n8n run it for you on a Cloud plan billed per workflow execution. Which one fits depends less on features than on how much infrastructure you want to own. Cloud prices have moved more than once this year, so treat n8n's <a href="https://n8n.io/pricing" target="_blank" rel="noopener" style="color:var(--accent)">official pricing page</a> as the final word; the table below is what it showed on November 22, 2026.</p>
+      <p>The billing model is the real story. One execution is one full workflow run, however many steps it contains. <a href="../review/zapier.html" style="color:var(--accent)">Zapier</a> counts each action as a task. On a five-step workflow, that difference adds up quickly.</p>
+      <p>The trade-off is real and worth stating up front: n8n's node canvas and JSON data handling demand more technical comfort than Zapier's guided, step-by-step interface. You don't need to be a senior engineer, but you do need to be willing to think about data shapes and read the occasional error. For technical founders, developers, and AI builders who can climb that curve, it's one of the more capable options per dollar in the category. This review covers what n8n does today, how its pricing works next to Zapier's, and where the learning curve bites — based on verified pricing, documented features, and community sentiment across Reddit, G2, and Capterra rather than hands-on testing.</p>
 
       <!-- toc -->
 <nav aria-label="Table of contents" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 32px 0;">
@@ -218,8 +221,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
     <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#what-n8n-does-in-2026" style="color: var(--accent); text-decoration: none;">What n8n Does in 2026</a></li>
     <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#pros-and-cons" style="color: var(--accent); text-decoration: none;">Pros and Cons</a></li>
     <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#performance-scores" style="color: var(--accent); text-decoration: none;">Performance Scores</a></li>
-    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#n8n-pricing-verified-may-2026" style="color: var(--accent); text-decoration: none;">n8n Pricing (Verified May 2026)</a></li>
-    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-cost-comparison-n8n-vs-zapier-in-real-numbers" style="color: var(--accent); text-decoration: none;">The Cost Comparison: n8n vs Zapier in Real Numbers</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#n8n-pricing" style="color: var(--accent); text-decoration: none;">n8n Pricing (Checked November 2026)</a></li>
+    <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-cost-comparison-n8n-vs-zapier-in-real-numbers" style="color: var(--accent); text-decoration: none;">How the Billing Models Compare</a></li>
     <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#n8n-vs-zapier" style="color: var(--accent); text-decoration: none;">n8n vs Zapier</a></li>
     <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#who-should-use-n8n" style="color: var(--accent); text-decoration: none;">Who Should Use n8n?</a></li>
     <li style="font-family: var(--sans); font-size: 0.88rem;"><a href="#the-bottom-line" style="color: var(--accent); text-decoration: none;">The Bottom Line</a></li>
@@ -230,7 +233,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       <ul style="color:var(--text2);margin:0 0 16px 20px;line-height:1.7;">
         <li><strong>Fair-code license</strong> — the n8n Sustainable Use License lets you self-host the full product for free on your own server. The only real restriction: you can't resell it as a hosted service. Everything else is yours to run.</li>
         <li><strong>Inline code</strong> — JavaScript and Python nodes let you drop custom logic directly into a workflow. No external scripts, no separate microservice — when a built-in node can't do something, you write a few lines and move on.</li>
-        <li><strong>Native AI</strong> — 70+ LangChain-based AI nodes for agents, vector stores, memory, and LLM calls. This is the most AI-native automation platform in the category, and it's built in rather than bolted on as an add-on.</li>
+        <li><strong>Native AI</strong> — 70+ LangChain-based AI nodes for agents, vector stores, memory, and LLM calls. AI is part of the core node library rather than a separately priced add-on, so agents, memory, and retrieval can sit in the same workflow as your CRM update or Slack alert.</li>
       </ul>
 
       <h2 id="what-n8n-does-in-2026">What n8n Does in 2026</h2>
@@ -253,7 +256,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
           <h4>What we liked</h4>
           <div class="pro-item">Free self-hosted edition with unlimited executions</div>
           <div class="pro-item">Execution-based billing — pay per run, not per step</div>
-          <div class="pro-item">70+ LangChain AI nodes — best native AI in the category</div>
+          <div class="pro-item">70+ LangChain AI nodes built in, not sold as an add-on</div>
           <div class="pro-item">Inline JavaScript and Python for custom logic</div>
           <div class="pro-item">Full data control via self-hosting</div>
         </div>
@@ -275,32 +278,41 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <div class="score-row"><span class="score-name">Integration</span><div class="score-bar-track"><div class="score-bar-fill" style="width:80%"></div></div><span class="score-val">8.0</span></div>
         <div class="score-row"><span class="score-name">Support &amp; Documentation</span><div class="score-bar-track"><div class="score-bar-fill" style="width:75%"></div></div><span class="score-val">7.5</span></div>
       </div>
-      <p><strong>Ease of Use (6.5/10)</strong> — the node canvas requires technical comfort and has a steeper learning curve than Zapier; worth it for technical users, frustrating for everyone else. <strong>Features (9.5/10)</strong> — 500+ native nodes, unlimited custom integrations via HTTP/API, 70+ LangChain AI nodes, inline JavaScript/Python, self-hosting, Git integration, and a fair-code license. <strong>Value for Money (9.5/10)</strong> — the self-hosted Community Edition is free with unlimited executions; Cloud Starter is €24/month, and the platform runs 3-20x cheaper than Zapier at scale, with April 2026 removing active workflow limits. <strong>Integration (8/10)</strong> — 500+ native nodes (against Zapier's 8,500+), but unlimited custom HTTP/API integrations close the gap for technical teams. <strong>Support &amp; Documentation (7.5/10)</strong> — a strong community (400k+ members), good documentation, and an active GitHub; enterprise support requires the Business plan.</p>
+      <p><strong>Ease of Use (6.5/10)</strong> — the node canvas requires technical comfort and has a steeper learning curve than Zapier; worth it for technical users, frustrating for everyone else. <strong>Features (9.5/10)</strong> — 500+ native nodes, unlimited custom integrations via HTTP/API, 70+ LangChain AI nodes, inline JavaScript/Python, self-hosting, Git integration, and a fair-code license. <strong>Value for Money (9.5/10)</strong> — the self-hosted Community Edition carries no license fee, Cloud plans meter whole workflow runs rather than individual steps, and active workflows are unlimited on Starter and Pro. <strong>Integration (8/10)</strong> — 500+ native nodes (against Zapier's 8,500+), but unlimited custom HTTP/API integrations close the gap for technical teams. <strong>Support &amp; Documentation (7.5/10)</strong> — a strong community (400k+ members), good documentation, and an active GitHub; enterprise support requires the Business plan.</p>
 
-      <h2 id="n8n-pricing-verified-may-2026">n8n Pricing (Verified May 2026)</h2>
-      <p>n8n bills per execution — one workflow run is one execution, regardless of how many steps it contains. That single design choice is the root of its cost advantage. Here's the current structure:</p>
-      <ul style="color:var(--text2);margin:0 0 16px 20px;line-height:1.7;">
-        <li><strong>Community Edition — Free:</strong> self-hosted, unlimited executions, unlimited workflows, full feature access. Requires server setup (Docker recommended).</li>
-        <li><strong>Cloud Starter — €24/month (~$26):</strong> 2,500 executions/month, unlimited active workflows (the April 2026 update removed workflow limits), cloud-hosted.</li>
-        <li><strong>Cloud Pro — €60/month (~$65):</strong> 10,000 executions/month, unlimited active workflows, priority support.</li>
-        <li><strong>Business — €800/month (~$870):</strong> 500,000 executions/month, SSO via SAML/LDAP, advanced RBAC, audit logging, and dedicated support.</li>
-        <li><strong>Enterprise — Custom:</strong> unlimited executions, SLA guarantees, and custom deployment.</li>
-      </ul>
+      <h2 id="n8n-pricing">n8n Pricing (Checked November 2026)</h2>
+      <p>n8n bills per execution — one workflow run is one execution, regardless of how many steps it contains. Starter and Pro are hosted by n8n. Business, the tier with SSO and Git-based version control, is currently self-hosted only, with an n8n-hosted version on a waitlist. Here's what the official pricing page listed:</p>
+      <div style="overflow-x:auto;margin:24px 0;">
+      <table class="comparison-table" style="width:100%;border-collapse:collapse;font-size:14px;">
+        <thead>
+          <tr style="background:var(--bg2);"><th style="text-align:left;padding:10px 12px;border:1px solid var(--border);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:0.04em;">Plan</th><th style="text-align:left;padding:10px 12px;border:1px solid var(--border);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:0.04em;">Annual billing</th><th style="text-align:left;padding:10px 12px;border:1px solid var(--border);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:0.04em;">Monthly billing</th><th style="text-align:left;padding:10px 12px;border:1px solid var(--border);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:0.04em;">Executions / month</th><th style="text-align:left;padding:10px 12px;border:1px solid var(--border);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:0.04em;">Hosting</th><th style="text-align:left;padding:10px 12px;border:1px solid var(--border);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:0.04em;">Headline limits</th></tr>
+        </thead>
+        <tbody style="color:var(--text2);">
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Community Edition</td><td style="padding:10px 12px;border:1px solid var(--border);">No plan price listed</td><td style="padding:10px 12px;border:1px solid var(--border);">No plan price listed</td><td style="padding:10px 12px;border:1px solid var(--border);">No plan quota listed</td><td style="padding:10px 12px;border:1px solid var(--border);">Self-hosted (from GitHub)</td><td style="padding:10px 12px;border:1px solid var(--border);">You run and pay for the server</td></tr>
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Starter</td><td style="padding:10px 12px;border:1px solid var(--border);">€20/mo</td><td style="padding:10px 12px;border:1px solid var(--border);">[confirm on official pricing page]</td><td style="padding:10px 12px;border:1px solid var(--border);">2.5K</td><td style="padding:10px 12px;border:1px solid var(--border);">Hosted by n8n</td><td style="padding:10px 12px;border:1px solid var(--border);">1 shared project · 5 concurrent executions · unlimited active workflows · 7-day execution log retention · 1,600 Assistant credits/mo</td></tr>
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Pro</td><td style="padding:10px 12px;border:1px solid var(--border);">€50/mo</td><td style="padding:10px 12px;border:1px solid var(--border);">[confirm on official pricing page]</td><td style="padding:10px 12px;border:1px solid var(--border);">10K</td><td style="padding:10px 12px;border:1px solid var(--border);">Hosted by n8n</td><td style="padding:10px 12px;border:1px solid var(--border);">3 shared projects · up to 50 concurrent executions · 30-day log retention · admin roles · workflow history · up to 9,600 Assistant credits/mo</td></tr>
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Business</td><td style="padding:10px 12px;border:1px solid var(--border);">€667/mo</td><td style="padding:10px 12px;border:1px solid var(--border);">[confirm on official pricing page]</td><td style="padding:10px 12px;border:1px solid var(--border);">40K</td><td style="padding:10px 12px;border:1px solid var(--border);">Self-hosted only (n8n-hosted waitlist)</td><td style="padding:10px 12px;border:1px solid var(--border);">6 shared projects · SSO and LDAP · Git version control · queue mode · multiple environments</td></tr>
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Enterprise</td><td style="padding:10px 12px;border:1px solid var(--border);">Contact sales</td><td style="padding:10px 12px;border:1px solid var(--border);">Contact sales</td><td style="padding:10px 12px;border:1px solid var(--border);">Custom</td><td style="padding:10px 12px;border:1px solid var(--border);">Hosted by n8n or self-hosted</td><td style="padding:10px 12px;border:1px solid var(--border);">Unlimited shared projects · 200+ concurrent executions · log streaming · external secret store · dedicated support with SLA</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p style="font-size:13px;color:var(--text3);">Checked on November 22, 2026 against <a href="https://n8n.io/pricing" target="_blank" rel="noopener" style="color:var(--accent)">n8n.io/pricing</a>; confirm before you buy. Prices are shown in euros as listed. The page offers a Monthly / Annually toggle ("Save 17%" on annual), but only the annual-billed figures rendered when we checked, so monthly prices are left for you to confirm on n8n's page.</p>
+      <p>A few details from the same page are worth knowing before you pick a tier. Starter and Pro list overage fees as "Capped." On Business and Enterprise, workflows keep running if you exceed your quota, but n8n says overage charges may apply unless you move up a tier. Teams under 20 employees can check eligibility for a Startup plan at 50% off Business. A Business license can be used on any number of instances, but usage across all of them counts toward one quota.</p>
       <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.2);border-radius:12px;padding:16px 20px;margin:24px 0">
         <p style="font-size:13px;font-family:'DM Mono',monospace;color:var(--accent);margin-bottom:6px">WHAT CHANGED</p>
-        <p style="font-size:14px;color:var(--text2);margin:0;">April 2026 — n8n removed all active workflow limits across every plan. Previously, lower-tier plans restricted how many workflows could run simultaneously; now active workflows are unlimited on all plans. The execution-based model itself is unchanged: one workflow run equals one execution regardless of step count.</p>
+        <p style="font-size:14px;color:var(--text2);margin:0;">Earlier in 2026 — n8n removed active workflow limits. Previously, lower-tier plans capped how many workflows could be active; the current pricing page lists active workflows as unlimited on Starter and Pro. The execution-based model itself is unchanged: one workflow run equals one execution regardless of step count.</p>
       </div>
 
-      <h2 id="the-cost-comparison-n8n-vs-zapier-in-real-numbers">The Cost Comparison: n8n vs Zapier in Real Numbers</h2>
-      <p>This is the math that drives most n8n decisions, so it's worth doing properly. The pricing difference versus Zapier compounds fast on complex workflows. Zapier charges per task — every action step counts separately. n8n charges per execution — the entire workflow run is one execution, no matter how many steps it contains.</p>
+      <h2 id="the-cost-comparison-n8n-vs-zapier-in-real-numbers">How the Billing Models Compare</h2>
+      <p>This is the math behind most n8n decisions, so it's worth doing carefully. The gap between the two billing models widens as workflows get longer. Zapier charges per task — every action step counts separately. n8n charges per execution — the entire workflow run is one execution, no matter how many steps it contains.</p>
       <p>Take a real example: a marketing automation workflow processing 10,000 leads a month.</p>
       <ul style="color:var(--text2);margin:0 0 16px 20px;line-height:1.7;">
         <li><strong>The workflow:</strong> form submission → email validation → CRM update → email notification → Slack alert. That's 5 actions.</li>
-        <li><strong>Zapier cost:</strong> 5 actions × 10,000 runs = 50,000 tasks, which lands you in custom-pricing territory (roughly $500+/month).</li>
-        <li><strong>n8n Cloud cost:</strong> 10,000 runs = 10,000 executions, comfortably covered by Cloud Pro — or close to Cloud Starter territory if you trim volume.</li>
+        <li><strong>On Zapier:</strong> 5 actions × 10,000 runs = 50,000 tasks a month. Zapier's entry tiers start at 750 tasks (Professional) and 2,000 tasks (Team), so this volume sits well above them. Check Zapier's pricing page for the tier that covers it.</li>
+        <li><strong>On n8n Cloud:</strong> 10,000 runs = 10,000 executions, which matches the Pro plan's listed allowance.</li>
       </ul>
-      <p>At high volume, n8n runs roughly 75% less than Zapier for equivalent workloads above 5,000 executions per month. Self-hosting removes the cloud cost entirely — you trade the subscription for the price of a server and the time to manage it. For a team already comfortable running a VPS, that trade is usually a clear win.</p>
-      <p>The gap only widens as workflows grow more complex. Because Zapier meters every action, the per-run cost of a workflow climbs with each step you add — a tax on sophistication. n8n's flat per-execution charge means a 20-node workflow costs exactly the same as a 2-node one, so you can build the logic the problem actually needs instead of trimming steps to protect your task budget. Over a year, on a handful of busy workflows, that difference routinely runs into thousands of dollars — which is why the cost argument, not the feature list, is what usually moves technical teams off Zapier.</p>
+      <p>We're not putting a savings percentage on that, because the real number depends on which tiers you land on, billing cadence, and overage. Zapier's page lists overage at 1.25× the base rate on annual self-serve plans and 2.5× on monthly ones; n8n lists Starter and Pro overage as capped. Run your own volumes through both pricing pages. Self-hosting changes the equation again: you swap the subscription for a server bill and the time to maintain it, which is often a sensible trade for a team that already runs a VPS.</p>
+      <p>Step count is where the models really diverge. Zapier meters every action, so each step you add raises the per-run cost. n8n charges one execution per run, so a 20-node workflow uses the same allowance as a 2-node one. You can build the logic the problem needs instead of trimming steps to protect a task budget. For busy, multi-step workflows, that billing model is usually what moves technical teams off Zapier, more than the feature list.</p>
 
       <h2 id="n8n-vs-zapier">n8n vs Zapier</h2>
       <p>The decision is genuinely binary for most buyers: technical capability and cost on one side, simplicity and app breadth on the other. The table lays out where each platform wins.</p>
@@ -316,8 +328,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         <tbody style="color:var(--text2);">
           <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Pricing model</td><td style="padding:10px 12px;border:1px solid var(--border);">Per execution (entire run)</td><td style="padding:10px 12px;border:1px solid var(--border);">Per task (each action)</td></tr>
           <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Free tier</td><td style="padding:10px 12px;border:1px solid var(--border);">✓ Self-hosted unlimited</td><td style="padding:10px 12px;border:1px solid var(--border);">100 tasks/month</td></tr>
-          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Starting cloud price</td><td style="padding:10px 12px;border:1px solid var(--border);">€24/month (2,500 executions)</td><td style="padding:10px 12px;border:1px solid var(--border);">$19.99/month (750 tasks)</td></tr>
-          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Cost at scale</td><td style="padding:10px 12px;border:1px solid var(--border);">3-20x cheaper</td><td style="padding:10px 12px;border:1px solid var(--border);">Expensive at high volume</td></tr>
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Starting paid price</td><td style="padding:10px 12px;border:1px solid var(--border);">Starter €20/mo billed annually (2.5K executions); monthly: [confirm on official pricing page]</td><td style="padding:10px 12px;border:1px solid var(--border);">Professional $19.99/mo billed annually or $29.99/mo billed monthly (750 tasks)</td></tr>
+          <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Multi-step workflows</td><td style="padding:10px 12px;border:1px solid var(--border);">One execution per run, any number of steps</td><td style="padding:10px 12px;border:1px solid var(--border);">Each action step counts as a task</td></tr>
           <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Self-hosting</td><td style="padding:10px 12px;border:1px solid var(--border);">✓ Full Docker/K8s</td><td style="padding:10px 12px;border:1px solid var(--border);">✗ Cloud only</td></tr>
           <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Native integrations</td><td style="padding:10px 12px;border:1px solid var(--border);">500+</td><td style="padding:10px 12px;border:1px solid var(--border);">8,500+</td></tr>
           <tr><td style="padding:10px 12px;border:1px solid var(--border);font-weight:600;color:var(--text);">Custom integrations</td><td style="padding:10px 12px;border:1px solid var(--border);">Unlimited (HTTP + code)</td><td style="padding:10px 12px;border:1px solid var(--border);">Limited</td></tr>
@@ -329,17 +341,18 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         </tbody>
       </table>
       </div>
-      <p>If your team has a developer or a technical co-founder, start with n8n self-hosted — you'll never outgrow the pricing. If you need automation running this week without any technical overhead, Zapier is the right call. There isn't much middle ground.</p>
+      <p style="font-size:13px;color:var(--text3);">Zapier figures checked November 22, 2026 against <a href="https://zapier.com/pricing" target="_blank" rel="noopener" style="color:var(--accent)">zapier.com/pricing</a> (USD). Zapier also lists a free plan at 100 tasks/month and Team from $69/mo billed annually ($103.50 monthly) at 2,000 tasks.</p>
+      <p>If your team has a developer or a technical co-founder, n8n self-hosted is a sensible place to start, and pricing is unlikely to be what pushes you off it. If you need automation running this week without any technical overhead, Zapier is the right call. There isn't much middle ground.</p>
 
       <h2 id="who-should-use-n8n">Who Should Use n8n?</h2>
-      <p>n8n is the right choice for developers, technical founders, and engineering teams that need serious automation without Zapier's premium pricing. It's especially strong for AI agent workflows, API integrations, and data pipelines — the 70+ LangChain nodes make it the most capable AI automation platform in the category, and the self-hosted edition is the best value for any team with DevOps capability.</p>
-      <p>It's the wrong choice for non-technical users who need something working today, or for teams that depend on a long-tail SaaS app without a native node and don't want to wire it up over HTTP. If automating knowledge work matters more than connecting apps, our reviews of <a href="../review/claude-cowork.html" style="color:var(--accent)">Claude Cowork</a> and <a href="../review/notion-ai.html" style="color:var(--accent)">Notion AI</a> cover that adjacent ground.</p>
+      <p>n8n is the right choice for developers, technical founders, and engineering teams that need serious automation without Zapier's premium pricing. It's especially strong for AI agent workflows, API integrations, and data pipelines — the 70+ LangChain nodes let you build agents with memory and vector retrieval without leaving the canvas, and for a team with DevOps capability the self-hosted edition is hard to beat on cost.</p>
+      <p>It's the wrong choice for non-technical users who need something working today, or for teams that depend on a long-tail SaaS app without a native node and don't want to wire it up over HTTP. For those teams, <a href="../review/zapier.html" style="color:var(--accent)">our Zapier review</a> covers the simpler alternative: a guided step-by-step builder, 8,500+ app integrations, and no servers to manage. If automating knowledge work matters more than connecting apps, our reviews of <a href="../review/claude-cowork.html" style="color:var(--accent)">Claude Cowork</a> and <a href="../review/notion-ai.html" style="color:var(--accent)">Notion AI</a> cover that adjacent ground.</p>
 
       <div class="affiliate-box">
-        <h3>Try n8n Free</h3>
-        <p>Self-host for free, or start a 14-day cloud trial.</p>
-        <a href="https://n8n.io" class="affiliate-btn">Try n8n Free →</a>
-        <div class="affiliate-note">Affiliate link — we may earn a commission at no extra cost to you</div>
+        <h3>Visit n8n</h3>
+        <p>Self-host the Community Edition, or start a Cloud trial from n8n's site.</p>
+        <a href="https://n8n.io" class="affiliate-btn" target="_blank" rel="noopener">Visit n8n (official site)</a>
+        <div class="affiliate-note">Official site — not an affiliate link.</div>
       </div>
 
       <!-- What Users Are Saying -->
@@ -377,13 +390,13 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
         </div>
         <div style="background:var(--accent-dim);border:1px solid rgba(232,93,38,0.15);border-radius:12px;padding:20px 24px;">
           <div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:8px;">AIToolGrade Take</div>
-          <p style="font-family:var(--sans);font-size:0.93rem;color:var(--text);line-height:1.7;margin:0;">n8n's value proposition in 2026 is clear and consistent across every community we monitor: it's the automation platform technical teams choose when Zapier's pricing becomes untenable at scale. The April 2026 removal of active workflow limits makes the Cloud Starter plan at €24/month even more compelling. The 70+ LangChain AI nodes are the strongest native AI automation capability in the category — no other platform bundles agent, memory, and vector store nodes at this price point. The honest limitation is the learning curve: n8n rewards the month you invest in learning the canvas with workflows that would cost 3-20x more on Zapier. For non-technical users who need automation this week, Zapier. For technical teams building for scale, n8n is the rational choice.</p>
+          <p style="font-family:var(--sans);font-size:0.93rem;color:var(--text);line-height:1.7;margin:0;">n8n's value proposition in 2026 is clear and consistent across every community we monitor: it's the automation platform technical teams choose when Zapier's pricing becomes untenable at scale. The removal of active workflow limits makes Cloud Starter more useful than it used to be, though Cloud prices have shifted during 2026, so confirm them on n8n's pricing page. The 70+ LangChain AI nodes are a real differentiator: agent, memory, and vector store nodes come with every plan, where Zapier sells its AI features (Agents, Chatbots) as separate add-ons. The honest limitation is the learning curve: n8n repays the month you spend learning the canvas with per-run billing that stays flat as workflows grow. For non-technical users who need automation this week, Zapier. For technical teams building for scale, n8n is the rational choice.</p>
         </div>
       </div>
       <!-- END: What Users Are Saying -->
 
       <h2 id="the-bottom-line">The Bottom Line</h2>
-      <p>n8n is the strongest automation tool for technical teams in 2026. The self-hosted Community Edition delivers extensive capability at infrastructure cost only, the cloud plans are a fraction of Zapier's price for equivalent workloads, and the April 2026 removal of active workflow limits sweetened every tier. The 70+ LangChain AI nodes give it the deepest native AI automation in the category — agents, memory, and vector stores bundled in rather than sold as an add-on.</p>
+      <p>For technical teams that want control over hosting, data, and per-run costs, n8n is one of the strongest automation options in 2026. The self-hosted Community Edition delivers extensive capability at infrastructure cost only, the Cloud plans meter whole runs rather than individual steps, which matters most on long workflows, and active workflow limits are gone on the hosted tiers. The 70+ LangChain AI nodes put agents, memory, and vector stores inside the core product rather than behind an add-on, which suits teams building AI workflows rather than just calling an LLM.</p>
       <p>The learning curve is the honest cost of entry: the node canvas and JSON handling take real time to master, and there's no pretending otherwise. But for teams willing to invest that month, n8n's flexibility and cost efficiency at scale are hard to match. If you're non-technical and need automation working this week, <a href="../review/zapier.html" style="color:var(--accent)">Zapier</a> is the better fit. If you're a developer or a scaling technical team, n8n is the rational long-term choice.</p>
     </div>
   </div>
@@ -399,12 +412,13 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
       </div>
       <div class="sidebar-title" style="margin-top:16px">Pricing</div>
       <div class="sidebar-price-row"><span class="sidebar-price-label">Community (self-host)</span><span class="sidebar-price-val">Free</span></div>
-      <div class="sidebar-price-row"><span class="sidebar-price-label">Cloud Starter</span><span class="sidebar-price-val">€24/mo</span></div>
-      <div class="sidebar-price-row"><span class="sidebar-price-label">Cloud Pro</span><span class="sidebar-price-val">€60/mo</span></div>
-      <div class="sidebar-price-row"><span class="sidebar-price-label">Business</span><span class="sidebar-price-val">€800/mo</span></div>
-      <div class="sidebar-price-row"><span class="sidebar-price-label">Free plan</span><span class="sidebar-price-val">✓ Self-host</span></div>
-      <a href="https://n8n.io" class="sidebar-cta">Try n8n Free →</a>
-      <div class="sidebar-disclosure">Affiliate link</div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Cloud Starter</span><span class="sidebar-price-val">€20/mo*</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Cloud Pro</span><span class="sidebar-price-val">€50/mo*</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Business (self-host)</span><span class="sidebar-price-val">€667/mo*</span></div>
+      <div class="sidebar-price-row"><span class="sidebar-price-label">Enterprise</span><span class="sidebar-price-val">Contact sales</span></div>
+      <div style="font-size:11px;color:var(--text3);margin-top:8px;">*Billed annually, per n8n.io/pricing on Nov 22, 2026. Confirm current prices before you buy.</div>
+      <a href="https://n8n.io" class="sidebar-cta" target="_blank" rel="noopener">Visit n8n (official site)</a>
+      <div class="sidebar-disclosure">Official site — not an affiliate link.</div>
     </div>
   </div>
 </div>

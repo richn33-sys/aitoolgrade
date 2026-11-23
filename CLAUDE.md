@@ -369,7 +369,7 @@ Every piece of content should be good enough that a reader would share it or lin
 
 ### Brand Account
 - **X/Twitter:** @aitoolgrade
-- **Email:** aitoolgrade@proton.me
+- **Email:** rich@aitoolgrade.com (site contact on about/contact/legal pages since Nov 23, 2026; replaces aitoolgrade@proton.me)
 - **Bio:** "The most thorough AI tools research on the web. Verified pricing · Documented features · Honest ratings"
 
 ### Persona accounts — RETIRED (November 22, 2026)
@@ -386,7 +386,7 @@ Every piece of content should be good enough that a reader would share it or lin
 
 ### Article Attribution
 - All articles: byline "AIToolGrade Team" (see Bylines & Authorship)
-- Rich Nashawaty: listed as Founder & Editor on About page only — does not write articles
+- Rich Nashawaty: listed as Founder on About page only (+ homepage Organization schema founder, url richnashawaty.com) — no bylines; every byline is "AIToolGrade Team" (personas retired Nov 22, 2026)
 
 ## X/Twitter Content Strategy
 
@@ -722,6 +722,7 @@ Verified the queue/Completed/counts against the actual repo (filesystem + `git l
 
 ### Remaining queue (OPEN)
 - **Keep dev files out of the web root — OPEN (flagged Nov 22, 2026).** The deploy is `git reset --hard origin/main` inside `public_html`, so every repo file ships to the public web root: CLAUDE.md, AIToolGrade-*-Briefing.md, x-calendar-30day.md, affiliate-tracker.md, SKILL.md, screenshot-*.md, the `.py` scripts, `social-posts/` (.md/.csv). These were publicly readable (HTTP 200) until Nov 22, 2026. **Stopgap in place:** `.htaccess` (commit afd1ea6) returns 403 for `*.md`, `*.csv`, `*.py` and `social-posts/`. That's a patch: it fails open if `.htaccess` is lost or a new dev-file type is added. **Real fix:** exclude dev files from the deployed tree entirely. Options: (a) move the site into a `public/` subfolder of the repo and point the deploy at it (sync `public/` into public_html, or symlink); (b) clone the repo outside public_html and rsync only site files in, with an exclude list; (c) keep dev files in a separate private repo/folder. After the fix, re-test that the dev-file URLs return 404 and the site pages still return 200.
+- **Reconcile scoring methodology — OPEN (flagged Nov 23, 2026).** about.html + how-we-review.html disagree on category names (Output Quality vs Integration/Support & Docs) and how-we-review doesn't publish weights; some overall scores differ from the 5-category average (e.g. Lovable 8.1 vs 8.0 avg). Decide canonical categories + weights (or state "simple average"), make both pages agree. The about.html "How we score" section currently says this openly; update it once resolved.
 - **Writesonic Value re-score — OPEN (flagged Nov 22, 2026).** The Nov 22 refresh corrected facts only; the **8.0 score (Value 8.0) was set against the old pricing** (~$20 entry + free plan) and has **NOT been re-run** against the current $79 annual / $99 monthly entry with no free plan. The live review carries a visible note saying so. Re-run the rubric (score checkpoint — pause before writing), then remove the note and, if the score moves, do the canonical-anchored re-grep across index/compare/reviews/category/writing + listicles.
 - ~~**Monthly-price gaps**~~ ✅ **RESOLVED Nov 22, 2026 (QA patch, commit 443665c).** The "[confirm on official pricing page]" cells (n8n Starter/Pro/Business monthly + vs-Zapier row; Writesonic Basic/Growth monthly + Jasper/Copy.ai comparison cells; Lovable top-ups) now read "See official pricing" and link to each vendor's pricing page. No numbers were guessed. If a monthly toggle renders on a future fetch, the actual figures can replace the links.
 - ~~**Unverified Writesonic / Copy.ai claims**~~ ✅ **RESOLVED Nov 22, 2026.** Jasper: the "can't browse URLs" point is now framed as this review's May 2026 claim to confirm on Jasper's site, and Writesonic's official "Deep web research" mode (writesonic.com/ai-article-writer, checked Nov 22) is cited instead of "live research" (commit 443665c). Copy.ai: the free-tier / "2,000 words, no credit card" claims were removed after a live check of copy.ai/prices (no free plan; Chat $29/mo or $24/mo annual) (commit 443665c). The stale Writesonic framing on the Copy.ai page was fixed in the leftover cleanup pass (see Completed).

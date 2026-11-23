@@ -3,8 +3,12 @@
 <link rel="canonical" href="https://aitoolgrade.com/about.html" />
 <meta name="google-site-verification" content="l6ZuoKnWQSEezpQ3liP8-QwvV045Q2LQLML-ryisN0o" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="About AIToolGrade — independent, research-based ratings of AI tools to help you find the right tool for your needs.">
-<title>About AIToolGrade | Honest AI Tool Reviews</title>
+<meta name="description" content="The AIToolGrade Team publishes research-based AI tool reviews from official pricing and documentation, not hands-on tests. Ratings aren't for sale.">
+<title>About AIToolGrade — How We Research Reviews</title>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aitoolgrade.com/about.html">
+<meta property="og:title" content="About AIToolGrade — How We Research Reviews">
+<meta property="og:description" content="The AIToolGrade Team publishes research-based AI tool reviews from official pricing and documentation, not hands-on tests. Ratings aren't for sale.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -63,7 +67,54 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
   .comparison-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
   .comparison-wrap{overflow-x:auto}
 }
+
+/* Mobile overflow fix */
+.page-wrap{min-width:0;max-width:100%}
+h1,h2,p,li,.value-desc,.footer-desc,.footer-bottom{overflow-wrap:break-word;word-wrap:break-word}
+@media (max-width:768px){
+  .page-wrap{min-width:0;max-width:100%}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:28px}
+  .footer-bottom{flex-wrap:wrap;gap:8px;align-items:flex-start}
+}
+
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://aitoolgrade.com/#organization",
+      "name": "AIToolGrade",
+      "url": "https://aitoolgrade.com",
+      "logo": "https://aitoolgrade.com/favicon.png",
+      "founder": {
+        "@type": "Person",
+        "name": "Rich Nashawaty",
+        "url": "https://richnashawaty.com",
+        "jobTitle": "Founder"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "rich@aitoolgrade.com"
+      }
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://aitoolgrade.com/about.html#webpage",
+      "url": "https://aitoolgrade.com/about.html",
+      "name": "About AIToolGrade — How We Research Reviews",
+      "description": "The AIToolGrade Team publishes research-based AI tool reviews from official pricing and documentation, not hands-on tests. Ratings aren't for sale.",
+      "isPartOf": {
+        "@id": "https://aitoolgrade.com/#organization"
+      },
+      "about": {
+        "@id": "https://aitoolgrade.com/#organization"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div id="nav-root"></div>
@@ -72,41 +123,55 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
   <div class="breadcrumb"><a href="/">Home</a><span>›</span>About</div>
   <div class="section-label">About Us</div>
   <h1>Clear, researched information on every major AI tool</h1>
-  <p class="lead">AIToolGrade is an independent review site dedicated to honest, research-based evaluations of AI tools. Every review is built from verified pricing, documented features, and community feedback — no sponsored rankings, no fluff.</p>
+  <p class="lead">AIToolGrade is an independent review site dedicated to honest, research-based evaluations of AI tools. Every review is built from official product documentation and the vendor's official pricing page — no sponsored rankings, no fluff.</p>
 
   <h2>Who's behind AIToolGrade</h2>
-  <p>AIToolGrade was founded by <strong>Rich Nashawaty</strong>, an SEO professional with 20 years of experience working across search strategy, content, and digital growth. Over that time, Rich has researched and evaluated the tools that matter most to SEO professionals, content teams, and digital marketers.</p>
-  <p>When AI tools started proliferating in 2022 and 2023, Rich noticed the same pattern he'd seen before: a flood of products, a louder flood of marketing, and very little honest signal about what was actually worth paying for. AIToolGrade exists to fix that. Every review is grounded in primary source research and verified information, not demo videos or press releases.</p>
+  <p>AIToolGrade was founded by <strong>Rich Nashawaty</strong>, an SEO professional with about 20 years of search experience. More about the founder is on <a href="https://richnashawaty.com" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(232,93,38,0.3);">the founder's site</a>.</p>
+  <p>When AI tools started proliferating in 2022 and 2023, Rich noticed the same pattern he'd seen before: a flood of products, a louder flood of marketing, and very little honest signal about what was actually worth paying for. AIToolGrade exists to fix that. Every review is grounded in official documentation and official pricing, not demo videos or press releases.</p>
   <p>Reviews and editorial content are published by the AIToolGrade Team.</p>
 
   <h2>The editorial team</h2>
   <p>Every review and blog post on AIToolGrade is published under the AIToolGrade Team byline. That's deliberate: each piece is researched, fact-checked, and scored against the same published methodology, so the byline credits the process rather than any one writer. Coverage spans AI coding tools and app builders, workflow automation, writing and productivity tools, and image, video, and voice generation. <a href="how-we-review.html" style="color:var(--accent)">See how we review →</a></p>
-  <p style="display:none"></p>
 
   <h2>Why we built this</h2>
   <p>The AI tools market moves faster than almost any other software category. New products launch every week, pricing changes constantly, and the quality gap between tools is enormous. Most review sites publish generic summaries recycled from product pages. We don't.</p>
-  <p>Every review on AIToolGrade is built from rigorous research — verified pricing, documented features, and aggregated community feedback. We grade tools the way a trusted colleague would: straight, fair, and without a hidden agenda.</p>
+  <p>Every review on AIToolGrade is built from official product documentation and the vendor's official pricing page. We grade tools the way a trusted colleague would: straight, fair, and without a hidden agenda.</p>
+
+  <h2>How we research reviews</h2>
+  <p>Our reviews are research-based. That is a limit, not a slogan: unless a specific page says otherwise, we are <strong>not</strong> claiming hands-on product testing, timed benchmarks, or a counted set of lab trials.</p>
+  <p>A typical review is built from official product documentation and the vendor's official pricing page. We record the date of a pricing check, and we flag anything we could not verify or that was unclear on the official page.</p>
+  <p>We use AI tools to help with research, summarization, and drafting. A human editor reviews and fact-checks each page before it is published. Factual claims are checked against official sources; when we cannot verify something, we say so.</p>
+  <p>For a longer write-up of the method, see <a href="how-we-review.html" style="color:var(--accent)">How we review</a>.</p>
+
+  <h2>How we score</h2>
+  <p>Each tool review includes an overall score out of 10 and a breakdown of five category scores. As an example, the live Lovable review shows an overall score of 8.1 with category scores for Ease of Use, Features, Value for Money, Integration, and Support &amp; Docs.</p>
+  <p><a href="how-we-review.html" style="color:var(--accent)">How we review</a> describes the overall score as a weighted average of five categories: Output Quality, Ease of Use, Value for Money, Features, and Support. Those names do not exactly match the categories on several current reviews (which use Integration and Support &amp; Docs, and do not always use Output Quality). The How we review page also does not publish the numeric weights. On some reviews the overall score matches a simple average of the five category scores; on others it differs slightly (for example, Lovable's five category scores average 8.0, and the displayed overall is 8.1).</p>
+  <p>Until the category list and weights are confirmed and published clearly, treat scores as editorial judgments based on the research described above — not as the output of a lab test or a fully specified formula.</p>
+  <!-- CONFIRM before publish: official category names, numeric weights, and whether overall scores may be rounded or adjusted. Update this section (and how-we-review.html) so they agree. -->
+
+  <h2>How we keep pricing current</h2>
+  <p>When we check pricing, we compare it with the vendor's official pricing page and record the check date on the review. Reviews also show a last-updated or last-verified date. Pricing in this category changes often, and a date is a snapshot, not a promise that the figure is still current when you visit.</p>
+  <p>We update a page when we make a substantive correction or a planned refresh. We do not currently promise a fixed review-every-N-days calendar on every tool.</p>
+  <!-- OPTIONAL CADENCE (confirm or delete before publish): We aim to re-check official pricing whenever we substantively update a review, and to revisit our higher-traffic reviews at least once a quarter. -->
+  <p>If you spot an error — a stale price, a broken link, or a claim that no longer matches the official page — email <a href="mailto:rich@aitoolgrade.com">rich@aitoolgrade.com</a>. We will review it, correct the page when the facts are wrong, and update the last-updated date when that correction is substantive.</p>
 
   <h2>Our values</h2>
   <div class="values-grid">
-    <div class="value-card"><div class="value-icon">🔍</div><div class="value-title">Rigorous research</div><div class="value-desc">Every review is built from primary source documentation, verified pricing, and documented community feedback before we publish a word.</div></div>
-    <div class="value-card"><div class="value-icon">⚖️</div><div class="value-title">Editorial independence</div><div class="value-desc">Our scores and verdicts are never influenced by advertisers or affiliate relationships.</div></div>
-    <div class="value-card"><div class="value-icon">🔄</div><div class="value-title">Kept up to date</div><div class="value-desc">AI tools change fast. We revisit and update reviews when products ship major changes.</div></div>
-    <div class="value-card"><div class="value-icon">💰</div><div class="value-title">Transparent about affiliates</div><div class="value-desc">Some links earn us a commission. We disclose this clearly and it never affects our ratings.</div></div>
+    <div class="value-card"><div class="value-icon">🔍</div><div class="value-title">Research you can check</div><div class="value-desc">Reviews start from official documentation and dated official pricing checks. We flag what we could not verify.</div></div>
+    <div class="value-card"><div class="value-icon">⚖️</div><div class="value-title">Editorial independence</div><div class="value-desc">Scores and recommendations are not for sale. Affiliate relationships, when they exist, do not buy placement or ratings.</div></div>
+    <div class="value-card"><div class="value-icon">📅</div><div class="value-title">Dated, not vaguely "current"</div><div class="value-desc">Pricing and last-updated dates are snapshots. We correct mistakes when they are reported and refresh pages when we do substantive updates.</div></div>
+    <div class="value-card"><div class="value-icon">🔗</div><div class="value-title">Honest about links</div><div class="value-desc">This page has no affiliate links. If and when affiliate programs are approved, we will disclose them. Relationships do not affect our ratings.</div></div>
   </div>
 
+  <h2>Editorial independence and affiliate links</h2>
+  <p>Affiliate relationships do not buy placement, scores, or recommendations. No company can pay to raise a rating or to be featured.</p>
+  <p>Today, many of the buttons on review pages go to the vendor's official site and are not affiliate links. Some affiliate programs are still pending, and at least one application was declined. We do not promise that any given review will later include an affiliate link.</p>
+  <p>If and when a page uses an affiliate link, we will disclose that on the page and in our <a href="affiliate-disclosure.html" style="color:var(--accent)">affiliate disclosure</a>. Until then, we will not describe a page as if it already contains affiliate links.</p>
+  <!-- Do not add a Claude Code / conflict-of-interest note here. No site-wide COI statement of that kind was found on the live About, How we review, or disclosure pages. -->
 
-  <h2>Who built this</h2>
-  <div class="values-grid">
-    <div class="value-card" style="grid-column: 1 / -1;">
-      <div class="value-desc" style="font-size:1rem; line-height:1.75;">
-        AIToolGrade was built by <a href="https://richnashawaty.com" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(232,93,38,0.3);">Rich Nashawaty</a> — an SEO consultant and AI automation specialist based in Boston, MA with 20 years of experience across freelance, agency, and enterprise organizations. He builds AI-powered tools and automation systems as part of his broader work helping businesses grow through search and AI. AIToolGrade is one of several independent projects he has built to provide research-based resources for the AI community.
-      </div>
-    </div>
-  </div>
-  <h2>How we make money</h2>
-  <p>AIToolGrade earns revenue through affiliate commissions — when you click a link and sign up for a tool, we may earn a small fee at no extra cost to you. This is how we keep the site free and the reviews independent.</p>
-  <p>Our affiliate relationships never influence our scores or recommendations. We have turned down partnership requests from companies whose tools didn't meet our standards.</p>
+  <h2>Contact</h2>
+  <p>For questions, corrections, or anything else about this site, email <a href="mailto:rich@aitoolgrade.com">rich@aitoolgrade.com</a>.</p>
+  <p style="font-size:13px;color:var(--text3);margin-top:32px">Last updated November 23, 2026</p>
 </div>
 <footer>
   <div class="footer-inner">
@@ -146,8 +211,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 40p
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2026 AIToolGrade. All rights reserved.</span>
-    <span>Some links are affiliate links. <a href="affiliate-disclosure.html">Learn more</a></span>
+    <span>&copy; 2026 AIToolGrade, a NashMart, LLC site</span>
+    <span>No affiliate links on this page. <a href="affiliate-disclosure.html">Learn more</a></span>
   </div>
 </footer>
 </body></html>
